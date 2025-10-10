@@ -1,0 +1,167 @@
+/* ======= АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ ======= */
+
+/* Общие настройки */
+body {
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------- ХЕДЕР ---------- */
+.nav-row {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.brand {
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand img {
+  width: 160px !important;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ---------- СОЦСЕТИ ---------- */
+.socials {
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* ---------- ГЛАВНЫЙ БЛОК (ФЕДЕРАЦИЯ) ---------- */
+.federation-container {
+  flex-direction: column;
+  text-align: center;
+  border-radius: 24px;
+  padding: 20px 16px;
+  gap: 10px;
+}
+
+.federation-logo img {
+  width: 140px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.federation-text h1 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.federation-text h2 {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* ---------- НОВОСТИ ---------- */
+.news-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.news-card,
+.news-item {
+  padding: 12px;
+  border-radius: 14px;
+}
+
+.news-image,
+.news-item img {
+  height: 180px;
+  border-radius: 10px;
+}
+
+/* ---------- МЕРОПРИЯТИЯ ---------- */
+.events-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.event-card {
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* ---------- КАРТА ---------- */
+.map-frame {
+  height: 340px;
+  border-radius: 12px;
+}
+
+/* ---------- ПОДВАЛ ---------- */
+.footer-inner {
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.footer-nav a {
+  font-size: 14px;
+  background: rgba(255,255,255,0.08);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.footer-logo-large img {
+  width: 220px;
+  height: auto;
+}
+
+.footer-socials {
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ---------- МЕЛКИЕ ЭФФЕКТЫ ---------- */
+.btn-small {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+}
+
+/* ---------- ОБЩИЙ ПАДДИНГ ---------- */
+.container {
+  padding: 16px;
+}
