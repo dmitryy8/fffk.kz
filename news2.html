@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Новости Федерации — Казахстанская Федерация функционального многоборья</title>
+  <meta name="description" content="Новости Казахстанской Федерации функционального многоборья" />
+  <style>
+    :root {
+      --blue:#0b63b7;--blue-2:#2b78b9;--muted:#f4f8ff;
+      --text:#0b2340;--accent:#061b30;--radius:12px;--maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:Inter,system-ui,Roboto,Arial;
+      background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+      color:var(--text);font-size:15px;
+    }
+    
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .container{max-width:var(--maxw);margin:0 auto;padding:22px}
+    header{background:var(--blue);color:#fff}
+    .nav-row{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;max-width:var(--maxw);margin:0 auto;padding:12px 22px
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
+
+    /* socials */
+    .socials {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-direction: row;
+    }
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border-radius: 50%;
+      border: 0;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(3, 20, 45, 0.12);
+      width: 42px;
+      height: 42px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .social-btn img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+    .social-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0}
+    .federation-container{
+      display:flex;align-items:center;justify-content:space-between;
+      width:90%;max-width:1300px;margin:0 auto;
+      background:linear-gradient(90deg,#5ea5e6 0%,#5da1e0 11%,#e8e8e8 25%,#e6e6e7 70%,#f9fafb 85%,#ffffff 100%);
+      border-radius:60px;padding:30px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.08)
+    }
+    .federation-logo img{width:264px;height:auto;object-fit:contain}
+    .federation-text{text-align:center;flex:1;margin:0 30px}
+    .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
+    .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
+    @media(max-width:768px){
+      .federation-container{flex-direction:column;text-align:center;border-radius:20px}
+      .federation-logo img{width:140px;margin-bottom:15px}
+      .federation-text h1{font-size:22px}
+      .federation-text h2{font-size:18px}
+    }
+
+    /* новости */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .news-item {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(11,99,183,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .news-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 22px rgba(11,99,183,0.2);
+    }
+    .news-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .news-content {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+    .news-date {
+      font-size: 14px;
+      color: #0b63b7;
+      font-weight: 700;
+    }
+    .news-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .news-desc {
+      color: #555;
+      font-size: 15px;
+      flex-grow: 1;
+    }
+    .news-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #fff;
+      background: #0b63b7;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-align: center;
+      transition: background 0.3s ease;
+      align-self: flex-start;
+    }
+    .news-link:hover {
+      background: #2b78b9;
+    }
+
+    @media(max-width:768px){
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer{
+      margin-top:28px;padding:0;border-top:1px solid rgba(11,99,183,0.06);
+      background:var(--blue)
+    }
+    .footer-inner{
+      max-width:var(--maxw);margin:0 auto;padding:18px;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;color:#fff
+    }
+    .footer-bottom{
+      background:var(--blue-2);color:#fff;padding:12px 18px;text-align:center;font-weight:600
+    }
+    @media(max-width:520px){
+      .footer-inner{flex-direction:column;gap:12px;align-items:center}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-row">
+      <div class="brand">
+        <img src="footer-logo.png" alt="Логотип Федерации" style="width:220px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
+        <nav>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="news.html">Новости</a>
+          <a href="media.html">Медиа</a>
+          <a href="docs.html">Основные документы</a>
+        </nav>
+      </div>
+
+      <div class="socials">
+        <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
+    <img src="instagramlogo.PNG" alt="Instagram">
+  </a>
+        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="telegramlogo.PNG" alt="Telegram"></a>
+        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="facebooklogo.PNG" alt="Facebook"></a>
+        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="tiktoklogo.PNG" alt="TikTok"></a>
+        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="youtubelogo.PNG" alt="YouTube"></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="federation-hero">
+    <div class="federation-container">
+      <div class="federation-logo left"><img src="logo.png" alt=""></div>
+      <div class="federation-text">
+        <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
+        ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
+      </h2>
+        <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+        <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
+      </div>
+      <div class="federation-logo right"><img src="sponsor.png" alt=""></div>
+    </div>
+  </section>
+
+  <main class="container">
+
+
+<!-- Блок с фото -->
+<div class="news-photos" style="display:flex;gap:16px;flex-wrap:wrap;margin:20px 0;">
+  <img src="game1.jpg" alt="Фото с турнира 1" style="flex:1;min-width:280px;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;">
+  <img src="game3.JPG" alt="Фото с турнира 2" style="flex:1;min-width:280px;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;">
+</div>
+
+<!-- Карточка новости -->
+<div class="news-card" style="
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 4px 14px rgba(11,99,183,0.12);
+  padding:24px;
+  margin-top:16px;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+">
+  <div class="news-card-inner" style="display:flex;flex-direction:column;gap:12px;">
+    <h3 style="font-size:22px;color:#000000;font-weight:800;margin:0;">
+      Историческое событие: казахстанец впервые прошёл в финал CrossFit Games!
+    </h3>
+    <p style="color:#3c3a3a;font-size:16px;line-height:1.6;">
+      Впервые в истории спортсмен из Казахстана вышел в финал CrossFit Games — самого престижного мирового турнира.
+ Роман Джантлеев, вице-президент Казахстанской Федерации функционального многоборья, стал первым спортсменом из Казахстана, прошедшим в финал этого легендарного соревнования.
+Этот результат — не только личное достижение Романа, но и важная веха в развитии функционального многоборья в нашей стране. Его пример вдохновляет новое поколение атлетов и укрепляет позиции Казахстана на мировой спортивной арене.
+«Это невероятная честь — представить Казахстан на CrossFit Games. За этим результатом стоит многолетний труд, вера в спорт и развитие нашей Федерации», — отметил Роман Джантлеев.
+    </p>
+  </div>
+</div>
+<!-- Кнопка Лидерборд -->
+<div style="
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:28px;
+  gap:10px;
+">
+  <a href="index.html"
+     class="btn-small"
+     style="
+       background:#0b63b7;
+       color:#fff;
+       padding:10px 18px;
+       border-radius:999px;
+       font-weight:700;
+       display:inline-block;
+       transition:all 0.3s ease;
+     "
+     onmouseover="this.style.transform='translateY(-3px)';"
+     onmouseout="this.style.transform='translateY(0)';">
+     Вернуться на главную
+  </a>
+
+</div>
+
+
+<script>
+  // эффект при наведении на карточку
+  document.querySelectorAll('.news-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-6px)';
+      card.style.boxShadow = '0 8px 22px rgba(11,99,183,0.2)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0)';
+      card.style.boxShadow = '0 4px 14px rgba(11,99,183,0.12)';
+    });
+  });
+</script>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><img src="footer-logo.png" alt="Логотип Федерации" style="width:220px;border-radius:8px;"></div>
+      <nav style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="index.html" style="color:#fff;font-weight:600;">Главная</a>
+        <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
+        <a href="news.html" style="color:#fff;font-weight:600;">Новости</a>
+        <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
+        <a href="docs.html" style="color:#fff;font-weight:600;">Основные документы</a>
+      </nav>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
+    <img src="instagramlogo.PNG" alt="Instagram">
+  </a>
+        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="telegramlogo.PNG" alt="Telegram"></a>
+        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="facebooklogo.PNG" alt="Facebook"></a>
+        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="tiktoklogo.PNG" alt="TikTok"></a>
+        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="youtubelogo.PNG" alt="YouTube"></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Все права защищены — Казахстанская Федерация функционального многоборья
+    </div>
+  </footer>
+</body>
+</html>
