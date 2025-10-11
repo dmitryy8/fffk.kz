@@ -153,6 +153,28 @@
     .event-date{color:var(--accent);font-weight:700}
     .event-photo{margin-top:12px;border-radius:10px;overflow:hidden;height:180px;background:#f4f7fb;display:flex;align-items:center;justify-content:center}
     .event-photo img{width:100%;height:100%;object-fit:cover}
+    /* Вставь это в CSS (head или рядом с секцией новостей) */
+.news-grid {
+  align-items: stretch; /* карточки будут одной высоты в ряду */
+}
+
+.news-card {
+  display: flex;         /* уже стоит, но на всякий случай */
+  flex-direction: column;
+}
+
+.news-card .news-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;               /* занять оставшееся пространство карточки */
+}
+
+.news-card .news-content a {
+  margin-top: auto !important; /* принудительно опустить кнопку вниз */
+  align-self: flex-start;      /* сохранить выравнивание по левой стороне */
+}
+
 
    /* MAP */
 .contacts {
@@ -234,6 +256,7 @@
       .footer-inner{flex-direction:column;gap:8px}
       .footer-logo-large img{width:260px;height:80px}
     }
+    
   </style>
 </head>
 
@@ -293,45 +316,301 @@
   </div>
 </section>
 
+ <!-- news -->
+<main class="container">
+  <section class="section" style="padding:20px 0; position:relative;">
+    <h2 style="
+      font-size:30px;
+      color:#0b63b7;
+      font-weight:900;
+      margin-bottom:24px;
+      text-align:left;
+    ">
+      Новости
+    </h2>
 
-  <main class="container">
-    <!-- Новости -->
-    <section class="section">
-      <h2>Новости</h2>
-      <div class="news-grid">
-        <article class="news-card">
-          <div class="news-date">07.05.2025</div>
-          <img class="news-image" src="images/news-1.png" alt="Astana Open Cup 2025">
-          <div class="news-title">Итоги соревнований Astana Open Cup 2025</div>
-          <div class="news-excerpt">7 мая в столице прошёл второй ежегодный открытый турнир по функциональному многоборью — Astana Open...</div>
-          <a class="btn-small" href="#">Подробнее</a>
-        </article>
-      </div>
-    </section>
+    <!-- Кнопки прокрутки -->
+    <button class="news-arrow left" style="
+      position:absolute;
+      top:50%;
+      left:-10px;
+      transform:translateY(-50%);
+      background:#0b63b7;
+      color:#fff;
+      border:none;
+      border-radius:50%;
+      width:42px;
+      height:42px;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(11,99,183,0.2);
+      z-index:2;
+    ">&#10094;</button>
 
-    <!-- Мероприятия -->
-    <section class="section">
-      <h2>Мероприятия</h2>
-      <div class="events-grid">
-        <div class="event-card">
-          <div class="event-date">03.07.2025</div>
-          <div class="event-title">Положение Чемпионата РК по функциональному многоборью</div>
-          <div class="event-photo"><img src="images/event-1.png" alt=""></div>
+    <button class="news-arrow right" style="
+      position:absolute;
+      top:50%;
+      right:-10px;
+      transform:translateY(-50%);
+      background:#0b63b7;
+      color:#fff;
+      border:none;
+      border-radius:50%;
+      width:42px;
+      height:42px;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(11,99,183,0.2);
+      z-index:2;
+    ">&#10095;</button>
+
+    <!-- Лента новостей -->
+    <div class="news-grid" style="
+      display:flex;
+      overflow-x:auto;
+      scroll-behavior:smooth;
+      gap:20px;
+      padding-bottom:10px;
+      scrollbar-width:none; /* скрыть скролл в Firefox */
+    ">
+      <style>
+        .news-grid::-webkit-scrollbar { display: none; } /* скрыть скролл в Chrome/Safari */
+        .news-card:hover {
+          transform:translateY(-5px);
+          box-shadow:0 8px 20px rgba(11,99,183,0.18);
+        }
+      </style>
+
+      <!-- Карточка 1 -->
+      <article class="news-card" style="
+        background:#fff;
+        border-radius:16px;
+        overflow:hidden;
+        box-shadow:0 4px 14px rgba(11,99,183,0.12);
+        transition:transform 0.3s ease, box-shadow 0.3s ease;
+        width:360px;
+        flex:0 0 auto;
+        display:flex;
+        flex-direction:column;
+        text-align:left;
+      ">
+        <img src="astanaopencup1.JPG" alt="Astana Open Cup 2025" style="
+          width:100%;
+          height:210px;
+          object-fit:cover;
+        ">
+        <div class="news-content" style="padding:18px 20px;display:flex;flex-direction:column;gap:10px;">
+          <div class="news-date" style="font-size:14px;color:#0b63b7;font-weight:700;">
+            07.05.2025
+          </div>
+          <div class="news-title" style="font-size:18px;font-weight:800;color:#0b2340;">
+            Итоги соревнований Astana Open Cup 2025
+          </div>
+          <div class="news-excerpt" style="color:#555;font-size:15px;line-height:1.6;">
+            7 мая в столице прошёл второй ежегодный открытый турнир по функциональному многоборью — Astana Open...
+          </div>
+          <a href="news1.html" style="
+            display:inline-block;
+            align-self:flex-start;
+            background:#0b63b7;
+            color:#fff;
+            padding:8px 18px;
+            border-radius:999px;
+            font-weight:700;
+            text-transform:uppercase;
+            font-size:14px;
+            letter-spacing:0.3px;
+            transition:background 0.3s ease, transform 0.25s ease;
+            text-decoration:none;
+            margin-top:4px;
+          ">Подробнее</a>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Контакты -->
-    <section class="section">
-      <h2>Наш адрес</h2>
-      <p><strong>Адрес:</strong> Астана, проспект Бауыржана Момышулы, 16</p>
-      <div class="map-frame">
-        <div style="position:relative;overflow:hidden;height:100%;">
-          <iframe src="https://yandex.kz/map-widget/v1/?ll=69.139635%2C54.861865&z=12" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;border:0;"></iframe>
+      <!-- Карточка 2 -->
+      <article class="news-card" style="
+        background:#fff;
+        border-radius:16px;
+        overflow:hidden;
+        box-shadow:0 4px 14px rgba(11,99,183,0.12);
+        transition:transform 0.3s ease, box-shadow 0.3s ease;
+        width:360px;
+        flex:0 0 auto;
+        display:flex;
+        flex-direction:column;
+        text-align:left;
+      ">
+        <img src="game1.jpg"CrossFit Challenge 2025" style="
+          width:100%;
+          height:210px;
+          object-fit:cover;
+        ">
+        <div class="news-content" style="padding:18px 20px;display:flex;flex-direction:column;gap:10px;">
+          <div class="news-date" style="font-size:14px;color:#0b63b7;font-weight:700;">
+            24.08.2025
+          </div>
+          <div class="news-title" style="font-size:18px;font-weight:800;color:#0b2340;">
+            Историческое событие: казахстанец впервые прошёл в финал CrossFit Games!
+          </div>
+          <div class="news-excerpt" style="color:#555;font-size:15px;line-height:1.6;">
+            Впервые в истории спортсмен из Казахстана вышел в финал CrossFit Games — самого престижного мирового турнира...
+          </div>
+          <a href="news2.html" style="
+            display:inline-block;
+            align-self:flex-start;
+            background:#0b63b7;
+            color:#fff;
+            padding:8px 18px;
+            border-radius:999px;
+            font-weight:700;
+            text-transform:uppercase;
+            font-size:14px;
+            letter-spacing:0.3px;
+            transition:background 0.3s ease, transform 0.25s ease;
+            text-decoration:none;
+            margin-top:4px;
+          ">Подробнее</a>
         </div>
+      </article>
+
+      <!-- Карточка 3 -->
+      <article class="news-card" style="
+        background:#fff;
+        border-radius:16px;
+        overflow:hidden;
+        box-shadow:0 4px 14px rgba(11,99,183,0.12);
+        transition:transform 0.3s ease, box-shadow 0.3s ease;
+        width:360px;
+        flex:0 0 auto;
+        display:flex;
+        flex-direction:column;
+        text-align:left;
+      ">
+        <img src="news3.jpg" alt="Summer Games 2025" style="
+          width:100%;
+          height:210px;
+          object-fit:cover;
+        ">
+        <div class="news-content" style="padding:18px 20px;display:flex;flex-direction:column;gap:10px;">
+          <div class="news-date" style="font-size:14px;color:#0b63b7;font-weight:700;">
+            29.09.2025
+          </div>
+          <div class="news-title" style="font-size:18px;font-weight:800;color:#0b2340;">
+            Чемпионат Казахстана по функциональному многоборью 2025 состоялся в конце сентября!
+          </div>
+          <div class="news-excerpt" style="color:#555;font-size:15px;line-height:1.6;">
+            В сентябре прошёл Чемпионат Казахстана по функциональному многоборью — главное событие года в мире функционального фитнеса страны.
+          </div>
+          <a href="news3.html" style="
+            display:inline-block;
+            align-self:flex-start;
+            background:#0b63b7;
+            color:#fff;
+            padding:8px 18px;
+            border-radius:999px;
+            font-weight:700;
+            text-transform:uppercase;
+            font-size:14px;
+            letter-spacing:0.3px;
+            transition:background 0.3s ease, transform 0.25s ease;
+            text-decoration:none;
+            margin-top:4px;
+          ">Подробнее</a>
+        </div>
+      </article>
+
+      <!-- Карточка 4 -->
+      <article class="news-card" style="
+        background:#fff;
+        border-radius:16px;
+        overflow:hidden;
+        box-shadow:0 4px 14px rgba(11,99,183,0.12);
+        transition:transform 0.3s ease, box-shadow 0.3s ease;
+        width:360px;
+        flex:0 0 auto;
+        display:flex;
+        flex-direction:column;
+        text-align:left;
+      ">
+        <img src="news4.jpg" alt="Зимний Кубок 2025" style="
+          width:100%;
+          height:210px;
+          object-fit:cover;
+        ">
+        <div class="news-content" style="padding:18px 20px;display:flex;flex-direction:column;gap:10px;">
+          <div class="news-date" style="font-size:14px;color:#0b63b7;font-weight:700;">
+            20.09.2025
+          </div>
+          <div class="news-title" style="font-size:18px;font-weight:800;color:#0b2340;">
+            Зимний Кубок: регистрация открыта
+          </div>
+          <div class="news-excerpt" style="color:#555;font-size:15px;line-height:1.6;">
+            Уже открыт приём заявок на участие в традиционном зимнем турнире по функциональному многоборью...
+          </div>
+          <a href="news4.html" style="
+            display:inline-block;
+            align-self:flex-start;
+            background:#0b63b7;
+            color:#fff;
+            padding:8px 18px;
+            border-radius:999px;
+            font-weight:700;
+            text-transform:uppercase;
+            font-size:14px;
+            letter-spacing:0.3px;
+            transition:background 0.3s ease, transform 0.25s ease;
+            text-decoration:none;
+            margin-top:4px;
+          ">Подробнее</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- JS для прокрутки -->
+<script>
+  const grid = document.querySelector('.news-grid');
+  const leftBtn = document.querySelector('.news-arrow.left');
+  const rightBtn = document.querySelector('.news-arrow.right');
+
+  rightBtn.addEventListener('click', () => {
+    grid.scrollBy({ left: 400, behavior: 'smooth' });
+  });
+
+  leftBtn.addEventListener('click', () => {
+    grid.scrollBy({ left: -400, behavior: 'smooth' });
+  });
+</script>
+
+
+  <!-- Мероприятия -->
+<main class="container">
+
+  <section class="section">
+    <h2>Документы</h2>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-date">03.07.2025</div>
+        <div class="event-title">Положение Чемпионата РК по функциональному многоборью</div>
+        <div class="event-photo"><img src="images/event-1.png" alt=""></div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="section">
+    <h2>Наш адрес</h2>
+    <p><strong>Адрес:</strong> Астана, проспект Бауыржана Момышулы, 16</p>
+    <!-- Добавил центрирование через inline-style (минимальное вмешательство) -->
+    <div class="map-frame" style="max-width:1200px;margin:0 auto;">
+      <div style="position:relative;overflow:hidden;height:100%;">
+        <iframe src="https://yandex.kz/map-widget/v1/?ll=69.139635%2C54.861865&z=12"
+                width="100%" height="100%" frameborder="1" allowfullscreen="true"
+                style="position:relative;border:0;"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
 
   <footer>
     <div class="footer-inner">
