@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Новости Федерации — Казахстанская Федерация функционального многоборья</title>
   <meta name="description" content="Новости Казахстанской Федерации функционального многоборья" />
   <style>
