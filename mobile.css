@@ -168,3 +168,43 @@ nav a:hover {
 .container {
   padding: 16px;
 }
+
+/* ======= MOBILE-SPECIFIC HEADER ADJUSTMENTS REQUESTED BY USER ======= */
+/* Hide the (footer) logo that appears in the header on mobile and show a
+   prominent 3-line hamburger instead. This targets only header logos so
+   the federation hero/logo inside page content remains unchanged. */
+header .brand img, header #site-logo { display: none !important; }
+
+/* Show and style the mobile toggle as three horizontal bars.
+   We hide any original text inside the button and render a consistent
+   '☰' glyph via ::before so the appearance is identical across pages. */
+#mobileToggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 36px;
+  background: transparent;
+  border: 0;
+  position: relative;
+  color: transparent; /* hide existing text glyphs */
+  text-indent: -9999px;
+}
+#mobileToggle::before{
+  content: "☰";
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* place the toggle visually where the logo was (left side of header) */
+header .nav-row { position: relative; }
+#mobileToggle { left: 12px; top: 50%; transform: translateY(-50%); }
+
+/* remove footer/navigation buttons on mobile (only) per request */
+.footer-nav { display: none !important; }
+
