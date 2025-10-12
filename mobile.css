@@ -216,10 +216,17 @@ header .brand img, header #site-logo { display: none !important; }
 
 /* place the toggle visually where the logo was (left side of header) */
 header .nav-row { position: relative; }
-#mobileToggle { left: 12px; top: 50%; transform: translateY(-50%); }
+#mobileToggle { left: 12px; top: 50%; transform: translateY(-50%); z-index:250 !important; cursor: pointer !important; }
+
+/* ensure header logo (any site-logo) doesn't overlap hamburger on mobile */
+header #site-logo, header .brand img { display: none !important; }
 
 /* remove footer/navigation buttons on mobile (only) per request */
 .footer-nav { display: none !important; }
+
+/* make footer logo smaller on mobile so it doesn't interfere visually */
+.footer-inner img, .footer-logo-large img { max-width: 180px !important; height: auto !important; }
+
 
 /* ======= DOCUMENTS / EVENTS SCROLLER (MOBILE) ======= */
 /* make sure the documents/events row is horizontally scrollable on mobile
