@@ -31,15 +31,10 @@
   /* расширенная навигация: кнопка «...» с выпадающим меню */
   nav.main-nav{display:flex;align-items:center;gap:8px}
   .more-dropdown{position:absolute;right:320px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
-  .more-btn{background:transparent;color:#fff;border:none;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1;display:inline-flex;align-items:center;justify-content:center}
-  /* hamburger: three horizontal bars instead of vertical dots */
-  .more-btn .hamburger{width:20px;height:2px;background:#fff;border-radius:2px;display:block;position:relative}
-  .more-btn .hamburger::before,
-  .more-btn .hamburger::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
-  .more-btn .hamburger::before{top:-6px}
-  .more-btn .hamburger::after{top:6px}
+  .more-btn{background:transparent;color:#fff;border:none;font-size:26px;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1}
   /* icon image replacement: use the image file `tochka.png` (place it in project root) */
   .more-btn .more-icon{width:22px;height:22px;object-fit:contain;display:block}
+  /* вертикальные точки: используем символ U+22EE (⋮) */
   .more-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:var(--text);box-shadow:0 8px 24px rgba(3,20,45,0.12);border-radius:10px;overflow:hidden;min-width:220px;z-index:60;padding:6px 0}
   .more-menu a{display:block;padding:10px 14px;color:var(--text);font-weight:700;border-bottom:1px solid rgba(0,0,0,0.04);text-decoration:none}
   /* hover: немного серее */
@@ -100,74 +95,7 @@
       .federation-text h2{font-size:18px}
     }
 
-    /* новости */
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .news-item {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 14px rgba(11,99,183,0.12);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .news-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 22px rgba(11,99,183,0.2);
-    }
-    .news-item img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .news-content {
-      padding: 16px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex-grow: 1;
-    }
-    .news-date {
-      font-size: 14px;
-      color: #0b63b7;
-      font-weight: 700;
-    }
-    .news-title {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--text);
-    }
-    .news-desc {
-      color: #555;
-      font-size: 15px;
-      flex-grow: 1;
-    }
-    .news-link {
-      display: inline-block;
-      margin-top: 8px;
-      color: #fff;
-      background: #0b63b7;
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-      text-align: center;
-      transition: background 0.3s ease;
-      align-self: flex-start;
-    }
-    .news-link:hover {
-      background: #2b78b9;
-    }
-
-    @media(max-width:768px){
-      .news-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+   
 
     footer{
       margin-top:28px;padding:0;border-top:1px solid rgba(11,99,183,0.06);
@@ -199,14 +127,9 @@
           <a href="docs.html">Документы</a>
           <!-- одна видимая дополнительная кнопка -->
           <a href="leadership.html">Руководство</a>
-          <!-- остальные кнопки в выпадающем меню '...' (вынесено перед соцсетями) -->
-        </nav>
-      </div>
-
-          <div class="more-dropdown" id="moreDropdown">
-            <button class="more-btn" id="moreBtn" aria-label="Меню дополнительных ссылок" style="padding:8px 10px;">
-                <img src="tochka.png" class="more-icon" alt="menu">
-            </button>
+          <!-- остальные кнопки в выпадающем меню '...' -->
+            <div class="more-dropdown" id="moreDropdown">
+            <button class="more-btn" id="moreBtn"><img src="tochka.png" class="more-icon" alt="menu"></button>
             <div class="more-menu" id="moreMenu" style="display:none">
               <a href="media.html">Медиа</a>
               <a href="competitions.html">Соревнования</a>
@@ -215,6 +138,9 @@
               <a href="regional.html">Региональное отделение</a>
             </div>
           </div>
+        </nav>
+      </div>
+
       <div class="socials">
         <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
     <img src="instagramlogo.PNG" alt="Instagram">
@@ -244,98 +170,6 @@
   <main class="container">
 
 
-<!-- Блок с фото -->
-<div class="news-photos" style="display:flex;gap:16px;flex-wrap:wrap;margin:20px 0;">
-  <img src="astana1.jpg" alt="Фото с турнира 1" style="flex:1;min-width:280px;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;">
-  <img src="astana2.jpg" alt="Фото с турнира 2" style="flex:1;min-width:280px;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;">
-</div>
-
-<!-- Карточка новости -->
-<div class="news-card" style="
-  background:#fff;
-  border-radius:16px;
-  box-shadow:0 4px 14px rgba(11,99,183,0.12);
-  padding:24px;
-  margin-top:16px;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-">
-  <div class="news-card-inner" style="display:flex;flex-direction:column;gap:12px;">
-    <h3 style="font-size:22px;color:#000000;font-weight:800;margin:0;">
-      Итоги соревнований Astana Open Cup 2025
-    </h3>
-    <p style="color:#3c3a3a;font-size:16px;line-height:1.6;">
-      7 мая в столице прошёл второй ежегодный открытый турнир по функциональному многоборью — Astana Open Cup 2025! 
-В финальном отборе участвовали более 60 сильнейших атлетов из Казахстана, России, Кыргызстана и Узбекистана.
-Соревнования прошли благодаря полной поддержке генерального спонсора @kdlolymp — в лице Сулейменова Ерлана Мельсовича @suleimenov.yerlan
-Участники вышли на максимум — демонстрируя не только физическую мощь, но и стойкость духа.
-Каждая категория стала настоящей ареной силы, выносливости и высокого уровня подготовки.
-Поздравляем всех участников и победителей!
-Атлеты продемонстрировали высокий уровень подготовки, ещё раз подтвердив, что функциональное многоборье стремительно развивается как в организационном, так и в спортивном плане.
-Благодарим всех, кто стоял за созданием этого турнира —организаторов, партнёров и всю команду, вложившую в него силы и сердце. 
-    </p>
-  </div>
-</div>
-<!-- Кнопка Лидерборд -->
-<div style="
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  margin-top:28px;
-  gap:10px;
-">
-  <a href="index.html"
-     class="btn-small"
-     style="
-       background:#0b63b7;
-       color:#fff;
-       padding:10px 18px;
-       border-radius:999px;
-       font-weight:700;
-       display:inline-block;
-       transition:all 0.3s ease;
-     "
-     onmouseover="this.style.transform='translateY(-3px)';"
-     onmouseout="this.style.transform='translateY(0)';">
-     Вернуться на главную
-  </a>
-
-  <a href="https://circle21.events/embedEventLeaderboard?competitionId=62a4f4a2-0ade-490a-9af2-c75752ddf2cf&lightTheme=true&divisionId=c0900918-9934-46a6-97dd-0e41b0add206"
-     target="_blank"
-     rel="noopener"
-     class="btn-leaderboard"
-     style="
-       background:#e0e0e0;
-       color:#0b2340;
-       padding:10px 20px;
-       border-radius:999px;
-       font-weight:700;
-       font-size:15px;
-       text-transform:uppercase;
-       letter-spacing:0.3px;
-       box-shadow:0 4px 10px rgba(0,0,0,0.08);
-       transition:all 0.3s ease;
-     "
-     onmouseover="this.style.background='#cfcfcf'; this.style.transform='translateY(-3px)';"
-     onmouseout="this.style.background='#e0e0e0'; this.style.transform='translateY(0)';">
-     Лидерборд
-  </a>
-</div>
-
-
-<script>
-  // эффект при наведении на карточку
-  document.querySelectorAll('.news-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      card.style.transform = 'translateY(-6px)';
-      card.style.boxShadow = '0 8px 22px rgba(11,99,183,0.2)';
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'translateY(0)';
-      card.style.boxShadow = '0 4px 14px rgba(11,99,183,0.12)';
-    });
-  });
-</script>
 
 <script>
   // выпадающее меню "..."
