@@ -187,8 +187,9 @@
     }
     /* detail page layout: photo left, card right */
     .detail-row{display:flex;gap:24px;align-items:flex-start;margin:20px 0}
-    .detail-photo{flex:0 0 380px}
-    .detail-photo img{width:100%;height:auto;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;display:block}
+  /* portrait photo: narrow column with fixed height for portrait crop */
+  .detail-photo{flex:0 0 260px}
+  .detail-photo img{width:100%;height:420px;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;display:block}
     .detail-card{flex:1;min-width:0}
     .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
     .btn-primary:hover{background:var(--blue-2)}
@@ -203,7 +204,7 @@
   <header>
     <div class="nav-row">
       <div class="brand">
-  <img src="/footer-logo.png" alt="Логотип Федерации" style="width:220px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
+  <img src="/footer-logo.png" alt="Логотип Федерации" style="width:300px;height:500;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
         <nav class="main-nav">
           <a href="index.html">Главная</a>
           <a href="about.html">О нас</a>
