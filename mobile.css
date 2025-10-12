@@ -179,19 +179,18 @@ header .brand img, header #site-logo { display: none !important; }
    We hide any original text inside the button and render a consistent
    '☰' glyph via ::before so the appearance is identical across pages. */
 #mobileToggle {
-#  display and sizing tuned for mobile; make it much larger per request
-#  (this file is only loaded on screens <=768px)
-#  increase button and glyph size so it's clearly visible and tappable
-#  without changing desktop appearance
-#
-#  NOTE: mobile.css is loaded using media query, so these rules apply only on mobile
-#
-#  (we keep color transparent and render the white glyph via ::before)
-#
-#  Accessibility: button still has aria-label -> visual glyph only changed
-#
-#
-#  Increase size substantially
+  /* display and sizing tuned for mobile; make it much larger per request
+     (this file is only loaded on screens <=768px)
+     increase button and glyph size so it's clearly visible and tappable
+     without changing desktop appearance
+
+     NOTE: mobile.css is loaded using media query, so these rules apply only on mobile
+
+     (we keep color transparent and render the white glyph via ::before)
+
+     Accessibility: button still has aria-label -> visual glyph only changed
+
+     Increase size substantially */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
