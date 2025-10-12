@@ -30,7 +30,7 @@
   nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
   /* расширенная навигация: кнопка «...» с выпадающим меню */
   nav.main-nav{display:flex;align-items:center;gap:8px}
-  .more-dropdown{position:absolute;right:320px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
+  .more-dropdown{position:absolute;right:360px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
   .more-btn{background:transparent;color:#fff;border:none;font-size:26px;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1}
   /* hamburger inside the more button: three horizontal bars */
   .more-btn .hamburger{display:inline-block;width:22px;height:2px;background:#fff;position:relative;border-radius:2px}
@@ -118,7 +118,7 @@
   /* GALLERY & LIGHTBOX */
   .gallery-wrap{margin-top:18px}
   .slider{position:relative;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(3,20,45,0.06)}
-  .slider img{width:100%;height:auto;max-height:60vh;object-fit:cover;display:block;border:6px solid var(--blue);border-radius:8px;box-shadow:0 12px 30px rgba(11,99,183,0.12)}
+  .slider img{width:60%;height:auto;max-height:60vh;object-fit:cover;display:block;border:6px solid var(--blue);border-radius:8px;box-shadow:0 12px 30px rgba(11,99,183,0.12)}
   .slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(11,99,183,0.9);color:#fff;border:none;width:48px;height:48px;border-radius:50%;cursor:pointer;box-shadow:0 6px 18px rgba(3,20,45,0.12);font-size:20px}
   .slider-btn.prev{left:12px}
   .slider-btn.next{right:12px}
@@ -164,7 +164,7 @@
           <a href="index.html">Главная</a>
           <a href="about.html">О нас</a>
           <a href="index.html#news">Новости</a>
-          <a href="docs.html">Документы</a>
+          <a href="index.html#docs">Документы</a>
           <!-- одна видимая дополнительная кнопка -->
           <a href="leadership.html">Руководство</a>
           <!-- остальные кнопки в выпадающем меню '...' (вынесено перед соцсетями) -->
@@ -189,6 +189,16 @@
   <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
   <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="/tiktoklogo.png" alt="TikTok"></a>
   <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
+      </div>
+    </div>
+    <div id="langWrap" style="position:absolute;right:160px;top:50%;transform:translateY(-50%);z-index:80;">
+      <button id="langToggle" style="background:transparent;color:#fff;border:0;font-weight:700;cursor:pointer;padding:8px 10px;">
+        <span id="langCurrent">RU</span> ▾
+      </button>
+      <div id="langDropdown" style="display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:#000;border-radius:8px;padding:6px;min-width:120px;box-shadow:0 8px 24px rgba(3,20,45,0.12);">
+        <a href="#" data-lang="ru" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Рус</a>
+        <a href="#" data-lang="kk" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Қаз</a>
+        <a href="#" data-lang="en" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Eng</a>
       </div>
     </div>
   </header>
@@ -368,7 +378,7 @@
         <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
         <a href="news.html" style="color:#fff;font-weight:600;">Новости</a>
         <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
-  <a href="docs.html" style="color:#fff;font-weight:600;">Документы</a>
+  <a href="index.html#docs" style="color:#fff;font-weight:600;">Документы</a>
         <a href="competitions.html" style="color:#fff;font-weight:600;">Соревнования</a>
       </nav>
       <div class="footer-socials">
@@ -384,5 +394,6 @@
 
    
   </footer>
+<script src="/lang.js"></script>
 </body>
 </html>

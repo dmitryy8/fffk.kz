@@ -30,11 +30,17 @@
   nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
   /* расширенная навигация: кнопка «...» с выпадающим меню */
   nav.main-nav{display:flex;align-items:center;gap:8px}
+  .more-dropdown{position:absolute;right:320px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
   .more-dropdown{position:absolute;right:360px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
-  .more-btn{background:transparent;color:#fff;border:none;font-size:26px;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1}
+  .more-btn{background:transparent;color:#fff;border:none;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1;display:inline-flex;align-items:center;justify-content:center}
+  /* hamburger: three horizontal bars instead of vertical dots */
+  .more-btn .hamburger{width:20px;height:2px;background:#fff;border-radius:2px;display:block;position:relative}
+  .more-btn .hamburger::before,
+  .more-btn .hamburger::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+  .more-btn .hamburger::before{top:-6px}
+  .more-btn .hamburger::after{top:6px}
   /* icon image replacement: use the image file `tochka.png` (place it in project root) */
   .more-btn .more-icon{width:22px;height:22px;object-fit:contain;display:block}
-  /* вертикальные точки: используем символ U+22EE (⋮) */
   .more-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:var(--text);box-shadow:0 8px 24px rgba(3,20,45,0.12);border-radius:10px;overflow:hidden;min-width:220px;z-index:60;padding:6px 0}
   .more-menu a{display:block;padding:10px 14px;color:var(--text);font-weight:700;border-bottom:1px solid rgba(0,0,0,0.04);text-decoration:none}
   /* hover: немного серее */
@@ -95,7 +101,78 @@
       .federation-text h2{font-size:18px}
     }
 
-   
+    /* новости */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .news-item {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(11,99,183,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .news-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 22px rgba(11,99,183,0.2);
+    }
+    .news-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .news-content {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+    .news-date {
+      font-size: 14px;
+      color: #0b63b7;
+      font-weight: 700;
+    }
+    .news-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .news-desc {
+      color: #555;
+      font-size: 15px;
+      flex-grow: 1;
+    }
+    .news-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #fff;
+      background: #0b63b7;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-align: center;
+      transition: background 0.3s ease;
+      align-self: flex-start;
+    }
+    .news-link:hover {
+      background: #2b78b9;
+    }
+
+    @media(max-width:768px){
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* shared primary button used in header/footer sections */
+    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
+    .btn-primary:hover{background:var(--blue-2)}
 
     footer{
       margin-top:28px;padding:0;border-top:1px solid rgba(11,99,183,0.06);
@@ -125,11 +202,17 @@
           <a href="about.html">О нас</a>
           <a href="index.html#news">Новости</a>
           <a href="index.html#docs">Документы</a>
+            <a href="index.html#docs">Документы</a>
           <!-- одна видимая дополнительная кнопка -->
           <a href="leadership.html">Руководство</a>
-          <!-- остальные кнопки в выпадающем меню '...' -->
-            <div class="more-dropdown" id="moreDropdown">
-            <button class="more-btn" id="moreBtn"><img src="/tochka.png" class="more-icon" alt="menu"></button>
+          <!-- остальные кнопки в выпадающем меню '...' (вынесено перед соцсетями) -->
+        </nav>
+      </div>
+
+          <div class="more-dropdown" id="moreDropdown">
+            <button class="more-btn" id="moreBtn" aria-label="Меню дополнительных ссылок" style="padding:8px 10px;">
+                <img src="/tochka.png" class="more-icon" alt="menu">
+            </button>
             <div class="more-menu" id="moreMenu" style="display:none">
               <a href="media.html">Медиа</a>
               <a href="competitions.html">Соревнования</a>
@@ -138,22 +221,9 @@
               <a href="regional.html">Региональное отделение</a>
             </div>
           </div>
-        </nav>
-      </div>
-
-          <!-- single language toggle with dropdown (shared fragment) -->
-          <div class="lang-wrap" id="langWrap">
-            <button class="lang-toggle" id="langToggle"><span id="langCurrent">RU</span> ▾</button>
-            <div class="lang-dropdown" id="langDropdown">
-              <button data-lang="kz">KZ</button>
-              <button data-lang="ru">RU</button>
-              <button data-lang="en">EN</button>
-            </div>
-          </div>
-
       <div class="socials">
         <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
-    <img src="/instagramlogo.png" alt="Instagram">
+  <img src="/instagramlogo.png" alt="Instagram">
   </a>
         <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="/telegramlogo.png" alt="Telegram"></a>
         <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
@@ -161,7 +231,17 @@
         <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
       </div>
     </div>
-  </header>
+      <div id="langWrap" style="position:absolute;right:160px;top:50%;transform:translateY(-50%);z-index:80;">
+        <button id="langToggle" style="background:transparent;color:#fff;border:0;font-weight:700;cursor:pointer;padding:8px 10px;">
+          <span id="langCurrent">RU</span> ▾
+        </button>
+        <div id="langDropdown" style="display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:#000;border-radius:8px;padding:6px;min-width:120px;box-shadow:0 8px 24px rgba(3,20,45,0.12);">
+          <a href="#" data-lang="ru" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Рус</a>
+          <a href="#" data-lang="kk" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Қаз</a>
+          <a href="#" data-lang="en" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Eng</a>
+        </div>
+      </div>
+    </header>
 
   <section class="federation-hero">
     <div class="federation-container">
@@ -178,8 +258,51 @@
   </section>
 
   <main class="container">
+  <!-- синяя кнопка вернуться на главную -->
+  <div style="margin:18px 0;">
+    <a class="btn-primary" href="index.html">Вернуться на главную</a>
+  </div>
 
+<!-- Блок с фото -->
+<div class="news-photos" style="display:flex;gap:16px;flex-wrap:wrap;margin:20px 0;">
+  <img src="/about1.jpg" alt="Фото с турнира 1" style="flex:1;min-width:280px;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;">
+  <img src="/about2.jpg" alt="Фото с турнира 2" style="flex:1;min-width:280px;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;">
+</div>
 
+<!-- Карточка новости -->
+<div class="news-card" style="
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 4px 14px rgba(11,99,183,0.12);
+  padding:24px;
+  margin-top:16px;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+">
+  <div class="news-card-inner" style="display:flex;flex-direction:column;gap:12px;">
+    <h3 style="font-size:22px;color:#000000;font-weight:800;margin:0;">
+      Функциональное многоборье
+    </h3>
+    <p style="color:#3c3a3a;font-size:16px;line-height:1.6;">
+      Функциональное многоборье — вид спорта, с использованием функциональных движений с весом собственного тела, свободными отягощениями и циклическими движениями, которые объединяются в специально составленные комплексы упражнений и выполняются непрерывно на время.
+Республиканское общественное объединение «Казахстанская федерация функционального многоборья» было создано Решением Учредительного Сьезда 08 сентября 2023 года в г. Астана. По решению Сьезда Президентом Федерации избран Мещеряков Николай Ильич. Первый Вице-Президент - Генеральный секретарь - Лукановский Валентин Владимирович. Вице-Президент - Сулейменов Ерлан Мельсович.
+Несмотря на короткий период своей деятельности Федерация функционального многоборья ставит перед собой высокие цели. Определен ряд неотложных задач по выведению функционального многоборья на новый уровень, открытию новых клубов в регионах, выявлению молодых талантов в этом виде спорта, требующем силы, воли и выносливости, воспитанию новых чемпионов, организации национальных и международных соревнований, созданию достойных условий для спортсменов и дальнейшему укреплению материально-технической базы
+    </p>
+  </div>
+</div>
+
+<script>
+  // эффект при наведении на карточку
+  document.querySelectorAll('.news-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-6px)';
+      card.style.boxShadow = '0 8px 22px rgba(11,99,183,0.2)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0)';
+      card.style.boxShadow = '0 4px 14px rgba(11,99,183,0.12)';
+    });
+  });
+</script>
 
 <script>
   // выпадающее меню "..."
@@ -207,24 +330,25 @@
         <a href="index.html" style="color:#fff;font-weight:600;">Главная</a>
         <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
         <a href="news.html" style="color:#fff;font-weight:600;">Новости</a>
-        <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
+    <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
   <a href="index.html#docs" style="color:#fff;font-weight:600;">Документы</a>
         <a href="competitions.html" style="color:#fff;font-weight:600;">Соревнования</a>
       </nav>
-      <div class="footer-socials">
-        <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
-    <img src="/instagramlogo.png" alt="Instagram">
+  <div class="footer-socials">
+    <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
+  <img src="/instagramlogo.png" alt="Instagram">
   </a>
-        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="/telegramlogo.png" alt="Telegram"></a>
-        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
-        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="/tiktoklogo.png" alt="TikTok"></a>
-        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
-      </div>
+    <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="/telegramlogo.png" alt="Telegram"></a>
+    <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
+    <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="/tiktoklogo.png" alt="TikTok"></a>
+    <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
+  </div>
     </div>
 
     <div class="footer-bottom">
       © 2025 Все права защищены — Казахстанская Федерация функционального многоборья
     </div>
   </footer>
+<script src="/lang.js"></script>
 </body>
 </html>

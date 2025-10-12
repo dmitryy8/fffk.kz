@@ -10,5 +10,19 @@
   <h1>Руководство федерации</h1>
   <p>Здесь можно разместить список руководителей федерации, их фото и биографии.</p>
   <p><a href="index.html">← Вернуться на главную</a></p>
+  <script>
+    // если кто-то кликнул на ссылку docs.html — перенаправим на index.html#docs
+    document.addEventListener('click', function(e){
+      const a = e.target.closest && e.target.closest('a');
+      if(!a) return;
+      try{
+        const href = a.getAttribute('href');
+        if(href && href.toLowerCase().endsWith('docs.html')){
+          e.preventDefault();
+          window.location.href = 'index.html#docs';
+        }
+      }catch(err){}
+    });
+  </script>
 </body>
 </html>

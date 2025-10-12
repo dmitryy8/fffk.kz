@@ -31,6 +31,7 @@
   /* расширенная навигация: кнопка «...» с выпадающим меню */
   nav.main-nav{display:flex;align-items:center;gap:8px}
   .more-dropdown{position:absolute;right:320px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
+  .more-dropdown{position:absolute;right:360px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
   .more-btn{background:transparent;color:#fff;border:none;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1;display:inline-flex;align-items:center;justify-content:center}
   /* hamburger: three horizontal bars instead of vertical dots */
   .more-btn .hamburger{width:20px;height:2px;background:#fff;border-radius:2px;display:block;position:relative}
@@ -196,7 +197,8 @@
           <a href="index.html">Главная</a>
           <a href="about.html">О нас</a>
           <a href="index.html#news">Новости</a>
-          <a href="docs.html">Документы</a>
+          <a href="index.html#docs">Документы</a>
+            <a href="index.html#docs">Документы</a>
           <!-- одна видимая дополнительная кнопка -->
           <a href="leadership.html">Руководство</a>
           <!-- остальные кнопки в выпадающем меню '...' (вынесено перед соцсетями) -->
@@ -225,7 +227,17 @@
         <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
       </div>
     </div>
-  </header>
+      <div id="langWrap" style="position:absolute;right:160px;top:50%;transform:translateY(-50%);z-index:80;">
+        <button id="langToggle" style="background:transparent;color:#fff;border:0;font-weight:700;cursor:pointer;padding:8px 10px;">
+          <span id="langCurrent">RU</span> ▾
+        </button>
+        <div id="langDropdown" style="display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:#000;border-radius:8px;padding:6px;min-width:120px;box-shadow:0 8px 24px rgba(3,20,45,0.12);">
+          <a href="#" data-lang="ru" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Рус</a>
+          <a href="#" data-lang="kk" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Қаз</a>
+          <a href="#" data-lang="en" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Eng</a>
+        </div>
+      </div>
+    </header>
 
   <section class="federation-hero">
     <div class="federation-container">
@@ -363,8 +375,8 @@
         <a href="index.html" style="color:#fff;font-weight:600;">Главная</a>
         <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
         <a href="news.html" style="color:#fff;font-weight:600;">Новости</a>
-        <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
-  <a href="docs.html" style="color:#fff;font-weight:600;">Документы</a>
+    <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
+  <a href="index.html#docs" style="color:#fff;font-weight:600;">Документы</a>
         <a href="competitions.html" style="color:#fff;font-weight:600;">Соревнования</a>
       </nav>
   <div class="footer-socials">
@@ -382,5 +394,6 @@
       © 2025 Все права защищены — Казахстанская Федерация функционального многоборья
     </div>
   </footer>
+<script src="/lang.js"></script>
 </body>
 </html>
