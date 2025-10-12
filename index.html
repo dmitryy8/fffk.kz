@@ -315,7 +315,7 @@
       .footer-logo-large img{width:260px;height:80px}
     }
 
-    /* Mobile adjustments: simplified header, fixed on top, mobile menu */
+  /* Mobile adjustments: simplified header, fixed on top, mobile menu */
     @media (max-width:768px) {
       header{position:fixed;top:0;left:0;right:0;z-index:120}
       body{padding-top:72px} /* reserve space for fixed header */
@@ -325,8 +325,8 @@
       nav.main-nav{display:none !important}
       .more-dropdown{display:none !important}
       .socials{display:none !important}
-      /* show mobile toggle */
-      #mobileToggle{display:inline-flex}
+  /* show mobile toggle */
+  #mobileToggle{display:inline-flex}
       /* reduce text sizes */
       .federation-text h1{font-size:20px}
       .section h2{font-size:22px}
@@ -342,10 +342,14 @@
       .events-grid .event-card{flex:0 0 320px !important;width:320px !important;height:420px}
       #docsLeft,#docsRight{display:block !important;left:6px;right:6px}
       /* mobile menu styles */
-      .mobile-menu{position:fixed;top:72px;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(11,99,183,0.96),rgba(11,99,183,0.96));color:#fff;padding:18px;display:none;z-index:200;overflow:auto}
+      .mobile-menu{position:fixed;top:72px;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(11,99,183,0.96),rgba(11,99,183,0.96));color:#fff;padding:18px;display:none;z-index:200;overflow:auto;transform:translateY(-8%);opacity:0;transition:transform .28s cubic-bezier(.2,.9,.3,1),opacity .2s ease}
+      .mobile-menu.open{display:block;transform:translateY(0);opacity:1}
       .mobile-menu a{display:block;padding:12px 8px;border-bottom:1px solid rgba(255,255,255,0.06);color:#fff;font-weight:800;text-decoration:none}
       .mobile-menu .close-btn{display:inline-block;margin-bottom:8px;padding:8px 12px;background:rgba(255,255,255,0.08);border-radius:8px;color:#fff}
     }
+
+    /* always hide mobile menu by default (desktop) */
+    .mobile-menu{display:none}
 
     /* Документы: адаптив для мобильных — на телефоне карточки ставим в колонку, прячем стрелки */
     @media (max-width:720px) {
@@ -1046,6 +1050,26 @@
       window.addEventListener('resize', toggleDocsArrows);
       window.addEventListener('load', toggleDocsArrows);
       document.addEventListener('DOMContentLoaded', toggleDocsArrows);
+    })();
+  </script>
+
+  <script>
+    // generic mobile toggle/close (applies on pages where mobileToggle/mobileMenu exist)
+    (function(){
+      const openButtons = document.querySelectorAll('#mobileToggle');
+      const closeButtons = document.querySelectorAll('#mobileClose');
+      openButtons.forEach(btn=> btn.addEventListener('click', ()=>{
+        const menu = document.getElementById('mobileMenu'); if(menu) menu.classList.add('open');
+      }));
+      closeButtons.forEach(btn=> btn.addEventListener('click', ()=>{ const menu = document.getElementById('mobileMenu'); if(menu) menu.classList.remove('open'); }));
+      // allow tapping outside to close
+      document.addEventListener('click', (e)=>{
+        const menu = document.getElementById('mobileMenu');
+        if(!menu) return;
+        if(menu.classList.contains('open') && !menu.contains(e.target) && !e.target.closest('#mobileToggle')){
+          menu.classList.remove('open');
+        }
+      });
     })();
   </script>
 
