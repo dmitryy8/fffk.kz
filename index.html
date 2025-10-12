@@ -41,7 +41,7 @@
   /* dropdown для дополнительных ссылок */
   nav.main-nav{display:flex;align-items:center;gap:8px}
   /* позиция ⋮: смещаем влево, чтобы кнопка стояла перед соцсетями */
-  .more-dropdown{position:absolute;right:350px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
+  .more-dropdown{position:absolute;right:360px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
   .more-btn{background:transparent;color:#fff;border:none;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1;display:inline-flex;align-items:center;justify-content:center}
   /* hamburger: three horizontal bars instead of vertical dots */
   .more-btn .hamburger{width:20px;height:2px;background:#fff;border-radius:2px;display:block;position:relative}
@@ -372,7 +372,7 @@
           <a href="index.html">Главная</a>
           <a href="about.html">О нас</a>
           <a href="index.html#news">Новости</a>
-          <a href="docs.html">Документы</a>
+          <a href="index.html#docs">Документы</a>
           <!-- видимая доп. кнопка -->
           <a href="leadership.html">Руководство</a>
           <!-- остальные кнопки в выпадающем меню (перенесены перед соцсетями) -->
@@ -713,7 +713,7 @@
    <main class="container">
 
     <section class="section" style="position:relative;">
-      <h2>Документы</h2>
+      <h2 id="docs">Документы</h2>
 
       <!-- Стрелки для прокрутки документов -->
       <button id="docsLeft" style="position:absolute;top:50%;left:-10px;transform:translateY(-50%);background:#0b63b7;color:#fff;border:none;border-radius:50%;width:42px;height:42px;cursor:pointer;box-shadow:0 4px 10px rgba(11,99,183,0.2);z-index:2">&#10094;</button>
@@ -752,7 +752,7 @@
               <div class="event-title" style="font-size:18px;font-weight:800;color:#0b2340;">Календарь</div>
             </div>
             <div class="event-photo" style="margin-top:12px;border-radius:10px;overflow:hidden;height:180px;background:#f4f7fb;display:flex;align-items:center;justify-content:center"><img src="/kalen.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
-            <a href="docs1.html" class="btn-primary" style="margin-top:8px;">Подробнее</a>
+            <a href="docs3.html" class="btn-primary" style="margin-top:8px;">Подробнее</a>
           </div>
         </div>
 
@@ -760,9 +760,9 @@
         <div class="event-card" style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(11,99,183,0.12);transition:transform 0.3s ease;width:360px;flex:0 0 360px;display:flex;flex-direction:column;height:420px;">
           <div style="padding:18px 20px;display:flex;flex-direction:column;gap:10px;">
             <div class="event-date" style="font-size:14px;color:#0b63b7;font-weight:700;">01.02.2024</div>
-            <div class="event-title" style="font-size:18px;font-weight:800;color:#0b2340;">Правила</div>
+            <div class="event-title" style="font-size:18px;font-weight:800;color:#0b2340;">Стандарты движений</div>
             <div class="event-photo" style="margin-top:12px;border-radius:10px;overflow:hidden;height:180px;background:#f4f7fb;display:flex;align-items:center;justify-content:center"><img src="/ruls.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
-            <a href="docs1.html" class="btn-primary" style="margin-top:8px;">Подробнее</a>
+            <a href="docs4.html" class="btn-primary" style="margin-top:8px;">Подробнее</a>
           </div>
         </div>
 
@@ -990,6 +990,23 @@
       window.addEventListener('load', scrollToNewsIfNeeded);
       window.addEventListener('hashchange', scrollToNewsIfNeeded);
     })();
+
+    (function(){
+      // прокрутка к секции #docs если хэш установлен
+      function scrollToDocsIfNeeded(){
+        try{
+          if(location.hash === '#docs'){
+            const el = document.getElementById('docs');
+            if(!el) return;
+            setTimeout(()=>{ el.scrollIntoView({behavior:'smooth', block:'start'}); }, 80);
+          }
+        }catch(e){console.error(e)}
+      }
+
+      window.addEventListener('DOMContentLoaded', scrollToDocsIfNeeded);
+      window.addEventListener('load', scrollToDocsIfNeeded);
+      window.addEventListener('hashchange', scrollToDocsIfNeeded);
+    })();
   </script>
 
   <footer>
@@ -1004,7 +1021,7 @@
           <a href="about.html">О нас</a>
           <a href="news.html">Новости</a>
           <a href="media.html">Медиа</a>
-          <a href="docs.html">Документы</a>
+          <a href="index.html#docs">Документы</a>
           <a href="competitions.html">Соревнования</a>
         </nav>
 
