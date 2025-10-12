@@ -118,7 +118,7 @@
   /* GALLERY & LIGHTBOX */
   .gallery-wrap{margin-top:18px}
   .slider{position:relative;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(3,20,45,0.06)}
-  .slider img{width:80%;height:800px;object-fit:cover;display:block;border:6px solid var(--blue);border-radius:8px;box-shadow:0 12px 30px rgba(11,99,183,0.12)}
+  .slider img{width:100%;height:auto;max-height:60vh;object-fit:cover;display:block;border:6px solid var(--blue);border-radius:8px;box-shadow:0 12px 30px rgba(11,99,183,0.12)}
   .slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(11,99,183,0.9);color:#fff;border:none;width:48px;height:48px;border-radius:50%;cursor:pointer;box-shadow:0 6px 18px rgba(3,20,45,0.12);font-size:20px}
   .slider-btn.prev{left:12px}
   .slider-btn.next{right:12px}
@@ -136,6 +136,21 @@
   .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.9);border:none;width:56px;height:56px;border-radius:50%;cursor:pointer;z-index:220}
   .lb-prev{left:-72px}
   .lb-next{right:-72px}
+
+  /* Mobile adjustments */
+  @media (max-width: 720px){
+    .container{padding:12px}
+    .slider{padding:12px}
+    .slider img{border-width:4px}
+    .slider-btn{width:40px;height:40px;font-size:18px}
+    .thumb{width:64px;height:48px}
+    .thumbs{overflow-x:auto;flex-wrap:nowrap;padding:6px 4px}
+    .thumbs::-webkit-scrollbar{height:8px}
+    .lightbox-content img{max-width:92%;max-height:80%}
+    .lb-nav{width:44px;height:44px}
+    .lb-prev{left:8px}
+    .lb-next{right:8px}
+  }
 
   </style>
 </head>
@@ -220,7 +235,7 @@
               <div class="gallery-wrap">
                 <div class="slider" id="slider">
                   <button class="slider-btn prev" id="prevBtn" aria-label="Предыдущее">&#10094;</button>
-                  <img id="sliderImage" src="/astanaopencup1.JPG" alt="Медиа" />
+                  <img id="sliderImage" src="/astanaopencup1.jpg" alt="Медиа" />
                   <button class="slider-btn next" id="nextBtn" aria-label="Следующее">&#10095;</button>
                 </div>
 
@@ -259,10 +274,10 @@
             <script>
               // список всех изображений в проекте, кроме логотипов/иконок соцсетей
               const IMAGES = [
-                '/astanaopencup1.JPG','/astana2.JPG','/astana1.JPG',
-                '/game1.jpg','/game2.JPG','/game3.JPG',
+                '/astanaopencup1.jpg','/astana2.jpg','/astana1.jpg',
+                '/game1.jpg','/game2.jpg','/game3.jpg',
                 /* pologenie.jpg removed */
-                '/imageskz/kz.JPG','/imageskz/kz1.JPG','/imageskz/kz2.JPG','/imageskz/kz3.JPG','/imageskz/kz4.JPG','/imageskz/kz5.JPG','/imageskz/kz6.JPG',
+                '/imageskz/kz.jpg','/imageskz/kz1.jpg','/imageskz/kz2.jpg','/imageskz/kz3.jpg','/imageskz/kz4.jpg','/imageskz/kz5.jpg','/imageskz/kz6.jpg',
                 '/imageschampionat/asia1.jpg','/imageschampionat/asia2.jpg','/imageschampionat/asia3.jpg','/imageschampionat/asia4.jpg','/imageschampionat/asia5.jpg'
               ];
 
@@ -303,10 +318,10 @@
                 prevBtn.addEventListener('click', ()=>{ prev(); resetAutoplay(); });
 
                 function startAutoplay(){
-                  autoplay = setInterval(()=>{ next(); }, 5000);
+                  // autoplay intentionally disabled per UX request
                 }
                 function stopAutoplay(){ if(autoplay){ clearInterval(autoplay); autoplay=null; } }
-                function resetAutoplay(){ stopAutoplay(); startAutoplay(); }
+                function resetAutoplay(){ /* no-op when autoplay disabled */ }
 
                 // lightbox
                 const lightbox = document.getElementById('lightbox');
