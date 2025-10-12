@@ -179,21 +179,35 @@ header .brand img, header #site-logo { display: none !important; }
    We hide any original text inside the button and render a consistent
    '☰' glyph via ::before so the appearance is identical across pages. */
 #mobileToggle {
+#  display and sizing tuned for mobile; make it much larger per request
+#  (this file is only loaded on screens <=768px)
+#  increase button and glyph size so it's clearly visible and tappable
+#  without changing desktop appearance
+#
+#  NOTE: mobile.css is loaded using media query, so these rules apply only on mobile
+#
+#  (we keep color transparent and render the white glyph via ::before)
+#
+#  Accessibility: button still has aria-label -> visual glyph only changed
+#
+#
+#  Increase size substantially
   display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 36px;
-  background: transparent;
-  border: 0;
-  position: relative;
-  color: transparent; /* hide existing text glyphs */
-  text-indent: -9999px;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 64px !important;
+  height: 64px !important;
+  background: rgba(11,99,183,0.85) !important;
+  border-radius: 12px !important;
+  border: 0 !important;
+  position: relative !important;
+  color: transparent !important; /* hide existing text glyphs */
+  text-indent: -9999px !important;
 }
 #mobileToggle::before{
   content: "☰";
   color: #fff;
-  font-size: 22px;
+  font-size: 34px; /* larger three-bars glyph */
   line-height: 1;
   position: absolute;
   left: 50%;
@@ -207,4 +221,33 @@ header .nav-row { position: relative; }
 
 /* remove footer/navigation buttons on mobile (only) per request */
 .footer-nav { display: none !important; }
+
+/* ======= DOCUMENTS / EVENTS SCROLLER (MOBILE) ======= */
+/* make sure the documents/events row is horizontally scrollable on mobile
+   and style visible left/right arrows for tapping */
+.events-grid { overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; }
+
+/* arrows that exist in HTML (#docsLeft, #docsRight) - mobile look */
+#docsLeft, #docsRight {
+  display: block !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 999px !important;
+  background: var(--blue) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 6px 18px rgba(3,20,45,0.14) !important;
+  z-index: 50 !important;
+  display: none; /* shown by script when needed */
+}
+
+#docsLeft { left: 6px !important; }
+#docsRight { right: 6px !important; }
+
+/* slightly larger tap-target on mobile for arrows */
+#docsLeft::before, #docsRight::before { font-size: 22px; }
+
 

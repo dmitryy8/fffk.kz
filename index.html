@@ -1010,20 +1010,43 @@
   </script>
 
   <script>
-    // прокрутка документов кнопками
+    // прокрутка документов кнопками (динамический шаг: ширина карточки + gap)
     (function(){
       const left = document.getElementById('docsLeft');
       const right = document.getElementById('docsRight');
       const grid = document.querySelector('.events-grid');
       if(!left || !right || !grid) return;
-      const step = 380; // ширина карточки + gap
-      left.addEventListener('click', ()=> grid.scrollBy({left: -step, behavior: 'smooth'}));
-      right.addEventListener('click', ()=> grid.scrollBy({left: step, behavior: 'smooth'}));
+
+      function getStep(){
+        const first = grid.querySelector('.event-card');
+        if(!first) return Math.round(grid.clientWidth * 0.8);
+        const rect = first.getBoundingClientRect();
+        let gap = 18; // fallback
+        try{
+          const g = window.getComputedStyle(grid).getPropertyValue('gap') || window.getComputedStyle(grid).getPropertyValue('column-gap');
+          if(g) gap = parseFloat(g);
+        }catch(e){}
+        return Math.round(rect.width + gap);
+      }
+
+      left.addEventListener('click', ()=> grid.scrollBy({left: -getStep(), behavior: 'smooth'}));
+      right.addEventListener('click', ()=> grid.scrollBy({left: getStep(), behavior: 'smooth'}));
+
       // клавиши влево/вправо
       document.addEventListener('keydown', (e)=>{
         if(e.key === 'ArrowLeft') left.click();
         if(e.key === 'ArrowRight') right.click();
       });
+
+      // show/hide arrows when overflowing (works for mobile too)
+      function updateDocsArrows(){
+        const isOverflowing = grid.scrollWidth > grid.clientWidth + 4;
+        left.style.display = isOverflowing ? 'block' : 'none';
+        right.style.display = isOverflowing ? 'block' : 'none';
+      }
+      window.addEventListener('resize', updateDocsArrows);
+      window.addEventListener('load', updateDocsArrows);
+      document.addEventListener('DOMContentLoaded', updateDocsArrows);
     })();
   </script>
 
