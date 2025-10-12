@@ -8,6 +8,9 @@ body {
   margin: 0;
 }
 
+/* Ensure mobile-only close buttons are visible on small screens */
+.close-btn, .lb-close { display: inline-flex !important; align-items: center; justify-content: center; }
+
 /* ---------- ХЕДЕР ---------- */
 .nav-row {
   flex-direction: column;
