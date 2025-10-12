@@ -23,10 +23,27 @@
     header{background:var(--blue);color:#fff}
     .nav-row{
       display:flex;align-items:center;justify-content:space-between;
-      gap:12px;max-width:var(--maxw);margin:0 auto;padding:12px 22px
+      gap:12px;max-width:var(--maxw);margin:0 auto;padding:12px 22px;position:relative;min-height:64px;
     }
+    /* не позволяем навигации переносить ссылки на новую строку */
+    .nav-row nav, nav.main-nav{white-space:nowrap;display:flex;align-items:center;gap:8px}
     .brand{display:flex;align-items:center;gap:12px}
-    nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
+  nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
+  nav.main-nav{display:flex;align-items:center;gap:8px}
+  .more-dropdown{position:absolute;right:320px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
+  .more-btn{background:transparent;color:#fff;border:none;font-size:26px;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1}
+  /* hamburger inside the more button: three horizontal bars */
+  .more-btn .hamburger{display:inline-block;width:22px;height:2px;background:#fff;position:relative;border-radius:2px}
+  .more-btn .hamburger::before,.more-btn .hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:#fff;border-radius:2px}
+  .more-btn .hamburger::before{top:-7px}
+  .more-btn .hamburger::after{top:7px}
+  /* icon image replacement: use the image file `tochka.png` (place it in project root) */
+  .more-btn .more-icon{width:22px;height:22px;object-fit:contain;display:block}
+  .more-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:var(--text);box-shadow:0 8px 24px rgba(3,20,45,0.12);border-radius:10px;overflow:hidden;min-width:220px;z-index:60;padding:6px 0}
+  .more-menu a{display:block;padding:10px 14px;color:var(--text);font-weight:700;border-bottom:1px solid rgba(0,0,0,0.04);text-decoration:none}
+  .main-nav a:hover, .more-btn:hover{filter:brightness(0.9)}
+  .more-menu a:last-child{border-bottom:0}
+  .more-menu a:hover{background:#f5f7fb}
 
     /* socials */
     .socials {
@@ -34,6 +51,11 @@
       gap: 10px;
       align-items: center;
       flex-direction: row;
+      position: absolute;
+      right: 72px; /* moved left to make room for the corner ⋮ */
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left:0;
     }
     .social-btn {
       display: inline-flex;
@@ -75,11 +97,21 @@
       .federation-text h1{font-size:22px}
       .federation-text h2{font-size:18px}
     }
-    /* Галерея */
+
+    /* Галерея с кнопками по бокам */
+    .gallery-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 30px auto;
+    }
     .gallery-container {
       position: relative;
       max-width: 900px;
-      margin: 30px auto;
+      width: 100%;
       overflow: hidden;
       border-radius: var(--radius);
       box-shadow: 0 4px 20px rgba(11,99,183,0.15);
@@ -95,24 +127,26 @@
       flex-shrink: 0;
     }
     .gallery-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(11,99,183,0.8);
+      background: var(--blue);
       border: none;
       color: #fff;
       font-size: 32px;
       border-radius: 50%;
-      width: 48px;
-      height: 48px;
+      width: 56px;
+      height: 56px;
       cursor: pointer;
-      transition: background 0.3s ease;
-      z-index: 10;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(11,99,183,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .gallery-arrow:hover { background: rgba(11,99,183,1); }
-    .gallery-arrow.left { left: 16px; }
-    .gallery-arrow.right { right: 16px; }
-/* Основная новость */
+    .gallery-arrow:hover { 
+      background: var(--blue-2);
+      transform: scale(1.1);
+    }
+
+    /* Основная новость */
     .news-card {
       background: #fff;
       border-radius: var(--radius);
@@ -192,75 +226,6 @@
       background: var(--blue-2);
     }
 
-    /* новости */
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .news-item {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 14px rgba(11,99,183,0.12);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .news-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 22px rgba(11,99,183,0.2);
-    }
-    .news-item img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .news-content {
-      padding: 16px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex-grow: 1;
-    }
-    .news-date {
-      font-size: 14px;
-      color: #0b63b7;
-      font-weight: 700;
-    }
-    .news-title {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--text);
-    }
-    .news-desc {
-      color: #555;
-      font-size: 15px;
-      flex-grow: 1;
-    }
-    .news-link {
-      display: inline-block;
-      margin-top: 8px;
-      color: #fff;
-      background: #0b63b7;
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-      text-align: center;
-      transition: background 0.3s ease;
-      align-self: flex-start;
-    }
-    .news-link:hover {
-      background: #2b78b9;
-    }
-
-    @media(max-width:768px){
-      .news-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
     footer{
       margin-top:28px;padding:0;border-top:1px solid rgba(11,99,183,0.06);
       background:var(--blue)
@@ -276,6 +241,17 @@
     @media(max-width:520px){
       .footer-inner{flex-direction:column;gap:12px;align-items:center}
     }
+    @media(max-width:768px){
+      .gallery-wrapper {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .gallery-arrow {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 
@@ -284,15 +260,27 @@
     <div class="nav-row">
       <div class="brand">
         <img src="footer-logo.png" alt="Логотип Федерации" style="width:220px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
-        <nav>
+        <nav class="main-nav">
           <a href="index.html">Главная</a>
           <a href="about.html">О нас</a>
-          <a href="news.html">Новости</a>
-          <a href="media.html">Медиа</a>
-          <a href="docs.html">Основные документы</a>
+          <a href="index.html#news">Новости</a>
+          <a href="docs.html">Документы</a>
+          <!-- одна видимая дополнительная кнопка -->
+          <a href="leadership.html">Руководство</a>
+          <!-- остальные кнопки в выпадающем меню '...' (вынесено перед соцсетями) -->
         </nav>
       </div>
 
+          <div class="more-dropdown" id="moreDropdown">
+            <button class="more-btn" id="moreBtn" style="font-size:28px;padding:8px 10px;"><img src="tochka.png" class="more-icon" alt="menu"></button>
+            <div class="more-menu" id="moreMenu" style="display:none">
+              <a href="media.html">Медиа</a>
+              <a href="competitions.html">Соревнования</a>
+              <a href="achievements.html">Достижения</a>
+              <a href="partners.html">Партнёры и спонсоры</a>
+              <a href="regional.html">Региональное отделение</a>
+            </div>
+          </div>
       <div class="socials">
         <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
     <img src="instagramlogo.PNG" alt="Instagram">
@@ -310,8 +298,8 @@
       <div class="federation-logo left"><img src="logo.png" alt=""></div>
       <div class="federation-text">
         <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
-        ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
-      </h2>
+          ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
+        </h2>
         <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
         <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
       </div>
@@ -321,82 +309,119 @@
 
   <main class="container">
 
-  <!-- Галерея -->
-  <div class="gallery-container">
-    <div class="gallery-slide" id="gallerySlide">
-      <img src="champ1.jpg" alt="">
-      <img src="champ2.jpg" alt="">
-      <img src="champ3.jpg" alt="">
-      <img src="champ4.jpg" alt="">
-      <img src="champ5.jpg" alt="">
-      <img src="champ6.jpg" alt="">
-    </div>
-    <button class="gallery-arrow left" id="prevBtn">&#10094;</button>
-    <button class="gallery-arrow right" id="nextBtn">&#10095;</button>
-  </div>
+    <!-- Галерея с кнопками по бокам -->
+    <div class="gallery-wrapper">
+      <button class="gallery-arrow" id="prevBtn">&#10094;</button>
+      
+      <div class="gallery-container">
+        <div class="gallery-slide" id="gallerySlide">
+          <img src="imageschampionat\asia1.jpg" alt="">
+          <img src="imageschampionat\asia2.jpg" alt="">
+          <img src="imageschampionat\asia3.jpg" alt="">
+          <img src="imageschampionat\asia4.jpg" alt="">
+          <img src="imageschampionat\asia5.jpg" alt="">
+        </div>
+      </div>
 
-  <!-- Текст новости -->
-  <div class="news-card">
-    <h1>Чемпионат Казахстана по функциональному многоборью 2025 состоялся в конце сентября!</h1>
-    <p>
-27–28 сентября прошёл Чемпионат Казахстана по функциональному многоборью 2025 — главное событие года в мире функционального фитнеса страны.
-В соревнованиях приняли участие более 100 сильнейших атлетов из разных регионов Казахстана, выступивших в 6 категориях.
-Атмосфера борьбы, поддержки и единства стала главным украшением чемпионата. Федерация благодарит всех участников, судей и партнёров за вклад в развитие функционального многоборья в Казахстане!
+      <button class="gallery-arrow" id="nextBtn">&#10095;</button>
+    </div>
+
+    <!-- Текст новости -->
+    <div class="news-card">
+      <h1>Казахстан — победитель Чемпионата Азии по функциональному многоборью 2025!</h1>
+      <p>
+Эр-Рияд, Королевство Саудовская Аравия, 2–4 октября 2025 года.
+Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью, который собрал более 70 спортсменов из 10 стран, включая Казахстан, Саудовскую Аравию, Пакистан, Иран, Иорданию, Узбекистан, Монголию, Южную Корею, Австралию и Индию.
+🇰🇿 Сборная Казахстана представила 11 сильнейших атлетов, продемонстрировавших высокий уровень физической подготовки, силы и выносливости.
+По итогам соревнований команда Казахстана заняла 1-е место в общекомандном зачёте, уверенно закрепив лидерство на континенте.
+Чемпионат был организован при поддержке Министерства спорта и Федерации спорта Саудовской Аравии, а также Международной федерации функционального фитнеса (iF3).
+В течение трёх дней участники проходили серию интенсивных комплексов, направленных на проверку силы, выносливости, ловкости, координации и психологической устойчивости — ключевых качеств функционального многоборья.
 <b>Подготовка и руководство:</b>
 Казахстанскую сборную возглавил Президент Казахстанской Федерации функционального многоборья — Николай Ильич Мещеряков.
 Подготовку спортсменов осуществлял трёхкратный чемпион мира, финалист CrossFit Games — Роман Джантлеев.
 <b>Генеральный спонсор:</b>
 Генеральным спонсором сборной Казахстана на Чемпионате Азии выступила компания КДЛ Олимп в лице Ерлана Сулейменова.
 Федерация выражает благодарность партнёрам за поддержку и вклад в развитие функционального многоборья в Казахстане.
+      </p>
+    </div>
 
-    </p>
-  </div>
+    <!-- Победители -->
+    <div class="winners">
+      <h2>Победители и призёры от Казахстана:</h2>
+      <ul>
+        <li>1 место — Камила Такеева</li>
+        <li>2 место — Виктор Ильченко, Валентин Жуков</li>
+        <li>2 место — Асылбек Жалеев, Дина Касымова</li>
+        <li>3 место — Артём Мацак</li>
+        <li>4 место — Валентин Лукановский, Ксения Жалеева</li>
+        <li>7 место — Амир Гайсин</li>
+        <li>10 место — Нуркен Бахтияров, Баян Кинашев</li>
+      </ul>
+    </div>
 
-  <!-- Победители -->
-  <div class="winners">
-    <h2>Победители и призёры от Казахстана:</h2>
-    <ul>
-      <li>🥇 Камила Такеева</li>
-      <li>🥈 Виктор Ильченко, Валентин Жуков</li>
-      <li>🥈 Асылбек Жалеев, Дина Касымова</li>
-      <li>🥉 Артём Мацак</li>
-      <li>4 место — Валентин Лукановский, Ксения Жалеева</li>
-      <li>7 место — Амир Гайсин</li>
-      <li>10 место — Нуркен Бахтияров, Баян Кинашев</li>
-    </ul>
-  </div>
-
-  <!-- Кнопки -->
-  <div class="btns">
-    <a href="index.html" class="btn btn-main">Вернуться на главную</a>
-  </div>
-
-</main>
-
-<script>
-  // Простейший слайдер
-  const slide = document.getElementById('gallerySlide');
-  const imgs = slide.querySelectorAll('img');
-  const prev = document.getElementById('prevBtn');
-  const next = document.getElementById('nextBtn');
-  let index = 0;
-
-  function updateSlide() {
-    slide.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  next.addEventListener('click', () => {
-    index = (index + 1) % imgs.length;
-    updateSlide();
-  });
-
-  prev.addEventListener('click', () => {
-    index = (index - 1 + imgs.length) % imgs.length;
-    updateSlide();
-  });
-</script>
+    <!-- Кнопки -->
+    <div class="btns">
+      <a href="index.html" class="btn btn-main">Вернуться на главную</a>
+    </div>
 
   </main>
+
+  <script>
+    // Слайдер с автоматической прокруткой каждые 5 секунд
+    const slide = document.getElementById('gallerySlide');
+    const imgs = slide.querySelectorAll('img');
+    const prev = document.getElementById('prevBtn');
+    const next = document.getElementById('nextBtn');
+    let index = 0;
+    let autoSlideInterval;
+
+    function updateSlide() {
+      slide.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        index = (index + 1) % imgs.length;
+        updateSlide();
+      }, 5000); // 5 секунд
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % imgs.length;
+      updateSlide();
+      resetAutoSlide();
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + imgs.length) % imgs.length;
+      updateSlide();
+      resetAutoSlide();
+    });
+
+    // Запуск автопрокрутки при загрузке
+    startAutoSlide();
+  </script>
+
+    <script>
+      (function(){
+        const moreBtn = document.getElementById('moreBtn');
+        const moreMenu = document.getElementById('moreMenu');
+        const moreDropdown = document.getElementById('moreDropdown');
+        if(!moreBtn) return;
+        moreBtn.addEventListener('click', (e)=>{
+          e.stopPropagation();
+          moreMenu.style.display = moreMenu.style.display === 'block' ? 'none' : 'block';
+        });
+        document.addEventListener('click', (e)=>{
+          if(!moreDropdown.contains(e.target)) moreMenu.style.display = 'none';
+        });
+      })();
+    </script>
 
   <footer>
     <div class="footer-inner">
@@ -406,12 +431,13 @@
         <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
         <a href="news.html" style="color:#fff;font-weight:600;">Новости</a>
         <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
-        <a href="docs.html" style="color:#fff;font-weight:600;">Основные документы</a>
+  <a href="docs.html" style="color:#fff;font-weight:600;">Документы</a>
+        <a href="competitions.html" style="color:#fff;font-weight:600;">Соревнования</a>
       </nav>
       <div class="footer-socials">
         <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
-    <img src="instagramlogo.PNG" alt="Instagram">
-  </a>
+          <img src="instagramlogo.PNG" alt="Instagram">
+        </a>
         <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="telegramlogo.PNG" alt="Telegram"></a>
         <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="facebooklogo.PNG" alt="Facebook"></a>
         <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="tiktoklogo.PNG" alt="TikTok"></a>

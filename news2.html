@@ -23,10 +23,30 @@
     header{background:var(--blue);color:#fff}
     .nav-row{
       display:flex;align-items:center;justify-content:space-between;
-      gap:12px;max-width:var(--maxw);margin:0 auto;padding:12px 22px
+      gap:12px;max-width:var(--maxw);margin:0 auto;padding:12px 22px;position:relative;min-height:64px;
     }
+    /* не позволяем навигации переносить ссылки на новую строку */
+    .nav-row nav, nav.main-nav{white-space:nowrap;display:flex;align-items:center;gap:8px}
     .brand{display:flex;align-items:center;gap:12px}
-    nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
+  nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
+  nav.main-nav{display:flex;align-items:center;gap:8px}
+  .more-dropdown{position:relative;display:inline-block}
+  /* позиция ⋮: смещаем влево, чтобы кнопка была перед соцсетями */
+  .more-dropdown{position:absolute;right:320px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
+  .more-btn{background:transparent;color:#fff;border:none;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1;display:inline-flex;align-items:center;justify-content:center}
+  /* hamburger: three horizontal bars instead of vertical dots */
+  .more-btn .hamburger{width:20px;height:2px;background:#fff;border-radius:2px;display:block;position:relative}
+  .more-btn .hamburger::before,
+  .more-btn .hamburger::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+  .more-btn .hamburger::before{top:-6px}
+  .more-btn .hamburger::after{top:6px}
+  /* icon image replacement: use the image file `tochka.png` (place it in project root) */
+  .more-btn .more-icon{width:22px;height:22px;object-fit:contain;display:block}
+  .more-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:var(--text);box-shadow:0 8px 24px rgba(3,20,45,0.12);border-radius:10px;overflow:hidden;min-width:220px;z-index:60;padding:6px 0}
+  .more-menu a{display:block;padding:10px 14px;color:var(--text);font-weight:700;border-bottom:1px solid rgba(0,0,0,0.04);text-decoration:none}
+  .main-nav a:hover, .more-btn:hover{filter:brightness(0.9)}
+  .more-menu a:last-child{border-bottom:0}
+  .more-menu a:hover{background:#f5f7fb}
 
     /* socials */
     .socials {
@@ -34,6 +54,11 @@
       gap: 10px;
       align-items: center;
       flex-direction: row;
+      position: absolute;
+      right: 72px; /* moved left to make room for the corner ⋮ */
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left:0;
     }
     .social-btn {
       display: inline-flex;
@@ -168,15 +193,29 @@
     <div class="nav-row">
       <div class="brand">
         <img src="footer-logo.png" alt="Логотип Федерации" style="width:220px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
-        <nav>
+        <nav class="main-nav">
           <a href="index.html">Главная</a>
           <a href="about.html">О нас</a>
-          <a href="news.html">Новости</a>
-          <a href="media.html">Медиа</a>
-          <a href="docs.html">Основные документы</a>
+          <a href="index.html#news">Новости</a>
+          <a href="docs.html">Документы</a>
+          <!-- одна видимая дополнительная кнопка -->
+          <a href="leadership.html">Руководство</a>
+          <!-- остальные кнопки в выпадающем меню '...' (вынесено перед соцсетями) -->
         </nav>
       </div>
 
+          <div class="more-dropdown" id="moreDropdown">
+            <button class="more-btn" id="moreBtn" aria-label="Меню дополнительных ссылок" style="padding:8px 10px;">
+                <img src="tochka.png" class="more-icon" alt="menu">
+            </button>
+            <div class="more-menu" id="moreMenu" style="display:none">
+              <a href="media.html">Медиа</a>
+              <a href="competitions.html">Соревнования</a>
+              <a href="achievements.html">Достижения</a>
+              <a href="partners.html">Партнёры и спонсоры</a>
+              <a href="regional.html">Региональное отделение</a>
+            </div>
+          </div>
       <div class="socials">
         <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
     <img src="instagramlogo.PNG" alt="Instagram">
@@ -275,7 +314,24 @@
   });
 </script>
 
+<script>
+  (function(){
+    const moreBtn = document.getElementById('moreBtn');
+    const moreMenu = document.getElementById('moreMenu');
+    const moreDropdown = document.getElementById('moreDropdown');
+    if(!moreBtn) return;
+    moreBtn.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      moreMenu.style.display = moreMenu.style.display === 'block' ? 'none' : 'block';
+    });
+    document.addEventListener('click', (e)=>{
+      if(!moreDropdown.contains(e.target)) moreMenu.style.display = 'none';
+    });
+  })();
+</script>
+
   </main>
+
 
   <footer>
     <div class="footer-inner">
@@ -285,7 +341,8 @@
         <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
         <a href="news.html" style="color:#fff;font-weight:600;">Новости</a>
         <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
-        <a href="docs.html" style="color:#fff;font-weight:600;">Основные документы</a>
+  <a href="docs.html" style="color:#fff;font-weight:600;">Документы</a>
+        <a href="competitions.html" style="color:#fff;font-weight:600;">Соревнования</a>
       </nav>
       <div class="footer-socials">
         <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">

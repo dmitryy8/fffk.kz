@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Новости Федерации — Казахстанская Федерация функционального многоборья</title>
+  <meta name="description" content="Новости Казахстанской Федерации функционального многоборья" />
+  <style>
+    :root {
+      --blue:#0b63b7;--blue-2:#2b78b9;--muted:#f4f8ff;
+      --text:#0b2340;--accent:#061b30;--radius:12px;--maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:Inter,system-ui,Roboto,Arial;
+      background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+      color:var(--text);font-size:15px;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .container{max-width:var(--maxw);margin:0 auto;padding:22px}
+    header{background:var(--blue);color:#fff}
+    .nav-row{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;max-width:var(--maxw);margin:0 auto;padding:12px 22px;position:relative;min-height:64px;
+    }
+    /* не позволяем навигации переносить ссылки на новую строку */
+    .nav-row nav, nav.main-nav{white-space:nowrap;display:flex;align-items:center;gap:8px}
+    .brand{display:flex;align-items:center;gap:12px}
+  nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
+  /* расширенная навигация: кнопка «...» с выпадающим меню */
+  nav.main-nav{display:flex;align-items:center;gap:8px}
+  .more-dropdown{position:absolute;right:320px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
+  .more-btn{background:transparent;color:#fff;border:none;font-size:26px;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1}
+  /* icon image replacement: use the image file `tochka.png` (place it in project root) */
+  .more-btn .more-icon{width:22px;height:22px;object-fit:contain;display:block}
+  /* вертикальные точки: используем символ U+22EE (⋮) */
+  .more-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:var(--text);box-shadow:0 8px 24px rgba(3,20,45,0.12);border-radius:10px;overflow:hidden;min-width:220px;z-index:60;padding:6px 0}
+  .more-menu a{display:block;padding:10px 14px;color:var(--text);font-weight:700;border-bottom:1px solid rgba(0,0,0,0.04);text-decoration:none}
+  /* hover: немного серее */
+  .main-nav a:hover, .more-btn:hover{filter:brightness(0.9)}
+  .more-menu a:last-child{border-bottom:0}
+  .more-menu a:hover{background:#f5f7fb}
+
+    /* socials */
+    .socials {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-direction: row;
+      position: absolute;
+      right: 72px; /* moved left to make room for the corner ⋮ */
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left:0;
+    }
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border-radius: 50%;
+      border: 0;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(3, 20, 45, 0.12);
+      width: 42px;
+      height: 42px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .social-btn img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+    .social-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0}
+    .federation-container{
+      display:flex;align-items:center;justify-content:space-between;
+      width:90%;max-width:1300px;margin:0 auto;
+      background:linear-gradient(90deg,#5ea5e6 0%,#5da1e0 11%,#e8e8e8 25%,#e6e6e7 70%,#f9fafb 85%,#ffffff 100%);
+      border-radius:60px;padding:30px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.08)
+    }
+    .federation-logo img{width:264px;height:auto;object-fit:contain}
+    .federation-text{text-align:center;flex:1;margin:0 30px}
+    .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
+    .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
+    @media(max-width:768px){
+      .federation-container{flex-direction:column;text-align:center;border-radius:20px}
+      .federation-logo img{width:140px;margin-bottom:15px}
+      .federation-text h1{font-size:22px}
+      .federation-text h2{font-size:18px}
+    }
+
+   
+
+    footer{
+      margin-top:28px;padding:0;border-top:1px solid rgba(11,99,183,0.06);
+      background:var(--blue)
+    }
+    .footer-inner{
+      max-width:var(--maxw);margin:0 auto;padding:18px;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;color:#fff
+    }
+    .footer-bottom{
+      background:var(--blue-2);color:#fff;padding:12px 18px;text-align:center;font-weight:600
+    }
+    @media(max-width:520px){
+      .footer-inner{flex-direction:column;gap:12px;align-items:center}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-row">
+      <div class="brand">
+        <img src="footer-logo.png" alt="Логотип Федерации" style="width:220px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
+        <nav class="main-nav">
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="index.html#news">Новости</a>
+          <a href="docs.html">Документы</a>
+          <!-- одна видимая дополнительная кнопка -->
+          <a href="leadership.html">Руководство</a>
+          <!-- остальные кнопки в выпадающем меню '...' -->
+            <div class="more-dropdown" id="moreDropdown">
+            <button class="more-btn" id="moreBtn"><img src="tochka.png" class="more-icon" alt="menu"></button>
+            <div class="more-menu" id="moreMenu" style="display:none">
+              <a href="media.html">Медиа</a>
+              <a href="competitions.html">Соревнования</a>
+              <a href="achievements.html">Достижения</a>
+              <a href="partners.html">Партнёры и спонсоры</a>
+              <a href="regional.html">Региональное отделение</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="socials">
+        <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
+    <img src="instagramlogo.PNG" alt="Instagram">
+  </a>
+        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="telegramlogo.PNG" alt="Telegram"></a>
+        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="facebooklogo.PNG" alt="Facebook"></a>
+        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="tiktoklogo.PNG" alt="TikTok"></a>
+        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="youtubelogo.PNG" alt="YouTube"></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="federation-hero">
+    <div class="federation-container">
+      <div class="federation-logo left"><img src="logo.png" alt=""></div>
+      <div class="federation-text">
+        <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
+        ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
+      </h2>
+        <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+        <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
+      </div>
+      <div class="federation-logo right"><img src="sponsor.png" alt=""></div>
+    </div>
+  </section>
+
+  <main class="container">
+
+
+
+<script>
+  // выпадающее меню "..."
+  (function(){
+    const moreBtn = document.getElementById('moreBtn');
+    const moreMenu = document.getElementById('moreMenu');
+    const moreDropdown = document.getElementById('moreDropdown');
+    if(!moreBtn) return;
+    moreBtn.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      moreMenu.style.display = moreMenu.style.display === 'block' ? 'none' : 'block';
+    });
+    document.addEventListener('click', (e)=>{
+      if(!moreDropdown.contains(e.target)) moreMenu.style.display = 'none';
+    });
+  })();
+</script>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><img src="footer-logo.png" alt="Логотип Федерации" style="width:220px;border-radius:8px;"></div>
+      <nav style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="index.html" style="color:#fff;font-weight:600;">Главная</a>
+        <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
+        <a href="news.html" style="color:#fff;font-weight:600;">Новости</a>
+        <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
+  <a href="docs.html" style="color:#fff;font-weight:600;">Документы</a>
+        <a href="competitions.html" style="color:#fff;font-weight:600;">Соревнования</a>
+      </nav>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
+    <img src="instagramlogo.PNG" alt="Instagram">
+  </a>
+        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="telegramlogo.PNG" alt="Telegram"></a>
+        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="facebooklogo.PNG" alt="Facebook"></a>
+        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="tiktoklogo.PNG" alt="TikTok"></a>
+        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="youtubelogo.PNG" alt="YouTube"></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Все права защищены — Казахстанская Федерация функционального многоборья
+    </div>
+  </footer>
+</body>
+</html>
