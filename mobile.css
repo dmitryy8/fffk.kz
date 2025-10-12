@@ -220,7 +220,7 @@ header #site-logo, header .brand img { display: none !important; }
 /* === Custom hamburger image support ===
    Usage (place inside header where #mobileToggle is):
    <button id="mobileToggle" aria-label="Открыть меню">
-     <img src="/hamburger.png" class="mobile-toggle-img" alt="Меню">
+     <img src="/tochka.png" class="mobile-toggle-img" alt="Меню">
    </button>
 
    The image will be centered inside the button and drawn above the fallback glyph.
