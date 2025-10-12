@@ -315,6 +315,38 @@
       .footer-logo-large img{width:260px;height:80px}
     }
 
+    /* Mobile adjustments: simplified header, fixed on top, mobile menu */
+    @media (max-width:768px) {
+      header{position:fixed;top:0;left:0;right:0;z-index:120}
+      body{padding-top:72px} /* reserve space for fixed header */
+      .nav-row{padding:10px 14px;min-height:56px;align-items:center}
+      .brand .ff{font-size:16px}
+      /* hide desktop navigation elements on mobile */
+      nav.main-nav{display:none !important}
+      .more-dropdown{display:none !important}
+      .socials{display:none !important}
+      /* show mobile toggle */
+      #mobileToggle{display:inline-flex}
+      /* reduce text sizes */
+      .federation-text h1{font-size:20px}
+      .section h2{font-size:22px}
+      .news-title{font-size:16px}
+      .news-excerpt{font-size:14px}
+      .news-image{height:140px}
+      /* map smaller on mobile */
+      .map-frame{height:360px}
+      /* hide footer nav on mobile (keep socials) */
+      .footer-nav{display:none}
+      /* events/documents: allow horizontal scroll on mobile and show arrows */
+      .events-grid{display:flex !important;overflow-x:auto;gap:12px;padding-bottom:12px}
+      .events-grid .event-card{flex:0 0 320px !important;width:320px !important;height:420px}
+      #docsLeft,#docsRight{display:block !important;left:6px;right:6px}
+      /* mobile menu styles */
+      .mobile-menu{position:fixed;top:72px;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(11,99,183,0.96),rgba(11,99,183,0.96));color:#fff;padding:18px;display:none;z-index:200;overflow:auto}
+      .mobile-menu a{display:block;padding:12px 8px;border-bottom:1px solid rgba(255,255,255,0.06);color:#fff;font-weight:800;text-decoration:none}
+      .mobile-menu .close-btn{display:inline-block;margin-bottom:8px;padding:8px 12px;background:rgba(255,255,255,0.08);border-radius:8px;color:#fff}
+    }
+
     /* Документы: адаптив для мобильных — на телефоне карточки ставим в колонку, прячем стрелки */
     @media (max-width:720px) {
       .events-grid { display:block !important; overflow-x:visible !important; gap:12px !important; }
@@ -378,6 +410,8 @@
           <!-- остальные кнопки в выпадающем меню (перенесены перед соцсетями) -->
         </nav>
       </div>
+        <!-- mobile hamburger toggle (visible on mobile only) -->
+        <button id="mobileToggle" aria-label="Открыть меню" style="display:none;background:transparent;border:0;color:#fff;font-weight:800;padding:8px 10px;border-radius:8px">☰</button>
           <div class="more-dropdown" id="moreDropdown" style="margin-right:10px;">
             <button class="more-btn" id="moreBtn" aria-label="Меню дополнительных ссылок" style="padding:8px 10px;">
             <img src="/tochka.png" class="more-icon" alt="menu">
@@ -419,6 +453,22 @@
             </div>
           </div>
 
+    </div>
+    <!-- Mobile slide-in menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <button class="close-btn" id="mobileClose">Закрыть ✕</button>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="about.html">О нас</a>
+        <a href="index.html#news">Новости</a>
+        <a href="index.html#docs">Документы</a>
+        <a href="leadership.html">Руководство</a>
+        <a href="media.html">Медиа</a>
+        <a href="competitions.html">Соревнования</a>
+        <a href="achievements.html">Достижения</a>
+        <a href="partners.html">Партнёры и спонсоры</a>
+        <a href="regional.html">Региональное отделение</a>
+      </nav>
     </div>
   </header>
 
@@ -965,6 +1015,37 @@
         if(e.key === 'ArrowLeft') left.click();
         if(e.key === 'ArrowRight') right.click();
       });
+    })();
+  </script>
+
+  <script>
+    // mobile menu handlers
+    (function(){
+      const mobileToggle = document.getElementById('mobileToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileClose = document.getElementById('mobileClose');
+      if(mobileToggle && mobileMenu){
+        mobileToggle.addEventListener('click', ()=>{
+          mobileMenu.style.display = 'block'; mobileMenu.setAttribute('aria-hidden','false');
+        });
+      }
+      if(mobileClose && mobileMenu){
+        mobileClose.addEventListener('click', ()=>{ mobileMenu.style.display='none'; mobileMenu.setAttribute('aria-hidden','true'); });
+      }
+
+      // show/hide docs arrows depending on overflow
+      function toggleDocsArrows(){
+        const grid = document.querySelector('.events-grid');
+        const left = document.getElementById('docsLeft');
+        const right = document.getElementById('docsRight');
+        if(!grid || !left || !right) return;
+        const isOverflowing = grid.scrollWidth > grid.clientWidth + 4;
+        left.style.display = isOverflowing ? 'block' : 'none';
+        right.style.display = isOverflowing ? 'block' : 'none';
+      }
+      window.addEventListener('resize', toggleDocsArrows);
+      window.addEventListener('load', toggleDocsArrows);
+      document.addEventListener('DOMContentLoaded', toggleDocsArrows);
     })();
   </script>
 
