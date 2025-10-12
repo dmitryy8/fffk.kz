@@ -203,16 +203,7 @@ header .brand img, header #site-logo { display: none !important; }
   color: transparent !important; /* hide existing text glyphs */
   text-indent: -9999px !important;
 }
-#mobileToggle::before{
-  content: "☰";
-  color: #fff;
-  font-size: 34px; /* larger three-bars glyph */
-  line-height: 1;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-}
+
 
 /* place the toggle visually where the logo was (left side of header) */
 header .nav-row { position: relative; }
@@ -225,6 +216,27 @@ header #site-logo, header .brand img { display: none !important; }
   <img src="/footer-logo.png" class="mobile-header-logo" alt="Логотип"> */
 .mobile-header-logo{ display:inline-block !important; position:absolute !important; left:84px !important; top:50% !important; transform:translateY(-50%) !important; z-index:200 !important; width:44px !important; height:44px !important; object-fit:contain !important; }
 .mobile-header-logo img{ width:100% !important; height:100% !important; object-fit:contain !important; }
+
+/* === Custom hamburger image support ===
+   Usage (place inside header where #mobileToggle is):
+   <button id="mobileToggle" aria-label="Открыть меню">
+     <img src="/hamburger.png" class="mobile-toggle-img" alt="Меню">
+   </button>
+
+   The image will be centered inside the button and drawn above the fallback glyph.
+   If the image is absent, the built-in ☰ glyph remains as a fallback.
+*/
+#mobileToggle img.mobile-toggle-img{
+  width:34px !important;
+  height:34px !important;
+  display:block !important;
+  object-fit:contain !important;
+  /* ensure image is above the fallback glyph */
+  position:relative !important;
+  z-index:350 !important;
+  pointer-events:none !important; /* clicks handled by button */
+}
+#mobileToggle::before{ z-index:300; }
 
 /* remove footer/navigation buttons on mobile (only) per request */
 .footer-nav { display: none !important; }
