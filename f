@@ -119,7 +119,7 @@
   <header>
     <div class="nav-row">
       <div class="brand">
-        <img src="footer-logo.png" alt="Логотип Федерации" style="width:220px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
+  <img src="/footer-logo.png" alt="Логотип Федерации" style="width:220px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
         <nav class="main-nav">
           <a href="index.html">Главная</a>
           <a href="about.html">О нас</a>
@@ -129,7 +129,7 @@
           <a href="leadership.html">Руководство</a>
           <!-- остальные кнопки в выпадающем меню '...' -->
             <div class="more-dropdown" id="moreDropdown">
-            <button class="more-btn" id="moreBtn"><img src="tochka.png" class="more-icon" alt="menu"></button>
+            <button class="more-btn" id="moreBtn"><img src="/tochka.png" class="more-icon" alt="menu"></button>
             <div class="more-menu" id="moreMenu" style="display:none">
               <a href="media.html">Медиа</a>
               <a href="competitions.html">Соревнования</a>
@@ -143,19 +143,19 @@
 
       <div class="socials">
         <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
-    <img src="instagramlogo.PNG" alt="Instagram">
+    <img src="/instagramlogo.png" alt="Instagram">
   </a>
-        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="telegramlogo.PNG" alt="Telegram"></a>
-        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="facebooklogo.PNG" alt="Facebook"></a>
-        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="tiktoklogo.PNG" alt="TikTok"></a>
-        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="youtubelogo.PNG" alt="YouTube"></a>
+        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="/telegramlogo.png" alt="Telegram"></a>
+        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
+        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="/tiktoklogo.png" alt="TikTok"></a>
+        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
       </div>
     </div>
   </header>
 
   <section class="federation-hero">
     <div class="federation-container">
-      <div class="federation-logo left"><img src="logo.png" alt=""></div>
+  <div class="federation-logo left"><img src="/logo.png" alt=""></div>
       <div class="federation-text">
         <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
         ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
@@ -163,7 +163,7 @@
         <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
         <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
       </div>
-      <div class="federation-logo right"><img src="sponsor.png" alt=""></div>
+  <div class="federation-logo right"><img src="/sponsor.png" alt=""></div>
     </div>
   </section>
 
@@ -192,7 +192,7 @@
 
   <footer>
     <div class="footer-inner">
-      <div><img src="footer-logo.png" alt="Логотип Федерации" style="width:220px;border-radius:8px;"></div>
+  <div><img src="/footer-logo.png" alt="Логотип Федерации" style="width:220px;border-radius:8px;"></div>
       <nav style="display:flex;gap:10px;flex-wrap:wrap;">
         <a href="index.html" style="color:#fff;font-weight:600;">Главная</a>
         <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
@@ -203,12 +203,12 @@
       </nav>
       <div class="footer-socials">
         <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
-    <img src="instagramlogo.PNG" alt="Instagram">
+    <img src="/instagramlogo.png" alt="Instagram">
   </a>
-        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="telegramlogo.PNG" alt="Telegram"></a>
-        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="facebooklogo.PNG" alt="Facebook"></a>
-        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="tiktoklogo.PNG" alt="TikTok"></a>
-        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="youtubelogo.PNG" alt="YouTube"></a>
+        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="/telegramlogo.png" alt="Telegram"></a>
+        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
+        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="/tiktoklogo.png" alt="TikTok"></a>
+        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
       </div>
     </div>
 
