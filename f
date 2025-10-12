@@ -129,7 +129,7 @@
           <a href="leadership.html">Руководство</a>
           <!-- остальные кнопки в выпадающем меню '...' -->
             <div class="more-dropdown" id="moreDropdown">
-            <button class="more-btn" id="moreBtn"><img src="/tochka.png" class="more-icon" alt="menu"></button>
+            <button class="more-btn" id="moreBtn">⋮</button>
             <div class="more-menu" id="moreMenu" style="display:none">
               <a href="media.html">Медиа</a>
               <a href="competitions.html">Соревнования</a>
@@ -195,6 +195,17 @@
     document.addEventListener('click', (e)=>{
       if(!moreDropdown.contains(e.target)) moreMenu.style.display = 'none';
     });
+  })();
+</script>
+
+<script>
+  // show mobile menu toggle only on small screens
+  (function(){
+    const mobileToggle = document.getElementById('mobileToggle');
+    function update(){ if(window.innerWidth <= 768){ if(mobileToggle) mobileToggle.style.display='inline-flex' } else { if(mobileToggle) mobileToggle.style.display='none' } }
+    window.addEventListener('resize', update);
+    document.addEventListener('DOMContentLoaded', update);
+    update();
   })();
 </script>
 
