@@ -244,6 +244,47 @@ header #site-logo, header .brand img { display: none !important; }
 /* make footer logo smaller on mobile so it doesn't interfere visually */
 .footer-inner img, .footer-logo-large img { max-width: 180px !important; height: auto !important; }
 
+/* ====== MOBILE-SPECIFIC LAYOUT ADJUSTMENTS REQUESTED ====== */
+/* Simplified mobile header: hide desktop nav elements and show small logo + socials + toggle */
+@media (max-width:768px){
+  header .nav-row{ display:flex !important; align-items:center !important; justify-content:space-between !important; padding:10px 14px !important; }
+  /* hide desktop elements */
+  header nav.main-nav, header .more-dropdown, header #langWrap { display:none !important; }
+  /* show a small logo in the header (uses existing footer-logo img where present) */
+  header .brand img{ display:inline-block !important; width:72px !important; height:auto !important; margin:0 !important; }
+  /* position mobile toggle and ensure it's tappable */
+  #mobileToggle{ position:relative !important; left:8px !important; top:auto !important; transform:none !important; }
+
+  /* make mobile-menu links stack vertically and fill width */
+  .mobile-menu{ padding-top:12px !important; }
+  .mobile-menu nav{ display:flex !important; flex-direction:column !important; gap:6px !important; padding:6px 6px !important; }
+  .mobile-menu nav a{ display:block !important; width:100% !important; padding:12px 16px !important; border-bottom:1px solid rgba(255,255,255,0.06) !important; box-sizing:border-box !important; }
+
+  /* ensure mobile close button visible and full width */
+  .mobile-menu .close-btn{ display:inline-block !important; width:auto !important; }
+
+  /* Documents / events: force horizontal scroll on mobile and restore card widths */
+  .events-grid{ overflow-x:auto !important; -webkit-overflow-scrolling:touch !important; display:flex !important; gap:12px !important; padding-bottom:12px !important; }
+  .events-grid .event-card{ flex:0 0 320px !important; width:320px !important; }
+
+  /* Federation hero: keep desktop layout on mobile (freeze row layout) */
+  .federation-container{ flex-direction:row !important; align-items:center !important; justify-content:space-between !important; padding:18px 20px !important; gap:12px !important; }
+  .federation-logo.left, .federation-logo.right{ flex:0 0 220px !important; }
+  .federation-logo.left img, .federation-logo.right img{ width:220px !important; height:auto !important; object-fit:contain !important; }
+  .federation-text{ flex:1 1 auto !important; margin:0 16px !important; }
+  .federation-text h1{ font-size:20px !important; }
+
+  /* Footer: show logo left and social buttons (reduced by ~3x), keep layout row */
+  .footer-inner{ flex-direction:row !important; align-items:center !important; justify-content:space-between !important; }
+  .footer-inner > div:first-child img, .footer-logo-large img{ width:72px !important; height:auto !important; }
+
+  /* Homepage specific: move toggle lower and a bit to the right on .home body */
+  body.home #mobileToggle{ left:24px !important; top:64px !important; position:fixed !important; z-index:260 !important; }
+
+  /* About page: hide original header content and show only minimal mobile header (will be inlined in about.html) */
+  .mobile-only-header{ display:flex !important; align-items:center !important; justify-content:space-between !important; gap:8px !important; padding:10px 14px !important; }
+}
+
 
 /* ======= DOCUMENTS / EVENTS SCROLLER (MOBILE) ======= */
 /* make sure the documents/events row is horizontally scrollable on mobile
