@@ -34,13 +34,15 @@
     display: none !important;
   }
   
-  /* LANGUAGE SELECTOR: show on mobile, position on the left side */
+  /* LANGUAGE SELECTOR: show on mobile, position on the left side - ВЫШЕ */
   .lang-wrap {
     display: flex !important;
-    position: absolute;
-    left: 16px;
-    top: 12px;
-    z-index: 130;
+    position: absolute !important;
+    left: 16px !important;
+    right: auto !important;
+    top: 6px !important; /* поднято чуть выше */
+    transform: none !important; /* сбрасываем translateY(-50%) из desktop-правил */
+    z-index: 130 !important;
   }
   
   /* LANGUAGE DROPDOWN: появляется в том же месте */
@@ -73,7 +75,7 @@
     display: inline-flex !important;
     position: absolute;
     right: 16px;
-    top: 12px; /* еще выше на мобильной версии */
+    top: 8px; /* еще выше на мобильной версии */
     background: transparent;
     border: 0;
     color: #fff;
@@ -222,6 +224,7 @@
   /* MAP: smaller on mobile */
   .map-frame {
     height: 360px !important;
+    border: 0 !important; /* убираем синюю рамку */
   }
   
   /* DOCUMENTS/EVENTS: ВЕРТИКАЛЬНЫЙ СПИСОК */
@@ -257,8 +260,12 @@
     max-width: 100% !important;
   }
   
-  /* FOOTER */
+  /* FOOTER: убираем навигацию, оставляем только соц сети и лого */
   .footer-nav {
+    display: none !important;
+  }
+  
+  .footer-inner nav {
     display: none !important;
   }
   
@@ -306,6 +313,32 @@
   
   /* УБИРАЕМ socials из header - они только в футере */
   header .footer-socials {
+    display: none !important;
+  }
+  
+  /* LEADERSHIP.HTML: убираем кнопку языка и центрируем лого */
+  body[class*="leadership"] .lang-wrap,
+  [href*="leadership"] ~ .lang-wrap {
+    display: none !important;
+  }
+  
+  /* Центрируем лого в шапке на leadership.html */
+  body:has([href*="leadership.html"]) .brand,
+  body:has(a[href="leadership.html"]) .brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+  }
+  
+  /* MEDIA.HTML: убираем синюю рамку у изображений */
+  .slider img,
+  .lightbox-content img {
+    border: 0 !important;
+  }
+  
+  /* УБИРАЕМ язык со всех страниц кроме index.html */
+  body:not(:has(#news, #docs)) #langWrap {
     display: none !important;
   }
 }

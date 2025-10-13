@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
+  <style>.close-btn, .lb-close{display:none !important;}</style>
   <title>Новости Федерации — Казахстанская Федерация функционального многоборья</title>
   <meta name="description" content="Новости Казахстанской Федерации функционального многоборья" />
   <style>
@@ -32,8 +34,13 @@
   nav.main-nav{display:flex;align-items:center;gap:8px}
   .more-dropdown{position:absolute;right:360px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
   .more-btn{background:transparent;color:#fff;border:none;font-size:26px;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1}
+  /* hamburger inside the more button: three horizontal bars */
+  .more-btn .hamburger{display:inline-block;width:22px;height:2px;background:#fff;position:relative;border-radius:2px}
+  .more-btn .hamburger::before,.more-btn .hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:#fff;border-radius:2px}
+  .more-btn .hamburger::before{top:-7px}
+  .more-btn .hamburger::after{top:7px}
   /* icon image replacement: use the image file `tochka.png` (place it in project root) */
-  .more-btn .more-icon{width:22px;height:22px;object-fit:contain;display:block}
+    .more-btn .more-icon{width:22px;height:22px;object-fit:contain;display:block}
   /* вертикальные точки: используем символ U+22EE (⋮) */
   .more-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:var(--text);box-shadow:0 8px 24px rgba(3,20,45,0.12);border-radius:10px;overflow:hidden;min-width:220px;z-index:60;padding:6px 0}
   .more-menu a{display:block;padding:10px 14px;color:var(--text);font-weight:700;border-bottom:1px solid rgba(0,0,0,0.04);text-decoration:none}
@@ -127,38 +134,38 @@
           <a href="index.html#docs">Документы</a>
           <!-- одна видимая дополнительная кнопка -->
           <a href="leadership.html">Руководство</a>
-          <!-- остальные кнопки в выпадающем меню '...' -->
-            <div class="more-dropdown" id="moreDropdown">
-            <button class="more-btn" id="moreBtn">⋮</button>
+          <!-- остальные кнопки в выпадающем меню '...' (вынесено перед соцсетями) -->
+        </nav>
+      </div>
+
+          <div class="more-dropdown" id="moreDropdown">
+            <button class="more-btn" id="moreBtn" style="font-size:28px;padding:8px 10px;"><img src="/tochka.png" class="more-icon" alt="menu"></button>
             <div class="more-menu" id="moreMenu" style="display:none">
               <a href="media.html">Медиа</a>
               <a href="competitions.html">Соревнования</a>
               <a href="achievements.html">Достижения</a>
               <a href="partners.html">Партнёры и спонсоры</a>
-          <a href="map.html">Карта залов</a>
+              <a href="map.html">Карта залов</a>
             </div>
           </div>
-        </nav>
-      </div>
-
-          <!-- single language toggle with dropdown (shared fragment) -->
-          <div class="lang-wrap" id="langWrap">
-            <button class="lang-toggle" id="langToggle"><span id="langCurrent">RU</span> ▾</button>
-            <div class="lang-dropdown" id="langDropdown">
-              <button data-lang="kz">KZ</button>
-              <button data-lang="ru">RU</button>
-              <button data-lang="en">EN</button>
-            </div>
-          </div>
-
       <div class="socials">
         <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
-    <img src="/instagramlogo.png" alt="Instagram">
+  <img src="/instagramlogo.png" alt="Instagram">
   </a>
-        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="/telegramlogo.png" alt="Telegram"></a>
-        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
-        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="/tiktoklogo.png" alt="TikTok"></a>
-        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
+  <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="/telegramlogo.png" alt="Telegram"></a>
+  <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
+  <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="/tiktoklogo.png" alt="TikTok"></a>
+  <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
+      </div>
+    </div>
+    <div id="langWrap" style="position:absolute;right:160px;top:50%;transform:translateY(-50%);z-index:80;">
+      <button id="langToggle" style="background:transparent;color:#fff;border:0;font-weight:700;cursor:pointer;padding:8px 10px;">
+        <span id="langCurrent">RU</span> ▾
+      </button>
+      <div id="langDropdown" style="display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:#000;border-radius:8px;padding:6px;min-width:120px;box-shadow:0 8px 24px rgba(3,20,45,0.12);">
+        <a href="#" data-lang="ru" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Рус</a>
+        <a href="#" data-lang="kk" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Қаз</a>
+        <a href="#" data-lang="en" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Eng</a>
       </div>
     </div>
   </header>
@@ -198,16 +205,21 @@
   })();
 </script>
 
-<script>
-  // show mobile menu toggle only on small screens
-  (function(){
-    const mobileToggle = document.getElementById('mobileToggle');
-    function update(){ if(window.innerWidth <= 768){ if(mobileToggle) mobileToggle.style.display='inline-flex' } else { if(mobileToggle) mobileToggle.style.display='none' } }
-    window.addEventListener('resize', update);
-    document.addEventListener('DOMContentLoaded', update);
-    update();
-  })();
-</script>
+    <section class="section">
+      <h1 style="font-size:24px;color:var(--blue);margin:0 0 12px 0;">Карта залов Казахстана</h1>
+  <div class="doc-card" style="background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(3,20,45,0.06);border:3px solid #000;">
+        
+
+        <div style="margin-top:14px;">
+          <iframe src="/map.pdf" id="poloIframe" width="100%" height="780" style="border:3px solid #000;border-radius:8px;" title="Положение Чемпионата"></iframe>
+        </div>
+        <div style="margin-top:12px;">
+          <!-- Убрана кнопка «Подробнее». Одна синяя кнопка ведёт на главную. -->
+          <a href="index.html" style="background:#0b63b7;color:#fff;padding:8px 18px;border-radius:999px;font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:0.3px;text-decoration:none;display:inline-block">Вернуться на главную</a>
+          <a href="/map.pdf" download style="margin-left:10px;background:#e0e0e0;color:#0b2340;padding:8px 14px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-block">Скачать</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -223,13 +235,11 @@
         <a href="competitions.html" style="color:#fff;font-weight:600;">Соревнования</a>
       </nav>
       <div class="footer-socials">
-        <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
-    <img src="/instagramlogo.png" alt="Instagram">
-  </a>
-        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="/telegramlogo.png" alt="Telegram"></a>
-        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
-        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="/tiktoklogo.png" alt="TikTok"></a>
-        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
+          <a class="social-btn" href="https://instagram.com/fffk.20_23" target="_blank" rel="noopener"><img src="/instagramlogo.png" alt="Instagram"></a>
+          <a class="social-btn" href="https://t.me/fffkkz2023" target="_blank" rel="noopener"><img src="/telegramlogo.png" alt="Telegram"></a>
+          <a class="social-btn" href="https://www.facebook.com/share/1DFY4jSz3e/?mibextid=wwXIfr" target="_blank" rel="noopener"><img src="/facebooklogo.png" alt="Facebook"></a>
+          <a class="social-btn" href="https://www.tiktok.com/@fffk_funcsport?_t=ZM-90WDZha6UqB&_r=1" target="_blank" rel="noopener"><img src="/tiktoklogo.png" alt="TikTok"></a>
+          <a class="social-btn" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener"><img src="/youtubelogo.png" alt="YouTube"></a>
       </div>
     </div>
 
@@ -237,5 +247,6 @@
       © 2025 Все права защищены — Казахстанская Федерация функционального многоборья
     </div>
   </footer>
+<script src="/lang.js"></script>
 </body>
 </html>
