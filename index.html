@@ -109,8 +109,7 @@
 }
 
   /* language control: single button + dropdown */
-  /* position language toggle near the top of the header on the homepage */
-  .lang-wrap{position:absolute;right:12px;top:10px;transform:none;display:inline-block;z-index:80}
+  .lang-wrap{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:inline-block;z-index:80}
   .lang-toggle{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.12);padding:6px 10px;border-radius:8px;cursor:pointer;font-weight:800}
   .lang-toggle span{font-weight:900}
   .lang-dropdown{display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:var(--text);border-radius:8px;box-shadow:0 8px 24px rgba(3,20,45,0.12);overflow:hidden}
@@ -460,24 +459,24 @@
               <a href="competitions.html">Соревнования</a>
               <a href="achievements.html">Достижения</a>
               <a href="partners.html">Партнёры и спонсоры</a>
-              <a href="regional.html">Региональное отделение</a>
+              <a href="map.html">Карта залов</a>
             </div>
           </div>
 
 <div class="socials">
-  <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://instagram.com/fffk.20_23" target="_blank" rel="noopener">
     <img src="/instagramlogo.png" alt="Instagram">
   </a>
-  <a class="social-btn" href="https://t.me/yourchannel" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://t.me/fffkkz2023" target="_blank" rel="noopener">
     <img src="/telegramlogo.png" alt="Telegram">
   </a>
-  <a class="social-btn" href="https://facebook.com/yourpage" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://www.facebook.com/share/1DFY4jSz3e/?mibextid=wwXIfr" target="_blank" rel="noopener">
     <img src="/facebooklogo.png" alt="Facebook">
   </a>
-  <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://www.tiktok.com/@fffk_funcsport?_t=ZM-90WDZha6UqB&_r=1" target="_blank" rel="noopener">
     <img src="/tiktoklogo.png" alt="TikTok">
   </a>
-  <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener">
     <img src="/youtubelogo.png" alt="YouTube">
   </a>
 </div>
@@ -506,7 +505,7 @@
         <a href="competitions.html">Соревнования</a>
         <a href="achievements.html">Достижения</a>
         <a href="partners.html">Партнёры и спонсоры</a>
-        <a href="regional.html">Региональное отделение</a>
+  <a href="map.html">Карта залов</a>
       </nav>
     </div>
   </header>
@@ -866,11 +865,11 @@
       <div style="position:relative;overflow:hidden;height:100%;">
         <div class="map-badge">Адрес: Астана, проспект Бауыржана Момышулы, 16</div>
         <!-- Yandex map WITH placemark (marker added) -->
-        <iframe src="https://yandex.kz/map-widget/v1/?ll=69.139635%2C54.861865&z=16&pt=69.139635,54.861865,pm2rdm" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;border:0;"></iframe>
+        <iframe src="https://yandex.kz/map-widget/v1/?ll=71.483529%2C51.141048&z=16&pt=71.483529,51.141048,pm2rdm" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;border:0;"></iframe>
         <!-- transparent overlay: clicking anywhere opens the address in Yandex.Maps in a new tab -->
-        <a class="map-overlay" href="https://yandex.kz/maps/?ll=69.139635%2C54.861865&z=16" target="_blank" rel="noopener noreferrer" title="Открыть в Яндекс.Картах"></a>
+        <a class="map-overlay" href="https://yandex.kz/maps/?ll=71.483529%2C51.141048&z=16" target="_blank" rel="noopener noreferrer" title="Открыть в Яндекс.Картах"></a>
         <!-- visible quick link (optional) -->
-        <a class="map-open-btn" href="https://yandex.kz/maps/?ll=69.139635%2C54.861865&z=16" target="_blank" rel="noopener noreferrer">Открыть в Яндекс.Картах</a>
+        <a class="map-open-btn" href="https://yandex.kz/maps/?ll=71.483529%2C51.141048&z=16" target="_blank" rel="noopener noreferrer">Открыть в Яндекс.Картах</a>
       </div>
     </div>
   </section>
@@ -902,7 +901,7 @@
         try{
           const mapIframe = document.querySelector('.map-frame iframe');
           if(!mapIframe) return;
-          const astanaSrc = 'https://yandex.kz/map-widget/v1/?ll=69.139635%2C54.861865&z=16&pt=69.139635,54.861865,pm2rdm';
+          const astanaSrc = 'https://yandex.kz/map-widget/v1/?ll=71.483529%2C51.141048&z=16&pt=71.483529,51.141048,pm2rdm';
           if(mapIframe.getAttribute('src') !== astanaSrc) mapIframe.setAttribute('src', astanaSrc);
           // second attempt after short delay to handle race conditions
           setTimeout(()=>{ if(mapIframe.getAttribute('src') !== astanaSrc) mapIframe.setAttribute('src', astanaSrc); }, 250);
@@ -929,7 +928,7 @@
           'site_subtitle': 'FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN',
           'Главная': 'Главная', 'О нас': 'О нас', 'Новости': 'Новости', 'Документы': 'Документы',
           'Руководство': 'Руководство','Медиа':'Медиа','Соревнования':'Соревнования',
-          'Достижения':'Достижения','Партнёры и спонсоры':'Партнёры и спонсоры','Региональное отделение':'Региональное отделение',
+          'Достижения':'Достижения','Партнёры и спонсоры':'Партнёры и спонсоры','Региональное отделение':'Карта залов',
           'Подробнее':'Подробнее','Наш адрес':'Наш адрес','Вернуться на главную':'Вернуться на главную',
           'news1_title':'Итоги соревнований Astana Open Cup 2025',
           'news1_excerpt':'7 мая в столице прошёл второй ежегодный открытый турнир по функциональному многоборью — Astana Open...',
@@ -947,7 +946,7 @@
           'site_subtitle': 'FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN',
           'Главная':'Басты бет','О нас':'Біз туралы','Новости':'Жаңалықтар','Документы':'Құжаттар',
           'Руководство':'басшылығы','Медиа':'Медиа','Соревнования':'Жарыстар',
-          'Достижения':'Жетістіктер','Партнёры и спонсоры':'Серіктестер мен демеушілер','Региональное отделение':'Аймақтық бөлімше',
+          'Достижения':'Жетістіктер','Партнёры и спонсоры':'Серіктестер мен демеушілер','Региональное отделение':'Залдардың картасы',
           'Подробнее':'Толығырақ','Наш адрес':'Біздің мекен-жайымыз','Вернуться на главную':'Басты бетке оралу',
           'news1_title':'Astana Open Cup 2025 жарыстарының қорытындылары',
           'news1_excerpt':'7 мамырда астанада функционалды көпсайыс бойынша екінші жыл сайынғы ашық турнир — Astana Open өтті...',
@@ -965,7 +964,7 @@
           'site_subtitle': 'FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN',
           'Главная':'Home','О нас':'About','Новости':'News','Документы':'Documents',
           'Руководство':'Leadership','Медиа':'Media','Соревнования':'Competitions',
-          'Достижения':'Achievements','Партнёры и спонсоры':'Partners & Sponsors','Региональное отделение':'Regional Office',
+          'Достижения':'Achievements','Партнёры и спонсоры':'Partners & Sponsors','Региональное отделение':'Map of halls',
           'Подробнее':'Read more','Наш адрес':'Our address','Вернуться на главную':'Return to home',
           'news1_title':'Results of Astana Open Cup 2025',
           'news1_excerpt':'On May 7 the capital hosted the second annual open tournament in functional multi-sport — Astana Open...',
@@ -1009,13 +1008,24 @@
         });
       }
 
-      // UI: dropdown toggle and selection
+      // UI: dropdown toggle and selection - НОВАЯ ВЕРСИЯ С НУЛЯ
       const toggle = document.getElementById('langToggle');
       const dropdown = document.getElementById('langDropdown');
       const current = document.getElementById('langCurrent');
+      
+      if(!toggle || !dropdown) return;
 
-      toggle.addEventListener('click', ()=> dropdown.style.display = dropdown.style.display==='block' ? 'none' : 'block');
-      document.addEventListener('click', (e)=>{ if(!e.target.closest('#langWrap')) dropdown.style.display='none'; });
+      toggle.addEventListener('click', function(e){
+        e.stopPropagation();
+        const isVisible = dropdown.style.display === 'block';
+        dropdown.style.display = isVisible ? 'none' : 'block';
+      });
+      
+      document.addEventListener('click', function(e){
+        if(!e.target.closest('#langWrap')) {
+          dropdown.style.display='none';
+        }
+      });
 
       // selection handler: save lang and reload page so all content updates consistently
       dropdown.querySelectorAll('button[data-lang]').forEach(b=> b.addEventListener('click', (e)=>{
@@ -1081,21 +1091,52 @@
   </script>
 
   <script>
-    // mobile menu handlers
+    // mobile menu handlers - НОВАЯ ВЕРСИЯ С НУЛЯ
     (function(){
       const mobileToggle = document.getElementById('mobileToggle');
       const mobileMenu = document.getElementById('mobileMenu');
       const mobileClose = document.getElementById('mobileClose');
-      // unified toggle: clicking the same button opens or closes the menu
-      if(mobileToggle && mobileMenu){
-        mobileToggle.addEventListener('click', ()=>{
-          const isOpen = mobileMenu.classList.toggle('open');
-          mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+      
+      if(!mobileToggle || !mobileMenu) return;
+      
+      // При клике на кнопку toggle - открыть/закрыть
+      mobileToggle.addEventListener('click', function(e){
+        e.stopPropagation();
+        const isOpen = mobileMenu.classList.contains('open');
+        
+        if(isOpen){
+          mobileMenu.classList.remove('open');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        } else {
+          mobileMenu.classList.add('open');
+          mobileMenu.setAttribute('aria-hidden', 'false');
+        }
+      });
+      
+      // При клике на кнопку закрыть
+      if(mobileClose){
+        mobileClose.addEventListener('click', function(){
+          mobileMenu.classList.remove('open');
+          mobileMenu.setAttribute('aria-hidden', 'true');
         });
       }
-      if(mobileClose && mobileMenu){
-        mobileClose.addEventListener('click', ()=>{ mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden','true'); });
-      }
+      
+      // При клике на ссылку внутри меню - закрыть меню
+      const menuLinks = mobileMenu.querySelectorAll('a');
+      menuLinks.forEach(function(link){
+        link.addEventListener('click', function(){
+          mobileMenu.classList.remove('open');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        });
+      });
+      
+      // При клике вне меню - закрыть меню
+      document.addEventListener('click', function(e){
+        if(mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)){
+          mobileMenu.classList.remove('open');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        }
+      });
 
       // show/hide docs arrows depending on overflow
       function toggleDocsArrows(){
@@ -1191,19 +1232,19 @@
         </nav>
 
         <div class="footer-socials">
-  <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://instagram.com/fffk.20_23" target="_blank" rel="noopener">
   <img src="/instagramlogo.png" alt="Instagram">
   </a>
-  <a class="social-btn" href="https://t.me/yourchannel" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://t.me/fffkkz2023" target="_blank" rel="noopener">
   <img src="/telegramlogo.png" alt="Telegram">
   </a>
-  <a class="social-btn" href="https://facebook.com/yourpage" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://www.facebook.com/share/1DFY4jSz3e/?mibextid=wwXIfr" target="_blank" rel="noopener">
   <img src="/facebooklogo.png" alt="Facebook">
   </a>
-  <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://www.tiktok.com/@fffk_funcsport?_t=ZM-90WDZha6UqB&_r=1" target="_blank" rel="noopener">
   <img src="/tiktoklogo.png" alt="TikTok">
   </a>
-  <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank" rel="noopener">
+  <a class="social-btn" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener">
   <img src="/youtubelogo.png" alt="YouTube">
   </a>
 </div>
