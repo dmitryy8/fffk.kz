@@ -167,10 +167,37 @@
       text-transform: uppercase;
     }
     @media (max-width: 768px) {
-      .federation-container { flex-direction: column; text-align: center; border-radius: 20px; }
-      .federation-logo img { width: 140px; margin-bottom: 15px; }
-      .federation-text h1 { font-size: 22px; }
-      .federation-text h2 { font-size: 18px; }
+      /* Make federation block approximately 5x smaller on phones while keeping same shape */
+      .federation-container {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 12px; /* smaller radius */
+        width: 90%;
+        max-width: 260px; /* ~1300 / 5 = 260 -> keeps overall block ~5x smaller */
+        margin: 0 auto;
+        padding: 6px 8px; /* much smaller padding */
+        box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+      }
+      .federation-logo img {
+        width: 53px; /* 264 / 5 ≈ 53 */
+        height: auto;
+        margin-bottom: 8px;
+        object-fit:contain;
+      }
+      .federation-text { margin: 0 8px; }
+      .federation-text h1 {
+        font-size: 6px; /* 30 / 5 = 6 */
+        line-height: 1.1;
+        margin: 2px 0 4px;
+        font-weight:800;
+      }
+      .federation-text h2 {
+        font-size: 4px; /* 18 / 5 ≈ 4 */
+        margin: 0;
+        font-weight:700;
+      }
+      /* reduce overall hero padding so block doesn't consume too much vertical space */
+      .federation-hero { padding: 8px 0; }
     }
 
     /* СЕКЦИИ */
@@ -1147,8 +1174,7 @@
   </script>
 
   <footer>
-<script src="/mobile.js"></script>
-<script src="/lang.js"></script>
+    <div class="footer-inner">
       <div style="display:flex;align-items:center;gap:12px">
   <img src="/footer-logo.png" alt="Логотип Федерации" style="width:220px;height:auto;object-fit:cover;border-radius:8px;box-shadow:0 8px 24px rgba(3,20,45,0.12);">
       </div>
