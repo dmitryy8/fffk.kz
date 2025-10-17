@@ -321,43 +321,41 @@
             line-height: 1.6;
         }
 
-        /* Новости */
-        .news-container {
+        /* Документы */
+        .docs-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, auto);
             gap: 40px;
         }
 
-        .news-card {
+        .doc-card {
             background: var(--card-bg);
             border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            padding: 30px;
             border: 1px solid var(--border-color);
-            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
             box-shadow: var(--shadow);
         }
 
-        .news-card:nth-child(4) {
+        .doc-card:nth-child(4) {
             grid-row: 2;
             grid-column: 1;
         }
 
-        .news-card:hover {
+        .doc-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-hover);
-            border-color: var(--primary-color);
         }
 
-        .news-card img {
+        .doc-card img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
-        }
-
-        .news-content {
-            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
         }
 
         .news-date {
@@ -373,14 +371,6 @@
             color: var(--text-dark);
             font-weight: 700;
         }
-
-        .news-excerpt {
-            color: var(--text-gray);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-    
 
        
 
@@ -570,12 +560,12 @@
                 font-size: 2.5em;
             }
             
-            .news-container {
+            .docs-container {
                 grid-template-columns: 1fr;
                 grid-template-rows: auto;
             }
             
-            .news-card:nth-child(4) {
+            .doc-card:nth-child(4) {
                 grid-row: auto;
                 grid-column: auto;
             }
@@ -584,7 +574,6 @@
                 display: none;
             }
             
-            .news-card,
             .doc-card {
                 width: 320px;
             }
@@ -617,7 +606,6 @@
                 font-size: 2em;
             }
             
-            .news-card,
             .doc-card {
                 width: 90vw;
                 margin: 0 10px;
@@ -677,57 +665,46 @@
         </div>
     </section>
 
-    <!-- Новости -->
-    <section id="news" class="section">
+    <!-- Документы -->
+    <section id="docs" class="section">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Новости</h2>
-                <p>Актуальные события и достижения федерации</p>
+                <h2>Документы</h2>
+                <p>Официальные документы и положения федерации</p>
             </div>
             
-            <div class="news-container">
-                <article class="news-card fade-in">
-                    <img src="/astanaopencup1.jpg" alt="Astana Open Cup 2025">
-                    <div class="news-content">
-                        <div class="news-date">07.05.2025</div>
-                        <div class="news-title">Итоги соревнований Astana Open Cup 2025</div>
-                        <div class="news-excerpt">7 мая в столице прошёл второй ежегодный открытый турнир по функциональному многоборью — Astana Open...</div>
-                        <a href="news1.html" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </article>
+            <div class="docs-container">
+                <div class="doc-card fade-in">
+                    <div class="news-date">03.07.2025</div>
+                    <div class="news-title">Положение чемпионата Казахстана</div>
+                    <img src="/pologenie.jpg" alt="Положение чемпионата">
+                    <a href="docs1.html" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                </div>
                 
-                <article class="news-card fade-in">
-                    <img src="/game1.jpg" alt="CrossFit Challenge 2025">
-                    <div class="news-content">
-                        <div class="news-date">24.08.2025</div>
-                        <div class="news-title">Историческое событие: казахстанец впервые прошёл в финал CrossFit Games!</div>
-                        <div class="news-excerpt">Впервые в истории спортсмен из Казахстана вышел в финал CrossFit Games — самого престижного мирового турнира...</div>
-                        <a href="news2.html" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </article>
+                <div class="doc-card fade-in">
+                    <div class="news-date">08.10.2023</div>
+                    <div class="news-title">Аккредитация IF3 в Казахстане</div>
+                    <img src="/acred.png" alt="Аккредитация">
+                    <a href="docs2.html" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                </div>
                 
-                <article class="news-card fade-in">
-                    <img src="/imageskz/kz.jpg" alt="Зимний Кубок 2025">
-                    <div class="news-content">
-                        <div class="news-date">29.09.2025</div>
-                        <div class="news-title">Чемпионат Казахстана по функциональному многоборью 2025</div>
-                        <div class="news-excerpt">В сентябре прошёл Чемпионат Казахстана по функциональному многоборью 2025 — главное событие года...</div>
-                        <a href="news4.html" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </article>
+                <div class="doc-card fade-in">
+                    <div class="news-date">01.01.2025</div>
+                    <div class="news-title">Календарь соревнований</div>
+                    <img src="/kalen.jpg" alt="Календарь">
+                    <a href="docs3.html" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                </div>
                 
-                <article class="news-card fade-in">
-                    <img src="/imageschampionat/asia1.jpg" alt="Summer Games 2025">
-                    <div class="news-content">
-                        <div class="news-date">06.10.2025</div>
-                        <div class="news-title">Казахстан — победитель Чемпионата Азии 2025!</div>
-                        <div class="news-excerpt">Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...</div>
-                        <a href="news3.html" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </article>
+                <div class="doc-card fade-in">
+                    <div class="news-date">01.02.2024</div>
+                    <div class="news-title">Стандарты движений</div>
+                    <img src="/ruls.jpg" alt="Стандарты">
+                    <a href="docs4.html" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                </div>
             </div>
         </div>
     </section>
+
 
 
 
@@ -867,39 +844,7 @@
             });
         }
 
-        // Карусель новостей
-        function initNewsCarousel() {
-            const newsGrid = document.getElementById('newsGrid');
-            const leftBtn = document.getElementById('newsLeft');
-            const rightBtn = document.getElementById('newsRight');
-            
-            if (!newsGrid || !leftBtn || !rightBtn) return;
-            
-            rightBtn.addEventListener('click', () => {
-                newsGrid.scrollBy({ left: 420, behavior: 'smooth' });
-            });
-            
-            leftBtn.addEventListener('click', () => {
-                newsGrid.scrollBy({ left: -420, behavior: 'smooth' });
-            });
-        }
 
-        // Карусель документов
-        function initDocsCarousel() {
-            const docsGrid = document.getElementById('docsGrid');
-            const leftBtn = document.getElementById('docsLeft');
-            const rightBtn = document.getElementById('docsRight');
-            
-            if (!docsGrid || !leftBtn || !rightBtn) return;
-            
-            rightBtn.addEventListener('click', () => {
-                docsGrid.scrollBy({ left: 420, behavior: 'smooth' });
-            });
-            
-            leftBtn.addEventListener('click', () => {
-                docsGrid.scrollBy({ left: -420, behavior: 'smooth' });
-            });
-        }
 
         // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', () => {
@@ -942,7 +887,7 @@
                     } else {
                         // Свайп вправо - прокрутка влево
                         target.scrollBy({ left: -420, behavior: 'smooth' });
-                    }
+                    }ъ
                 }
             }
             
