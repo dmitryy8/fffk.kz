@@ -1,440 +1,230 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новости Федерации — Казахстанская Федерация функционального многоборья</title>
-  <meta name="description" content="Новости Казахстанской Федерации функционального многоборья" />
-  <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
-  <style>.close-btn, .lb-close{display:none !important;}</style>
-  <style>
-    :root {
-      --blue:#0b63b7;--blue-2:#2b78b9;--muted:#f4f8ff;
-      --text:#0b2340;--accent:#061b30;--radius:12px;--maxw:1200px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;font-family:Inter,system-ui,Roboto,Arial;
-      background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
-      color:var(--text);font-size:15px;
-    }
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%}
-    .container{max-width:var(--maxw);margin:0 auto;padding:22px}
-    header{background:var(--blue);color:#fff}
-    .nav-row{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:12px;max-width:var(--maxw);margin:0 auto;padding:12px 22px;position:relative;min-height:64px;
-    }
-    /* не позволяем навигации переносить ссылки на новую строку */
-    .nav-row nav, nav.main-nav{white-space:nowrap;display:flex;align-items:center;gap:8px}
-    .brand{display:flex;align-items:center;gap:12px}
-  nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
-  /* расширенная навигация: кнопка «...» с выпадающим меню */
-  nav.main-nav{display:flex;align-items:center;gap:8px}
-  .more-dropdown{position:absolute;right:360px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
-  .more-btn{background:transparent;color:#fff;border:none;font-size:26px;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1}
-  /* hamburger inside the more button: three horizontal bars */
-  .more-btn .hamburger{display:inline-block;width:22px;height:2px;background:#fff;position:relative;border-radius:2px}
-  .more-btn .hamburger::before,.more-btn .hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:#fff;border-radius:2px}
-  .more-btn .hamburger::before{top:-7px}
-  .more-btn .hamburger::after{top:7px}
-  /* icon image replacement: use the image file `tochka.png` (place it in project root) */
-  .more-btn .more-icon{width:22px;height:22px;object-fit:contain;display:block}
-  /* вертикальные точки: используем символ U+22EE (⋮) */
-  .more-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:var(--text);box-shadow:0 8px 24px rgba(3,20,45,0.12);border-radius:10px;overflow:hidden;min-width:220px;z-index:60;padding:6px 0}
-  .more-menu a{display:block;padding:10px 14px;color:var(--text);font-weight:700;border-bottom:1px solid rgba(0,0,0,0.04);text-decoration:none}
-  /* hover: немного серее */
-  .main-nav a:hover, .more-btn:hover{filter:brightness(0.9)}
-  .more-menu a:last-child{border-bottom:0}
-  .more-menu a:hover{background:#f5f7fb}
-  
-  /* Mobile menu (hidden by default) */
-  .mobile-menu{display:none}
-  #mobileToggle{display:none}
-
-    /* socials */
-    .socials {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-direction: row;
-      position: absolute;
-      right: 72px; /* moved left to make room for the corner ⋮ */
-      top: 50%;
-      transform: translateY(-50%);
-      margin-left:0;
-    }
-    .social-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px;
-      border-radius: 50%;
-      border: 0;
-      cursor: pointer;
-      box-shadow: 0 6px 18px rgba(3, 20, 45, 0.12);
-      width: 42px;
-      height: 42px;
-      overflow: hidden;
-      transition: transform 0.2s ease;
-    }
-    .social-btn img {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
-    }
-    .social-btn:hover {
-      transform: scale(1.1);
-    }
-
-    .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0}
-    .federation-container{
-      display:flex;align-items:center;justify-content:space-between;
-      width:90%;max-width:1300px;margin:0 auto;
-      background:linear-gradient(90deg,#5ea5e6 0%,#5da1e0 11%,#e8e8e8 25%,#e6e6e7 70%,#f9fafb 85%,#ffffff 100%);
-      border-radius:60px;padding:30px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.08)
-    }
-    .federation-logo img{width:264px;height:auto;object-fit:contain}
-    .federation-text{text-align:center;flex:1;margin:0 30px}
-    .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
-    .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
-    @media(max-width:768px){
-      .federation-container{flex-direction:column;text-align:center;border-radius:20px}
-      .federation-logo img{width:140px;margin-bottom:15px}
-      .federation-text h1{font-size:22px}
-      .federation-text h2{font-size:18px}
-    }
-
-   
-
-    footer{
-      margin-top:28px;padding:0;border-top:1px solid rgba(11,99,183,0.06);
-      background:var(--blue)
-    }
-    .footer-inner{
-      max-width:var(--maxw);margin:0 auto;padding:18px;
-      display:flex;align-items:center;justify-content:space-between;
-      gap:12px;color:#fff
-    }
-    .footer-bottom{
-                 
-      .footer-inner{flex-direction:column;gap:12px;align-items:center}
-    }
-  /* GALLERY & LIGHTBOX */
-  .gallery-wrap{margin-top:18px}
-  .slider{position:relative;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(3,20,45,0.06)}
-  .slider img{width:60%;height:auto;max-height:60vh;object-fit:cover;display:block;border:6px solid var(--blue);border-radius:8px;box-shadow:0 12px 30px rgba(11,99,183,0.12)}
-  .slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(11,99,183,0.9);color:#fff;border:none;width:48px;height:48px;border-radius:50%;cursor:pointer;box-shadow:0 6px 18px rgba(3,20,45,0.12);font-size:20px}
-  .slider-btn.prev{left:12px}
-  .slider-btn.next{right:12px}
-  .thumbs{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-  .thumb{width:88px;height:60px;overflow:hidden;border-radius:8px;cursor:pointer;flex:0 0 auto;border:3px solid transparent}
-  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-  .thumb.active{border-color:var(--blue)}
-
-  /* Lightbox */
-  .lightbox{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:200}
-  .lightbox-backdrop{position:absolute;inset:0;background:rgba(2,8,20,0.62);backdrop-filter:blur(6px)}
-  .lightbox-content{position:relative;max-width:90%;max-height:90%;display:flex;align-items:center;justify-content:center}
-  .lightbox-content img{max-width:70%;max-height:70%;border-radius:10px;box-shadow:0 12px 40px rgba(3,20,45,0.6);border:6px solid var(--blue)}
-  .lb-close{position:absolute;top:-18px;right:-18px;background:#fff;border-radius:50%;width:40px;height:40px;border:none;cursor:pointer;z-index:220;box-shadow:0 6px 18px rgba(3,20,45,0.12)}
-  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.9);border:none;width:56px;height:56px;border-radius:50%;cursor:pointer;z-index:220}
-  .lb-prev{left:-72px}
-  .lb-next{right:-72px}
-
-  /* Mobile adjustments */
-  @media (max-width: 720px){
-    .container{padding:12px}
-    .slider{padding:12px}
-    .slider img{border-width:4px}
-    .slider-btn{width:40px;height:40px;font-size:18px}
-    .thumb{width:64px;height:48px}
-    .thumbs{overflow-x:auto;flex-wrap:nowrap;padding:6px 4px}
-    .thumbs::-webkit-scrollbar{height:8px}
-    .lightbox-content img{max-width:92%;max-height:80%}
-    .lb-nav{width:44px;height:44px}
-    .lb-prev{left:8px}
-    .lb-next{right:8px}
-  }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медиа - ФФМК</title>
+    <link rel="icon" href="/logo.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: rgba(11, 99, 183, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+        .nav-links a:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        main {
+            margin-top: 100px;
+            padding: 40px 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #0b63b7;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .media-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .media-item:hover {
+            transform: translateY(-10px);
+        }
+        .media-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .media-content {
+            padding: 20px;
+        }
+        .media-content h3 {
+            color: #0b63b7;
+            margin-bottom: 10px;
+        }
+        .media-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+        /* Federation block */
+        .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0}
+        .federation-container{
+          display:flex;align-items:center;justify-content:space-between;
+          width:90%;max-width:1300px;margin:0 auto;
+          background:linear-gradient(90deg,#5ea5e6 0%,#5da1e0 11%,#e8e8e8 25%,#e6e6e7 70%,#f9fafb 85%,#ffffff 100%);
+          border-radius:60px;padding:30px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.08)
+        }
+        .federation-logo img{width:264px;height:auto;object-fit:contain}
+        .federation-text{text-align:center;flex:1;margin:0 30px}
+        .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
+        .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
+        @media(max-width:768px){
+          .federation-container{flex-direction:column;text-align:center;border-radius:20px}
+          .federation-logo img{width:140px;margin-bottom:15px}
+          .federation-text h1{font-size:22px}
+          .federation-text h2{font-size:18px}
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <div class="nav-row">
-      <div class="brand">
-        <img src="/footer-logo.png" alt="Логотип Федерации" id="site-logo" style="width:220px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
-        <nav class="main-nav">
-          <a href="index.html">Главная</a>
-          <a href="about.html">О нас</a>
-          <a href="index.html#news">Новости</a>
-          <a href="index.html#docs">Документы</a>
-          <a href="leadership.html">Руководство</a>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <img src="/logo.png" alt="ФФМК">
+                <span>ФФМК</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/about.html">О нас</a></li>
+                <li><a href="/news.html">Новости</a></li>
+                <li><a href="/media.html">Медиа</a></li>
+                <li><a href="/leadership.html">Руководство</a></li>
+            </ul>
         </nav>
-      </div>
+    </header>
 
-      <div class="more-dropdown" id="moreDropdown">
-        <button class="more-btn" id="moreBtn" style="font-size:28px;padding:8px 10px;"><img src="/tochka.png" class="more-icon" alt="menu"></button>
-        <div class="more-menu" id="moreMenu" style="display:none">
-          <a href="media.html">Медиа</a>
-          <a href="competitions.html">Соревнования</a>
-          <a href="achievements.html">Достижения</a>
-          <a href="partners.html">Партнёры и спонсоры</a>
-          <a href="map.html">Карта залов</a>
-        </div>
-      </div>
-      
-      <div class="socials">
-        <a class="social-btn" href="https://instagram.com/fffk.20_23" target="_blank" rel="noopener"><img src="/instagramlogo.png" alt="Instagram"></a>
-        <a class="social-btn" href="https://t.me/fffkkz2023" target="_blank" rel="noopener"><img src="/telegramlogo.png" alt="Telegram"></a>
-        <a class="social-btn" href="https://www.facebook.com/share/1DFY4jSz3e/?mibextid=wwXIfr" target="_blank" rel="noopener"><img src="/facebooklogo.png" alt="Facebook"></a>
-        <a class="social-btn" href="https://www.tiktok.com/@fffk_funcsport?_t=ZM-90WDZha6UqB&_r=1" target="_blank" rel="noopener"><img src="/tiktoklogo.png" alt="TikTok"></a>
-        <a class="social-btn" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener"><img src="/youtubelogo.png" alt="YouTube"></a>
-      </div>
-      
-      <!-- Mobile hamburger toggle (visible on mobile only) -->
-      <button id="mobileToggle" aria-label="Открыть меню" style="background:transparent;border:0;color:#fff;padding:8px 10px;border-radius:8px">
-        <img src="/tochka.png" class="mobile-toggle-img" alt="Меню" style="width:28px;height:28px;">
-      </button>
-    </div>
-    
-    <!-- Mobile slide-in menu -->
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <button class="close-btn" id="mobileClose">Закрыть ✕</button>
-      <nav>
-        <a href="index.html">Главная</a>
-        <a href="about.html">О нас</a>
-        <a href="index.html#news">Новости</a>
-        <a href="index.html#docs">Документы</a>
-        <a href="leadership.html">Руководство</a>
-        <a href="media.html">Медиа</a>
-        <a href="competitions.html">Соревнования</a>
-        <a href="achievements.html">Достижения</a>
-        <a href="partners.html">Партнёры и спонсоры</a>
-  <a href="map.html">Карта залов</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="federation-hero">
-    <div class="federation-container">
-  <div class="federation-logo left"><img src="/logo.png" alt=""></div>
-      <div class="federation-text">
-        <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
-        ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
-      </h2>
-        <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
-        <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
-      </div>
-  <div class="federation-logo right"><img src="/sponsor.png" alt=""></div>
-    </div>
-  </section>
-
-  <main class="container">
-
-
-
-<script>
-  // выпадающее меню "..."
-  (function(){
-    const moreBtn = document.getElementById('moreBtn');
-    const moreMenu = document.getElementById('moreMenu');
-    const moreDropdown = document.getElementById('moreDropdown');
-    if(!moreBtn) return;
-    moreBtn.addEventListener('click', (e)=>{
-      e.stopPropagation();
-      moreMenu.style.display = moreMenu.style.display === 'block' ? 'none' : 'block';
-    });
-    document.addEventListener('click', (e)=>{
-      if(!moreDropdown.contains(e.target)) moreMenu.style.display = 'none';
-    });
-  })();
-</script>
-
-  </main>
-            <section class="section">
-              <h2 style="font-size:30px;color:#0b63b7;font-weight:900;margin:0 0 16px 0;padding-left:8px;">Галерея</h2>
-
-              <div class="gallery-wrap">
-                <div class="slider" id="slider">
-                  <button class="slider-btn prev" id="prevBtn" aria-label="Предыдущее">&#10094;</button>
-                  <img id="sliderImage" src="/astanaopencup1.jpg" alt="Медиа" />
-                  <button class="slider-btn next" id="nextBtn" aria-label="Следующее">&#10095;</button>
+    <main>
+        <div class="container">
+            <h1 style="text-align: left;">Медиа</h1>
+            <p style="text-align: left; color: #666; font-size: 1.2em;">Фото и видео с соревнований и мероприятий</p>
+            
+            <div class="media-grid">
+                <div class="media-item">
+                    <img src="astana1.JPG" alt="Чемпионат Астаны">
+                    <div class="media-content">
+                        <h3>Чемпионат Астаны 2024</h3>
+                        <p>Яркие моменты с чемпионата по функциональному многоборью в столице</p>
+                    </div>
                 </div>
-
-                <div class="thumbs" id="thumbs"></div>
-              </div>
-            </section>
-
-            <!-- Lightbox overlay -->
-            <div id="lightbox" class="lightbox" style="display:none">
-              <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
-              <div class="lightbox-content" role="dialog" aria-modal="true">
-                <button class="lb-close" id="lbClose" aria-label="Закрыть">✕</button>
-                <button class="lb-nav lb-prev" id="lbPrev" aria-label="Предыдущее">&#10094;</button>
-                <img id="lbImage" src="" alt="" />
-                <button class="lb-nav lb-next" id="lbNext" aria-label="Следующее">&#10095;</button>
-              </div>
+                
+                <div class="media-item">
+                    <img src="astana2.JPG" alt="Награждение">
+                    <div class="media-content">
+                        <h3>Награждение победителей</h3>
+                        <p>Церемония награждения лучших спортсменов чемпионата</p>
+                    </div>
+                </div>
+                
+                <div class="media-item">
+                    <img src="astanaopencup1.JPG" alt="Open Cup">
+                    <div class="media-content">
+                        <h3>Astana Open Cup</h3>
+                        <p>Международные соревнования с участием спортсменов из разных стран</p>
+                    </div>
+                </div>
+                
+                <div class="media-item">
+                    <img src="game1.jpg" alt="Тренировки">
+                    <div class="media-content">
+                        <h3>Игровые упражнения</h3>
+                        <p>Функциональные упражнения в игровом формате</p>
+                    </div>
+                </div>
+                
+                <div class="media-item">
+                    <img src="game2.JPG" alt="Групповые тренировки">
+                    <div class="media-content">
+                        <h3>Групповые тренировки</h3>
+                        <p>Совместные тренировки спортсменов федерации</p>
+                    </div>
+                </div>
+                
+                <div class="media-item">
+                    <img src="game3.JPG" alt="Индивидуальная подготовка">
+                    <div class="media-content">
+                        <h3>Индивидуальная подготовка</h3>
+                        <p>Персональные тренировки с тренерами федерации</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </main>
 
-            <script>
-              // выпадающее меню "..."
-              (function(){
-                const moreBtn = document.getElementById('moreBtn');
-                const moreMenu = document.getElementById('moreMenu');
-                const moreDropdown = document.getElementById('moreDropdown');
-                if(!moreBtn) return;
-                moreBtn.addEventListener('click', (e)=>{
-                  e.stopPropagation();
-                  moreMenu.style.display = moreMenu.style.display === 'block' ? 'none' : 'block';
-                });
-                document.addEventListener('click', (e)=>{
-                  if(!moreDropdown.contains(e.target)) moreMenu.style.display = 'none';
-                });
-              })();
-              
-              // Mobile menu toggle
-              (function(){
-                const toggle = document.getElementById('mobileToggle');
-                const menu = document.getElementById('mobileMenu');
-                const close = document.getElementById('mobileClose');
-                if(!toggle || !menu) return;
-                
-                toggle.addEventListener('click', ()=>{
-                  const isOpen = menu.classList.contains('open');
-                  if(isOpen){
-                    menu.classList.remove('open');
-                    menu.setAttribute('aria-hidden', 'true');
-                  } else {
-                    menu.classList.add('open');
-                    menu.setAttribute('aria-hidden', 'false');
-                  }
-                });
-                
-                if(close){
-                  close.addEventListener('click', ()=>{
-                    menu.classList.remove('open');
-                    menu.setAttribute('aria-hidden', 'true');
-                  });
-                }
-              })();
-            </script>
+    <!-- Federation block -->
+    <section class="federation-hero">
+        <div class="federation-container">
+            <div class="federation-logo left"><img src="/logo.png" alt=""></div>
+            <div class="federation-text">
+                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
+                ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
+                </h2>
+                <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+                <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
+            </div>
+            <div class="federation-logo right"><img src="/sponsor.png" alt=""></div>
+        </div>
+    </section>
 
-            <script>
-              // список всех изображений в проекте, кроме логотипов/иконок соцсетей
-              const IMAGES = [
-                '/astanaopencup1.jpg','/astana2.jpg','/astana1.jpg',
-                '/game1.jpg','/game2.jpg','/game3.jpg',
-                /* pologenie.jpg removed */
-                '/imageskz/kz.jpg','/imageskz/kz1.jpg','/imageskz/kz2.jpg','/imageskz/kz3.jpg','/imageskz/kz4.jpg','/imageskz/kz5.jpg','/imageskz/kz6.jpg',
-                '/imageschampionat/asia1.jpg','/imageschampionat/asia2.jpg','/imageschampionat/asia3.jpg','/imageschampionat/asia4.jpg','/imageschampionat/asia5.jpg'
-              ];
-
-              (function(){
-                const sliderImage = document.getElementById('sliderImage');
-                const thumbs = document.getElementById('thumbs');
-                const prevBtn = document.getElementById('prevBtn');
-                const nextBtn = document.getElementById('nextBtn');
-
-                let idx = 0;
-                let autoplay = null;
-
-                function showIndex(i){
-                  idx = (i + IMAGES.length) % IMAGES.length;
-                  sliderImage.src = IMAGES[idx];
-                  // выделяем активный thumb
-                  Array.from(thumbs.children).forEach((t,ti)=> t.classList.toggle('active', ti===idx));
-                }
-
-                function next(){ showIndex(idx+1); }
-                function prev(){ showIndex(idx-1); }
-
-                // заполнить миниатюры
-                IMAGES.forEach((src,i)=>{
-                  const d = document.createElement('div'); d.className='thumb';
-                  const img = document.createElement('img'); img.src = src; img.alt = '';
-                  d.appendChild(img);
-                  d.addEventListener('click', ()=>{
-                    openLightbox(i);
-                  });
-                  thumbs.appendChild(d);
-                });
-
-                // старт
-                showIndex(0);
-
-                nextBtn.addEventListener('click', ()=>{ next(); resetAutoplay(); });
-                prevBtn.addEventListener('click', ()=>{ prev(); resetAutoplay(); });
-
-                function startAutoplay(){
-                  // autoplay intentionally disabled per UX request
-                }
-                function stopAutoplay(){ if(autoplay){ clearInterval(autoplay); autoplay=null; } }
-                function resetAutoplay(){ /* no-op when autoplay disabled */ }
-
-                // lightbox
-                const lightbox = document.getElementById('lightbox');
-                const lbImage = document.getElementById('lbImage');
-                const lbClose = document.getElementById('lbClose');
-                const lbPrev = document.getElementById('lbPrev');
-                const lbNext = document.getElementById('lbNext');
-                const lbBackdrop = document.getElementById('lightboxBackdrop');
-
-                function openLightbox(i){
-                  idx = (i + IMAGES.length) % IMAGES.length;
-                  lbImage.src = IMAGES[idx];
-                  lightbox.style.display='flex';
-                  stopAutoplay();
-                }
-                function closeLightbox(){ lightbox.style.display='none'; resetAutoplay(); }
-                function lbNextFn(){ idx = (idx+1)%IMAGES.length; lbImage.src = IMAGES[idx]; }
-                function lbPrevFn(){ idx = (idx-1+IMAGES.length)%IMAGES.length; lbImage.src = IMAGES[idx]; }
-
-                lbClose.addEventListener('click', closeLightbox);
-                lbBackdrop.addEventListener('click', closeLightbox);
-                lbNext.addEventListener('click', lbNextFn);
-                lbPrev.addEventListener('click', lbPrevFn);
-                document.addEventListener('keydown', (e)=>{
-                  if(lightbox.style.display==='flex'){
-                    if(e.key==='ArrowRight') lbNextFn();
-                    if(e.key==='ArrowLeft') lbPrevFn();
-                    if(e.key==='Escape') closeLightbox();
-                  }
-                });
-
-                // клики по основному изображению тоже открывают лайтбокс
-                sliderImage.addEventListener('click', ()=> openLightbox(idx));
-
-                
-              })();
-            </script>
-
-  <footer>
-    <div class="footer-inner">
-      <div><img src="/footer-logo.png" alt="Логотип Федерации" style="width:220px;border-radius:8px;"></div>
-      <nav style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a href="index.html" style="color:#fff;font-weight:600;">Главная</a>
-        <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
-        <a href="news.html" style="color:#fff;font-weight:600;">Новости</a>
-        <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
-  <a href="index.html#docs" style="color:#fff;font-weight:600;">Документы</a>
-        <a href="competitions.html" style="color:#fff;font-weight:600;">Соревнования</a>
-      </nav>
-      <div class="footer-socials">
-        <a class="social-btn" href="https://instagram.com/yourprofile" target="_blank" rel="noopener">
-    <img src="/instagramlogo.png" alt="Instagram">
-  </a>
-        <a class="social-btn" href="https://t.me/yourchannel" target="_blank"><img src="/telegramlogo.png" alt="Telegram"></a>
-        <a class="social-btn" href="https://facebook.com/yourpage" target="_blank"><img src="/facebooklogo.png" alt="Facebook"></a>
-        <a class="social-btn" href="https://tiktok.com/@yourprofile" target="_blank"><img src="/tiktoklogo.png" alt="TikTok"></a>
-        <a class="social-btn" href="https://youtube.com/yourchannel" target="_blank"><img src="/youtubelogo.png" alt="YouTube"></a>
-      </div>
-    </div>
-
-   
-  </footer>
-<script src="/lang.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Казахстанская Федерация Функционального Многоборья</p>
+        </div>
+    </footer>
 </body>
 </html>
