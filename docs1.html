@@ -13,10 +13,15 @@
       --text:#0b2340;--accent:#061b30;--radius:12px;--maxw:1200px;
     }
     *{box-sizing:border-box}
+    html{overflow-x:hidden}
+    iframe{overflow:hidden;-webkit-overflow-scrolling:auto}
+    iframe::-webkit-scrollbar{display:none}
+    iframe{-ms-overflow-style:none;scrollbar-width:none}
     body{
       margin:0;font-family:Inter,system-ui,Roboto,Arial;
       background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
       color:var(--text);font-size:15px;
+      overflow-x:hidden;
     }
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
@@ -143,7 +148,6 @@
             <div class="more-menu" id="moreMenu" style="display:none">
               <a href="media.html">Медиа</a>
               <a href="competitions.html">Соревнования</a>
-              <a href="achievements.html">Достижения</a>
               <a href="partners.html">Партнёры и спонсоры</a>
               <a href="map.html">Карта залов</a>
             </div>
@@ -211,8 +215,8 @@
         
         <p>Дата публикации: <strong>03.07.2025</strong></p>
 
-        <div style="margin-top:14px;">
-          <iframe src="/pologenie.pdf" id="poloIframe" width="100%" height="780" style="border:3px solid #000;border-radius:8px;" title="Положение Чемпионата"></iframe>
+        <div style="margin-top:14px;overflow:hidden;">
+          <iframe src="/pologenie.pdf" id="poloIframe" width="100%" height="780" style="border:3px solid #000;border-radius:8px;max-width:100%;box-sizing:border-box;" title="Положение Чемпионата" scrolling="no"></iframe>
         </div>
         <div style="margin-top:12px;">
           <!-- Убрана кнопка «Подробнее». Одна синяя кнопка ведёт на главную. -->

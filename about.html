@@ -1,381 +1,924 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новости Федерации — Казахстанская Федерация функционального многоборья</title>
-  <meta name="description" content="Новости Казахстанской Федерации функционального многоборья" />
-  <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
-  <style>.close-btn, .lb-close{display:none !important;}</style>
-  <style>
-    /* mobile-only: simplify header on about.html — show only small logo and socials */
-    @media (max-width:768px) {
-      .nav-row nav.main-nav { display: none !important; }
-      .more-dropdown { display: none !important; }
-      .socials { position: absolute !important; right: 12px !important; top: 8px !important; transform: none !important; }
-      #site-logo, .brand img { width: 73px !important; height: auto !important; }
-      /* keep language control visible in header only on index; hide here on about for minimal header */
-      #langWrap { display: none !important; }
-    }
-  </style>
-  <style>
-    :root {
-      --blue:#0b63b7;--blue-2:#2b78b9;--muted:#f4f8ff;
-      --text:#0b2340;--accent:#061b30;--radius:12px;--maxw:1200px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;font-family:Inter,system-ui,Roboto,Arial;
-      background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
-      color:var(--text);font-size:15px;
-    }
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%}
-    .container{max-width:var(--maxw);margin:0 auto;padding:22px}
-    header{background:var(--blue);color:#fff}
-    .nav-row{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:12px;max-width:var(--maxw);margin:0 auto;padding:12px 22px;position:relative;min-height:64px;
-    }
-    /* не позволяем навигации переносить ссылки на новую строку */
-    .nav-row nav, nav.main-nav{white-space:nowrap;display:flex;align-items:center;gap:8px}
-    .brand{display:flex;align-items:center;gap:12px}
-  nav a{margin:0 8px;font-weight:600;color:#fff;opacity:0.95}
-  /* расширенная навигация: кнопка «...» с выпадающим меню */
-  nav.main-nav{display:flex;align-items:center;gap:8px}
-  .more-dropdown{position:absolute;right:320px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
-  .more-dropdown{position:absolute;right:360px;top:50%;transform:translateY(-50%);z-index:70;display:inline-block}
-  .more-btn{background:transparent;color:#fff;border:none;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:900;line-height:1;display:inline-flex;align-items:center;justify-content:center}
-  /* hamburger: three horizontal bars instead of vertical dots */
-  .more-btn .hamburger{width:20px;height:2px;background:#fff;border-radius:2px;display:block;position:relative}
-  .more-btn .hamburger::before,
-  .more-btn .hamburger::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
-  .more-btn .hamburger::before{top:-6px}
-  .more-btn .hamburger::after{top:6px}
-  /* icon image replacement: use the image file `tochka.png` (place it in project root) */
-  .more-btn .more-icon{width:22px;height:22px;object-fit:contain;display:block}
-  .more-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:var(--text);box-shadow:0 8px 24px rgba(3,20,45,0.12);border-radius:10px;overflow:hidden;min-width:220px;z-index:60;padding:6px 0}
-  .more-menu a{display:block;padding:10px 14px;color:var(--text);font-weight:700;border-bottom:1px solid rgba(0,0,0,0.04);text-decoration:none}
-  /* hover: немного серее */
-  .main-nav a:hover, .more-btn:hover{filter:brightness(0.9)}
-  .more-menu a:last-child{border-bottom:0}
-  .more-menu a:hover{background:#f5f7fb}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — Казахстанская Федерация функционального многоборья</title>
+    <meta name="description" content="О Казахстанской Федерации функционального многоборья - наша миссия и цели" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* socials */
-    .socials {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-direction: row;
-      position: absolute;
-      right: 72px; /* moved left to make room for the corner ⋮ */
-      top: 50%;
-      transform: translateY(-50%);
-      margin-left:0;
-    }
-    .social-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px;
-      border-radius: 50%;
-      border: 0;
-      cursor: pointer;
-      box-shadow: 0 6px 18px rgba(3, 20, 45, 0.12);
-      width: 42px;
-      height: 42px;
-      overflow: hidden;
-      transition: transform 0.2s ease;
-    }
-    .social-btn img {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
-    }
-    .social-btn:hover {
-      transform: scale(1.1);
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+            color: #0b2340;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0}
-    .federation-container{
-      display:flex;align-items:center;justify-content:space-between;
-      width:90%;max-width:1300px;margin:0 auto;
-      background:linear-gradient(90deg,#5ea5e6 0%,#5da1e0 11%,#e8e8e8 25%,#e6e6e7 70%,#f9fafb 85%,#ffffff 100%);
-      border-radius:60px;padding:30px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.08)
-    }
-    .federation-logo img{width:264px;height:auto;object-fit:contain}
-    .federation-text{text-align:center;flex:1;margin:0 30px}
-    .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
-    .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
-    @media(max-width:768px){
-      .federation-container{flex-direction:column;text-align:center;border-radius:20px}
-      .federation-logo img{width:140px;margin-bottom:15px}
-      .federation-text h1{font-size:22px}
-      .federation-text h2{font-size:18px}
-    }
+        :root {
+            --primary-color: #0b63b7;
+            --secondary-color: #2b78b9;
+            --accent-color: #f4f8ff;
+            --light-bg: #ffffff;
+            --card-bg: #ffffff;
+            --text-dark: #0b2340;
+            --text-gray: #666666;
+            --text-light: #888888;
+            --border-color: rgba(11, 99, 183, 0.1);
+            --gradient-1: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%);
+            --gradient-2: linear-gradient(135deg, #2b78b9 0%, #0b63b7 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #0b63b7 100%);
+            --gradient-sport: linear-gradient(135deg, #0b63b7 0%, #2b78b9 50%, #4facfe 100%);
+            --shadow: 0 8px 32px rgba(11, 99, 183, 0.12);
+            --shadow-hover: 0 16px 48px rgba(11, 99, 183, 0.2);
+        }
 
-    /* новости */
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .news-item {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 14px rgba(11,99,183,0.12);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .news-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 22px rgba(11,99,183,0.2);
-    }
-    .news-item img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .news-content {
-      padding: 16px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex-grow: 1;
-    }
-    .news-date {
-      font-size: 14px;
-      color: #0b63b7;
-      font-weight: 700;
-    }
-    .news-title {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--text);
-    }
-    .news-desc {
-      color: #555;
-      font-size: 15px;
-      flex-grow: 1;
-    }
-    .news-link {
-      display: inline-block;
-      margin-top: 8px;
-      color: #fff;
-      background: #0b63b7;
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-      text-align: center;
-      transition: background 0.3s ease;
-      align-self: flex-start;
-    }
-    .news-link:hover {
-      background: #2b78b9;
-    }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    @media(max-width:768px){
-      .news-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+        /* Анимация частиц */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
 
-    /* shared primary button used in header/footer sections */
-    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
-    .btn-primary:hover{background:var(--blue-2)}
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: float 8s linear infinite;
+            opacity: 0.3;
+        }
 
-    footer{
-      margin-top:28px;padding:0;border-top:1px solid rgba(11,99,183,0.06);
-      background:var(--blue)
-    }
-    .footer-inner{
-      max-width:var(--maxw);margin:0 auto;padding:18px;
-      display:flex;align-items:center;justify-content:space-between;
-      gap:12px;color:#fff
-    }
-    .footer-bottom{
-      background:var(--blue-2);color:#fff;padding:12px 18px;text-align:center;font-weight:600
-    }
-    @media(max-width:520px){
-      .footer-inner{flex-direction:column;gap:12px;align-items:center}
-    }
-  </style>
+        @keyframes float {
+            0% { 
+                transform: translateY(100vh) translateX(0px) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { 
+                transform: translateY(-100px) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Навигация */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 99, 183, 0.9);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar.scrolled {
+            background: rgba(11, 99, 183, 0.95);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: 600;
+        }
+
+        .nav-menu a:hover {
+            color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-sport);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        /* Заголовок страницы */
+        .page-header {
+            padding: 120px 0 80px;
+            text-align: left;
+            background: linear-gradient(135deg, rgba(244, 248, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+        }
+
+        .page-header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: var(--gradient-sport);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .page-header p {
+            font-size: 1.3em;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0;
+        }
+
+        /* Текстовый блок */
+        .text-block {
+            width: 90%;
+            max-width: 1400px;
+            margin: 10px auto 20px auto;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .text-block p {
+            font-size: 18px;
+            line-height: 1.7;
+            text-align: justify;
+            text-justify: inter-word;
+            margin: 0 0 20px 0;
+            color: var(--text-gray);
+        }
+
+
+
+        /* Секции */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: left;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            background: var(--gradient-sport);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            font-size: 1.2em;
+            color: var(--text-gray);
+            line-height: 1.6;
+            text-align: left;
+            margin: 0;
+        }
+
+        /* Карточки миссии */
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .mission-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: left;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+
+        .mission-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .mission-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 30px 0;
+            font-size: 2em;
+            color: white;
+        }
+
+        .mission-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .mission-card p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* История */
+        .history-section {
+            background: rgba(244, 248, 255, 0.3);
+            padding: 80px 0;
+        }
+
+        .history-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .history-text h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            background: var(--gradient-sport);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .history-text p {
+            font-size: 1.1em;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .history-image {
+            position: relative;
+        }
+
+        .history-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Статистика */
+        .stats-section {
+            padding: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px;
+            border-radius: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            background: var(--gradient-sport);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        /* Команда */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .team-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 3em;
+            color: white;
+            box-shadow: 0 10px 30px rgba(11, 99, 183, 0.3);
+        }
+
+        .team-name {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-description {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Футер */
+        .footer {
+            background: var(--primary-color);
+            padding: 60px 0 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        .social-btn img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Плавная прокрутка */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Анимация появления элементов */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Federation block */
+        .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0;margin-top:100px}
+        .federation-container{
+          display:flex;align-items:center;justify-content:space-between;
+          width:90%;max-width:1300px;margin:0 auto;
+          background:linear-gradient(90deg,#5ea5e6 0%,#5da1e0 11%,#e8e8e8 25%,#e6e6e7 70%,#f9fafb 85%,#ffffff 100%);
+          border-radius:60px;padding:30px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.08)
+        }
+        .federation-logo img{width:264px;height:auto;object-fit:contain}
+        .federation-text{text-align:center;flex:1;margin:0 30px}
+        .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
+        .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
+        @media(max-width:768px){
+          .federation-container{flex-direction:column;text-align:center;border-radius:20px}
+          .federation-logo img{width:140px;margin-bottom:15px}
+          .federation-text h1{font-size:22px}
+          .federation-text h2{font-size:18px}
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 0;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 50px;
+                transition: left 0.3s ease;
+                border-top: 1px solid var(--border-color);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu a {
+                color: var(--text-dark);
+                padding: 15px;
+                border-bottom: 1px solid var(--border-color);
+                width: 100%;
+                text-align: center;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-header {
+                padding: 100px 0 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5em;
+            }
+            
+            .history-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .mission-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-nav {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 2em;
+            }
+            
+            .section-title h2 {
+                font-size: 2em;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-card,
+            .team-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <div class="nav-row">
-      <div class="brand">
-  <img src="/footer-logo.png" alt="Логотип Федерации" style="width:220px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(3,20,45,0.12);">
-        <nav class="main-nav">
-          <a href="index.html">Главная</a>
-          <a href="about.html">О нас</a>
-          <a href="index.html#news">Новости</a>
-          <a href="index.html#docs">Документы</a>
-            <a href="index.html#docs">Документы</a>
-          <!-- одна видимая дополнительная кнопка -->
-          <a href="leadership.html">Руководство</a>
-          <!-- остальные кнопки в выпадающем меню '...' (вынесено перед соцсетями) -->
-        </nav>
-      </div>
-
-          <div class="more-dropdown" id="moreDropdown">
-            <button class="more-btn" id="moreBtn" aria-label="Меню дополнительных ссылок" style="padding:8px 10px;">
-                <img src="/tochka.png" class="more-icon" alt="menu">
-            </button>
-            <div class="more-menu" id="moreMenu" style="display:none">
-              <a href="media.html">Медиа</a>
-              <a href="competitions.html">Соревнования</a>
-              <a href="achievements.html">Достижения</a>
-              <a href="partners.html">Партнёры и спонсоры</a>
-              <a href="map.html">Карта залов</a>
+    <!-- Анимированный фон -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Навигация -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="/footer-logo.png" alt="ФФМК" style="height: 40px; width: auto;">
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="index.html#news">Новости</a></li>
+                    <li><a href="index.html#docs">Документы</a></li>
+                    <li><a href="leadership.html">Руководство</a></li>
+                    <li><a href="media.html">Медиа</a></li>
+                    <li><a href="competitions.html">Соревнования</a></li>
+                    <li><a href="partners.html">Партнёры и спонсоры</a></li>
+                    <li><a href="map.html">Карта залов</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-          </div>
-      <div class="socials">
-            <a class="social-btn" href="https://instagram.com/fffk.20_23" target="_blank" rel="noopener"><img src="/instagramlogo.png" alt="Instagram"></a>
-            <a class="social-btn" href="https://t.me/fffkkz2023" target="_blank" rel="noopener"><img src="/telegramlogo.png" alt="Telegram"></a>
-            <a class="social-btn" href="https://www.facebook.com/share/1DFY4jSz3e/?mibextid=wwXIfr" target="_blank" rel="noopener"><img src="/facebooklogo.png" alt="Facebook"></a>
-            <a class="social-btn" href="https://www.tiktok.com/@fffk_funcsport?_t=ZM-90WDZha6UqB&_r=1" target="_blank" rel="noopener"><img src="/tiktoklogo.png" alt="TikTok"></a>
-            <a class="social-btn" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener"><img src="/youtubelogo.png" alt="YouTube"></a>
-      </div>
-    </div>
-      <div id="langWrap" style="position:absolute;right:160px;top:50%;transform:translateY(-50%);z-index:80;">
-        <button id="langToggle" style="background:transparent;color:#fff;border:0;font-weight:700;cursor:pointer;padding:8px 10px;">
-          <span id="langCurrent">RU</span> ▾
-        </button>
-        <div id="langDropdown" style="display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;color:#000;border-radius:8px;padding:6px;min-width:120px;box-shadow:0 8px 24px rgba(3,20,45,0.12);">
-          <a href="#" data-lang="ru" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Рус</a>
-          <a href="#" data-lang="kk" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Қаз</a>
-          <a href="#" data-lang="en" style="display:block;padding:8px 12px;text-decoration:none;color:inherit;">Eng</a>
         </div>
-      </div>
-    </header>
-    <button id="mobileToggle" aria-label="Открыть меню" style="display:none;background:transparent;border:0;color:#fff;font-weight:800;padding:8px 10px;border-radius:8px">
-      <img src="/tochka.png" class="mobile-toggle-img" alt="Меню">
-    </button>
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <button class="close-btn" id="mobileClose">Закрыть ✕</button>
-      <nav>
-        <a href="index.html">Главная</a>
-        <a href="about.html">О нас</a>
-        <a href="index.html#news">Новости</a>
-        <a href="index.html#docs">Документы</a>
-        <a href="leadership.html">Руководство</a>
-        <a href="media.html">Медиа</a>
-        <a href="competitions.html">Соревнования</a>
-        <a href="achievements.html">Достижения</a>
-        <a href="partners.html">Партнёры и спонсоры</a>
-  <a href="map.html">Карта залов</a>
-      </nav>
+    </nav>
+<!-- Блок федерации -->
+    <section class="federation-hero">
+        <div class="federation-container">
+            <div class="federation-logo left"><img src="/logo.png" alt=""></div>
+            <div class="federation-text">
+                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
+                ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
+                </h2>
+                <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+                <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
+            </div>
+            <div class="federation-logo right"><img src="/sponsor.png" alt=""></div>
+        </div>
+    </section>
+    <!-- Заголовок О нас -->
+    <div style="text-align: center; margin: 20px 0 10px 0;">
+        <h1 style="font-size: 3em; color: #0b63b7; font-weight: 800; margin: 0;">О нас</h1>
     </div>
 
-  <section class="federation-hero">
-    <div class="federation-container">
-  <div class="federation-logo left"><img src="/logo.png" alt=""></div>
-      <div class="federation-text">
-        <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
-        ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
-      </h2>
-        <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
-        <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
-      </div>
-  <div class="federation-logo right"><img src="/sponsor.png" alt=""></div>
-    </div>
-  </section>
-
-  <main class="container">
-  <!-- синяя кнопка вернуться на главную -->
-  <div style="margin:18px 0;">
-    <a class="btn-primary" href="index.html">Вернуться на главную</a>
-  </div>
-
-<!-- Блок с фото -->
-<div class="news-photos" style="display:flex;gap:16px;flex-wrap:wrap;margin:20px 0;">
-  <img src="/about1.jpg" alt="Фото с турнира 1" style="flex:1;min-width:280px;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;">
-  <img src="/about2.jpg" alt="Фото с турнира 2" style="flex:1;min-width:280px;border-radius:16px;box-shadow:0 4px 14px rgba(11,99,183,0.12);object-fit:cover;">
-</div>
-
-<!-- Карточка новости -->
-<div class="news-card" style="
-  background:#fff;
-  border-radius:16px;
-  box-shadow:0 4px 14px rgba(11,99,183,0.12);
-  padding:24px;
-  margin-top:16px;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-">
-  <div class="news-card-inner" style="display:flex;flex-direction:column;gap:12px;">
-    <h3 style="font-size:22px;color:#000000;font-weight:800;margin:0;">
-      Функциональное многоборье
-    </h3>
-    <p style="color:#3c3a3a;font-size:16px;line-height:1.6;">
-      Функциональное многоборье — вид спорта, с использованием функциональных движений с весом собственного тела, свободными отягощениями и циклическими движениями, которые объединяются в специально составленные комплексы упражнений и выполняются непрерывно на время.
-Республиканское общественное объединение «Казахстанская федерация функционального многоборья» было создано Решением Учредительного Сьезда 08 сентября 2023 года в г. Астана. По решению Сьезда Президентом Федерации избран Мещеряков Николай Ильич. Первый Вице-Президент - Генеральный секретарь - Лукановский Валентин Владимирович. Вице-Президент - Сулейменов Ерлан Мельсович.
-Несмотря на короткий период своей деятельности Федерация функционального многоборья ставит перед собой высокие цели. Определен ряд неотложных задач по выведению функционального многоборья на новый уровень, открытию новых клубов в регионах, выявлению молодых талантов в этом виде спорта, требующем силы, воли и выносливости, воспитанию новых чемпионов, организации национальных и международных соревнований, созданию достойных условий для спортсменов и дальнейшему укреплению материально-технической базы
-    </p>
-  </div>
-</div>
-
-<script>
-  // эффект при наведении на карточку
-  document.querySelectorAll('.news-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      card.style.transform = 'translateY(-6px)';
-      card.style.boxShadow = '0 8px 22px rgba(11,99,183,0.2)';
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'translateY(0)';
-      card.style.boxShadow = '0 4px 14px rgba(11,99,183,0.12)';
-    });
-  });
-</script>
-
-<script>
-  // выпадающее меню "..."
-  (function(){
-    const moreBtn = document.getElementById('moreBtn');
-    const moreMenu = document.getElementById('moreMenu');
-    const moreDropdown = document.getElementById('moreDropdown');
-    if(!moreBtn) return;
-    moreBtn.addEventListener('click', (e)=>{
-      e.stopPropagation();
-      moreMenu.style.display = moreMenu.style.display === 'block' ? 'none' : 'block';
-    });
-    document.addEventListener('click', (e)=>{
-      if(!moreDropdown.contains(e.target)) moreMenu.style.display = 'none';
-    });
-  })();
-</script>
-
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  <div><img src="/footer-logo.png" alt="Логотип Федерации" style="width:220px;border-radius:8px;"></div>
-      <nav style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a href="index.html" style="color:#fff;font-weight:600;">Главная</a>
-        <a href="about.html" style="color:#fff;font-weight:600;">О нас</a>
-        <a href="news.html" style="color:#fff;font-weight:600;">Новости</a>
-    <a href="media.html" style="color:#fff;font-weight:600;">Медиа</a>
-  <a href="index.html#docs" style="color:#fff;font-weight:600;">Документы</a>
-        <a href="competitions.html" style="color:#fff;font-weight:600;">Соревнования</a>
-      </nav>
-  <div class="footer-socials">
-    <a class="social-btn" href="https://instagram.com/fffk.20_23" target="_blank" rel="noopener"><img src="/instagramlogo.png" alt="Instagram"></a>
-    <a class="social-btn" href="https://t.me/fffkkz2023" target="_blank" rel="noopener"><img src="/telegramlogo.png" alt="Telegram"></a>
-    <a class="social-btn" href="https://www.facebook.com/share/1DFY4jSz3e/?mibextid=wwXIfr" target="_blank" rel="noopener"><img src="/facebooklogo.png" alt="Facebook"></a>
-    <a class="social-btn" href="https://www.tiktok.com/@fffk_funcsport?_t=ZM-90WDZha6UqB&_r=1" target="_blank" rel="noopener"><img src="/tiktoklogo.png" alt="TikTok"></a>
-    <a class="social-btn" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener"><img src="/youtubelogo.png" alt="YouTube"></a>
-  </div>
+    <!-- Текстовый блок -->
+    <div class="text-block">
+        <p>
+            Добро пожаловать на официальный сайт Федерации функционального многоборья Республики Казахстан! Мы - часть международного спортивного сообщества iF3 и развиваем функциональное многоборье в Казахстане как современное, динамичное и доступное каждому направление, объединяющее людей, стремящихся к силе, выносливости и здоровью.
+        </p>
     </div>
 
-    <div class="footer-bottom">
-      © 2025 Все права защищены — Казахстанская Федерация функционального многоборья
-    </div>
-  </footer>
-<script src="/lang.js"></script>
+    <!-- Миссия -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Наша миссия</h2>
+                <p>Популяризация и развитие функционального многоборья в Казахстане</p>
+            </div>
+            
+            <div class="mission-grid">
+                <div class="mission-card fade-in">
+                    <div class="mission-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Здоровая нация</h3>
+                    <p>Формируем культуру движения, силы и выносливости.
+Продвигаем ценности активного и осознанного образа жизни среди людей всех возрастов - от детей до ветеранов спорта.</p>
+                </div>
+                
+                <div class="mission-card fade-in">
+                    <div class="mission-icon">
+                        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" aria-label="Пять переплетённых белых колец" style="width: 60px; height: 30px;">
+                            <g stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#ffffff" stroke-width="24">
+                              <!-- Верхний ряд -->
+                              <circle cx="150" cy="100" r="70" />
+                              <circle cx="300" cy="100" r="70" />
+                              <circle cx="450" cy="100" r="70" />
+                              <!-- Нижний ряд -->
+                              <circle cx="225" cy="180" r="70" />
+                              <circle cx="375" cy="180" r="70" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h3>Олимпийское признание</h3>
+                    <p>Поддерживаем развитие спорта на международной арене и представляем Казахстан в составе мирового сообщества iF3.
+Работаем над признанием функционального многоборья как олимпийского вида спорта.</p>
+                </div>
+                
+                <div class="mission-card fade-in">
+                    <div class="mission-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Развитие и популяризация спорта</h3>
+                    <p>Создаём условия для роста спортсменов, проведения национальных и международных турниров, развития спортивных клубов и сообществ по всей стране.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- История -->
+    <section class="history-section">
+        <div class="container">
+            <div class="history-content">
+                <div class="history-text fade-in">
+                    <h2>Наша история</h2>
+                    <b>Функциональное многоборье</b><p> - современный, динамично развивающийся вид спорта, основанный на выполнении функциональных движений с весом собственного тела, свободными отягощениями и циклическими упражнениями.
+Комплексы выполняются непрерывно на время, что позволяет проверить силу, скорость, координацию, выносливость и устойчивость духа спортсмена.
+
+Главная идея функционального многоборья - всестороннее развитие человека, способного проявлять физическую силу, ментальную устойчивость и командный дух в любых условиях.
+Это спорт, который воспитывает характер и объединяет людей всех возрастов вокруг стремления к здоровью, дисциплине и личному росту.</p>
+<b>Создание Федерации</b>
+<p>Республиканское общественное объединение
+«Казахстанская федерация функционального многоборья»
+было основано 8 сентября 2023 года в городе Астана решением Учредительного съезда.</p>
+
+<b>Руководство Федерации:</b>
+	<p>Президент: Мещеряков Николай Ильич</p>
+	<p>Вице-президент, Генеральный директор сети КДЛ «Олимп» и Генеральный спонсор Федерации: Сулейменов Ерлан Мельсович</p>
+	<p>Вице-президент и Генеральный секретарь: Лукановский Валентин Владимирович</p>
+	<p>Вице-президент: Джантлеев Роман Алмасович</p>
+
+<b>Развитие и цели Федерации</b>
+
+<p>Несмотря на короткий срок существования, Федерация уверенно заявила о себе как о новой спортивной силе Казахстана.
+Основные направления деятельности:
+
+<p>1. Формирование здоровой нации
+
+Развитие культуры физической активности, укрепление здоровья и продвижение ценностей спорта среди всех возрастных групп.
+</p>
+<p>2. Олимпийское признание
+
+Стратегическая цель - включение функционального многоборья в программу Олимпийских игр и представление Казахстана на международной арене.
+</p>
+<p>3. Развитие и популяризация спорта
+
+Организация национальных и международных соревнований, укрепление партнёрских связей и создание сильного спортивного сообщества.
+</p>
+<b>Движение вперёд</b>
+
+<p>Федерация активно сотрудничает с Международной федерацией функционального фитнеса (iF3) и продолжает расширять своё присутствие на спортивной карте страны.
+Функциональное многоборье стремительно набирает популярность в Казахстане, объединяя спортсменов, активных людей и всех, кто выбирает движение, силу и здоровый образ жизни.
+</p>
+<b>Девиз Федерации:</b>
+
+<p>«Сила. Выносливость. Единство.»</p>
+                </div>
+                <div class="history-image fade-in">
+                    <img src="/logo.png" alt="История федерации">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <img src="/footer-logo.png" alt="Логотип Федерации" class="footer-logo">
+                </div>
+                
+                <nav class="footer-nav">
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О нас</a>
+                    <a href="news.html">Новости</a>
+                    <a href="media.html">Медиа</a>
+                    <a href="index.html#docs">Документы</a>
+                    <a href="competitions.html">Соревнования</a>
+                </nav>
+                
+                <div class="footer-socials">
+                    <a class="social-btn" href="https://instagram.com/fffk.20_23" target="_blank" rel="noopener">
+                        <img src="/instagramlogo.png" alt="Instagram">
+                    </a>
+                    <a class="social-btn" href="https://t.me/fffkkz2023" target="_blank" rel="noopener">
+                        <img src="/telegramlogo.png" alt="Telegram">
+                    </a>
+                    <a class="social-btn" href="https://www.facebook.com/share/1DFY4jSz3e/?mibextid=wwXIfr" target="_blank" rel="noopener">
+                        <img src="/facebooklogo.png" alt="Facebook">
+                    </a>
+                    <a class="social-btn" href="https://www.tiktok.com/@fffk_funcsport?_t=ZM-90WDZha6UqB&_r=1" target="_blank" rel="noopener">
+                        <img src="/tiktoklogo.png" alt="TikTok">
+                    </a>
+                    <a class="social-btn" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener">
+                        <img src="/youtubelogo.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                © 2025 Все права защищены — Казахстанская Федерация функционального многоборья
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Создание анимированного фона
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            
+            // Частицы (меньше для about страницы)
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 5 + 8) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Навигация
+        function initNavigation() {
+            const navbar = document.getElementById('navbar');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            
+            // Скролл эффект для навбара
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Мобильное меню
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.className = 'fas fa-times';
+                } else {
+                    icon.className = 'fas fa-bars';
+                }
+            });
+        }
+
+        // Анимации появления элементов
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Анимация счетчиков статистики
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.dataset.count);
+                        let current = 0;
+                        const increment = target / 100;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            counter.textContent = Math.floor(current);
+                        }, 20);
+                        observer.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            initNavigation();
+            initScrollAnimations();
+            animateCounters();
+        });
+    </script>
 </body>
 </html>
