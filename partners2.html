@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Казахстанская Федерация функционального многоборья</title>
-    <meta name="description" content="Казахстанская Федерация функционального многоборья - развитие спорта в Казахстане" />
+    <title>Партнёры - Казахстанская Федерация функционального многоборья</title>
+    <meta name="description" content="Партнёры Казахстанской Федерации функционального многоборья" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
     <style>
@@ -185,10 +185,10 @@
             cursor: pointer;
         }
 
-        /* Кнопки */
+        /* Современные кнопки */
         .btn {
-            padding: 15px 30px;
-            border-radius: 30px;
+            padding: 12px 24px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
@@ -196,52 +196,47 @@
             overflow: hidden;
             border: none;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 14px;
             display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .btn-primary {
             background: var(--gradient-1);
             color: white;
+            box-shadow: 0 4px 15px rgba(11, 99, 183, 0.3);
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(11, 99, 183, 0.4);
         }
 
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.6s ease;
+        .btn-primary:hover {
+            box-shadow: 0 8px 25px rgba(11, 99, 183, 0.4);
+            background: var(--gradient-2);
         }
 
-        .btn:hover::after {
-            width: 300px;
-            height: 300px;
+        .btn:hover::before {
+            left: 100%;
         }
 
-        /* Контент страницы */
-        .page-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+        .btn:active {
+            transform: translateY(-1px);
         }
 
-        /* Федерация блок - точно как в leadership */
+        /* Федерация блок */
         .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0;margin-top:80px}
         .federation-container{
           display:flex;align-items:center;justify-content:space-between;
@@ -254,7 +249,55 @@
         .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
         .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
 
-      
+        /* Страница партнеров */
+        .page-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin: 0 0 30px 0;
+            font-weight: 800;
+            background: var(--gradient-sport);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .partners-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .partners-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+
+        .partners-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+        }
+
+        .buttons-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         /* Футер */
         .footer {
             background: var(--primary-color);
@@ -329,16 +372,6 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
-        /* Скрытые элементы */
-        .hidden {
-            display: none !important;
-        }
-
-        /* Плавная прокрутка */
-        html {
-            scroll-behavior: smooth;
-        }
-
         /* Анимация появления элементов */
         .fade-in {
             opacity: 0;
@@ -388,29 +421,6 @@
             .mobile-menu-btn {
                 display: block;
             }
-            
-            .hero {
-                padding-top: 100px;
-                min-height: 80vh;
-            }
-            
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            
-            .hero p {
-                font-size: 1.1em;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 250px;
-                text-align: center;
-            }
 
             .federation-container {
                 flex-direction: column;
@@ -436,24 +446,6 @@
                 font-size: 16px;
             }
             
-            .section-title h2 {
-                font-size: 2.5em;
-            }
-            
-            .news-card,
-            .doc-card {
-                width: 320px;
-            }
-            
-            .nav-arrow {
-                display: none;
-            }
-            
-            .map-frame {
-                height: 400px;
-                margin: 0 10px;
-            }
-            
             .footer-content {
                 flex-direction: column;
                 text-align: center;
@@ -465,50 +457,21 @@
         }
 
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-            
-            .section-title h2 {
-                font-size: 2em;
-            }
-            
-            .news-card,
-            .doc-card {
-                width: 90vw;
-                margin: 0 10px;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-
             .page-content {
                 padding: 20px 10px;
             }
 
-            .news-photos {
-                flex-direction: column;
-                gap: 15px;
+            .partners-card {
+                padding: 25px;
             }
 
-            .news-photos img {
-                height: 250px !important;
-                min-width: auto !important;
-                max-width: none !important;
+            .page-title {
+                font-size: 28px;
             }
 
-            .news-card {
-                padding: 25px !important;
-                margin-top: 20px !important;
-            }
-
-            .news-card h3 {
-                font-size: 22px !important;
-            }
-
-            .news-card p {
-                font-size: 16px !important;
+            .btn {
+                width: 100%;
+                margin: 5px 0;
             }
         }
     </style>
@@ -544,9 +507,6 @@
         </div>
     </nav>
 
-        
-       
-
     <!-- Блок федерации -->
     <section class="federation-hero">
         <div class="federation-container">
@@ -562,64 +522,29 @@
         </div>
     </section>
 
-    <!-- Контент страницы -->
-    <div class="page-content">
-        <!-- Блок с фото -->
-        <div class="news-photos" style="display:flex;gap:20px;flex-wrap:wrap;margin:20px 0;">
-            <img src="/astana1.jpg" alt="Фото с турнира 1" style="flex:1;min-width:300px;max-width:580px;height:350px;border-radius:20px;box-shadow:0 8px 32px rgba(11,99,183,0.15);object-fit:cover;transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 16px 48px rgba(11,99,183,0.25)'" onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 8px 32px rgba(11,99,183,0.15)'">
-            <img src="/astana2.jpg" alt="Фото с турнира 2" style="flex:1;min-width:300px;max-width:580px;height:350px;border-radius:20px;box-shadow:0 8px 32px rgba(11,99,183,0.15);object-fit:cover;transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 16px 48px rgba(11,99,183,0.25)'" onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 8px 32px rgba(11,99,183,0.15)'">
-        </div>
-        
-        <!-- Карточка новости -->
-        <div class="news-card" style="
-            background:#fff;
-            border-radius:20px;
-            box-shadow:0 8px 32px rgba(11,99,183,0.12);
-            padding:40px;
-            margin-top:30px;
-            transition:transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(11, 99, 183, 0.1);
-        " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 16px 48px rgba(11,99,183,0.2)'" onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 8px 32px rgba(11,99,183,0.12)'">
-            <div class="news-card-inner" style="display:flex;flex-direction:column;gap:20px;">
-                <h3 style="font-size:28px;color:#0b2340;font-weight:800;margin:0;background:linear-gradient(135deg, #0b63b7 0%, #2b78b9 50%, #4facfe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
-                    Итоги соревнований Astana Open Cup 2025
-                </h3>
-                <p style="color:#666666;font-size:18px;line-height:1.8;margin:0;">
-                    7 мая в столице прошёл второй ежегодный открытый турнир по функциональному многоборью — Astana Open Cup 2025!
-                    В финальном отборе участвовали более 60 сильнейших атлетов из Казахстана, России, Кыргызстана и Узбекистана.
-                    Соревнования прошли благодаря полной поддержке генерального спонсора @kdlolymp — в лице Сулейменова Ерлана Мельсовича @suleimenov.yerlan
-                    Участники вышли на максимум — демонстрируя не только физическую мощь, но и стойкость духа.
-                    Каждая категория стала настоящей ареной силы, выносливости и высокого уровня подготовки.
-                    Поздравляем всех участников и победителей!
-                    Атлеты продемонстрировали высокий уровень подготовки, ещё раз подтвердив, что функциональное многоборье стремительно развивается как в организационном, так и в спортивном плане.
-                    Благодарим всех, кто стоял за созданием этого турнира —организаторов, партнёров и всю команду, вложившую в него силы и сердце.
+    <!-- Основной контент -->
+    <main class="page-content">
+        <section class="section fade-in">
+            <h1 class="page-title">Партнёры</h1>
+            
+            <div class="partners-card">
+                <p class="partners-text">
+                    Мы открыты для сотрудничества с компаниями и организациями, которые разделяют наши ценности развития функционального многоборья в Казахстане.
                 </p>
+                
+                <p class="partners-text">
+                    Если вы заинтересованы в партнёрстве с Федерацией функционального многоборья Республики Казахстан, свяжитесь с нами для обсуждения возможностей взаимовыгодного сотрудничества.
+                </p>
+                
+                <div class="buttons-container">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Вернуться на главную
+                    </a>
+                </div>
             </div>
-        </div>
-        
-        <!-- Кнопки -->
-        <div style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            flex-wrap:wrap;
-            margin-top:40px;
-            gap:20px;
-        ">
-            <a href="index.html" class="btn btn-primary">
-                <i class="fas fa-home" style="margin-right: 8px;"></i>
-                Вернуться на главную
-            </a>
-            <a href="https://circle21.events/embedEventLeaderboard?competitionId=62a4f4a2-0ade-490a-9af2-c75752ddf2cf&lightTheme=true&divisionId=c0900918-9934-46a6-97dd-0e41b0add206"
-               target="_blank"
-               rel="noopener"
-               class="btn btn-secondary">
-                <i class="fas fa-trophy" style="margin-right: 8px;"></i>
-                Посмотреть лидерборд
-            </a>
-        </div>
-    </div>
-
+        </section>
+    </main>
+    
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
@@ -663,10 +588,6 @@
     </footer>
 
     <script>
-        // Глобальные переменные
-        let currentNewsIndex = 0;
-        let currentDocsIndex = 0;
-
         // Создание анимированного фона
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
@@ -718,22 +639,6 @@
                     icon.className = 'fas fa-bars';
                 }
             });
-            
-            // Плавная прокрутка к секциям
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        navMenu.classList.remove('active');
-                        mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-                    }
-                });
-            });
         }
 
         // Анимации появления элементов
@@ -756,52 +661,11 @@
             });
         }
 
-              
         // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', () => {
             createParticles();
             initNavigation();
             initScrollAnimations();
-            
-            // Приветственное сообщение через 2 секунды
-            setTimeout(() => {
-                console.log('Добро пожаловать на страницу новостей! 📰');
-            }, 2000);
-        });
-
-        // Дополнительные touch события для мобильных устройств
-        let startX = 0;
-        let startY = 0;
-
-        document.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-        });
-
-        document.addEventListener('touchend', (e) => {
-            if (!startX || !startY) return;
-            
-            const endX = e.changedTouches[0].clientX;
-            const endY = e.changedTouches[0].clientY;
-            
-            const diffX = startX - endX;
-            const diffY = startY - endY;
-            
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                const target = e.target.closest('.news-grid, .docs-grid');
-                if (target) {
-                    if (diffX > 0) {
-                        // Свайп влево - прокрутка вправо
-                        target.scrollBy({ left: 420, behavior: 'smooth' });
-                    } else {
-                        // Свайп вправо - прокрутка влево
-                        target.scrollBy({ left: -420, behavior: 'smooth' });
-                    }
-                }
-            }
-            
-            startX = 0;
-            startY = 0;
         });
     </script>
 </body>
