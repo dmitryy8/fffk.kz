@@ -681,11 +681,6 @@
                 font-size: 2.5em;
             }
             
-            .news-card,
-            .doc-card {
-                width: 320px;
-            }
-            
             .nav-arrow {
                 display: none;
             }
@@ -706,6 +701,29 @@
 
             .federation-hero {
                 margin-top: 20px;
+            }
+
+            /* Вертикальное отображение новостей и документов на мобильных */
+            .news-grid,
+            .docs-grid {
+                flex-direction: column;
+                overflow-x: visible;
+                overflow-y: auto;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .news-card,
+            .doc-card {
+                width: 90%;
+                max-width: 350px;
+                flex-shrink: 0;
+                /* Убираем возможность смещения карточек */
+                touch-action: pan-y;
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
             }
         }
 
