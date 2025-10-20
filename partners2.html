@@ -228,6 +228,17 @@
             background: var(--gradient-2);
         }
 
+        .btn-wodfriends {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-wodfriends:hover {
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+        }
+
         .btn:hover::before {
             left: 100%;
         }
@@ -320,13 +331,11 @@
             width: 400px;
             height: auto;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(11, 99, 183, 0.2);
             transition: all 0.3s ease;
         }
 
         .partner-photo img:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(11, 99, 183, 0.3);
         }
 
         .partner-content {
@@ -676,9 +685,14 @@
                     </div>
                 </div>
             </div>
-            <a href="index.html" class="btn btn-primary">
-                        <i class="fas fa-home"></i> Вернуться на главную
-                    </a>
+            <div class="buttons-container">
+                <a href="https://wodfriends.kz" target="_blank" class="btn btn-wodfriends">
+                    <i class="fas fa-external-link-alt"></i> Перейти на сайт WODfriends
+                </a>
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Вернуться на главную
+                </a>
+            </div>
            
         </section>
     </main>
