@@ -351,7 +351,7 @@
             transform: translateY(0);
         }
 
-        /* Мобильная адаптация */
+         /* Мобильная адаптация */
         @media (max-width: 768px) {
             .navbar {
                 padding: 10px 0;
@@ -462,51 +462,176 @@
             .footer-nav {
                 justify-content: center;
             }
-        }
 
+            /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 0;
+            }
+           
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 50px;
+                transition: left 0.3s ease;
+                border-top: 1px solid var(--border-color);
+            }
+           
+            .nav-menu.active {
+                left: 0;
+            }
+            .nav-menu a {
+                color: var(--text-dark);
+                padding: 15px;
+                border-bottom: 1px solid var(--border-color);
+                width: 100%;
+                text-align: center;
+            }
+           
+            .mobile-menu-btn {
+                display: block;
+            }
+           
+            .hero {
+                padding-top: 100px;
+                min-height: 80vh;
+            }
+           
+            .hero h1 {
+                font-size: 2.5em;
+            }
+           
+            .hero p {
+                font-size: 1.1em;
+            }
+           
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+           
+            .btn {
+                width: 250px;
+                text-align: center;
+            }
+            .federation-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 25px;
+                border-radius: 20px;
+            }
+            .federation-logo img {
+                width: 200px;
+                margin-bottom: 20px;
+            }
+            .federation-text {
+                margin: 0;
+            }
+            .federation-text h1 {
+                font-size: 22px;
+            }
+            .federation-text h2 {
+                font-size: 16px;
+            }
+           
+            .section-title h2 {
+                font-size: 2.5em;
+            }
+           
+            .news-card,
+            .doc-card {
+                width: 320px;
+            }
+           
+            .nav-arrow {
+                display: none;
+            }
+           
+            .map-frame {
+                height: 400px;
+                margin: 0 10px;
+            }
+           
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+           
+            .footer-nav {
+                justify-content: center;
+            }
+        }
         @media (max-width: 480px) {
             .hero h1 {
                 font-size: 2em;
             }
-            
+           
             .section-title h2 {
                 font-size: 2em;
             }
-            
+           
             .news-card,
             .doc-card {
                 width: 90vw;
                 margin: 0 10px;
             }
-            
+           
             .btn {
                 width: 100%;
             }
-
             .page-content {
                 padding: 20px 10px;
             }
 
+            .federation-hero {
+                margin-top: 20px;
+            }
+
+        }
+
+            
+
+            .winners-card {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .winners-card h2 {
+                font-size: 20px;
+            }
+
+            .winners-card li {
+                font-size: 14px;
+                padding: 10px 0;
+            }
             .news-photos {
                 flex-direction: column;
                 gap: 15px;
             }
-
             .news-photos img {
-                height: 250px !important;
+                width: 100% !important;
+                height: auto !important;
                 min-width: auto !important;
-                max-width: none !important;
+                max-width: 100% !important;
+                min-height: 200px !important;
+                max-height: 300px !important;
+                object-fit: cover !important;
             }
-
             .news-card {
                 padding: 25px !important;
                 margin-top: 20px !important;
             }
-
             .news-card h3 {
                 font-size: 22px !important;
             }
-
             .news-card p {
                 font-size: 16px !important;
             }

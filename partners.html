@@ -375,6 +375,124 @@
             flex-wrap: wrap;
         }
 
+        /* Анимированная кнопка спонсора */
+        .sponsor-button-container {
+            margin-top: 25px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .btn-sponsor {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 50%, #4facfe 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.3);
+            border: 2px solid transparent;
+        }
+
+        .btn-sponsor::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-sponsor:hover::before {
+            left: 100%;
+        }
+
+        .btn-sponsor:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 16px 48px rgba(11, 99, 183, 0.4);
+            background: linear-gradient(135deg, #2b78b9 0%, #4facfe 50%, #0b63b7 100%);
+        }
+
+        .btn-sponsor:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .btn-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-icon {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-sponsor:hover .btn-icon {
+            transform: translateX(3px) rotate(15deg);
+        }
+
+        .btn-particles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+
+        .btn-sponsor:hover .btn-particles {
+            animation: particleExplosion 0.6s ease-out;
+        }
+
+        @keyframes particleExplosion {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(3);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(6);
+                opacity: 0;
+            }
+        }
+
+        /* Дополнительная анимация для кнопки */
+        .btn-sponsor::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.4s ease;
+        }
+
+        .btn-sponsor:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
         .page-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -592,6 +710,10 @@
             .footer-nav {
                 justify-content: center;
             }
+
+            .federation-hero {
+                margin-top: 20px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -647,6 +769,16 @@
                 width: 350px;
                 height: 265px;
             }
+
+            .sponsor-button-container {
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .btn-sponsor {
+                font-size: 14px;
+                padding: 14px 28px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -700,6 +832,13 @@
             .president-photos img {
                 width: 320px;
                 height: 240px;
+            }
+
+            .btn-sponsor {
+                font-size: 13px;
+                padding: 12px 24px;
+                width: 90%;
+                justify-content: center;
             }
         }
 
@@ -784,6 +923,14 @@
                         <p class="sponsor-text">
                             Независимая сеть клинико-диагностических лабораторий «ОЛИМП» ведёт свою деятельность на рынке лабораторной диагностики с января 2007 года. За годы успешной работы компания зарекомендовала себя как надёжный партнёр в сфере здравоохранения, обеспечивая миллионам жителей Казахстана точные и своевременные результаты исследований.
                         </p>
+                        
+                        <div class="sponsor-button-container">
+                            <a href="https://www.kdlolymp.kz/" target="_blank" rel="noopener" class="btn-sponsor">
+                                <span class="btn-text">Перейти на сайт КДЛ "ОЛИМП"</span>
+                                <span class="btn-icon"><i class="fas fa-external-link-alt"></i></span>
+                                <div class="btn-particles"></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -816,7 +963,13 @@
             
             <!-- Заключительный текст о партнерстве -->
             <div class="sponsor-text">
-                <p>Партнерство с КДЛ «ОЛИМП» отражает общие цели и миссию Федерации - укрепление здоровья нации, развитие спортивного потенциала страны и воспитание сильного, дисциплинированного и активного поколения Казахстана.</p>
+                <p>Федерация функционального многоборья Республики Казахстан и КДЛ «ОЛИМП» объединены общими ценностями - стремлением к здоровому, активному и сильному обществу. Компания, являясь признанным лидером в области лабораторной диагностики, последовательно реализует инициативы, направленные на развитие массового спорта, повышение культуры здоровья и укрепление благополучия казахстанцев.
+
+Разделяя ценности функционального многоборья - силу, выносливость, целеустремленность и стремление к самосовершенствованию, КДЛ «ОЛИМП» вносит весомый вклад в укрепление здоровья нации и формирование устойчивой культуры активного образа жизни в стране.
+
+В рамках стратегического партнерства КДЛ «ОЛИМП» выступает генеральным спонсором Федерации функционального многоборья Республики Казахстан, оказывая поддержку в организации соревнований, развитии спортивной инфраструктуры и популяризации функционального многоборья среди спортивного сообщества.
+
+Партнерство с КДЛ «ОЛИМП» отражает общие цели и миссию Федерации - укрепление здоровья нации, развитие спортивного потенциала страны и воспитание сильного, дисциплинированного и активного поколения Казахстана.</p>
             </div>
         </section>
     </main>

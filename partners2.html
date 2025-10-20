@@ -290,6 +290,74 @@
             margin-bottom: 30px;
         }
 
+        /* Стили для карточки партнёра */
+        .partner-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .partner-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+
+        .partner-content-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .partner-photo {
+            flex-shrink: 0;
+        }
+
+        .partner-photo img {
+            width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(11, 99, 183, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .partner-photo img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(11, 99, 183, 0.3);
+        }
+
+        .partner-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .partner-title {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin: 0 0 30px 0;
+            font-weight: 800;
+            background: var(--gradient-sport);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .partner-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 25px;
+            text-align: justify;
+            font-weight: 500;
+        }
+
+        .partner-text:last-of-type {
+            margin-bottom: 0;
+        }
+
         .buttons-container {
             margin-top: 30px;
             display: flex;
@@ -454,6 +522,28 @@
             .footer-nav {
                 justify-content: center;
             }
+
+            .partner-content-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .partner-content {
+                text-align: center;
+            }
+
+            .partner-photo img {
+                width: 350px;
+            }
+
+            .partner-text {
+                text-align: center;
+            }
+
+            .federation-hero {
+                margin-top: 20px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -472,6 +562,23 @@
             .btn {
                 width: 100%;
                 margin: 5px 0;
+            }
+
+            .partner-photo img {
+                width: 300px;
+            }
+
+            .partner-card {
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            .partner-title {
+                font-size: 24px;
+            }
+
+            .partner-text {
+                font-size: 15px;
             }
         }
     </style>
@@ -527,21 +634,39 @@
         <section class="section fade-in">
             <h1 class="page-title">Партнёры</h1>
             
-            <div class="partners-card">
-                <p class="partners-text">
-                    Мы открыты для сотрудничества с компаниями и организациями, которые разделяют наши ценности развития функционального многоборья в Казахстане.
-                </p>
-                
-                <p class="partners-text">
-                    Если вы заинтересованы в партнёрстве с Федерацией функционального многоборья Республики Казахстан, свяжитесь с нами для обсуждения возможностей взаимовыгодного сотрудничества.
-                </p>
-                
-                <div class="buttons-container">
-                    <a href="index.html" class="btn btn-primary">
-                        <i class="fas fa-home"></i> Вернуться на главную
-                    </a>
+            <!-- Карточка партнёра WOD Friends -->
+            <div class="partner-card">
+                <div class="partner-content-wrapper">
+                    <div class="partner-photo">
+                        <img src="/friends.png" alt="WOD Friends">
+                    </div>
+                    
+                    <div class="partner-content">
+                        <h2 class="partner-title">WOD Friends</h2>
+                        
+                        <p class="partner-text">
+                            WOD Friends - официальный партнёр Федерации функционального многоборья Казахстана.
+                            Компания специализируется на экипировке и аксессуарах для кроссфита, функционального тренинга и силовых видов спорта.
+                        </p>
+                        
+                        <p class="partner-text">
+                            Миссия WOD Friends - поддерживать развитие кроссфита и функционального фитнеса в Казахстане, помогая спортсменам любого уровня тренироваться в комфортных и безопасных условиях. Ассортимент компании включает профессиональную спортивную экипировку, одежду, аксессуары и спортивное оборудование, протестированное атлетами и тренерами.
+                        </p>
+                        
+                        <p class="partner-text">
+                            Благодаря WOD Friends участники соревнований Федерации получают доступ к качественной экипировке, а также призам и поддержке во время мероприятий.
+                        </p>
+                        
+                        <p class="partner-text">
+                            Представитель компании - Владимир Смирнов, энтузиаст и популяризатор функционального тренинга, который активно развивает бренд в Казахстане и странах СНГ.
+                        </p>
+                    </div>
                 </div>
             </div>
+            <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Вернуться на главную
+                    </a>
+           
         </section>
     </main>
     
