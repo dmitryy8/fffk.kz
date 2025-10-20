@@ -1,0 +1,96 @@
+/* Стили для переключателя языков */
+
+.language-switcher {
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+    order: 0;
+}
+
+.language-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: none;
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.language-dropdown.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.language-option {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-dark, #333);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-option:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.language-option.active {
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .language-switcher {
+        margin-left: 15px;
+        order: 3;
+    }
+
+    .language-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .language-dropdown {
+        right: 0;
+    }
+}
+
+/* Адаптация для nav-menu */
+.nav-menu {
+    order: 1;
+    margin-left: auto;
+}
+
+.mobile-menu-btn {
+    order: 2;
+}

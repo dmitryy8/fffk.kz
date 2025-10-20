@@ -146,6 +146,8 @@
             display: flex;
             list-style: none;
             gap: 30px;
+            order: 1;
+            margin-left: auto;
         }
 
         .nav-menu a {
@@ -183,6 +185,7 @@
             color: white;
             font-size: 1.5em;
             cursor: pointer;
+            order: 2;
         }
 
         /* Главная секция - Спортивная */
@@ -629,6 +632,20 @@
             .mobile-menu-btn {
                 display: block;
             }
+
+            .language-switcher {
+                margin-left: 15px;
+                order: 3;
+            }
+
+            .language-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .language-dropdown {
+                right: 0;
+            }
             
             .hero {
                 padding-top: 100px;
@@ -747,6 +764,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="/language.css">
 </head>
 <body>
     <!-- Анимированный фон -->
@@ -760,17 +778,28 @@
                 <div class="logo">
                     <img src="/footer-logo.png" alt="ФФМК" style="height: 40px; width: auto;">
                 </div>
+                <div class="language-switcher">
+                    <button class="language-btn" id="languageBtn">
+                        <span id="currentLang">RU</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option" data-lang="ru">🇷🇺 Русский</div>
+                        <div class="language-option" data-lang="kz">🇰🇿 Қазақша</div>
+                        <div class="language-option" data-lang="en">🇬🇧 English</div>
+                    </div>
+                </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="news.html">Новости</a></li>
-                    <li><a href="docs.html">Документы</a></li>
-                    <li><a href="leadership.html">Руководство</a></li>
-                    <li><a href="media.html">Медиа</a></li>
-                    <li><a href="competitions.html">Соревнования</a></li>
-                    <li><a href="partners.html">Генеральный спонсор</a></li>
-                    <li><a href="partners2.html">Партнёры</a></li>
-                    <li><a href="map.html">Карта залов</a></li>
+                    <li><a href="index.html" data-translate="nav_home" data-translate="nav_home">Главная</a></li>
+                    <li><a href="about.html" data-translate="nav_about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="news.html" data-translate="nav_news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="docs.html" data-translate="nav_docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="leadership.html" data-translate="nav_leadership" data-translate="nav_leadership">Руководство</a></li>
+                    <li><a href="media.html" data-translate="nav_media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="competitions.html" data-translate="nav_competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="partners.html" data-translate="nav_sponsor" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="partners2.html" data-translate="nav_partners" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="map.html" data-translate="nav_map" data-translate="nav_map">Карта залов</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -801,8 +830,8 @@
     <section id="news" class="news-section">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Последние новости</h2>
-                <p>Следите за главными событиями в мире функционального многоборья</p>
+                <h2 data-translate="news_title">Последние новости</h2>
+                <p data-translate="news_subtitle">Следите за главными событиями в мире функционального многоборья</p>
             </div>
             
             <div style="position: relative;">
@@ -858,8 +887,8 @@
     <section id="docs" class="section">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Документы</h2>
-                <p>Официальные документы и положения федерации</p>
+                <h2 data-translate="docs_title">Документы</h2>
+                <p data-translate="docs_subtitle">Официальные документы и положения федерации</p>
             </div>
             
             <div style="position: relative;">
@@ -929,12 +958,12 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="index.html">Главная</a>
-                    <a href="about.html">О нас</a>
-                    <a href="news.html">Новости</a>
-                    <a href="media.html">Медиа</a>
-                    <a href="docs.html">Документы</a>
-                    <a href="competitions.html">Соревнования</a>
+                    <a href="index.html" data-translate="nav_home" data-translate="nav_home">Главная</a>
+                    <a href="about.html" data-translate="nav_about" data-translate="nav_about">О нас</a>
+                    <a href="news.html" data-translate="nav_news" data-translate="nav_news">Новости</a>
+                    <a href="media.html" data-translate="nav_media" data-translate="nav_media">Медиа</a>
+                    <a href="docs.html" data-translate="nav_docs" data-translate="nav_docs">Документы</a>
+                    <a href="competitions.html" data-translate="nav_competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -956,7 +985,7 @@
                 </div>
             </div>
             
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-translate="footer_rights">
                 © 2025 Все права защищены — Казахстанская Федерация функционального многоборья
             </div>
         </div>
@@ -1139,5 +1168,6 @@
             startY = 0;
         });
     </script>
+    <script src="/language.js"></script>
 </body>
 </html>

@@ -637,6 +637,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="/language.css">
 </head>
 <body>
     <!-- Анимированный фон -->
@@ -650,17 +651,29 @@
                 <div class="logo">
                     <img src="/footer-logo.png" alt="ФФМК" style="height: 40px; width: auto;">
                 </div>
+                <div class="language-switcher">
+                    <button class="language-btn" id="languageBtn">
+                        <span id="currentLang">RU</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option" data-lang="ru">🇷🇺 Русский</div>
+                        <div class="language-option" data-lang="kz">🇰🇿 Қазақша</div>
+                        <div class="language-option" data-lang="en">🇬🇧 English</div>
+                    </div>
+                </div>
+
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="news.html">Новости</a></li>
-                    <li><a href="docs.html">Документы</a></li>
-                    <li><a href="leadership.html">Руководство</a></li>
-                    <li><a href="media.html">Медиа</a></li>
-                    <li><a href="competitions.html">Соревнования</a></li>
-                    <li><a href="partners.html">Генеральный спонсор</a></li>
-                    <li><a href="partners2.html">Партнёры</a></li>
-                    <li><a href="map.html">Карта залов</a></li>
+                    <li><a href="index.html" data-translate="nav_home">Главная</a></li>
+                    <li><a href="about.html" data-translate="nav_about">О нас</a></li>
+                    <li><a href="news.html" data-translate="nav_news">Новости</a></li>
+                    <li><a href="docs.html" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="leadership.html" data-translate="nav_leadership">Руководство</a></li>
+                    <li><a href="media.html" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="competitions.html" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="partners.html" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="partners2.html" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="map.html" data-translate="nav_map">Карта залов</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -754,12 +767,12 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="index.html">Главная</a>
-                    <a href="about.html">О нас</a>
-                    <a href="news.html">Новости</a>
-                    <a href="media.html">Медиа</a>
-                    <a href="docs.html">Документы</a>
-                    <a href="competitions.html">Соревнования</a>
+                    <a href="index.html" data-translate="nav_home">Главная</a>
+                    <a href="about.html" data-translate="nav_about">О нас</a>
+                    <a href="news.html" data-translate="nav_news">Новости</a>
+                    <a href="media.html" data-translate="nav_media">Медиа</a>
+                    <a href="docs.html" data-translate="nav_docs">Документы</a>
+                    <a href="competitions.html" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -781,7 +794,7 @@
                 </div>
             </div>
             
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-translate="footer_rights">
                 © 2025 Все права защищены — Казахстанская Федерация функционального многоборья
             </div>
         </div>
@@ -929,5 +942,6 @@
             startY = 0;
         });
     </script>
+    <script src="/language.js"></script>
 </body>
 </html>
