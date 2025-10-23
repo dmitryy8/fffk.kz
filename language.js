@@ -7,7 +7,7 @@ const translations = {
         nav_about: 'О нас',
         nav_news: 'Новости',
         nav_docs: 'Документы',
-        nav_leadership: 'Руководство',
+        nav_leadership: 'Наша команда',
         nav_media: 'Медиа',
         nav_competitions: 'Соревнования',
         nav_sponsor: 'Генеральный спонсор',
@@ -34,7 +34,7 @@ const translations = {
         about_subtitle: 'Мы развиваем функциональное многоборье в Казахстане',
         
         // Руководство
-        leadership_title: 'Руководство федерации',
+        leadership_title: 'Наша команда',
         leadership_subtitle: 'Наша команда профессионалов',
         
         // Медиа
@@ -56,7 +56,7 @@ const translations = {
         nav_about: 'Біз туралы',
         nav_news: 'Жаңалықтар',
         nav_docs: 'Құжаттар',
-        nav_leadership: 'Басшылық',
+        nav_leadership: 'Біздің команда',
         nav_media: 'Медиа',
         nav_competitions: 'Жарыстар',
         nav_sponsor: 'Бас демеуші',
@@ -83,7 +83,7 @@ const translations = {
         about_subtitle: 'Біз Қазақстанда функционалдық көпсайысты дамытамыз',
         
         // Руководство
-        leadership_title: 'Федерация басшылығы',
+        leadership_title: 'Біздің команда',
         leadership_subtitle: 'Біздің кәсіби команда',
         
         // Медиа
@@ -105,7 +105,7 @@ const translations = {
         nav_about: 'About',
         nav_news: 'News',
         nav_docs: 'Documents',
-        nav_leadership: 'Leadership',
+        nav_leadership: 'Our Team',
         nav_media: 'Media',
         nav_competitions: 'Competitions',
         nav_sponsor: 'General Sponsor',
@@ -132,7 +132,7 @@ const translations = {
         about_subtitle: 'We develop functional fitness in Kazakhstan',
         
         // Руководство
-        leadership_title: 'Federation Leadership',
+        leadership_title: 'Our Team',
         leadership_subtitle: 'Our team of professionals',
         
         // Медиа
