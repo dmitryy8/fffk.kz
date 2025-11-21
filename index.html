@@ -336,10 +336,12 @@
         .news-grid {
             display: flex;
             overflow-x: auto;
+            overflow-y: hidden;
             scroll-behavior: smooth;
             gap: 30px;
             padding-bottom: 20px;
             scrollbar-width: none;
+            overscroll-behavior-x: contain;
         }
 
         .news-grid::-webkit-scrollbar {
@@ -358,6 +360,8 @@
             box-shadow: var(--shadow);
             touch-action: pan-y;
             user-select: none;
+            display: flex;
+            flex-direction: column;
         }
 
         .news-card:hover {
@@ -374,6 +378,13 @@
 
         .news-content {
             padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .news-content .btn {
+            margin-top: auto;
         }
 
         .news-date {
@@ -431,10 +442,12 @@
         .docs-grid {
             display: flex;
             overflow-x: auto;
+            overflow-y: hidden;
             gap: 30px;
             padding-bottom: 20px;
             -ms-overflow-style: none;  /* IE и Edge */
             scrollbar-width: none;  /* Firefox */
+            overscroll-behavior-x: contain;
         }
 
         .docs-grid::-webkit-scrollbar {

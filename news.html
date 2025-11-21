@@ -337,6 +337,8 @@
             border: 1px solid var(--border-color);
             position: relative;
             box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
         }
 
         .news-card:nth-child(4) {
@@ -358,6 +360,13 @@
 
         .news-content {
             padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .news-content .btn {
+            margin-top: auto;
         }
 
         .news-date {
