@@ -811,6 +811,87 @@
             font-size: 18px;
         }
 
+        /* Блоки категорий с победителями */
+        .category-block {
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-sport);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .category-block:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-block:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(11, 99, 183, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .category-block h3 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-weight: 800;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .category-list li {
+            padding: 20px 15px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-list li:hover {
+            background: var(--accent-color);
+            padding-left: 20px;
+        }
+
+        .category-list li span {
+            display: block;
+            font-weight: 800;
+            font-size: 16px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .category-list li::before {
+            content: none;
+        }
+
         /* Адаптация для мобильных */
         @media (max-width: 768px) {
             .article-wrapper {
@@ -860,6 +941,23 @@
             .category-card .price {
                 font-size: 28px;
             }
+
+            .category-block {
+                padding: 25px 20px;
+            }
+
+            .category-block h3 {
+                font-size: 22px;
+            }
+
+            .category-list li {
+                padding: 15px 10px;
+                font-size: 14px;
+            }
+
+            .category-list li span {
+                font-size: 15px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -873,6 +971,19 @@
 
             .photo-grid-2 img {
                 height: 200px;
+            }
+
+            .category-block h3 {
+                font-size: 20px;
+            }
+
+            .category-list li {
+                padding: 12px 8px;
+                font-size: 13px;
+            }
+
+            .category-list li span {
+                font-size: 14px;
             }
         }
     </style>
@@ -1015,33 +1126,93 @@
                     <div class="category-block">
                         <h3>Junior Female</h3>
                         <ul class="category-list">
-                            <li><span>12 and Under</span> <span class="price">125 EUR</span></li>
-                            <li><span>13-14</span> <span class="price">125 EUR</span></li>
-                            <li><span>15-16</span> <span class="price">175 EUR</span></li>
-                            <li><span>17-18</span> <span class="price">175 EUR</span></li>
-                            <li><span>19-20</span> <span class="price">175 EUR</span></li>
-                            <li><span>21-22</span> <span class="price">175 EUR</span></li>
+                            <li><span>12 and Under</span> 
+                                1. LARA-MARIE ESSER (GERMANY)<br>
+                                2. REON T (UNITED KINGDOM)<br>
+                                3. LILI HAATAJA (FINLAND)
+                            </li>
+                            <li><span>13-14</span> 
+                                1. TATIARNA TOMLINSON (UNITED KINGDOM)<br>
+                                2. HILLA VANA (FINLAND)<br>
+                                3. LINNEA VANHAHEN (FINLAND)
+                            </li>
+                            <li><span>15-16</span> 
+                                1. KEIRA MCMANUS (UNITED KINGDOM)<br>
+                                2. SALMA KOSKELAIINEN (FINLAND)<br>
+                                3. KAISLA SAVOLAINEN (FINLAND)
+                            </li>
+                            <li><span>17-18</span> 
+                                1. TUVA BJERKELI (NORWAY)<br>
+                                2. JULIE DINGSTAN (NORWAY)<br>
+                                3. HANNAH WENDT (UNITED KINGDOM)
+                            </li>
+                            <li><span>19-20</span> 
+                                1. NINJA KOSKINEN (FINLAND)<br>
+                                2. MALIN AMUNDSEN (NORWAY)<br>
+                                3. HEGE NYQUIST (NORWAY)
+                            </li>
+                            <li><span>21-22</span> 
+                                1. MARIE ROGNSTAD (NORWAY)<br>
+                                2. ELINE PEDERSEN (NORWAY)<br>
+                                3. SOPHIA FREY (GERMANY)
+                            </li>
                         </ul>
                     </div>
 
                     <div class="category-block">
                         <h3>Junior Male</h3>
                         <ul class="category-list">
-                            <li><span>12 and Under</span> <span class="price">125 EUR</span></li>
-                            <li><span>13-14</span> <span class="price">125 EUR</span></li>
-                            <li><span>15-16</span> <span class="price">175 EUR</span></li>
-                            <li><span>17-18</span> <span class="price">175 EUR</span></li>
-                            <li><span>19-20</span> <span class="price">175 EUR</span></li>
-                            <li><span>21-22</span> <span class="price">175 EUR</span></li>
+                            <li><span>12 and Under</span> 
+                                1. MAC HOPKINS (UNITED KINGDOM)<br>
+                                2. OLIVIER GEISSMANN (CANADA)<br>
+                                3. FEDOR WESEMANN (GERMANY)
+                            </li>
+                            <li><span>13-14</span> 
+                                1. AKOS WOELFINGER (HUNGARY)<br>
+                                2. SIMON LERSCH (GERMANY)<br>
+                                3. RAPOLAS BAKELIS (LITHUANIA)
+                            </li>
+                            <li><span>15-16</span> 
+                                1. HARRISON KENNEDY (UNITED KINGDOM)<br>
+                                2. CARL HOGBERG (SWEDEN)<br>
+                                3. MINDAUGAS MICHAILOVAS (LITHUANIA)
+                            </li>
+                            <li><span>17-18</span> 
+                                1. MICK JONKMAN (NETHERLANDS)<br>
+                                2. LEWIN TUBUNA (UNITED KINGDOM)<br>
+                                3. LUCA SWEEKES (NETHERLANDS)
+                            </li>
+                            <li><span>19-20</span> 
+                                1. HUGO JANSSON (SWEDEN)<br>
+                                2. OLE BOSMAN (NETHERLANDS)<br>
+                                3. CHRISTIAN CATALDO (ITALY)
+                            </li>
+                            <li><span>21-22</span> 
+                                1. SIMON LIEDHOLM (SWEDEN)<br>
+                                2. PETER SZITA (HUNGARY)<br>
+                                3. ZSOLT HALMOSI (HUNGARY)
+                            </li>
                         </ul>
                     </div>
 
                     <div class="category-block">
                         <h3>Senior</h3>
                         <ul class="category-list">
-                            <li><span>Senior Open Female</span> <span class="price">175 EUR</span></li>
-                            <li><span>Senior Open Male</span> <span class="price">175 EUR</span></li>
-                            <li><span>Senior Team</span> <span class="price">300 EUR</span></li>
+                            <li><span>Senior Open Female</span> 
+                                1. MIRJAM VON ROHR (SWITZERLAND)<br>
+                                2. MATILDE YEN GARNES (NORWAY)<br>
+                                3. LEAH STOREN (NORWAY)
+                            </li>
+                            <li><span>Senior Open Male</span> 
+                                1. NOMMASO PIERI (ITALY)<br>
+                                2. VICTOR HELSINGHOF (NORWAY)<br>
+                                3. HENRIK NEGARD (NORWAY)
+                            </li>
+                            <li><span>Senior Team</span> 
+                                1. FRANCE<br>
+                                2. SWEDEN<br>
+                                3. DENMARK
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1049,6 +1220,16 @@
                 <div class="photo-grid-2">
                     <img src="/litva6.jpg" alt="IF3 Championship 2025">
                     <img src="/litva7.jpg" alt="IF3 Championship 2025">
+                </div>
+
+                <div class="article-section">
+                    <h2>Итоги по странам</h2>
+                    <p><strong>Топ-3 стран по количеству призовых мест:</strong></p>
+                    <ul>
+                        <li><strong>🥇 1 место:</strong> NORWAY и UNITED KINGDOM (по 8 медалей)</li>
+                        <li><strong>🥈 2 место:</strong> FINLAND (7 медалей)</li>
+                        <li><strong>🥉 3 место:</strong> SWEDEN и GERMANY (по 4 медали)</li>
+                    </ul>
                 </div>
             </div>
         </div>
