@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Казахстанская Федерация функционального многоборья</title>
-    <meta name="description" content="Казахстанская Федерация функционального многоборья - развитие спорта в Казахстане" />
+    <title>Наша команда — Казахстанская Федерация функционального многоборья</title>
+    <meta name="description" content="Руководство Казахстанской Федерации функционального многоборья - наша команда профессионалов" />
+    <meta name="keywords" content="КФФМ, команда, руководство, президент, вице-президент, федерация" />
+    <link rel="canonical" href="https://www.functionalfitness.kz/leadership">
+    
+    <!-- Open Graph / Facebook / VK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.functionalfitness.kz/leadership" />
+    <meta property="og:title" content="Наша команда — Казахстанская Федерация функционального многоборья" />
+    <meta property="og:description" content="Руководство и команда Казахстанской Федерации функционального многоборья" />
+    <meta property="og:image" content="https://www.functionalfitness.kz/logo.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="КФФМ - Казахстанская Федерация функционального многоборья" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Наша команда — КФФМ" />
+    <meta name="twitter:description" content="Руководство Федерации функционального многоборья Казахстана" />
+    <meta name="twitter:image" content="https://www.functionalfitness.kz/logo.png" />
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
     <style>
@@ -462,6 +480,21 @@
 
         /* Мобильная адаптация */
         @media (max-width: 768px) {
+            /* Отключение тяжелых анимаций для старых телефонов */
+            .particles,
+            .neural-network {
+                display: none !important;
+            }
+
+            body {
+                background: #ffffff;
+            }
+
+            .fade-in {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
             .navbar {
                 padding: 10px 0;
             }
@@ -792,14 +825,19 @@
         // Глобальные переменные
         let currentNewsIndex = 0;
         let currentDocsIndex = 0;
+        // Определение мобильного устройства
+        const isMobile = window.innerWidth <= 768;
 
         // Создание анимированного фона
         function createParticles() {
+            // Отключение анимаций на мобильных устройствах для производительности
+            if (isMobile) return;
+
             const particlesContainer = document.getElementById('particles');
             const neuralNetwork = document.getElementById('neuralNetwork');
             
-            // Частицы
-            for (let i = 0; i < 50; i++) {
+            // Частицы - меньше для производительности
+            for (let i = 0; i < 30; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
@@ -933,6 +971,6 @@
             startY = 0;
         });
     </script>
-    <script src="/language.js"></script>
+    <script src="/language.js" defer></script>
 </body>
 </html>

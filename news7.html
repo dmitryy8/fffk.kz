@@ -3,8 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Казахстанская Федерация функционального многоборья</title>
-    <meta name="description" content="Казахстанская Федерация функционального многоборья - развитие спорта в Казахстане" />
+    
+    
+    <title>Игры функционального фитнеса — Казахстанская Федерация функционального многоборья</title>
+    <meta name="description" content="Игры функционального фитнеса - крупнейшие соревнования года" />
+    <meta name="keywords" content="КФФМ, игры, функциональный фитнес, соревнования, спорт" />
+    <link rel="canonical" href="https://www.functionalfitness.kz/news7" />
+    
+    <!-- Open Graph / Facebook / VK -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.functionalfitness.kz/news7" />
+    <meta property="og:title" content="Игры функционального фитнеса" />
+    <meta property="og:description" content="Игры функционального фитнеса - крупнейшие соревнования года" />
+    <meta property="og:image" content="https://www.functionalfitness.kz/game1.jpg" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="КФФМ - Казахстанская Федерация функционального многоборья" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Игры функционального фитнеса" />
+    <meta name="twitter:description" content="Игры функционального фитнеса - крупнейшие соревнования года" />
+    <meta name="twitter:image" content="https://www.functionalfitness.kz/game1.jpg" />
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
     <link rel="icon" type="image/png" href="/footer-logo.png">
@@ -413,6 +433,22 @@
 
         /* Мобильная адаптация */
         @media (max-width: 768px) {
+            /* Отключение тяжелых анимаций для старых телефонов */
+            .particles,
+            .neural-network {
+                display: none !important;
+            }
+
+            body {
+                background: #ffffff;
+            }
+
+            .fade-in {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            @media (max-width: 768px) {
             .navbar {
                 padding: 10px 0;
             }
@@ -598,7 +634,7 @@
         <div class="container">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="/logoinsite.png" alt="ФФМК" style="height: 40px; width: auto;">
+                    <img src="/logoinsite.png" alt="ФФМК" style="height: 40px; width: auto;" loading="lazy">
                 </div>
                 <div class="language-switcher">
                     <button class="language-btn" id="languageBtn">
@@ -636,7 +672,7 @@
     <!-- Блок федерации -->
     <section class="federation-hero">
         <div class="federation-container">
-            <div class="federation-logo left"><img src="/logo.png" alt=""></div>
+            <div class="federation-logo left"><img src="/logo.png" alt="" loading="lazy"></div>
             <div class="federation-text">
                 <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
                 ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
@@ -644,7 +680,7 @@
                 <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
                 <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
             </div>
-            <div class="federation-logo right"><img src="/sponsor.png" alt=""></div>
+            <div class="federation-logo right"><img src="/sponsor.png" alt="" loading="lazy"></div>
         </div>
     </section>
 
@@ -733,7 +769,7 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <img src="/logoinsite.png" alt="Логотип Федерации" class="footer-logo">
+                    <img src="/logoinsite.png" alt="Логотип Федерации" class="footer-logo" loading="lazy">
                 </div>
                 
                 <nav class="footer-nav">
@@ -747,19 +783,19 @@
                 
                 <div class="footer-socials">
                     <a class="social-btn" href="https://instagram.com/fffk.20_23" target="_blank" rel="noopener">
-                        <img src="/instagramlogo.png" alt="Instagram">
+                        <img src="/instagramlogo.png" alt="Instagram" loading="lazy">
                     </a>
                     <a class="social-btn" href="https://t.me/fffkkz2023" target="_blank" rel="noopener">
-                        <img src="/telegramlogo.png" alt="Telegram">
+                        <img src="/telegramlogo.png" alt="Telegram" loading="lazy">
                     </a>
                     <a class="social-btn" href="https://www.facebook.com/share/1DFY4jSz3e/?mibextid=wwXIfr" target="_blank" rel="noopener">
-                        <img src="/facebooklogo.png" alt="Facebook">
+                        <img src="/facebooklogo.png" alt="Facebook" loading="lazy">
                     </a>
                     <a class="social-btn" href="https://www.tiktok.com/@fffk_funcsport?_t=ZM-90WDZha6UqB&_r=1" target="_blank" rel="noopener">
-                        <img src="/tiktoklogo.png" alt="TikTok">
+                        <img src="/tiktoklogo.png" alt="TikTok" loading="lazy">
                     </a>
                     <a class="social-btn" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener">
-                        <img src="/youtubelogo.png" alt="YouTube">
+                        <img src="/youtubelogo.png" alt="YouTube" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -776,12 +812,19 @@
         let currentDocsIndex = 0;
 
         // Создание анимированного фона
+        // Определение мобильного устройства
+        const isMobile = window.innerWidth <= 768;
+
         function createParticles() {
+            // Отключение анимаций на мобильных устройствах для производительности
+            if (isMobile) return;
+
+
             const particlesContainer = document.getElementById('particles');
             const neuralNetwork = document.getElementById('neuralNetwork');
             
             // Частицы
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 30; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
@@ -872,6 +915,6 @@
             initScrollAnimations();
         });
     </script>
-    <script src="/language.js"></script>
+    <script src="/language.js" defer></script>
 </body>
 </html>

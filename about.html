@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас — Казахстанская Федерация функционального многоборья</title>
     <meta name="description" content="О Казахстанской Федерации функционального многоборья - наша миссия и цели" />
+    <meta name="keywords" content="КФФМ, о федерации, функциональный фитнес, миссия, цели, развитие спорта" />
     <link rel="canonical" href="https://www.functionalfitness.kz/about">
+    
+    <!-- Open Graph / Facebook / VK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.functionalfitness.kz/about" />
+    <meta property="og:title" content="О нас — Казахстанская Федерация функционального многоборья" />
+    <meta property="og:description" content="Миссия и цели Казахстанской Федерации функционального многоборья. Развитие функционального фитнеса в стране." />
+    <meta property="og:image" content="https://www.functionalfitness.kz/logo.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="КФФМ - Казахстанская Федерация функционального многоборья" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="О нас — Казахстанская Федерация функционального многоборья" />
+    <meta name="twitter:description" content="Миссия и цели КФФМ" />
+    <meta name="twitter:image" content="https://www.functionalfitness.kz/logo.png" />
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
     <style>
@@ -532,6 +549,21 @@
 
         /* Мобильная адаптация */
         @media (max-width: 768px) {
+            /* Отключение тяжелых анимаций для старых телефонов */
+            .particles,
+            .neural-network {
+                display: none !important;
+            }
+
+            body {
+                background: #ffffff;
+            }
+
+            .fade-in {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
             .navbar {
                 padding: 10px 0;
             }
@@ -849,8 +881,14 @@
     </footer>
 
     <script>
+        // Определение мобильного устройства
+        const isMobile = window.innerWidth <= 768;
+
         // Создание анимированного фона
         function createParticles() {
+            // Отключение анимаций на мобильных устройствах для производительности
+            if (isMobile) return;
+
             const particlesContainer = document.getElementById('particles');
             
             // Частицы (меньше для about страницы)
@@ -945,6 +983,6 @@
             animateCounters();
         });
     </script>
-    <script src="/language.js"></script>
+    <script src="/language.js" defer></script>
 </body>
 </html>
