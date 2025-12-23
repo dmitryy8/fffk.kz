@@ -2,9 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Казахстанская Федерация функционального многоборья</title>
-    <meta name="description" content="Казахстанская Федерация функционального многоборья - развитие спорта в Казахстане" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Чемпионат мира IF3 2025 Литва — Казахстанская Федерация функционального многоборья</title>
+    <meta name="description" content="Чемпионат мира IF3 по функциональному фитнесу 2025 в Вильнюсе, Литва. Результаты, победители, итоги по странам." />
+    <link rel="canonical" href="https://www.functionalfitness.kz/news8" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
     <link rel="icon" type="image/png" href="/footer-logo.png">
@@ -58,6 +59,13 @@
             height: 100%;
             pointer-events: none;
             z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .particles,
+            .neural-network {
+                display: none !important;
+            }
         }
 
         .particle {
@@ -894,14 +902,25 @@
 
         /* Адаптация для мобильных */
         @media (max-width: 768px) {
+            body {
+                background: #ffffff;
+            }
+
+            .article-content {
+                background: #ffffff;
+            }
+
             .article-wrapper {
-                padding: 30px 20px;
-                border-radius: 15px;
+                padding: 20px 15px;
+                border-radius: 10px;
+                box-shadow: none;
+                border: none;
             }
 
             .article-title {
-                font-size: 32px;
-                margin-bottom: 30px;
+                font-size: 28px;
+                margin-bottom: 25px;
+                animation: none;
             }
 
             .article-section h2 {
@@ -921,8 +940,33 @@
                 margin: 30px 0;
             }
 
+            .photo-grid-2 {
+                animation: none;
+            }
+
             .photo-grid-2 img {
                 height: 250px;
+                animation: none;
+                transition: none;
+            }
+
+            .photo-grid-2 img:hover {
+                transform: none;
+                box-shadow: 0 8px 30px rgba(11, 99, 183, 0.15);
+            }
+
+            .category-block {
+                animation: none;
+            }
+
+            .category-block:hover {
+                transform: none;
+                box-shadow: 0 4px 15px rgba(11, 99, 183, 0.1);
+            }
+
+            .fade-in {
+                opacity: 1 !important;
+                transform: none !important;
             }
 
             .categories-grid {
@@ -961,16 +1005,40 @@
         }
 
         @media (max-width: 480px) {
+            .article-wrapper {
+                padding: 15px 10px;
+                background: #ffffff;
+            }
+
             .article-title {
-                font-size: 26px;
+                font-size: 22px;
+                animation: none;
+                background: var(--primary-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .article-section {
+                animation: none;
             }
 
             .article-section h2 {
-                font-size: 20px;
+                font-size: 18px;
+                padding-left: 12px;
+            }
+
+            .article-section h2::before {
+                width: 3px;
+            }
+
+            .article-section p {
+                text-align: left;
             }
 
             .photo-grid-2 img {
-                height: 200px;
+                height: auto;
+                min-height: 200px;
+                max-height: 300px;
             }
 
             .category-block h3 {
@@ -1277,17 +1345,24 @@
     </footer>
 
     <script>
+        // Определение мобильного устройства
+        const isMobile = window.innerWidth <= 768;
+        
         // Глобальные переменные
         let currentNewsIndex = 0;
         let currentDocsIndex = 0;
 
-        // Создание анимированного фона
+        // Создание анимированного фона (только для десктопа)
         function createParticles() {
+            if (isMobile) return; // Пропускаем на мобильных
+            
             const particlesContainer = document.getElementById('particles');
             const neuralNetwork = document.getElementById('neuralNetwork');
             
+            if (!particlesContainer || !neuralNetwork) return;
+            
             // Частицы
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 30; i++) { // Уменьшено с 50 до 30
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
@@ -1297,7 +1372,7 @@
             }
             
             // Нейронная сеть
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 10; i++) { // Уменьшено с 20 до 10
                 const neuron = document.createElement('div');
                 neuron.className = 'neuron';
                 neuron.style.left = Math.random() * 100 + '%';
@@ -1350,8 +1425,16 @@
             });
         }
 
-        // Анимации появления элементов
+        // Анимации появления элементов (упрощенная версия для мобильных)
         function initScrollAnimations() {
+            if (isMobile) {
+                // На мобильных просто показываем все элементы сразу
+                document.querySelectorAll('.fade-in').forEach(el => {
+                    el.classList.add('visible');
+                });
+                return;
+            }
+            
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -1373,7 +1456,9 @@
               
         // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', () => {
-            createParticles();
+            if (!isMobile) {
+                createParticles();
+            }
             initNavigation();
             initScrollAnimations();
         });
