@@ -152,6 +152,7 @@
   /* FEDERATION BLOCK: Сохраняем десктопную версию (НЕ расплющиваем) */
   .federation-hero {
     padding: 20px 0 !important;
+    margin-top: 20px !important; /* Короткий отступ от шапки на мобильных */
   }
   
   .federation-container {
