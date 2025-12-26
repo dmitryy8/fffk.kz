@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preconnect для ускорения загрузки -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://maps.yastatic.net" crossorigin>
+    <link rel="preconnect" href="https://mc.yandex.ru" crossorigin>
+    
     <title>КФФМ — Казахстанская Федерация функционального многоборья | Functional Fitness Kazakhstan</title>
     <meta name="description" content="КФФМ — официальная Казахстанская Федерация функционального многоборья (Functional Fitness Kazakhstan). Новости, соревнования, документы, руководство и партнёры федерации функционального фитнеса в Казахстане." />
     <meta name="keywords" content="КФФМ, функциональный фитнес, функциональное многоборье, Казахстан, спорт, федерация, IF3" />
@@ -76,7 +82,8 @@
     }
     </script>
     
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="/mobile.css" media="(max-width:768px)">
     <style>
         * {
@@ -912,7 +919,7 @@
                     <li><a href="/partners2" data-translate="nav_partners" data-translate="nav_partners">Партнёры</a></li>
                     <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню навигации">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -934,7 +941,7 @@
     <!-- Блок федерации -->
     <section class="federation-hero" style="margin-top: 0;">
         <div class="federation-container">
-            <div class="federation-logo left"><img src="/logo.png" alt="КФФМ логотип" loading="lazy"></div>
+            <div class="federation-logo left"><img src="/logo.png" alt="КФФМ логотип" width="264" height="205" loading="lazy"></div>
             <div class="federation-text">
                 <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
                 ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
@@ -942,7 +949,7 @@
                 <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
                 <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
             </div>
-            <div class="federation-logo right"><img src="/sponsor.png" alt="Спонсор КФФМ" loading="lazy"></div>
+            <div class="federation-logo right"><img src="/sponsor.png" alt="Спонсор КФФМ" width="264" height="187" loading="lazy"></div>
         </div>
     </section>
 
