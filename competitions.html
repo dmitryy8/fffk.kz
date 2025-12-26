@@ -350,8 +350,8 @@
         .news-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, auto);
             gap: 40px;
+            justify-items: center;
         }
 
         .news-card {
@@ -362,11 +362,7 @@
             border: 1px solid var(--border-color);
             position: relative;
             box-shadow: var(--shadow);
-        }
-
-        .news-card:nth-child(4) {
-            grid-row: 2;
-            grid-column: 1;
+            width: 100%;
         }
 
         .news-card:hover {
@@ -613,12 +609,6 @@
             
             .news-container {
                 grid-template-columns: 1fr;
-                grid-template-rows: auto;
-            }
-            
-            .news-card:nth-child(4) {
-                grid-row: auto;
-                grid-column: auto;
             }
             
             .nav-arrow {
