@@ -179,10 +179,13 @@
   
   .federation-logo {
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding-top: 8px; /* Логотипы чуть ниже */
   }
   
   .federation-logo img {
-    width: 80px !important;
+    width: 95px !important; /* Увеличено с 80px */
     height: auto !important;
     object-fit: contain !important;
   }
