@@ -1,4 +1,148 @@
-// Расширенная универсальная система переключения языков
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Расширенная система переводов - анализ и добавление data-translate атрибутов
+"""
+
+import re
+from pathlib import Path
+from collections import defaultdict
+
+# Тексты для перевода по страницам (собираем все уникальные тексты)
+texts_to_translate = {
+    # Общие элементы
+    'hero_welcome': {
+        'ru': 'Добро пожаловать на наш сайт!',
+        'kz': 'Біздің сайтқа қош келдіңіз!',
+        'en': 'Welcome to our website!'
+    },
+    'hero_description': {
+        'ru': 'Наша организация объединяет спортсменов со всего Казахстана. Мы развиваем функциональное многоборье и организуем соревнования мирового уровня.',
+        'kz': 'Біздің ұйым бүкіл Қазақстаннан спортшыларды біріктіреді. Біз функционалдық көпсайысты дамытамыз және әлемдік деңгейдегі жарыстар ұйымдастырамыз.',
+        'en': 'Our organization unites athletes from all over Kazakhstan. We develop functional fitness and organize world-class competitions.'
+    },
+    
+    # Новости
+    'news_winter_cup': {
+        'ru': 'Зимний Кубок 2025',
+        'kz': 'Қысқы Кубок 2025',
+        'en': 'Winter Cup 2025'
+    },
+    'news_crossfit_challenge': {
+        'ru': 'CrossFit Challenge 2025',
+        'kz': 'CrossFit Challenge 2025',
+        'en': 'CrossFit Challenge 2025'
+    },
+    'news_summer_games': {
+        'ru': 'Summer Games 2025',
+        'kz': 'Summer Games 2025',
+        'en': 'Summer Games 2025'
+    },
+    
+    # Документы
+    'doc_championship_rules': {
+        'ru': 'Положение чемпионата Казахстана',
+        'kz': 'Қазақстан чемпионаты ережесі',
+        'en': 'Kazakhstan Championship Regulations'
+    },
+    'doc_calendar': {
+        'ru': 'Календарь',
+        'kz': 'Күнтізбе',
+        'en': 'Calendar'
+    },
+    'doc_standards': {
+        'ru': 'Стандарты',
+        'kz': 'Стандарттар',
+        'en': 'Standards'
+    },
+    'doc_antidoping': {
+        'ru': 'Антидопинг',
+        'kz': 'Антидопинг',
+        'en': 'Anti-Doping'
+    },
+    'doc_constitution': {
+        'ru': 'Устав',
+        'kz': 'Жарғы',
+        'en': 'Constitution'
+    },
+    
+    # Руководство
+    'leader_president': {
+        'ru': 'Президент Казахстанской Федерации функционального многоборья.',
+        'kz': 'Қазақстандық функционалдық көпсайыс федерациясының президенті.',
+        'en': 'President of the Kazakhstan Functional Fitness Federation.'
+    },
+    'leader_vicepresident_sponsor': {
+        'ru': 'вице-президент Казахстанской Федерации функционального многоборья, генеральный спонсор, директор КДЛ "Олимп".',
+        'kz': 'Қазақстандық функционалдық көпсайыс федерациясының вице-президенті, бас демеуші, КДЛ "Олимп" директоры.',
+        'en': 'Vice President of the Kazakhstan Functional Fitness Federation, General Sponsor, Director of CDL "Olymp".'
+    },
+    'leader_vicepresident_secretary': {
+        'ru': 'генеральный секретарь, вице-президент Казахстанской Федерации функционального многоборья.',
+        'kz': 'бас хатшы, Қазақстандық функционалдық көпсайыс федерациясының вице-президенті.',
+        'en': 'General Secretary, Vice President of the Kazakhstan Functional Fitness Federation.'
+    },
+    'leader_vicepresident': {
+        'ru': 'вице-президент Казахстанской Федерации функционального многоборья.',
+        'kz': 'Қазақстандық функционалдық көпсайыс федерациясының вице-президенті.',
+        'en': 'Vice President of the Kazakhstan Functional Fitness Federation.'
+    },
+    
+    # Карта
+    'map_description': {
+        'ru': 'Найдите ближайший зал для тренировок по функциональному многоборью в вашем городе',
+        'kz': 'Сіздің қалаңызда функционалдық көпсайыс бойынша жаттығуға ең жақын залды табыңыз',
+        'en': 'Find the nearest functional fitness gym in your city'
+    },
+    
+    # О нас
+    'about_mission_title': {
+        'ru': 'Наша миссия',
+        'kz': 'Біздің миссиямыз',
+        'en': 'Our Mission'
+    },
+    'about_mission_text': {
+        'ru': 'Развитие функционального многоборья в Казахстане, популяризация здорового образа жизни и подготовка спортсменов мирового уровня.',
+        'kz': 'Қазақстанда функционалдық көпсайысты дамыту, салауатты өмір салтын насихаттау және әлемдік деңгейдегі спортшыларды даярлау.',
+        'en': 'Development of functional fitness in Kazakhstan, promotion of a healthy lifestyle and training of world-class athletes.'
+    },
+    'about_values_title': {
+        'ru': 'Наши ценности',
+        'kz': 'Біздің құндылықтарымыз',
+        'en': 'Our Values'
+    },
+    
+    # Федерации
+    'nav_federations': {
+        'ru': 'Федерации',
+        'kz': 'Федерациялар',
+        'en': 'Federations'
+    },
+    'federations_title': {
+        'ru': 'Международные федерации',
+        'kz': 'Халықаралық федерациялар',
+        'en': 'International Federations'
+    },
+    
+    # Даты
+    'date_format': {
+        'ru': 'дд.мм.гггг',
+        'kz': 'кк.аа.жжжж',
+        'en': 'dd.mm.yyyy'
+    },
+    
+    # Footer дополнительная информация
+    'footer_info': {
+        'ru': 'Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу (functional fitness) и функциональному многоборью в Республике Казахстан. Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.',
+        'kz': '«Қазақстандық функционалдық көпсайыс федерациясы» республикалық қоғамдық бірлестігі (ҚФКФ, Functional Fitness Kazakhstan) — Қазақстан Республикасындағы функционалдық фитнес (functional fitness) және функционалдық көпсайыс бойынша ресми басқарушы орган. Біз спортты дамытамыз, жарыстар ұйымдастырамыз және бүкіл Қазақстан бойынша спортшыларды біріктіреміз.',
+        'en': 'Republican Public Association "Kazakhstan Functional Fitness Federation" (KFFF, Functional Fitness Kazakhstan) is the official governing body for functional fitness and functional pentathlon in the Republic of Kazakhstan. We develop sport, organize competitions and unite athletes throughout Kazakhstan.'
+    }
+}
+
+def generate_extended_translations():
+    """Генерирует расширенный файл переводов"""
+    
+    js_content = '''// Расширенная универсальная система переключения языков
 
 const translations = {
     ru: {
@@ -18,7 +162,6 @@ const translations = {
         // ===== ГЛАВНАЯ СТРАНИЦА =====
         hero_welcome: 'Добро пожаловать на наш сайт!',
         hero_description: 'Наша организация объединяет спортсменов со всего Казахстана. Мы развиваем функциональное многоборье и организуем соревнования мирового уровня.',
-        hero_description_full: 'Наша организация объединяет спортсменов со всего Казахстана. Мы развиваем функциональный фитнес и проводим соревнования по функциональному многоборью. Присоединяйтесь к нашему спортивному сообществу!',
         
         news_title: 'Последние новости',
         news_subtitle: 'Следите за главными событиями в мире функционального многоборья',
@@ -96,7 +239,6 @@ const translations = {
         // ===== ГЛАВНАЯ СТРАНИЦА =====
         hero_welcome: 'Біздің сайтқа қош келдіңіз!',
         hero_description: 'Біздің ұйым бүкіл Қазақстаннан спортшыларды біріктіреді. Біз функционалдық көпсайысты дамытамыз және әлемдік деңгейдегі жарыстар ұйымдастырамыз.',
-        hero_description_full: 'Біздің ұйым бүкіл Қазақстаннан спортшыларды біріктіреді. Біз функционалдық фитнесті дамытамыз және функционалдық көпсайыс бойынша жарыстар өткіземіз. Біздің спорттық қауымдастығымызға қосылыңыз!',
         
         news_title: 'Соңғы жаңалықтар',
         news_subtitle: 'Функционалдық көпсайыс әлеміндегі басты оқиғаларды қадағалаңыз',
@@ -174,7 +316,6 @@ const translations = {
         // ===== HOME PAGE =====
         hero_welcome: 'Welcome to our website!',
         hero_description: 'Our organization unites athletes from all over Kazakhstan. We develop functional fitness and organize world-class competitions.',
-        hero_description_full: 'Our organization unites athletes from all over Kazakhstan. We develop functional fitness and conduct functional pentathlon competitions. Join our sports community!',
         
         news_title: 'Latest News',
         news_subtitle: 'Stay updated with the main events in the world of functional fitness',
@@ -300,3 +441,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'ru';
     translatePage(savedLang);
 });
+'''
+    
+    with open('language.js', 'w', encoding='utf-8') as f:
+        f.write(js_content)
+    
+    print("Расширенный файл переводов создан: language.js")
+
+if __name__ == "__main__":
+    generate_extended_translations()
