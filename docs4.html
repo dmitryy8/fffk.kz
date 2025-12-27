@@ -418,8 +418,8 @@
         /* Анимация появления элементов */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
         }
 
         .fade-in.visible {
@@ -817,8 +817,8 @@
         // Анимации появления элементов
         function initScrollAnimations() {
             const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+                threshold: 0.05,
+                rootMargin: '0px 0px 200px 0px'
             };
             
             const observer = new IntersectionObserver((entries) => {
