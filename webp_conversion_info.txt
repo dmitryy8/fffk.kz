@@ -1,0 +1,26 @@
+Конвертированные файлы:
+
+Оригинал: imageskz/kz.jpg
+WebP: imageskz\kz.webp
+Размеры: 4758×3173
+
+Оригинал: kalen.jpg
+WebP: kalen.webp
+Размеры: 8000×5267
+
+Оригинал: ruls.jpg
+WebP: ruls.webp
+Размеры: 2548×1713
+
+Оригинал: pologenie.jpg
+WebP: pologenie.webp
+Размеры: 2480×2480
+
+Оригинал: facebooklogo.png
+WebP: facebooklogo.webp
+Размеры: 1563×1563
+
+Оригинал: instagramlogo.png
+WebP: instagramlogo.webp
+Размеры: 1563×1563
+
