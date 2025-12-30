@@ -341,7 +341,6 @@
                 transform: none !important;
             }
 
-            @media (max-width: 768px) {
             .navbar {
                 padding: 10px 0;
             }
@@ -481,9 +480,10 @@
         .map-title {
             text-align: center;
             color: var(--primary-color) !important;
-            font-size: 32px !important;
+            font-size: 36px !important;
             font-weight: 800;
-            margin: 30px 0 !important;
+            margin: 40px 0 !important;
+            padding: 0 20px;
             background: var(--gradient-sport);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -491,13 +491,13 @@
         }
 
         .map-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
 
         .map-iframe {
-            height: 600px !important;
+            height: 800px !important;
         }
 
         .map-buttons {
@@ -560,22 +560,29 @@
         }
 
         @media (max-width: 768px) {
+            .map-container {
+                padding: 0 15px;
+            }
+            
             .map-title {
                 font-size: 24px !important;
+                padding: 0 10px;
             }
             
             .map-iframe {
-                height: 400px !important;
+                height: 500px !important;
             }
             
             .map-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 10px;
             }
             
             .map-btn {
-                width: 80%;
+                width: 100%;
                 text-align: center;
+                margin: 0;
             }
         }
     </style>
@@ -646,7 +653,7 @@
  <section class="section">
     <div class="map-container">
       <h1 class="map-title">Карта залов Казахстана</h1>
-      <div class="doc-card" style="background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(3,20,45,0.06);">
+      <div class="doc-card" style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 8px 24px rgba(3,20,45,0.06);margin:0 20px;">
         <div style="margin-top:14px;">
           <iframe src="/map.pdf" id="poloIframe" width="100%" class="map-iframe" style="border:3px solid #000;border-radius:8px;" title="Карта залов Казахстана"></iframe>
         </div>
