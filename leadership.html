@@ -701,6 +701,40 @@
             text-align: center;
             color: white;
         }
+        .preloader-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 30px;
+            animation: logoFloat 2s ease-in-out infinite;
+            filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.3));
+        }
+
+        @keyframes logoFloat {
+            0%, 100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10px);
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .preloader-content {
+            animation: fadeIn 0.5s ease-out;
+        }
+
 
         .spinner {
             width: 50px;
@@ -1041,18 +1075,34 @@
             startX = 0;
             startY = 0;
         });
-    </script>
-    <script src="/language.js" defer>
-        // Скрытие preloader после загрузки
+        </script>
+    <script src="/language.js" defer></script>
+    <script>
+        // Контроль времени загрузки preloader (минимум 300ms, максимум 2000ms)
+        const preloaderStartTime = Date.now();
+        const minLoadTime = 300;
+        const maxLoadTime = 2000;
+
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
             if (preloader) {
+                const elapsedTime = Date.now() - preloaderStartTime;
+                const remainingTime = Math.max(minLoadTime - elapsedTime, 0);
+                const hideTime = Math.min(remainingTime, maxLoadTime - elapsedTime);
+                
                 setTimeout(() => {
                     preloader.classList.add('hidden');
-                }, 300);
+                }, hideTime);
             }
         });
 
+        // Автоматическое скрытие через 2 секунды, даже если страница не загрузилась
+        setTimeout(() => {
+            const preloader = document.getElementById('preloader');
+            if (preloader && !preloader.classList.contains('hidden')) {
+                preloader.classList.add('hidden');
+            }
+        }, maxLoadTime);
     </script>
 </body>
 </html>
