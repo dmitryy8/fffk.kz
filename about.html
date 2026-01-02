@@ -187,6 +187,8 @@
             color: var(--text-dark);
             font-size: 1.5em;
             cursor: pointer;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
         /* Заголовок страницы */
@@ -607,8 +609,37 @@
             }
             
             .mobile-menu-btn {
-                display: block;
+                display: block !important;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1002;
+                pointer-events: auto;
+                background: none;
+                border: none;
                 color: white;
+                font-size: 24px;
+                cursor: pointer;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+                padding: 10px;
+                width: 44px;
+                height: 44px;
+            }
+            
+            .language-switcher {
+                position: absolute;
+                left: 70px;
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0;
+                z-index: 1002;
+            }
+            
+            .language-btn {
+                padding: 5px 10px;
+                font-size: 11px;
             }
             
             .page-header {
@@ -672,10 +703,64 @@
                 padding: 30px 20px;
             }
         }
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-content {
+            text-align: center;
+            color: white;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .preloader-text {
+            font-size: 18px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+    
     </style>
     <link rel="stylesheet" href="/language.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <div class="preloader-text">Загрузка...</div>
+        </div>
+    </div>
+
+
     <!-- Анимированный фон -->
     <div class="particles" id="particles"></div>
     
@@ -997,6 +1082,17 @@
             initScrollAnimations();
             animateCounters();
         });
+
+        // Скрытие preloader после загрузки
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                }, 300);
+            }
+        });
+
     </script>
     <script src="/language.js" defer></script>
 </body>
