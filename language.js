@@ -95,8 +95,10 @@ const translations = {
         news_card_excerpt_3: 'Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...',
         news_card_title_5: 'Открытие залов в городах Казахстана',
         news_card_excerpt_5: 'По всей стране открываются новые залы для тренировок по функциональному многоборью...',
-        news_card_title_4: 'Соглашение с партнерами',
-        news_card_excerpt_4: 'Федерация подписала соглашения с ведущими спортивными брендами...',
+        news_card_title_4: 'Чемпионат Казахстана по функциональному многоборью 2025',
+        news_card_excerpt_4: 'В сентябре прошёл Чемпионат Казахстана по функциональному многоборью 2025 — главное событие года...',
+        news_card_title_2: 'Историческое событие: казахстанец впервые прошёл в финал CrossFit Games!',
+        news_card_excerpt_2: 'Впервые в истории спортсмен из Казахстана вышел в финал CrossFit Games — самого престижного мирового турнира...',
         
         // Docs Cards - Карточки документов
         doc_card_title_6: 'Отчёт независимого эксперта по организации Чемпионата мира iF3 2025 - Masters',
@@ -277,8 +279,10 @@ const translations = {
         news_card_excerpt_3: 'Сауд Арабиясының астанасында алғаш рет функционалдық көпсайыс бойынша Азия чемпионаты өтті...',
         news_card_title_5: 'Қазақстан қалаларында залдардың ашылуы',
         news_card_excerpt_5: 'Бүкіл ел бойынша функционалдық көпсайыс бойынша жаттығуларға арналған жаңа залдар ашылуда...',
-        news_card_title_4: 'Серіктестермен келісім',
-        news_card_excerpt_4: 'Федерация жетекші спорттық брендтермен келісімдерге қол қойды...',
+        news_card_title_4: 'Қазақстан бойынша функционалдық көпсайыс чемпионаты 2025',
+        news_card_excerpt_4: 'Қыркүйекте жылдың басты оқиғасы — функционалдық көпсайыс бойынша Қазақстан чемпионаты 2025 өтті...',
+        news_card_title_2: 'Тарихи оқиға: қазақстандық бірінші рет CrossFit Games финалына өтті!',
+        news_card_excerpt_2: 'Тарихта алғаш рет Қазақстаннан спортшы әлемдегі ең беделді турнир — CrossFit Games финалына шықты...',
         
         // Docs Cards - Құжаттар карталары
         doc_card_title_6: 'iF3 2025 - Masters әлем чемпионатын ұйымдастыру бойынша тәуелсіз сарапшының есебі',
@@ -469,8 +473,10 @@ const translations = {
         news_card_excerpt_3: 'For the first time, the Asian Functional Fitness Championship was held in the capital of Saudi Arabia...',
         news_card_title_5: 'Opening of gyms in Kazakhstan cities',
         news_card_excerpt_5: 'New gyms for functional fitness training are opening across the country...',
-        news_card_title_4: 'Partnership agreement',
-        news_card_excerpt_4: 'The Federation has signed agreements with leading sports brands...',
+        news_card_title_4: 'Kazakhstan Functional Fitness Championship 2025',
+        news_card_excerpt_4: 'In September, the Kazakhstan Functional Fitness Championship 2025, the main event of the year, took place...',
+        news_card_title_2: 'Historic event: Kazakhstani reached CrossFit Games finals for the first time!',
+        news_card_excerpt_2: 'For the first time in history, an athlete from Kazakhstan reached the finals of CrossFit Games — the most prestigious world tournament...',
         
         // Docs Cards
         doc_card_title_6: 'Independent expert report on the organization of iF3 World Championship 2025 - Masters',
