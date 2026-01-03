@@ -56,6 +56,32 @@ const translations = {
         btn_view: 'Просмотр',
         footer_rights: '© 2025 Все права защищены — Казахстанская Федерация функционального многоборья',
         footer_info: 'Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу (functional fitness) и функциональному многоборью в Республике Казахстан. Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.',
+        
+        // Заголовки федерации
+        federation_title_ru: 'КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ',
+        federation_title_kz: 'ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ',
+        federation_title_en: 'FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN',
+        
+        // Страницы сервисов
+        page_gallery: 'Галерея',
+        page_news: 'Новости',
+        page_map: 'Карта залов Казахстана',
+        page_partners: 'Партнёры',
+        page_our_team: 'Наша команда',
+        page_our_address: 'Наш адрес',
+        
+        // News9 - Календарь 2026
+        news9_format_title: 'Формат участия',
+        news9_schedule_title: 'Расписание',
+        news9_organizers_title: 'Организаторы',
+        
+        // Federations - Континенты
+        continent_africa: 'Африка',
+        continent_americas: 'Северная и Южная Америка',
+        continent_asia: 'Азия',
+        continent_europe: 'Европа',
+        continent_oceania: 'Океания',
+        
         media_title: 'Медиа',
         media_subtitle: 'Фото и видео с наших мероприятий',
         media_gallery_title: 'Фотогалерея',
@@ -179,6 +205,42 @@ const translations = {
         doc_calendar: 'Күнтізбе',
         doc_standards: 'Стандарттар',
         doc_antidoping: 'Антидопинг',
+        doc_constitution: 'Жарғы',
+        federations_title: 'Халықаралық федерациялар',
+        federations_subtitle: 'Бүкіл әлемдегі біздің серіктестер',
+        btn_more: 'Толығырақ',
+        btn_back: 'Артқа',
+        btn_download: 'Жүктеу',
+        btn_view: 'Қарау',
+        footer_rights: '© 2025 Барлық құқықтар қорғалған — Қазақстандық функционалдық көпсайыс федерациясы',
+        footer_info: 'Республикалық қоғамдық бірлестік «Қазақстандық функционалдық көпсайыс федерациясы» (ҚФКФ, Functional Fitness Kazakhstan) - Қазақстан Республикасында функционалдық фитнес (functional fitness) және функционалдық көпсайыс бойынша ресми басқарушы орган. Біз спортты дамытамыз, жарыстар ұйымдастырамыз және бүкіл Қазақстан бойынша спортшыларды біріктіреміз.',
+        
+        // Федерация тақырыптары
+        federation_title_ru: 'ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ',
+        federation_title_kz: 'ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ',
+        federation_title_en: 'FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN',
+        
+        // Қызмет беттері
+        page_gallery: 'Галерея',
+        page_news: 'Жаңалықтар',
+        page_map: 'Қазақстан залдарының картасы',
+        page_partners: 'Серіктестер',
+        page_our_team: 'Біздің команда',
+        page_our_address: 'Біздің мекенжайымыз',
+        
+        // News9 - 2026 күнтізбесі
+        news9_format_title: 'Қатысу форматы',
+        news9_schedule_title: 'Кесте',
+        news9_organizers_title: 'Ұйымдастырушылар',
+        
+        // Federations - Құрлықтар
+        continent_africa: 'Африка',
+        continent_americas: 'Солтүстік және Оңтүстік Америка',
+        continent_asia: 'Азия',
+        continent_europe: 'Еуропа',
+        continent_oceania: 'Океания',
+        
+        media_title: 'Медиа',
         doc_constitution: 'Жарғы',
         federations_title: 'Халықаралық федерациялар',
         federations_subtitle: 'Әлем бойынша біздің серіктестеріміз',
@@ -320,6 +382,32 @@ const translations = {
         btn_view: 'View',
         footer_rights: '© 2025 All rights reserved — Kazakhstan Functional Fitness Federation',
         footer_info: 'Republican Public Association "Kazakhstan Functional Fitness Federation" (KFFF, Functional Fitness Kazakhstan) is the official governing body for functional fitness and functional pentathlon in the Republic of Kazakhstan. We develop sport, organize competitions and unite athletes throughout Kazakhstan.',
+        
+        // Federation titles
+        federation_title_ru: 'KAZAKHSTAN FUNCTIONAL FITNESS FEDERATION',
+        federation_title_kz: 'KAZAKHSTAN FUNCTIONAL FITNESS FEDERATION',
+        federation_title_en: 'FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN',
+        
+        // Service pages
+        page_gallery: 'Gallery',
+        page_news: 'News',
+        page_map: 'Kazakhstan Gyms Map',
+        page_partners: 'Partners',
+        page_our_team: 'Our Team',
+        page_our_address: 'Our Address',
+        
+        // News9 - Calendar 2026
+        news9_format_title: 'Participation Format',
+        news9_schedule_title: 'Schedule',
+        news9_organizers_title: 'Organizers',
+        
+        // Federations - Continents
+        continent_africa: 'Africa',
+        continent_americas: 'North and South America',
+        continent_asia: 'Asia',
+        continent_europe: 'Europe',
+        continent_oceania: 'Oceania',
+        
         media_title: 'Media',
         media_subtitle: 'Photos and videos from our events',
         media_gallery_title: 'Photo Gallery',
