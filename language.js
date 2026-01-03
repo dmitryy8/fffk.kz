@@ -82,6 +82,30 @@ const translations = {
         continent_europe: 'Европа',
         continent_oceania: 'Океания',
         
+        // News Cards - Карточки новостей
+        news_card_title_9: 'Новогодний командный турнир по функциональному многоборью в Flex.',
+        news_card_excerpt_9: '20 декабря в Кроссфит-зале Flex пройдёт предновогодний командный турнир по функциональному многоборью под эгидой КФФМ...',
+        news_card_title_8: 'Чемпионат мира IF3 2025 — Литва, Вильнюс.',
+        news_card_excerpt_8: 'В Вильнюсе, столице Литвы, с 5 по 7 декабря 2025 года состоялся Чемпионат мира IF3 по функциональному фитнесу...',
+        news_card_title_7: 'Итоги IF3 Masters World Championship 2025',
+        news_card_excerpt_7: 'Сборная Казахстана достойно представила страну на Чемпионате мира IF3 Masters 2025, проходившем в Брисбене (Австралия)...',
+        news_card_title_6: 'Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!',
+        news_card_excerpt_6: 'Ливийская федерация функционального фитнеса стала последним членом iF3, получившим официальное признание...',
+        news_card_title_3: 'Казахстан — победитель Чемпионата Азии 2025!',
+        news_card_excerpt_3: 'Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...',
+        news_card_title_5: 'Открытие залов в городах Казахстана',
+        news_card_excerpt_5: 'По всей стране открываются новые залы для тренировок по функциональному многоборью...',
+        news_card_title_4: 'Соглашение с партнерами',
+        news_card_excerpt_4: 'Федерация подписала соглашения с ведущими спортивными брендами...',
+        
+        // Docs Cards - Карточки документов
+        doc_card_title_6: 'Отчёт независимого эксперта по организации Чемпионата мира iF3 2025 - Masters',
+        doc_card_title_5: 'Календарь соревнований 2026',
+        doc_card_title_1: 'Положение чемпионата Казахстана',
+        doc_card_title_2: 'Аккредитация IF3 в Казахстане',
+        doc_card_title_3: 'Календарь соревнований',
+        doc_card_title_4: 'Стандарты движений',
+        
         media_title: 'Медиа',
         media_subtitle: 'Фото и видео с наших мероприятий',
         media_gallery_title: 'Фотогалерея',
@@ -239,6 +263,30 @@ const translations = {
         continent_asia: 'Азия',
         continent_europe: 'Еуропа',
         continent_oceania: 'Океания',
+        
+        // News Cards - Жаңалықтар карталары
+        news_card_title_9: 'Flex залында функционалдық көпсайыс бойынша жаңа жылдық командалық турнир.',
+        news_card_excerpt_9: '20 желтоқсанда Flex кроссфит залында ҚФКФ эгидасында функционалдық көпсайыс бойынша жаңа жыл алдындағы командалық турнир өтеді...',
+        news_card_title_8: 'IF3 әлем чемпионаты 2025 — Литва, Вильнюс.',
+        news_card_excerpt_8: 'Литваның астанасы Вильнюста, 2025 жылдың 5-7 желтоқсанында функционалдық фитнес бойынша IF3 әлем чемпионаты өтті...',
+        news_card_title_7: 'IF3 Masters әлем чемпионаты 2025 қорытындылары',
+        news_card_excerpt_7: 'Қазақстан құрамасы Брисбенде (Австралия) өткен IF3 Masters әлем чемпионаты 2025-те елді лайықты түрде ұсынды...',
+        news_card_title_6: 'Ливиялық функционалдық фитнес федерациясы Ливия спорт министрлігінің мойындауын алды!',
+        news_card_excerpt_6: 'Ливиялық функционалдық фитнес федерациясы ресми мойындау алған iF3-тің соңғы мүшесі болды...',
+        news_card_title_3: 'Қазақстан — Азия чемпионаты 2025 жеңімпазы!',
+        news_card_excerpt_3: 'Сауд Арабиясының астанасында алғаш рет функционалдық көпсайыс бойынша Азия чемпионаты өтті...',
+        news_card_title_5: 'Қазақстан қалаларында залдардың ашылуы',
+        news_card_excerpt_5: 'Бүкіл ел бойынша функционалдық көпсайыс бойынша жаттығуларға арналған жаңа залдар ашылуда...',
+        news_card_title_4: 'Серіктестермен келісім',
+        news_card_excerpt_4: 'Федерация жетекші спорттық брендтермен келісімдерге қол қойды...',
+        
+        // Docs Cards - Құжаттар карталары
+        doc_card_title_6: 'iF3 2025 - Masters әлем чемпионатын ұйымдастыру бойынша тәуелсіз сарапшының есебі',
+        doc_card_title_5: '2026 жарыстар күнтізбесі',
+        doc_card_title_1: 'Қазақстан чемпионатының ережесі',
+        doc_card_title_2: 'Қазақстандағы IF3 аккредитациясы',
+        doc_card_title_3: 'Жарыстар күнтізбесі',
+        doc_card_title_4: 'Қозғалыс стандарттары',
         
         media_title: 'Медиа',
         doc_constitution: 'Жарғы',
@@ -407,6 +455,30 @@ const translations = {
         continent_asia: 'Asia',
         continent_europe: 'Europe',
         continent_oceania: 'Oceania',
+        
+        // News Cards
+        news_card_title_9: 'New Year Team Functional Fitness Tournament at Flex.',
+        news_card_excerpt_9: 'On December 20, a pre-New Year team functional fitness tournament will be held at Flex CrossFit gym under the auspices of KFFF...',
+        news_card_title_8: 'IF3 World Championship 2025 — Lithuania, Vilnius.',
+        news_card_excerpt_8: 'The IF3 World Championship in functional fitness was held in Vilnius, the capital of Lithuania, from December 5 to 7, 2025...',
+        news_card_title_7: 'IF3 Masters World Championship 2025 Results',
+        news_card_excerpt_7: 'The Kazakhstan national team worthily represented the country at the IF3 Masters World Championship 2025 held in Brisbane (Australia)...',
+        news_card_title_6: 'Libyan Functional Fitness Federation received recognition from the Libyan Ministry of Sports!',
+        news_card_excerpt_6: 'The Libyan Functional Fitness Federation became the latest iF3 member to receive official recognition...',
+        news_card_title_3: 'Kazakhstan — Asian Championship 2025 Winner!',
+        news_card_excerpt_3: 'For the first time, the Asian Functional Fitness Championship was held in the capital of Saudi Arabia...',
+        news_card_title_5: 'Opening of gyms in Kazakhstan cities',
+        news_card_excerpt_5: 'New gyms for functional fitness training are opening across the country...',
+        news_card_title_4: 'Partnership agreement',
+        news_card_excerpt_4: 'The Federation has signed agreements with leading sports brands...',
+        
+        // Docs Cards
+        doc_card_title_6: 'Independent expert report on the organization of iF3 World Championship 2025 - Masters',
+        doc_card_title_5: '2026 Competition Calendar',
+        doc_card_title_1: 'Kazakhstan Championship Regulations',
+        doc_card_title_2: 'IF3 Accreditation in Kazakhstan',
+        doc_card_title_3: 'Competition Calendar',
+        doc_card_title_4: 'Movement Standards',
         
         media_title: 'Media',
         media_subtitle: 'Photos and videos from our events',
