@@ -364,21 +364,28 @@
         }
 
         .gallery-wrapper {
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
+            overflow: visible;
         }
 
         .gallery-track {
-            display: flex;
-            transition: transform 0.5s ease;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         .gallery-item {
-            min-width: 100%;
-            height: 600px;
             position: relative;
             cursor: pointer;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(11, 99, 183, 0.3);
         }
 
         .gallery-item img {
@@ -388,47 +395,11 @@
         }
 
         .gallery-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        .gallery-nav:hover {
-            background: rgba(0, 0, 0, 0.8);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .gallery-prev {
-            left: 20px;
-        }
-
-        .gallery-next {
-            right: 20px;
+            display: none;
         }
 
         .gallery-counter {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: 600;
+            display: none;
         }
 
         /* Полноэкранный режим */
@@ -762,6 +733,12 @@
             .federation-hero {
                 margin-top: 20px;
             }
+
+            /* Галерея на планшетах */
+            .gallery-track {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -777,6 +754,13 @@
             .doc-card {
                 width: 90vw;
                 margin: 0 10px;
+            }
+
+            /* Галерея на телефонах - по 1 в ряд */
+            .gallery-track {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
             }
             
             .btn {
@@ -803,7 +787,7 @@
             .fullscreen-counter {
                 bottom: 10px;
             }
-        }
+        
         /* Preloader */
         .preloader {
             position: fixed;
@@ -1204,47 +1188,19 @@
 
         // Инициализация галереи
         function initGallery() {
-            const galleryTrack = document.getElementById('galleryTrack');
             const galleryItems = document.querySelectorAll('.gallery-item');
-            const galleryPrev = document.getElementById('galleryPrev');
-            const galleryNext = document.getElementById('galleryNext');
-            const galleryCounter = document.getElementById('galleryCounter');
             
-            if (!galleryTrack || !galleryItems.length) return;
+            if (!galleryItems.length) return;
             
             // Собираем все изображения
             galleryImages = Array.from(galleryItems).map(item => item.dataset.src);
-            
-            // Навигация по галерее
-            galleryPrev.addEventListener('click', () => {
-                currentGalleryIndex = currentGalleryIndex === 0 ? galleryImages.length - 1 : currentGalleryIndex - 1;
-                updateGallery();
-            });
-            
-            galleryNext.addEventListener('click', () => {
-                currentGalleryIndex = currentGalleryIndex === galleryImages.length - 1 ? 0 : currentGalleryIndex + 1;
-                updateGallery();
-            });
             
             // Клик по изображению для полноэкранного режима
             galleryItems.forEach((item, index) => {
                 item.addEventListener('click', () => openFullscreen(index));
             });
-            
-            // Инициализация
-            updateGallery();
         }
         
-        function updateGallery() {
-            const galleryTrack = document.getElementById('galleryTrack');
-            const galleryCounter = document.getElementById('galleryCounter');
-            
-            if (!galleryTrack || !galleryCounter) return;
-            
-            galleryTrack.style.transform = `translateX(-${currentGalleryIndex * 100}%)`;
-            galleryCounter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
-        }
-
         // Полноэкранный режим
         function initFullscreen() {
             const fullscreenOverlay = document.getElementById('fullscreenOverlay');
@@ -1311,7 +1267,6 @@
             fullscreenOverlay.classList.remove('active');
             fullscreenImage.classList.remove('zoomed');
             document.body.style.overflow = '';
-            updateGallery(); // Синхронизируем с основной галереей
         }
         
         function updateFullscreen() {
@@ -1338,41 +1293,7 @@
                 console.log('Добро пожаловать в медиа галерею! 📸');
             }, 2000);
         });
-
-        // Дополнительные touch события для мобильных устройств
-        let startX = 0;
-        let startY = 0;
-
-        document.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-        });
-
-        document.addEventListener('touchend', (e) => {
-            if (!startX || !startY) return;
-            
-            const endX = e.changedTouches[0].clientX;
-            const endY = e.changedTouches[0].clientY;
-            
-            const diffX = startX - endX;
-            const diffY = startY - endY;
-            
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                const galleryTrack = e.target.closest('.gallery-track');
-                if (galleryTrack) {
-                    if (diffX > 0) {
-                        // Свайп влево - следующая фотка
-                        document.getElementById('galleryNext').click();
-                    } else {
-                        // Свайп вправо - предыдущая фотка
-                        document.getElementById('galleryPrev').click();
-                    }
-                }
-            }
-            
-            startX = 0;
-            startY = 0;
-        });
+        
         </script>
     <script src="/language.js" defer></script>
     <script>
