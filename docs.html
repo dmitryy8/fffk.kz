@@ -404,35 +404,6 @@
             font-weight: 700;
         }
 
-        /* Заголовки годов */
-        .year-header {
-            font-size: 2.5em;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin: 60px 0 30px 0;
-            padding-bottom: 15px;
-            border-bottom: 3px solid var(--primary-color);
-            background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
-        }
-
-        .year-header:first-of-type {
-            margin-top: 0;
-        }
-
-        .year-header::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 100px;
-            height: 3px;
-            background: var(--accent-color);
-        }
-
        
 
         
@@ -858,9 +829,13 @@
             </div>
             
             <div class="docs-container">
-                <!-- 2026 год -->
-                <h2 class="year-header">2026 год</h2>
-                
+                <div class="doc-card fade-in">
+                    <div class="news-date">15.12.2025</div>
+                    <div class="news-title" data-translate="doc_card_title_6">Отчёт независимого эксперта по организации Чемпионата мира iF3 2025 - Masters</div>
+                    <img src="/masterworld.jpg" width="8000" height="5267" alt="Отчёт Чемпионата мира iF3 2025 Masters" loading="lazy">
+                    <a href="/docs6" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                </div>
+
                 <div class="doc-card fade-in">
                     <div class="news-date">01.02.2026</div>
                     <div class="news-title" data-translate="doc_card_title_5">Календарь соревнований 2026</div>
@@ -871,16 +846,6 @@
                     <a href="/docs5" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
                 </div>
                 
-                <!-- 2025 год -->
-                <h2 class="year-header">2025 год</h2>
-                
-                <div class="doc-card fade-in">
-                    <div class="news-date">15.12.2025</div>
-                    <div class="news-title" data-translate="doc_card_title_6">Отчёт независимого эксперта по организации Чемпионата мира iF3 2025 - Masters</div>
-                    <img src="/masterworld.jpg" width="8000" height="5267" alt="Отчёт Чемпионата мира iF3 2025 Masters" loading="lazy">
-                    <a href="/docs6" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
-                </div>
-
                 <div class="doc-card fade-in">
                     <div class="news-date">03.07.2025</div>
                     <div class="news-title" data-translate="doc_card_title_1">Положение чемпионата Казахстана</div>
@@ -892,10 +857,10 @@
                 </div>
                 
                 <div class="doc-card fade-in">
-                    <div class="news-date">10.05.2025</div>
-                    <div class="news-title">Карта залов</div>
-                    <img src="/mapslogo.png" alt="Карта залов" loading="lazy">
-                    <a href="/map" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                    <div class="news-date">08.10.2023</div>
+                    <div class="news-title" data-translate="doc_card_title_2">Аккредитация IF3 в Казахстане</div>
+                    <img src="/acred.png" alt="Аккредитация" loading="lazy">
+                    <a href="/docs2" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
                 </div>
                 
                 <div class="doc-card fade-in">
@@ -908,9 +873,6 @@
                     <a href="/docs3" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
                 </div>
                 
-                <!-- 2024 год -->
-                <h2 class="year-header">2024 год</h2>
-                
                 <div class="doc-card fade-in">
                     <div class="news-date">01.02.2024</div>
                     <div class="news-title" data-translate="doc_card_title_4">Стандарты движений</div>
@@ -920,16 +882,12 @@
     </picture>
                     <a href="/docs4" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
                 </div>
-                
-                <!-- 2023 год -->
-                <h2 class="year-header">2023 год</h2>
-                
-                <div class="doc-card fade-in">
-                    <div class="news-date">08.10.2023</div>
-                    <div class="news-title" data-translate="doc_card_title_2">Аккредитация IF3 в Казахстане</div>
-                    <img src="/acred.png" alt="Аккредитация" loading="lazy">
-                    <a href="/docs2" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
-                </div>
+                 <div class="doc-card fade-in">
+                        <div class="news-date">10.05.2025</div>
+                        <div class="news-title">Карта залов</div>
+                        <img src="/mapslogo.png" alt="Карта залов" loading="lazy">
+                        <a href="/map" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                    </div>
             </div>
         </div>
     </section>
