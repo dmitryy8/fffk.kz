@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Казахстанская Федерация функционального многоборья</title>
-    <meta name="description" content="Казахстанская Федерация функционального многоборья - развитие спорта в Казахстане" />
-    <meta name="keywords" content="КФФМ, новости, функциональный фитнес, соревнования, Казахстан" />
-    <link rel="canonical" href="https://www.functionalfitness.kz/news" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.functionalfitness.kz/news" />
-    <meta property="og:title" content="Новости — Казахстанская Федерация функционального многоборья" />
-    <meta property="og:description" content="Последние новости функционального фитнеса в Казахстане. Соревнования, достижения, события." />
-    <meta property="og:image" content="https://www.functionalfitness.kz/footer-logo.png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
+    
+    
+    <title>ASTANA OPEN CUP 2026 — Казахстанская Федерация функционального многоборья</title>
+    <meta name="description" content="Соревнования по функциональному многоборью ASTANA OPEN CUP 2026. Регистрация открыта!" />
+    <meta name="keywords" content="КФФМ, новости, функциональный фитнес, Казахстан, события" />
+    <link rel="canonical" href="https://www.functionalfitness.kz/news9" />
+    
+    <!-- Open Graph / Facebook / VK -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.functionalfitness.kz/news9" />
+    <meta property="og:title" content="Последние новости КФФМ" />
+    <meta property="og:description" content="Актуальные новости функционального фитнеса в Казахстане" />
+    <meta property="og:image" content="https://www.functionalfitness.kz/logo.png" />
     <meta property="og:locale" content="ru_RU" />
-    <meta property="og:site_name" content="КФФМ — Федерация функционального многоборья Казахстана" />
+    <meta property="og:site_name" content="КФФМ - Казахстанская Федерация функционального многоборья" />
+    
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Новости — КФФМ" />
-    <meta name="twitter:description" content="Последние новости функционального фитнеса в Казахстане" />
-    <meta name="twitter:image" content="https://www.functionalfitness.kz/footer-logo.png" />
+    <meta name="twitter:title" content="Последние новости КФФМ" />
+    <meta name="twitter:description" content="Актуальные новости функционального фитнеса в Казахстане" />
+    <meta name="twitter:image" content="https://www.functionalfitness.kz/logo.png" />
     
         <!-- Favicon -->
     <link rel="icon" href="/favicon-2025.ico" sizes="any">
@@ -170,6 +174,8 @@
             display: flex;
             list-style: none;
             gap: 30px;
+            order: 1;
+            margin-left: auto;
         }
 
         .nav-menu a {
@@ -207,58 +213,63 @@
             color: white;
             font-size: 1.5em;
             cursor: pointer;
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
+            order: 2;
         }
 
-        /* Главная секция - Спортивная */
-        .hero {
-            min-height: 100vh;
+        .language-switcher {
+            position: relative;
+            margin-left: auto;
+            order: 1;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            padding-top: 80px;
-            background: var(--gradient-1);
+            gap: 8px;
+            transition: all 0.3s ease;
         }
 
-        .hero-content {
-            max-width: 900px;
-            z-index: 2;
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
-        .hero h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-            color: white;
-            animation: glow 3s ease-in-out infinite alternate;
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
+            padding: 10px;
+            display: none;
+            min-width: 150px;
+            z-index: 1001;
         }
 
-        @keyframes glow {
-            from { 
-                filter: drop-shadow(0 0 10px rgba(11, 99, 183, 0.3));
-            }
-            to { 
-                filter: drop-shadow(0 0 30px rgba(11, 99, 183, 0.6));
-            }
+        .language-dropdown.active {
+            display: block;
         }
 
-        .hero p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.8;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        .language-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
+        .language-option:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
         }
 
         .btn {
@@ -272,6 +283,7 @@
             border: none;
             cursor: pointer;
             font-size: 1em;
+            display: inline-block;
         }
 
         .btn-primary {
@@ -308,8 +320,14 @@
             height: 300px;
         }
 
+        .page-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
         /* Федерация блок - точно как в leadership */
-        .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0;margin-top:90px}
+        .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0;margin-top:80px}
         .federation-container{
           display:flex;align-items:center;justify-content:space-between;
           width:90%;max-width:1300px;margin:0 auto;
@@ -321,101 +339,7 @@
         .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
         .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
 
-        /* Секции */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            background: var(--gradient-sport);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-        }
-
-        .section-title p {
-            font-size: 1.2em;
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
-
-        /* Новости */
-        .news-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            justify-items: center;
-        }
-
-        .news-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-            position: relative;
-            box-shadow: var(--shadow);
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .news-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--primary-color);
-        }
-
-        .news-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .news-content {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-        
-        .news-content .btn {
-            margin-top: auto;
-        }
-
-        .news-date {
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .news-title {
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            color: var(--text-dark);
-            font-weight: 700;
-        }
-
-        .news-excerpt {
-            color: var(--text-gray);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-    
-
-       
-
-        
+      
         /* Футер */
         .footer {
             background: var(--primary-color);
@@ -564,6 +488,20 @@
             .mobile-menu-btn {
                 display: block;
             }
+
+            .language-switcher {
+                margin-left: 15px;
+                order: 3;
+            }
+
+            .language-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .language-dropdown {
+                right: 0;
+            }
             
             .hero {
                 padding-top: 100px;
@@ -616,14 +554,6 @@
                 font-size: 2.5em;
             }
             
-            .news-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-arrow {
-                display: none;
-            }
-            
             .news-card,
             .doc-card {
                 width: 320px;
@@ -646,10 +576,6 @@
             .footer-nav {
                 justify-content: center;
             }
-
-            .federation-hero {
-                margin-top: 20px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -670,55 +596,191 @@
             .btn {
                 width: 100%;
             }
-        }
-        /* Preloader */
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            pointer-events: none;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
+
+            .news-photos img {
+                height: auto !important;
+                max-height: 350px !important;
+                object-fit: contain !important;
+                background-color: transparent;
+            }
+
+            .news-card {
+                padding: 25px !important;
+            }
+
+            .news-card h3 {
+                font-size: 22px !important;
+            }
+
+            .news-card p {
+                font-size: 15px !important;
+                line-height: 1.6 !important;
+            }
+
+            .news-card strong {
+                font-size: 17px !important;
+            }
+
+            .news-card strong[style*="font-size:20px"] {
+                font-size: 18px !important;
+            }
+
+            .federation-container {
+                padding: 20px 15px;
+                border-radius: 15px;
+            }
+
+            .federation-logo img {
+                width: 150px;
+                margin-bottom: 15px;
+            }
+
+            .federation-text h1 {
+                font-size: 18px;
+                line-height: 1.3;
+            }
+
+            .federation-text h2 {
+                font-size: 14px;
+                line-height: 1.3;
+            }
         }
 
-        .preloader.hidden {
-            opacity: 0;
-            visibility: hidden;
+        /* Стили для статьи */
+        .article-content {
+            padding: 120px 0 60px 0;
+            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
         }
 
-        .preloader-content {
+        .article-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 25px;
+            box-shadow: 0 10px 60px rgba(11, 99, 183, 0.08);
+            border: 1px solid rgba(11, 99, 183, 0.05);
+        }
+
+        .article-title {
+            font-size: 48px;
+            font-weight: 800;
+            background: var(--gradient-sport);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 40px;
+            line-height: 1.2;
             text-align: center;
-            color: white;
+            animation: titleAppear 0.8s ease-out;
         }
-        .preloader-logo {
-            width: 120px;
+
+        .article-hero-image {
+            width: 100%;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(11, 99, 183, 0.2);
+        }
+
+        .article-hero-image img {
+            width: 100%;
             height: auto;
-            margin-bottom: 30px;
-            animation: logoFloat 2s ease-in-out infinite;
-            filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.3));
+            display: block;
+            transition: transform 0.5s ease;
         }
 
-        @keyframes logoFloat {
-            0%, 100% {
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            50% {
-                transform: translateY(-10px);
-                opacity: 0.9;
-            }
+        .article-hero-image:hover img {
+            transform: scale(1.05);
         }
 
-        @keyframes fadeIn {
+        @keyframes titleAppear {
             from {
                 opacity: 0;
-                transform: scale(0.8);
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .article-section {
+            margin-bottom: 40px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .article-section h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .article-section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 70%;
+            background: var(--gradient-sport);
+            border-radius: 3px;
+        }
+
+        .article-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .article-section ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .article-section li {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .article-section li::marker {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Сетка фотографий */
+        .photo-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+            animation: photoSlideIn 0.8s ease-out;
+        }
+
+        @keyframes photoSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
             }
             to {
                 opacity: 1;
@@ -726,45 +788,176 @@
             }
         }
 
-        .preloader-content {
-            animation: fadeIn 0.5s ease-out;
+        .photo-grid-2 img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(11, 99, 183, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
         }
 
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top-color: white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
+        .photo-grid-2 img:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 15px 50px rgba(11, 99, 183, 0.25);
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        /* Таблицы категорий */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
         }
 
-        .preloader-text {
+        .category-card {
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-sport);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(11, 99, 183, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .category-card h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .category-card .price {
+            font-size: 36px;
+            font-weight: 800;
+            background: var(--gradient-sport);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .category-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .category-card li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 16px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-card li:last-child {
+            border-bottom: none;
+        }
+
+        .category-card li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
             font-size: 18px;
-            font-weight: 500;
-            opacity: 0.9;
         }
-    
+
+        /* Адаптация для мобильных */
+        @media (max-width: 768px) {
+            .article-wrapper {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+
+            .article-title {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+
+            .article-section h2 {
+                font-size: 24px;
+                padding-left: 15px;
+            }
+
+            .article-section p,
+            .article-section li {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .photo-grid-2 {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin: 30px 0;
+            }
+
+            .photo-grid-2 img {
+                height: 250px;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .category-card {
+                padding: 25px 20px;
+            }
+
+            .category-card h3 {
+                font-size: 20px;
+            }
+
+            .category-card .price {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-title {
+                font-size: 26px;
+            }
+
+            .article-section h2 {
+                font-size: 20px;
+            }
+
+            .photo-grid-2 img {
+                height: 200px;
+            }
+        }
     </style>
     <link rel="stylesheet" href="/language.css">
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-content">
-            <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
-            <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
-        </div>
-    </div>
-
-
     <!-- Анимированный фон -->
     <div class="particles" id="particles"></div>
     <div class="neural-network" id="neuralNetwork"></div>
@@ -774,7 +967,7 @@
         <div class="container">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="/logoinsite.png" width="1279" height="540" loading="lazy" alt="ФФМК" style="height: 40px; width: auto;">
+                    <img src="/logoinsite.png" alt="ФФМК" style="height: 40px; width: auto;" loading="lazy">
                 </div>
                 <div class="language-switcher">
                     <button class="language-btn" id="languageBtn">
@@ -787,12 +980,11 @@
                         <div class="language-option" data-lang="en">🇬🇧 English</div>
                     </div>
                 </div>
-
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="/" data-translate="nav_home">Главная</a></li>
                     <li><a href="/about" data-translate="nav_about">О нас</a></li>
                     <li><a href="/news" data-translate="nav_news">Новости</a></li>
-                    <li><a href="/docs" data-translate="nav_docs" data-translate="docs_title">Документы</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
                     <li><a href="/leadership" data-translate="nav_leadership">Наша команда</a></li>
                     <li><a href="/media" data-translate="nav_media">Медиа</a></li>
                     <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
@@ -807,13 +999,10 @@
         </div>
     </nav>
 
-        
-       
-
-    <!-- Блок федерации -->
+        <!-- Блок федерации -->
     <section class="federation-hero">
         <div class="federation-container">
-            <div class="federation-logo left"><img src="/logo.png" width="1015" height="787" loading="lazy" alt=""></div>
+            <div class="federation-logo left"><img src="/logo.png" alt="" loading="lazy"></div>
             <div class="federation-text">
                 <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
                 ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
@@ -821,150 +1010,112 @@
                 <h1 data-translate="federation_title_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
                 <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
             </div>
-            <div class="federation-logo right"><img src="/sponsor.png" width="1386" height="980" loading="lazy" alt=""></div>
+            <div class="federation-logo right"><img src="/sponsor.png" alt="" loading="lazy"></div>
         </div>
     </section>
+       
 
-    <!-- Новости -->
-    <section id="news" class="section">
+    <!-- Контент статьи -->
+    <section class="article-content">
         <div class="container">
-            <div class="section-title fade-in">
-                <h2 data-translate="page_news">Новости</h2>
-                <p>Актуальные события и достижения</p>
-            </div>
-            
-            <div class="news-container">
-
-
-                <article class="news-card fade-in">
-                        <img src="/astanaopencupr.jpg" alt="ASTANA OPEN CUP 2026" loading="lazy">
-                        <div class="news-content">
-                            <div class="news-date">08.01.2026</div>
-                            <div class="news-title">ASTANA OPEN CUP 2026!</div>
-                            <div class="news-excerpt">Соревнования по функциональному многоборью ASTANA OPEN CUP 2026 проводятся...</div>
-                            <a href="/news10" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                        </div>
-                    </article>  
-
-
+            <div class="article-wrapper fade-in">
+                <h1 class="article-title">ASTANA OPEN CUP 2026</h1>
+                
+                <div class="article-hero-image">
+                    <img src="/astanaopencupr.jpg" alt="ASTANA OPEN CUP 2026" loading="lazy">
+                </div>
+                
+                <div class="article-section">
+                    <p style="text-align: center; font-size: 24px; font-weight: 700; color: var(--primary-color); margin-bottom: 30px;">Соревнования по функциональному многоборью</p>
                     
-                <article class="news-card fade-in">
-                        <picture>
-      <source srcset="/novygod.webp" type="image/webp">
-      <img src="/novygod.jpg" width="4500" height="2560" loading="lazy" alt="CrossFit Challenge 2025">
-    </picture>
-                        <div class="news-content">
-                            <div class="news-date">19.12.2025</div>
-                            <div class="news-title" data-translate="news_card_title_9">Новогодний командный турнир по функциональному многоборью в Flex.</div>
-                            <div class="news-excerpt" data-translate="news_card_excerpt_9">20 декабря в Кроссфит-зале Flex пройдёт предновогодний командный турнир по функциональному многоборью под эгидой КФФМ...</div>
-                            <a href="/news9" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                        </div>
-                    </article>
-                 <article class="news-card fade-in">
-                        <picture>
-      <source srcset="/litva1.webp" type="image/webp">
-      <img src="/litva1.jpg" width="3856" height="2191" loading="lazy" alt="CrossFit Challenge 2025">
-    </picture>
-                        <div class="news-content">
-                            <div class="news-date">05.12.2025</div>
-                            <div class="news-title" data-translate="news_card_title_8">Чемпионат мира IF3 2025 — Литва, Вильнюс.</div>
-                            <div class="news-excerpt" data-translate="news_card_excerpt_8">В Вильнюсе, столице Литвы, с 5 по 7 декабря 2025 года состоялся Чемпионат мира IF3 по функциональному фитнесу...</div>
-                            <a href="/news8" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                        </div>
-                    </article>
-                 <article class="news-card fade-in">
-                        <picture>
-      <source srcset="/austr1.webp" type="image/webp">
-      <img src="/austr1.png" width="2870" height="1637" loading="lazy" alt="CrossFit Challenge 2025">
-    </picture>
-                        <div class="news-content">
-                            <div class="news-date">25.11.2025</div>
-                            <div class="news-title" data-translate="news_card_title_7">Итоги IF3 Masters World Championship 2025</div>
-                            <div class="news-excerpt" data-translate="news_card_excerpt_7">Сборная Казахстана достойно представила страну на Чемпионате мира IF3 Masters 2025, проходившем в Брисбене (Австралия)...</div>
-                            <a href="/news7" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                        </div>
-                    </article>
-                 <article class="news-card fade-in">
-                        <picture>
-      <source srcset="/livii.webp" type="image/webp">
-      <img src="/livii.jpg" width="851" height="485" loading="lazy" alt="Summer Games 2025">
-    </picture>
-                        <div class="news-content">
-                            <div class="news-date">17.10.2025</div>
-                            <div class="news-title" data-translate="news_card_title_6">Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!</div>
-                            <div class="news-excerpt" data-translate="news_card_excerpt_6">Ливийская федерация функционального фитнеса стала последним членом iF3, получившим официальное признание...</div>
-                            <a href="/news3" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                        </div>
-                    </article>
+                    <p><strong>Дата проведения финала:</strong> 7 мая 2026 года</p>
+                    <p><strong>Место проведения:</strong> г. Астана, ЛАСК «Qazaqstan»</p>
+                    <p style="margin-top: 20px;">Соревнования по функциональному многоборью ASTANA OPEN CUP 2026 проводятся в партнёрстве с КДЛ «Олимп» и WodFriends при организационной поддержке КФФМ.</p>
+                </div>
+
+                <div class="article-section">
+                    <h2>1. Регистрация участников</h2>
+                    <p>Регистрация на финальный этап соревнований осуществляется на платформе Circle 21.</p>
                     
-                <article class="news-card fade-in">
-                    <picture>
-      <source srcset="/imageschampionat/asia1.webp" type="image/webp">
-      <img src="/imageschampionat/asia1.jpg" width="4278" height="2434" loading="lazy" alt="Summer Games 2025">
-    </picture>
-                    <div class="news-content">
-                        <div class="news-date">06.10.2025</div>
-                        <div class="news-title" data-translate="news_card_title_3">Казахстан — победитель Чемпионата Азии 2025!</div>
-                        <div class="news-excerpt" data-translate="news_card_excerpt_3">Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...</div>
-                        <a href="/news3" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                    </div>
-                </article>
-                
-                
-                <article class="news-card fade-in">
-                    <picture>
-      <source srcset="/imageskz/kz.webp" type="image/webp">
-      <img src="/imageskz/kz.jpg" width="4758" height="3173" alt="Зимний Кубок 2025" loading="lazy">
-    </picture>
-                    <div class="news-content">
-                        <div class="news-date">29.09.2025</div>
-                        <div class="news-title">Чемпионат Казахстана по функциональному многоборью 2025</div>
-                        <div class="news-excerpt">В сентябре прошёл Чемпионат Казахстана по функциональному многоборью 2025 — главное событие года...</div>
-                        <a href="/news4" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                    </div>
-                </article>
-                
-                <article class="news-card fade-in">
-                        <img src="/sogl2.jpg" alt="Summer Games 2025" loading="lazy">
-                        <div class="news-content">
-                            <div class="news-date">25.09.2025 г</div>
-                            <div class="news-title">F3 подписывает партнерское соглашение с Geraklion!</div>
-                            <div class="news-excerpt">iF3 объявила о заключении партнерского соглашения с Фондом инноваций в медицине и спорте Гераклиона...</div>
-                            <a href="/news5" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                        </div>
-                    </article>
+                    <p><strong>Сроки регистрации:</strong></p>
+                    <ul>
+                        <li><strong>Ранняя регистрация:</strong> 8 января – 20 февраля 2026 года</li>
+                        <li><strong>Регулярная регистрация:</strong> 20 февраля – 31 марта 2026 года</li>
+                        <li><strong>Поздняя регистрация:</strong> 31 марта – 19 апреля 2026 года</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;">Количество мест в категориях ограничено. Организаторы оставляют за собой право закрыть регистрацию ранее установленного срока при достижении лимита участников.</p>
+                </div>
 
-                    <article class="news-card fade-in">
-                    <img src="/game1.jpg" alt="CrossFit Challenge 2025" loading="lazy">
-                    <div class="news-content">
-                        <div class="news-date">24.08.2025</div>
-                        <div class="news-title">Историческое событие: казахстанец впервые прошёл в финал CrossFit Games!</div>
-                        <div class="news-excerpt">Впервые в истории спортсмен из Казахстана вышел в финал CrossFit Games — самого престижного мирового турнира...</div>
-                        <a href="/news2" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                    </div>
-                </article>
+                <div class="article-section">
+                    <h2>2. Категории участников</h2>
+                    <p>К участию допускаются атлеты старше 18 лет, граждане Республики Казахстан и других стран.</p>
+                    
+                    <p><strong>Мужчины:</strong></p>
+                    <ul>
+                        <li><strong>RX</strong> – 20 атлетов (регистрация по промокоду)</li>
+                        <li><strong>35+</strong> – 10 атлетов</li>
+                        <li><strong>40+</strong> – 10 атлетов</li>
+                    </ul>
+                    
+                    <p><strong>Женщины:</strong></p>
+                    <ul>
+                        <li><strong>RX</strong> – 10 атлетов (регистрация по промокоду)</li>
+                        <li><strong>35+</strong> – 10 атлетов</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;">Категория RX предназначена для атлетов с опытом подготовки не менее 5 лет, владеющих всеми соревновательными навыками и работающих с высокими нагрузками.</p>
+                    
+                    <p><strong>Регистрация в категории RX осуществляется по промокоду.</strong><br>
+                    Для его получения атлету необходимо обратиться к организаторам. Кандидатура рассматривается и согласовывается, после чего, в случае одобрения, предоставляется промокод для регистрации.</p>
+                </div>
 
-                    <article class="news-card fade-in">
-                    <img src="/astanaopencup1.jpg" alt="Astana Open Cup 2025" loading="lazy">
-                    <div class="news-content">
-                        <div class="news-date">07.05.2025</div>
-                        <div class="news-title">Итоги соревнований Astana Open Cup 2025</div>
-                        <div class="news-excerpt">7 мая в столице прошёл второй ежегодный открытый турнир по функциональному многоборью — Astana Open...</div>
-                        <a href="/news1" class="btn btn-primary" data-translate="btn_more">Подробнее</a>
-                    </div>
-                </article>
+                <div class="article-section">
+                    <h2>3. Формат соревнований</h2>
+                    <ul>
+                        <li>Все соревновательные комплексы выполняются в течение одного дня</li>
+                        <li>Задания финальной части будут опубликованы не позднее 2 мая 2026 года</li>
+                        <li>Судейство и стандарты движений соответствуют правилам iF3 (2026)</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;">С целью повышения качества проведения мероприятия организаторы оставляют за собой право вносить изменения в регламент, формат, тайминг и задания соревнований.</p>
+                </div>
+
+                <div class="article-section">
+                    <h2>4. Награждение</h2>
+                    <p>Победители и призёры соревнований награждаются:</p>
+                    <ul>
+                        <li>денежными призами;</li>
+                        <li>медалями и грамотами.</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;">Информация о размере призового фонда будет опубликована дополнительно на официальных ресурсах КФФМ.</p>
+                </div>
+
+                <div class="article-section">
+                    <h2>5. Цели соревнований</h2>
+                    <ul>
+                        <li>выявление сильнейших атлетов по функциональному многоборью;</li>
+                        <li>развитие и популяризация функционального многоборья;</li>
+                        <li>формирование сборной команды КФФМ для участия в Чемпионате Азии 2026 года.</li>
+                    </ul>
+                </div>
+
+                <div class="article-section">
+                    <h2>6. Спонсоры и партнеры соревнований</h2>
+                    <p><strong>Генеральный спонсор:</strong> КДЛ «Олимп» в лице Ерлана Сулейменова</p>
+                    <p><strong>Партнёр:</strong> WodFriends — компания по производству и продаже экипировки для функционального многоборья и тренировок.</p>
+                </div>
             </div>
         </div>
     </section>
-
-
 
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <img src="/logoinsite.png" width="1279" height="540" loading="lazy" alt="Логотип Федерации" class="footer-logo">
+                    <img src="/logoinsite.png" alt="Логотип Федерации" class="footer-logo" loading="lazy">
                 </div>
                 
                 <nav class="footer-nav">
@@ -1003,24 +1154,25 @@
                 </p>
             </div>
             
-            <div class="footer-bottom" data-translate="footer_rights">
+            <div class="footer-bottom">
                 <span data-translate="footer_rights">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>
 
     <script>
-        // Определение мобильного устройства
-        const isMobile = window.innerWidth <= 768;
-
         // Глобальные переменные
         let currentNewsIndex = 0;
         let currentDocsIndex = 0;
 
         // Создание анимированного фона
+        // Определение мобильного устройства
+        const isMobile = window.innerWidth <= 768;
+
         function createParticles() {
             // Отключение анимаций на мобильных устройствах для производительности
             if (isMobile) return;
+
 
             const particlesContainer = document.getElementById('particles');
             const neuralNetwork = document.getElementById('neuralNetwork');
@@ -1109,116 +1261,14 @@
             });
         }
 
-        // Карусель новостей
-        function initNewsCarousel() {
-            const newsGrid = document.getElementById('newsGrid');
-            const leftBtn = document.getElementById('newsLeft');
-            const rightBtn = document.getElementById('newsRight');
-            
-            if (!newsGrid || !leftBtn || !rightBtn) return;
-            
-            rightBtn.addEventListener('click', () => {
-                newsGrid.scrollBy({ left: 420, behavior: 'smooth' });
-            });
-            
-            leftBtn.addEventListener('click', () => {
-                newsGrid.scrollBy({ left: -420, behavior: 'smooth' });
-            });
-        }
-
-        // Карусель документов
-        function initDocsCarousel() {
-            const docsGrid = document.getElementById('docsGrid');
-            const leftBtn = document.getElementById('docsLeft');
-            const rightBtn = document.getElementById('docsRight');
-            
-            if (!docsGrid || !leftBtn || !rightBtn) return;
-            
-            rightBtn.addEventListener('click', () => {
-                docsGrid.scrollBy({ left: 420, behavior: 'smooth' });
-            });
-            
-            leftBtn.addEventListener('click', () => {
-                docsGrid.scrollBy({ left: -420, behavior: 'smooth' });
-            });
-        }
-
+              
         // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', () => {
             createParticles();
             initNavigation();
             initScrollAnimations();
-            initNewsCarousel();
-            initDocsCarousel();
-            
-            // Приветственное сообщение через 2 секунды
-            setTimeout(() => {
-                console.log('Добро пожаловать на сайт Казахстанской Федерации функционального многоборья! 🏋️‍♂️');
-            }, 2000);
         });
-
-        // Дополнительные touch события для мобильных устройств
-        let startX = 0;
-        let startY = 0;
-
-        document.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-        });
-
-        document.addEventListener('touchend', (e) => {
-            if (!startX || !startY) return;
-            
-            const endX = e.changedTouches[0].clientX;
-            const endY = e.changedTouches[0].clientY;
-            
-            const diffX = startX - endX;
-            const diffY = startY - endY;
-            
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                const target = e.target.closest('.news-grid, .docs-grid');
-                if (target) {
-                    if (diffX > 0) {
-                        // Свайп влево - прокрутка вправо
-                        target.scrollBy({ left: 420, behavior: 'smooth' });
-                    } else {
-                        // Свайп вправо - прокрутка влево
-                        target.scrollBy({ left: -420, behavior: 'smooth' });
-                    }
-                }
-            }
-            
-            startX = 0;
-            startY = 0;
-        });
-        </script>
-    <script src="/language.js" defer></script>
-    <script>
-        // Контроль времени загрузки preloader (минимум 300ms, максимум 2000ms)
-        const preloaderStartTime = Date.now();
-        const minLoadTime = 300;
-        const maxLoadTime = 2000;
-
-        window.addEventListener('load', () => {
-            const preloader = document.getElementById('preloader');
-            if (preloader) {
-                const elapsedTime = Date.now() - preloaderStartTime;
-                const remainingTime = Math.max(minLoadTime - elapsedTime, 0);
-                const hideTime = Math.min(remainingTime, maxLoadTime - elapsedTime);
-                
-                setTimeout(() => {
-                    preloader.classList.add('hidden');
-                }, hideTime);
-            }
-        });
-
-        // Автоматическое скрытие через 2 секунды, даже если страница не загрузилась
-        setTimeout(() => {
-            const preloader = document.getElementById('preloader');
-            if (preloader && !preloader.classList.contains('hidden')) {
-                preloader.classList.add('hidden');
-            }
-        }, maxLoadTime);
     </script>
+    <script src="/language.js" defer></script>
 </body>
 </html>
