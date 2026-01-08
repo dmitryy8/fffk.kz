@@ -361,16 +361,20 @@
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
         .gallery-wrapper {
             overflow: visible;
+            width: 100%;
         }
 
         .gallery-track {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 25px;
+            padding: 10px;
+            width: 100%;
         }
 
         .gallery-item {
@@ -381,17 +385,26 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             aspect-ratio: 4/3;
+            width: 100%;
+            height: auto;
+            background: #f5f5f5;
         }
 
         .gallery-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: 0 8px 25px rgba(11, 99, 183, 0.3);
         }
 
-        .gallery-item img {
+        .gallery-item img,
+        .gallery-item picture {
             width: 100%;
             height: 100%;
+            display: block;
+        }
+
+        .gallery-item img {
             object-fit: cover;
+            object-position: center;
         }
 
         .gallery-nav {
@@ -595,12 +608,28 @@
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            will-change: opacity, transform;
         }
 
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* Оптимизация для GPU */
+        .gallery-item,
+        .fullscreen-image,
+        .btn {
+            will-change: transform;
+        }
+
+        /* Оптимизация для мобильных устройств */
+        .mobile-device .gallery-item:hover,
+        .mobile-device .btn:hover,
+        .mobile-device .social-btn:hover {
+            transform: none;
+            box-shadow: inherit;
         }
 
         /* Мобильная адаптация */
@@ -735,9 +764,14 @@
             }
 
             /* Галерея на планшетах */
+            .gallery-container {
+                padding: 0 15px;
+            }
+
             .gallery-track {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                gap: 20px;
+                padding: 5px;
             }
         }
 
@@ -757,18 +791,22 @@
             }
 
             /* Галерея на телефонах - по 1 в ряд */
+            .gallery-container {
+                padding: 0 10px;
+            }
+
             .gallery-track {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 20px;
+                padding: 5px;
             }
+
+            .gallery-item {
+                aspect-ratio: 4/3;
             }
             
             .btn {
                 width: 100%;
-            }
-            
-            .gallery-item {
-                height: 400px;
             }
             
             .fullscreen-prev {
@@ -787,6 +825,7 @@
             .fullscreen-counter {
                 bottom: 10px;
             }
+        }
         
         /* Preloader */
         .preloader {
@@ -1166,17 +1205,20 @@
             });
         }
 
-        // Анимации появления элементов
+        // Анимации появления элементов (оптимизировано)
         function initScrollAnimations() {
+            // Ленивая загрузка анимаций только для видимых элементов
             const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+                threshold: 0.15,
+                rootMargin: '50px 0px -50px 0px'
             };
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        // Отключаем наблюдение после анимации
+                        observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
@@ -1186,19 +1228,26 @@
             });
         }
 
-        // Инициализация галереи
+        // Инициализация галереи (оптимизировано)
         function initGallery() {
             const galleryItems = document.querySelectorAll('.gallery-item');
             
             if (!galleryItems.length) return;
             
-            // Собираем все изображения
+            // Собираем все изображения один раз
             galleryImages = Array.from(galleryItems).map(item => item.dataset.src);
             
-            // Клик по изображению для полноэкранного режима
-            galleryItems.forEach((item, index) => {
-                item.addEventListener('click', () => openFullscreen(index));
-            });
+            // Используем делегирование событий вместо множества слушателей
+            const galleryTrack = document.querySelector('.gallery-track');
+            if (galleryTrack) {
+                galleryTrack.addEventListener('click', (e) => {
+                    const item = e.target.closest('.gallery-item');
+                    if (item) {
+                        const index = Array.from(galleryItems).indexOf(item);
+                        if (index !== -1) openFullscreen(index);
+                    }
+                });
+            }
         }
         
         // Полноэкранный режим
@@ -1288,10 +1337,29 @@
             initGallery();
             initFullscreen();
             
-            // Приветственное сообщение через 2 секунды
-            setTimeout(() => {
-                console.log('Добро пожаловать в медиа галерею! 📸');
-            }, 2000);
+            // Оптимизация производительности: отключаем hover на мобильных
+            if (isMobile) {
+                document.body.classList.add('mobile-device');
+            }
+            
+            // Ленивая загрузка изображений галереи
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src && !img.src.includes(img.dataset.src)) {
+                                img.src = img.dataset.src;
+                            }
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                }, { rootMargin: '100px' });
+                
+                document.querySelectorAll('.gallery-item img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
         });
         
         </script>

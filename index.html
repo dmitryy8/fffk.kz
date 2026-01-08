@@ -433,7 +433,7 @@
             color: var(--primary-color);
             font-weight: 700;
             font-size: 14px;
-            margin-bottom: 10px;
+            margin-bottom: 0;
         }
 
         .news-title {
@@ -485,15 +485,15 @@
             display: flex;
             overflow-x: auto;
             overflow-y: hidden;
+            scroll-behavior: smooth;
             gap: 30px;
             padding-bottom: 20px;
-            -ms-overflow-style: none;  /* IE и Edge */
-            scrollbar-width: none;  /* Firefox */
+            scrollbar-width: none;
             overscroll-behavior-x: contain;
         }
 
         .docs-grid::-webkit-scrollbar {
-            display: none;  /* Chrome, Safari, Opera */
+            display: none;
         }
 
         .doc-card {
@@ -1143,13 +1143,6 @@
                 
                 <div class="docs-grid" id="docsGrid">
                     <div class="doc-card fade-in">
-                        <div class="news-date">15.12.2025</div>
-                        <div class="news-title">Отчёт независимого эксперта по организации Чемпионата мира iF3 2025 - Masters</div>
-                        <img src="/masterworld.jpg" width="8000" height="5267" alt="Отчёт Чемпионата мира iF3 2025 Masters" loading="lazy">
-                        <a href="/docs6" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
-                    </div>
-
-                    <div class="doc-card fade-in">
                         <div class="news-date">01.02.2026</div>
                         <div class="news-title">Календарь соревнований 2026</div>
                         <picture>
@@ -1157,6 +1150,13 @@
                             <img src="/kalen2.jpg" width="8000" height="5267" alt="Календарь соревнований 2026" loading="lazy">
                         </picture>
                         <a href="/docs5" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                    </div>
+                    
+                    <div class="doc-card fade-in">
+                        <div class="news-date">15.12.2025</div>
+                        <div class="news-title">Отчёт независимого эксперта по организации Чемпионата мира iF3 2025 - Masters</div>
+                        <img src="/masterworld.jpg" width="8000" height="5267" alt="Отчёт Чемпионата мира iF3 2025 Masters" loading="lazy">
+                        <a href="/docs6" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
                     </div>
                 
                     <div class="doc-card fade-in">
@@ -1170,10 +1170,10 @@
                     </div>
                     
                     <div class="doc-card fade-in">
-                        <div class="news-date">08.10.2023</div>
-                        <div class="news-title">Аккредитация IF3 в Казахстане</div>
-                        <img src="/acred.png" alt="Аккредитация" loading="lazy">
-                        <a href="/docs2" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                        <div class="news-date">10.05.2025</div>
+                        <div class="news-title">Карта залов</div>
+                        <img src="/mapslogo.png" alt="Карта залов" loading="lazy">
+                        <a href="/map" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
                     </div>
                     
                     <div class="doc-card fade-in">
@@ -1195,13 +1195,14 @@
     </picture>
                         <a href="/docs4" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
                     </div>
-
+                    
                     <div class="doc-card fade-in">
-                        <div class="news-date">10.05.2025</div>
-                        <div class="news-title">Карта залов</div>
-                        <img src="/mapslogo.png" alt="Карта залов" loading="lazy">
-                        <a href="/map" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
+                        <div class="news-date">08.10.2023</div>
+                        <div class="news-title">Аккредитация IF3 в Казахстане</div>
+                        <img src="/acred.png" alt="Аккредитация" loading="lazy">
+                        <a href="/docs2" class="btn btn-primary" style="margin-top: auto;">Подробнее</a>
                     </div>
+                        
                 </div>
             </div>
         </div>
