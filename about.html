@@ -559,7 +559,7 @@
           .federation-text h2{font-size:18px}
         }
 
-        /* Мобильная адаптация */
+                /* Мобильная адаптация */
         @media (max-width: 768px) {
             /* Отключение тяжелых анимаций для старых телефонов */
             .particles,
@@ -609,61 +609,80 @@
             }
             
             .mobile-menu-btn {
-                display: block !important;
-                position: absolute;
-                right: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 1002;
-                pointer-events: auto;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 24px;
-                cursor: pointer;
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
-                padding: 10px;
-                width: 44px;
-                height: 44px;
+                display: block;
             }
             
-            .language-switcher {
-                margin-left: -35px;
-                order: 3;
+            .hero {
+                padding-top: 100px;
+                min-height: 80vh;
             }
             
-            .language-btn {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-
-            .language-dropdown {
-                right: 0;
-            }
-            
-            .page-header {
-                padding: 100px 0 60px;
-            }
-            
-            .page-header h1 {
+            .hero h1 {
                 font-size: 2.5em;
             }
             
-            .history-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
+            .hero p {
+                font-size: 1.1em;
             }
             
-            .mission-grid,
-            .team-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
             }
             
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+            .btn {
+                width: 250px;
+                text-align: center;
+            }
+
+            .federation-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 25px;
+                border-radius: 20px;
+            }
+
+            .federation-logo img {
+                width: 200px;
+                margin-bottom: 20px;
+            }
+
+            .federation-text {
+                margin: 0;
+            }
+
+            .federation-text h1 {
+                font-size: 22px;
+            }
+
+            .federation-text h2 {
+                font-size: 16px;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5em;
+            }
+            
+            .news-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-arrow {
+                display: none;
+            }
+            
+            .news-card,
+            .doc-card {
+                width: 320px;
+            }
+            
+            .nav-arrow {
+                display: none;
+            }
+            
+            .map-frame {
+                height: 400px;
+                margin: 0 10px;
             }
             
             .footer-content {
@@ -675,18 +694,13 @@
                 justify-content: center;
             }
 
-            .text-block p {
-                text-align: left;
-                font-size: 16px;
-            }
-
             .federation-hero {
                 margin-top: 20px;
             }
         }
 
         @media (max-width: 480px) {
-            .page-header h1 {
+            .hero h1 {
                 font-size: 2em;
             }
             
@@ -694,15 +708,16 @@
                 font-size: 2em;
             }
             
-            .stats-grid {
-                grid-template-columns: 1fr;
+            .news-card,
+            .doc-card {
+                width: 90vw;
+                margin: 0 10px;
             }
             
-            .mission-card,
-            .team-card {
-                padding: 30px 20px;
+            .btn {
+                width: 100%;
             }
-        }
+        }   
         /* Preloader */
         .preloader {
             position: fixed;
