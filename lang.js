@@ -70,6 +70,11 @@
       'leader_position_2':'вице-президент Казахстанской Федерации функционального многоборья, генеральный спонсор, директор КДЛ "Олимп".',
       'leader_position_3':'генеральный секретарь, вице-президент Казахстанской Федерации функционального многоборья.',
       'leader_position_4':'вице-президент Казахстанской Федерации функционального многоборья.',
+      // Leader names
+      'leader_name_1':'Мещеряков Николай Ильич',
+      'leader_name_2':'Сулейменов Ерлан Мельсович',
+      'leader_name_3':'Лукановский Валентин Владимирович',
+      'leader_name_4':'Джантлеев Роман Алмасович',
       // Common
       'federation_title_ru':'КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ',
       'btn_more':'Подробнее',
@@ -152,6 +157,11 @@
       'leader_position_2':'Қазақстан функционалдық көпсайыс федерациясының вице-президенті, бас демеуші, КДЛ "Олимп" директоры.',
       'leader_position_3':'Бас хатшы, Қазақстан функционалдық көпсайыс федерациясының вице-президенті.',
       'leader_position_4':'Қазақстан функционалдық көпсайыс федерациясының вице-президенті.',
+      // Leader names
+      'leader_name_1':'Мещеряков Николай Ильич',
+      'leader_name_2':'Сулейменов Ерлан Мельсович',
+      'leader_name_3':'Лукановский Валентин Владимирович',
+      'leader_name_4':'Джантлеев Роман Алмасович',
       // Common
       'federation_title_ru':'ҚАЗАҚСТАН ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ',
       'btn_more':'Толығырақ',
@@ -232,6 +242,11 @@
       'leader_position_2':'Vice President of the Kazakhstan Federation of Functional Fitness, General Sponsor, Director of KDL "Olymp".',
       'leader_position_3':'General Secretary, Vice President of the Kazakhstan Federation of Functional Fitness.',
       'leader_position_4':'Vice President of the Kazakhstan Federation of Functional Fitness.',
+      // Leader names
+      'leader_name_1':'Meshcheryakov Nikolay Ilyich',
+      'leader_name_2':'Suleimenov Yerlan Melsovich',
+      'leader_name_3':'Lukanovsky Valentin Vladimirovich',
+      'leader_name_4':'Dzhantleev Roman Almasovich',
       // Common
       'federation_title_ru':'KAZAKHSTAN FEDERATION OF FUNCTIONAL FITNESS',
       'btn_more':'Read more',
