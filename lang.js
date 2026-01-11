@@ -48,7 +48,51 @@
       'about_moving_forward':'Движение вперёд',
       'about_moving_forward_desc':'Федерация активно сотрудничает с Международной федерацией функционального фитнеса (iF3) и продолжает расширять своё присутствие на спортивной карте страны. Функциональное многоборье стремительно набирает популярность в Казахстане, объединяя спортсменов, активных людей и всех, кто выбирает движение, силу и здоровый образ жизни.',
       'about_motto':'Девиз Федерации:',
-      'about_motto_text':'«Сила. Выносливость. Единство.»'
+      'about_motto_text':'«Сила. Выносливость. Единство.»',
+      // Navigation
+      'nav_home':'Главная',
+      'nav_about':'О нас',
+      'nav_news':'Новости',
+      'nav_docs':'Документы',
+      'nav_leadership':'Наша команда',
+      'nav_media':'Медиа',
+      'nav_competitions':'Соревнования',
+      'nav_sponsor':'Генеральный спонсор',
+      'nav_partners':'Партнёры',
+      'nav_federations':'Федерации',
+      // Footer
+      'footer_info':'Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу (functional fitness) и функциональному многоборью в Республике Казахстан. Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.',
+      'footer_rights':'© 2025 Все права защищены — Казахстанская Федерация функционального многоборья',
+      // Leadership
+      'page_our_team':'Наша команда',
+      'leadership_subtitle':'Профессионалы, которые развивают спорт в стране',
+      'leader_position_1':'Президент Казахстанской Федерации функционального многоборья.',
+      'leader_position_2':'вице-президент Казахстанской Федерации функционального многоборья, генеральный спонсор, директор КДЛ "Олимп".',
+      'leader_position_3':'генеральный секретарь, вице-президент Казахстанской Федерации функционального многоборья.',
+      'leader_position_4':'вице-президент Казахстанской Федерации функционального многоборья.',
+      // Common
+      'federation_title_ru':'КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ',
+      'btn_more':'Подробнее',
+      'hero_welcome':'Добро пожаловать!',
+      'hero_description_full':'Официальный сайт Федерации функционального многоборья Республики Казахстан',
+      // Pages
+      'page_news':'Новости',
+      'news_title':'Последние новости',
+      'news_subtitle':'Актуальные события из мира функционального многоборья',
+      'docs_title':'Документы',
+      'docs_subtitle':'Официальные документы и положения федерации',
+      'page_gallery':'Галерея',
+      'page_map':'Карта залов',
+      'page_partners':'Партнёры',
+      'page_our_address':'Наш адрес',
+      'competitions_title':'Соревнования',
+      'doc_calendar':'Календарь соревнований',
+      // Continents
+      'continent_africa':'Африка',
+      'continent_americas':'Америка',
+      'continent_asia':'Азия',
+      'continent_europe':'Европа',
+      'continent_oceania':'Океания'
     },
     kz: {
       'site_title': 'ҚАЗАҚСТАН ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ','site_subtitle': 'FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN',
@@ -86,7 +130,51 @@
       'about_moving_forward':'Алға қарай қозғалыс',
       'about_moving_forward_desc':'Федерация Халықаралық функционалдық фитнес федерациясымен (iF3) белсенді ынтымақтасады және елдің спорт картасында өз қатысуын кеңейтуді жалғастырады. Функционалдық көпсайыс Қазақстанда қарқынды түрде танымал болып келеді, спортшыларды, белсенді адамдарды және қозғалысты, күшті және салауатты өмір салтын таңдайтын барлық адамдарды біріктіреді.',
       'about_motto':'Федерацияның ұраны:',
-      'about_motto_text':'«Күш. Төзімділік. Бірлік.»'
+      'about_motto_text':'«Күш. Төзімділік. Бірлік.»',
+      // Navigation
+      'nav_home':'Басты бет',
+      'nav_about':'Біз туралы',
+      'nav_news':'Жаңалықтар',
+      'nav_docs':'Құжаттар',
+      'nav_leadership':'Біздің команда',
+      'nav_media':'Медиа',
+      'nav_competitions':'Жарыстар',
+      'nav_sponsor':'Бас демеуші',
+      'nav_partners':'Серіктестер',
+      'nav_federations':'Федерациялар',
+      // Footer
+      'footer_info':'«Қазақстан функционалдық көпсайыс федерациясы» республикалық қоғамдық бірлестігі (ҚФКФ, Functional Fitness Kazakhstan) — Қазақстан Республикасында функционалдық фитнес (functional fitness) және функционалдық көпсайыс бойынша ресми басқарушы орган. Біз спортты дамытамыз, жарыстар ұйымдастырамыз және бүкіл Қазақстан бойынша спортшыларды біріктіреміз.',
+      'footer_rights':'© 2025 Барлық құқықтар қорғалған — Қазақстан функционалдық көпсайыс федерациясы',
+      // Leadership
+      'page_our_team':'Біздің команда',
+      'leadership_subtitle':'Елде спортты дамытатын мамандар',
+      'leader_position_1':'Қазақстан функционалдық көпсайыс федерациясының президенті.',
+      'leader_position_2':'Қазақстан функционалдық көпсайыс федерациясының вице-президенті, бас демеуші, КДЛ "Олимп" директоры.',
+      'leader_position_3':'Бас хатшы, Қазақстан функционалдық көпсайыс федерациясының вице-президенті.',
+      'leader_position_4':'Қазақстан функционалдық көпсайыс федерациясының вице-президенті.',
+      // Common
+      'federation_title_ru':'ҚАЗАҚСТАН ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ',
+      'btn_more':'Толығырақ',
+      'hero_welcome':'Қош келдіңіздер!',
+      'hero_description_full':'Қазақстан Республикасы функционалдық көпсайыс федерациясының ресми сайты',
+      // Pages
+      'page_news':'Жаңалықтар',
+      'news_title':'Соңғы жаңалықтар',
+      'news_subtitle':'Функционалдық көпсайыс әлемінен өзекті оқиғалар',
+      'docs_title':'Құжаттар',
+      'docs_subtitle':'Федерацияның ресми құжаттары мен ережелері',
+      'page_gallery':'Галерея',
+      'page_map':'Залдардың картасы',
+      'page_partners':'Серіктестер',
+      'page_our_address':'Біздің мекен-жайымыз',
+      'competitions_title':'Жарыстар',
+      'doc_calendar':'Жарыстар күнтізбесі',
+      // Continents
+      'continent_africa':'Африка',
+      'continent_americas':'Америка',
+      'continent_asia':'Азия',
+      'continent_europe':'Еуропа',
+      'continent_oceania':'Океания'
     },
     en: {
       'site_title': 'KAZAKHSTAN FEDERATION OF FUNCTIONAL MULTI-SPORT','site_subtitle':'FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN','Главная':'Home','О нас':'About','Новости':'News','Документы':'Documents','Руководство':'Leadership','Медиа':'Media','Соревнования':'Competitions','Достижения':'Achievements','Партнёры и спонсоры':'Partners & Sponsors','Региональное отделение':'Regional Office','Подробнее':'Read more','Наш адрес':'Our address','Вернуться на главную':'Return to home','news1_title':'Results of Astana Open Cup 2025','news1_excerpt':'On May 7 the capital hosted the second annual open tournament in functional multi-sport — Astana Open...','news1_date':'07.05.2025','news2_title':'Historic event: a Kazakh advanced to the CrossFit Games final for the first time!','news2_excerpt':'For the first time in history a Kazakh athlete reached the CrossFit Games final — the most prestigious global tournament...','news2_date':'24.08.2025','news3_title':'Kazakhstan Championship 2025 took place at the end of September!','news3_excerpt':'In September the Kazakhstan Championship 2025 took place — the country\'s main functional fitness event of the year...','news3_date':'29.09.2025','read_more':'Read more',
@@ -122,7 +210,51 @@
       'about_moving_forward':'Moving Forward',
       'about_moving_forward_desc':'The Federation actively cooperates with the International Functional Fitness Federation (iF3) and continues to expand its presence on the country\'s sports map. Functional fitness is rapidly gaining popularity in Kazakhstan, uniting athletes, active people and everyone who chooses movement, strength and a healthy lifestyle.',
       'about_motto':'Federation Motto:',
-      'about_motto_text':'"Strength. Endurance. Unity."'
+      'about_motto_text':'"Strength. Endurance. Unity."',
+      // Navigation
+      'nav_home':'Home',
+      'nav_about':'About',
+      'nav_news':'News',
+      'nav_docs':'Documents',
+      'nav_leadership':'Our Team',
+      'nav_media':'Media',
+      'nav_competitions':'Competitions',
+      'nav_sponsor':'General Sponsor',
+      'nav_partners':'Partners',
+      'nav_federations':'Federations',
+      // Footer
+      'footer_info':'The Republican Public Association "Kazakhstan Federation of Functional Fitness" (KFFK, Functional Fitness Kazakhstan) is the official governing body for functional fitness and functional multi-sport in the Republic of Kazakhstan. We develop sports, organize competitions and unite athletes throughout Kazakhstan.',
+      'footer_rights':'© 2025 All rights reserved — Kazakhstan Federation of Functional Fitness',
+      // Leadership
+      'page_our_team':'Our Team',
+      'leadership_subtitle':'Professionals who develop sports in the country',
+      'leader_position_1':'President of the Kazakhstan Federation of Functional Fitness.',
+      'leader_position_2':'Vice President of the Kazakhstan Federation of Functional Fitness, General Sponsor, Director of KDL "Olymp".',
+      'leader_position_3':'General Secretary, Vice President of the Kazakhstan Federation of Functional Fitness.',
+      'leader_position_4':'Vice President of the Kazakhstan Federation of Functional Fitness.',
+      // Common
+      'federation_title_ru':'KAZAKHSTAN FEDERATION OF FUNCTIONAL FITNESS',
+      'btn_more':'Read more',
+      'hero_welcome':'Welcome!',
+      'hero_description_full':'Official website of the Functional Fitness Federation of the Republic of Kazakhstan',
+      // Pages
+      'page_news':'News',
+      'news_title':'Latest News',
+      'news_subtitle':'Current events from the world of functional fitness',
+      'docs_title':'Documents',
+      'docs_subtitle':'Official documents and regulations of the federation',
+      'page_gallery':'Gallery',
+      'page_map':'Gyms Map',
+      'page_partners':'Partners',
+      'page_our_address':'Our Address',
+      'competitions_title':'Competitions',
+      'doc_calendar':'Competition Calendar',
+      // Continents
+      'continent_africa':'Africa',
+      'continent_americas':'Americas',
+      'continent_asia':'Asia',
+      'continent_europe':'Europe',
+      'continent_oceania':'Oceania'
     }
   };
 
