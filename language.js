@@ -182,7 +182,27 @@ const translations = {
         news8_results_top3: 'Топ-3 стран по количеству призовых мест:',
         news8_results_1st: '🥇 1 место: NORWAY и UNITED KINGDOM (по 8 медалей)',
         news8_results_2nd: '🥈 2 место: FINLAND (7 медалей)',
-        news8_results_3rd: '🥉 3 место: SWEDEN и GERMANY (по 4 медали)'
+        news8_results_3rd: '🥉 3 место: SWEDEN и GERMANY (по 4 медали)',
+        
+        // Meta теги
+        meta_title_home: 'КФФМ — Казахстанская Федерация функционального многоборья',
+        meta_description_home: 'Официальный сайт Федерации функционального многоборья Республики Казахстан. Новости, соревнования, документы и партнёры.',
+        meta_title_about: 'О нас — Казахстанская Федерация функционального многоборья',
+        meta_description_about: 'О Казахстанской Федерации функционального многоборья - наша миссия и цели',
+        meta_title_news: 'Новости — Казахстанская Федерация функционального многоборья',
+        meta_description_news: 'Актуальные новости функционального фитнеса в Казахстане',
+        meta_title_docs: 'Документы — Казахстанская Федерация функционального многоборья',
+        meta_description_docs: 'Официальные документы и положения федерации',
+        meta_title_leadership: 'Наша команда — Казахстанская Федерация функционального многоборья',
+        meta_description_leadership: 'Руководство Федерации функционального многоборья Казахстана',
+        meta_title_media: 'Медиа — Казахстанская Федерация функционального многоборья',
+        meta_description_media: 'Фото и видео с наших мероприятий',
+        meta_title_competitions: 'Соревнования — Казахстанская Федерация функционального многоборья',
+        meta_description_competitions: 'Календарь спортивных событий',
+        meta_title_partners: 'Партнёры — Казахстанская Федерация функционального многоборья',
+        meta_description_partners: 'Наши партнёры и спонсоры',
+        meta_title_federations: 'Федерации — Казахстанская Федерация функционального многоборья',
+        meta_description_federations: 'Международные федерации функционального фитнеса'
     },
     
     kz: {
@@ -376,7 +396,27 @@ const translations = {
         news8_results_top3: 'Жүлделі орындар саны бойынша топ-3 ел:',
         news8_results_1st: '🥇 1 орын: NORWAY және UNITED KINGDOM (әрқайсысы 8 медаль)',
         news8_results_2nd: '🥈 2 орын: FINLAND (7 медаль)',
-        news8_results_3rd: '🥉 3 орын: SWEDEN және GERMANY (әрқайсысы 4 медаль)'
+        news8_results_3rd: '🥉 3 орын: SWEDEN және GERMANY (әрқайсысы 4 медаль)',
+        
+        // Meta тегтері
+        meta_title_home: 'ҚФКФ — Қазақстандық функционалдық көпсайыс федерациясы',
+        meta_description_home: 'Қазақстан Республикасының функционалдық көпсайыс федерациясының ресми сайты. Жаңалықтар, жарыстар, құжаттар және серіктестер.',
+        meta_title_about: 'Біз туралы — Қазақстандық функционалдық көпсайыс федерациясы',
+        meta_description_about: 'Қазақстандық функционалдық көпсайыс федерациясы туралы - біздің миссиямыз және мақсаттарымыз',
+        meta_title_news: 'Жаңалықтар — Қазақстандық функционалдық көпсайыс федерациясы',
+        meta_description_news: 'Қазақстандағы функционалдық фитнестің өзекті жаңалықтары',
+        meta_title_docs: 'Құжаттар — Қазақстандық функционалдық көпсайыс федерациясы',
+        meta_description_docs: 'Федерацияның ресми құжаттары мен ережелері',
+        meta_title_leadership: 'Біздің команда — Қазақстандық функционалдық көпсайыс федерациясы',
+        meta_description_leadership: 'Қазақстан функционалдық көпсайыс федерациясының басшылығы',
+        meta_title_media: 'Медиа — Қазақстандық функционалдық көпсайыс федерациясы',
+        meta_description_media: 'Біздің іс-шараларымыздан фото және видео',
+        meta_title_competitions: 'Жарыстар — Қазақстандық функционалдық көпсайыс федерациясы',
+        meta_description_competitions: 'Спорттық оқиғалар күнтізбесі',
+        meta_title_partners: 'Серіктестер — Қазақстандық функционалдық көпсайыс федерациясы',
+        meta_description_partners: 'Біздің серіктестер мен демеушілер',
+        meta_title_federations: 'Федерациялар — Қазақстандық функционалдық көпсайыс федерациясы',
+        meta_description_federations: 'Функционалдық фитнестің халықаралық федерациялары'
     },
     
     en: {
@@ -560,22 +600,131 @@ const translations = {
         news8_results_top3: 'Top 3 countries by number of medals:',
         news8_results_1st: '🥇 1st place: NORWAY and UNITED KINGDOM (8 medals each)',
         news8_results_2nd: '🥈 2nd place: FINLAND (7 medals)',
-        news8_results_3rd: '🥉 3rd place: SWEDEN and GERMANY (4 medals each)'
+        news8_results_3rd: '🥉 3rd place: SWEDEN and GERMANY (4 medals each)',
+        
+        // Meta tags
+        meta_title_home: 'KFFF — Kazakhstan Functional Fitness Federation',
+        meta_description_home: 'Official website of the Functional Fitness Federation of the Republic of Kazakhstan. News, competitions, documents and partners.',
+        meta_title_about: 'About Us — Kazakhstan Functional Fitness Federation',
+        meta_description_about: 'About Kazakhstan Functional Fitness Federation - our mission and goals',
+        meta_title_news: 'News — Kazakhstan Functional Fitness Federation',
+        meta_description_news: 'Latest functional fitness news in Kazakhstan',
+        meta_title_docs: 'Documents — Kazakhstan Functional Fitness Federation',
+        meta_description_docs: 'Official documents and regulations',
+        meta_title_leadership: 'Our Team — Kazakhstan Functional Fitness Federation',
+        meta_description_leadership: 'Leadership of Kazakhstan Functional Fitness Federation',
+        meta_title_media: 'Media — Kazakhstan Functional Fitness Federation',
+        meta_description_media: 'Photos and videos from our events',
+        meta_title_competitions: 'Competitions — Kazakhstan Functional Fitness Federation',
+        meta_description_competitions: 'Sports events calendar',
+        meta_title_partners: 'Partners — Kazakhstan Functional Fitness Federation',
+        meta_description_partners: 'Our partners and sponsors',
+        meta_title_federations: 'Federations — Kazakhstan Functional Fitness Federation',
+        meta_description_federations: 'International functional fitness federations'
     }
 };
 
 // Функция перевода страницы
 function translatePage(lang) {
-    const elements = document.querySelectorAll('[data-translate]');
-    elements.forEach(element => {
+    // Обрабатываем элементы с data-translate (по ключу)
+    const elementsWithKeys = document.querySelectorAll('[data-translate]');
+    elementsWithKeys.forEach(element => {
         const key = element.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
             element.textContent = translations[lang][key];
         }
     });
     
+    // Обрабатываем элементы с data-translate-ru/kz/en (прямой перевод)
+    const elementsWithDirectTranslation = document.querySelectorAll('[data-translate-ru], [data-translate-kz], [data-translate-en]');
+    elementsWithDirectTranslation.forEach(element => {
+        let translatedText = '';
+        
+        if (lang === 'ru' && element.hasAttribute('data-translate-ru')) {
+            translatedText = element.getAttribute('data-translate-ru');
+        } else if (lang === 'kz' && element.hasAttribute('data-translate-kz')) {
+            translatedText = element.getAttribute('data-translate-kz');
+        } else if (lang === 'en' && element.hasAttribute('data-translate-en')) {
+            translatedText = element.getAttribute('data-translate-en');
+        }
+        
+        // Обновляем текст только если найден перевод
+        if (translatedText) {
+            element.textContent = translatedText;
+        }
+    });
+    
     // Сохраняем выбранный язык
     localStorage.setItem('selectedLanguage', lang);
+    
+    // Определяем текущую страницу и выбираем соответствующие ключи для meta
+    const path = window.location.pathname.toLowerCase();
+    let titleKey = 'meta_title_home';
+    let descKey = 'meta_description_home';
+    
+    if (path.includes('/about')) {
+        titleKey = 'meta_title_about';
+        descKey = 'meta_description_about';
+    } else if (path.includes('/news')) {
+        titleKey = 'meta_title_news';
+        descKey = 'meta_description_news';
+    } else if (path.includes('/docs')) {
+        titleKey = 'meta_title_docs';
+        descKey = 'meta_description_docs';
+    } else if (path.includes('/leadership')) {
+        titleKey = 'meta_title_leadership';
+        descKey = 'meta_description_leadership';
+    } else if (path.includes('/media')) {
+        titleKey = 'meta_title_media';
+        descKey = 'meta_description_media';
+    } else if (path.includes('/competitions')) {
+        titleKey = 'meta_title_competitions';
+        descKey = 'meta_description_competitions';
+    } else if (path.includes('/partners')) {
+        titleKey = 'meta_title_partners';
+        descKey = 'meta_description_partners';
+    } else if (path.includes('/federations')) {
+        titleKey = 'meta_title_federations';
+        descKey = 'meta_description_federations';
+    }
+    
+    // Обновляем title и meta теги
+    if (translations[lang]) {
+        // Title
+        if (translations[lang][titleKey]) {
+            document.title = translations[lang][titleKey];
+        }
+        
+        // Meta description
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription && translations[lang][descKey]) {
+            metaDescription.setAttribute('content', translations[lang][descKey]);
+        }
+        
+        // Open Graph title
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle && translations[lang][titleKey]) {
+            ogTitle.setAttribute('content', translations[lang][titleKey]);
+        }
+        
+        // Open Graph description
+        const ogDescription = document.querySelector('meta[property="og:description"]');
+        if (ogDescription && translations[lang][descKey]) {
+            ogDescription.setAttribute('content', translations[lang][descKey]);
+        }
+        
+        // Twitter title
+        const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twitterTitle && translations[lang][titleKey]) {
+            twitterTitle.setAttribute('content', translations[lang][titleKey]);
+        }
+        
+        // Twitter description
+        const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+        if (twitterDescription && translations[lang][descKey]) {
+            twitterDescription.setAttribute('content', translations[lang][descKey]);
+        }
+    }
     
     // Обновляем отображение текущего языка
     const currentLangDisplay = document.getElementById('currentLang');

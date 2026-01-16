@@ -400,7 +400,6 @@
                 transform: none !important;
             }
 
-            @media (max-width: 768px) {
             .navbar {
                 padding: 10px 0;
             }
@@ -511,112 +510,49 @@
                 justify-content: center;
             }
 
-            /* Мобильная адаптация */
-        @media (max-width: 768px) {
-            .navbar {
+            .winners-card {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .winners-card h2 {
+                font-size: 20px;
+            }
+
+            .winners-card li {
+                font-size: 14px;
                 padding: 10px 0;
             }
-           
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(20px);
+
+            .news-photos {
                 flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                padding-top: 50px;
-                transition: left 0.3s ease;
-                border-top: 1px solid var(--border-color);
+                gap: 15px;
             }
-           
-            .nav-menu.active {
-                left: 0;
+
+            .news-photos img {
+                width: 100% !important;
+                height: auto !important;
+                min-width: auto !important;
+                max-width: 100% !important;
+                min-height: 200px !important;
+                max-height: 300px !important;
+                object-fit: cover !important;
             }
-            .nav-menu a {
-                color: var(--text-dark);
-                padding: 15px;
-                border-bottom: 1px solid var(--border-color);
-                width: 100%;
-                text-align: center;
+
+            .news-card {
+                padding: 25px !important;
+                margin-top: 20px !important;
             }
-           
-            .mobile-menu-btn {
-                display: block;
+
+            .news-card h3 {
+                font-size: 22px !important;
             }
-           
-            .hero {
-                padding-top: 100px;
-                min-height: 80vh;
-            }
-           
-            .hero h1 {
-                font-size: 2.5em;
-            }
-           
-            .hero p {
-                font-size: 1.1em;
-            }
-           
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-           
-            .btn {
-                width: 250px;
-                text-align: center;
-            }
-            .federation-container {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px 25px;
-                border-radius: 20px;
-            }
-            .federation-logo img {
-                width: 200px;
-                margin-bottom: 20px;
-            }
-            .federation-text {
-                margin: 0;
-            }
-            .federation-text h1 {
-                font-size: 22px;
-            }
-            .federation-text h2 {
-                font-size: 16px;
-            }
-           
-            .section-title h2 {
-                font-size: 2.5em;
-            }
-           
-            .news-card,
-            .doc-card {
-                width: 320px;
-            }
-           
-            .nav-arrow {
-                display: none;
-            }
-           
-            .map-frame {
-                height: 400px;
-                margin: 0 10px;
-            }
-           
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-           
-            .footer-nav {
-                justify-content: center;
+
+            .news-card p {
+                font-size: 16px !important;
             }
         }
+
         @media (max-width: 480px) {
             .hero h1 {
                 font-size: 2em;
@@ -635,55 +571,13 @@
             .btn {
                 width: 100%;
             }
+
             .page-content {
                 padding: 20px 10px;
             }
 
             .federation-hero {
                 margin-top: 20px;
-            }
-
-            
-
-        }
-
-            
-
-            .winners-card {
-                padding: 20px;
-                margin-top: 20px;
-            }
-
-            .winners-card h2 {
-                font-size: 20px;
-            }
-
-            .winners-card li {
-                font-size: 14px;
-                padding: 10px 0;
-            }
-            .news-photos {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .news-photos img {
-                width: 100% !important;
-                height: auto !important;
-                min-width: auto !important;
-                max-width: 100% !important;
-                min-height: 200px !important;
-                max-height: 300px !important;
-                object-fit: cover !important;
-            }
-            .news-card {
-                padding: 25px !important;
-                margin-top: 20px !important;
-            }
-            .news-card h3 {
-                font-size: 22px !important;
-            }
-            .news-card p {
-                font-size: 16px !important;
             }
         }
         /* Preloader */
@@ -859,10 +753,10 @@
             border: 1px solid rgba(11, 99, 183, 0.1);
         " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 16px 48px rgba(11,99,183,0.2)'" onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 8px 32px rgba(11,99,183,0.12)'">
             <div class="news-card-inner" style="display:flex;flex-direction:column;gap:20px;">
-                <h3 style="font-size:28px;color:#0b2340;font-weight:800;margin:0;background:linear-gradient(135deg, #0b63b7 0%, #2b78b9 50%, #4facfe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+                <h3 style="font-size:28px;color:#0b2340;font-weight:800;margin:0;background:linear-gradient(135deg, #0b63b7 0%, #2b78b9 50%, #4facfe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" data-translate-ru="Историческое событие: казахстанец впервые прошёл в финал CrossFit Games!" data-translate-kz="Тарихи оқиға: қазақстандық алғаш рет CrossFit Games финалына өтті!" data-translate-en="Historic Event: Kazakhstani Qualifies for CrossFit Games Final for the First Time!">
                     Историческое событие: казахстанец впервые прошёл в финал CrossFit Games!
                 </h3>
-                <p style="color:#666666;font-size:18px;line-height:1.8;margin:0;">
+                <p style="color:#666666;font-size:18px;line-height:1.8;margin:0;" data-translate-ru="Впервые в истории спортсмен из Казахстана вышел в финал CrossFit Games — самого престижного мирового турнира. Роман Джантлеев, вице-президент Казахстанской Федерации функционального многоборья, стал первым спортсменом из Казахстана, прошедшим в финал этого легендарного соревнования. Этот результат — не только личное достижение Романа, но и важная веха в развитии функционального многоборья в нашей стране. Его пример вдохновляет новое поколение атлетов и укрепляет позиции Казахстана на мировой спортивной арене. «Это невероятная честь — представить Казахстан на CrossFit Games. За этим результатом стоит многолетний труд, вера в спорт и развитие нашей Федерации», — отметил Роман Джантлеев." data-translate-kz="Тарихта алғаш рет Қазақстаннан спортшы CrossFit Games финалына өтті — ең беделді әлемдік турнирге. Роман Джантлеев, Қазақстандық функционалдық көпсайыс федерациясының вице-президенті, осы аңызды жарыстың финалына өткен бірінші қазақстандық спортшы болды. Бұл нәтиже — тек Романның жеке жетістігі ғана емес, сонымен қатар біздің елде функционалдық көпсайыстың дамуындағы маңызды кезең. Оның үлгісі жаңа ұрпақ атлеттерді шабыттандырады және Қазақстанның әлемдік спорт аренасындағы позициясын нығайтады. «Қазақстанды CrossFit Games-те ұсыну — керемет құрмет. Бұл нәтиженің артында көп жылдық еңбек, спортқа сенім және біздің Федерацияның дамуы тұр», — деп атап өтті Роман Джантлеев." data-translate-en="For the first time in history, an athlete from Kazakhstan qualified for the CrossFit Games final — the most prestigious world tournament. Roman Dzhantleev, vice-president of the Kazakhstan Functional Fitness Federation, became the first athlete from Kazakhstan to qualify for the final of this legendary competition. This result is not only Roman's personal achievement, but also an important milestone in the development of functional fitness in our country. His example inspires a new generation of athletes and strengthens Kazakhstan's position on the world sports arena. \"It is an incredible honor to represent Kazakhstan at the CrossFit Games. Behind this result is years of hard work, faith in sports and the development of our Federation,\" noted Roman Dzhantleev.">
                      Впервые в истории спортсмен из Казахстана вышел в финал CrossFit Games — самого престижного мирового турнира.
  Роман Джантлеев, вице-президент Казахстанской Федерации функционального многоборья, стал первым спортсменом из Казахстана, прошедшим в финал этого легендарного соревнования.
 Этот результат — не только личное достижение Романа, но и важная веха в развитии функционального многоборья в нашей стране. Его пример вдохновляет новое поколение атлетов и укрепляет позиции Казахстана на мировой спортивной арене.
