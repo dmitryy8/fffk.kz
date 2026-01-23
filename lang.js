@@ -277,16 +277,34 @@
   if(!window.translateAll){
     window.translateAll = function(lang){
       try{
+        // Обработка data-translate-ru/kz/en атрибутов
+        document.querySelectorAll('[data-translate-ru], [data-translate-kz], [data-translate-en]').forEach(el=>{
+          const attr = 'data-translate-' + lang;
+          const text = el.getAttribute(attr);
+          if(text) el.textContent = text;
+        });
+        
+        // Обработка data-translate с ключами из словаря
+        document.querySelectorAll('[data-translate]').forEach(el=>{
+          const key = el.getAttribute('data-translate');
+          if(key && DICT[lang] && DICT[lang][key]) el.textContent = DICT[lang][key];
+        });
+        
+        // Обработка data-i18n-key (старый метод)
         document.querySelectorAll('[data-i18n-key]').forEach(el=>{
           const key = el.getAttribute('data-i18n-key');
           if(key && DICT[lang] && DICT[lang][key]) el.textContent = DICT[lang][key];
         });
+        
+        // Навигация
         document.querySelectorAll('nav.main-nav a, .more-menu a, nav.footer-nav a').forEach(a=>{
           const original = a.dataset.orig || a.textContent.trim();
           if(!a.dataset.orig) a.dataset.orig = original;
           const t = DICT[lang] && DICT[lang][original] ? DICT[lang][original] : original;
           a.textContent = t;
         });
+        
+        // Общие элементы
         document.querySelectorAll('button, a, h1, h2, h3, p, li, span').forEach(node=>{
           if(node.closest('[data-no-translate]')) return;
           const key = node.getAttribute && node.getAttribute('data-i18n-key');
@@ -301,20 +319,33 @@
   }
 
   function setupLangUI(){
-    const toggle = document.getElementById('langToggle');
-    const dropdown = document.getElementById('langDropdown');
-    const current = document.getElementById('langCurrent');
+    const toggle = document.getElementById('languageBtn');
+    const dropdown = document.getElementById('languageDropdown');
+    const current = document.getElementById('currentLang');
     if(!toggle || !dropdown || !current) return;
-    toggle.addEventListener('click', ()=> dropdown.style.display = dropdown.style.display==='block' ? 'none' : 'block');
-    document.addEventListener('click', (e)=>{ if(!e.target.closest('#langWrap')) dropdown.style.display='none'; });
-    dropdown.querySelectorAll('button[data-lang]').forEach(b=> b.addEventListener('click', (e)=>{
-      const lang = b.getAttribute('data-lang'); if(!lang) return;
-      localStorage.setItem('site_lang', lang);
-      current.textContent = lang.toUpperCase();
-      try{ window.translateAll(lang) }catch(e){}
-      dropdown.style.display='none';
-      setTimeout(()=>{ location.reload(); }, 120);
-    }));
+    
+    toggle.addEventListener('click', (e)=> {
+      e.stopPropagation();
+      dropdown.classList.toggle('active');
+    });
+    
+    document.addEventListener('click', (e)=>{ 
+      if(!e.target.closest('.language-switcher')) {
+        dropdown.classList.remove('active');
+      }
+    });
+    
+    dropdown.querySelectorAll('.language-option').forEach(opt=> {
+      opt.addEventListener('click', ()=>{
+        const lang = opt.getAttribute('data-lang'); 
+        if(!lang) return;
+        localStorage.setItem('site_lang', lang);
+        current.textContent = lang.toUpperCase();
+        try{ window.translateAll(lang) }catch(e){}
+        dropdown.classList.remove('active');
+      });
+    });
+    
     const saved = localStorage.getItem('site_lang') || 'ru';
     current.textContent = saved.toUpperCase();
     try{ window.translateAll(saved) }catch(e){}
