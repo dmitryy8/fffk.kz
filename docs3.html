@@ -215,6 +215,63 @@
             cursor: pointer;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
+            order: 2;
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: auto;
+            order: 1;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
+            padding: 10px;
+            display: none;
+            min-width: 150px;
+            z-index: 1001;
+        }
+
+        .language-dropdown.active {
+            display: block;
+        }
+
+        .language-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .language-option:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
         }
 
         /* Современные кнопки */
@@ -484,6 +541,20 @@
             .mobile-menu-btn {
                 display: block;
             }
+
+            .language-switcher {
+                margin-left: 15px;
+                order: 3;
+            }
+
+            .language-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .language-dropdown {
+                right: 0;
+            }
             
             .hero {
                 padding-top: 100px;
@@ -691,7 +762,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -720,16 +791,16 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_team">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -759,20 +830,18 @@
 
 
 
-
-
 <!-- Календарь: добавлена секция с изображением kalen.jpg и синей рамкой -->
   <main class="container">
     <section class="section" style="padding:24px 0;">
       <div style="background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(3,20,45,0.06);max-width:900px;margin:0 auto;text-align:center;">
-        <h3 class="doc-title" style="margin:0 0 20px 0;font-size:36px;">Календарь</h3>
+        <h3 class="doc-title" style="margin:0 0 20px 0;font-size:36px;" data-translate="calendar_title">Календарь</h3>
         <div style="display:flex;justify-content:center;flex-direction:column;align-items:center;">
           <picture>
       <source srcset="/kalen.webp" type="image/webp">
       <img src="/kalen.jpg" width="8000" height="5267" alt="Календарь мероприятий" style="width:100%;max-width:760px;height:auto;border:4px solid var(--primary-color);border-radius:8px;object-fit:cover;" loading="lazy">
     </picture>
           <div class="buttons-container" style="justify-content: center;">
-            <a href="/" class="btn btn-primary">
+            <a href="/" class="btn btn-primary" data-translate="back_home">
               <i class="fas fa-home"></i> Back to Home
             </a>
           </div>
@@ -789,12 +858,12 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -816,7 +885,7 @@
                 </div>
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
-                <p>
+                <p data-translate="footer_info">
                     <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
@@ -825,7 +894,7 @@
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>

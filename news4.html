@@ -196,6 +196,63 @@
             cursor: pointer;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
+            order: 2;
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: auto;
+            order: 1;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
+            padding: 10px;
+            display: none;
+            min-width: 150px;
+            z-index: 1001;
+        }
+
+        .language-dropdown.active {
+            display: block;
+        }
+
+        .language-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .language-option:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
         }
         /* Кнопки */
         .btn {
@@ -560,6 +617,20 @@
             .mobile-menu-btn {
                 display: block;
             }
+
+            .language-switcher {
+                margin-left: 15px;
+                order: 3;
+            }
+
+            .language-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .language-dropdown {
+                right: 0;
+            }
            
             .hero {
                 padding-top: 100px;
@@ -790,7 +861,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -819,16 +890,16 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_team">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -843,11 +914,11 @@
         <div class="federation-container">
             <div class="federation-logo left"><img src="/logo.png" width="1015" height="787" loading="lazy" alt=""></div>
             <div class="federation-text">
-                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
+                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;" data-translate="federation_name_kz">
                 ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
                 </h2>
-                <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
-                <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
+                <h1 data-translate="federation_name_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+                <h2 data-translate="federation_name_en">FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
             </div>
             <div class="federation-logo right"><img src="/sponsor.png" width="1386" height="980" loading="lazy" alt=""></div>
         </div>
@@ -877,73 +948,73 @@
             border: 1px solid rgba(11, 99, 183, 0.1);
         " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 16px 48px rgba(11,99,183,0.2)'" onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 8px 32px rgba(11,99,183,0.12)'">
             <div class="news-card-inner" style="display:flex;flex-direction:column;gap:20px;">
-                <h3 style="font-size:28px;color:#0b2340;font-weight:800;margin:0;background:linear-gradient(135deg, #0b63b7 0%, #2b78b9 50%, #4facfe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+                <h3 style="font-size:28px;color:#0b2340;font-weight:800;margin:0;background:linear-gradient(135deg, #0b63b7 0%, #2b78b9 50%, #4facfe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" data-translate="news4_page_title">
                    Чемпионат Казахстана по функциональному многоборью 2025 состоялся в конце сентября!
                 </h3>
-                <p style="color:#666666;font-size:18px;line-height:1.8;margin:0;">
+                <p style="color:#666666;font-size:18px;line-height:1.8;margin:0;" data-translate="news4_page_content">
                     27–28 сентября прошёл Чемпионат Казахстана по функциональному многоборью 2025 — главное событие года в мире функционального фитнеса страны.
                     В соревнованиях приняли участие 100 сильнейших атлетов из разных регионов Казахстана, выступивших в 6 категориях.
                     Атмосфера борьбы, поддержки и единства стала главным украшением чемпионата.
                     Федерация благодарит всех участников, судей и партнёров за вклад в развитие функционального многоборья в Казахстане!
                 </p>
-                <p style="font-weight:bold;margin-top:15px;">Генеральный спонсор:</p>
-                <p style="color:#666666;font-size:18px;line-height:1.8;margin:0;">Генеральным спонсором чемпионата Казахстана выступила компания КДЛ Олимп в лице Ерлана Сулейменова.</p>
+                <p style="font-weight:bold;margin-top:15px;" data-translate="news4_sponsor_title">Генеральный спонсор:</p>
+                <p style="color:#666666;font-size:18px;line-height:1.8;margin:0;" data-translate="news4_sponsor_text">Генеральным спонсором чемпионата Казахстана выступила компания КДЛ Олимп в лице Ерлана Сулейменова.</p>
             </div>
         </div>
 
         <!-- Карточка победителей -->
         <div class="winners-card">
-            <h2>Kazakhstan Championship 2025 Winners and Prize Winners:</h2>
+            <h2 data-translate="news4_winners_title">Kazakhstan Championship 2025 Winners and Prize Winners:</h2>
             
             <!-- Scaled Women -->
-            <div class="category-title">Scaled Women</div>
+            <div class="category-title" data-translate="news4_cat_scaled_women">Scaled Women</div>
             <ul>
-                <li class="medal-item gold">🥇 Лаура Кумарова</li>
-                <li class="medal-item silver">🥈 Вероника Махметова</li>
-                <li class="medal-item bronze">🥉 Асем Таржанова</li>
+                <li class="medal-item gold" data-translate="news4_sw1">🥇 Лаура Кумарова</li>
+                <li class="medal-item silver" data-translate="news4_sw2">🥈 Вероника Махметова</li>
+                <li class="medal-item bronze" data-translate="news4_sw3">🥉 Асем Таржанова</li>
             </ul>
             
             <!-- Scaled Men -->
-            <div class="category-title">Scaled Men</div>
+            <div class="category-title" data-translate="news4_cat_scaled_men">Scaled Men</div>
             <ul>
-                <li class="medal-item gold">🥇 Тамерлан Муханбеткалиев</li>
-                <li class="medal-item silver">🥈 Александр Бенгард</li>
-                <li class="medal-item bronze">🥉 Алишер Апеков</li>
+                <li class="medal-item gold" data-translate="news4_sm1">🥇 Тамерлан Муханбеткалиев</li>
+                <li class="medal-item silver" data-translate="news4_sm2">🥈 Александр Бенгард</li>
+                <li class="medal-item bronze" data-translate="news4_sm3">🥉 Алишер Апеков</li>
             </ul>
             
             <!-- Masters Women 35+ -->
-            <div class="category-title">Masters Women 35+</div>
+            <div class="category-title" data-translate="news4_cat_masters_women">Masters Women 35+</div>
             <ul>
-                <li class="medal-item gold">🥇 Евгения Цой</li>
-                <li class="medal-item silver">🥈 Анна Товченик</li>
-                <li class="medal-item bronze">🥉 Екатерина Гарась</li>
+                <li class="medal-item gold" data-translate="news4_mw1">🥇 Евгения Цой</li>
+                <li class="medal-item silver" data-translate="news4_mw2">🥈 Анна Товченик</li>
+                <li class="medal-item bronze" data-translate="news4_mw3">🥉 Екатерина Гарась</li>
             </ul>
             
             <!-- Masters Men 40+ -->
-            <div class="category-title">Masters Men 40+</div>
+            <div class="category-title" data-translate="news4_cat_masters_men">Masters Men 40+</div>
             <ul>
-                <li class="medal-item gold">🥇 Александр Пономарев</li>
-                <li class="medal-item silver">🥈 Антон Кущ</li>
-                <li class="medal-item bronze">🥉 Денис Мищур</li>
+                <li class="medal-item gold" data-translate="news4_mm1">🥇 Александр Пономарев</li>
+                <li class="medal-item silver" data-translate="news4_mm2">🥈 Антон Кущ</li>
+                <li class="medal-item bronze" data-translate="news4_mm3">🥉 Денис Мищур</li>
             </ul>
             
             <!-- Intermediate Women -->
-            <div class="category-title">Intermediate Women</div>
+            <div class="category-title" data-translate="news4_cat_intermediate_women">Intermediate Women</div>
             <ul>
-                <li class="medal-item gold">🥇 Карина Богатырёва</li>
-                <li class="medal-item silver">🥈 Диана Шапенова</li>
-                <li class="medal-item bronze">🥉 Марина Сытник</li>
+                <li class="medal-item gold" data-translate="news4_iw1">🥇 Карина Богатырёва</li>
+                <li class="medal-item silver" data-translate="news4_iw2">🥈 Диана Шапенова</li>
+                <li class="medal-item bronze" data-translate="news4_iw3">🥉 Марина Сытник</li>
             </ul>
             
             <!-- Intermediate Men -->
-            <div class="category-title">Intermediate Men</div>
+            <div class="category-title" data-translate="news4_cat_intermediate_men">Intermediate Men</div>
             <ul>
-                <li class="medal-item gold">🥇 Булат Нурабаев</li>
-                <li class="medal-item silver">🥈 Аскар Асенов</li>
-                <li class="medal-item bronze">🥉 Вячеслав Субботин</li>
+                <li class="medal-item gold" data-translate="news4_im1">🥇 Булат Нурабаев</li>
+                <li class="medal-item silver" data-translate="news4_im2">🥈 Аскар Асенов</li>
+                <li class="medal-item bronze" data-translate="news4_im3">🥉 Вячеслав Субботин</li>
             </ul>
             
-            <div style="margin-top: 20px; padding: 15px; background: rgba(11, 99, 183, 0.05); border-radius: 10px; font-style: italic; color: #666;">
+            <div style="margin-top: 20px; padding: 15px; background: rgba(11, 99, 183, 0.05); border-radius: 10px; font-style: italic; color: #666;" data-translate="news4_congrats">
                 Поздравляем победителей и призёров с заслуженными результатами и благодарим всех спортсменов за яркие выступления и спортивный дух!
             </div>
         </div>
@@ -959,7 +1030,7 @@
         ">
             <a href="/" class="btn btn-primary">
                 <i class="fas fa-home" style="margin-right: 8px;"></i>
-                Вернуться на главную
+                <span data-translate="back_home">Вернуться на главную</span>
             </a>
         </div>
     </div>
@@ -972,12 +1043,12 @@
                 </div>
                
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                
                 <div class="footer-socials">
@@ -1000,7 +1071,7 @@
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
                 <p>
-                    <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
+                    <span data-translate="footer_info">Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
                     Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.</span>
@@ -1008,7 +1079,7 @@
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>

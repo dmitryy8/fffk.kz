@@ -213,6 +213,63 @@
             cursor: pointer;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
+            order: 2;
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: auto;
+            order: 1;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
+            padding: 10px;
+            display: none;
+            min-width: 150px;
+            z-index: 1001;
+        }
+
+        .language-dropdown.active {
+            display: block;
+        }
+
+        .language-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .language-option:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
         }
 
        
@@ -507,6 +564,20 @@
             .mobile-menu-btn {
                 display: block;
             }
+
+            .language-switcher {
+                margin-left: 15px;
+                order: 3;
+            }
+
+            .language-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .language-dropdown {
+                right: 0;
+            }
             
             .hero {
                 padding-top: 100px;
@@ -701,7 +772,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -728,17 +799,17 @@
                         <div class="language-option" data-lang="en">🇬🇧 English</div>
                     </div>
                 </div>
-                                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_team">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -769,38 +840,38 @@
     <section style="padding: 60px 0;">
         <div class="container">
             <div style="max-width: 1000px; margin: 0 auto;">
-                <h1 style="text-align: center; color: var(--primary-color); font-size: 2.5em; margin-bottom: 40px; font-weight: 800;">
+                <h1 style="text-align: center; color: var(--primary-color); font-size: 2.5em; margin-bottom: 40px; font-weight: 800;" data-translate="fed_national_title">
                     Национальные федерации
                 </h1>
                 
                 <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow); line-height: 1.8;">
-                    <p style="margin-bottom: 25px; font-size: 1.1em; color: var(--text-dark);">
+                    <p style="margin-bottom: 25px; font-size: 1.1em; color: var(--text-dark);" data-translate="fed_national_text1">
                         Официальная Национальная федерация (НФ) признается Международной федерацией (МФ), а также правительством этой страны (Министерством спорта и/или Национальным олимпийским комитетом) для работы в своей стране. Существует только одна официальная МФ для любого вида спорта и только одна официальная НФ в каждой стране, как признается ИФ.
                     </p>
                     
-                    <p style="font-size: 1.1em; color: var(--text-dark); margin: 0;">
+                    <p style="font-size: 1.1em; color: var(--text-dark); margin: 0;" data-translate="fed_national_text2">
                         Каждый вид спорта, официально признанный в рамках Олимпийского движения, имеет руководящий орган, называемый международной федерацией (МФ), который определяет способ функционирования этого вида спорта. МФ создает общий набор правил, рейтингов и процедур (таких как правила безопасности и антидопинговые правила) и организует международные соревнования. Популяризация этого вида спорта также является функцией международных федераций. Национальные федерации преследуют те же цели, что и международные федерации, но в рамках одной страны. Они поддерживают местные клубы, соревнования и ассоциации и, как правило, отвечают за национальные сборные.
                     </p>
                 </div>
 
                 <!-- Действующие федерации -->
-                <h1 style="text-align: center; color: var(--primary-color); font-size: 2.5em; margin: 60px 0 30px 0; font-weight: 800;">
+                <h1 style="text-align: center; color: var(--primary-color); font-size: 2.5em; margin: 60px 0 30px 0; font-weight: 800;" data-translate="fed_active_title">
                     Действующие федерации
                 </h1>
                 
-                <p style="text-align: center; font-size: 1.2em; color: var(--text-dark); margin-bottom: 20px;">
+                <p style="text-align: center; font-size: 1.2em; color: var(--text-dark); margin-bottom: 20px;" data-translate="fed_active_text">
                     Международная федерация функционального фитнеса в настоящее время признает следующие национальные федерации:
                 </p>
 
                 <!-- Африка -->
-                <h2 class="continent-title">Африка</h2>
+                <h2 class="continent-title" data-translate="fed_africa">Африка</h2>
                 <div class="federations-grid">
                     <!-- Алжир -->
                     <div class="federation-card">
                         <img src="/afrika/afrika1.jpg" alt="Алжир" class="federation-logo" loading="lazy">
-                        <h4>Алжир</h4>
+                        <h4 data-translate="fed_algeria">Алжир</h4>
                         <h5>Fédération Nationale du Sport pour Tous</h5>
-                        <p><strong>Контакт:</strong> Абденур Джамель</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Абденур Джамель</p>
                         <p><strong>Email:</strong> <a href="mailto:abdenourdjamel152@gmail.com">abdenourdjamel152@gmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/profile.php?id=100057671498759" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -810,9 +881,9 @@
                     <!-- Камерун -->
                     <div class="federation-card">
                         <img src="/afrika/afrika2.jpg" alt="Камерун" class="federation-logo" loading="lazy">
-                        <h4>Камерун</h4>
-                        <h5>Академия стронгмена и множественного спорта</h5>
-                        <p><strong>Контакт:</strong> Уилфред Кебенге</p>
+                        <h4 data-translate="fed_cameroon">Камерун</h4>
+                        <h5 data-translate="fed_cameroon_name">Академия стронгмена и множественного спорта</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Уилфред Кебенге</p>
                     
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/Strongman-And-Plural-Sports-Academy" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -822,9 +893,9 @@
                     <!-- Центральноафриканская Республика -->
                     <div class="federation-card">
                         <img src="/afrika/afrika3.jpg" alt="Центральноафриканская Республика" class="federation-logo" loading="lazy">
-                        <h4>Центральноафриканская Республика</h4>
-                        <h5>Центральноафриканская федерация фитнеса</h5>
-                        <p><strong>Контакт:</strong> Ги Ле Гран Кокило</p>
+                        <h4 data-translate="fed_car">Центральноафриканская Республика</h4>
+                        <h5 data-translate="fed_car_name">Центральноафриканская федерация фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Ги Ле Гран Кокило</p>
                     
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/262137324415971/posts/839634029999628/?app=fbl" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -834,9 +905,9 @@
                     <!-- Египет -->
                     <div class="federation-card">
                         <img src="/afrika/afrika4.jpg" alt="Египет" class="federation-logo" loading="lazy">
-                        <h4>Египет</h4>
-                        <h5>Египетская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Адам Эль Зогби</p>
+                        <h4 data-translate="fed_egypt">Египет</h4>
+                        <h5 data-translate="fed_egypt_name">Египетская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Адам Эль Зогби</p>
                         <p><strong>Email:</strong> <a href="mailto:adam.elzoghby@gmail.com">adam.elzoghby@gmail.com</a></p>
                     
                         <div class="federation-socials">
@@ -848,17 +919,17 @@
                     <!-- Гана -->
                     <div class="federation-card">
                         <img src="/afrika/afrika5.jpg" alt="Гана" class="federation-logo" loading="lazy">
-                        <h4>Гана</h4>
-                        <h5>Функциональная спортивная лига Гана</h5>
-                        <p><strong>Контакт:</strong> Чарльз Овусу-Анса</p>
+                        <h4 data-translate="fed_ghana">Гана</h4>
+                        <h5 data-translate="fed_ghana_name">Функциональная спортивная лига Гана</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Чарльз Овусу-Анса</p>
                     </div>
 
                     <!-- Ливия -->
                     <div class="federation-card">
                         <img src="/afrika/afrika6.jpg" alt="Ливия" class="federation-logo" loading="lazy">
-                        <h4>Ливия</h4>
-                        <h5>Ливийская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Фаузи Эль Арби</p>
+                        <h4 data-translate="fed_libya">Ливия</h4>
+                        <h5 data-translate="fed_libya_name">Ливийская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Фаузи Эль Арби</p>
                         <p><strong>Email:</strong> <a href="mailto:Fitarbi@gmail.com">Fitarbi@gmail.com</a></p>
                     
                         <div class="federation-socials">
@@ -870,9 +941,9 @@
                     <!-- Маврикий -->
                     <div class="federation-card">
                         <img src="/afrika/afrika7.jpg" alt="Маврикий" class="federation-logo" loading="lazy">
-                        <h4>Маврикий</h4>
-                        <h5>Федерация функционального фитнеса Маврикия</h5>
-                        <p><strong>Контакт:</strong> Тауфик Яунбокус</p>
+                        <h4 data-translate="fed_mauritius">Маврикий</h4>
+                        <h5 data-translate="fed_mauritius_name">Федерация функционального фитнеса Маврикия</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Тауфик Яунбокус</p>
                         <p><strong>Email:</strong> <a href="mailto:tawfiq.jaunbocus@yahoo.com">tawfiq.jaunbocus@yahoo.com</a></p>
                     
                         <div class="federation-socials">
@@ -883,9 +954,9 @@
                     <!-- Южная Африка -->
                     <div class="federation-card">
                         <img src="/afrika/afrika8.jpg" alt="Южная Африка" class="federation-logo" loading="lazy">
-                        <h4>Южная Африка</h4>
-                        <h5>Федерация функционального спорта ЮАР</h5>
-                        <p><strong>Контакт:</strong> Петролен ле Ру</p>
+                        <h4 data-translate="fed_south_africa">Южная Африка</h4>
+                        <h5 data-translate="fed_south_africa_name">Федерация функционального спорта ЮАР</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Петролен ле Ру</p>
                     
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/safunctionalsportsfederation" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -895,14 +966,14 @@
                 </div>
 
                 <!-- Северная и Южная Америка -->
-                <h2 class="continent-title">Северная и Южная Америка</h2>
+                <h2 class="continent-title" data-translate="fed_americas">Северная и Южная Америка</h2>
                 <div class="federations-grid">
                     <!-- Аргентина -->
                     <div class="federation-card">
                         <img src="/america/amerika1.jpg" alt="Аргентина" class="federation-logo smaller" loading="lazy">
-                        <h4>Аргентина</h4>
+                        <h4 data-translate="fed_argentina">Аргентина</h4>
                         <h5>Asociación Argentina de Fitness Funcional</h5>
-                        <p><strong>Контакт:</strong> Рики Вагнер</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Рики Вагнер</p>
                         <p><strong>Email:</strong> <a href="mailto:crossfitq21@gmail.com">crossfitq21@gmail.com</a></p>
                     
                         <div class="federation-socials">
@@ -914,9 +985,9 @@
                     <!-- Аруба -->
                     <div class="federation-card">
                         <img src="/america/amerika2.jpg" alt="Аруба" class="federation-logo smaller" loading="lazy">
-                        <h4>Аруба</h4>
-                        <h5>Федерация функционального фитнеса Арубы</h5>
-                        <p><strong>Контакт:</strong> Уилл Эразмус</p>
+                        <h4 data-translate="fed_aruba">Аруба</h4>
+                        <h5 data-translate="fed_aruba_name">Федерация функционального фитнеса Арубы</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Уилл Эразмус</p>
                         <p><strong>Email:</strong> <a href="mailto:william_erasmus@hotmail.com">william_erasmus@hotmail.com</a></p>
                     
                         <div class="federation-socials">
@@ -928,8 +999,8 @@
                     <!-- Барбадос -->
                     <div class="federation-card">
                         <img src="/america/amerika3.jpg" alt="Барбадос" class="federation-logo" loading="lazy">
-                        <h4>Барбадос</h4>
-                        <h5>Барбадосский альянс функционального фитнеса</h5>
+                        <h4 data-translate="fed_barbados">Барбадос</h4>
+                        <h5 data-translate="fed_barbados_name">Барбадосский альянс функционального фитнеса</h5>
                         <p><strong>Email:</strong> <a href="mailto:mjimaa@gmail.com">mjimaa@gmail.com</a></p>
                     
                         <div class="federation-socials">
@@ -940,9 +1011,9 @@
                     <!-- Бразилия -->
                     <div class="federation-card">
                         <img src="/america/amerika4.jpg" alt="Бразилия" class="federation-logo" loading="lazy">
-                        <h4>Бразилия</h4>
+                        <h4 data-translate="fed_brazil">Бразилия</h4>
                         <h5>Associação Brasileira de Fitness Funcional</h5>
-                        <p><strong>Контакт:</strong> Тьяго Пиреш Дос Сантос Араужу</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Тьяго Пиреш Дос Сантос Араужу</p>
                         <p><strong>Email:</strong> <a href="mailto:federacaocef3@gmail.com">federacaocef3@gmail.com</a></p>
                     
                         <div class="federation-socials">
@@ -953,9 +1024,9 @@
                     <!-- Канада -->
                     <div class="federation-card">
                         <img src="/america/amerika5.jpg" alt="Канада" class="federation-logo smaller" loading="lazy">
-                        <h4>Канада</h4>
-                        <h5>Канадская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Вероник Пакетт</p>
+                        <h4 data-translate="fed_canada">Канада</h4>
+                        <h5 data-translate="fed_canada_name">Канадская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Вероник Пакетт</p>
                         <p><strong>Email:</strong> <a href="mailto:info@functionalfitnessfederation.ca">info@functionalfitnessfederation.ca</a></p>
                     
                         <div class="federation-socials">
@@ -967,16 +1038,16 @@
                     <!-- Чили -->
                     <div class="federation-card">
                         <img src="/america/amerika6.jpg" alt="Чили" class="federation-logo" loading="lazy">
-                        <h4>Чили</h4>
-                        <h5>Чилийская федерация функционального фитнеса</h5>
+                        <h4 data-translate="fed_chile">Чили</h4>
+                        <h5 data-translate="fed_chile_name">Чилийская федерация функционального фитнеса</h5>
                     </div>
 
                     <!-- Коста-Рика -->
                     <div class="federation-card">
                         <img src="/america/amerika7.jpg" alt="Коста-Рика" class="federation-logo" loading="lazy">
-                        <h4>Коста-Рика</h4>
+                        <h4 data-translate="fed_costa_rica">Коста-Рика</h4>
                         <h5>Asociación Deportiva De Functional Fitness</h5>
-                        <p><strong>Контакт:</strong> Эстебан Кастро</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Эстебан Кастро</p>
                     
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/Asociaci%C3%B3n-Deportiva-de-Entrenamiento-Funcional-y-Fuerza-de-Costa-Rica-102006519391357" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -987,7 +1058,7 @@
                     <!-- Эквадор -->
                     <div class="federation-card">
                         <img src="/america/amerika8.jpg" alt="Эквадор" class="federation-logo" loading="lazy">
-                        <h4>Эквадор</h4>
+                        <h4 data-translate="fed_ecuador">Эквадор</h4>
                         <h5>Federación Ecuatoriana De Fitness Functional</h5>
                         <p><strong>Email:</strong> <a href="mailto:sebastianrol@yahoo.com">sebastianrol@yahoo.com</a></p>
                     
@@ -999,9 +1070,9 @@
                     <!-- Сальвадор -->
                     <div class="federation-card">
                         <img src="/america/amerika9.jpg" alt="Сальвадор" class="federation-logo" loading="lazy">
-                        <h4>Сальвадор</h4>
+                        <h4 data-translate="fed_salvador">Сальвадор</h4>
                         <h5>Federacion Salvadoreña De Entrenamiento Funcional</h5>
-                        <p><strong>Контакт:</strong> Виктор Лопес</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Виктор Лопес</p>
                     
                         <div class="federation-socials">
                             <a href="https://instagram.com/fesef.sv" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1011,7 +1082,7 @@
                     <!-- Гватемала -->
                     <div class="federation-card">
                         <img src="/america/amerika10.jpg" alt="Гватемала" class="federation-logo" loading="lazy">
-                        <h4>Гватемала</h4>
+                        <h4 data-translate="fed_guatemala">Гватемала</h4>
                         <h5>Asociación de Functional Fitness de Guatemala</h5>
                         <p><strong>Email:</strong> <a href="mailto:info@functionalguatemala.com">info@functionalguatemala.com</a></p>
                     
@@ -1023,9 +1094,9 @@
                     <!-- Мексика -->
                     <div class="federation-card">
                         <img src="/america/amerika11.jpg" alt="Мексика" class="federation-logo smaller" loading="lazy">
-                        <h4>Мексика</h4>
-                        <h5>Мексиканская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Пауло Сезар Дуэнас Бургос</p>
+                        <h4 data-translate="fed_mexico">Мексика</h4>
+                        <h5 data-translate="fed_mexico_name">Мексиканская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Пауло Сезар Дуэнас Бургос</p>
                         <p><strong>Email:</strong> <a href="mailto:hello@mexicof3.com">hello@mexicof3.com</a></p>
                     
                         <div class="federation-socials">
@@ -1037,7 +1108,7 @@
                     <!-- Панама -->
                     <div class="federation-card">
                         <img src="/america/amerika12.jpg" alt="Панама" class="federation-logo" loading="lazy">
-                        <h4>Панама</h4>
+                        <h4 data-translate="fed_panama">Панама</h4>
                         <h5>Asociación Panamena de Acondicionamientos y Entremamientos Funcionales</h5>
                         <p><strong>Email:</strong> <a href="mailto:apaefpanama@gmail.com">apaefpanama@gmail.com</a></p>
                     
@@ -1050,9 +1121,9 @@
                     <!-- Пуэрто-Рико -->
                     <div class="federation-card">
                         <img src="/america/amerika13.jpg" alt="Пуэрто-Рико" class="federation-logo" loading="lazy">
-                        <h4>Пуэрто-Рико</h4>
-                        <h5>Федерация функционального фитнеса Пуэрто-Рико</h5>
-                        <p><strong>Контакт:</strong> Херардо Торрес</p>
+                        <h4 data-translate="fed_puerto_rico">Пуэрто-Рико</h4>
+                        <h5 data-translate="fed_puerto_rico_name">Федерация функционального фитнеса Пуэрто-Рико</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Херардо Торрес</p>
                         <p><strong>Email:</strong> <a href="mailto:puertoricof3@gmail.com">puertoricof3@gmail.com</a></p>
                     
                         <div class="federation-socials">
@@ -1063,9 +1134,9 @@
                     <!-- США -->
                     <div class="federation-card">
                         <img src="/america/amerika14.jpg" alt="США" class="federation-logo" loading="lazy">
-                        <h4>Соединенные Штаты Америки</h4>
-                        <h5>США Функциональный фитнес</h5>
-                        <p><strong>Контакт:</strong> Кейсон Моррис</p>
+                        <h4 data-translate="fed_usa">Соединенные Штаты Америки</h4>
+                        <h5 data-translate="fed_usa_name">США Функциональный фитнес</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Кейсон Моррис</p>
                         <p><strong>Email:</strong> <a href="mailto:mo@usafunctionafitness.org">mo@usafunctionafitness.org</a></p>
                     
                         <div class="federation-socials">
@@ -1077,7 +1148,7 @@
                     <!-- Венесуэла -->
                     <div class="federation-card">
                         <img src="/america/amerika15.jpg" alt="Венесуэла" class="federation-logo" loading="lazy">
-                        <h4>Венесуэла</h4>
+                        <h4 data-translate="fed_venezuela">Венесуэла</h4>
                         <h5>Asociación Venezolana de Fitness Funcional Competitivo</h5>
                         <p><strong>Email:</strong> <a href="mailto:ronel@yourxhq.com">ronel@yourxhq.com</a></p>
                     
@@ -1088,14 +1159,14 @@
                 </div>
 
                 <!-- Азия -->
-                <h2 class="continent-title">Азия</h2>
+                <h2 class="continent-title" data-translate="fed_asia">Азия</h2>
                 <div class="federations-grid">
                     <!-- Китай -->
                     <div class="federation-card">
                         <img src="/asia/asia1.jpg" alt="Китай" class="federation-logo" loading="lazy">
-                        <h4>Китай</h4>
-                        <h5>Китайская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Запомните так</p>
+                        <h4 data-translate="fed_china">Китай</h4>
+                        <h5 data-translate="fed_china_name">Китайская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Запомните так</p>
                         <p><strong>Email:</strong> <a href="mailto:markcx@hotmail.com">markcx@hotmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/chinafunctionalfitness" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1106,17 +1177,17 @@
                     <!-- Гонконг -->
                     <div class="federation-card">
                         <img src="/asia/asia2.jpg" alt="Гонконг" class="federation-logo" loading="lazy">
-                        <h4>Гонконг</h4>
-                        <h5>Гонконгская ассоциация спортивных достижений и силовой и кондиционной подготовки (HKSPSCA)</h5>
-                        <p><strong>Контакт:</strong> Д-р Барри Ки</p>
+                        <h4 data-translate="fed_hong_kong">Гонконг</h4>
+                        <h5 data-translate="fed_hong_kong_name">Гонконгская ассоциация спортивных достижений и силовой и кондиционной подготовки (HKSPSCA)</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Д-р Барри Ки</p>
                     </div>
 
                     <!-- Индия -->
                     <div class="federation-card">
                         <img src="/asia/asia3.jpg" alt="Индия" class="federation-logo" loading="lazy">
-                        <h4>Индия</h4>
-                        <h5>Федерация фитнес-спорта Индии</h5>
-                        <p><strong>Контакт:</strong> Лата Шарма</p>
+                        <h4 data-translate="fed_india">Индия</h4>
+                        <h5 data-translate="fed_india_name">Федерация фитнес-спорта Индии</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Лата Шарма</p>
                         <p><strong>Email:</strong> <a href="mailto:india.i3f@gmail.com">india.i3f@gmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/FitnessSportsIndia/" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1127,9 +1198,9 @@
                     <!-- Иран -->
                     <div class="federation-card">
                         <img src="/asia/asia4.jpg" alt="Иран" class="federation-logo" loading="lazy">
-                        <h4>Иран</h4>
-                        <h5>Иранская ассоциация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Аскер Азадян</p>
+                        <h4 data-translate="fed_iran">Иран</h4>
+                        <h5 data-translate="fed_iran_name">Иранская ассоциация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Аскер Азадян</p>
                         <p><strong>Email:</strong> <a href="mailto:info@irf3.ir">info@irf3.ir</a></p>
                         <div class="federation-socials">
                             <a href="https://instagram.com/Functionalfitness_iran" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1139,17 +1210,17 @@
                     <!-- Япония -->
                     <div class="federation-card">
                         <img src="/asia/asia5.jpg" alt="Япония" class="federation-logo" loading="lazy">
-                        <h4>Япония</h4>
-                        <h5>Всеяпонская федерация функционального фитнеса</h5>
+                        <h4 data-translate="fed_japan">Япония</h4>
+                        <h5 data-translate="fed_japan_name">Всеяпонская федерация функционального фитнеса</h5>
                         <p><strong>Email:</strong> <a href="mailto:abruce@manitoba-group.com">abruce@manitoba-group.com</a></p>
                     </div>
 
                     <!-- Казахстан -->
                     <div class="federation-card">
                         <img src="/asia/asia6.jpg" alt="Казахстан" class="federation-logo" loading="lazy">
-                        <h4>Казахстан</h4>
-                        <h5>Федерация функционального фитнеса Казахстан</h5>
-                        <p><strong>Контакт:</strong> Николай Мехшеряков</p>
+                        <h4 data-translate="fed_kazakhstan">Казахстан</h4>
+                        <h5 data-translate="fed_kazakhstan_name">Федерация функционального фитнеса Казахстан</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Николай Мехшеряков</p>
                         <p><strong>Email:</strong> <a href="mailto:fffk2023@mail.ru">fffk2023@mail.ru</a></p>
                         <div class="federation-socials">
                             <a href="https://instagram.com/fffk.20_23" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1159,9 +1230,9 @@
                     <!-- Кыргызская Республика -->
                     <div class="federation-card">
                         <img src="/asia/asia7.jpg" alt="Кыргызская Республика" class="federation-logo" loading="lazy">
-                        <h4>Кыргызская Республика</h4>
-                        <h5>Федерация соревнований по функциональному многоборью Кыргызской Республики</h5>
-                        <p><strong>Контакт:</strong> Дмитрий Голыдбин</p>
+                        <h4 data-translate="fed_kyrgyzstan">Кыргызская Республика</h4>
+                        <h5 data-translate="fed_kyrgyzstan_name">Федерация соревнований по функциональному многоборью Кыргызской Республики</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Дмитрий Голыдбин</p>
                         <p><strong>Email:</strong> <a href="mailto:ffm.kg312@gmail.com">ffm.kg312@gmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://instagram.com/ffm_kg" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1171,18 +1242,18 @@
                     <!-- Ливан -->
                     <div class="federation-card">
                         <img src="/asia/asia8.jpg" alt="Ливан" class="federation-logo" loading="lazy">
-                        <h4>Ливан</h4>
-                        <h5>Ливанская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Жак Рустом</p>
+                        <h4 data-translate="fed_lebanon">Ливан</h4>
+                        <h5 data-translate="fed_lebanon_name">Ливанская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Жак Рустом</p>
                         <p><strong>Email:</strong> <a href="mailto:jack.rustom@gmail.com">jack.rustom@gmail.com</a></p>
                     </div>
 
                     <!-- Монголия -->
                     <div class="federation-card">
                         <img src="/asia/asia9.jpg" alt="Монголия" class="federation-logo" loading="lazy">
-                        <h4>Монголия</h4>
-                        <h5>Монгольская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Dorjnamjim Dorjsembe</p>
+                        <h4 data-translate="fed_mongolia">Монголия</h4>
+                        <h5 data-translate="fed_mongolia_name">Монгольская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Dorjnamjim Dorjsembe</p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/ganinvitational" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
                             <a href="https://instagram.com/mongoliaf3" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1192,41 +1263,41 @@
                     <!-- Пакистан -->
                     <div class="federation-card">
                         <img src="/asia/asia10.jpg" alt="Пакистан" class="federation-logo" loading="lazy">
-                        <h4>Пакистан</h4>
-                        <h5>Пакистанская федерация функционального фитнеса</h5>
+                        <h4 data-translate="fed_pakistan">Пакистан</h4>
+                        <h5 data-translate="fed_pakistan_name">Пакистанская федерация функционального фитнеса</h5>
                         <p><strong>Email:</strong> <a href="mailto:khawarmateen@gmail.com">khawarmateen@gmail.com</a></p>
                     </div>
 
                     <!-- Саудовская Аравия -->
                     <div class="federation-card">
                         <img src="/asia/asia11.jpg" alt="Саудовская Аравия" class="federation-logo" loading="lazy">
-                        <h4>Саудовская Аравия</h4>
-                        <h5>Саудовская федерация спорта для всех</h5>
-                        <p><strong>Контакт:</strong> Ахмед Альджандул</p>
+                        <h4 data-translate="fed_saudi">Саудовская Аравия</h4>
+                        <h5 data-translate="fed_saudi_name">Саудовская федерация спорта для всех</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Ахмед Альджандул</p>
                         <p><strong>Email:</strong> <a href="mailto:amaljandoul@sfa.sa">amaljandoul@sfa.sa</a></p>
                     </div>
 
                     <!-- Южная Корея -->
                     <div class="federation-card">
                         <img src="/asia/asia12.jpg" alt="Южная Корея" class="federation-logo" loading="lazy">
-                        <h4>Южная Корея</h4>
-                        <h5>Корейская ассоциация функционального фитнеса</h5>
+                        <h4 data-translate="fed_south_korea">Южная Корея</h4>
+                        <h5 data-translate="fed_south_korea_name">Корейская ассоциация функционального фитнеса</h5>
                         <p><strong>Email:</strong> <a href="mailto:tukkong5655@gmail.com">tukkong5655@gmail.com</a></p>
                     </div>
 
                     <!-- Шри-Ланка -->
                     <div class="federation-card">
                         <img src="/asia/asia13.jpg" alt="Шри-Ланка" class="federation-logo" loading="lazy">
-                        <h4>Шри-Ланка</h4>
-                        <h5>Федерация функционального фитнеса Шри-Ланки</h5>
+                        <h4 data-translate="fed_sri_lanka">Шри-Ланка</h4>
+                        <h5 data-translate="fed_sri_lanka_name">Федерация функционального фитнеса Шри-Ланки</h5>
                     </div>
 
                     <!-- Узбекистан -->
                     <div class="federation-card">
                         <img src="/asia/asia14.jpg" alt="Узбекистан" class="federation-logo" loading="lazy">
-                        <h4>Узбекистан</h4>
+                        <h4 data-translate="fed_uzbekistan">Узбекистан</h4>
                         <h5>O'zbekiston Funksional Ko'pkurash Federatsiyasi</h5>
-                        <p><strong>Контакт:</strong> Ганиев Мамиржон Джамолдинович</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Ганиев Мамиржон Джамолдинович</p>
                         <p><strong>Email:</strong> <a href="mailto:murojaat@fkkf.uz">murojaat@fkkf.uz</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/fkkfuz" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1236,14 +1307,14 @@
                 </div>
 
                 <!-- Европа -->
-                <h2 class="continent-title">Европа</h2>
+                <h2 class="continent-title" data-translate="fed_europe">Европа</h2>
                 <div class="federations-grid">
                     <!-- Андорра -->
                     <div class="federation-card">
                         <img src="/europe/europe 1.jpg" alt="Андорра" class="federation-flag" loading="lazy">
-                        <h4>Андорра</h4>
-                        <h5>Функциональный фитнес в Андорре</h5>
-                        <p><strong>Контакт:</strong> Мануэль Арройо</p>
+                        <h4 data-translate="fed_andorra">Андорра</h4>
+                        <h5 data-translate="fed_andorra_name">Функциональный фитнес в Андорре</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Мануэль Арройо</p>
                         <div class="federation-socials">
                             <a href="https://instagram.com/andorrafunctionalfitness" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
                         </div>
@@ -1252,9 +1323,9 @@
                     <!-- Австрия -->
                     <div class="federation-card">
                         <img src="/europe/europe 2.jpg" alt="Австрия" class="federation-flag" loading="lazy">
-                        <h4>Австрия</h4>
+                        <h4 data-translate="fed_austria">Австрия</h4>
                         <h5>Österreichischer Functional Fitness Bundesverband</h5>
-                        <p><strong>Контакт:</strong> Даниэль Ян</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Даниэль Ян</p>
                         <div class="federation-socials">
                             <a href="https://instagram.com/Austrian.functional.fitness" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
                         </div>
@@ -1263,9 +1334,9 @@
                     <!-- Беларусь -->
                     <div class="federation-card">
                         <img src="/europe/europe 3.jpg" alt="Беларусь" class="federation-flag" loading="lazy">
-                        <h4>Беларусь</h4>
-                        <h5>ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ РБ</h5>
-                        <p><strong>Контакт:</strong> Денис Князюк</p>
+                        <h4 data-translate="fed_belarus">Беларусь</h4>
+                        <h5 data-translate="fed_belarus_name">ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ РБ</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Денис Князюк</p>
                         <p><strong>Email:</strong> <a href="mailto:belarusffm@gmail.com">belarusffm@gmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/bffm.by" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1276,9 +1347,9 @@
                     <!-- Бельгия -->
                     <div class="federation-card">
                         <img src="/europe/europe 4.jpg" alt="Бельгия" class="federation-flag" loading="lazy">
-                        <h4>Бельгия</h4>
+                        <h4 data-translate="fed_belgium">Бельгия</h4>
                         <h5>Belgische Functionele Fitness Federatie</h5>
-                        <p><strong>Контакт:</strong> Тим Рейнарт</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Тим Рейнарт</p>
                         <p><strong>Email:</strong> <a href="mailto:info@b3f.be">info@b3f.be</a></p>
                         <div class="federation-socials">
                             <a href="https://www.instagram.com/b3f_be/" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1288,8 +1359,8 @@
                     <!-- Болгария -->
                     <div class="federation-card">
                         <img src="/europe/europe 5.jpg" alt="Болгария" class="federation-flag" loading="lazy">
-                        <h4>Болгария</h4>
-                        <h5>Болгарская ассоциация функционального фитнеса</h5>
+                        <h4 data-translate="fed_bulgaria">Болгария</h4>
+                        <h5 data-translate="fed_bulgaria_name">Болгарская ассоциация функционального фитнеса</h5>
                         <p><strong>Email:</strong> <a href="mailto:gravitysofia@gmail.com">gravitysofia@gmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/ffbulgaria" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1300,7 +1371,7 @@
                     <!-- Чешская Республика -->
                     <div class="federation-card">
                         <img src="/europe/europe 6.jpg" alt="Чешская Республика" class="federation-flag" loading="lazy">
-                        <h4>Чешская Республика</h4>
+                        <h4 data-translate="fed_czech">Чешская Республика</h4>
                         <h5>Ceská Federace Funkcního Fitness</h5>
                         <p><strong>Email:</strong> <a href="mailto:info@cfff.cz">info@cfff.cz</a></p>
                         <div class="federation-socials">
@@ -1312,9 +1383,9 @@
                     <!-- Дания -->
                     <div class="federation-card">
                         <img src="/europe/europe 7.png" alt="Дания" class="federation-flag" loading="lazy">
-                        <h4>Дания</h4>
-                        <h5>Датская федерация гимнастики и фитнеса</h5>
-                        <p><strong>Контакт:</strong> Томас Фросиг Ларсен</p>
+                        <h4 data-translate="fed_denmark">Дания</h4>
+                        <h5 data-translate="fed_denmark_name">Датская федерация гимнастики и фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Томас Фросиг Ларсен</p>
                         <p><strong>Email:</strong> <a href="mailto:tfl@gymdanmark.dk">tfl@gymdanmark.dk</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/GymDanmark" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1324,9 +1395,9 @@
                     <!-- Фарерские о-ва -->
                     <div class="federation-card">
                         <img src="/europe/europe 8.png" alt="Фарерские о-ва" class="federation-flag" loading="lazy">
-                        <h4>Фарерские о-ва</h4>
+                        <h4 data-translate="fed_faroe">Фарерские о-ва</h4>
                         <h5>Føroya Styrkisamband</h5>
-                        <p><strong>Контакт:</strong> Хейни Хатун</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Хейни Хатун</p>
                         <p><strong>Email:</strong> <a href="mailto:fss@fss.fo">fss@fss.fo</a></p>
                         <div class="federation-socials">
                             <a href="https://facebook.com/fin2f" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1337,9 +1408,9 @@
                     <!-- Финляндия -->
                     <div class="federation-card">
                         <img src="/europe/europe 9.jpg" alt="Финляндия" class="federation-flag" loading="lazy">
-                        <h4>Финляндия</h4>
-                        <h5>Финляндия Функциональный Фитнес</h5>
-                        <p><strong>Контакт:</strong> Суви Карьялайнен</p>
+                        <h4 data-translate="fed_finland">Финляндия</h4>
+                        <h5 data-translate="fed_finland_name">Финляндия Функциональный Фитнес</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Суви Карьялайнен</p>
                         <p><strong>Email:</strong> <a href="mailto:info@fin2f.fi">info@fin2f.fi</a></p>
                         <div class="federation-socials">
                             <a href="https://facebook.com/fin2f" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1350,9 +1421,9 @@
                     <!-- Франция -->
                     <div class="federation-card">
                         <img src="/europe/europe 10.jpg" alt="Франция" class="federation-flag" loading="lazy">
-                        <h4>Франция</h4>
-                        <h5>Французская ассоциация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Бенджамин Моро</p>
+                        <h4 data-translate="fed_france">Франция</h4>
+                        <h5 data-translate="fed_france_name">Французская ассоциация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Бенджамин Моро</p>
                         <p><strong>Email:</strong> <a href="mailto:contact@af3.fr">contact@af3.fr</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/assofunctionalfitnessfr/" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1363,9 +1434,9 @@
                     <!-- Грузия -->
                     <div class="federation-card">
                         <img src="/europe/europe 11.jpg" alt="Грузия" class="federation-flag" loading="lazy">
-                        <h4>Грузия</h4>
-                        <h5>Федерация функционального фитнеса Грузии</h5>
-                        <p><strong>Контакт:</strong> Иване Эргемлидзе</p>
+                        <h4 data-translate="fed_georgia">Грузия</h4>
+                        <h5 data-translate="fed_georgia_name">Федерация функционального фитнеса Грузии</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Иване Эргемлидзе</p>
                         <p><strong>Email:</strong> <a href="mailto:info@gf3.com">info@gf3.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.instagram.com/g_n_f_3" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1375,7 +1446,7 @@
                     <!-- Германия -->
                     <div class="federation-card">
                         <img src="/europe/europe 12.jpg" alt="Германия" class="federation-flag" loading="lazy">
-                        <h4>Германия</h4>
+                        <h4 data-translate="fed_germany">Германия</h4>
                         <h5>Deutscher Bundesverband Funktionaler Fitness</h5>
                         <p><strong>Email:</strong> <a href="mailto:mail@dbvff.de">mail@dbvff.de</a></p>
                         <div class="federation-socials">
@@ -1387,9 +1458,9 @@
                     <!-- Греция -->
                     <div class="federation-card">
                         <img src="/europe/europe 13.jpg" alt="Греция" class="federation-flag" loading="lazy">
-                        <h4>Греция</h4>
-                        <h5>Греческая федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Николас Волиотис</p>
+                        <h4 data-translate="fed_greece">Греция</h4>
+                        <h5 data-translate="fed_greece_name">Греческая федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Николас Волиотис</p>
                         <p><strong>Email:</strong> <a href="mailto:hellenicf3@gmail.com">hellenicf3@gmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.instagram.com/hellenicf3/" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1399,9 +1470,9 @@
                     <!-- Венгрия -->
                     <div class="federation-card">
                         <img src="/europe/europe 14.jpg" alt="Венгрия" class="federation-flag" loading="lazy">
-                        <h4>Венгрия</h4>
-                        <h5>Венгерская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Габор Торок</p>
+                        <h4 data-translate="fed_hungary">Венгрия</h4>
+                        <h5 data-translate="fed_hungary_name">Венгерская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Габор Торок</p>
                         <p><strong>Email:</strong> <a href="mailto:info@hunf3.com">info@hunf3.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/FunkcionalisFitneszversenyzesiSzovetseg" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1412,7 +1483,7 @@
                     <!-- Исландия -->
                     <div class="federation-card">
                         <img src="/europe/europe 15.jpg" alt="Исландия" class="federation-flag" loading="lazy">
-                        <h4>Исландия</h4>
+                        <h4 data-translate="fed_iceland">Исландия</h4>
                         <h5>Íslenska Hreyfihreystisambandið</h5>
                         <p><strong>Email:</strong> <a href="mailto:coach@kevindon.com">coach@kevindon.com</a></p>
                         <div class="federation-socials">
@@ -1424,8 +1495,8 @@
                     <!-- Ирландия -->
                     <div class="federation-card">
                         <img src="/europe/europe 16.jpg" alt="Ирландия" class="federation-flag" loading="lazy">
-                        <h4>Ирландия</h4>
-                        <h5>Федерация фитнеса Ирландии</h5>
+                        <h4 data-translate="fed_ireland">Ирландия</h4>
+                        <h5 data-translate="fed_ireland_name">Федерация фитнеса Ирландии</h5>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/IrelandFF/" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
                             <a href="https://instagram.com/irelandff" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1435,7 +1506,7 @@
                     <!-- Италия -->
                     <div class="federation-card">
                         <img src="/europe/europe 17.jpg" alt="Италия" class="federation-flag" loading="lazy">
-                        <h4>Италия</h4>
+                        <h4 data-translate="fed_italy">Италия</h4>
                         <h5>Associazione Functional Fitness Italia</h5>
                         <p><strong>Email:</strong> <a href="mailto:functionalfitnessitalia@gmail.com">functionalfitnessitalia@gmail.com</a></p>
                         <div class="federation-socials">
@@ -1447,9 +1518,9 @@
                     <!-- Джерси -->
                     <div class="federation-card">
                         <img src="/europe/europe 18.jpg" alt="Джерси" class="federation-flag" loading="lazy">
-                        <h4>Джерси</h4>
-                        <h5>Ассоциация функционального фитнеса Джерси</h5>
-                        <p><strong>Контакт:</strong> Джо Мерфи</p>
+                        <h4 data-translate="fed_jersey">Джерси</h4>
+                        <h5 data-translate="fed_jersey_name">Ассоциация функционального фитнеса Джерси</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Джо Мерфи</p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/jerseyfunctionalfitnessassociation" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
                         </div>
@@ -1458,9 +1529,9 @@
                     <!-- Латвия -->
                     <div class="federation-card">
                         <img src="/europe/europe 19.jpg" alt="Латвия" class="federation-flag" loading="lazy">
-                        <h4>Латвия</h4>
+                        <h4 data-translate="fed_latvia">Латвия</h4>
                         <h5>Latvijas Funkcionālā Fitnesa Federācija</h5>
-                        <p><strong>Контакт:</strong> Артур Нехайенко</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Артур Нехайенко</p>
                         <p><strong>Email:</strong> <a href="mailto:anehajenko@gmail.com">anehajenko@gmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/LatvianFFF/" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1471,9 +1542,9 @@
                     <!-- Литва -->
                     <div class="federation-card">
                         <img src="/europe/europe 20.jpg" alt="Литва" class="federation-flag" loading="lazy">
-                        <h4>Литва</h4>
-                        <h5>Литовская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Игорь Кузнецов</p>
+                        <h4 data-translate="fed_lithuania">Литва</h4>
+                        <h5 data-translate="fed_lithuania_name">Литовская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Игорь Кузнецов</p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/Lithuanian-Functional-Fitness-Federation-100321441902263" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
                         </div>
@@ -1482,9 +1553,9 @@
                     <!-- Люксембург -->
                     <div class="federation-card">
                         <img src="/europe/europe 21.jpg" alt="Люксембург" class="federation-flag" loading="lazy">
-                        <h4>Люксембург</h4>
+                        <h4 data-translate="fed_luxembourg">Люксембург</h4>
                         <h5>Fédération Luxembourgeoise de Fitness Fonctionnel (FLFF)</h5>
-                        <p><strong>Контакт:</strong> Мэнди Лоус</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Мэнди Лоус</p>
                         <div class="federation-socials">
                             <a href="https://www.instagram.com/flff_lu/" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
                         </div>
@@ -1506,9 +1577,9 @@
                     <!-- Португалия -->
                     <div class="federation-card">
                         <img src="/europe/europe 23.jpg" alt="Португалия" class="federation-flag" loading="lazy">
-                        <h4>Португалия</h4>
+                        <h4 data-translate="fed_portugal">Португалия</h4>
                         <h5>Federação de Fitness Funcional de Portugal</h5>
-                        <p><strong>Контакт:</strong> Тьяго Гальвао</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Тьяго Гальвао</p>
                         <p><strong>Email:</strong> <a href="mailto:Geral@f3p.pt">Geral@f3p.pt</a></p>
                         <div class="federation-socials">
                             <a href="https://instagram.com/f3portugal" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1518,8 +1589,8 @@
                     <!-- Россия -->
                     <div class="federation-card">
                         <img src="/europe/europe 24.jpeg" alt="Россия" class="federation-flag" loading="lazy">
-                        <h4>Россия</h4>
-                        <h5>Федерация функционального многоборья</h5>
+                        <h4 data-translate="fed_russia">Россия</h4>
+                        <h5 data-translate="fed_russia_name">Федерация функционального многоборья</h5>
                         <p><strong>Email:</strong> <a href="mailto:vseffm@gmail.com">vseffm@gmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://facebook.com//ffm.ru" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1530,7 +1601,7 @@
                     <!-- Сербия -->
                     <div class="federation-card">
                         <img src="/europe/europe 25.jpg" alt="Сербия" class="federation-flag" loading="lazy">
-                        <h4>Сербия</h4>
+                        <h4 data-translate="fed_serbia">Сербия</h4>
                         <h5>Srpska Funkcionalna Fitnes Federacija</h5>
                         <p><strong>Email:</strong> <a href="mailto:office.s3f@gmail.com">office.s3f@gmail.com</a></p>
                         <div class="federation-socials">
@@ -1542,9 +1613,9 @@
                     <!-- Словакия -->
                     <div class="federation-card">
                         <img src="/europe/europe 26.png" alt="Словакия" class="federation-flag" loading="lazy">
-                        <h4>Словакия</h4>
+                        <h4 data-translate="fed_slovakia">Словакия</h4>
                         <h5>Slovenská Asociácia Funkcného Fitness</h5>
-                        <p><strong>Контакт:</strong> Роберт Рыбанский</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Роберт Рыбанский</p>
                         <p><strong>Email:</strong> <a href="mailto:slovakaff@gmail.com">slovakaff@gmail.com</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/profile.php?id=61566117756937" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1555,9 +1626,9 @@
                     <!-- Словения -->
                     <div class="federation-card">
                         <img src="/europe/europe 27.jpg" alt="Словения" class="federation-flag" loading="lazy">
-                        <h4>Словения</h4>
+                        <h4 data-translate="fed_slovenia">Словения</h4>
                         <h5>Fitnes Zveza Slovenije</h5>
-                        <p><strong>Контакт:</strong> Наташа Теран</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Наташа Теран</p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/fitneszvezaslovenije/" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
                             <a href="https://www.instagram.com/fitnes_zveza_slovenije" target="_blank"><img src="/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy"></a>
@@ -1567,9 +1638,9 @@
                     <!-- Испания -->
                     <div class="federation-card">
                         <img src="/europe/europe 28.jpg" alt="Испания" class="federation-flag" loading="lazy">
-                        <h4>Испания</h4>
-                        <h5>Испанская ассоциация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Алехандро Гомес</p>
+                        <h4 data-translate="fed_spain">Испания</h4>
+                        <h5 data-translate="fed_spain_name">Испанская ассоциация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Алехандро Гомес</p>
                         <p><strong>Email:</strong> <a href="mailto:info@fedeff.es">info@fedeff.es</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/SF3.Spain/" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1580,9 +1651,9 @@
                     <!-- Швеция -->
                     <div class="federation-card">
                         <img src="/europe/europe 29.png" alt="Швеция" class="federation-flag" loading="lazy">
-                        <h4>Швеция</h4>
+                        <h4 data-translate="fed_sweden">Швеция</h4>
                         <h5>Svenska Förbundet för Funktionell Fitness</h5>
-                        <p><strong>Контакт:</strong> Дженни Бекман</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Дженни Бекман</p>
                         <p><strong>Email:</strong> <a href="mailto:info@swe3f.se">info@swe3f.se</a></p>
                         <div class="federation-socials">
                             <a href="https://facebook.com/swe3f" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1593,18 +1664,18 @@
                     <!-- Швейцария -->
                     <div class="federation-card">
                         <img src="/europe/europe 30.jpg" alt="Швейцария" class="federation-flag" loading="lazy">
-                        <h4>Швейцария</h4>
-                        <h5>Швейцарская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Алекс Шенк</p>
+                        <h4 data-translate="fed_switzerland">Швейцария</h4>
+                        <h5 data-translate="fed_switzerland_name">Швейцарская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Алекс Шенк</p>
                         <p><strong>Email:</strong> <a href="mailto:info@swissfunctionalfitness.ch">info@swissfunctionalfitness.ch</a></p>
                     </div>
 
                     <!-- Нидерланды -->
                     <div class="federation-card">
                         <img src="/europe/europe 31.jpg" alt="Нидерланды" class="federation-flag" loading="lazy">
-                        <h4>Нидерланды</h4>
+                        <h4 data-translate="fed_netherlands">Нидерланды</h4>
                         <h5>Nationale Functionele Fitness Federatie</h5>
-                        <p><strong>Контакт:</strong> Пол Ленгкик</p>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Пол Ленгкик</p>
                         <p><strong>Email:</strong> <a href="mailto:secretariaat@n3f.nl">secretariaat@n3f.nl</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/profile.php?id=61555761957922" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1615,8 +1686,8 @@
                     <!-- Великобритания -->
                     <div class="federation-card">
                         <img src="/europe/europe 32.jpg" alt="Великобритания" class="federation-flag" loading="lazy">
-                        <h4>Великобритания</h4>
-                        <h5>Британская федерация функционального фитнеса</h5>
+                        <h4 data-translate="fed_uk">Великобритания</h4>
+                        <h5 data-translate="fed_uk_name">Британская федерация функционального фитнеса</h5>
                         <p><strong>Email:</strong> <a href="mailto:hello@bf3.sport">hello@bf3.sport</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/britishfunctionalfitness" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1626,14 +1697,14 @@
                 </div>
 
                 <!-- Океания -->
-                <h2 class="continent-title">Океания</h2>
+                <h2 class="continent-title" data-translate="fed_oceania">Океания</h2>
                 <div class="federations-grid">
                     <!-- Австралия -->
                     <div class="federation-card">
                         <img src="/europe/okeanaria 1.jpg" alt="Австралия" class="federation-flag" loading="lazy">
-                        <h4>Австралия</h4>
-                        <h5>Австралийская федерация функционального фитнеса</h5>
-                        <p><strong>Контакт:</strong> Мел Робинсон</p>
+                        <h4 data-translate="fed_australia">Австралия</h4>
+                        <h5 data-translate="fed_australia_name">Австралийская федерация функционального фитнеса</h5>
+                        <p><strong data-translate="fed_contact">Контакт:</strong> Мел Робинсон</p>
                         <p><strong>Email:</strong> <a href="mailto:info@afff.org.au">info@afff.org.au</a></p>
                         <div class="federation-socials">
                             <a href="https://www.facebook.com/australianfunctionalfitness" target="_blank"><img src="/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy"></a>
@@ -1655,12 +1726,12 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -1683,15 +1754,15 @@
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
                 <p>
-                    <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
+                    <span data-translate="footer_info">Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
-                    Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.
+                    Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.</span>
                 </p>
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>

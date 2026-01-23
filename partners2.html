@@ -216,6 +216,63 @@
             cursor: pointer;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
+            order: 2;
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: auto;
+            order: 1;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
+            padding: 10px;
+            display: none;
+            min-width: 150px;
+            z-index: 1001;
+        }
+
+        .language-dropdown.active {
+            display: block;
+        }
+
+        .language-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .language-option:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
         }
 
         /* Современные кнопки */
@@ -549,6 +606,20 @@
                 display: block;
             }
 
+            .language-switcher {
+                margin-left: 15px;
+                order: 3;
+            }
+
+            .language-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .language-dropdown {
+                right: 0;
+            }
+
             .federation-container {
                 flex-direction: column;
                 text-align: center;
@@ -738,7 +809,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="preloader_text">Загрузка...</div>
         </div>
     </div>
 
@@ -767,16 +838,16 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_leadership">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -790,11 +861,11 @@
         <div class="federation-container">
             <div class="federation-logo left"><img src="/logo.png" width="1015" height="787" loading="lazy" alt=""></div>
             <div class="federation-text">
-                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
+                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;" data-translate="fed_title_kz">
                 ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
                 </h2>
-                <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
-                <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
+                <h1 data-translate="fed_title_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+                <h2 data-translate="fed_title_en">FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
             </div>
             <div class="federation-logo right"><img src="/sponsor.png" width="1386" height="980" loading="lazy" alt=""></div>
         </div>
@@ -803,7 +874,7 @@
     <!-- Основной контент -->
     <main class="page-content">
         <section class="section fade-in">
-            <h1 class="page-title">Партнёры</h1>
+            <h1 class="page-title" data-translate="partners2_title">Партнёры</h1>
             
             <!-- Карточка партнёра WOD Friends -->
             <div class="partner-card">
@@ -815,30 +886,30 @@
                     <div class="partner-content">
                         <h2 class="partner-title">WOD Friends</h2>
                         
-                        <p class="partner-text">
-                            WOD Friends is the official partner of the Functional Fitness Federation of Kazakhstan. The company specializes in equipment and accessories for CrossFit, functional training and strength sports.
+                        <p class="partner-text" data-translate="partners2_wod_p1">
+                            WOD Friends — официальный партнёр Казахстанской Федерации функционального многоборья. Компания специализируется на оборудовании и аксессуарах для кроссфита, функциональных тренировок и силовых видов спорта.
                         </p>
                         
-                        <p class="partner-text">
-                            WOD Friends' mission is to support the development of CrossFit and functional fitness in Kazakhstan, helping athletes of all levels train in comfortable and safe conditions. The company's range includes professional sports equipment, clothing, accessories and sports equipment tested by athletes and coaches.
+                        <p class="partner-text" data-translate="partners2_wod_p2">
+                            Миссия WOD Friends — поддерживать развитие кроссфита и функционального фитнеса в Казахстане, помогая спортсменам любого уровня тренироваться в комфортных и безопасных условиях. В ассортименте компании — профессиональное спортивное оборудование, одежда, аксессуары и инвентарь, проверенные атлетами и тренерами.
                         </p>
                         
-                        <p class="partner-text">
-                            Thanks to WOD Friends, Federation competition participants gain access to quality equipment, as well as prizes and support during events.
+                        <p class="partner-text" data-translate="partners2_wod_p3">
+                            Благодаря WOD Friends участники соревнований Федерации получают доступ к качественному инвентарю, а также призы и поддержку во время мероприятий.
                         </p>
                         
-                        <p class="partner-text">
-                            The company representative is Vladimir Smirnov, an enthusiast and promoter of functional training, who actively develops the brand in Kazakhstan and CIS countries.
+                        <p class="partner-text" data-translate="partners2_wod_p4">
+                            Представитель компании — Владимир Смирнов, энтузиаст и популяризатор функциональных тренировок, активно развивающий бренд в Казахстане и странах СНГ.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="buttons-container">
                 <a href="https://wodfriends.kz" target="_blank" class="btn btn-wodfriends">
-                    <i class="fas fa-external-link-alt"></i> Visit WODfriends Website
+                    <i class="fas fa-external-link-alt"></i> <span data-translate="partners2_visit_wod">Посетить сайт WODfriends</span>
                 </a>
                 <a href="/" class="btn btn-primary">
-                    <i class="fas fa-home"></i> Back to Home
+                    <i class="fas fa-home"></i> <span data-translate="partners2_back_home">На главную</span>
                 </a>
             </div>
            
@@ -854,12 +925,12 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -881,8 +952,8 @@
                 </div>
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
-                <p>
-                    <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
+                <p data-translate="footer_info">
+                    Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
                     Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.
@@ -890,7 +961,7 @@
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>
@@ -1013,4 +1084,3 @@
     </script>
     <script src="/lang.js?v=20260123095747" defer></script>
 </body>
-</html>

@@ -685,6 +685,72 @@
             opacity: 0.9;
         }
     
+        /* Language Switcher */
+        .language-switcher {
+            position: relative;
+            margin-left: 20px;
+        }
+        
+        .language-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .language-btn i {
+            font-size: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .language-dropdown {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            min-width: 140px;
+            z-index: 1001;
+        }
+        
+        .language-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .language-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            color: #0b2340;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .language-option:hover {
+            background: #f0f4f8;
+        }
     </style>
 </head>
 <body>
@@ -693,7 +759,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -722,16 +788,16 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_team">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -763,21 +829,21 @@
 
  <div class="page-content">
   <section class="section">
-      <h1 class="doc-title">Astana Open Cup Regulations</h1>
+      <h1 class="doc-title" data-translate="astana_open_cup_title">Astana Open Cup Regulations</h1>
   <div class="doc-card">
        
-        <p>Publication Date: <strong>08.01.2026</strong></p>
+        <p><span data-translate="publication_date">Дата публикации:</span> <strong>08.01.2026</strong></p>
         <div style="margin-top:20px;overflow:hidden;">
           <iframe src="/astanaopencup.pdf" id="poloIframe" width="100%" height="800" style="border:3px solid #000;border-radius:8px;max-width:1000px;box-sizing:border-box;margin:0 auto;display:block;" title="Положение Чемпионата" scrolling="no"></iframe>
         </div>
         <div class="buttons-container">
-          <a href="/" class="btn btn-primary">
+          <a href="/" class="btn btn-primary" data-translate="back_home">
             <i class="fas fa-home" style="margin-right: 8px;"></i>
-            Back to Home
+            Вернуться на главную
           </a>
-          <a href="/astanaopencup.pdf" download class="btn btn-secondary">
+          <a href="/astanaopencup.pdf" download class="btn btn-secondary" data-translate="download_doc">
             <i class="fas fa-download" style="margin-right: 8px;"></i>
-            Download Document
+            Скачать документ
           </a>
         </div>
       </div>
@@ -792,12 +858,12 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -819,7 +885,7 @@
                 </div>
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
-                <p>
+                <p data-translate="footer_info">
                     <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
@@ -828,11 +894,12 @@
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>
 
+    <script src="/lang.js"></script>
     <script>
         // Глобальные переменные
         let currentNewsIndex = 0;
@@ -940,8 +1007,6 @@
             createParticles();
             initNavigation();
             initScrollAnimations();
-            initNewsCarousel();
-            initDocsCarousel();
             
             // Приветственное сообщение через 2 секунды
             setTimeout(() => {
@@ -956,61 +1021,15 @@
         document.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
             startY = e.touches[0].clientY;
-        });
+        }, { passive: true });
 
-        document.addEventListener('touchend', (e) => {
-            if (!startX || !startY) return;
-            
-            const endX = e.changedTouches[0].clientX;
-            const endY = e.changedTouches[0].clientY;
-            
-            const diffX = startX - endX;
-            const diffY = startY - endY;
-            
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                const target = e.target.closest('.news-grid, .docs-grid');
-                if (target) {
-                    if (diffX > 0) {
-                        // Свайп влево - прокрутка вправо
-                        target.scrollBy({ left: 420, behavior: 'smooth' });
-                    } else {
-                        // Свайп вправо - прокрутка влево
-                        target.scrollBy({ left: -420, behavior: 'smooth' });
-                    }
-                }
-            }
-            
-            startX = 0;
-            startY = 0;
-        });
-        </script>
-    <script>
-        // Контроль времени загрузки preloader (минимум 300ms, максимум 2000ms)
-        const preloaderStartTime = Date.now();
-        const minLoadTime = 300;
-        const maxLoadTime = 2000;
-
+        // Preloader
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
             if (preloader) {
-                const elapsedTime = Date.now() - preloaderStartTime;
-                const remainingTime = Math.max(minLoadTime - elapsedTime, 0);
-                const hideTime = Math.min(remainingTime, maxLoadTime - elapsedTime);
-                
-                setTimeout(() => {
-                    preloader.classList.add('hidden');
-                }, hideTime);
-            }
-        });
-
-        // Автоматическое скрытие через 2 секунды, даже если страница не загрузилась
-        setTimeout(() => {
-            const preloader = document.getElementById('preloader');
-            if (preloader && !preloader.classList.contains('hidden')) {
                 preloader.classList.add('hidden');
             }
-        }, maxLoadTime);
+        });
     </script>
-    <script src="/lang.js?v=20260123095747" defer></script>
 </body>
 </html>

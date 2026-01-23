@@ -216,6 +216,63 @@
             cursor: pointer;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
+            order: 2;
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: auto;
+            order: 1;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
+            padding: 10px;
+            display: none;
+            min-width: 150px;
+            z-index: 1001;
+        }
+
+        .language-dropdown.active {
+            display: block;
+        }
+
+        .language-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .language-option:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
         }
 
         /* Современные кнопки */
@@ -546,8 +603,7 @@
         .federation-text{text-align:center;flex:1;margin:0 30px}
         .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
         .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
-
-      
+     
         /* Футер */
         .footer {
             background: var(--primary-color);
@@ -632,6 +688,18 @@
             scroll-behavior: smooth;
         }
 
+        /* Анимация появления элементов */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Мобильная адаптация */
         @media (max-width: 768px) {
             /* Отключение тяжелых анимаций для старых телефонов */
@@ -683,6 +751,20 @@
             
             .mobile-menu-btn {
                 display: block;
+            }
+
+            .language-switcher {
+                margin-left: 15px;
+                order: 3;
+            }
+
+            .language-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .language-dropdown {
+                right: 0;
             }
             
             .hero {
@@ -991,7 +1073,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -1020,16 +1102,16 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_team">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -1043,11 +1125,11 @@
         <div class="federation-container">
             <div class="federation-logo left"><img src="/logo.png" width="1015" height="787" loading="lazy" alt=""></div>
             <div class="federation-text">
-                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
+                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;" data-translate="federation_name_kz">
                 ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
                 </h2>
-                <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
-                <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
+                <h1 data-translate="federation_name_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+                <h2 data-translate="federation_name_en">FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
             </div>
             <div class="federation-logo right"><img src="/sponsor.png" width="1386" height="980" loading="lazy" alt=""></div>
         </div>
@@ -1068,16 +1150,16 @@
                     </div>
                     
                     <div class="sponsor-content">
-                        <p class="sponsor-text">
-                            The General Sponsor of the Functional Fitness Federation of the Republic of Kazakhstan is the KDL Olymp medical laboratory network, represented by the company's General Director Suleimenov Erlan Melsovich.
+                        <p class="sponsor-text" data-translate="partners_intro1">
+                            Генеральным спонсором Федерации функционального многоборья Республики Казахстан является сеть медицинских лабораторий КДЛ «ОЛИМП» в лице генерального директора компании Сулейменова Ерлана Мельсовича.
                         </p>
-                        <p class="sponsor-text">
-                            The independent network of clinical diagnostic laboratories OLYMP has been operating in the laboratory diagnostics market since January 2007. Over the years of successful work, the company has established itself as a reliable partner in healthcare, providing millions of residents of Kazakhstan with accurate and timely research results.
+                        <p class="sponsor-text" data-translate="partners_intro2">
+                            Независимая сеть клинико-диагностических лабораторий «ОЛИМП» работает на рынке лабораторной диагностики с января 2007 года. За годы успешной работы компания зарекомендовала себя как надёжный партнёр в сфере здравоохранения, обеспечивая миллионы жителей Казахстана точными и своевременными результатами исследований.
                         </p>
                         
                         <div class="sponsor-button-container">
                             <a href="https://www.kdlolymp.kz/" target="_blank" rel="noopener" class="btn-sponsor">
-                                <span class="btn-text" data-translate-ru='Перейти на сайт КДЛ "ОЛИМП"' data-translate-kz='КДЛ "ОЛИМП" сайтына өту' data-translate-en='Visit KDL "OLYMP" Website'>Visit KDL "OLYMP" Website</span>
+                                <span class="btn-text" data-translate="partners_visit_site">Перейти на сайт КДЛ "ОЛИМП"</span>
                                 <span class="btn-icon"><i class="fas fa-external-link-alt"></i></span>
                                 <div class="btn-particles"></div>
                             </a>
@@ -1097,7 +1179,7 @@
 
         <!-- Дополнительная информация о КДЛ ОЛИМП -->
         <section class="section">
-            <div class="sponsor-text">
+            <div class="sponsor-text" data-translate="partners_kdl_info">
                 <p>Сегодня КДЛ «ОЛИМП» — это крупнейшая частная лабораторная сеть в стране, включающая более 600 процедурных кабинетов и 20 современных лабораторий, оснащённых высокотехнологичным оборудованием ведущих мировых производителей. Благодаря внедрению инновационных решений и строгому контролю качества, лаборатория обеспечивает высокий уровень достоверности и доступности своих услуг для населения всех регионов Казахстана.</p>
                 <p>Миссия компании заключается в предоставлении качественной, быстрой и доступной лабораторной диагностики, основанной на принципах профессионализма, ответственности и заботы о пациентах. КДЛ «ОЛИМП» активно развивает культуру профилактики заболеваний, повышая уровень медицинской осведомлённости и доверия к современным методам диагностики.</p>
             </div>
@@ -1113,14 +1195,14 @@
             </div>
             
             <!-- Заключительный текст о партнерстве -->
-            <div class="sponsor-text">
-                <p>The Functional Fitness Federation of the Republic of Kazakhstan and CDL 'OLYMP' are united by common values - the desire for a healthy, active and strong society. The company, being a recognized leader in laboratory diagnostics, consistently implements initiatives aimed at developing mass sports, improving health culture and strengthening the well-being of Kazakhstanis.
+            <div class="sponsor-text" data-translate="partners_partnership">
+                <p>Федерация функционального многоборья Республики Казахстан и КДЛ «ОЛИМП» объединены общими ценностями — стремлением к здоровому, активному и сильному обществу. Компания, являясь признанным лидером в области лабораторной диагностики, последовательно реализует инициативы, направленные на развитие массового спорта, улучшение культуры здоровья и укрепление благополучия казахстанцев.
 
-Sharing the values of functional fitness - strength, endurance, determination and the pursuit of self-improvement, CDL 'OLYMP' makes a significant contribution to strengthening the health of the nation and forming a sustainable culture of active lifestyle in the country.
+Разделяя ценности функционального многоборья — силу, выносливость, решимость и стремление к самосовершенствованию, КДЛ «ОЛИМП» вносит весомый вклад в укрепление здоровья нации и формирование устойчивой культуры активного образа жизни в стране.
 
-Within the framework of strategic partnership, CDL 'OLYMP' acts as the general sponsor of the Functional Fitness Federation of the Republic of Kazakhstan, providing support in organizing competitions, developing sports infrastructure and popularizing functional fitness among the sports community.
+В рамках стратегического партнёрства КДЛ «ОЛИМП» выступает в качестве генерального спонсора Федерации функционального многоборья Республики Казахстан, обеспечивая поддержку в проведении соревнований, развитии спортивной инфраструктуры и популяризации функционального многоборья среди спортивного сообщества.
 
-The partnership with CDL 'OLYMP' reflects the common goals and mission of the Federation - strengthening the health of the nation, developing the country's sports potential and educating a strong, disciplined and active generation of Kazakhstan.</p>
+Партнёрство с КДЛ «ОЛИМП» отражает общие цели и миссию Федерации — укрепление здоровья нации, развитие спортивного потенциала страны и воспитание сильного, дисциплинированного и активного поколения Казахстана.</p>
             </div>
         </section>
     </main>
@@ -1134,12 +1216,12 @@ The partnership with CDL 'OLYMP' reflects the common goals and mission of the Fe
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -1162,15 +1244,15 @@ The partnership with CDL 'OLYMP' reflects the common goals and mission of the Fe
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
                 <p>
-                    <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
+                    <span data-translate="footer_info">Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
-                    Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.
+                    Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.</span>
                 </p>
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>

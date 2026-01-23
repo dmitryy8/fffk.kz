@@ -802,6 +802,68 @@
             font-weight: 500;
             opacity: 0.9;
         }
+
+        /* Language Switcher Styles */
+        .language-switcher {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            min-width: 150px;
+            z-index: 1001;
+        }
+
+        .language-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+
+        .language-option {
+            padding: 12px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            font-weight: 500;
+            transition: background 0.2s ease;
+        }
+
+        .language-option:hover {
+            background: #f5f5f5;
+        }
     
     </style>
 </head>
@@ -811,7 +873,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -839,16 +901,16 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_team">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -872,12 +934,12 @@
     </section>
     <!-- Заголовок О нас -->
     <div style="text-align: center; margin: 20px 0 10px 0;">
-        <h1 style="font-size: 3em; color: #0b63b7; font-weight: 800; margin: 0;">О нас</h1>
+        <h1 style="font-size: 3em; color: #0b63b7; font-weight: 800; margin: 0;" data-translate="about_title">О нас</h1>
     </div>
 
     <!-- Текстовый блок -->
     <div class="text-block">
-        <p>
+        <p data-translate="about_intro">
             Добро пожаловать на официальный сайт Федерации функционального многоборья Республики Казахстан! Мы - часть международного спортивного сообщества iF3 и развиваем функциональное многоборье в Казахстане как современное, динамичное и доступное каждому направление, объединяющее людей, стремящихся к силе, выносливости и здоровью.
         </p>
     </div>
@@ -886,8 +948,8 @@
     <section class="section">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Наша миссия</h2>
-                <p>Популяризация и развитие функционального многоборья в Казахстане</p>
+                <h2 data-translate="mission_title">Наша миссия</h2>
+                <p data-translate="mission_subtitle">Популяризация и развитие функционального многоборья в Казахстане</p>
             </div>
             
             <div class="mission-grid">
@@ -895,9 +957,8 @@
                     <div class="mission-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Здоровая нация</h3>
-                    <p>Формируем культуру движения, силы и выносливости.
-Продвигаем ценности активного и осознанного образа жизни среди людей всех возрастов - от детей до ветеранов спорта.</p>
+                    <h3 data-translate="mission_health_title">Здоровая нация</h3>
+                    <p data-translate="mission_health_text">Формируем культуру движения, силы и выносливости. Продвигаем ценности активного и осознанного образа жизни среди людей всех возрастов - от детей до ветеранов спорта.</p>
                 </div>
                 
                 <div class="mission-card fade-in">
@@ -914,17 +975,16 @@
                             </g>
                         </svg>
                     </div>
-                    <h3>Олимпийское признание</h3>
-                    <p>Поддерживаем развитие спорта на международной арене и представляем Казахстан в составе мирового сообщества iF3.
-Работаем над признанием функционального многоборья как олимпийского вида спорта.</p>
+                    <h3 data-translate="mission_olympic_title">Олимпийское признание</h3>
+                    <p data-translate="mission_olympic_text">Поддерживаем развитие спорта на международной арене и представляем Казахстан в составе мирового сообщества iF3. Работаем над признанием функционального многоборья как олимпийского вида спорта.</p>
                 </div>
                 
                 <div class="mission-card fade-in">
                     <div class="mission-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <h3>Развитие и популяризация спорта</h3>
-                    <p>Создаём условия для роста спортсменов, проведения национальных и международных турниров, развития спортивных клубов и сообществ по всей стране.</p>
+                    <h3 data-translate="mission_development_title">Развитие и популяризация спорта</h3>
+                    <p data-translate="mission_development_text">Создаём условия для роста спортсменов, проведения национальных и международных турниров, развития спортивных клубов и сообществ по всей стране.</p>
                 </div>
             </div>
         </div>
@@ -935,48 +995,43 @@
         <div class="container">
             <div class="history-content">
                 <div class="history-text fade-in">
-                    <h2>Наша история</h2>
-                    <b>Функциональное многоборье</b><p> - современный, динамично развивающийся вид спорта, основанный на выполнении функциональных движений с весом собственного тела, свободными отягощениями и циклическими упражнениями.
-Комплексы выполняются непрерывно на время, что позволяет проверить силу, скорость, координацию, выносливость и устойчивость духа спортсмена.</p>
+                    <h2 data-translate="history_title">Наша история</h2>
+                    <b data-translate="history_functional">Функциональное многоборье</b><p data-translate="history_functional_text"> - современный, динамично развивающийся вид спорта, основанный на выполнении функциональных движений с весом собственного тела, свободными отягощениями и циклическими упражнениями. Комплексы выполняются непрерывно на время, что позволяет проверить силу, скорость, координацию, выносливость и устойчивость духа спортсмена.</p>
 
-<p>Главная идея функционального многоборья - всестороннее развитие человека, способного проявлять физическую силу, ментальную устойчивость и командный дух в любых условиях.
-Это спорт, который воспитывает характер и объединяет людей всех возрастов вокруг стремления к здоровью, дисциплине и личному росту.</p>
-<b>Создание Федерации</b>
-<p>Республиканское общественное объединение
-«Казахстанская федерация функционального многоборья»
-было основано 8 сентября 2023 года в городе Астана решением Учредительного съезда.</p>
+<p data-translate="history_idea">Главная идея функционального многоборья - всестороннее развитие человека, способного проявлять физическую силу, ментальную устойчивость и командный дух в любых условиях. Это спорт, который воспитывает характер и объединяет людей всех возрастов вокруг стремления к здоровью, дисциплине и личному росту.</p>
 
-<b>Руководство Федерации:</b>
-	<p>Президент: Мещеряков Николай Ильич</p>
-	<p>Вице-президент, Генеральный директор сети КДЛ «Олимп» и Генеральный спонсор Федерации: Сулейменов Ерлан Мельсович</p>
-	<p>Вице-президент и Генеральный секретарь: Лукановский Валентин Владимирович</p>
-	<p>Вице-президент: Джантлеев Роман Алмасович</p>
+<b data-translate="history_creation">Создание Федерации</b>
+<p data-translate="history_creation_text">Республиканское общественное объединение «Казахстанская федерация функционального многоборья» было основано 8 сентября 2023 года в городе Астана решением Учредительного съезда.</p>
 
-<b>Развитие и цели Федерации</b>
+<b data-translate="history_leadership">Руководство Федерации:</b>
+	<p data-translate="history_president">Президент: Мещеряков Николай Ильич</p>
+	<p data-translate="history_vp1">Вице-президент, Генеральный директор сети КДЛ «Олимп» и Генеральный спонсор Федерации: Сулейменов Ерлан Мельсович</p>
+	<p data-translate="history_vp2">Вице-президент и Генеральный секретарь: Лукановский Валентин Владимирович</p>
+	<p data-translate="history_vp3">Вице-президент: Джантлеев Роман Алмасович</p>
 
-<p>Несмотря на короткий срок существования, Федерация уверенно заявила о себе как о новой спортивной силе Казахстана.
-Основные направления деятельности:</p>
+<b data-translate="history_goals">Развитие и цели Федерации</b>
 
-<p>1. Формирование здоровой нации</p>
+<p data-translate="history_goals_text">Несмотря на короткий срок существования, Федерация уверенно заявила о себе как о новой спортивной силе Казахстана. Основные направления деятельности:</p>
 
-<p>Развитие культуры физической активности, укрепление здоровья и продвижение ценностей спорта среди всех возрастных групп.
-</p>
-<p>2. Олимпийское признание</p>
+<p data-translate="history_goal1">1. Формирование здоровой нации</p>
 
-<p>Стратегическая цель - включение функционального многоборья в программу Олимпийских игр и представление Казахстана на международной арене.
-</p>
-<p>3. Развитие и популяризация спорта</p>
+<p data-translate="history_goal1_text">Развитие культуры физической активности, укрепление здоровья и продвижение ценностей спорта среди всех возрастных групп.</p>
 
-<p>Организация национальных и международных соревнований, укрепление партнёрских связей и создание сильного спортивного сообщества.
-</p>
-<b>Движение вперёд</b>
+<p data-translate="history_goal2">2. Олимпийское признание</p>
 
-<p>Федерация активно сотрудничает с Международной федерацией функционального фитнеса (iF3) и продолжает расширять своё присутствие на спортивной карте страны.
-Функциональное многоборье стремительно набирает популярность в Казахстане, объединяя спортсменов, активных людей и всех, кто выбирает движение, силу и здоровый образ жизни.
-</p>
-<b>Девиз Федерации:</b>
+<p data-translate="history_goal2_text">Стратегическая цель - включение функционального многоборья в программу Олимпийских игр и представление Казахстана на международной арене.</p>
 
-<p>«Сила. Выносливость. Единство.»</p>
+<p data-translate="history_goal3">3. Развитие и популяризация спорта</p>
+
+<p data-translate="history_goal3_text">Организация национальных и международных соревнований, укрепление партнёрских связей и создание сильного спортивного сообщества.</p>
+
+<b data-translate="history_forward">Движение вперёд</b>
+
+<p data-translate="history_forward_text">Федерация активно сотрудничает с Международной федерацией функционального фитнеса (iF3) и продолжает расширять своё присутствие на спортивной карте страны. Функциональное многоборье стремительно набирает популярность в Казахстане, объединяя спортсменов, активных людей и всех, кто выбирает движение, силу и здоровый образ жизни.</p>
+
+<b data-translate="history_motto">Девиз Федерации:</b>
+
+<p data-translate="history_motto_text">«Сила. Выносливость. Единство.»</p>
                 </div>
                 <div class="history-image fade-in">
                     <img src="/logo.png" width="1015" height="787" loading="lazy" alt="История федерации">
@@ -994,12 +1049,12 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -1021,7 +1076,7 @@
                 </div>
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
-                <p>
+                <p data-translate="footer_info">
                     <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
@@ -1030,7 +1085,7 @@
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>

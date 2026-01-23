@@ -215,6 +215,63 @@
             cursor: pointer;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
+            order: 2;
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: auto;
+            order: 1;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
+            padding: 10px;
+            display: none;
+            min-width: 150px;
+            z-index: 1001;
+        }
+
+        .language-dropdown.active {
+            display: block;
+        }
+
+        .language-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .language-option:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
         }
 
         /* Главная секция - Спортивная */
@@ -561,6 +618,20 @@
             .mobile-menu-btn {
                 display: block;
             }
+
+            .language-switcher {
+                margin-left: 15px;
+                order: 3;
+            }
+
+            .language-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .language-dropdown {
+                right: 0;
+            }
             
             .hero {
                 padding-top: 100px;
@@ -756,7 +827,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -785,16 +856,16 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_team">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -825,7 +896,7 @@
     <section id="news" class="section">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Соревнования</h2>
+                <h2 data-translate="competitions_title">Соревнования</h2>
             </div>
             
             <div class="news-container">
@@ -833,9 +904,9 @@
                     <img src="/opencuh.jpg" alt="Astana Open Cup 2025" loading="lazy">
                     <div class="news-content">
                         <div class="news-date">07.05.2025</div>
-                        <div class="news-title">Astana Open Cup 2025 Competition Results</div>
-                        <div class="news-excerpt">On May 7, the second annual open functional fitness tournament was held in the capital — Astana Open...</div>
-                        <a href="/news1" class="btn btn-primary">Подробнее</a>
+                        <div class="news-title" data-translate="comp_astana_title">Astana Open Cup 2025 Competition Results</div>
+                        <div class="news-excerpt" data-translate="comp_astana_excerpt">On May 7, the second annual open functional fitness tournament was held in the capital — Astana Open...</div>
+                        <a href="/news1" class="btn btn-primary" data-translate="read_more">Подробнее</a>
                     </div>
                 </article>
                 
@@ -843,9 +914,9 @@
                     <img src="/game.jpg" alt="CrossFit Challenge 2025" loading="lazy">
                     <div class="news-content">
                         <div class="news-date">24.08.2025</div>
-                        <div class="news-title">Историческое событие: казахстанец впервые прошёл в финал CrossFit Games!</div>
-                        <div class="news-excerpt">Впервые в истории спортсмен из Казахстана вышел в финал CrossFit Games — самого престижного мирового турнира...</div>
-                        <a href="/news2" class="btn btn-primary">Подробнее</a>
+                        <div class="news-title" data-translate="comp_crossfit_title">Историческое событие: казахстанец впервые прошёл в финал CrossFit Games!</div>
+                        <div class="news-excerpt" data-translate="comp_crossfit_excerpt">Впервые в истории спортсмен из Казахстана вышел в финал CrossFit Games — самого престижного мирового турнира...</div>
+                        <a href="/news2" class="btn btn-primary" data-translate="read_more">Подробнее</a>
                     </div>
                 </article>
                 
@@ -853,9 +924,9 @@
                     <img src="/kz45.jpg" alt="Зимний Кубок 2025" loading="lazy">
                     <div class="news-content">
                         <div class="news-date">29.09.2025</div>
-                        <div class="news-title">Чемпионат Казахстана по функциональному многоборью 2025</div>
-                        <div class="news-excerpt">В сентябре прошёл Чемпионат Казахстана по функциональному многоборью 2025 — главное событие года...</div>
-                        <a href="/news4" class="btn btn-primary">Подробнее</a>
+                        <div class="news-title" data-translate="comp_championship_title">Чемпионат Казахстана по функциональному многоборью 2025</div>
+                        <div class="news-excerpt" data-translate="comp_championship_excerpt">В сентябре прошёл Чемпионат Казахстана по функциональному многоборью 2025 — главное событие года...</div>
+                        <a href="/news4" class="btn btn-primary" data-translate="read_more">Подробнее</a>
                     </div>
                 </article>
                 
@@ -866,9 +937,9 @@
     </picture>
                     <div class="news-content">
                         <div class="news-date">06.10.2025</div>
-                        <div class="news-title">Казахстан — победитель Чемпионата Азии 2025!</div>
-                        <div class="news-excerpt">Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...</div>
-                        <a href="/news3" class="btn btn-primary">Подробнее</a>
+                        <div class="news-title" data-translate="comp_asia_title">Казахстан — победитель Чемпионата Азии 2025!</div>
+                        <div class="news-excerpt" data-translate="comp_asia_excerpt">Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...</div>
+                        <a href="/news3" class="btn btn-primary" data-translate="read_more">Подробнее</a>
                     </div>
                 </article>
             </div>
@@ -886,12 +957,12 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -913,8 +984,8 @@
                 </div>
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
-                <p>
-                    <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
+                <p data-translate="footer_info">
+                    Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
                     Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.
@@ -922,7 +993,7 @@
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>

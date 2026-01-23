@@ -215,6 +215,63 @@
             cursor: pointer;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
+            order: 2;
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: auto;
+            order: 1;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
+            padding: 10px;
+            display: none;
+            min-width: 150px;
+            z-index: 1001;
+        }
+
+        .language-dropdown.active {
+            display: block;
+        }
+
+        .language-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .language-option:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
         }
 
         /* Современные кнопки */
@@ -484,6 +541,20 @@
             .mobile-menu-btn {
                 display: block;
             }
+
+            .language-switcher {
+                margin-left: 15px;
+                order: 3;
+            }
+
+            .language-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .language-dropdown {
+                right: 0;
+            }
             
             .hero {
                 padding-top: 100px;
@@ -691,7 +762,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -720,16 +791,16 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_team">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -759,8 +830,6 @@
 
 
 
-
-
 <!-- Календарь соревнований 2026 -->
   <main class="container">
     <section class="section" style="padding:40px 20px;">
@@ -774,507 +843,507 @@
 
         <!-- Текстовое описание -->
         <div style="text-align:left;max-width:900px;margin:0 auto;line-height:1.8;color:#0b2340;">
-          <h2 style="font-size:28px;color:var(--primary-color);margin-bottom:20px;font-weight:700;">Независимый отчёт о чемпионате мира iF3 среди мастеров 2025 года</h2>
+          <h2 style="font-size:28px;color:var(--primary-color);margin-bottom:20px;font-weight:700;" data-translate="masters_report_title">Независимый отчёт о чемпионате мира iF3 среди мастеров 2025 года</h2>
           
-          <p style="font-size:16px;margin-bottom:15px;color:#666;">
+          <p style="font-size:16px;margin-bottom:15px;color:#666;" data-translate="masters_report_location">
             <strong>Брисбен, Австралия, 21–23 ноября 2025 года</strong><br>
             Зальцбург / Флахау, 15 декабря 2025 года
           </p>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">1. Вводные замечания</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_1">1. Вводные замечания</h3>
           
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_intro_1">
             Международная федерация функционального фитнеса (International Functional Fitness Federation, "iF3") назначила проведение чемпионата мира iF3 среди мастеров 2025 года («Соревнование») своему австралийскому члену — Австралийской федерации функционального фитнеса (Australian Functional Fitness Federation, "AFFF").
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_intro_2">
             Президент AFFF, г-жа Меле Робинсон, была вице-президентом iF3 на момент назначения соревнований, в подготовительный период мероприятия, а также на протяжении всего времени проведения соревнований, когда она занимала должность президента Местного организационного комитета («LOC»), вплоть до закрытия соревнований.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_intro_3">
             Г-жа Робинсон подала в отставку с должностей вице-президента iF3 и президента AFFF, так же как и генеральный секретарь AFFF г-н Энтони Роджерс, после завершения соревнований.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_intro_4">
             Факт того, что г-жа Робинсон являлась вице-президентом iF3, объясняет, почему президент iF3 г-жа Гретхен Киттельбергер, генеральный секретарь iF3 г-н Лоран Селлешлагс, казначей iF3 г-н Брентон Стоун, а также член исполнительного совета, Его Королевское Высочество принц Халед бин Альвалид бин Талал Аль Сауд, могли доверять тому, что соревнования будут подготовлены в соответствии с требованиями и стандартами, установленными iF3.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_intro_5">
             Эти требования и стандарты изложены в Соглашении о проведении чемпионата мира iF3 среди мастеров 2025 года («Соглашение о проведении»), которое было направлено г-же Робинсон для подписания 18 апреля 2025 года. В соответствии с пунктом 13 Соглашения о проведении, г-жа Робинсон представила итоговый отчёт.
           </p>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">2. Дата, место, время проведения соревнований, программа и участие</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_2">2. Дата, место, время проведения соревнований, программа и участие</h3>
           
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_text_1">
             Настоящий отчёт, насколько это разумно и осуществимо, следует структуре Соглашения о проведении.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_text_2">
             Очевидно, что не возникло никаких проблем, связанных с датой, временем и местом проведения соревнований. Соревнования состоялись в Брисбене в запланированные даты (21–23 ноября 2025 года). Они были организованы в соответствии с требованиями Общего регламента соревнований и стандартов для международно санкционированных соревнований.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_text_3">
             Функциональный фитнес имел целью выявить наиболее универсального (всесторонне подготовленного) атлета. Предполагалось, что спортсмены будут соревноваться в 6 различных дисциплинах (тестах) и ранжироваться между собой на основе занятых мест.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_text_4">
             Отдельные спортсмены должны были быть протестированы в категориях выносливость, сила, работа с собственным весом, навыки, смешанные дисциплины и мощность. Спортсмен, показавший наилучший совокупный результат по всем тестам, должен был быть объявлен абсолютным победителем.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_text_5">
             Однако возникли проблемы, касающиеся этапа планирования до соревнований, программирования, оборудования и подготовки площадки, технических судей и судейства, поставщика услуг Circle21, а также протоколов (карточек) результатов. Недостатки в расписании привели к длительным периодам ожидания для спортсменов.
           </p>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">2.1 Период планирования до соревнований</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_2_1">2.1 Период планирования до соревнований</h3>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_1_text_1">
             Процесс предварительного планирования не соответствовал стандартной практике планирования iF3. Вместо ежемесячных планировочных созвонов в течение года перед соревнованиями и созвонов каждые 1–2 недели в последний месяц, из-за других срочных обязательств iF3 и недоступности г-жи Робинсон, с мая 2025 года и до самого соревнования между членами Исполнительного совета iF3 и LOC имели место лишь неформальные обсуждения через Facebook Messenger.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_1_text_2">
             LOC не запрашивал проведение каких-либо встреч с iF3 до тех пор, пока iF3 сам не начал запрашивать такие встречи. Г-жа Робинсон отменила несколько ранее запланированных встреч в преддверии соревнований из-за других обязательств и конфликтов с мероприятиями, которые она параллельно организовывала. В результате единственный официальный планировочный созвон чемпионата мира среди мастеров состоялся 28 октября 2025 года.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_1_text_3">
             Г-жа Робинсон была единственным представителем LOC, присутствовавшим на этом созвоне. Главный технический судья не участвовал ни в одном планировочном совещании, как и другие члены команды планирования.
           </p>
 
-          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;">Рекомендация</h4>
+          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;" data-translate="masters_recommendation">Рекомендация</h4>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_1">
             В течение 30 дней после подписания Соглашения о проведении LOC должен быть обязан (путём включения соответствующего положения в стандартное Соглашение iF3 о проведении) представить себя и роли своих отдельных членов, площадку, программу, оборудование, план зала, персонал и логистику в рамках виртуального site visit.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_2">
             iF3 намеревалась назначить и назначила местного Head TO вместо другого кандидата.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_3">
             Данный Head TO ранее никогда не был задействован в мероприятиях iF3, не обладал достаточными знаниями стандартов движений iF3, не изучил в полной мере документы Test Announcement iF3 и был вынужден несколько раз консультироваться с Президентом iF3 для обсуждения корректных стандартов выполнения движений.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_4">
             Подготовленные Head TO скоринговые карты были недостаточными для эффективного и точного отслеживания результатов спортсменов.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_5">
             Даже несмотря на то, что на мероприятии могли присутствовать Head Judges из Oceania Judges Syndicate — высококвалифицированные и стабильные профессионалы, MC — один из лучших в индустрии, Director of Sport (DIS) — очень эффективный, а также платный парамедик и дополнительно обученный персонал первой помощи, и при том, что в день 1 и день 2 были обеспечены достаточные запасы питания и гидратации, общего количества персонала оказалось недостаточно для одновременной работы двух соревновательных площадок, что было признано Генеральным секретарем AFFF.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_6">
             Следует отметить, что «парамедик» не является «медицинским работником», как того требует пункт 7 u) Хостинг-соглашения, несмотря на то что, к счастью, за всё мероприятие произошло только две травмы.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_7">
             Генеральный секретарь AFFF сообщил, что при необходимости назначения двух медицинских работников на каждую площадку, фактически присутствовал только один медицинский работник, чего было недостаточно для одновременного покрытия двух площадок. Это привело к задержкам в реагировании и повышенным рискам для безопасности.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_8">
             Часть персонала отказалась от участия ещё до начала мероприятия, включая провайдера прямой трансляции. В результате LOC остался без команды вещания.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_9">
             LOC приобрёл два телефона, штативы и стабилизатор (gimbal), чтобы организовать базовую статичную трансляцию на платформе, к которой велась подготовка. Однако возникшие проблемы непосредственно на площадке сделали невозможным для медиа- и технических команд настроить, протестировать или стабилизировать резервную трансляцию, а также обеспечить даже минимальное надёжное вещание.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_1_10">
             В результате зрители были вынуждены пользоваться только немецкой трансляцией, которой LOC делился и пытался адаптировать для всех максимально возможным образом.
           </p>
 
-          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;">Рекомендации</h4>
+          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;" data-translate="masters_recommendations">Рекомендации</h4>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_2_1">
             Хостинг-соглашение следует изменить таким образом, чтобы бюджет мероприятия предоставлялся организатором (Host) в iF3 до проведения виртуального site visit.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_2_2">
             Одновременно с этим Head TO должен назначаться iF3, а расходы на его/её поездку должны быть отражены в бюджете LOC.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_2_3">
             Head TO должен принимать участие в виртуальном site visit.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_2_4">
             Также одновременно с бюджетом должны быть определены количество и квалификация персонала, а сам персонал представлен в рамках виртуального site visit.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_2_5">
             Для детализации требований Хостинг-соглашение должно ссылаться на Competition Playbook, который в настоящее время находится в стадии финализации iF3.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_2_6">
             Данный Competition Playbook должен, в частности:
           </p>
 
           <ul style="font-size:16px;line-height:2;color:#0b2340;padding-left:20px;margin-bottom:30px;">
-            <li>определять необходимые роли и штатные позиции на мероприятии;</li>
-            <li>рекомендовать LOC заключать жёсткие договоры с подрядчиками (стриминг, трансляция, поставка оборудования и т.д.), которые исключают ситуации, при которых президент LOC вынуждена самостоятельно управлять грузовиком вместо сломанного транспорта или принимать письмо об отказе стримингового провайдера за две недели до мероприятия без обязательств по замене или штрафных санкций.</li>
+            <li data-translate="masters_playbook_1">определять необходимые роли и штатные позиции на мероприятии;</li>
+            <li data-translate="masters_playbook_2">рекомендовать LOC заключать жёсткие договоры с подрядчиками (стриминг, трансляция, поставка оборудования и т.д.), которые исключают ситуации, при которых президент LOC вынуждена самостоятельно управлять грузовиком вместо сломанного транспорта или принимать письмо об отказе стримингового провайдера за две недели до мероприятия без обязательств по замене или штрафных санкций.</li>
           </ul>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">2.3 Программирование</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_2_3">2.3 Программирование</h3>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_3_text_1">
             AFFF договорилась с iF3 о том, что AFFF подготовит первый проект соревновательного программирования, который будет проверен Программным комитетом iF3.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_3_text_2">
             Однако, несмотря на многократные запросы предоставить программирование, которое должно было быть передано iF3 как минимум за 3 месяца до мероприятия, проект программирования был получен iF3 только 22 октября 2025 года.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_3_text_3">
             Это не оставило времени для рассмотрения и анализа со стороны Программного комитета. Проект требовал доработок, так как несколько тестов не соответствовали стандартам iF3 или содержали элементы, которые не могли быть реализованы по различным причинам.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_3_text_4">
             В результате Президент iF3 Гретхен Киттельбергер была вынуждена лично вмешаться, чтобы в экстренном порядке привести документы Test Announcement в надлежащий вид.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_3_text_5">
             Заявленный LOC в Финальном отчёте «подход программирования с приоритетом безопасности», возможно, был идеологически верным и в итоге оказался успешным, однако он не может заменить отсутствие своевременных действий.
           </p>
 
-          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;">Рекомендация</h4>
+          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;" data-translate="masters_recommendation">Рекомендация</h4>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_3">
             Рекомендуется, чтобы Программный комитет iF3 взял на себя полную ответственность за программирование мероприятий iF3 и самостоятельно разрабатывал тесты, используя вклад LOC в рамках виртуального site visit.
           </p>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">2.4 Оборудование и подготовка площадки</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_2_4">2.4 Оборудование и подготовка площадки</h3>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_1">
             Жалобы спортсменов на площадку очевидно не имели под собой оснований. Перенос всей соревновательной зоны в нижний павильон площадки, который имел более ровную поверхность, следовало рассмотреть с самого начала, так же как и необходимость более качественной навигации и разметки.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_2">
             Жалобы спортсменов на использование стоек (столбов) в качестве целей для wall ball также не являлись обоснованными, поскольку стойки выполняли ту же функцию, что и цели, закреплённые на риге, и в правилах iF3 отсутствует требование об обязательном использовании wall ball-таргетов. Единственным требованием правил iF3 является высота цели, тогда как выбор типа цели — стена, стойка или иной объект — остаётся на усмотрение организаторов.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_3">
             Несмотря на утверждения об обратном, разминочного оборудования было достаточно, и оно было лично доставлено на грузовике Президентом LOC. Это оборудование включало:
           </p>
 
           <ul style="font-size:16px;line-height:2;color:#0b2340;padding-left:20px;margin-bottom:30px;">
-            <li>дополнительный полный риг,</li>
-            <li>полное покрытие матами,</li>
-            <li>шесть полных комплектов блинов и штанг,</li>
-            <li>дополнительные гантели,</li>
-            <li>дополнительные мячи для wall ball,</li>
-            <li>один дополнительный BikeErg,</li>
-            <li>два дополнительных гребных тренажёра,</li>
+            <li data-translate="masters_equipment_1">дополнительный полный риг,</li>
+            <li data-translate="masters_equipment_2">полное покрытие матами,</li>
+            <li data-translate="masters_equipment_3">шесть полных комплектов блинов и штанг,</li>
+            <li data-translate="masters_equipment_4">дополнительные гантели,</li>
+            <li data-translate="masters_equipment_5">дополнительные мячи для wall ball,</li>
+            <li data-translate="masters_equipment_6">один дополнительный BikeErg,</li>
+            <li data-translate="masters_equipment_7">два дополнительных гребных тренажёра,</li>
           </ul>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_4">
             — всё это сверх оборудования, уже арендованного ранее.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_5">
             Часть оборудования не прибыла на площадку из-за поломки грузовика доставки. Команда LOC самостоятельно выехала на склад на имеющемся грузовике и лично забрала 8 гребных тренажёров и 8 BikeErg.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_6">
             Забрать SkiErg не представлялось возможным из-за отсутствия исправного грузовика, резервного транспорта, доступного поставщика и оставшегося временного окна для самовывоза. Это вынудило внести изменения в соревновательные тесты, запланированные на пятницу.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_7">
             Дополнительная попытка LOC одолжить SkiErg в местном зале (Torian) не увенчалась успехом, поскольку количества доступных тренажёров оказалось недостаточно для требований мероприятия.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_8">
             Официальные футболки спортсменов задержались в пути. За счёт дополнительных расходов LOC была организована срочная авиадоставка, чтобы волонтёры, персонал и австралийские спортсмены получили футболки во время мероприятия.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_9">
             Футболки спортсменов не были готовы к продаже на мероприятии, как планировалось изначально.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_10">
             Именные таблички спортсменов поступили с ошибками. LOC рассчитывал, что поставщик, который ранее всегда обеспечивал высокое качество для крупных мероприятий, выполнит заказ надлежащим образом, и не произвёл дополнительную проверку табличек перед их распространением.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_4_text_11">
             Президент LOC взяла на себя ответственность за проблему с именными табличками и официально выразила сожаление по поводу произошедшего.
           </p>
 
-          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;">Рекомендация</h4>
+          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;" data-translate="masters_recommendation">Рекомендация</h4>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_4_1">
             Упомянутый выше в разделе 2.2 Competition Playbook должен рекомендовать организационным комитетам (OC) заключать жёсткие договоры с поставщиками оборудования, которые, за исключением случаев форс-мажора, предотвращают необходимость замещающих действий со стороны LOC и возникновение дополнительных затрат.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_4_2">
             Резервные решения должны быть предусмотрены заблаговременно, задолго до проведения мероприятия.
           </p>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">2.5 Регистрация и участие</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_2_5">2.5 Регистрация и участие</h3>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_5_text_1">
             Очевидно, что ожидания в отношении роли Circle21 на мероприятии различались.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_5_text_2">
             И iF3, и AFFF ожидали, что представитель Circle21 лично прибудет на мероприятие, чтобы помочь с организацией прямой трансляции и live-подсчётом результатов.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_5_text_3">
             Кроме того, AFFF ожидала физического присутствия, включая:
           </p>
 
           <ul style="font-size:16px;line-height:2;color:#0b2340;padding-left:20px;margin-bottom:30px;">
-            <li>экраны «сервер – спортсмен»,</li>
-            <li>оборудование на площадке,</li>
-            <li>устранение технических проблем в режиме реального времени.</li>
+            <li data-translate="masters_circle21_1">экраны «сервер – спортсмен»,</li>
+            <li data-translate="masters_circle21_2">оборудование на площадке,</li>
+            <li data-translate="masters_circle21_3">устранение технических проблем в режиме реального времени.</li>
           </ul>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_5_text_4">
             В итоговом отчёте AFFF отсутствие личного присутствия Circle21 было обозначено как причина серьёзных операционных пробелов, в частности:
           </p>
 
           <ul style="font-size:16px;line-height:2;color:#0b2340;padding-left:20px;margin-bottom:30px;">
-            <li>отсутствие технического специалиста по подсчёту результатов на площадке,</li>
-            <li>более медленная обработка результатов,</li>
-            <li>увеличение объёма ручного ввода данных,</li>
-            <li>существенно возросшая нагрузка на персонал,</li>
-            <li>отсутствие резервного плана на случай исчезновения старт-листов (heat lists) из системы Circle21 при задержках заездов.</li>
+            <li data-translate="masters_gaps_1">отсутствие технического специалиста по подсчёту результатов на площадке,</li>
+            <li data-translate="masters_gaps_2">более медленная обработка результатов,</li>
+            <li data-translate="masters_gaps_3">увеличение объёма ручного ввода данных,</li>
+            <li data-translate="masters_gaps_4">существенно возросшая нагрузка на персонал,</li>
+            <li data-translate="masters_gaps_5">отсутствие резервного плана на случай исчезновения старт-листов (heat lists) из системы Circle21 при задержках заездов.</li>
           </ul>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_5_text_5">
             Президент iF3 сообщила, что отсутствие личного присутствия действительно усложнило использование платформы для LOC, однако изначально не предполагалось, что представитель Circle21 будет заниматься вводом результатов на протяжении всего уикенда.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_5_text_6">
             Представитель Circle21 также сообщил iF3, что предоставил LOC несколько обучающих видеоматериалов по работе с платформой, а также что LOC не воспользовался его предложением провести звонок для обучения эффективному использованию системы.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_5_text_7">
             Учитывая ключевую роль Circle21, обусловленную фактической монополией на обслуживание iF3 и её мероприятий, непрофессиональным и не соответствующим деловым стандартам выглядит решение Circle21 отменить личное присутствие на мероприятии в столь короткие сроки без предоставления очного резервного решения.
           </p>
 
-          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;">Рекомендация</h4>
+          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;" data-translate="masters_recommendation">Рекомендация</h4>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_5">
             В связи с постоянно расширяющейся интеграцией Circle21 в структуру и мероприятия iF3, а также взаимной зависимостью сторон, крайне рекомендуется заключить официальный договор с Circle21, в котором будут чётко определены взаимные права и обязанности, а также предусмотрены последствия неисполнения обязательств и механизмы урегулирования споров.
           </p>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">2.6 Скоринговые карты</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_2_6">2.6 Скоринговые карты</h3>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_6_text_1">
             Подготовка скоринговых карт для мероприятия является обязанностью LOC под руководством Head TO.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_6_text_2">
             Скоринговые карты для 4 из 6 тестов на мероприятии были подготовлены ненадлежащим образом либо с ошибками.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_6_text_3">
             Каждый спортсмен должен иметь отдельную скоринговую карту для каждого теста. Это требование не было выполнено для теста на выносливость (Endurance Test).
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_6_text_4">
             Скоринговые карты для теста на выносливость были настолько плохо подготовлены, что временные показатели невозможно было сопоставить с конкретными спортсменами, что вынудило iF3 и LOC аннулировать результаты данного теста.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_6_text_5">
             Кроме того:
           </p>
 
           <ul style="font-size:16px;line-height:2;color:#0b2340;padding-left:20px;margin-bottom:30px;">
-            <li>количество повторений, использованное для расчёта результатов в Skill Test, было указано неверно;</li>
-            <li>количество повторений, указанное в скоринговых картах Power Test, было некорректным;</li>
-            <li>половина скоринговых карт Mixed Test содержала пустые поля без указания количества повторений;</li>
-            <li>скоринговая карта Bodyweight Test не содержала общего количества повторений в тесте.</li>
+            <li data-translate="masters_scoring_1">количество повторений, использованное для расчёта результатов в Skill Test, было указано неверно;</li>
+            <li data-translate="masters_scoring_2">количество повторений, указанное в скоринговых картах Power Test, было некорректным;</li>
+            <li data-translate="masters_scoring_3">половина скоринговых карт Mixed Test содержала пустые поля без указания количества повторений;</li>
+            <li data-translate="masters_scoring_4">скоринговая карта Bodyweight Test не содержала общего количества повторений в тесте.</li>
           </ul>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_6_text_6">
             Спортсменам часто выдавались скоринговые карты, не соответствующие их возрастной категории, а TO заполняли карты, но не фиксировали корректно имя спортсмена, номер заезда (heat) и возрастную категорию.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_6_text_7">
             В Финальном отчёте AFFF было признано, что тест на выносливость привёл к серьёзным проблемам с подсчётом результатов, в том числе из-за:
           </p>
 
           <ul style="font-size:16px;line-height:2;color:#0b2340;padding-left:20px;margin-bottom:30px;">
-            <li>скоринговых карт, заполненных от руки в последний момент,</li>
-            <li>ручных исправлений,</li>
-            <li>медленной обработки данных.</li>
+            <li data-translate="masters_problems_1">скоринговых карт, заполненных от руки в последний момент,</li>
+            <li data-translate="masters_problems_2">ручных исправлений,</li>
+            <li data-translate="masters_problems_3">медленной обработки данных.</li>
           </ul>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_2_6_text_8">
             Президент AFFF взяла на себя ответственность за то, что аудит скоринговых карт не был проведён своевременно.
           </p>
 
-          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;">Рекомендация</h4>
+          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;" data-translate="masters_recommendation">Рекомендация</h4>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_2_6">
             Хостинг-соглашение следует изменить, дополнив его более конкретными обязательствами принимающей стороны, чем предусмотрено текущим пунктом 7 k), а именно — обязанностью иметь заранее напечатанные скоринговые карты с именами спортсменов и всеми необходимыми данными для соответствующего теста и обеспечить их выдачу участникам до начала каждого теста.
           </p>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">3. Тесты</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_3">3. Тесты</h3>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">3.1 Тест на выносливость (Endurance Test)</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_3_1">3.1 Тест на выносливость (Endurance Test)</h3>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_1">
             Тест на выносливость пришлось изменить в последний момент, поскольку оборудование, необходимое для его проведения, не прибыло на площадку из-за поломки грузового автомобиля.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_2">
             Изменения были согласованы Президентом LOC и Генеральным секретарём iF3 в то время, когда Президент iF3 находилась в пути на мероприятие.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_3">
             Тест проводился волнами каждые 10 минут на непрерывно идущем таймере, а не в заездах с чётко обозначенными стартом и финишем, что является стандартным форматом.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_4">
             В связи с этим Head TO пытался отслеживать результаты спортсменов на одном листе бумаги, фиксируя только время окончания дорожки, а затем вычитая время в зависимости от заезда спортсмена.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_5">
             Индивидуальные скоринговые карты для спортсменов в этом тесте отсутствовали. Имена вычёркивались и вписывались заново по всему листу бумаги.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_6">
             В результате стало невозможно определить, какое время принадлежит какому спортсмену, и примерно 30% спортсменов получили неверно засчитанные времена, а у нескольких спортсменов время отсутствовало вовсе.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_7">
             Все эти обстоятельства не были своевременно доведены Президентом LOC до сведения Президента iF3, а стали известны постепенно в ночь с пятницы на субботу, по частям, и лишь впоследствии были полностью установлены.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_8">
             …к тому моменту, как к утру субботы около 30 % всех участников уже подали апелляции, заявляя, что результаты, внесённые в лидерборд по тесту на выносливость, являются некорректными.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_9">
             Единого согласованного способа разрешения ситуации найдено не было. В рамках попыток перепроведения теста было направлено несколько электронных писем.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_10">
             Спортсмены и другие лица кричали на персонал, а также на других спортсменов. Очевидно, что прямой доступ спортсменов к сотрудникам iF3 на мероприятии был чрезмерным и недопустимым.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_11">
             Персонал, задействованный в попытке перепроведения теста, отказался продолжать его проведение. Было разослано письмо, в котором сообщалось об отмене всех повторных попыток на оставшуюся часть дня, а также описывался дальнейший порядок подсчёта результатов. После принятия этого решения поступило ещё несколько жалоб от спортсменов, которые продолжались даже на After Party, однако на этом этапе большинство протестов прекратилось.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_12">
             Окончательное решение заключалось в том, что результаты теста на выносливость не будут учитываться в итоговом зачёте.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_1_text_13">
             Итоговые результаты должны были и фактически были определены на основании пяти завершённых тестов.
           </p>
 
-          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;">Рекомендация</h4>
+          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;" data-translate="masters_recommendation">Рекомендация</h4>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_3_1_1">
             Правила iF3 должны быть дополнены положением, регламентирующим действия в случае утраты либо искажения результатов до такой степени, что их невозможно восстановить или корректно зафиксировать.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_3_1_2">
             Доступ спортсменов и тренеров к прямому обращению к сотрудникам iF3 на мероприятиях должен быть ограничен, а обязанность по созданию такого барьера возлагается на LOC.
           </p>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">3.2 Тест на навыки (Skill Test)</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_3_2">3.2 Тест на навыки (Skill Test)</h3>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_2_text_1">
             LOC предусмотрел 8 соревновательных дорожек для данного теста и попытался разделить каждую дорожку пополам, чтобы разместить по два спортсмена на одной дорожке.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_2_text_2">
             Когда спортсмены увидели предполагаемую конфигурацию, они немедленно начали жаловаться на небезопасность такой схемы.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_2_text_3">
             После поступления многочисленных жалоб LOC вернулся к формату из 8 дорожек и переформировал заезды. Однако Президент LOC чувствовала себя неуверенно при использовании обязательного для iF3 программного обеспечения Circle21 и не смогла своевременно сформировать заезды с использованием данной системы.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_2_text_4">
             Чтобы не допустить значительного отставания соревнований по времени, она перевела процесс на другую платформу — Competition Corner. Это вызвало путаницу среди спортсменов, однако на тот момент другого варианта для продолжения соревнований не существовало, поскольку на площадке не оказалось ни одного специалиста, достаточно хорошо владеющего платформой Circle21.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_2_text_5">
             Кроме того, тест на навыки предусматривал работу на перекладине для подтягиваний. Перекладина была очень высокой, и большинство спортсменов не могли дотянуться до неё без посторонней помощи.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_2_text_6">
             LOC приобрёл подставки (risers) для этой цели, однако они оказались нестабильными и недостаточно высокими. В итоге пришлось использовать плиобоксы высотой 20–24 дюйма.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_2_text_7">
             Это загромоздило пространство под ригом и создало не только небезопасную среду для спортсменов, но и визуально неэстетичную картину. LOC следовало заранее разработать более продуманный план доступа спортсменов к перекладинам.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_2_text_8">
             Наконец, результаты Skill Test были подсчитаны неверно и должны были быть пересчитаны Президентом iF3 и Президентом LOC поздно ночью в пятницу.
           </p>
 
-          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;">Рекомендация</h4>
+          <h4 style="font-size:20px;color:var(--primary-color);margin:25px 0 15px 0;font-weight:700;" data-translate="masters_recommendation">Рекомендация</h4>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_3_2_1">
             Детали Skill Test, как и всех остальных тестов, включая планы соревновательных площадок, должны быть представлены и окончательно утверждены во время виртуального site visit.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_rec_3_2_2">
             Этот момент является последней точкой, на которой мероприятие может быть обоснованно отменено в случае неудовлетворительной подготовки и передано другому принимающему организатору.
           </p>
 
-          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;">3.3 Тест с собственным весом; Смешанный тест; Силовой тест</h3>
+          <h3 style="font-size:24px;color:var(--primary-color);margin:30px 0 20px 0;font-weight:700;" data-translate="masters_section_3_3">3.3 Тест с собственным весом; Смешанный тест; Силовой тест</h3>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_3_text_1">
             Все три теста пострадали из-за некорректных скоринговых карт.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_3_text_2">
             Скоринговые карты для Bodyweight Test не содержали количества повторений во вводной фазе (buy-in) теста, что делало подсчёт результатов трудоёмким и проблематичным.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_3_text_3">
             Одновременно с представлением бюджета должны быть указаны количество и квалификация персонала, а также сам персонал должен быть представлен в рамках виртуального site visit.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_3_text_4">
             Для детализации требований Хостинг-соглашение должно ссылаться на Competition Playbook, который в настоящее время находится в стадии финализации iF3.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_section_3_3_text_5">
             Данный Competition Playbook должен, в том числе:
           </p>
 
           <ul style="font-size:16px;line-height:2;color:#0b2340;padding-left:20px;margin-bottom:30px;">
-            <li>определять, какие роли и штатные позиции должны быть обеспечены на мероприятии;</li>
-            <li>рекомендовать LOC заключать жёсткие договоры с поставщиками услуг (прямая трансляция, вещание, поставка оборудования и т. д.).</li>
+            <li data-translate="masters_playbook_final_1">определять, какие роли и штатные позиции должны быть обеспечены на мероприятии;</li>
+            <li data-translate="masters_playbook_final_2">рекомендовать LOC заключать жёсткие договоры с поставщиками услуг (прямая трансляция, вещание, поставка оборудования и т. д.).</li>
           </ul>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_final_rec_c">
             <strong>c)</strong> Программный комитет iF3 должен взять на себя программирование мероприятий iF3 и самостоятельно разрабатывать тесты, используя вклад LOC в рамках виртуального site visit.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_final_rec_d">
             <strong>d)</strong> iF3 следует заключить официальный договор с Circle21, в котором будут чётко определены взаимные права и обязанности, а также предусмотрены последствия неисполнения обязательств и механизмы урегулирования споров.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_final_rec_e">
             <strong>e)</strong> Хостинг-соглашение следует изменить, дополнив его более конкретными обязательствами принимающей стороны, чем предусмотрено текущим пунктом 7 k), а именно — обязанностью иметь заранее напечатанные скоринговые карты с именами спортсменов и иными необходимыми для соответствующего теста данными и обеспечить их выдачу участникам до начала каждого теста.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_final_rec_f">
             <strong>f)</strong> Правила iF3 должны быть дополнены положением, регламентирующим действия в случае утраты либо искажения результатов до такой степени, что их невозможно восстановить или корректно зафиксировать.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_final_rec_g_text">
             Спортсмены и тренеры должны иметь ограниченный доступ к прямому обращению к сотрудникам iF3 на мероприятиях, при этом обязанность по созданию такого барьера возлагается на LOC.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_final_rec_g">
             <strong>g)</strong> Закрепить в правилах iF3, что спортсмены и тренеры имеют ограниченный доступ к прямому обращению к сотрудникам iF3 на мероприятиях, а ответственность за организацию такого ограничения лежит на LOC.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_final_rec_h">
             <strong>h)</strong> Внести изменения в пункт 4 m) Хостинг-соглашения, установив обязанность принимающей стороны обеспечивать сохранность призов принимающей стороны.
           </p>
 
-          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;">
+          <p style="font-size:16px;margin-bottom:20px;color:#0b2340;" data-translate="masters_final_rec_i">
             <strong>i)</strong> Напоминать спортсменам о необходимости соблюдения Кодекса этики iF3 и надлежащем поведении.
           </p>
         </div>
@@ -1283,7 +1352,7 @@
 
         <!-- Кнопка -->
         <div class="buttons-container" style="justify-content:center;margin-top:40px;">
-          <a href="/" class="btn btn-primary">
+          <a href="/" class="btn btn-primary" data-translate="back_home">
             <i class="fas fa-home"></i> Вернуться на главную
           </a>
         </div>
@@ -1299,12 +1368,12 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                 
                 <div class="footer-socials">
@@ -1326,7 +1395,7 @@
                 </div>
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
-                <p>
+                <p data-translate="footer_info">
                     <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
@@ -1335,7 +1404,7 @@
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>
