@@ -277,43 +277,48 @@
   if(!window.translateAll){
     window.translateAll = function(lang){
       try{
-        // Обработка data-translate-ru/kz/en атрибутов
+        // Обработка data-translate-ru/kz/en атрибутов (высший приоритет)
         document.querySelectorAll('[data-translate-ru], [data-translate-kz], [data-translate-en]').forEach(el=>{
           const attr = 'data-translate-' + lang;
           const text = el.getAttribute(attr);
-          if(text) el.textContent = text;
+          if(text){
+            el.textContent = text;
+            el.setAttribute('data-translated', 'true');
+          }
         });
         
         // Обработка data-translate с ключами из словаря
-        document.querySelectorAll('[data-translate]').forEach(el=>{
+        document.querySelectorAll('[data-translate]:not([data-translated])').forEach(el=>{
           const key = el.getAttribute('data-translate');
-          if(key && DICT[lang] && DICT[lang][key]) el.textContent = DICT[lang][key];
+          if(key && DICT[lang] && DICT[lang][key]){
+            el.textContent = DICT[lang][key];
+            el.setAttribute('data-translated', 'true');
+          }
         });
         
         // Обработка data-i18n-key (старый метод)
-        document.querySelectorAll('[data-i18n-key]').forEach(el=>{
+        document.querySelectorAll('[data-i18n-key]:not([data-translated])').forEach(el=>{
           const key = el.getAttribute('data-i18n-key');
-          if(key && DICT[lang] && DICT[lang][key]) el.textContent = DICT[lang][key];
-        });
-        
-        // Навигация
-        document.querySelectorAll('nav.main-nav a, .more-menu a, nav.footer-nav a').forEach(a=>{
-          const original = a.dataset.orig || a.textContent.trim();
-          if(!a.dataset.orig) a.dataset.orig = original;
-          const t = DICT[lang] && DICT[lang][original] ? DICT[lang][original] : original;
-          a.textContent = t;
-        });
-        
-        // Общие элементы
-        document.querySelectorAll('button, a, h1, h2, h3, p, li, span').forEach(node=>{
-          if(node.closest('[data-no-translate]')) return;
-          const key = node.getAttribute && node.getAttribute('data-i18n-key');
-          if(key && DICT[lang] && DICT[lang][key]){ node.textContent = DICT[lang][key]; return; }
-          if(node.childNodes.length===1 && node.childNodes[0].nodeType===3){
-            const text = node.textContent.trim();
-            if(text && DICT[lang] && DICT[lang][text]) node.textContent = DICT[lang][text];
+          if(key && DICT[lang] && DICT[lang][key]){
+            el.textContent = DICT[lang][key];
+            el.setAttribute('data-translated', 'true');
           }
         });
+        
+        // Общие элементы (только те, что не имеют специальных атрибутов)
+        document.querySelectorAll('button:not([data-translated]), a:not([data-translated]), h1:not([data-translated]), h2:not([data-translated]), h3:not([data-translated]), p:not([data-translated]), li:not([data-translated]), span:not([data-translated])').forEach(node=>{
+          if(node.closest('[data-no-translate]')) return;
+          if(node.hasAttribute('data-translate') || node.hasAttribute('data-translate-ru') || node.hasAttribute('data-i18n-key')) return;
+          if(node.childNodes.length===1 && node.childNodes[0].nodeType===3){
+            const text = node.textContent.trim();
+            if(text && DICT[lang] && DICT[lang][text]){
+              node.textContent = DICT[lang][text];
+            }
+          }
+        });
+        
+        // Убираем временные маркеры
+        document.querySelectorAll('[data-translated]').forEach(el => el.removeAttribute('data-translated'));
       }catch(e){console.error('translateAll failed', e)}
     };
   }
