@@ -750,7 +750,7 @@
         <div class="preloader-content">
             <img src="/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -779,16 +779,16 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/news">Новости</a></li>
-                    <li><a href="/docs">Документы</a></li>
-                    <li><a href="/leadership">Наша команда</a></li>
-                    <li><a href="/media">Медиа</a></li>
-                    <li><a href="/competitions">Соревнования</a></li>
-                    <li><a href="/partners">Генеральный спонсор</a></li>
-                    <li><a href="/partners2">Партнёры</a></li>
-                    <li><a href="/federations">Федерации</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
+                    <li><a href="/about" data-translate="nav_about">О нас</a></li>
+                    <li><a href="/news" data-translate="nav_news">Новости</a></li>
+                    <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
+                    <li><a href="/leadership" data-translate="nav_team">Наша команда</a></li>
+                    <li><a href="/media" data-translate="nav_media">Медиа</a></li>
+                    <li><a href="/competitions" data-translate="nav_competitions">Соревнования</a></li>
+                    <li><a href="/partners" data-translate="nav_sponsor">Генеральный спонсор</a></li>
+                    <li><a href="/partners2" data-translate="nav_partners">Партнёры</a></li>
+                    <li><a href="/federations" data-translate="nav_federations">Федерации</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -803,34 +803,27 @@
         <div class="federation-container">
             <div class="federation-logo left"><img src="/logo.png" width="1015" height="787" loading="lazy" alt=""></div>
             <div class="federation-text">
-                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
+                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;" data-translate="federation_name_kz">
                 ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
                 </h2>
-                <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
-                <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
+                <h1 data-translate="federation_name_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+                <h2 data-translate="federation_name_en">FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
             </div>
             <div class="federation-logo right"><img src="/sponsor.png" width="1386" height="980" loading="lazy" alt=""></div>
         </div>
     </section>
     <!-- Контент страницы -->
     <div class="page-content">
-       <!-- Галерея с кнопками по бокам -->
-    <div class="gallery-wrapper">
-      <button class="gallery-arrow" id="prevBtn">&#10094;</button>
-     
-      <div class="gallery-container">
-        <div class="gallery-slide" id="gallerySlide">
-          <picture>
-      <source srcset="/imageschampionat/asia1.webp" type="image/webp">
-      <img src="/imageschampionat/asia1.jpg" width="4278" height="2434" loading="lazy" alt="">
-    </picture>
-          <img src="/imageschampionat/asia2.jpg" alt="" loading="lazy">
-          <img src="/imageschampionat/asia3.jpg" alt="" loading="lazy">
-          <img src="/imageschampionat/asia4.jpg" alt="" loading="lazy">
-          <img src="/imageschampionat/asia5.jpg" alt="" loading="lazy">
-        </div>
-      </div>
-      <button class="gallery-arrow" id="nextBtn">&#10095;</button>
+       <!-- Галерея изображений (вертикальная) -->
+    <div style="display: flex; flex-direction: column; gap: 20px; margin: 30px 0;">
+      <picture>
+        <source srcset="/imageschampionat/asia1.webp" type="image/webp">
+        <img src="/imageschampionat/asia1.jpg" width="4278" height="2434" loading="lazy" alt="" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 8px 32px rgba(11, 99, 183, 0.15);">
+      </picture>
+      <img src="/imageschampionat/asia2.jpg" alt="" loading="lazy" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 8px 32px rgba(11, 99, 183, 0.15);">
+      <img src="/imageschampionat/asia3.jpg" alt="" loading="lazy" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 8px 32px rgba(11, 99, 183, 0.15);">
+      <img src="/imageschampionat/asia4.jpg" alt="" loading="lazy" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 8px 32px rgba(11, 99, 183, 0.15);">
+      <img src="/imageschampionat/asia5.jpg" alt="" loading="lazy" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 8px 32px rgba(11, 99, 183, 0.15);">
     </div>
        
         <!-- Карточка новости -->
@@ -844,21 +837,21 @@
             border: 1px solid rgba(11, 99, 183, 0.1);
         " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 16px 48px rgba(11,99,183,0.2)'" onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 8px 32px rgba(11,99,183,0.12)'">
             <div class="news-card-inner" style="display:flex;flex-direction:column;gap:20px;">
-                <h3 style="font-size:28px;color:#0b2340;font-weight:800;margin:0;background:linear-gradient(135deg, #0b63b7 0%, #2b78b9 50%, #4facfe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+                <h3 style="font-size:28px;color:#0b2340;font-weight:800;margin:0;background:linear-gradient(135deg, #0b63b7 0%, #2b78b9 50%, #4facfe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" data-translate="news3_page_title">
                     Казахстан — победитель Чемпионата Азии по функциональному многоборью 2025!
                 </h3>
-                <p style="color:#666666;font-size:18px;line-height:1.8;margin:0;">
+                <p style="color:#666666;font-size:18px;line-height:1.8;margin:0;" data-translate="news3_page_content">
 Эр-Рияд, Королевство Саудовская Аравия, 2–4 октября 2025 года.
 Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью, который собрал более 70 спортсменов из 10 стран, включая Казахстан, Саудовскую Аравию, Пакистан, Иран, Иорданию, Узбекистан, Монголию, Южную Корею, Австралию и Индию.
 🇰🇿 Сборная Казахстана представила 11 сильнейших атлетов, продемонстрировавших высокий уровень физической подготовки, силы и выносливости.
 По итогам соревнований команда Казахстана заняла 1-е место в общекомандном зачёте, уверенно закрепив лидерство на континенте.
 Чемпионат был организован при поддержке Министерства спорта и Федерации спорта Саудовской Аравии, а также Международной федерации функционального фитнеса (iF3).
 В течение трёх дней участники проходили серию интенсивных комплексов, направленных на проверку силы, выносливости, ловкости, координации и психологической устойчивости — ключевых качеств функционального многоборья.</p>
-<b>Подготовка и руководство:</b>
-Казахстанскую сборную возглавил Президент Казахстанской Федерации функционального многоборья — Николай Ильич Мещеряков.
-Подготовку спортсменов осуществлял трёхкратный чемпион мира, финалист CrossFit Games — Роман Джантлеев.
-<b>Генеральный спонсор:</b>
-<p>Генеральным спонсором сборной Казахстана на Чемпионате Азии выступила компания КДЛ Олимп в лице Ерлана Сулейменова.
+<b data-translate="news3_preparation">Подготовка и руководство:</b>
+<span data-translate="news3_preparation_text">Казахстанскую сборную возглавил Президент Казахстанской Федерации функционального многоборья — Николай Ильич Мещеряков.
+Подготовку спортсменов осуществлял трёхкратный чемпион мира, финалист CrossFit Games — Роман Джантлеев.</span>
+<b data-translate="news3_sponsor">Генеральный спонсор:</b>
+<p data-translate="news3_sponsor_text">Генеральным спонсором сборной Казахстана на Чемпионате Азии выступила компания КДЛ Олимп в лице Ерлана Сулейменова.
 Федерация выражает благодарность партнёрам за поддержку и вклад в развитие функционального многоборья в Казахстане.
       </p>
             </div>
@@ -866,15 +859,15 @@
 
         <!-- Карточка победителей -->
         <div class="winners-card">
-            <h2>Winners and Prize Winners from Kazakhstan:</h2>
+            <h2 data-translate="news3_winners_title">Победители и призёры из Казахстана:</h2>
             <ul>
-                <li>1 место — Камила Такеева</li>
-                <li>2 место — Виктор Ильченко, Валентин Жуков</li>
-                <li>2 место — Асылбек Жалеев, Дина Касымова</li>
-                <li>3 место — Артём Мацак</li>
-                <li>4 место — Валентин Лукановский, Ксения Жалеева</li>
-                <li>7 место — Амир Гайсин</li>
-                <li>10 место — Нуркен Бахтияров, Баян Кинашев</li>
+                <li data-translate="news3_winner1">1 место — Камила Такеева</li>
+                <li data-translate="news3_winner2">2 место — Виктор Ильченко, Валентин Жуков</li>
+                <li data-translate="news3_winner3">2 место — Асылбек Жалеев, Дина Касымова</li>
+                <li data-translate="news3_winner4">3 место — Артём Мацак</li>
+                <li data-translate="news3_winner5">4 место — Валентин Лукановский, Ксения Жалеева</li>
+                <li data-translate="news3_winner6">7 место — Амир Гайсин</li>
+                <li data-translate="news3_winner7">10 место — Нуркен Бахтияров, Баян Кинашев</li>
             </ul>
         </div>
        
@@ -889,7 +882,7 @@
         ">
             <a href="/" class="btn btn-primary">
                 <i class="fas fa-home" style="margin-right: 8px;"></i>
-                Вернуться на главную
+                <span data-translate="back_home">Вернуться на главную</span>
             </a>
         </div>
     </div>
@@ -902,12 +895,12 @@
                 </div>
                
                 <nav class="footer-nav">
-                    <a href="/">Главная</a>
-                    <a href="/about">О нас</a>
-                    <a href="/news">Новости</a>
-                    <a href="/media">Медиа</a>
-                    <a href="/docs">Документы</a>
-                    <a href="/competitions">Соревнования</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
+                    <a href="/about" data-translate="nav_about">О нас</a>
+                    <a href="/news" data-translate="nav_news">Новости</a>
+                    <a href="/media" data-translate="nav_media">Медиа</a>
+                    <a href="/docs" data-translate="nav_docs">Документы</a>
+                    <a href="/competitions" data-translate="nav_competitions">Соревнования</a>
                 </nav>
                
                 <div class="footer-socials">
@@ -930,15 +923,15 @@
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
                 <p>
-                    <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
+                    <span data-translate="footer_info">Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
-                    Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.
+                    Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.</span>
                 </p>
             </div>
             
             <div class="footer-bottom">
-                <span>© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
+                <span data-translate="footer_copyright">© 2025 Все права защищены — Казахстанская Федерация функционального многоборья</span>
             </div>
         </div>
     </footer>
@@ -1042,45 +1035,13 @@
             });
         }
 
-        // Функции управления галереей
-        function initGallery() {
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const gallerySlide = document.getElementById('gallerySlide');
-
-            if (!prevBtn || !nextBtn || !gallerySlide) return;
-
-            prevBtn.addEventListener('click', () => {
-                currentGalleryIndex = (currentGalleryIndex - 1 + totalGalleryImages) % totalGalleryImages;
-                updateGalleryPosition();
-            });
-
-            nextBtn.addEventListener('click', () => {
-                currentGalleryIndex = (currentGalleryIndex + 1) % totalGalleryImages;
-                updateGalleryPosition();
-            });
-
-            // Автоматическое перелистывание каждые 5 секунд
-            setInterval(() => {
-                currentGalleryIndex = (currentGalleryIndex + 1) % totalGalleryImages;
-                updateGalleryPosition();
-            }, 5000);
-        }
-
-        function updateGalleryPosition() {
-            const gallerySlide = document.getElementById('gallerySlide');
-            if (gallerySlide) {
-                const translateX = -currentGalleryIndex * 20; // 20% для каждого изображения
-                gallerySlide.style.transform = `translateX(${translateX}%)`;
-            }
-        }
+        // Галерея теперь статическая - функции управления не нужны
              
         // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', () => {
             createParticles();
             initNavigation();
             initScrollAnimations();
-            initGallery();
            
             // Приветственное сообщение через 2 секунды
             setTimeout(() => {
@@ -1105,27 +1066,13 @@
            
             if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
                 const target = e.target.closest('.gallery-container');
-                if (target) {
-                    // Управление галереей
+                // Touch события для остальных элементов
+                const newsTarget = e.target.closest('.news-grid, .docs-grid');
+                if (newsTarget) {
                     if (diffX > 0) {
-                        // Свайп влево - следующая картинка
-                        currentGalleryIndex = (currentGalleryIndex + 1) % totalGalleryImages;
-                        updateGalleryPosition();
+                        newsTarget.scrollBy({ left: 420, behavior: 'smooth' });
                     } else {
-                        // Свайп вправо - предыдущая картинка  
-                        currentGalleryIndex = (currentGalleryIndex - 1 + totalGalleryImages) % totalGalleryImages;
-                        updateGalleryPosition();
-                    }
-                } else {
-                    // Остальные элементы
-                    const newsTarget = e.target.closest('.news-grid, .docs-grid');
-                    if (newsTarget) {
-                        if (diffX > 0) {
-                            newsTarget.scrollBy({ left: 420, behavior: 'smooth' });
-                        } else {
-                            newsTarget.scrollBy({ left: -420, behavior: 'smooth' });
-                        }
-                    }
+                        newsTarget.scrollBy({ left: -420, behavior: 'smooth' });
                 }
             }
            
