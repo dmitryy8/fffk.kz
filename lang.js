@@ -2212,9 +2212,9 @@
       en: 'The Libyan Functional Fitness Federation has become the latest iF3 member to receive official recognition...'
     },
     news6_title: {
-      ru: 'Казахстан — победитель Чемпионата Азии 2025!',
-      kz: 'Қазақстан — 2025 Азия чемпионатының жеңімпазы!',
-      en: 'Kazakhstan — Winner of the Asian Championship 2025!'
+      ru: 'Казахстан — победитель Чемпионата Азии по функциональному многоборью 2025!',
+      kz: 'Қазақстан — 2025 жылғы функционалдық көпсайыс бойынша Азия чемпионатының жеңімпазы!',
+      en: 'Kazakhstan — Winner of the 2025 Asian Functional Fitness Championship!'
     },
     news6_excerpt: {
       ru: 'Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...',
