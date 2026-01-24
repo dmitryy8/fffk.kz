@@ -2219,6 +2219,9 @@
     news6_excerpt: {
       ru: 'Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...',
       kz: 'Сауд Арабиясының астанасында алғаш рет функционалдық көпсайыс бойынша Азия чемпионаты өтті...',
+      en: 'For the first time, the Asian Functional Fitness Championship was held in the capital of Saudi Arabia...'
+    },
+      kz: 'Сауд Арабиясының астанасында алғаш рет функционалдық көпсайыс бойынша Азия чемпионаты өтті...',
       en: 'For the first time, the Asian Championship in Functional Fitness was held in the capital of Saudi Arabia...'
     },
     news7_title: {
