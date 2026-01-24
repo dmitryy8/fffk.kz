@@ -163,6 +163,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
         }
 
         .logo {
@@ -170,6 +171,7 @@
             align-items: center;
             font-size: 1.5em;
             font-weight: bold;
+            flex-shrink: 0;
         }
 
         .logo i {
@@ -181,6 +183,7 @@
             display: flex;
             list-style: none;
             gap: 30px;
+            margin: 0 auto 0 20px;
         }
 
         .nav-menu a {
@@ -220,13 +223,13 @@
             cursor: pointer;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
-            order: 2;
+            
         }
 
         .language-switcher {
             position: relative;
-            margin-left: auto;
-            order: 1;
+            margin-left: 20px;
+            
         }
 
         .language-btn {
@@ -724,6 +727,10 @@
             .navbar {
                 padding: 10px 0;
             }
+
+            .nav-container {
+                padding: 0 20px;
+            }
             
             .nav-menu {
                 position: fixed;
@@ -739,6 +746,7 @@
                 padding-top: 50px;
                 transition: left 0.3s ease;
                 border-top: 1px solid var(--border-color);
+                margin: 0;
             }
             
             .nav-menu.active {
@@ -752,14 +760,22 @@
                 width: 100%;
                 text-align: center;
             }
-            
             .mobile-menu-btn {
                 display: block;
+                order: -1;
+                margin-right: auto;
             }
 
+            .logo {
+                order: 1;
+                margin-right: 0;
+                margin-left: auto;
+            }
             .language-switcher {
-                margin-left: 15px;
-                order: 3;
+                margin-left: 20px;
+                order: 2;
+                flex-shrink: 0;
+                
             }
 
             .language-btn {

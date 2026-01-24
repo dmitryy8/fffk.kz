@@ -135,6 +135,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
         }
 
         .logo {
@@ -154,6 +155,7 @@
             display: flex;
             list-style: none;
             gap: 30px;
+            margin: 0 auto 0 20px;
         }
 
         .nav-menu a {
@@ -583,6 +585,10 @@
             .navbar {
                 padding: 10px 0;
             }
+
+            .nav-container {
+                padding: 0 20px;
+            }
             
             .nav-menu {
                 position: fixed;
@@ -598,6 +604,7 @@
                 padding-top: 50px;
                 transition: left 0.3s ease;
                 border-top: 1px solid var(--border-color);
+                margin: 0;
             }
             
             .nav-menu.active {
@@ -611,9 +618,16 @@
                 width: 100%;
                 text-align: center;
             }
-            
             .mobile-menu-btn {
                 display: block;
+                order: -1;
+                margin-right: auto;
+            }
+
+            .logo {
+                order: 1;
+                margin-right: 0;
+                margin-left: auto;
             }
             
             .hero {
@@ -811,6 +825,7 @@
         .language-switcher {
             position: relative;
             margin-left: 20px;
+            flex-shrink: 0;
         }
 
         .language-btn {
