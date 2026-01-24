@@ -2202,14 +2202,14 @@
       en: 'The Kazakhstan national team worthily represented the country at the IF3 Masters World Championship 2025, held in Brisbane (Australia)...'
     },
     news5_title: {
-      ru: 'Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!',
-      kz: 'Ливиялық функционалдық фитнес федерациясы Ливия Спорт министрлігінің мойындауын алды!',
-      en: 'Libyan Functional Fitness Federation receives recognition from the Libyan Ministry of Sports!'
+      ru: 'iF3 подписывает соглашение о партнёрстве с Гераклионом!',
+      kz: 'iF3 Гераклионмен серіктестік туралы келісімге қол қойды!',
+      en: 'iF3 Signs Partnership Agreement with Geraklion!'
     },
     news5_excerpt: {
-      ru: 'Ливийская федерация функционального фитнеса стала последним членом iF3, получившим официальное признание...',
-      kz: 'Ливиялық функционалдық фитнес федерациясы ресми мойындау алған iF3-тің соңғы мүшесі болды...',
-      en: 'The Libyan Functional Fitness Federation has become the latest iF3 member to receive official recognition...'
+      ru: 'iF3 объявила о соглашении о партнёрстве с Фондом инноваций в медицине и спорте «Гераклион»...',
+      kz: 'iF3 медицина және спорттағы инновациялар қоры «Гераклион» -мен серіктестік туралы келісім жасағанын хабарлады...',
+      en: 'iF3 announced a partnership agreement with the Geraklion Foundation for Innovation in Medicine and Sports...'
     },
     news6_title: {
       ru: 'Казахстан — победитель Чемпионата Азии по функциональному многоборью 2025!',
@@ -2220,9 +2220,6 @@
       ru: 'Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...',
       kz: 'Сауд Арабиясының астанасында алғаш рет функционалдық көпсайыс бойынша Азия чемпионаты өтті...',
       en: 'For the first time, the Asian Functional Fitness Championship was held in the capital of Saudi Arabia...'
-    },
-      kz: 'Сауд Арабиясының астанасында алғаш рет функционалдық көпсайыс бойынша Азия чемпионаты өтті...',
-      en: 'For the first time, the Asian Championship in Functional Fitness was held in the capital of Saudi Arabia...'
     },
     news7_title: {
       ru: 'Чемпионат Казахстана по функциональному многоборью 2025',
@@ -2235,14 +2232,14 @@
       en: 'In September, the Kazakhstan Functional Fitness Championship 2025 took place — the main event of the year...'
     },
     news8_title: {
-      ru: 'iF3 подписывает соглашение о партнёрстве с Гераклионом!',
-      kz: 'iF3 Гераклионмен серіктестік туралы келісімге қол қойды!',
-      en: 'iF3 Signs Partnership Agreement with Geraklion!'
+      ru: 'Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!',
+      kz: 'Ливиялық функционалдық фитнес федерациясы Ливия Спорт министрлігінің мойындауын алды!',
+      en: 'Libyan Functional Fitness Federation receives recognition from the Libyan Ministry of Sports!'
     },
     news8_excerpt: {
-      ru: 'iF3 объявила о соглашении о партнёрстве с Фондом инноваций в медицине и спорте «Гераклион»...',
-      kz: 'iF3 медицина және спорттағы инновациялар қоры «Гераклион» -мен серіктестік туралы келісім жасағанын хабарлады...',
-      en: 'iF3 announced a partnership agreement with the Geraklion Foundation for Innovation in Medicine and Sports...'
+      ru: 'Ливийская федерация функционального фитнеса стала последним членом iF3, получившим официальное признание...',
+      kz: 'Ливиялық функционалдық фитнес федерациясы ресми мойындау алған iF3-тің соңғы мүшесі болды...',
+      en: 'The Libyan Functional Fitness Federation has become the latest iF3 member to receive official recognition...'
     },
     news9_title: {
       ru: 'Историческое событие: Казахстанец впервые вышел в финал CrossFit Games!',
