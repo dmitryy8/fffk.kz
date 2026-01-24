@@ -2202,14 +2202,14 @@
       en: 'The Kazakhstan national team worthily represented the country at the IF3 Masters World Championship 2025, held in Brisbane (Australia)...'
     },
     news5_title: {
-      ru: 'iF3 подписывает соглашение о партнёрстве с Гераклионом!',
-      kz: 'iF3 Гераклионмен серіктестік туралы келісімге қол қойды!',
-      en: 'iF3 Signs Partnership Agreement with Geraklion!'
+      ru: 'Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!',
+      kz: 'Ливиялық функционалдық фитнес федерациясы Ливия Спорт министрлігінің мойындауын алды!',
+      en: 'Libyan Functional Fitness Federation receives recognition from the Libyan Ministry of Sports!'
     },
     news5_excerpt: {
-      ru: 'iF3 объявила о соглашении о партнёрстве с Фондом инноваций в медицине и спорте «Гераклион»...',
-      kz: 'iF3 медицина және спорттағы инновациялар қоры «Гераклион» -мен серіктестік туралы келісім жасағанын хабарлады...',
-      en: 'iF3 announced a partnership agreement with the Geraklion Foundation for Innovation in Medicine and Sports...'
+      ru: 'Ливийская федерация функционального фитнеса стала последним членом iF3, получившим официальное признание...',
+      kz: 'Ливиялық функционалдық фитнес федерациясы ресми мойындау алған iF3-тің соңғы мүшесі болды...',
+      en: 'The Libyan Functional Fitness Federation has become the latest iF3 member to receive official recognition...'
     },
     news6_title: {
       ru: 'Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!',
