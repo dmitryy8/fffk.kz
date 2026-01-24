@@ -2182,14 +2182,14 @@
       en: 'On December 20, a pre-New Year team tournament in functional fitness will be held at the Flex CrossFit gym under the auspices of KFFM...'
     },
     news3_title: {
-      ru: 'Чемпионат мира IF3 2025 — Литва, Вильнюс.',
-      kz: 'IF3 2025 әлем чемпионаты — Литва, Вильнюс.',
-      en: 'IF3 World Championship 2025 — Lithuania, Vilnius.'
+      ru: 'Казахстан — победитель Чемпионата Азии по функциональному многоборью 2025!',
+      kz: 'Қазақстан — 2025 жылғы функционалдық көпсайыс бойынша Азия чемпионатының жеңімпазы!',
+      en: 'Kazakhstan — Winner of the 2025 Asian Functional Fitness Championship!'
     },
     news3_excerpt: {
-      ru: 'В Вильнюсе, столице Литвы, с 5 по 7 декабря 2025 года состоялся Чемпионат мира IF3 по функциональному фитнесу...',
-      kz: 'Литвияның астанасы Вильнюста 2025 жылдың 5-7 желтоқсанында IF3 функционалдық фитнес бойынша әлем чемпионаты өтті...',
-      en: 'The IF3 World Championship in Functional Fitness was held in Vilnius, the capital of Lithuania, from December 5 to 7, 2025...'
+      ru: 'Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...',
+      kz: 'Сауд Арабиясының астанасында алғаш рет функционалдық көпсайыс бойынша Азия чемпионаты өтті...',
+      en: 'For the first time, the Asian Functional Fitness Championship was held in the capital of Saudi Arabia...'
     },
     news4_title: {
       ru: 'Итоги IF3 Masters World Championship 2025',
@@ -2202,24 +2202,24 @@
       en: 'The Kazakhstan national team worthily represented the country at the IF3 Masters World Championship 2025, held in Brisbane (Australia)...'
     },
     news5_title: {
+      ru: 'Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!',
+      kz: 'Ливиялық функционалдық фитнес федерациясы Ливия Спорт министрлігінің мойындауын алды!',
+      en: 'Libyan Functional Fitness Federation receives recognition from the Libyan Ministry of Sports!'
+    },
+    news5_excerpt: {
+      ru: 'Ливийская федерация функционального фитнеса стала последним членом iF3, получившим официальное признание...',
+      kz: 'Ливиялық функционалдық фитнес федерациясы ресми мойындау алған iF3-тің соңғы мүшесі болды...',
+      en: 'The Libyan Functional Fitness Federation has become the latest iF3 member to receive official recognition...'
+    },
+    news6_title: {
       ru: 'iF3 подписывает соглашение о партнёрстве с Гераклионом!',
       kz: 'iF3 Гераклионмен серіктестік туралы келісімге қол қойды!',
       en: 'iF3 Signs Partnership Agreement with Geraklion!'
     },
-    news5_excerpt: {
+    news6_excerpt: {
       ru: 'iF3 объявила о соглашении о партнёрстве с Фондом инноваций в медицине и спорте «Гераклион»...',
       kz: 'iF3 медицина және спорттағы инновациялар қоры «Гераклион» -мен серіктестік туралы келісім жасағанын хабарлады...',
       en: 'iF3 announced a partnership agreement with the Geraklion Foundation for Innovation in Medicine and Sports...'
-    },
-    news6_title: {
-      ru: 'Казахстан — победитель Чемпионата Азии по функциональному многоборью 2025!',
-      kz: 'Қазақстан — 2025 жылғы функционалдық көпсайыс бойынша Азия чемпионатының жеңімпазы!',
-      en: 'Kazakhstan — Winner of the 2025 Asian Functional Fitness Championship!'
-    },
-    news6_excerpt: {
-      ru: 'Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...',
-      kz: 'Сауд Арабиясының астанасында алғаш рет функционалдық көпсайыс бойынша Азия чемпионаты өтті...',
-      en: 'For the first time, the Asian Functional Fitness Championship was held in the capital of Saudi Arabia...'
     },
     news7_title: {
       ru: 'Чемпионат Казахстана по функциональному многоборью 2025',
@@ -2232,14 +2232,14 @@
       en: 'In September, the Kazakhstan Functional Fitness Championship 2025 took place — the main event of the year...'
     },
     news8_title: {
-      ru: 'Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!',
-      kz: 'Ливиялық функционалдық фитнес федерациясы Ливия Спорт министрлігінің мойындауын алды!',
-      en: 'Libyan Functional Fitness Federation receives recognition from the Libyan Ministry of Sports!'
+      ru: 'Чемпионат мира IF3 2025 — Литва, Вильнюс.',
+      kz: 'IF3 2025 әлем чемпионаты — Литва, Вильнюс.',
+      en: 'IF3 World Championship 2025 — Lithuania, Vilnius.'
     },
     news8_excerpt: {
-      ru: 'Ливийская федерация функционального фитнеса стала последним членом iF3, получившим официальное признание...',
-      kz: 'Ливиялық функционалдық фитнес федерациясы ресми мойындау алған iF3-тің соңғы мүшесі болды...',
-      en: 'The Libyan Functional Fitness Federation has become the latest iF3 member to receive official recognition...'
+      ru: 'В Вильнюсе, столице Литвы, с 5 по 7 декабря 2025 года состоялся Чемпионат мира IF3 по функциональному фитнесу...',
+      kz: 'Литвияның астанасы Вильнюста 2025 жылдың 5-7 желтоқсанында IF3 функционалдық фитнес бойынша әлем чемпионаты өтті...',
+      en: 'The IF3 World Championship in Functional Fitness was held in Vilnius, the capital of Lithuania, from December 5 to 7, 2025...'
     },
     news9_title: {
       ru: 'Историческое событие: Казахстанец впервые вышел в финал CrossFit Games!',
