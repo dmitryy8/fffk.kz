@@ -2232,14 +2232,14 @@
       en: 'In September, the Kazakhstan Functional Fitness Championship 2025 took place — the main event of the year...'
     },
     news8_title: {
-      ru: 'Казахстан — победитель Чемпионата Азии по функциональному многоборью 2025!',
-      kz: 'Қазақстан — 2025 жылғы функционалдық көпсайыс бойынша Азия чемпионатының жеңімпазы!',
-      en: 'Kazakhstan — Winner of the 2025 Asian Functional Fitness Championship!'
+      ru: 'iF3 подписывает соглашение о партнёрстве с Гераклионом!',
+      kz: 'iF3 Гераклионмен серіктестік туралы келісімге қол қойды!',
+      en: 'iF3 Signs Partnership Agreement with Geraklion!'
     },
     news8_excerpt: {
-      ru: 'Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью...',
-      kz: 'Сауд Арабиясының астанасында алғаш рет функционалдық көпсайыс бойынша Азия чемпионаты өтті...',
-      en: 'For the first time, the Asian Functional Fitness Championship was held in the capital of Saudi Arabia...'
+      ru: 'iF3 объявила о соглашении о партнёрстве с Фондом инноваций в медицине и спорте «Гераклион»...',
+      kz: 'iF3 медицина және спорттағы инновациялар қоры «Гераклион» -мен серіктестік туралы келісім жасағанын хабарлады...',
+      en: 'iF3 announced a partnership agreement with the Geraklion Foundation for Innovation in Medicine and Sports...'
     },
     news9_title: {
       ru: 'Историческое событие: Казахстанец впервые вышел в финал CrossFit Games!',
