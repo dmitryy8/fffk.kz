@@ -1,20 +1,15 @@
 {
-  "version": 2,
   "cleanUrls": true,
-  "routes": [
+  "redirects": [
     {
-      "src": "/language.js",
-      "status": 410,
-      "headers": {
-        "Cache-Control": "no-cache, no-store, must-revalidate"
-      }
+      "source": "/language.js",
+      "destination": "/404",
+      "statusCode": 410
     },
     {
-      "src": "/language.css",
-      "status": 410,
-      "headers": {
-        "Cache-Control": "no-cache, no-store, must-revalidate"
-      }
+      "source": "/language.css",
+      "destination": "/404",
+      "statusCode": 410
     }
   ],
   "headers": [
