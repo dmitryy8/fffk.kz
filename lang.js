@@ -2251,6 +2251,94 @@
       kz: 'Тарихта алғаш рет Қазақстандық спортшы CrossFit Games финалына шықты — әлемдегі ең беделді турнир...',
       en: 'For the first time in history, an athlete from Kazakhstan reached the CrossFit Games finals — the most prestigious world tournament...'
     },
+
+    // Страница news9 - Новогодний турнир
+    news9_page_title: {
+      ru: 'Новогодний командный турнир по функциональному многоборью в Flex',
+      kz: 'Flex-те функционалды көпсайыс бойынша жаңа жылдық командалық турнир',
+      en: 'New Year Team Functional Fitness Tournament at Flex'
+    },
+    news9_greeting: {
+      ru: 'Уважаемые атлеты и клиенты фитнес-зала Flex, г. Усть-Каменогорск!',
+      kz: 'Құрметті спортшылар және Flex фитнес залының клиенттері, Өскемен қ.!',
+      en: 'Dear Athletes and Fitness Club Flex Members, Ust-Kamenogorsk!'
+    },
+    news9_intro: {
+      ru: '20 декабря в Кроссфит-зале Flex пройдёт предновогодний командный турнир по функциональному многоборью под эгидой КФФМ.',
+      kz: '20 желтоқсанда Flex кроссфит залында КФФМ эгидасында жаңа жылдық командалық функционалды көпсайыс турнир ӧтетіңіз.',
+      en: 'On December 20, a pre-New Year team functional fitness tournament will be held at Flex CrossFit box under the auspices of KFFM.'
+    },
+    news9_format_title: {
+      ru: 'Формат участия',
+      kz: 'Қатысу форматы',
+      en: 'Participation Format'
+    },
+    news9_format_teams: {
+      ru: 'Команды:',
+      kz: 'Командалар:',
+      en: 'Teams:'
+    },
+    news9_format_teams_desc: {
+      ru: '2 человека (м + ж)',
+      kz: '2 адам (ер + әйел)',
+      en: '2 people (male + female)'
+    },
+    news9_format_req: {
+      ru: 'Требования к участникам:',
+      kz: 'Қатысушылардың талабы:',
+      en: 'Participant Requirements:'
+    },
+    news9_format_req_desc: {
+      ru: 'уверенное выполнение подъёма по канату, синхронной становой тяги, подтягиваний, бросков мяча (Wall Ball) и работы на гребле/байке.',
+      kz: 'арапты өндіктеу, синхронды мертіге тартпа, ілініп жүру, доп лақтыру (Wall Ball) және сай/байкте жұмыс істеудің сенімді орындалуы.',
+      en: 'confident performance of rope climbs, synchronized deadlifts, pull-ups, wall ball throws, and rowing/bike work.'
+    },
+    news9_schedule_title: {
+      ru: 'Расписание',
+      kz: 'Бағдарлама',
+      en: 'Schedule'
+    },
+    news9_schedule_registration: {
+      ru: '09:00 — регистрация участников',
+      kz: '09:00 — қатысушыларды тіркеу',
+      en: '09:00 - Participant Registration'
+    },
+    news9_schedule_briefing: {
+      ru: '09:30 — брифинг',
+      kz: '09:30 — брифинг',
+      en: '09:30 - Briefing'
+    },
+    news9_schedule_start: {
+      ru: '10:00 — старт',
+      kz: '10:00 — басталуы',
+      en: '10:00 - Start'
+    },
+    news9_location_label: {
+      ru: '📍 Место проведения:',
+      kz: '📍 Өтетін орны:',
+      en: '📍 Venue:'
+    },
+    news9_location: {
+      ru: 'Кроссфит-зал Flex',
+      kz: 'Flex кроссфит залы',
+      en: 'Flex CrossFit Box'
+    },
+    news9_registration: {
+      ru: 'Запись участников — на ресепшене зала.',
+      kz: 'Қатысушыларды тіркеу — залдың ресепшенде.',
+      en: 'Registration of participants - at the hall reception.'
+    },
+    news9_organizers_title: {
+      ru: 'Организаторы',
+      kz: 'Ұйымдастырушылар',
+      en: 'Organizers'
+    },
+    news9_organizers: {
+      ru: 'Фитнес Клуб «FLEX», Лютовский Андрей, Магомадов Михаил',
+      kz: '«FLEX» Фитнес Клубы, Лютовский Андрей, Магомадов Михаил',
+      en: 'Fitness Club «FLEX», Lyutovskiy Andrey, Magomadov Mikhail'
+    },
+
     news10_title: {
       ru: 'Итоги соревнований Astana Open Cup 2025',
       kz: 'Astana Open Cup 2025 жарыстарының қорытындылары',
@@ -2891,6 +2979,243 @@
       ru: 'Вернуться на главную',
       kz: 'Басты бетке оралу',
       en: 'Back to Home'
+    },
+
+    // Страница news10 - ASTANA OPEN CUP 2026
+    news10_page_title: {
+      ru: 'ASTANA OPEN CUP 2026',
+      kz: 'ASTANA OPEN CUP 2026',
+      en: 'ASTANA OPEN CUP 2026'
+    },
+    news10_subtitle: {
+      ru: 'Functional Fitness Competition',
+      kz: 'Функционалды пішіндегі спорт турнири',
+      en: 'Functional Fitness Competition'
+    },
+    news10_date_label: {
+      ru: 'Дата проведения финала:',
+      kz: 'Финал өткізу күні:',
+      en: 'Final Date:'
+    },
+    news10_date: {
+      ru: '7 мая 2026 года',
+      kz: '2026 жылдың 7 мамырында',
+      en: 'May 7, 2026'
+    },
+    news10_location_label: {
+      ru: 'Место проведения:',
+      kz: 'Өтетін орны:',
+      en: 'Venue:'
+    },
+    news10_location: {
+      ru: 'г. Астана, ЛАСК «Qazaqstan»',
+      kz: 'Астана қ., ЛАСК «Qazaqstan»',
+      en: 'Astana, LASK «Qazaqstan»'
+    },
+    news10_intro: {
+      ru: 'Соревнования по функциональному многоборью ASTANA OPEN CUP 2026 проводятся в партнёрстве с КДЛ «Олимп» и WodFriends при организационной поддержке КФФМ.',
+      kz: 'ASTANA OPEN CUP 2026 функционалды көпсайыс жарыстары КДЛ «Олимп» және WodFriends-пен серіктестіктің ұйымдастырушылық қолдауында ӧтетіліп жатыр.',
+      en: 'The ASTANA OPEN CUP 2026 functional fitness competition is held in partnership with KDL «Olymp» and WodFriends with organizational support from KFFF.'
+    },
+    news10_section1_title: {
+      ru: '1. Participant Registration',
+      kz: '1. Қатысушыларды тіркеу',
+      en: '1. Participant Registration'
+    },
+    news10_section1_text: {
+      ru: 'Регистрация на финальный этап соревнований осуществляется на платформе Circle 21.',
+      kz: 'Жарыстың финалдық кезеңіне тіркелу Circle 21 платформасында жүргізіледі.',
+      en: 'Registration for the final stage of competitions is conducted on the Circle 21 platform.'
+    },
+    news10_registration_dates_label: {
+      ru: 'Сроки регистрации:',
+      kz: 'Тіркелу мерзімі:',
+      en: 'Registration Dates:'
+    },
+    news10_early_reg: {
+      ru: 'Ранняя регистрация:',
+      kz: 'Ерте тіркелу:',
+      en: 'Early Registration:'
+    },
+    news10_early_reg_dates: {
+      ru: '8 января – 20 февраля 2026 года',
+      kz: '2026 жылдың 8 қаңтар – 20 ақпан',
+      en: 'January 8 - February 20, 2026'
+    },
+    news10_regular_reg: {
+      ru: 'Регулярная регистрация:',
+      kz: 'Қалыпты тіркелу:',
+      en: 'Regular Registration:'
+    },
+    news10_regular_reg_dates: {
+      ru: '20 февраля – 31 марта 2026 года',
+      kz: '2026 жылдың 20 ақпан – 31 наурыз',
+      en: 'February 20 - March 31, 2026'
+    },
+    news10_late_reg: {
+      ru: 'Поздняя регистрация:',
+      kz: 'Кеш тіркелу:',
+      en: 'Late Registration:'
+    },
+    news10_late_reg_dates: {
+      ru: '31 марта – 19 апреля 2026 года',
+      kz: '2026 жылдың 31 наурыз – 19 сәуір',
+      en: 'March 31 - April 19, 2026'
+    },
+    news10_limited_spots: {
+      ru: 'Количество мест в категориях ограничено. Организаторы оставляют за собой право закрыть регистрацию ранее установленного срока при достижении лимита участников.',
+      kz: 'Санаттардағы орындар саны шектеулі. Ұйымдастырушылар қатысушылардың лимитіне жеткенде регистрацияны қолданбастан жабу құқығын сақтап қалады.',
+      en: 'The number of places in categories is limited. Organizers reserve the right to close registration before the established deadline if the participant limit is reached.'
+    },
+    news10_section2_title: {
+      ru: '2. Participant Categories',
+      kz: '2. Қатысушылардың санаттары',
+      en: '2. Participant Categories'
+    },
+    news10_section2_intro: {
+      ru: 'К участию допускаются атлеты старше 18 лет, граждане Республики Казахстан и других стран.',
+      kz: '18 жастан жоғары спортшылар, Қазақстан Республикасының және басқа елдердің азаматтары қатыса алады.',
+      en: 'Athletes over 18 years of age, citizens of the Republic of Kazakhstan and other countries are allowed to participate.'
+    },
+    news10_men_cats: {
+      ru: 'Мужчины:',
+      kz: 'Ерлер:',
+      en: 'Men:'
+    },
+    news10_men_rx: {
+      ru: '20 атлетов (регистрация по промокоду)',
+      kz: '20 спортшы (промокод бойынша тіркелу)',
+      en: '20 athletes (registration by promo code)'
+    },
+    news10_men_35: {
+      ru: '10 атлетов',
+      kz: '10 спортшы',
+      en: '10 athletes'
+    },
+    news10_men_40: {
+      ru: '10 атлетов',
+      kz: '10 спортшы',
+      en: '10 athletes'
+    },
+    news10_women_cats: {
+      ru: 'Женщины:',
+      kz: 'Әйелдер:',
+      en: 'Women:'
+    },
+    news10_women_rx: {
+      ru: '10 атлетов (регистрация по промокоду)',
+      kz: '10 спортшы (промокод бойынша тіркелу)',
+      en: '10 athletes (registration by promo code)'
+    },
+    news10_women_35: {
+      ru: '10 атлетов',
+      kz: '10 спортшы',
+      en: '10 athletes'
+    },
+    news10_rx_desc: {
+      ru: 'Категория RX предназначена для атлетов с опытом подготовки не менее 5 лет, владеющих всеми соревновательными навыками и работающих с высокими нагрузками.',
+      kz: 'RX санаты кемінде 5 жыл дайындық тәжірибесі бар, барлық соревновательные дағдыларына ие және жоғары жүктемелермен жұмыс істейтін спортшылар үшін арналған.',
+      en: 'The RX category is intended for athletes with at least 5 years of training experience, proficient in all competitive skills and working with high loads.'
+    },
+    news10_rx_registration: {
+      ru: 'Регистрация в категории RX осуществляется по промокоду. Для его получения атлету необходимо обратиться к организаторам. Кандидатура рассматривается и согласовывается, после чего, в случае одобрения, предоставляется промокод для регистрации.',
+      kz: 'RX санатына тіркелу промокод бойынша жүргізіледі. Оны алу үшін спортшыға ұйымдастырушыларға хабарласу керек. Кандидатура қарастырылып келісіледі, одан кейін, мақұлданса, тіркелу үшін промокод беріледі.',
+      en: 'Registration in the RX category is done by promo code. To obtain it, the athlete must contact the organizers. The candidacy is reviewed and approved, after which, if approved, a promo code is provided for registration.'
+    },
+    news10_section3_title: {
+      ru: '3. Competition Format',
+      kz: '3. Жарыстың форматы',
+      en: '3. Competition Format'
+    },
+    news10_one_day: {
+      ru: 'Все соревновательные комплексы выполняются в течение одного дня',
+      kz: 'Барлық соревновательные кешендер бір күн ішінде орындалады',
+      en: 'All competition complexes are performed during one day'
+    },
+    news10_tasks_publish: {
+      ru: 'Задания финальной части будут опубликованы не позднее 2 мая 2026 года',
+      kz: 'Финалдық бөліктің тапсырмалары 2026 жылдың 2 мамырынан кешіктіні құралмайды',
+      en: 'Final part tasks will be published no later than May 2, 2026'
+    },
+    news10_judging: {
+      ru: 'Судейство и стандарты движений соответствуют правилам iF3 (2026)',
+      kz: 'Соттау және қозғалыс стандарттары iF3 ережелеріне (2026) сәйкес келеді',
+      en: 'Judging and movement standards comply with iF3 rules (2026)'
+    },
+    news10_quality_note: {
+      ru: 'С целью повышения качества проведения мероприятия организаторы оставляют за собой право вносить изменения в регламент, формат, тайминг и задания соревнований.',
+      kz: 'Іс-шараны өткізу сапасын арттыру мақсатында ұйымдастырушылар регламент, формат, уақыт және жарыс тапсырмаларын өзгерту құқығын сақтап қалады.',
+      en: 'To improve the quality of the event, organizers reserve the right to make changes to the regulations, format, timing and competition tasks.'
+    },
+    news10_section4_title: {
+      ru: '4. Awards',
+      kz: '4. Марапаттар',
+      en: '4. Awards'
+    },
+    news10_awards_intro: {
+      ru: 'Победители и призёры соревнований награждаются:',
+      kz: 'Жарыстың жеңімпасы және призёрлері марапатталады:',
+      en: 'Winners and prize-winners of the competition are awarded:'
+    },
+    news10_awards_money: {
+      ru: 'денежными призами;',
+      kz: 'ақы сыйлықтарымен;',
+      en: 'cash prizes;'
+    },
+    news10_awards_medals: {
+      ru: 'медалями и грамотами.',
+      kz: 'медальдар және сертификаттармен.',
+      en: 'medals and certificates.'
+    },
+    news10_prize_pool: {
+      ru: 'Информация о размере призового фонда будет опубликована дополнительно на официальных ресурсах КФФМ.',
+      kz: 'Сыйлық қорының мөлшері туралы ақпарат КФФМ ресми ресурстарында қосымша жарияланатын болады.',
+      en: 'Information about the prize pool amount will be published separately on the official KFFF resources.'
+    },
+    news10_section5_title: {
+      ru: '5. Competition Goals',
+      kz: '5. Жарыстың мақсаттары',
+      en: '5. Competition Goals'
+    },
+    news10_goal1: {
+      ru: 'выявление сильнейших атлетов по функциональному многоборью;',
+      kz: 'функционалды көпсайыс бойынша ең күшті спортшыларды анықтау;',
+      en: 'identification of the strongest athletes in functional fitness;'
+    },
+    news10_goal2: {
+      ru: 'развитие и популяризация функционального многоборья;',
+      kz: 'функционалды көпсайыстың дамуы мен танымалдануы;',
+      en: 'development and popularization of functional fitness;'
+    },
+    news10_goal3: {
+      ru: 'формирование сборной команды КФФМ для участия в Чемпионате Азии 2026 года.',
+      kz: '2026 жылы Азия Чемпионатына қатысу үшін КФФМ жиынтық команdasын құрастыру.',
+      en: 'formation of the KFFF national team for participation in the 2026 Asia Championship.'
+    },
+    news10_section6_title: {
+      ru: '6. Competition Sponsors and Partners',
+      kz: '6. Жарыстың спонсорлары және серіктестері',
+      en: '6. Competition Sponsors and Partners'
+    },
+    news10_sponsor_label: {
+      ru: 'Генеральный спонсор:',
+      kz: 'Генералды спонсор:',
+      en: 'General Sponsor:'
+    },
+    news10_sponsor: {
+      ru: 'КДЛ «Олимп» в лице Ерлана Сулейменова',
+      kz: 'КДЛ «Олимп» Ерлан Сулейменовтың өкілінде',
+      en: 'KDL «Olymp» represented by Yerlan Suleimenov'
+    },
+    news10_partner_label: {
+      ru: 'Партнёр:',
+      kz: 'Серіктес:',
+      en: 'Partner:'
+    },
+    news10_partner: {
+      ru: 'WodFriends — компания по производству и продаже экипировки для функционального многоборья и тренировок.',
+      kz: 'WodFriends — функционалды көпсайыс және машықтар үшін жабдық өндіру және сату компаниясы.',
+      en: 'WodFriends - a company for the production and sale of equipment for functional fitness and training.'
     }
   };
 
