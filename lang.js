@@ -2262,6 +2262,48 @@
       en: 'On May 7, the second annual open functional fitness tournament was held in the capital — Astana Open...'
     },
 
+    // Новые уникальные ключи для карточек с конфликтами
+    if3_world_championship_title: {
+      ru: 'Чемпионат мира IF3 2025 — Литва, Вильнюс.',
+      kz: 'IF3 2025 әлем чемпионаты — Литва, Вильнюс.',
+      en: 'IF3 World Championship 2025 — Lithuania, Vilnius.'
+    },
+    if3_world_championship_excerpt: {
+      ru: 'В Вильнюсе, столице Литвы, с 5 по 7 декабря 2025 года состоялся Чемпионат мира IF3 по функциональному фитнесу...',
+      kz: 'Литвияның астанасы Вильнюста 2025 жылдың 5-7 желтоқсанында IF3 функционалдық фитнес бойынша әлем чемпионаты өтті...',
+      en: 'The IF3 World Championship in Functional Fitness was held in Vilnius, the capital of Lithuania, from December 5 to 7, 2025...'
+    },
+    if3_masters_championship_title: {
+      ru: 'Итоги IF3 Masters World Championship 2025',
+      kz: 'IF3 Masters 2025 әлем чемпионатының қорытындылары',
+      en: 'Results of IF3 Masters World Championship 2025'
+    },
+    if3_masters_championship_excerpt: {
+      ru: 'Сборная Казахстана достойно представила страну на Чемпионате мира IF3 Masters 2025, проходившем в Брисбене (Австралия)...',
+      kz: 'Қазақстан құрамасы Брисбенде (Австралия) өтке IF3 Masters 2025 әлем чемпионатында еліні ұлғайтып ұсынды...',
+      en: 'Kazakhstan\'s team proudly represented the country at the IF3 Masters World Championship 2025 held in Brisbane (Australia)...'
+    },
+    libya_federation_title: {
+      ru: 'Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!',
+      kz: 'Ливия функционалдық фитнес федерациясы Ливия Спорт министрлігінің танылуын алды!',
+      en: 'Libyan Functional Fitness Federation Receives Recognition from Libya\'s Ministry of Sports!'
+    },
+    libya_federation_excerpt: {
+      ru: 'Ливийская федерация функционального фитнеса стала последним членом iF3, получившим официальное признание...',
+      kz: 'Ливия функционалдық фитнес федерациясы iF3-тің соңғы мүшесі болып ресми танылуды алды...',
+      en: 'The Libyan Functional Fitness Federation became the latest iF3 member to receive official recognition...'
+    },
+    if3_geraklion_partnership_title: {
+      ru: 'iF3 подписывает соглашение о партнёрстве с Гераклионом!',
+      kz: 'iF3 Гераклионмен серіктестік келісімге қол қойды!',
+      en: 'iF3 Signs Partnership Agreement with Geraklion!'
+    },
+    if3_geraklion_partnership_excerpt: {
+      ru: 'iF3 объявила о соглашении о партнёрстве с Фондом инноваций в медицине и спорте «Гераклион»...',
+      kz: 'iF3 Гераклион медицина және спорттағы инновациялар қорымен серіктестік келісім жасағанын жариялады...',
+      en: 'iF3 announced a partnership agreement with the Geraklion Foundation for Innovation in Medicine and Sports...'
+    },
+
     // Страница news1 - полное содержание
     news1_page_title: {
       ru: 'Итоги соревнований Astana Open Cup 2025',
