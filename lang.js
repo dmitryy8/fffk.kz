@@ -2304,6 +2304,30 @@
       en: 'iF3 announced a partnership agreement with the Geraklion Foundation for Innovation in Medicine and Sports...'
     },
 
+    kazakhstan_asia_championship_title: {
+      ru: 'Казахстан — победитель Чемпионата Азии по функциональному многоборью 2025!',
+      kz: 'Қазақстан — 2025 жылы Азия функционалды көпсайыс чемпионаты победигерді!',
+      en: 'Kazakhstan - Winner of the 2025 Asia Functional Fitness Championship!'
+    },
+
+    kazakhstan_asia_championship_excerpt: {
+      ru: 'Впервые в столице Саудовской Аравии состоялся Чемпионат Азии по функциональному многоборью, и сборная Казахстана показала отличный результат...',
+      kz: 'Саудиялық Арабияның астанасында Азия функционалды көпсайыс чемпионаты өтті және Қазақстан команды сәтті нәтиже көрсетті...',
+      en: 'The Asia Functional Fitness Championship took place for the first time in the capital of Saudi Arabia, and Kazakhstan\'s team showed excellent results...'
+    },
+
+    kazakhstan_championship_title: {
+      ru: 'Чемпионат Казахстана по функциональному многоборью 2025',
+      kz: '2025 жылы Қазақстан функционалды көпсайыс чемпионаты',
+      en: 'Kazakhstan Functional Fitness Championship 2025'
+    },
+
+    kazakhstan_championship_excerpt: {
+      ru: 'В сентябре состоялся Чемпионат Казахстана по функциональному многоборью 2025 — главное событие года, где встретились сильнейшие атлеты страны...',
+      kz: 'Қыркүйекте 2025 жылғы Қазақстан функционалды көпсайыс чемпионаты өтті — жылдың негізгі іс-шарасы болды...',
+      en: 'In September, the Kazakhstan Functional Fitness Championship 2025 took place - the main event of the year, where the strongest athletes of the country met...'
+    },
+
     // Страница news1 - полное содержание
     news1_page_title: {
       ru: 'Итоги соревнований Astana Open Cup 2025',
