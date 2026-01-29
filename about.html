@@ -326,7 +326,7 @@
 
         .history-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: minmax(280px, 45%) 1fr;
             gap: 60px;
             align-items: center;
         }
@@ -723,6 +723,26 @@
             .federation-hero {
                 margin-top: 20px;
             }
+
+            /* Улучшение читаемости секции истории на мобильных */
+            .history-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                align-items: flex-start;
+            }
+            .history-text {
+                padding: 0 20px;
+                text-align: left;
+            }
+            .history-image {
+                width: 100%;
+                order: 2;
+            }
+            .history-image img {
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -830,24 +850,23 @@
             margin-left: 10px;
             flex-shrink: 0;
         }
-
         .language-btn {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             color: white;
-            padding: 8px 16px;
-            border-radius: 8px;
+            padding: 8px 15px;
+            border-radius: 20px;
             cursor: pointer;
+            font-weight: 600;
             display: flex;
             align-items: center;
             gap: 8px;
-            font-weight: 600;
-            font-size: 14px;
             transition: all 0.3s ease;
         }
 
         .language-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         .language-dropdown {
