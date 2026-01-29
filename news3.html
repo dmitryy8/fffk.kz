@@ -138,10 +138,11 @@
             background: rgba(11, 99, 183, 0.9);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
-            z-index: 1000;
+            z-index: 10000;
             padding: 15px 0;
             transition: all 0.3s ease;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            pointer-events: auto !important;
         }
         .navbar.scrolled {
             background: rgba(11, 99, 183, 0.95);
@@ -777,7 +778,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999;
+            z-index: 999;
             pointer-events: none;
             transition: opacity 0.5s ease, visibility 0.5s ease;
         }
@@ -1118,6 +1119,17 @@
                     }
                 });
             });
+
+            // Быстрый переход по ссылкам навигации - не ждём загрузки страницы
+            document.querySelectorAll('.nav-menu a:not([href^="#"])').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    // Немедленно переходим, не ждём загрузки текущей страницы
+                    // Закрываем мобильное меню если открыто
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                    // Переход происходит по умолчанию без задержки
+                }, true); // используем capture phase для приоритета
+            });
         }
         // Анимации появления элементов
         function initScrollAnimations() {
@@ -1140,6 +1152,27 @@
         }
 
         // Галерея теперь статическая - функции управления не нужны
+             
+        // Быстрый переход по ссылкам - обрабатываем все навигационные ссылки
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && !link.href.startsWith('#')) {
+                // Это обычная ссылка, а не якорь
+                const href = link.getAttribute('href');
+                if (href && (href.startsWith('/') || href.startsWith(window.location.origin))) {
+                    // Это внутренняя ссылка - переходим немедленно без ожидания
+                    // Навесим обработку на ссылки, чтобы мобильное меню закрывалось
+                    const navMenu = document.getElementById('navMenu');
+                    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                    if (navMenu && navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        if (mobileMenuBtn && mobileMenuBtn.querySelector('i')) {
+                            mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                        }
+                    }
+                }
+            }
+        }, true); // capture phase для приоритета
              
         // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', () => {
