@@ -40,8 +40,8 @@
     <link rel="manifest" href="/site.webmanifest">
     
     
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome    <link rel="stylesheet" href="/mobile.css?v=20260123205533" media="(max-width:768px)">
-f="/mobile.css" media="(max-width:768px)">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/mobile.css?v=20260123205533" media="(max-width:768px)">
     <style>
         * {
             margin: 0;
@@ -446,10 +446,11 @@ f="/mobile.css" media="(max-width:768px)">
         .federation-container{
           display:flex;align-items:center;justify-content:space-between;
           width:90%;max-width:1300px;margin:0 auto;
-          background:linear-gradient(90deg,#5ea5e6 0%,#5da1e0 11%,#e8e8e8 25%,#e6e6e7 70%,#f9fafb 85%,#ffffff 100%);
-          border-radius:60px;padding:30px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.08)
+          background:#ffffff;
+          border-radius:20px;padding:30px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.08)
         }
-        .federation-logo img{width:264px;height:auto;object-fit:contain}
+        .federation-logo{flex-shrink:0}
+        .federation-logo img{width:240px;height:auto;object-fit:contain}
         .federation-text{text-align:center;flex:1;margin:0 30px}
         .federation-text h1{color:#0b63b7;font-size:28px;margin:0 0 10px 0;font-weight:800;text-transform:uppercase}
         .federation-text h2{color:#333;font-size:18px;margin:0;font-weight:700;text-transform:uppercase}
@@ -557,6 +558,7 @@ f="/mobile.css" media="(max-width:768px)">
             }
 
             .nav-container {
+                display: flex;
                 padding: 0 20px;
             }
            
@@ -592,6 +594,8 @@ f="/mobile.css" media="(max-width:768px)">
                 display: block;
                 order: 2;
                 margin-left: 10px;
+                z-index: 1002;
+                position: relative;
             }
 
             .logo {
@@ -642,10 +646,16 @@ f="/mobile.css" media="(max-width:768px)">
                 text-align: center;
                 padding: 30px 25px;
                 border-radius: 20px;
+                width: 95%;
+                display: flex;
+            }
+            .federation-logo {
+                flex-shrink: 0;
+                margin-bottom: 15px;
             }
             .federation-logo img {
-                width: 200px;
-                margin-bottom: 20px;
+                width: 180px;
+                margin-bottom: 10px;
             }
             .federation-text {
                 margin: 0;
@@ -1202,33 +1212,5 @@ f="/mobile.css" media="(max-width:768px)">
         }, maxLoadTime);
     </script>
     <script src="/lang.js?v=20260123205220" defer></script>
-</body>
-</html>// Контроль времени загрузки preloader (минимум 300ms, максимум 2000ms)
-        const preloaderStartTime = Date.now();
-        const minLoadTime = 300;
-        const maxLoadTime = 2000;
-
-        window.addEventListener('load', () => {
-            const preloader = document.getElementById('preloader');
-            if (preloader) {
-                const elapsedTime = Date.now() - preloaderStartTime;
-                const remainingTime = Math.max(minLoadTime - elapsedTime, 0);
-                const hideTime = Math.min(remainingTime, maxLoadTime - elapsedTime);
-                
-                setTimeout(() => {
-                    preloader.classList.add('hidden');
-                }, hideTime);
-            }
-        });
-
-        // Автоматическое скрытие через 2 секунды, даже если страница не загрузилась
-        setTimeout(() => {
-            const preloader = document.getElementById('preloader');
-            if (preloader && !preloader.classList.contains('hidden')) {
-                preloader.classList.add('hidden');
-            }
-        }, maxLoadTime);
-    </script>
-    <script src="/lang.js?v=20260123095747" defer></script>
 </body>
 </html>
