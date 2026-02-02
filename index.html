@@ -1689,58 +1689,81 @@
         const installBtn = document.getElementById('pwa-install-btn');
         const installContainer = document.getElementById('pwa-install-container');
         
-        // Определение iOS устройства
+        // Определение устройства
         const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) && !window.MSStream;
+        const isAndroid = /Android/.test(navigator.userAgent);
+        const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
         
-        // Если iOS - показываем инструкцию
-        if (isIOS && installContainer && installBtn) {
+        // Проверка, установлено ли уже приложение
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || 
+                            window.navigator.standalone || 
+                            document.referrer.includes('android-app://');
+        
+        if (!isStandalone && installContainer && installBtn) {
             const titleElement = installContainer.querySelector('.pwa-install-title');
             const subtitleElement = installContainer.querySelector('.pwa-install-subtitle');
             
-            titleElement.innerHTML = 'Установите приложение ФФМК на iPhone!';
-            subtitleElement.innerHTML = `
-                <strong>Инструкция для установки:</strong><br>
-                1️⃣ Нажмите кнопку "Поделиться" <svg width="18" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M16 5l-1.42 1.42-1.59-1.59V16h-2V4.83L9.42 6.42 8 5l4-4 4 4zm4 5v11c0 1.1-.9 2-2 2H6c-1.11 0-2-.9-2-2V10c0-1.11.89-2 2-2h3v2H6v11h12V10h-3V8h3c1.1 0 2 .89 2 2z"/></svg> внизу экрана<br>
-                2️⃣ Прокрутите вниз и выберите <strong>"На экран Домой"</strong><br>
-                3️⃣ Нажмите <strong>"Добавить"</strong> в правом верхнем углу
-            `;
-            installBtn.textContent = 'Понятно!';
-            installBtn.style.background = 'linear-gradient(135deg, #34c759 0%, #30b350 100%)';
-            
-            // Показываем контейнер для iOS
-            installContainer.classList.add('show');
-            
-            // Кнопка просто скрывает инструкцию
-            installBtn.addEventListener('click', () => {
-                installContainer.classList.remove('show');
-            });
-        } else if (installBtn) {
-            // Обработчик клика для Android/Desktop
-            installBtn.addEventListener('click', async () => {
-                if (!deferredPrompt) {
-                    console.log('Нет доступного события установки');
-                    return;
-                }
+            // Если iOS - показываем инструкцию
+            if (isIOS) {
+                titleElement.innerHTML = 'Установите приложение ФФМК на iPhone!';
+                subtitleElement.innerHTML = `
+                    <strong>Инструкция для установки:</strong><br>
+                    1️⃣ Нажмите кнопку "Поделиться" <svg width="18" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M16 5l-1.42 1.42-1.59-1.59V16h-2V4.83L9.42 6.42 8 5l4-4 4 4zm4 5v11c0 1.1-.9 2-2 2H6c-1.11 0-2-.9-2-2V10c0-1.11.89-2 2-2h3v2H6v11h12V10h-3V8h3c1.1 0 2 .89 2 2z"/></svg> внизу экрана<br>
+                    2️⃣ Прокрутите вниз и выберите <strong>"На экран Домой"</strong><br>
+                    3️⃣ Нажмите <strong>"Добавить"</strong> в правом верхнем углу
+                `;
+                installBtn.textContent = 'Понятно!';
+                installBtn.style.background = 'linear-gradient(135deg, #34c759 0%, #30b350 100%)';
                 
-                // Показываем диалог установки
-                deferredPrompt.prompt();
+                // Показываем контейнер для iOS
+                installContainer.classList.add('show');
                 
-                // Ждем выбора пользователя
-                const { outcome } = await deferredPrompt.userChoice;
-                console.log(`Пользователь выбрал: ${outcome}`);
-                
-                if (outcome === 'accepted') {
-                    console.log('✅ Пользователь установил PWA');
-                }
-                
-                // Очищаем deferredPrompt
-                deferredPrompt = null;
-                
-                // Скрываем контейнер
-                if (installContainer) {
+                // Кнопка просто скрывает инструкцию
+                installBtn.addEventListener('click', () => {
                     installContainer.classList.remove('show');
-                }
-            });
+                });
+            } 
+            // Если Android - показываем сразу, но сообщаем о готовности
+            else if (isAndroid || !isIOS) {
+                console.log('🤖 Android/Desktop обнаружен. Ожидание события установки...');
+                
+                // Показываем контейнер сразу для Android
+                installContainer.classList.add('show');
+                
+                // Временный текст пока не сработало событие
+                subtitleElement.innerHTML = 'Проверка возможности установки... Используйте Chrome для установки приложения.';
+                installBtn.textContent = 'Ожидание...';
+                installBtn.disabled = true;
+                installBtn.style.opacity = '0.5';
+                
+                // Обработчик клика для Android/Desktop
+                installBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) {
+                        console.log('❌ Нет доступного события установки');
+                        alert('Для установки приложения откройте сайт в браузере Google Chrome');
+                        return;
+                    }
+                    
+                    // Показываем диалог установки
+                    deferredPrompt.prompt();
+                    
+                    // Ждем выбора пользователя
+                    const { outcome } = await deferredPrompt.userChoice;
+                    console.log(`Пользователь выбрал: ${outcome}`);
+                    
+                    if (outcome === 'accepted') {
+                        console.log('✅ Пользователь установил PWA');
+                    }
+                    
+                    // Очищаем deferredPrompt
+                    deferredPrompt = null;
+                    
+                    // Скрываем контейнер
+                    if (installContainer) {
+                        installContainer.classList.remove('show');
+                    }
+                });
+            }
         }
         
         if ('serviceWorker' in navigator) {
@@ -1766,11 +1789,44 @@
                     deferredPrompt = e;
                     console.log('💡 PWA готов к установке!');
                     
-                    // Показываем контейнер с кнопкой установки
-                    if (installContainer) {
+                    // Обновляем текст и активируем кнопку
+                    if (installContainer && installBtn) {
+                        const titleElement = installContainer.querySelector('.pwa-install-title');
+                        const subtitleElement = installContainer.querySelector('.pwa-install-subtitle');
+                        
+                        titleElement.innerHTML = 'Установите приложение ФФМК на своё устройство!';
+                        subtitleElement.innerHTML = 'Работает офлайн, загружается мгновенно и занимает минимум места. Всё о функциональном фитнесе всегда под рукой!';
+                        installBtn.textContent = 'Установить приложение';
+                        installBtn.disabled = false;
+                        installBtn.style.opacity = '1';
+                        
+                        // Показываем контейнер с кнопкой установки
                         installContainer.classList.add('show');
                     }
                 });
+            }
+            
+            // Если через 3 секунды событие не сработало на Android - показываем информацию
+            if (isAndroid && !isStandalone) {
+                setTimeout(() => {
+                    if (!deferredPrompt && installContainer) {
+                        const subtitleElement = installContainer.querySelector('.pwa-install-subtitle');
+                        const titleElement = installContainer.querySelector('.pwa-install-title');
+                        
+                        titleElement.innerHTML = 'Установка PWA';
+                        subtitleElement.innerHTML = `
+                            <strong>Откройте сайт в Chrome:</strong><br>
+                            Для установки приложения необходим браузер Google Chrome. 
+                            Скопируйте ссылку и откройте в Chrome, затем в меню выберите "Установить приложение".
+                        `;
+                        installBtn.textContent = 'Понятно';
+                        installBtn.disabled = false;
+                        installBtn.style.opacity = '1';
+                        installBtn.onclick = () => {
+                            installContainer.classList.remove('show');
+                        };
+                    }
+                }, 3000);
             }
             
             // Отслеживаем установку
