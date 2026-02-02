@@ -626,26 +626,49 @@
         .pwa-install-container {
             display: none;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
+            padding: 35px 20px;
+            margin-top: 40px;
+            background: linear-gradient(135deg, rgba(11, 99, 183, 0.03) 0%, rgba(43, 120, 185, 0.05) 100%);
+            border-radius: 25px;
         }
         
         .pwa-install-container.show {
             display: block;
-            animation: fadeInUp 0.6s ease;
+            animation: slideInBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        @keyframes slideInBounce {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(-8px) scale(1.02);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
         
         .pwa-install-title {
-            font-size: 32px;
-            font-weight: 700;
-            color: #0b63b7;
-            margin-bottom: 10px;
+            font-size: 38px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(11, 99, 183, 0.1);
         }
         
         .pwa-install-subtitle {
-            font-size: 16px;
-            color: #666;
+            font-size: 19px;
+            color: #444;
             margin-bottom: 25px;
+            font-weight: 500;
+            line-height: 1.5;
         }
         
         .pwa-install-btn {
@@ -1349,6 +1372,13 @@
         </div>
     </section>
 
+    <!-- Кнопка установки PWA -->
+    <div class="pwa-install-container" id="pwa-install-container">
+        <h2 class="pwa-install-title">Установите приложение ФФМК на своё устройство!</h2>
+        <p class="pwa-install-subtitle">Работает офлайн, загружается мгновенно и занимает минимум места. Всё о функциональном фитнесе всегда под рукой!</p>
+        <button id="pwa-install-btn" class="pwa-install-btn">Установить приложение</button>
+    </div>
+
     <!-- Контакты и карта -->
     <section class="map-section">
         <div class="container">
@@ -1369,13 +1399,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Кнопка установки PWA -->
-    <div class="pwa-install-container" id="pwa-install-container">
-        <h2 class="pwa-install-title">Установите приложение ФФМК</h2>
-        <p class="pwa-install-subtitle">Быстрый доступ к новостям, документам и соревнованиям!</p>
-        <button id="pwa-install-btn" class="pwa-install-btn">Установить</button>
-    </div>
 
     <!-- Футер -->
     <footer class="footer">
