@@ -3216,6 +3216,150 @@
       ru: 'WodFriends — компания по производству и продаже экипировки для функционального многоборья и тренировок.',
       kz: 'WodFriends — функционалды көпсайыс және машықтар үшін жабдық өндіру және сату компаниясы.',
       en: 'WodFriends - a company for the production and sale of equipment for functional fitness and training.'
+    },
+
+    // Страница news11 - Чемпионат Азии 2026
+    news11_title: {
+      ru: 'Чемпионат Азии по функциональному многоборью 2026 в Казахстане',
+      kz: 'Қазақстанда 2026 жылғы функционалдық көпсайыс бойынша Азия чемпионаты',
+      en: 'Asian Functional Fitness Championship 2026 in Kazakhstan'
+    },
+    news11_intro_p1: {
+      ru: 'Федерация функционального многоборья Республики Казахстан, являясь официальным членом Международной Федерации функционального фитнеса (International Functional Fitness Federation), получила право проведения Чемпионата Азии 2026 на территории Республики Казахстан.',
+      kz: 'Қазақстан Республикасының функционалдық көпсайыс федерациясы Халықаралық функционалдық фитнес федерациясының (International Functional Fitness Federation) ресми мүшесі болып табылады және Қазақстан Республикасы аумағында 2026 жылғы Азия чемпионатын өткізу құқығын алды.',
+      en: 'The Functional Fitness Federation of the Republic of Kazakhstan, being an official member of the International Functional Fitness Federation, has been granted the right to host the Asian Championship 2026 in the Republic of Kazakhstan.'
+    },
+    news11_intro_p2: {
+      ru: 'Это решение стало результатом многолетней, системной и последовательной работы Федерации, а также международного признания и высокого уровня доверия со стороны Президента Международной Федерации функционального фитнеса - Гретчен Киттельбергер.',
+      kz: 'Бұл шешім Федерацияның көп жылдық, жүйелі және тұрақты жұмысының, сондай-ақ Халықаралық функционалдық фитнес федерациясының президенті Гретчен Киттельбергердің халықаралық танымалдығы мен жоғары деңгейдегі сенімінің нәтижесі болды.',
+      en: 'This decision was the result of many years of systematic and consistent work by the Federation, as well as international recognition and a high level of trust from the President of the International Functional Fitness Federation - Gretchen Kittelberger.'
+    },
+    news11_support_title: {
+      ru: 'Поддержка спонсора и партнёра',
+      kz: 'Демеушінің және серіктестің қолдауы',
+      en: 'Support from Sponsor and Partner'
+    },
+    news11_support_p1: {
+      ru: 'На всём пути подготовки и развития функционального многоборья в Казахстане рядом с нами находится генеральный спонсор - КДЛ «Олимп», в лице Сулейменова Ерлана Мельсовича. Его поддержка, вовлечённость и вера в потенциал нашего вида спорта сыграли ключевую роль в достижении этого исторического результата.',
+      kz: 'Қазақстанда функционалдық көпсайысты дайындау және дамыту жолында бізбен бірге бас демеуші - КДЛ «Олимп» Сулейменов Ерлан Мелсұлының атынан. Оның қолдауы, белсенді қатысуы және спорт түріміздің әлеуетіне сенімі осы тарихи нәтижеге қол жеткізуде шешуші рөл атқарды.',
+      en: 'Throughout the preparation and development of functional fitness in Kazakhstan, we have been supported by our general sponsor - KDL "Olymp", represented by Suleimenov Erlan Melsovich. His support, involvement and belief in the potential of our sport played a key role in achieving this historic result.'
+    },
+    news11_support_p2: {
+      ru: 'Важным партнёром Федерации является WodFriends, в лице Смирнова Владимира, который обеспечивает спортсменов качественной экипировкой и вносит значительный вклад в развитие и популяризацию функционального многоборья.',
+      kz: 'Федерацияның маңызды серіктесі - WodFriends Смирнов Владимирдің атынан, ол спортшыларды сапалы жабдықпен қамтамасыз етеді және функционалдық көпсайысты дамыту мен танымал етуге елеулі үлес қосады.',
+      en: 'An important partner of the Federation is WodFriends, represented by Smirnov Vladimir, who provides athletes with quality equipment and makes a significant contribution to the development and popularization of functional fitness.'
+    },
+    news11_support_p3: {
+      ru: 'Благодаря поддержке партнёров и слаженной работе всей команды стало возможным проведение соревнований столь высокого международного уровня.',
+      kz: 'Серіктестердің қолдауы мен бүкіл команданың үйлесімді жұмысының арқасында мұндай жоғары халықаралық деңгейдегі жарысты өткізу мүмкін болды.',
+      en: 'Thanks to the support of partners and the coordinated work of the entire team, it became possible to hold competitions of such a high international level.'
+    },
+    news11_historic_title: {
+      ru: 'Историческое событие для Казахстана',
+      kz: 'Қазақстан үшін тарихи оқиға',
+      en: 'Historic Event for Kazakhstan'
+    },
+    news11_historic_p1: {
+      ru: 'Уже в августе 2026 года, в столице Республики Казахстан, впервые в истории отечественного функционального многоборья состоится официальный международный Чемпионат Азии.',
+      kz: '2026 жылдың тамызында Қазақстан Республикасының астанасында отандық функционалдық көпсайыс тарихында алғаш рет ресми халықаралық Азия чемпионаты өтеді.',
+      en: 'Already in August 2026, in the capital of the Republic of Kazakhstan, for the first time in the history of domestic functional fitness, an official international Asian Championship will be held.'
+    },
+    news11_historic_p2: {
+      ru: 'За всю историю существования этого вида спорта в нашей стране подобного события ранее не проводилось.',
+      kz: 'Біздің елде бұл спорт түрінің бар болу тарихында мұндай іс-шара бұрын өткізілмеген.',
+      en: 'Throughout the entire history of this sport in our country, such an event has never been held before.'
+    },
+    news11_opportunities_title: {
+      ru: 'Возможности для атлетов и зрителей',
+      kz: 'Спортшылар мен көрермендер үшін мүмкіндіктер',
+      en: 'Opportunities for Athletes and Spectators'
+    },
+    news11_opportunities_intro: {
+      ru: 'Чемпионат Азии 2026 - это уникальная возможность:',
+      kz: '2026 жылғы Азия чемпионаты - бұл бірегей мүмкіндік:',
+      en: 'Asian Championship 2026 is a unique opportunity:'
+    },
+    news11_opportunity_1: {
+      ru: 'увидеть выступления сильнейших атлетов Азии',
+      kz: 'Азияның ең мықты спортшыларының өнерін көру',
+      en: 'see performances of the strongest athletes in Asia'
+    },
+    news11_opportunity_2: {
+      ru: 'представить Казахстан на международной региональной арене',
+      kz: 'халықаралық аймақтық аренада Қазақстанды ұсыну',
+      en: 'represent Kazakhstan on the international regional arena'
+    },
+    news11_opportunity_3: {
+      ru: 'стать частью события, которое войдёт в историю спорта страны',
+      kz: 'ел спортының тарихына енетін оқиғаның бөлігі болу',
+      en: 'become part of an event that will go down in the history of the country\'s sports'
+    },
+    news11_opportunities_p2: {
+      ru: 'В текущем сезоне спортсмены получат возможность пройти отбор и выступить на чемпионате, продемонстрировав своё мастерство перед широкой аудиторией болельщиков и профессионального сообщества.',
+      kz: 'Ағымдағы маусымда спортшылар іріктеуден өтіп, чемпионатта өнер көрсетуге, кең көрермендер мен кәсіби қоғамдастық алдында шеберліктерін көрсетуге мүмкіндік алады.',
+      en: 'In the current season, athletes will have the opportunity to qualify and compete in the championship, demonstrating their skills in front of a wide audience of fans and the professional community.'
+    },
+    news11_future_title: {
+      ru: 'Впереди - ещё больше',
+      kz: 'Алда - одан да көп',
+      en: 'Ahead - Even More'
+    },
+    news11_future_p1: {
+      ru: 'В ближайшее время мы анонсируем подробности формата проведения Чемпионата Азии 2026. Мы уверены, что масштаб события позволит вовлечь большое количество спортсменов и сделает чемпионат по-настоящему грандиозным.',
+      kz: 'Жақын арада біз 2026 жылғы Азия чемпионатын өткізу форматының егжей-тегжейлерін жариялаймыз. Біз оқиғаның ауқымы көптеген спортшыларды тартуға мүмкіндік береді және чемпионатты шынымен ұлы етеді деп сенімдіміз.',
+      en: 'Soon we will announce the details of the format for the Asian Championship 2026. We are confident that the scale of the event will allow us to involve a large number of athletes and make the championship truly grand.'
+    },
+    news11_gratitude_title: {
+      ru: 'Благодарность',
+      kz: 'Алғыс',
+      en: 'Gratitude'
+    },
+    news11_gratitude_p1: {
+      ru: 'Мы поздравляем всех, кто причастен к этому достижению:',
+      kz: 'Біз осы жетістікке қатысты барлығын құттықтаймыз:',
+      en: 'We congratulate everyone involved in this achievement:'
+    },
+    news11_gratitude_p1_cont: {
+      ru: 'атлетов, тренеров, судей, организаторов, партнёров и болельщиков.',
+      kz: 'спортшыларды, жаттықтырушыларды, төрешілерді, ұйымдастырушыларды, серіктестерді және жанкүйерлерді.',
+      en: 'athletes, coaches, judges, organizers, partners and fans.'
+    },
+    news11_gratitude_p2: {
+      ru: 'Каждый из вас - часть этой истории.',
+      kz: 'Сіздердің әрқайсысыңыз - осы тарихтың бір бөлігісіз.',
+      en: 'Each of you is part of this story.'
+    },
+    news11_gratitude_p2_cont: {
+      ru: 'Без вас этот путь был бы невозможен.',
+      kz: 'Сіздерсіз бұл жол мүмкін болмас еді.',
+      en: 'Without you, this path would not have been possible.'
+    },
+    news11_gratitude_p3: {
+      ru: 'Мы работаем для вас.',
+      kz: 'Біз сіздер үшін жұмыс істейміз.',
+      en: 'We work for you.'
+    },
+    news11_slogan: {
+      ru: 'Алға, Қазақстан!',
+      kz: 'Алға, Қазақстан!',
+      en: 'Forward, Kazakhstan!'
+    },
+    news11_back_home: {
+      ru: 'Вернуться на главную',
+      kz: 'Басты бетке оралу',
+      en: 'Back to Home'
+    },
+
+    // Карточка news11 на странице новостей
+    news11_card_title: {
+      ru: 'Чемпионат Азии по функциональному многоборью 2026 в Казахстане!',
+      kz: 'Қазақстанда 2026 жылғы функционалдық көпсайыс бойынша Азия чемпионаты!',
+      en: 'Asian Functional Fitness Championship 2026 in Kazakhstan!'
+    },
+    news11_card_excerpt: {
+      ru: 'Казахстан получил право проведения Чемпионата Азии 2026. Историческое событие для функционального многоборья страны...',
+      kz: 'Қазақстан 2026 жылғы Азия чемпионатын өткізу құқығын алды. Ел функционалдық көпсайысының тарихи оқиғасы...',
+      en: 'Kazakhstan has been granted the right to host the Asian Championship 2026. A historic event for the country\'s functional fitness...'
     }
   };
 
