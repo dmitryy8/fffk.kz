@@ -41,6 +41,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
     <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0b63b7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="КФФМ">
     
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
@@ -1551,6 +1555,44 @@
             }
         }, maxLoadTime);
     </script>
+    
+    <!-- Service Worker для PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('✅ Service Worker зарегистрирован:', registration.scope);
+                        
+                        // Проверка обновлений каждые 60 секунд
+                        setInterval(() => {
+                            registration.update();
+                        }, 60000);
+                    })
+                    .catch((error) => {
+                        console.error('❌ Ошибка регистрации Service Worker:', error);
+                    });
+                
+                // Обработка события установки PWA
+                let deferredPrompt;
+                window.addEventListener('beforeinstallprompt', (e) => {
+                    e.preventDefault();
+                    deferredPrompt = e;
+                    console.log('💡 PWA готов к установке!');
+                    
+                    // Можно показать кнопку "Установить приложение"
+                    // Пример: document.getElementById('installBtn').style.display = 'block';
+                });
+                
+                // Отслеживание успешной установки
+                window.addEventListener('appinstalled', () => {
+                    console.log('🎉 PWA успешно установлен!');
+                    deferredPrompt = null;
+                });
+            });
+        }
+    </script>
+    
     <script src="/lang.js?v=20260123205220" defer></script>
 </body>
 </html>
