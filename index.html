@@ -668,7 +668,12 @@
             color: #444;
             margin-bottom: 25px;
             font-weight: 500;
-            line-height: 1.5;
+            line-height: 1.8;
+            text-align: left;
+        }
+        
+        .pwa-install-subtitle strong {
+            color: #0b63b7;
         }
         
         .pwa-install-btn {
@@ -1684,8 +1689,33 @@
         const installBtn = document.getElementById('pwa-install-btn');
         const installContainer = document.getElementById('pwa-install-container');
         
-        // Обработчик клика по кнопке установки
-        if (installBtn) {
+        // Определение iOS устройства
+        const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) && !window.MSStream;
+        
+        // Если iOS - показываем инструкцию
+        if (isIOS && installContainer && installBtn) {
+            const titleElement = installContainer.querySelector('.pwa-install-title');
+            const subtitleElement = installContainer.querySelector('.pwa-install-subtitle');
+            
+            titleElement.innerHTML = 'Установите приложение ФФМК на iPhone!';
+            subtitleElement.innerHTML = `
+                <strong>Инструкция для установки:</strong><br>
+                1️⃣ Нажмите кнопку "Поделиться" <svg width="18" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M16 5l-1.42 1.42-1.59-1.59V16h-2V4.83L9.42 6.42 8 5l4-4 4 4zm4 5v11c0 1.1-.9 2-2 2H6c-1.11 0-2-.9-2-2V10c0-1.11.89-2 2-2h3v2H6v11h12V10h-3V8h3c1.1 0 2 .89 2 2z"/></svg> внизу экрана<br>
+                2️⃣ Прокрутите вниз и выберите <strong>"На экран Домой"</strong><br>
+                3️⃣ Нажмите <strong>"Добавить"</strong> в правом верхнем углу
+            `;
+            installBtn.textContent = 'Понятно!';
+            installBtn.style.background = 'linear-gradient(135deg, #34c759 0%, #30b350 100%)';
+            
+            // Показываем контейнер для iOS
+            installContainer.classList.add('show');
+            
+            // Кнопка просто скрывает инструкцию
+            installBtn.addEventListener('click', () => {
+                installContainer.classList.remove('show');
+            });
+        } else if (installBtn) {
+            // Обработчик клика для Android/Desktop
             installBtn.addEventListener('click', async () => {
                 if (!deferredPrompt) {
                     console.log('Нет доступного события установки');
@@ -1729,17 +1759,19 @@
                     });
             });
             
-            // Перехватываем событие установки
-            window.addEventListener('beforeinstallprompt', (e) => {
-                e.preventDefault();
-                deferredPrompt = e;
-                console.log('💡 PWA готов к установке!');
-                
-                // Показываем контейнер с кнопкой установки
-                if (installContainer) {
-                    installContainer.classList.add('show');
-                }
-            });
+            // Перехватываем событие установки (только для Android/Desktop Chrome)
+            if (!isIOS) {
+                window.addEventListener('beforeinstallprompt', (e) => {
+                    e.preventDefault();
+                    deferredPrompt = e;
+                    console.log('💡 PWA готов к установке!');
+                    
+                    // Показываем контейнер с кнопкой установки
+                    if (installContainer) {
+                        installContainer.classList.add('show');
+                    }
+                });
+            }
             
             // Отслеживаем установку
             window.addEventListener('appinstalled', () => {
