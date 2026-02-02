@@ -622,11 +622,74 @@
             box-shadow: 0 5px 20px rgba(11, 99, 183, 0.4);
         }
 
+        /* Кнопка установки PWA */
+        .pwa-install-container {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        .pwa-install-btn {
+            display: none;
+            background: linear-gradient(135deg, #0b63b7 0%, #094d8f 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(11, 99, 183, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pwa-install-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .pwa-install-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(11, 99, 183, 0.4);
+        }
+        
+        .pwa-install-btn:hover:before {
+            left: 100%;
+        }
+        
+        .pwa-install-btn:active {
+            transform: translateY(0);
+        }
+        
+        .pwa-install-btn.show {
+            display: inline-block;
+            animation: fadeInUp 0.6s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Футер */
         .footer {
             background: var(--primary-color);
             padding: 60px 0 30px;
-            margin-top: 80px;
+            margin-top: 0;
         }
 
         .footer-content {
@@ -1294,6 +1357,11 @@
         </div>
     </section>
 
+    <!-- Кнопка установки PWA -->
+    <div class="pwa-install-container">
+        <button id="pwa-install-btn" class="pwa-install-btn">Установите приложение ФФМК на телефон!</button>
+    </div>
+
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
@@ -1558,6 +1626,53 @@
     
     <!-- Service Worker для PWA -->
     <script>
+        // PWA переменные
+        let deferredPrompt;
+        const installBtn = document.getElementById('pwa-install-btn');
+        
+        // Определяем тип устройства
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        
+        // Устанавливаем текст кнопки в зависимости от устройства
+        function updateInstallButtonText() {
+            if (installBtn) {
+                if (isMobileDevice()) {
+                    installBtn.textContent = 'Установите приложение ФФМК на телефон!';
+                } else {
+                    installBtn.textContent = 'Установите приложение ФФМК на компьютер!';
+                }
+            }
+        }
+        
+        // Обработчик клика по кнопке установки
+        if (installBtn) {
+            installBtn.addEventListener('click', async () => {
+                if (!deferredPrompt) {
+                    console.log('Нет доступного события установки');
+                    return;
+                }
+                
+                // Показываем диалог установки
+                deferredPrompt.prompt();
+                
+                // Ждем выбора пользователя
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`Пользователь выбрал: ${outcome}`);
+                
+                if (outcome === 'accepted') {
+                    console.log('✅ Пользователь установил PWA');
+                }
+                
+                // Очищаем deferredPrompt
+                deferredPrompt = null;
+                
+                // Скрываем кнопку
+                installBtn.classList.remove('show');
+            });
+        }
+        
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
@@ -1572,25 +1687,35 @@
                     .catch((error) => {
                         console.error('❌ Ошибка регистрации Service Worker:', error);
                     });
+            });
+            
+            // Перехватываем событие установки
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                console.log('💡 PWA готов к установке!');
                 
-                // Обработка события установки PWA
-                let deferredPrompt;
-                window.addEventListener('beforeinstallprompt', (e) => {
-                    e.preventDefault();
-                    deferredPrompt = e;
-                    console.log('💡 PWA готов к установке!');
-                    
-                    // Можно показать кнопку "Установить приложение"
-                    // Пример: document.getElementById('installBtn').style.display = 'block';
-                });
+                // Показываем кнопку установки
+                if (installBtn) {
+                    updateInstallButtonText();
+                    installBtn.classList.add('show');
+                }
+            });
+            
+            // Отслеживаем установку
+            window.addEventListener('appinstalled', () => {
+                console.log('🎉 PWA успешно установлен!');
+                deferredPrompt = null;
                 
-                // Отслеживание успешной установки
-                window.addEventListener('appinstalled', () => {
-                    console.log('🎉 PWA успешно установлен!');
-                    deferredPrompt = null;
-                });
+                // Скрываем кнопку
+                if (installBtn) {
+                    installBtn.classList.remove('show');
+                }
             });
         }
+        
+        // Обновляем текст при загрузке
+        updateInstallButtonText();
     </script>
     
     <script src="/lang.js?v=20260123205220" defer></script>
