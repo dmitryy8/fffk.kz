@@ -3360,6 +3360,140 @@
       ru: 'Казахстан получил право проведения Чемпионата Азии 2026. Историческое событие для функционального многоборья страны...',
       kz: 'Қазақстан 2026 жылғы Азия чемпионатын өткізу құқығын алды. Ел функционалдық көпсайысының тарихи оқиғасы...',
       en: 'Kazakhstan has been granted the right to host the Asian Championship 2026. A historic event for the country\'s functional fitness...'
+    },
+
+    // Карточка news12 на странице новостей
+    news12_card_title: {
+      ru: 'Alash Winter Cup 2026: Главное событие зимы в мире функционального многоборья!',
+      kz: 'Alash Winter Cup 2026: Функционалдық көпсайыс әлемінде қыстың басты оқиғасы!',
+      en: 'Alash Winter Cup 2026: The Main Winter Event in Functional Fitness!'
+    },
+    news12_card_excerpt: {
+      ru: '31 января и 1 февраля 2026 года в Астане в спортивном комплексе Invictus go (Oxy gym) состоялся...',
+      kz: '2026 жылдың 31 қаңтары мен 1 ақпанында Астанада Invictus go (Oxy gym) спорт кешенінде өтті...',
+      en: 'On January 31 and February 1, 2026, in Astana at the Invictus go sports complex (Oxy gym)...'
+    },
+
+    // Страница news12 - Alash Winter Cup 2026
+    news12_title: {
+      ru: 'Alash Winter Cup 2026: Главное событие зимы в мире функционального многоборья',
+      kz: 'Alash Winter Cup 2026: Функционалдық көпсайыс әлемінде қыстың басты оқиғасы',
+      en: 'Alash Winter Cup 2026: The Main Winter Event in Functional Fitness'
+    },
+    news12_intro: {
+      ru: '31 января и 1 февраля 2026 года в Астане в спортивном комплексе Invictus go (Oxy gym) состоялся регулярный турнир Alash Winter Cup, прошедший под эгидой Казахстанской Федерации функционального многоборья. Этот старт является центральным событием в зимнем календаре Федерации, способствуя активному вовлечению граждан Казахстана в спорт и поддержанию атлетов в оптимальной физической форме.',
+      kz: '2026 жылдың 31 қаңтары мен 1 ақпанында Астанада Invictus go (Oxy gym) спорт кешенінде Қазақстандық функционалдық көпсайыс федерациясының қолдауымен Alash Winter Cup турнирі өтті. Бұл жарыс Федерацияның қысқы күнтізбесіндегі орталық оқиға болып табылады, Қазақстан азаматтарын спортқа белсенді тарту және спортшыларды оңтайлы физикалық формада ұстауға ықпал етеді.',
+      en: 'On January 31 and February 1, 2026, the regular Alash Winter Cup tournament was held in Astana at the Invictus go (Oxy gym) sports complex under the auspices of the Kazakhstan Functional Fitness Federation. This event is a central part of the Federation\'s winter calendar, promoting active involvement of Kazakhstan citizens in sports and maintaining athletes in optimal physical condition.'
+    },
+    news12_media_title: {
+      ru: '🎥 Медийная поддержка и официальные лица',
+      kz: '🎥 Медиа қолдауы және ресми тұлғалар',
+      en: '🎥 Media Support and Official Representatives'
+    },
+    news12_media_p1: {
+      ru: 'Турнир получил статусное освещение в республиканской прессе. Спортивный телеканал «Спорт +» выступил информационным партнером, любезно согласившись анонсировать событие и транслировать ключевые моменты на своих ресурсах.',
+      kz: 'Турнир республикалық баспасөзде мәртебелі жарияланым алды. «Спорт +» спорттық телеарнасы ақпараттық серіктес бола отырып, оқиғаны жариялауға және өз ресурстарында негізгі сәттерді трансляциялауға келісті.',
+      en: 'The tournament received significant coverage in the national press. The sports channel "Sport +" acted as an information partner, kindly agreeing to announce the event and broadcast key moments on their platforms.'
+    },
+    news12_media_p2: {
+      ru: 'Мероприятие посетили руководители Федерации функционального многоборья, что подчеркивает значимость турнира для национального спорта:',
+      kz: 'Іс-шараға функционалдық көпсайыс федерациясының басшылары қатысты, бұл турнирдің ұлттық спорт үшін маңыздылығын көрсетеді:',
+      en: 'The event was attended by the leaders of the Functional Fitness Federation, which emphasizes the significance of the tournament for national sports:'
+    },
+    news12_leader1: {
+      ru: 'Мещеряков Николай Ильич — Президент Федерации;',
+      kz: 'Мещеряков Николай Ильич — Федерация президенті;',
+      en: 'Meshcheryakov Nikolay Ilyich — President of the Federation;'
+    },
+    news12_leader2: {
+      ru: 'Лукановский Валентин — Генеральный секретарь;',
+      kz: 'Лукановский Валентин — Бас хатшы;',
+      en: 'Lukanovsky Valentin — General Secretary;'
+    },
+    news12_leader3: {
+      ru: 'Джантлеев Роман — Вице-президент.',
+      kz: 'Джантлеев Роман — Вице-президент.',
+      en: 'Dzhantleev Roman — Vice President.'
+    },
+    news12_geography_title: {
+      ru: '🇰🇿 География участников и международное судейство',
+      kz: '🇰🇿 Қатысушылардың географиясы және халықаралық төрелік',
+      en: '🇰🇿 Participants Geography and International Judging'
+    },
+    news12_geography_p1: {
+      ru: 'Турнир объединил атлетов из множества городов Казахстана, включая Алматы, Семей, Шымкент, Усть-Каменогорск, Петропавловск, Актобе и другие регионы. Для обеспечения объективности и профессионализма на турнир были приглашены гости из Узбекистана, которые осуществляли квалифицированное судейство.',
+      kz: 'Турнир Алматы, Семей, Шымкент, Өскемен, Петропавл, Ақтөбе және басқа өңірлерді қоса алғанда, Қазақстанның көптеген қалаларынан спортшыларды біріктірді. Объективтілік пен кәсіпқойлықты қамтамасыз ету үшін турнирге білікті төрелік жүргізген Өзбекстаннан қонақтар шақырылды.',
+      en: 'The tournament united athletes from many cities of Kazakhstan, including Almaty, Semey, Shymkent, Ust-Kamenogorsk, Petropavlovsk, Aktobe and other regions. To ensure objectivity and professionalism, guests from Uzbekistan were invited to the tournament, who carried out qualified judging.'
+    },
+    news12_categories_title: {
+      ru: '🏆 Категории и формат соревнований',
+      kz: '🏆 Санаттар мен жарыс форматы',
+      en: '🏆 Categories and Competition Format'
+    },
+    news12_categories_p1: {
+      ru: 'В течение двух соревновательных дней атлеты прошли через 6 заданий и 7 зачетов, демонстрируя предел своих возможностей. Борьба велась в следующих категориях:',
+      kz: 'Екі сайыс күні ішінде спортшылар 6 тапсырма мен 7 есептен өтіп, өз мүмкіндіктерінің шегін көрсетті. Күрес келесі санаттарда жүргізілді:',
+      en: 'During two competitive days, athletes went through 6 tasks and 7 scores, demonstrating the limit of their capabilities. The competition was held in the following categories:'
+    },
+    news12_cat1: {
+      ru: 'Scaled (Мужчины и Женщины)',
+      kz: 'Scaled (Ерлер және Әйелдер)',
+      en: 'Scaled (Men and Women)'
+    },
+    news12_cat2: {
+      ru: 'Мастера 35+ (Мужчины)',
+      kz: 'Шеберлер 35+ (Ерлер)',
+      en: 'Masters 35+ (Men)'
+    },
+    news12_cat3: {
+      ru: 'Intermediate (Команды: мужчина + женщина)',
+      kz: 'Intermediate (Командалар: ер + әйел)',
+      en: 'Intermediate (Teams: man + woman)'
+    },
+    news12_wildcard_title: {
+      ru: '🎟 Прямой путь на Чемпионат Казахстана (Wildcard)',
+      kz: '🎟 Қазақстан чемпионатына тікелей жол (Wildcard)',
+      en: '🎟 Direct Path to Kazakhstan Championship (Wildcard)'
+    },
+    news12_wildcard_p1: {
+      ru: 'Одной из главных задач турнира стало выявление сильнейших для участия в главных стартах страны. Спортсмены категорий Scaled (мужчины и женщины), а также команды категории Intermediate, успешно прошедшие испытания, получили Wildcard — официальное приглашение на Чемпионат Казахстана, который пройдет в июне 2026 года в городе Актобе.',
+      kz: 'Турнирдің басты міндеттерінің бірі елдің негізгі жарыстарына қатысу үшін ең күштілерді анықтау болды. Scaled (ерлер және әйелдер) санаттарының спортшылары, сондай-ақ Intermediate санатының командалары сынақтан сәтті өтіп, 2026 жылдың маусымында Ақтөбе қалаларында өтетін Қазақстан чемпионатына ресми шақыру — Wildcard алды.',
+      en: 'One of the main tasks of the tournament was to identify the strongest for participation in the main starts of the country. Athletes of the Scaled categories (men and women), as well as teams of the Intermediate category, who successfully passed the tests, received a Wildcard — an official invitation to the Kazakhstan Championship, which will be held in June 2026 in the city of Aktobe.'
+    },
+    news12_thanks_title: {
+      ru: '🌟 Благодарность клубу «Алаш»: Профессионализм и единство',
+      kz: '🌟 «Алаш» клубына алғыс: Кәсіпқойлық және бірлік',
+      en: '🌟 Gratitude to Alash Club: Professionalism and Unity'
+    },
+    news12_thanks_p1: {
+      ru: 'Особую признательность всё спортивное сообщество выражает клубу «Алаш». Под руководством Жалела Асылбека и его супруги Ксении, все члены команды проявили невероятное упорство, креативность и преданность делу.',
+      kz: 'Барлық спорт қауымдастығы «Алаш» клубына ерекше алғыс білдіреді. Жалел Асылбек пен оның жұбайы Ксенияның басшылығымен команданың барлық мүшелері керемет табандылық, шығармашылық және ісіне берілгендік танытты.',
+      en: 'The entire sports community expresses special gratitude to the Alash club. Under the leadership of Zhalel Asylbek and his wife Ksenia, all team members showed incredible perseverance, creativity and dedication.'
+    },
+    news12_thanks_p2: {
+      ru: 'Это была по-настоящему слаженная и дружная работа всего коллектива. Трудолюбие каждого члена команды «Алаш» при подготовке к турниру заслуживает отдельной похвалы: их вклад стал фундаментом, на котором был построен этот масштабный спортивный праздник.',
+      kz: 'Бұл шынымен де үйлесімді және достық ұжым жұмысы болды. Турнирге дайындық барысында «Алаш» командасының әр мүшесінің еңбекқорлығы жеке мақтауға тұрарлық: олардың үлесі осы ауқымды спорт мерекесі салынған іргетас болды.',
+      en: 'This was a truly coordinated and friendly work of the entire team. The diligence of each member of the Alash team in preparing for the tournament deserves special praise: their contribution became the foundation on which this large-scale sports festival was built.'
+    },
+    news12_goals_title: {
+      ru: '🎯 Цели и задачи турнира',
+      kz: '🎯 Турнирдің мақсаттары мен міндеттері',
+      en: '🎯 Goals and Objectives of the Tournament'
+    },
+    news12_goal1: {
+      ru: 'Популяризация функционального многоборья в Республике Казахстан.',
+      kz: 'Қазақстан Республикасында функционалдық көпсайысты танымал ету.',
+      en: 'Popularization of functional fitness in the Republic of Kazakhstan.'
+    },
+    news12_goal2: {
+      ru: 'Выявление наиболее сильных и подготовленных спортсменов в своих категориях.',
+      kz: 'Өз санаттарында ең күш және дайындығы бар спортшыларды анықтау.',
+      en: 'Identifying the strongest and most prepared athletes in their categories.'
+    },
+    news12_goal3: {
+      ru: 'Пропаганда здорового образа жизни и вовлечение молодежи в регулярные занятия спортом.',
+      kz: 'Салауатты өмір салтын насихаттау және жастарды спортпен тұрақты айналысуға тарту.',
+      en: 'Promotion of a healthy lifestyle and involvement of young people in regular sports.'
     }
   };
 
