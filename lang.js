@@ -3586,6 +3586,73 @@
       ru: 'Мексика',
       kz: 'Мексика',
       en: 'Mexico'
+    },
+
+    // Страница news14 - Чемпионат мира IF3 в Шотландии
+    news14_title: {
+      ru: 'Чемпионат мира IF3 в Шотландии',
+      kz: 'IF3 әлем чемпионаты Шотландияда',
+      en: 'IF3 World Championship in Scotland'
+    },
+    news14_subtitle: {
+      ru: 'Британская Федерация функционального фитнеса с гордостью проводит Чемпионат мира',
+      kz: 'Британ функционалдық фитнес федерациясы әлем чемпионатын құрметтеп өткізеді',
+      en: 'British Functional Fitness Federation proudly hosts the World Championship'
+    },
+    news14_p1: {
+      ru: 'Глазго примет спортсменов со всего мира, которые соберутся вместе, чтобы посоревноваться за звание чемпиона мира в функциональном фитнесе.',
+      kz: 'Глазго бүкіл әлемнен келген спортшыларды қарсы алады, олар функционалдық фитнесте әлем чемпионы атына өнер сынасуға жиналады.',
+      en: 'Glasgow will welcome athletes from around the world who will gather together to compete for the title of world champion in functional fitness.'
+    },
+    news14_p2: {
+      ru: 'Впервые стартовавший в 2017 году чемпионат мира IF3 превратился в глобальную демонстрацию элитного функционального фитнеса, став за последние годы сильнее, чем когда-либо.',
+      kz: '2017 жылы алғашқы рет стартталған IF3 әлем чемпионаты элиталық функционалдық фитнестің глобальды көрінісіне айналды, соңғы жылдары кез келген кезінен күштіге айналды.',
+      en: 'Launched for the first time in 2017, the IF3 World Championship has become a global showcase of elite functional fitness, becoming stronger than ever in recent years.'
+    },
+    news14_p3: {
+      ru: 'В декабре этого года он приезжает в Шотландию — на землю спортсменов, где каждый день начинается с вызова и заканчивается победой.',
+      kz: 'Осы жылдың желтоқсанында ол Шотландияға келеді — спортшылардың жерінде, мұнда әр күн сынақтан басталып жеңіспен аяқталады.',
+      en: 'This December it comes to Scotland — the land of champions, where every day begins with a challenge and ends with victory.'
+    },
+    news14_location: {
+      ru: 'Региональный спортивный комплекс Рейвенскрейг',
+      kz: 'Ravenscraigg Аймақтық спорт комплексі',
+      en: 'Ravenscraigg Regional Sports Complex'
+    },
+    news14_date: {
+      ru: '11-13 декабря 2026 года',
+      kz: '2026 жылғы 11-13 желтоқсан',
+      en: 'December 11-13, 2026'
+    },
+    news14_slogan_1: {
+      ru: 'Соревнования мирового уровня.',
+      kz: 'Әлем деңгейіндегі жарыстар.',
+      en: 'World-class competitions.'
+    },
+    news14_slogan_2: {
+      ru: 'Международные спортсмены.',
+      kz: 'Халықаралық спортшылар.',
+      en: 'International athletes.'
+    },
+    news14_slogan_3: {
+      ru: 'Одна арена.',
+      kz: 'Бір аренасы.',
+      en: 'One arena.'
+    },
+    news14_cta: {
+      ru: 'Стань частью этого.',
+      kz: 'Осының бөлігі бол.',
+      en: 'Be part of it.'
+    },
+    news14_card_title: {
+      ru: 'Чемпионат мира IF3 в Шотландии!',
+      kz: 'IF3 әлем чемпионаты Шотландияда!',
+      en: 'IF3 World Championship in Scotland!'
+    },
+    news14_card_excerpt: {
+      ru: 'Британская Федерация функционального фитнеса с гордостью проводит Чемпионат мира IF3 в Глазго...',
+      kz: 'Британ функционалдық фитнес федерациясы IF3 әлем чемпионатын Глазгода өткізеді...',
+      en: 'British Functional Fitness Federation proudly hosts the IF3 World Championship in Glasgow...'
     }
   };
 
