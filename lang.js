@@ -3494,6 +3494,98 @@
       ru: 'Пропаганда здорового образа жизни и вовлечение молодежи в регулярные занятия спортом.',
       kz: 'Салауатты өмір салтын насихаттау және жастарды спортпен тұрақты айналысуға тарту.',
       en: 'Promotion of a healthy lifestyle and involvement of young people in regular sports.'
+    },
+
+    // Страница news13 - Панамериканский чемпионат
+    news13_title: {
+      ru: 'Панамериканский чемпионат',
+      kz: 'Панамерикандық чемпионат',
+      en: 'Pan-American Championship'
+    },
+    news13_subtitle: {
+      ru: 'Морелия готова приветствовать континент!',
+      kz: 'Морелия құрлықты қарсы алуға дайын!',
+      en: 'Morelia is ready to welcome the continent!'
+    },
+    news13_p1: {
+      ru: 'В столице Мичоакана пройдет первый Панамериканский чемпионат по функциональному фитнесу IF3, который соберет спортсменов со всей Америки, чтобы побороться за титул континента.',
+      kz: 'Мичоакан астанасында IF3 функционалдық фитнес бойынша алғашқы Панамерикандық чемпионат өтеді, ол Американың барлық бөлігінен спортшыларды құрлықтық титул үшін күресуге жинайды.',
+      en: 'The first Pan-American Functional Fitness Championship IF3 will be held in the capital of Michoacan, bringing together athletes from all over America to compete for the continental title.'
+    },
+    news13_p2: {
+      ru: 'В течение четырех дней Морелия станет сценой элитного конкурса, сообщества и выступления в одном из самых знаковых городов Мексики.',
+      kz: 'Төрт күн бойы Морелия Мексиканың ең танымал қалаларының бірінде элиталық жарыстардың, қауымдастықтың және өнер көрсетудің сахнасы болады.',
+      en: 'Over four days, Morelia will be the stage for elite competition, community and performance in one of Mexico\'s most iconic cities.'
+    },
+    news13_participants_title: {
+      ru: 'Участники:',
+      kz: 'Қатысушылар:',
+      en: 'Participants:'
+    },
+    news13_participants_intro: {
+      ru: 'Примут участие спортсмены из следующих стран:',
+      kz: 'Келесі елдерден спортшылар қатысады:',
+      en: 'Athletes from the following countries will participate:'
+    },
+    news13_location: {
+      ru: 'Морелия, Мексика',
+      kz: 'Морелия, Мексика',
+      en: 'Morelia, Mexico'
+    },
+    news13_date: {
+      ru: '13-16 августа 2026 года',
+      kz: '2026 жылғы 13-16 тамыз',
+      en: 'August 13-16, 2026'
+    },
+    news13_welcome: {
+      ru: 'Добро пожаловать на Панамериканский чемпионат. Увидимся в Морелии!',
+      kz: 'Панамерикандық чемпионатқа қош келдіңіз. Морелияда көрісеміз!',
+      en: 'Welcome to the Pan-American Championship. See you in Morelia!'
+    },
+    news13_card_title: {
+      ru: 'Панамериканский чемпионат по функциональному фитнесу IF3!',
+      kz: 'IF3 функционалдық фитнес бойынша Панамерикандық чемпионат!',
+      en: 'Pan-American Functional Fitness Championship IF3!'
+    },
+    news13_card_excerpt: {
+      ru: 'В столице Мичоакана пройдет первый Панамериканский чемпионат по функциональному фитнесу IF3, который соберет спортсменов со всей Америки...',
+      kz: 'Мичоакан астанасында IF3 функционалдық фитнес бойынша алғашқы Панамерикандық чемпионат өтеді, ол Американың барлық бөлігінен спортшыларды жинайды...',
+      en: 'The first Pan-American Functional Fitness Championship IF3 will be held in the capital of Michoacan, bringing together athletes from all over America...'
+    },
+    news13_country_usa: {
+      ru: 'США',
+      kz: 'АҚШ',
+      en: 'USA'
+    },
+    news13_country_canada: {
+      ru: 'Канада',
+      kz: 'Канада',
+      en: 'Canada'
+    },
+    news13_country_puerto_rico: {
+      ru: 'Пуэрто-Рико',
+      kz: 'Пуэрто-Рико',
+      en: 'Puerto Rico'
+    },
+    news13_country_costa_rica: {
+      ru: 'Коста-Рика',
+      kz: 'Коста-Рика',
+      en: 'Costa Rica'
+    },
+    news13_country_brazil: {
+      ru: 'Бразилия',
+      kz: 'Бразилия',
+      en: 'Brazil'
+    },
+    news13_country_aruba: {
+      ru: 'Аруба',
+      kz: 'Аруба',
+      en: 'Aruba'
+    },
+    news13_country_mexico: {
+      ru: 'Мексика',
+      kz: 'Мексика',
+      en: 'Mexico'
     }
   };
 
