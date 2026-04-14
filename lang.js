@@ -3644,6 +3644,61 @@
       kz: 'Осының бөлігі бол.',
       en: 'Be part of it.'
     },
+    news15_title: {
+      ru: 'SMART FIT Чемпионат Казахстана 2026 🏆',
+      kz: 'SMART FIT Қазақстан чемпионаты 2026 🏆',
+      en: 'SMART FIT Kazakhstan Championship 2026 🏆'
+    },
+    news15_subtitle: {
+      ru: 'Отбор, финал и лидерборд — лето в Актобе',
+      kz: 'Іріктеу, финал және лидерборд — жаз Ақтөбеде',
+      en: 'Selection, final and leaderboard — summer in Aktobe'
+    },
+    news15_p1: {
+      ru: 'Регистрация 9 марта — 15 апреля. Онлайн отбор 16-23 апреля. Финал 20-21 июня 2026 года в Актобе, Казахстан.',
+      kz: 'Тіркелу 9 наурыздан 15 сәуірге дейін. Онлайн іріктеу 16-23 сәуір. Финал 20-21 маусым 2026 жылы Ақтөбеде, Қазақстанда.',
+      en: 'Registration March 9 — April 15. Online selection April 16-23. Final June 20-21, 2026 in Aktobe, Kazakhstan.'
+    },
+    news15_p2: {
+      ru: 'Категории Teams MM, Teams MW и Teams WW проходят в финал напрямую без онлайн отбора. Остальные категории соревнуются в отборочном онлайн этапе.',
+      kz: 'Teams MM, Teams MW және Teams WW категориялары онлайн іріктеусіз тікелей финалға өтеді. Қалған категориялар онлайн іріктеу кезеңінде сайысқа түседі.',
+      en: 'Categories Teams MM, Teams MW and Teams WW qualify directly for the final without online selection. Other categories compete in the online selection stage.'
+    },
+    news15_p3: {
+      ru: 'Призёры финала получат отбор на Чемпионат Азии 2026. Генеральный спонсор: @rakhmet_group. Организаторы: @fffk.20_23 @smartfitcup @smart_fitness_aktobe. Video: @cfmed1a. Увидимся в лидерборде и летом в Актобе ☀️',
+      kz: 'Финалдың жеңімпаздары 2026 жылғы Азия чемпионатына жолдама алады. Бас демеуші: @rakhmet_group. Ұйымдастырушылар: @fffk.20_23 @smartfitcup @smart_fitness_aktobe. Видео: @cfmed1a. Лидербордта және жазда Ақтөбеде кездесеміз ☀️',
+      en: 'Final winners will be selected for the 2026 Asian Championship. General sponsor: @rakhmet_group. Organizers: @fffk.20_23 @smartfitcup @smart_fitness_aktobe. Video: @cfmed1a. See you on the leaderboard and in Aktobe this summer ☀️'
+    },
+    news15_location: {
+      ru: 'Актобе, Казахстан',
+      kz: 'Ақтөбе, Қазақстан',
+      en: 'Aktobe, Kazakhstan'
+    },
+    news15_date: {
+      ru: 'Финал 20-21 июня 2026',
+      kz: 'Финал 20-21 маусым 2026',
+      en: 'Final June 20-21, 2026'
+    },
+    news15_slogan_1: {
+      ru: 'Регистрация 9 марта — 15 апреля',
+      kz: 'Тіркелу 9 наурыз — 15 сәуір',
+      en: 'Registration March 9 — April 15'
+    },
+    news15_slogan_2: {
+      ru: 'Онлайн отбор 16-23 апреля',
+      kz: 'Онлайн іріктеу 16-23 сәуір',
+      en: 'Online selection April 16-23'
+    },
+    news15_slogan_3: {
+      ru: 'Teams MM, Teams MW, Teams WW — финал без отбора',
+      kz: 'Teams MM, Teams MW, Teams WW — финалға тікелей өтеді',
+      en: 'Teams MM, Teams MW, Teams WW — straight to final'
+    },
+    news15_cta: {
+      ru: 'Готовься к старту — увидимся в Актобе.',
+      kz: 'Жарысқа дайын болыңыз — Ақтөбеде кездесеміз.',
+      en: 'Get ready for the start — see you in Aktobe.'
+    },
     news14_card_title: {
       ru: 'Чемпионат мира IF3 в Шотландии!',
       kz: 'IF3 әлем чемпионаты Шотландияда!',
@@ -3653,6 +3708,16 @@
       ru: 'Британская Федерация функционального фитнеса с гордостью проводит Чемпионат мира IF3 в Глазго...',
       kz: 'Британ функционалдық фитнес федерациясы IF3 әлем чемпионатын Глазгода өткізеді...',
       en: 'British Functional Fitness Federation proudly hosts the IF3 World Championship in Glasgow...'
+    },
+    news15_card_title: {
+      ru: 'SMART FIT Чемпионат Казахстана 2026!',
+      kz: 'SMART FIT Қазақстан чемпионаты 2026!',
+      en: 'SMART FIT Kazakhstan Championship 2026!'
+    },
+    news15_card_excerpt: {
+      ru: 'Отбор, финал и лидерборд — лето в Актобе...',
+      kz: 'Іріктеу, финал және лидерборд — жаз Ақтөбеде...',
+      en: 'Selection, final and leaderboard — summer in Aktobe...'
     }
   };
 
