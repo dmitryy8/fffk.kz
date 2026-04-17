@@ -298,6 +298,31 @@
       kz: 'Құжаттар',
       en: 'Documents'
     },
+    docs8_page_title: {
+      ru: 'Документы и Регламенты',
+      kz: 'Құжаттар және Регламенттер',
+      en: 'Documents and Regulations'
+    },
+    doc1_title: {
+      ru: 'Антидопинговые Правила',
+      kz: 'Допингке қарсы ережелер',
+      en: 'Anti-Doping Rules'
+    },
+    doc1_description: {
+      ru: 'Правила проведения антидопинг-контроля на соревнованиях',
+      kz: 'Соревнованиях антидопинг-бақылау өткізу ережелері',
+      en: 'Anti-doping control procedures for competitions'
+    },
+    doc2_title: {
+      ru: '2026 Международные Правила и Судейство',
+      kz: '2026 Халықаралық ережелер және сөйтіндіктеме',
+      en: '2026 International Rules and Judging'
+    },
+    doc2_description: {
+      ru: 'Международные правила и система судейства соревнований',
+      kz: 'Халықаралық ережелер және жарыстарды сөйтіндіктеу жүйесі',
+      en: 'International rules and competition judging system'
+    },
     docs_subtitle: {
       ru: 'Официальные документы и положения федерации',
       kz: 'Федерацияның ресми құжаттары мен ережелері',
@@ -318,10 +343,10 @@
       kz: 'Қазақстан чемпионатының ережесі',
       en: 'Kazakhstan Championship Regulations'
     },
-    doc_gym_map: {
-      ru: 'Карта залов',
-      kz: 'Залдар картасы',
-      en: 'Gym Map'
+    doc_anti_doping: {
+      ru: 'Антидопинговые Правила и Правила проведения антидопинг-контроля на соревнованиях',
+      kz: 'Допингке қарсы ережелер және жарыстарда допинг-бақылау өткізу ережелері',
+      en: 'Anti-Doping Rules and Anti-Doping Control Procedures at Competitions'
     },
     doc_calendar: {
       ru: 'Календарь соревнований',
@@ -3709,6 +3734,124 @@
       kz: 'Британ функционалдық фитнес федерациясы IF3 әлем чемпионатын Глазгода өткізеді...',
       en: 'British Functional Fitness Federation proudly hosts the IF3 World Championship in Glasgow...'
     },
+    
+    // News15 - Открытый Чемпионат Казахстана 2026
+    news15_main_title: {
+      ru: 'Открытый Чемпионат Казахстана 2026 "SMART FIT"',
+      kz: '2026 Ашық Қазақстан чемпионаты "SMART FIT"',
+      en: 'Kazakhstan Open Championship 2026 "SMART FIT"'
+    },
+    news15_location_name: {
+      ru: 'г. Актобе',
+      kz: 'Ақтөбе қ.',
+      en: 'Aktobe'
+    },
+    news15_final_date: {
+      ru: 'Финал: 20–21 июня 2026',
+      kz: 'Финал: 2026 жылғы 20–21 маусым',
+      en: 'Final: June 20–21, 2026'
+    },
+    news15_intro: {
+      ru: 'Один из главных стартов года в функциональном многоборье, объединяющий сильнейших атлетов со всего Казахстана.',
+      kz: 'Функционалдық көпсайыс саласындағы жылдың негізгі стартытарының бірі, бүкіл Қазақстан бойынша ең күшті спортшыларын біріктіретін.',
+      en: 'One of the main starts of the year in functional fitness, uniting the strongest athletes from all over Kazakhstan.'
+    },
+    news15_registration: {
+      ru: 'Регистрация',
+      kz: 'Тіркеу',
+      en: 'Registration'
+    },
+    news15_reg_period_label: {
+      ru: 'Период:',
+      kz: 'Кезең:',
+      en: 'Period:'
+    },
+    news15_reg_period_dates: {
+      ru: '18 марта — 15 апреля 2026',
+      kz: '2026 жылғы 18 наурыз — 15 сәуір',
+      en: 'March 18 — April 15, 2026'
+    },
+    news15_reg_tournament_label: {
+      ru: 'Название турнира при регистрации:',
+      kz: 'Тіркеу кезінде турнир атауы:',
+      en: 'Tournament name for registration:'
+    },
+    news15_reg_tournament_name: {
+      ru: 'SMART FIT Kazakhstan Open Championship 2026',
+      kz: 'SMART FIT Kazakhstan Open Championship 2026',
+      en: 'SMART FIT Kazakhstan Open Championship 2026'
+    },
+    news15_categories: {
+      ru: 'Категории участников',
+      kz: 'Қатысушылар санаттары',
+      en: 'Participant Categories'
+    },
+    news15_individual_cats: {
+      ru: 'Индивидуальные категории (с онлайн-отбором):',
+      kz: 'Жеке санаттар (онлайн-іріктеумен):',
+      en: 'Individual Categories (with online selection):'
+    },
+    news15_selection_label: {
+      ru: 'Отбор:',
+      kz: 'Іріктеу:',
+      en: 'Selection:'
+    },
+    news15_selection_dates: {
+      ru: '16–24 апреля 2026',
+      kz: '2026 жылғы 16–24 сәуір',
+      en: 'April 16–24, 2026'
+    },
+    news15_cat_scaled_men: {
+      ru: 'SCALED MEN',
+      kz: 'SCALED MEN',
+      en: 'SCALED MEN'
+    },
+    news15_cat_scaled_women: {
+      ru: 'SCALED WOMEN',
+      kz: 'SCALED WOMEN',
+      en: 'SCALED WOMEN'
+    },
+    news15_cat_inter_men: {
+      ru: 'INTERMEDIATE MEN',
+      kz: 'INTERMEDIATE MEN',
+      en: 'INTERMEDIATE MEN'
+    },
+    news15_cat_inter_women: {
+      ru: 'INTERMEDIATE WOMEN',
+      kz: 'INTERMEDIATE WOMEN',
+      en: 'INTERMEDIATE WOMEN'
+    },
+    news15_team_cats: {
+      ru: 'Командные категории (без отбора):',
+      kz: 'Команда санаттары (іріктеусіз):',
+      en: 'Team Categories (no selection):'
+    },
+    news15_cat_team_mm: {
+      ru: 'TEAMS M+M',
+      kz: 'TEAMS M+M',
+      en: 'TEAMS M+M'
+    },
+    news15_cat_team_mw: {
+      ru: 'TEAMS M+W',
+      kz: 'TEAMS M+W',
+      en: 'TEAMS M+W'
+    },
+    news15_cat_team_ww: {
+      ru: 'TEAMS W+W',
+      kz: 'TEAMS W+W',
+      en: 'TEAMS W+W'
+    },
+    news15_important: {
+      ru: 'Важно',
+      kz: 'Маңызды',
+      en: 'Important'
+    },
+    news15_important_text: {
+      ru: 'В рамках чемпионата пройдет отбор на Чемпионат Азии в командных категориях и юниорах (17-18 лет).',
+      kz: 'Чемпионат аясында команда санаттарында және жасөспірімдерде (17-18 жас) Азия Чемпионатына іріктеу өтеді.',
+      en: 'During the championship, there will be a selection for the Asian Championship in team categories and juniors (17-18 years old).'
+    },
+    
     news15_card_title: {
       ru: 'SMART FIT Чемпионат Казахстана 2026!',
       kz: 'SMART FIT Қазақстан чемпионаты 2026!',

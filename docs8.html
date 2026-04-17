@@ -9,17 +9,17 @@
 
     
     
-    <title>Открытый Чемпионат Казахстана 2026 SMART FIT — Казахстанская Федерация функционального многоборья</title>
-    <meta name="description" content="Открытый Чемпионат Казахстана 2026 SMART FIT: регистрация 18 марта — 15 апреля, финал 20-21 июня в Актобе." />
-    <meta name="keywords" content="SMART FIT, Чемпионат Казахстана, Открытый, Актобе, функциональный фитнес, SCALED, INTERMEDIATE, TEAMS, 2026" />
-    <link rel="canonical" href="https://www.functionalfitness.kz/news15" />
+    <title>Документы и Регламенты — Казахстанская Федерация функционального многоборья</title>
+    <meta name="description" content="Официальные документы и регламенты соревнований: антидопинговые правила и международные правила судейства." />
+    <meta name="keywords" content="КФФМ, документы, регламент, правила, антидопинг, судейство" />
+    <link rel="canonical" href="https://www.functionalfitness.kz/docs8" />
     
     <!-- Open Graph / Facebook / VK -->
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.functionalfitness.kz/news15" />
-    <meta property="og:title" content="Открытый Чемпионат Казахстана 2026 SMART FIT" />
-    <meta property="og:description" content="Один из главных стартов года: регистрация 18 марта — 15 апреля, финал 20-21 июня в Актобе." />
-    <meta property="og:image" content="https://www.functionalfitness.kz/images/news/scotland.jpeg" />
+    <meta property="og:url" content="https://www.functionalfitness.kz/docs7" />
+    <meta property="og:title" content="Документы и Регламенты" />
+    <meta property="og:description" content="Официальные документы и регламенты для соревнований" />
+    <meta property="og:image" content="https://www.functionalfitness.kz/pologenie.jpg" />
     <meta property="og:image:width" content="512" />
     <meta property="og:image:height" content="512" />
     <meta property="og:locale" content="ru_RU" />
@@ -27,9 +27,9 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Открытый Чемпионат Казахстана 2026 SMART FIT" />
-    <meta name="twitter:description" content="Один из главных стартов года: регистрация 18 марта — 15 апреля, финал 20-21 июня в Актобе." />
-    <meta name="twitter:image" content="https://www.functionalfitness.kz/images/news/scotland.jpeg" />
+    <meta name="twitter:title" content="Документы и Регламенты" />
+    <meta name="twitter:description" content="Официальные документы и регламенты" />
+    <meta name="twitter:image" content="https://www.functionalfitness.kz/pologenie.jpg" />
     
         <!-- Favicon -->
     <link rel="icon" href="/favicon-2025.ico" sizes="any">
@@ -224,70 +224,12 @@
             cursor: pointer;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
-            
         }
 
-        .language-switcher {
-            position: relative;
-            margin-left: 10px;
-            flex-shrink: 0;
-            
-        }
-
-        .language-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .language-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .language-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            margin-top: 10px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
-            padding: 10px;
-            display: none;
-            min-width: 150px;
-            z-index: 1001;
-        }
-
-        .language-dropdown.active {
-            display: block;
-        }
-
-        .language-option {
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            color: var(--text-dark);
-        }
-
-        .language-option:hover {
-            background: var(--accent-color);
-            color: var(--primary-color);
-        }
-
-        /* Кнопки */
+        /* Современные кнопки */
         .btn {
-            padding: 15px 30px;
-            border-radius: 30px;
+            padding: 12px 24px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
@@ -295,50 +237,99 @@
             overflow: hidden;
             border: none;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 14px;
             display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .btn-primary {
             background: var(--gradient-1);
             color: white;
+            box-shadow: 0 4px 15px rgba(11, 99, 183, 0.3);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
+            background: #e0e0e0;
+            color: var(--text-dark);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(11, 99, 183, 0.4);
         }
 
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.6s ease;
+        .btn-primary:hover {
+            box-shadow: 0 8px 25px rgba(11, 99, 183, 0.4);
+            background: var(--gradient-2);
         }
 
-        .btn:hover::after {
-            width: 300px;
-            height: 300px;
+        .btn-secondary:hover {
+            background: #d0d0d0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* Контент страницы */
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Стили для страницы документов */
         .page-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
+            text-align: center;
         }
+
+        .section {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .doc-title {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin: 0 0 20px 0;
+            font-weight: 800;
+            background: var(--gradient-sport);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .doc-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.12);
+            margin: 0 auto;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .buttons-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+       
 
         /* Федерация блок - точно как в leadership */
         .federation-hero{background:linear-gradient(90deg,#ffffff 0%,#f5f5f5 100%);padding:40px 0;margin-top:90px}
@@ -450,7 +441,7 @@
             transform: translateY(0);
         }
 
-         /* Мобильная адаптация */
+        /* Мобильная адаптация */
         @media (max-width: 768px) {
             /* Отключение тяжелых анимаций для старых телефонов */
             .particles,
@@ -595,225 +586,49 @@
             .footer-nav {
                 justify-content: center;
             }
-
-            /* Мобильная адаптация */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 10px 0;
-            }
-
-            .nav-container {
-                padding: 0 20px;
-            }
-
-            .nav-container {
-                padding: 0 20px;
-            }
-           
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(20px);
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                padding-top: 50px;
-                transition: left 0.3s ease;
-                border-top: 1px solid var(--border-color);
-                margin: 0;
-            }
-           
-            .nav-menu.active {
-                left: 0;
-            }
-            .nav-menu a {
-            white-space: nowrap;
-                color: var(--text-dark);
-                padding: 15px;
-                border-bottom: 1px solid var(--border-color);
-                width: 100%;
-                text-align: center;
-            }
-            .mobile-menu-btn {
-                display: block;
-                order: 2;
-                margin-left: 10px;
-            }
-
-            .logo {
-                order: -1;
-                margin-right: auto;
-                margin-left: 0;
-            }
-            .language-switcher {
-                margin-left: 10px;
-                order: 1;
-                flex-shrink: 0;
-                
-            }
-
-            .language-btn {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-
-            .language-dropdown {
-                right: 0;
-            }
-           
-            .hero {
-                padding-top: 100px;
-                min-height: 80vh;
-            }
-           
-            .hero h1 {
-                font-size: 2.5em;
-            }
-           
-            .hero p {
-                font-size: 1.1em;
-            }
-           
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-           
-            .btn {
-                width: 250px;
-                text-align: center;
-            }
-            .federation-container {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px 25px;
-                border-radius: 20px;
-            }
-            .federation-logo img {
-                width: 200px;
-                margin-bottom: 20px;
-            }
-            .federation-text {
-                margin: 0;
-            }
-            .federation-text h1 {
-                font-size: 22px;
-            }
-            .federation-text h2 {
-                font-size: 16px;
-            }
-           
-            .section-title h2 {
-                font-size: 2.5em;
-            }
-           
-            .news-card,
-            .doc-card {
-                width: 320px;
-            }
-           
-            .nav-arrow {
-                display: none;
-            }
-           
-            .map-frame {
-                height: 400px;
-                margin: 0 10px;
-            }
-           
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-           
-            .footer-nav {
-                justify-content: center;
-            }
         }
+
         @media (max-width: 480px) {
             .hero h1 {
                 font-size: 2em;
             }
-           
+            
             .section-title h2 {
                 font-size: 2em;
             }
-           
+            
             .news-card,
             .doc-card {
                 width: 90vw;
                 margin: 0 10px;
             }
-           
+            
             .btn {
                 width: 100%;
+                margin: 5px 0;
             }
+
             .page-content {
                 padding: 20px 10px;
+                text-align: center;
             }
-            
-            /* Уменьшение заголовка статьи на маленьких экранах */
-            .page-content h1 {
-                font-size: 1.6em !important;
-                line-height: 1.3;
-                word-wrap: break-word;
-                hyphens: auto;
+
+            .doc-card {
+                padding: 20px;
+                margin: 0 10px;
+            }
+
+            .doc-title {
+                font-size: 22px;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
             }
 
             .federation-hero {
                 margin-top: 20px;
-            }
-
-        }
-
-            
-
-            .winners-card {
-                padding: 20px;
-                margin-top: 20px;
-            }
-
-            .winners-card h2 {
-                font-size: 20px;
-            }
-
-            .winners-card li {
-                font-size: 14px;
-                padding: 10px 0;
-            }
-            .news-photos {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .news-photos img {
-                width: 100% !important;
-                height: auto !important;
-                min-width: auto !important;
-                max-width: 100% !important;
-                min-height: 200px !important;
-                max-height: 300px !important;
-                object-fit: cover !important;
-            }
-            .news-card {
-                padding: 25px !important;
-                margin-top: 20px !important;
-            }
-            .news-card h3 {
-                font-size: 22px !important;
-            }
-            .news-card p {
-                font-size: 16px !important;
-            }
-            .news-card-inner {
-                flex-direction: column !important;
-            }
-            .news-card-inner > div:first-child img {
-                width: 100% !important;
-                max-width: 100% !important;
             }
         }
         /* Preloader */
@@ -895,6 +710,74 @@
             font-weight: 500;
             opacity: 0.9;
         }
+    
+        /* Language Switcher */
+        .language-switcher {
+            position: relative;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        
+        .language-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .language-btn i {
+            font-size: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .language-dropdown {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            min-width: 140px;
+            z-index: 1001;
+        }
+        
+        .language-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .language-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            color: #0b2340;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .language-option:hover {
+            background: #f0f4f8;
+        }
 
         /* Image loader spinner */
         .img-with-loader {
@@ -922,7 +805,6 @@
         @keyframes img-spinner {
             to { transform: rotate(360deg); }
         }
-    
     </style>
 </head>
 <body>
@@ -931,7 +813,7 @@
         <div class="preloader-content">
             <img src="/images/logos/footer-logo.png" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
-            <div class="preloader-text" data-translate="preloader_text">Загрузка...</div>
+            <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
     </div>
 
@@ -960,7 +842,7 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="/" data-translate="nav_main">Главная</a></li>
+                    <li><a href="/" data-translate="nav_home">Главная</a></li>
                     <li><a href="/about" data-translate="nav_about">О нас</a></li>
                     <li><a href="/news" data-translate="nav_news">Новости</a></li>
                     <li><a href="/docs" data-translate="nav_docs">Документы</a></li>
@@ -986,132 +868,78 @@
         <div class="federation-container">
             <div class="federation-logo left"><img src="/images/logos/logo.png" width="1015" height="787" loading="lazy" alt=""></div>
             <div class="federation-text">
-                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;" data-translate="fed_kz">
+                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;">
                 ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
                 </h2>
-                <h1 data-translate="fed_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
-                <h2 data-translate="fed_en">FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
+                <h1>КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+                <h2>FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
             </div>
             <div class="federation-logo right"><img src="/sponsor.png" width="1386" height="980" loading="lazy" alt=""></div>
         </div>
     </section>
 
-    <!-- Контент страницы -->
-    <div class="page-content">
-        
-        <!-- Видео -->
-        <div style="display: flex; justify-content: center; margin-bottom: 40px;">
-            <video src="insta.mp4" controls style="width: 100%; max-width: 800px; height: auto; border-radius: 20px; box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);"></video>
+
+
+
+ <div class="page-content">
+  <section class="section" style="margin-bottom: 60px;">
+    <h1 class="doc-title" style="margin-bottom: 50px;" data-translate="docs8_page_title">Документы и Регламенты</h1>
+    
+    <!-- Документ 1 -->
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 60px;">
+      <div class="doc-card" style="flex: 1; min-width: 300px; max-width: 450px;">
+        <!-- Preview Документа 1 -->
+        <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(11, 99, 183, 0.2);">
+          <div style="text-align: center; color: white;">
+            <div style="font-size: 40px; margin-bottom: 5px;"><i class="fas fa-file-pdf"></i></div>
+            <div style="font-size: 12px; font-weight: 600;">PDF Document</div>
+            <div style="font-size: 10px; opacity: 0.8;">astanaopencup.pdf</div>
+          </div>
         </div>
-
-        <!-- Основной контент -->
-        <div style="
-            background: white;
-            border-radius: 30px;
-            padding: 50px;
-            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.12);
-            margin-bottom: 40px;
-        ">
-            <h1 style="
-                color: var(--primary-color);
-                font-size: 2.5em;
-                margin-bottom: 30px;
-                text-align: center;
-                font-weight: 800;
-            " data-translate="news15_main_title">Открытый Чемпионат Казахстана 2026 "SMART FIT"</h1>
-
-            <div style="font-size: 1.1em; line-height: 2; margin-bottom: 30px; color: var(--text-dark); text-align: center;">
-                <p style="margin: 10px 0;">📍 <span data-translate="news15_location_name">г. Актобе</span></p>
-                <p style="margin: 10px 0;">📅 <span data-translate="news15_final_date">Финал: 20–21 июня 2026</span></p>
-            </div>
-
-            <p style="font-size: 1.15em; line-height: 1.8; margin-bottom: 40px; color: var(--text-dark); text-align: center; font-style: italic;" data-translate="news15_intro">
-                Один из главных стартов года в функциональном многоборье, объединяющий сильнейших атлетов со всего Казахстана.
-            </p>
-
-            <hr style="border: none; border-top: 2px solid var(--border-color); margin: 40px 0;">
-
-            <h2 style="
-                color: var(--primary-color);
-                font-size: 1.8em;
-                margin-bottom: 25px;
-                font-weight: 700;
-            " data-translate="news15_registration">Регистрация</h2>
-
-            <div style="font-size: 1.1em; line-height: 1.8; margin-bottom: 40px; color: var(--text-dark);">
-                <p style="margin: 10px 0;"><strong>🗓 <span data-translate="news15_reg_period_label">Период:</span></strong> <span data-translate="news15_reg_period_dates">18 марта — 15 апреля 2026</span></p>
-                <p style="margin: 10px 0;"><strong>🔗 <span data-translate="news15_reg_tournament_label">Название турнира при регистрации:</span></strong> <span data-translate="news15_reg_tournament_name">SMART FIT Kazakhstan Open Championship 2026</span></p>
-            </div>
-
-            <hr style="border: none; border-top: 2px solid var(--border-color); margin: 40px 0;">
-
-            <h2 style="
-                color: var(--primary-color);
-                font-size: 1.8em;
-                margin-bottom: 25px;
-                font-weight: 700;
-            " data-translate="news15_categories">Категории участников</h2>
-
-            <h3 style="
-                color: var(--primary-color);
-                font-size: 1.4em;
-                margin-top: 25px;
-                margin-bottom: 15px;
-                font-weight: 700;
-            " data-translate="news15_individual_cats">Индивидуальные категории (с онлайн-отбором):</h3>
-
-            <div style="font-size: 1.1em; line-height: 1.8; margin-bottom: 20px; color: var(--text-dark);">
-                <p style="margin: 5px 0;"><strong>🗓 <span data-translate="news15_selection_label">Отбор:</span></strong> <span data-translate="news15_selection_dates">16–24 апреля 2026</span></p>
-                <ul style="margin: 15px 0 0 30px; padding: 0;">
-                    <li style="margin: 8px 0;" data-translate="news15_cat_scaled_men">SCALED MEN</li>
-                    <li style="margin: 8px 0;" data-translate="news15_cat_scaled_women">SCALED WOMEN</li>
-                    <li style="margin: 8px 0;" data-translate="news15_cat_inter_men">INTERMEDIATE MEN</li>
-                    <li style="margin: 8px 0;" data-translate="news15_cat_inter_women">INTERMEDIATE WOMEN</li>
-                </ul>
-            </div>
-
-            <h3 style="
-                color: var(--primary-color);
-                font-size: 1.4em;
-                margin-top: 30px;
-                margin-bottom: 15px;
-                font-weight: 700;
-            " data-translate="news15_team_cats">Командные категории (без отбора):</h3>
-
-            <div style="font-size: 1.1em; line-height: 1.8; margin-bottom: 40px; color: var(--text-dark);">
-                <ul style="margin: 15px 0 0 30px; padding: 0;">
-                    <li style="margin: 8px 0;" data-translate="news15_cat_team_mm">TEAMS M+M</li>
-                    <li style="margin: 8px 0;" data-translate="news15_cat_team_mw">TEAMS M+W</li>
-                    <li style="margin: 8px 0;" data-translate="news15_cat_team_ww">TEAMS W+W</li>
-                </ul>
-            </div>
-
-            <hr style="border: none; border-top: 2px solid var(--border-color); margin: 40px 0;">
-
-            <div style="background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%); color: white; padding: 40px; border-radius: 20px; margin-bottom: 40px;">
-                <h3 style="font-size: 1.5em; margin-bottom: 20px; font-weight: 700;">🏆 <span data-translate="news15_important">Важно</span></h3>
-                <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 0;" data-translate="news15_important_text">
-                    В рамках чемпионата пройдет отбор на Чемпионат Азии в командных категориях и юниорах (17-18 лет).
-                </p>
-            </div>
+        <div style="font-size: 48px; margin-bottom: 15px; color: var(--primary-color);"><i class="fas fa-file-pdf"></i></div>
+        <h2 style="color: var(--primary-color); font-size: 1.3em; margin-bottom: 10px; font-weight: 700;" data-translate="doc1_title">Антидопинговые Правила</h2>
+        <p style="color: var(--text-gray); margin-bottom: 20px; font-size: 0.95em;" data-translate="doc1_description">Правила проведения антидопинг-контроля на соревнованиях</p>
+        <p style="color: var(--text-light); margin-bottom: 25px; font-size: 0.9em;"><span data-translate="publication_date">Дата публикации:</span> <strong>01.01.2020</strong></p>
+        <div style="display: flex; gap: 10px; flex-direction: column;">
+          <a href="/astanaopencup.pdf" download class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-download" style="margin-right: 8px;"></i>
+            <span data-translate="download_doc">Скачать документ</span>
+          </a>
         </div>
-       
-        <!-- Кнопки -->
-        <div style="
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-wrap:wrap;
-            margin-top:40px;
-            gap:20px;
-        ">
-            <a href="/" class="btn btn-primary">
-                <i class="fas fa-home" style="margin-right: 8px;"></i>
-                <span data-translate="back_home">Вернуться на главную</span>
-            </a>
+      </div>
+      
+      <!-- Документ 2 -->
+      <div class="doc-card" style="flex: 1; min-width: 300px; max-width: 450px;">
+        <!-- Preview Документа 2 -->
+        <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #2b78b9 0%, #0b63b7 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(11, 99, 183, 0.2);">
+          <div style="text-align: center; color: white;">
+            <div style="font-size: 40px; margin-bottom: 5px;"><i class="fas fa-file-word"></i></div>
+            <div style="font-size: 12px; font-weight: 600;">Word Document</div>
+            <div style="font-size: 10px; opacity: 0.8;">МЕЖДУНАРОДНАЯФЕ.docx</div>
+          </div>
         </div>
+        <div style="font-size: 48px; margin-bottom: 15px; color: var(--primary-color);"><i class="fas fa-file-word"></i></div>
+        <h2 style="color: var(--primary-color); font-size: 1.3em; margin-bottom: 10px; font-weight: 700;" data-translate="doc2_title">2026 Международные Правила и Судейство</h2>
+        <p style="color: var(--text-gray); margin-bottom: 20px; font-size: 0.95em;" data-translate="doc2_description">Международные правила и система судейства соревнований</p>
+        <p style="color: var(--text-light); margin-bottom: 25px; font-size: 0.9em;"><span data-translate="publication_date">Дата публикации:</span> <strong>01.02.2026</strong></p>
+        <div style="display: flex; gap: 10px; flex-direction: column;">
+          <a href="/scripts/МЕЖДУНАРОДНАЯФЕ.docx" download class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-download" style="margin-right: 8px;"></i>
+            <span data-translate="download_doc">Скачать документ</span>
+          </a>
+        </div>
+      </div>
     </div>
-
+    
+    <!-- Кнопка возврата -->
+    <div class="buttons-container" style="margin-top: 50px;">
+      <a href="/" class="btn btn-primary" data-translate="back_home">
+        <i class="fas fa-home" style="margin-right: 8px;"></i>
+        <span data-translate="back_home">Вернуться на главную</span>
+      </a>
+    </div>
+  </section>
+ </div>
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
@@ -1121,7 +949,7 @@
                 </div>
                 
                 <nav class="footer-nav">
-                    <a href="/" data-translate="nav_main">Главная</a>
+                    <a href="/" data-translate="nav_home">Главная</a>
                     <a href="/about" data-translate="nav_about">О нас</a>
                     <a href="/news" data-translate="nav_news">Новости</a>
                     <a href="/media" data-translate="nav_media">Медиа</a>
@@ -1148,11 +976,11 @@
                 </div>
             </div>
             <div class="footer-info" style="text-align: center; padding: 20px 0; color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.6; max-width: 900px; margin: 0 auto;">
-                <p>
-                    <span data-translate="footer_info">Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
+                <p data-translate="footer_info">
+                    <span>Республиканское общественное объединение «Казахстанская Федерация функционального многоборья» 
                     (КФФМ, Functional Fitness Kazakhstan) — официальный руководящий орган по функциональному фитнесу 
                     (functional fitness) и функциональному многоборью в Республике Казахстан. 
-                    Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.</span>
+                    Мы развиваем спорт, организуем соревнования и объединяем спортсменов по всему Казахстану.
                 </p>
             </div>
             
@@ -1166,6 +994,7 @@
         </div>
     </footer>
 
+    <script src="/lang.js"></script>
     <script>
         // Глобальные переменные
         let currentNewsIndex = 0;
@@ -1276,7 +1105,7 @@
             
             // Приветственное сообщение через 2 секунды
             setTimeout(() => {
-                console.log('Добро пожаловать на страницу новостей! 📰');
+                console.log('Добро пожаловать на сайт Казахстанской Федерации функционального многоборья! 🏋️‍♂️');
             }, 2000);
         });
 
@@ -1287,60 +1116,15 @@
         document.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
             startY = e.touches[0].clientY;
-        });
+        }, { passive: true });
 
-        document.addEventListener('touchend', (e) => {
-            if (!startX || !startY) return;
-            
-            const endX = e.changedTouches[0].clientX;
-            const endY = e.changedTouches[0].clientY;
-            
-            const diffX = startX - endX;
-            const diffY = startY - endY;
-            
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                const target = e.target.closest('.news-grid, .docs-grid');
-                if (target) {
-                    if (diffX > 0) {
-                        // Свайп влево - прокрутка вправо
-                        target.scrollBy({ left: 420, behavior: 'smooth' });
-                    } else {
-                        // Свайп вправо - прокрутка влево
-                        target.scrollBy({ left: -420, behavior: 'smooth' });
-                    }
-                }
-            }
-            
-            startX = 0;
-            startY = 0;
-        });
-        </script>
-    <script>
-        // Контроль времени загрузки preloader (минимум 300ms, максимум 2000ms)
-        const preloaderStartTime = Date.now();
-        const minLoadTime = 300;
-        const maxLoadTime = 2000;
-
+        // Preloader
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
             if (preloader) {
-                const elapsedTime = Date.now() - preloaderStartTime;
-                const remainingTime = Math.max(minLoadTime - elapsedTime, 0);
-                const hideTime = Math.min(remainingTime, maxLoadTime - elapsedTime);
-                
-                setTimeout(() => {
-                    preloader.classList.add('hidden');
-                }, hideTime);
-            }
-        });
-
-        // Автоматическое скрытие через 2 секунды, даже если страница не загрузилась
-        setTimeout(() => {
-            const preloader = document.getElementById('preloader');
-            if (preloader && !preloader.classList.contains('hidden')) {
                 preloader.classList.add('hidden');
             }
-        }, maxLoadTime);
+        });
     </script>
     
     <script>
@@ -1375,7 +1159,5 @@
         });
     });
     </script>
-    
-    <script src="/lang.js?v=20260123205220" defer></script>
 </body>
 </html>
