@@ -824,6 +824,39 @@
             box-shadow: 0 15px 50px rgba(11, 99, 183, 0.25);
         }
 
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(11, 99, 183, 0.12);
+            border: 1px solid rgba(11, 99, 183, 0.08);
+            padding: 20px;
+        }
+
+        .video-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .video-card video {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(11, 99, 183, 0.2);
+            background: black;
+        }
+
         /* Таблицы категорий */
         .categories-grid {
             display: grid;
@@ -942,6 +975,10 @@
 
             .photo-grid-2 img {
                 height: 250px;
+            }
+
+            .video-gallery {
+                grid-template-columns: 1fr;
             }
 
             .categories-grid {
@@ -1152,6 +1189,44 @@
                     <h2 data-translate="news10_section6_title">6. Competition Sponsors and Partners</h2>
                     <p><strong data-translate="news10_sponsor_label">Генеральный спонсор:</strong> <span data-translate="news10_sponsor">КДЛ «Олимп» в лице Ерлана Сулейменова</span></p>
                     <p><strong data-translate="news10_partner_label">Партнёр:</strong> <span data-translate="news10_partner">WodFriends — компания по производству и продаже экипировки для функционального многоборья и тренировок.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-content">
+        <div class="container">
+            <div class="article-wrapper fade-in">
+                <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 30px;" data-translate="news10_videos_title">Видео</h2>
+                <div class="video-gallery">
+                    <div class="video-card">
+                        <h3 data-translate="news10_vid1_label">Комплекс 1</h3>
+                        <video controls preload="metadata">
+                            <source src="/vid1.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                    <div class="video-card">
+                        <h3 data-translate="news10_vid2_label">Комплекс 1,2</h3>
+                        <video controls preload="metadata">
+                            <source src="/vid2.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                    <div class="video-card">
+                        <h3 data-translate="news10_vid3_label">Комплекс 4</h3>
+                        <video controls preload="metadata">
+                            <source src="/vid3.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                    <div class="video-card">
+                        <h3 data-translate="news10_vid4_label">Комплекс 5</h3>
+                        <video controls preload="metadata">
+                            <source src="/vid4.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>

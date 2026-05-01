@@ -3222,6 +3222,31 @@
       kz: '6. Жарыстың спонсорлары және серіктестері',
       en: '6. Competition Sponsors and Partners'
     },
+    news10_videos_title: {
+      ru: 'Видео',
+      kz: 'Бейне',
+      en: 'Videos'
+    },
+    news10_vid1_label: {
+      ru: 'Комплекс 1',
+      kz: 'Кешен 1',
+      en: 'Complex 1'
+    },
+    news10_vid2_label: {
+      ru: 'Комплекс 1,2',
+      kz: 'Кешен 1,2',
+      en: 'Complex 1,2'
+    },
+    news10_vid3_label: {
+      ru: 'Комплекс 4',
+      kz: 'Кешен 4',
+      en: 'Complex 4'
+    },
+    news10_vid4_label: {
+      ru: 'Комплекс 5',
+      kz: 'Кешен 5',
+      en: 'Complex 5'
+    },
     news10_sponsor_label: {
       ru: 'Генеральный спонсор:',
       kz: 'Генералды спонсор:',
