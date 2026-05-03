@@ -3886,6 +3886,16 @@
       ru: 'Отбор, финал и лидерборд — лето в Актобе...',
       kz: 'Іріктеу, финал және лидерборд — жаз Ақтөбеде...',
       en: 'Selection, final and leaderboard — summer in Aktobe...'
+    },
+    news16_card_title: {
+      ru: 'iF3 провела выборы на должность вице-президента!',
+      kz: 'iF3 вице-президенттік қызметке сайлау өткізді!',
+      en: 'iF3 held elections for the vice-president position!'
+    },
+    news16_card_excerpt: {
+      ru: 'После нескольких туров голосования ни один кандидат в вице-президенты не набрал явного большинства голосов...',
+      kz: 'Бірнеше дауыс беру кезеңінен кейін ешбір кандидат вице-президенттікке айқын көпшілік дауыс жинамады...',
+      en: 'After several rounds of voting, no candidate for vice-president gained a clear majority of votes...'
     }
   };
 
