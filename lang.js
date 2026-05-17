@@ -3043,7 +3043,7 @@
       en: 'The ASTANA OPEN CUP 2026 functional fitness competition is held in partnership with KDL «Olymp» and WodFriends with organizational support from KFFF.'
     },
     news10_section1_title: {
-      ru: '1. Participant Registration',
+      ru: '1. Регистрация участников',
       kz: '1. Қатысушыларды тіркеу',
       en: '1. Participant Registration'
     },
@@ -3093,7 +3093,7 @@
       en: 'The number of places in categories is limited. Organizers reserve the right to close registration before the established deadline if the participant limit is reached.'
     },
     news10_section2_title: {
-      ru: '2. Participant Categories',
+      ru: '2. Категории участников',
       kz: '2. Қатысушылардың санаттары',
       en: '2. Participant Categories'
     },
@@ -3148,7 +3148,7 @@
       en: 'Registration in the RX category is done by promo code. To obtain it, the athlete must contact the organizers. The candidacy is reviewed and approved, after which, if approved, a promo code is provided for registration.'
     },
     news10_section3_title: {
-      ru: '3. Competition Format',
+      ru: '3. Формат соревнований',
       kz: '3. Жарыстың форматы',
       en: '3. Competition Format'
     },
@@ -3173,7 +3173,7 @@
       en: 'To improve the quality of the event, organizers reserve the right to make changes to the regulations, format, timing and competition tasks.'
     },
     news10_section4_title: {
-      ru: '4. Awards',
+      ru: '4. Награждение',
       kz: '4. Марапаттар',
       en: '4. Awards'
     },
@@ -3198,7 +3198,7 @@
       en: 'Information about the prize pool amount will be published separately on the official KFFF resources.'
     },
     news10_section5_title: {
-      ru: '5. Competition Goals',
+      ru: '5. Цели соревнований',
       kz: '5. Жарыстың мақсаттары',
       en: '5. Competition Goals'
     },
@@ -3218,7 +3218,7 @@
       en: 'formation of the KFFF national team for participation in the 2026 Asia Championship.'
     },
     news10_section6_title: {
-      ru: '6. Competition Sponsors and Partners',
+      ru: '6. Спонсоры и партнёры соревнований',
       kz: '6. Жарыстың спонсорлары және серіктестері',
       en: '6. Competition Sponsors and Partners'
     },
@@ -3233,9 +3233,9 @@
       en: 'Complex 1'
     },
     news10_vid2_label: {
-      ru: 'Комплекс 1,2',
-      kz: 'Кешен 1,2',
-      en: 'Complex 1,2'
+      ru: 'Комплекс 2,3',
+      kz: 'Кешен 2,3',
+      en: 'Complex 2,3'
     },
     news10_vid3_label: {
       ru: 'Комплекс 4',
@@ -3264,8 +3264,68 @@
     },
     news10_partner: {
       ru: 'WodFriends — компания по производству и продаже экипировки для функционального многоборья и тренировок.',
-      kz: 'WodFriends — функционалды көпсайыс және машықтар үшін жабдық өндіру және сату компаниясы.',
+      kz: 'WodFriends — функционалды көпсайыс және жаттығулар үшін жабдық өндіру және сату компаниясы.',
       en: 'WodFriends - a company for the production and sale of equipment for functional fitness and training.'
+    },
+    news10_team_title: {
+      ru: '🇰🇿 СОСТАВ СБОРНОЙ РК на Чемпионат Азии 2026 в индивидуальных категориях',
+      kz: '🇰🇿 2026 жылғы Азия чемпионатына жеке санаттар бойынша Қазақстан ұлттық құрамасы',
+      en: '🇰🇿 KAZAKHSTAN NATIONAL TEAM ROSTER for the 2026 Asian Championship in individual categories'
+    },
+    news10_team_rx_men: {
+      ru: 'RX MEN',
+      kz: 'RX ерлер',
+      en: 'RX MEN'
+    },
+    news10_team_rx_women: {
+      ru: 'RX WOMEN',
+      kz: 'RX әйелдер',
+      en: 'RX WOMEN'
+    },
+    news10_team_35_39_men: {
+      ru: '35–39 MEN',
+      kz: '35–39 ерлер',
+      en: '35–39 MEN'
+    },
+    news10_team_35_39_women: {
+      ru: '35–39 WOMEN',
+      kz: '35–39 әйелдер',
+      en: '35–39 WOMEN'
+    },
+    news10_team_40_44_men: {
+      ru: '40–44 MEN',
+      kz: '40–44 ерлер',
+      en: '40–44 MEN'
+    },
+    news10_team_40_44_women: {
+      ru: '40–44 WOMEN',
+      kz: '40–44 әйелдер',
+      en: '40–44 WOMEN'
+    },
+    news10_team_footer: {
+      ru: 'Казахстан на международной арене 🇰🇿 Asian Championship 2026',
+      kz: 'Қазақстан халықаралық аренада 🇰🇿 Asian Championship 2026',
+      en: 'Kazakhstan on the international stage 🇰🇿 Asian Championship 2026'
+    },
+    news10_partners_title: {
+      ru: 'Партнёры',
+      kz: 'Серіктестер',
+      en: 'Partners'
+    },
+    news10_allur_desc: {
+      ru: 'Allur Group — лидер автопрома Казахстана. Компания развивает собственное производство и сборку автомобилей, а также дилерскую сеть, сервис и экспортные продажи по стране.',
+      kz: 'Allur Group — Қазақстан автомобиль өнеркәсібінің көшбасшысы. Компания өзінің автомобиль өндірісін және жиналысын, сондай-ақ дилерлік желіні, сервисті және елдегі экспорттық сатуды дамытады.',
+      en: 'Allur Group is the leader of Kazakhstan\'s automotive industry. The company develops its own car production and assembly, as well as a dealer network, service and export sales across the country.'
+    },
+    news10_region_desc: {
+      ru: 'Region 715 — это казахстанский производитель школьной и офисной мебели, работающий на рынке более 15 лет. Компания предлагает широкий ассортимент мебели, включая парты, шкафы и тумбы, и специализируется на производстве мебели для STEM образования. Юридический адрес компании: г. Петропавловск, ул. Лесная, дом 67.',
+      kz: 'Region 715 — нарықта 15 жылдан астам жұмыс істейтін қазақстандық мектеп және кеңсе жиһазының өндірушісі. Компания парталар, шкафтар және тумбалар сияқты жиһаздардың кең ассортиментін ұсынады және STEM білімі үшін жиһаз өндіруге маманданады. Заңды мекенжайы: Петропавл қ., Орман к-сі, 67 үй.',
+      en: 'Region 715 is a Kazakhstani manufacturer of school and office furniture with over 15 years of market experience. The company offers a wide range of furniture, including desks, cabinets and pedestals, and specializes in manufacturing furniture for STEM education. Legal address: Petropavlovsk, Lesnaya St., 67.'
+    },
+    news10_wodfriends_desc: {
+      ru: 'Компания специализируется на оборудовании и аксессуарах для кроссфита, функциональных тренировок и силовых видов спорта.',
+      kz: 'Компания кроссфит, функционалды жаттығулар және күш спорты үшін жабдықтар мен аксессуарларға маманданған.',
+      en: 'The company specializes in equipment and accessories for CrossFit, functional training and strength sports.'
     },
 
     // Страница news11 - Чемпионат Азии 2026

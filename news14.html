@@ -922,7 +922,169 @@
         @keyframes img-spinner {
             to { transform: rotate(360deg); }
         }
-    
+
+        /* Article layout */
+        .article-header {
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .article-category {
+            background: var(--gradient-1);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .article-date {
+            color: var(--text-gray);
+            font-size: 0.95em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .article-title {
+            font-size: 2.4em;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.3;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .article-location {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+
+        .article-image-wrapper {
+            margin: 0 0 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .article-body p {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .video-section {
+            margin: 0 0 40px;
+        }
+
+        .video-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #000;
+        }
+
+        .article-video {
+            width: 100%;
+            max-height: 600px;
+            display: block;
+        }
+
+        .info-banner {
+            display: flex;
+            justify-content: center;
+            background: var(--gradient-1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 0 0 40px;
+            flex-wrap: wrap;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .info-banner-item {
+            color: white;
+            font-size: 1.2em;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .info-banner-item i {
+            font-size: 2em;
+            opacity: 0.9;
+        }
+
+        .article-cta {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-align: center;
+            margin: 0 0 30px;
+        }
+
+        .article-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.7em; }
+            .article-image { height: 250px; }
+            .info-banner { flex-direction: column; padding: 30px 20px; gap: 20px; }
+            .info-banner-item { font-size: 1.05em; min-width: unset; }
+        }
+
+        @media (max-width: 480px) {
+            .article-title { font-size: 1.4em; }
+        }
+
     </style>
 </head>
 <body>
@@ -996,102 +1158,67 @@
         </div>
     </section>
 
-        <!-- Состав сборной перемещён в news10.html -->
+    <div class="page-content">
 
-            <hr style="border: none; border-top: 2px solid var(--border-color); margin: 40px 0;">
-
-            <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 25px; color: var(--text-dark);" data-translate="news14_p2">
-                Впервые стартовавший в 2017 году чемпионат мира IF3 превратился в глобальную демонстрацию элитного функционального фитнеса, став за последние годы сильнее, чем когда-либо.
-            </p>
-
-            <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 40px; color: var(--text-dark);" data-translate="news14_p3">
-                В декабре этого года он приезжает в Шотландию — на землю спортсменов, где каждый день начинается с вызова и заканчивается победой.
-            </p>
-
-            <hr style="border: none; border-top: 2px solid var(--border-color); margin: 40px 0;">
-
-            <h3 style="
-                color: var(--primary-color);
-                font-size: 1.6em;
-                margin-bottom: 20px;
-                font-weight: 700;
-                text-align: center;
-            " data-translate="news14_location">Региональный спортивный комплекс Рейвенскрейг</h3>
-
-            <p style="font-size: 1.3em; line-height: 1.8; margin-bottom: 40px; color: var(--primary-color); font-weight: 600; text-align: center;" data-translate="news14_date">
-                11-13 декабря 2026 года
-            </p>
-
-            <hr style="border: none; border-top: 2px solid var(--border-color); margin: 40px 0;">
-
-            <div style="background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 40px;">
-                <p style="font-size: 1.3em; line-height: 1.8; margin-bottom: 15px; font-weight: 600;" data-translate="news14_slogan_1">
-                    Соревнования мирового уровня.
-                </p>
-                <p style="font-size: 1.3em; line-height: 1.8; margin-bottom: 15px; font-weight: 600;" data-translate="news14_slogan_2">
-                    Международные спортсмены.
-                </p>
-                <p style="font-size: 1.3em; line-height: 1.8; margin-bottom: 0; font-weight: 600;" data-translate="news14_slogan_3">
-                    Одна арена.
-                </p>
+        <div class="article-header fade-in">
+            <div class="article-meta">
+                <span class="article-category">IF3</span>
+                <span class="article-date"><i class="fas fa-calendar-alt"></i> 11–13 декабря 2026</span>
             </div>
+            <h1 class="article-title" data-translate="news14_title">Чемпионат мира IF3 в Шотландии</h1>
+            <div class="article-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span data-translate="news14_location">Региональный спортивный комплекс Рейвенскрейг, Глазго</span>
+            </div>
+        </div>
 
-            <p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 25px; color: var(--text-dark); font-weight: 600; text-align: center;" data-translate="news14_cta">
-                Стань частью этого.
+        
+
+        <div class="article-body fade-in">
+            <p data-translate="news14_p2">
+                Чемпионат мира IF3, стартовавший в 2017 году, превратился в глобальную демонстрацию элитного функционального фитнеса и за эти годы стал сильнее, чем когда-либо.
+            </p>
+            <p data-translate="news14_p3">
+                В декабре этого года он возвращается в Шотландию — на землю, где каждый новый день начинается с вызова и заканчивается победой.
             </p>
         </div>
-       
-        <!-- Кнопки -->
-        <div style="
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-wrap:wrap;
-            margin-top:40px;
-            gap:20px;
-        ">
+
+        <div class="video-section fade-in">
+            <h2 class="video-title" data-translate="news14_video_title">Промо-видео</h2>
+            <div class="video-wrapper">
+                <video controls playsinline preload="metadata" class="article-video">
+                    <source src="/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="info-banner fade-in">
+            <div class="info-banner-item">
+                <i class="fas fa-trophy"></i>
+                <span data-translate="news14_slogan_1">Соревнования мирового уровня.</span>
+            </div>
+            <div class="info-banner-item">
+                <i class="fas fa-globe"></i>
+                <span data-translate="news14_slogan_2">Международные спортсмены.</span>
+            </div>
+            <div class="info-banner-item">
+                <i class="fas fa-fire-alt"></i>
+                <span data-translate="news14_slogan_3">Одна арена.</span>
+            </div>
+        </div>
+
+        <p class="article-cta fade-in" data-translate="news14_cta">Стань частью этого.</p>
+
+        <div class="article-buttons fade-in">
             <a href="/" class="btn btn-primary">
                 <i class="fas fa-home" style="margin-right: 8px;"></i>
                 <span data-translate="back_home">Вернуться на главную</span>
             </a>
         </div>
 
-        <!-- Состав сборной -->
-        <div style="background: white; border-radius: 30px; padding: 40px; box-shadow: 0 8px 32px rgba(11, 99, 183, 0.12); margin: 40px 0;">
-            <h2 style="font-size: 2em; color: var(--primary-color); text-align: center; margin-bottom: 20px;">СОСТАВ СБОРНОЙ РК<br>на Чемпионат Азии 2026<br>в индивидуальных категориях</h2>
-            <div style="max-width: 900px; margin: 0 auto; color: var(--text-dark); font-size: 1.05em; line-height: 1.8;">
-                <p style="font-weight: 700; margin: 0 0 10px;">RX MEN</p>
-                <p style="margin: 0 0 15px;">• Тимофей Орлов<br>• Азат Аксанов<br>• Дмитрий Коновалов<br>• Амир Гайсин<br>• Артём Мацак</p>
-
-                <p style="font-weight: 700; margin: 0 0 10px;">RX WOMEN</p>
-                <p style="margin: 0 0 15px;">• Камила Такеева<br>• Евгения Цой<br>• Ксения Жалеева<br>• Кристина Мищур<br>• Карина Богатырёва</p>
-
-                <p style="font-weight: 700; margin: 0 0 10px;">35–39 MEN</p>
-                <p style="margin: 0 0 15px;">• Булат Нурабаев<br>• Валентин Жуков<br>• Ерик Биржанов</p>
-
-                <p style="font-weight: 700; margin: 0 0 10px;">35–39 WOMEN</p>
-                <p style="margin: 0 0 15px;">• Дина Касымова<br>• Жанна Сулейменова<br>• Екатерина Гарась</p>
-
-                <p style="font-weight: 700; margin: 0 0 10px;">40–44 MEN</p>
-                <p style="margin: 0 0 15px;">• Антон Кущ<br>• Денис Мищур<br>• Виталий Павлов</p>
-
-                <p style="font-weight: 700; margin: 0 0 10px;">40–44 WOMEN</p>
-                <p style="margin: 0 0 15px;">• Анна Товченник<br>• Акмарал Утегенова<br>• Ирина Шмигельская</p>
-
-                <p style="font-weight: 700; margin: 30px 0 10px; text-align: center; font-size: 1.1em;">Казахстан на международной арене 🇰🇿<br>Asian Championship 2026</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 30px;">
-                <img src="/imageskz/im1.png" alt="Фото 1" loading="lazy" style="width: 100%; border-radius: 20px; object-fit: cover;">
-                <img src="/imageskz/im2.png" alt="Фото 2" loading="lazy" style="width: 100%; border-radius: 20px; object-fit: cover;">
-                <img src="/imageskz/im3.png" alt="Фото 3" loading="lazy" style="width: 100%; border-radius: 20px; object-fit: cover;">
-                <img src="/imageskz/im4.png" alt="Фото 4" loading="lazy" style="width: 100%; border-radius: 20px; object-fit: cover;">
-                <img src="/imageskz/im5.png" alt="Фото 5" loading="lazy" style="width: 100%; border-radius: 20px; object-fit: cover;">
-                <img src="/imageskz/im6.png" alt="Фото 6" loading="lazy" style="width: 100%; border-radius: 20px; object-fit: cover;">
-            </div>
-        </div>
     </div>
 
+       
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
