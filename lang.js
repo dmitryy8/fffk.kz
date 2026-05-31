@@ -3481,6 +3481,16 @@
       kz: 'Қазақстан 2026 жылғы Азия чемпионатын өткізу құқығын алды. Ел функционалдық көпсайысының тарихи оқиғасы...',
       en: 'Kazakhstan has been granted the right to host the Asian Championship 2026. A historic event for the country\'s functional fitness...'
     },
+    news17_card_title: {
+      ru: 'iF3 получила жалобу от Финской организации функционального фитнеса (Fin2f)!',
+      kz: 'iF3 Финляндиялық Functional Fitness ұйымынан шағым алды (Fin2f)!',
+      en: 'iF3 received a complaint from Finnish Functional Fitness (Fin2f)!'
+    },
+    news17_card_excerpt: {
+      ru: 'с обвинениями в нескольких нарушениях Кодекса этики iF3 со стороны тренера юниорской сборной Швеции...',
+      kz: 'Швеция жасөспірім командасының бапкерінің iF3 әдеп кодексінің бірнеше талаптарын бұзғаны туралы айыптаулар...',
+      en: 'with allegations of multiple breaches of the iF3 Code of Ethics by the coach of the Swedish junior national team...'
+    },
 
     // Карточка news12 на странице новостей
     news12_card_title: {
