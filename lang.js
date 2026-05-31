@@ -10,6 +10,11 @@
       kz: 'Басты бет',
       en: 'Home'
     },
+    nav_main: {
+      ru: 'Главная',
+      kz: 'Басты бет',
+      en: 'Home'
+    },
     nav_about: {
       ru: 'О нас',
       kz: 'Біз туралы',
@@ -3961,6 +3966,61 @@
       ru: 'После нескольких туров голосования ни один кандидат в вице-президенты не набрал явного большинства голосов...',
       kz: 'Бірнеше дауыс беру кезеңінен кейін ешбір кандидат вице-президенттікке айқын көпшілік дауыс жинамады...',
       en: 'After several rounds of voting, no candidate for vice-president gained a clear majority of votes...'
+    },
+    news17_heading: {
+      ru: 'Отчёт Международной федерации функционального фитнеса по жалобе на этические нарушения от финской Functional Fitness',
+      kz: 'iF3 халықаралық федерациясының Финляндиялық Functional Fitness ұйымының этикалық бұзушылық туралы шағымы бойынша есебі',
+      en: 'iF3 report on complaint of ethical breaches from Finnish Functional Fitness'
+    },
+    news17_subtitle: {
+      ru: 'Автор: iF3 — 24 февраля 2026 года — Вторник, 24 февраля 2026 года',
+      kz: 'Автор: iF3 — 24 ақпан 2026 ж. — Сейсенбі, 24 ақпан 2026 ж.',
+      en: 'Author: iF3 — 24 February 2026 — Tuesday, 24 February 2026'
+    },
+    news17_summary_heading: {
+      ru: 'Краткое изложение фактов',
+      kz: 'Жайыптама',
+      en: 'Summary of facts'
+    },
+    news17_para_1: {
+      ru: '31 декабря 2025 года iF3 получила жалобу от Финской организации функциональной фитнеса (Fin2f) с обвинениями в нескольких нарушениях Кодекса этики iF3 со стороны тренера юниорской сборной Швеции во время афтепати чемпионата мира iF3 2025. iF3 пришла к выводу, что в жалобе достаточно информации для начала расследования.',
+      kz: '2025 жылғы 31 желтоқсанда iF3 Финляндиялық Functional Fitness ұйымынан (Fin2f) шағым қабылдады. Шағымда iF3 2025 жылғы әлем чемпионатына қатысты афтепати кезінде Швеция жасөспірім командасының бапкерінің бірнеше этикалық нормаларды бұзғаны айтылған. iF3 шағымда тергеуді бастауға жеткілікті мәлімет бар деп анықтады.',
+      en: 'On 31 December 2025 iF3 received a complaint from Finnish Functional Fitness (Fin2f) alleging multiple breaches of the iF3 Code of Ethics by the coach of the Swedish junior national team during the after-party of the iF3 World Championship 2025. iF3 concluded there was sufficient information to open an investigation.'
+    },
+    news17_para_2: {
+      ru: 'iF3 уведомила Шведскую федерацию функционального фитнеса (Swe3f) и провела с ней встречу для подтверждения статуса тренера и других деталей. Были взяты интервью у тренера и нескольких финских спортсменов. По итогам всех бесед стороны сходятся в том, что алкоголь был получен и употреблялся несовершеннолетними спортсменами из Финляндии и Швеции во время афтепати. Стороны расходятся в деталях приобретения алкоголя, но установлено, что тренер, присутствовавший и курировавший спортсменов, знал о факте употребления и не предпринял действий для предотвращения.',
+      kz: 'iF3 Швеция федерациясын (Swe3f) хабардар етіп, бапкердің мәртебесін және оқиға барысын растау үшін кездесу өткізді. Бапкер мен бірнеше фин спортшылардан сұхбат алынды. Барлық тараптар жасөспірім фин және швед спортшылардың афтепати кезінде алкоголь алғаны және тұтынғаны туралы келіседі. Алкогольдің қалай алынғаны бойынша пікірлер әртүрлі, алайда бапкердің бұл жайдан хабары бар екені және оларды тоқтатпағаны анықталды.',
+      en: 'iF3 informed the Swedish federation (Swe3f) and met to confirm the coach\'s status and role. Interviews were conducted with the coach and several Finnish athletes. All parties agreed that alcohol was obtained and consumed by underage athletes from Finland and Sweden during the after-party. Parties disagreed on how the alcohol was procured, but it was established that the coach — an adult supervising the athletes — was aware of the consumption and did not prevent it.'
+    },
+    news17_para_3: {
+      ru: 'Раздел F.3 Кодекса этики iF3 запрещает одобрение употребления алкоголя несовершеннолетними лицами, официально связанными с национальными федерациями iF3. По результатам расследования iF3 посчитала, что поведение тренера подпадает под нарушение раздела F.3.',
+      kz: 'iF3 этика кодексінің F.3 бөлімі кәмелетке толмағандардың алкоголь тұтынуын мақұлдауды тыйады. Тергеу нәтижесі бойынша бапкердің әрекеті F.3 бөлігін бұзады деп табылды.',
+      en: 'Section F.3 of the iF3 Code of Ethics prohibits any person officially connected with a national federation from endorsing underage drinking. Based on the investigation iF3 found the coach\'s conduct to be a breach of Section F.3.'
+    },
+    news17_para_4: {
+      ru: 'Также в жалобе было указано на возможное сексуальное домогательство (раздел H.3) в унисекс-туалете во время афтепати. iF3 установила, что на момент инцидента заявитель не был спортсменом, тренером, волонтёром или сотрудником мероприятия, и потому iF3 не имеет юрисдикции по этой части жалобы. Тем не менее iF3 довела факты до сведения Swe3f и Fin2f для возможного дальнейшего рассмотрения на национальном уровне.',
+      kz: 'Шағымда сондай-ақ унисекс дәретханада сексуалдық қысым көрсету туралы айтылған. Алайда шағымданған адам сол уақытта жарысқа тікелей қатыспағандықтан, iF3 бұл бөлік бойынша юрисдикцияға ие емес. iF3 осы фактілерді Swe3f пен Fin2f-ге жеткізді.',
+      en: 'The complaint also alleged sexual harassment in a unisex toilet during the after-party (Section H.3). iF3 determined it lacked jurisdiction over this part because the complainant was not an athlete, coach, volunteer or staff member at the event. iF3 shared the facts with Swe3f and Fin2f for any national-level consideration.'
+    },
+    news17_sanctions_heading: {
+      ru: 'Санкции',
+      kz: 'Жазалар',
+      en: 'Sanctions'
+    },
+    news17_para_5: {
+      ru: 'Тренер юниорской сборной Швеции отстраняется от участия в мероприятиях iF3 и любых мероприятиях, санкционированных членами национальных федераций iF3, на срок 3 года с 16 февраля 2026 по 16 февраля 2029. При успешном прохождении предписанного курса SafeSport срок санкции может быть сокращён до 2 лет.',
+      kz: 'Швеция жасөспірім командасының бапкері 2026 жылғы 16 ақпандан 2029 жылғы 16 ақпанға дейін iF3 іс-шараларынан және ұлттық федерациялардың санкциялаған іс-шараларынан 3 жылға шеттетілді. SafeSport курсын өту арқылы жазаның мерзімі 2 жылға қысқаруы мүмкін.',
+      en: 'The Swedish junior national team coach is suspended from iF3 events and any events sanctioned by iF3 member national federations for 3 years from 16 February 2026 until 16 February 2029. Completion of the iF3-prescribed SafeSport training may reduce the sanction to 2 years.'
+    },
+    news17_para_6: {
+      ru: 'Несовершеннолетним спортсменам из Финляндии и Швеции будет вынесено предупреждение и предписано пройти обучение по влиянию алкоголя на спортивные результаты перед следующим участием в соревнованиях под эгидой iF3 или национальной федерации. iF3 будет сотрудничать с Fin2f и Swe3f для организации обучения.',
+      kz: 'Кәмелетке толмаған фин және швед спортшыларына ескерту беріледі және олар болашақта iF3 немесе ұлттық федерация жарысына қатыспас бұрын алкогольдің спорттық нәтижелерге әсері туралы оқудан өтуі тиіс. iF3 Fin2f және Swe3f-пен ынтымақтастық жасайтын болады.',
+      en: 'Underage athletes from Finland and Sweden will receive warnings and must complete education on the effects of alcohol on sporting performance before future participation in iF3 or national federation events. iF3 will work with Fin2f and Swe3f to ensure timely completion of the recommended education.'
+    },
+    news17_para_7: {
+      ru: 'Имена несовершеннолетних участников не будут разглашаться. Личность тренера будет передана соответствующим национальным федерациям в объёме, необходимом для поддержания санкций.',
+      kz: 'Кәмелетке толмағандардың жеке мәліметтері жарияланбайды. Бапкердің тұлғасы ұлттық федерацияларға санкцияларды орындауға қажетті дәрежеде беріледі.',
+      en: 'Identities of underage participants will not be disclosed. The identity of the coach will be provided to the relevant national federations to the extent necessary to enforce the sanction.'
     }
   };
 
@@ -3972,6 +4032,9 @@
         el.textContent = translations[key][lang];
       }
     });
+    if (document.documentElement) {
+      document.documentElement.lang = lang;
+    }
   }
 
   // Функция инициализации переключателя языков
