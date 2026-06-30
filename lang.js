@@ -2745,6 +2745,81 @@
       kz: 'Чемпионаттан фотосуреттер',
       en: 'Photos from the championship'
     },
+    news18_place_1: {
+      ru: '1 место',
+      kz: '1 орын',
+      en: '1st place'
+    },
+    news18_place_2: {
+      ru: '2 место',
+      kz: '2 орын',
+      en: '2nd place'
+    },
+    news18_place_3: {
+      ru: '3 место',
+      kz: '3 орын',
+      en: '3rd place'
+    },
+    news18_name_sw1: {
+      ru: 'Умида Джалилова',
+      kz: 'Умида Джалилова',
+      en: 'Umida Jalilova'
+    },
+    news18_name_sw2: {
+      ru: 'Зухра Серикбаева',
+      kz: 'Зухра Серикбаева',
+      en: 'Zukhra Serikbayeva'
+    },
+    news18_name_sw3: {
+      ru: 'Разия Кошенова',
+      kz: 'Разия Кошенова',
+      en: 'Raziya Koshenova'
+    },
+    news18_name_sm1: {
+      ru: 'Бексултан Рыспай уулу',
+      kz: 'Бексултан Рыспай уулу',
+      en: 'Beksultan Ryspai uulu'
+    },
+    news18_name_sm2: {
+      ru: 'Байыш Шаймурзаев',
+      kz: 'Байыш Шаймурзаев',
+      en: 'Baiysh Shaimurzaev'
+    },
+    news18_name_sm3: {
+      ru: 'Чингиз Баймурзин',
+      kz: 'Чингиз Баймурзин',
+      en: 'Chingiz Baimurzin'
+    },
+    news18_name_iw1: {
+      ru: 'Анастасия Лигай',
+      kz: 'Анастасия Лигай',
+      en: 'Anastasia Ligai'
+    },
+    news18_name_iw2: {
+      ru: 'Марина Сытник',
+      kz: 'Марина Сытник',
+      en: 'Marina Sytnik'
+    },
+    news18_name_iw3: {
+      ru: 'Дана Шапенова',
+      kz: 'Дана Шапенова',
+      en: 'Dana Shapenova'
+    },
+    news18_name_im1: {
+      ru: 'Махмуд Азимов',
+      kz: 'Махмуд Азимов',
+      en: 'Makhmud Azimov'
+    },
+    news18_name_im2: {
+      ru: 'Ермек Жанахметов',
+      kz: 'Ермек Жанахметов',
+      en: 'Yermek Zhanakhmetov'
+    },
+    news18_name_im3: {
+      ru: 'Суннат Саипов',
+      kz: 'Суннат Саипов',
+      en: 'Sunnat Saipov'
+    },
     news18_page_title: {
       ru: 'Победители и призеры Открытого Чемпионата Казахстана SmartFit 2026',
       kz: 'SmartFit 2026 Открытый чемпионатының жеңімпаздары мен жүлдегерлері',
