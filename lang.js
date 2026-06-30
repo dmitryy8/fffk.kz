@@ -2693,6 +2693,98 @@
       kz: '🥉 Вячеслав Субботин',
       en: '🥉 Vyacheslav Subbotin'
     },
+
+    // Страница news18 - SmartFit Cup 2026
+    news18_card_title: {
+      ru: 'Победители и призеры Открытого Чемпионата Казахстана SmartFit 2026 🏆',
+      kz: 'SmartFit 2026 Открытый чемпионатының жеңімпаздары мен жүлдегерлері 🏆',
+      en: 'Winners and Prize Winners of the Open Kazakhstan Championship SmartFit 2026 🏆'
+    },
+    news18_card_excerpt: {
+      ru: 'Официальные результаты чемпионата с победителями по всем категориям...',
+      kz: 'Чемпионаттың ресми нәтижелері барлық санаттарда жеңімпаздарымен...',
+      en: 'Official championship results with winners in all categories...'
+    },
+    news18_subtitle: {
+      ru: 'Итоги соревнований функционального фитнеса',
+      kz: 'Функционалдық фитнес жарысының қорытындысы',
+      en: 'Results of the functional fitness competition'
+    },
+    news18_cat_scaled_women: {
+      ru: 'Scaled Women (Женщины)',
+      kz: 'Scaled Women (Әйелдер)',
+      en: 'Scaled Women'
+    },
+    news18_cat_scaled_men: {
+      ru: 'Scaled Men (Мужчины)',
+      kz: 'Scaled Men (Ерлер)',
+      en: 'Scaled Men'
+    },
+    news18_cat_intermediate_women: {
+      ru: 'Intermediate Women (Женщины)',
+      kz: 'Intermediate Women (Әйелдер)',
+      en: 'Intermediate Women'
+    },
+    news18_cat_intermediate_men: {
+      ru: 'Intermediate Men (Мужчины)',
+      kz: 'Intermediate Men (Ерлер)',
+      en: 'Intermediate Men'
+    },
+    news18_cat_team_mw: {
+      ru: 'Команды М+Ж',
+      kz: 'Командалар Е+Ә',
+      en: 'Teams M+W'
+    },
+    news18_cat_team_mm: {
+      ru: 'Команды М+М',
+      kz: 'Командалар Е+Е',
+      en: 'Teams M+M'
+    },
+    news18_gallery_title: {
+      ru: 'Фотографии с чемпионата',
+      kz: 'Чемпионаттан фотосуреттер',
+      en: 'Photos from the championship'
+    },
+    news18_page_title: {
+      ru: 'Победители и призеры Открытого Чемпионата Казахстана SmartFit 2026',
+      kz: 'SmartFit 2026 Открытый чемпионатының жеңімпаздары мен жүлдегерлері',
+      en: 'Winners and Prize Winners of the Open Kazakhstan Championship SmartFit 2026'
+    },
+    news18_date: {
+      ru: '20-21 июня 2026 года',
+      kz: '2026 жылғы 20-21 маусым',
+      en: 'June 20-21, 2026'
+    },
+    news18_location: {
+      ru: 'Актобе, Казахстан',
+      kz: 'Актобе, Қазақстан',
+      en: 'Aktobe, Kazakhstan'
+    },
+    news18_intro: {
+      ru: 'Открытый Чемпионат Казахстана SmartFit 2026 собрал сильнейших спортсменов со всей страны. Соревнования прошли на высоком уровне, атлеты продемонстрировали отличную подготовку и спортивный дух.',
+      kz: 'SmartFit 2026 Открытый чемпионаты бүкіл елден ең күшті спортшыларды жинады. Жарыстар жоғары деңгейде өтіп, спортшылар өте сапалы дайындық пен спорттық рухын көрсетті.',
+      en: 'The Open Kazakhstan Championship SmartFit 2026 brought together the strongest athletes from across the country. The competition was held at a high level, with athletes demonstrating excellent preparation and sportsmanship.'
+    },
+    news18_category_title: {
+      ru: 'Категории и результаты',
+      kz: 'Санаттар және нәтижелер',
+      en: 'Categories and Results'
+    },
+    news18_sponsor_title: {
+      ru: 'Генеральный спонсор',
+      kz: 'Бас демеуші',
+      en: 'General Sponsor'
+    },
+    news18_sponsor_text: {
+      ru: 'Генеральным спонсором чемпионата выступила компания КДЛ Олимп',
+      kz: 'Чемпионаттың бас демеушісі КДЛ Олимп компаниясы болды',
+      en: 'The general sponsor of the championship was KDL Olymp company'
+    },
+    news18_congratulations: {
+      ru: 'Поздравляем всех победителей и призёров с достигнутыми результатами! Спасибо всем участникам, судьям и организаторам за яркое и напряженное соревнование. Функциональное многоборье в Казахстане продолжает активно развиваться!',
+      kz: 'Барлық жеңімпаздар мен жүлдегерлерді олардың жетістіктерімен құттықтаймыз! Барлық қатысушыларға, төрешілерге және ұйымдастырушыларға жарқын және қарсақы жарысты ұйымдастырғаны үшін алғыс. Қазақстанда функционалдық көпсайыс белсенді дамып келе жатыр!',
+      en: 'Congratulations to all winners and prize winners on their achievements! Thanks to all participants, judges and organizers for a brilliant and competitive competition. Functional fitness in Kazakhstan continues to develop actively!'
+    },
     news4_congrats: {
       ru: 'Поздравляем победителей и призёров с заслуженными результатами и благодарим всех спортсменов за яркие выступления и спортивный дух!',
       kz: 'Жеңімпаздар мен жүлдегерлерді лайықты нәтижелерімен құттықтаймыз және барлық спортшыларға жарқын өнерлері мен спорттық рухы үшін алғыс білдіреміз!',
