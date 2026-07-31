@@ -403,6 +403,304 @@
       en: '© 2025 All rights reserved — Kazakhstan Federation of Functional Fitness'
     },
 
+    // Страница news191 - Чемпионат Азии 2026
+    news191_title: {
+      ru: 'Чемпионат Азии по функциональному многоборью 2026: всё, что важно знать',
+      kz: '2026 жылғы Азия функционалдық көпсайыс чемпионаты: білуге маңызды барлығы',
+      en: 'Asian Functional Fitness Championship 2026: everything you need to know'
+    },
+    news191_subtitle: {
+      ru: 'Ключевая информация о главном азиатском старте года',
+      kz: 'Жылдың басты азиялық дебюті туралы негізгі ақпарат',
+      en: 'Key information about the biggest Asian event of the year'
+    },
+    news191_intro: {
+      ru: 'На этой странице собрана ключевая информация о Чемпионате Азии по функциональному многоборью 2026, который пройдет в Казахстане. Здесь вы найдете сведения о странах-участницах, рекордном призовом фонде, официальных медалях, партнёрах чемпионата и расписании первого соревновательного дня.',
+      kz: 'Бұл бетте Қазақстанда өтетін 2026 жылғы Азия функционалдық көпсайыс чемпионаты туралы негізгі ақпарат жинақталған. Мұнда қатысушы елдер, рекордтық сыйақы қорлары, ресми медалдар, чемпионат серіктестері және бірінші жарыс күнінің кестесі туралы мәліметтерді таба аласыз.',
+      en: 'This page brings together key information about the Asian Functional Fitness Championship 2026, which will take place in Kazakhstan. Here you will find details about the participating countries, record prize fund, official medals, championship partners and the schedule of the first competition day.'
+    },
+    news191_medals_heading: {
+      ru: 'Официальные медали чемпионата',
+      kz: 'Чемпионаттың ресми медалдары',
+      en: 'Official Championship Medals'
+    },
+    news191_medals_p1: {
+      ru: 'Представляем официальные медали <strong>Asian Championship 2026</strong> — символ главного спортивного достижения чемпионата.',
+      kz: 'Біз ұсынатын <strong>Asian Championship 2026</strong> ресми медалдары — чемпионаттағы басты спорттық жетістік символы.',
+      en: 'Here are the official medals of <strong>Asian Championship 2026</strong> — a symbol of the championship’s main sporting achievement.'
+    },
+    news191_medals_p2: {
+      ru: 'Совсем скоро именно эти медали станут воплощением больших побед, ярких эмоций и незабываемых моментов для сильнейших спортсменов Азии.',
+      kz: 'Жақын арада дәл осы медалдар Азияның ең күшті спортшыларында үлкен жеңістердің, жарқын эмоциялардың және естен шықпайтын сәттердің символына айналады.',
+      en: 'Very soon these medals will become the embodiment of major victories, vivid emotions and unforgettable moments for the strongest athletes of Asia.'
+    },
+    news191_medals_p3: {
+      ru: 'Автором уникального дизайна стала <strong>Надежда Лукановская</strong>. При создании медалей были гармонично объединены национальные мотивы Казахстана и фирменный стиль <strong>Asian Championship 2026</strong>, что подчеркивает значимость турнира и уважение к культуре страны-хозяйки.',
+      kz: 'Бірегей дизайн авторы — <strong>Надежда Лукановская</strong>. Медалдарды жасау кезінде Қазақстанның ұлттық мотивтері мен <strong>Asian Championship 2026</strong> брендинг стилі үйлесімді түрде біріктірілді, бұл турнирдің маңыздылығын және қабылдаушы ел мәдениетіне құрметті көрсетеді.',
+      en: 'The unique design was created by <strong>Nadezhda Lukanovskaya</strong>. In creating the medals, the national motifs of Kazakhstan and the brand style of <strong>Asian Championship 2026</strong> were harmoniously combined, emphasizing the significance of the tournament and respect for the culture of the host country.'
+    },
+    news191_video_fallback: {
+      ru: 'Ваш браузер не поддерживает видео.',
+      kz: 'Сіздің браузеріңіз видеоны қолдамайды.',
+      en: 'Your browser does not support video.'
+    },
+    news191_countries_heading: {
+      ru: 'Страны-участницы',
+      kz: 'Қатысушы елдер',
+      en: 'Participating Countries'
+    },
+    news191_countries_text: {
+      ru: 'В Чемпионате Азии по функциональному многоборью 2026 примут участие спортсмены из восьми стран Азии и Евразии:',
+      kz: '2026 жылғы Азия функционалдық көпсайыс чемпионатына Азия мен Еуразиядан сегіз елдің спортшылары қатысады:',
+      en: 'Athletes from eight countries in Asia and Eurasia will take part in the 2026 Asian Functional Fitness Championship:'
+    },
+    news191_country_kz: { ru: 'Казахстан', kz: 'Қазақстан', en: 'Kazakhstan' },
+    news191_country_nk: { ru: 'Северная Корея', kz: 'Солтүстік Корея', en: 'North Korea' },
+    news191_country_kg: { ru: 'Кыргызстан', kz: 'Қырғызстан', en: 'Kyrgyzstan' },
+    news191_country_uz: { ru: 'Узбекистан', kz: 'Өзбекстан', en: 'Uzbekistan' },
+    news191_country_kw: { ru: 'Кувейт', kz: 'Кувейт', en: 'Kuwait' },
+    news191_country_ru: { ru: 'Россия', kz: 'Ресей', en: 'Russia' },
+    news191_country_mn: { ru: 'Монголия', kz: 'Моңғолия', en: 'Mongolia' },
+    news191_country_ir: { ru: 'Иран', kz: 'Иран', en: 'Iran' },
+    news191_country_jo: { ru: 'Иордания', kz: 'Иордания', en: 'Jordan' },
+    news191_countries_footer: {
+      ru: 'Участники будут бороться за звание сильнейших спортсменов континента в соответствии с международными стандартами функционального многоборья.',
+      kz: 'Спортшылар континенттің ең күшті спортшылары атағына халықаралық функционалдық көпсайыс стандарттарына сәйкес күреседі.',
+      en: 'Participants will compete for the title of the strongest athletes on the continent in accordance with international functional fitness standards.'
+    },
+    news191_prize_heading: {
+      ru: 'Рекордный призовой фонд',
+      kz: 'Рекордтық сыйақы қоры',
+      en: 'Record Prize Fund'
+    },
+    news191_prize_p1: {
+      ru: 'Чемпионат Азии 2026 войдет в историю благодаря крупнейшему призовому фонду.',
+      kz: '2026 жылғы Азия чемпионаты ең үлкен сыйақы қоры есебінен тарихқа енеді.',
+      en: 'The 2026 Asian Championship will go down in history thanks to the largest prize fund.'
+    },
+    news191_prize_p2: {
+      ru: 'Впервые чемпионат Азии по функциональному многоборью пройдет с максимальным призовым фондом за всю историю проведения азиатских первенств. Кроме того, турнир станет соревнованием с самым крупным призовым фондом в истории функционального многоборья Казахстана.',
+      kz: 'Азия функционалдық көпсайыс чемпионаты алғаш рет азиялық чемпионаттардың бүкіл тарихындағы ең үлкен сыйақы қорымен өткізіледі. Сонымен қатар, турнир Қазақстандағы функционалдық көпсайыс тарихындағы ең үлкен сыйақы қоры бар жарыс болады.',
+      en: 'For the first time, the Asian Functional Fitness Championship will be held with the largest prize fund in the entire history of Asian championships. In addition, the tournament will become the competition with the largest prize fund in the history of functional fitness in Kazakhstan.'
+    },
+    news191_prize_value: {
+      ru: 'Общий призовой фонд составляет 14 000 000 тенге.',
+      kz: 'Жалпы сыйақы қоры 14 000 000 теңгені құрайды.',
+      en: 'The total prize fund is 14,000,000 tenge.'
+    },
+    news191_partners_heading: {
+      ru: 'Официальные партнёры',
+      kz: 'Ресми серіктестер',
+      en: 'Official Partners'
+    },
+    news191_partners_text: {
+      ru: 'Проведение Чемпионата Азии 2026 стало возможным благодаря поддержке партнеров, которые вносят значительный вклад в развитие функционального многоборья.',
+      kz: '2026 жылғы Азия чемпионатының өткізілуіне функционалдық көпсайысты дамытуға елеулі үлес қосатын серіктестердің қолдауы мүмкіндік берді.',
+      en: 'The holding of the 2026 Asian Championship became possible thanks to the support of partners who make a significant contribution to the development of functional fitness.'
+    },
+    news191_partner_kdl_badge: {
+      ru: 'Генеральный спонсор',
+      kz: 'Бас демеуші',
+      en: 'General Sponsor'
+    },
+    news191_partner_kdl_text: {
+      ru: 'Крупнейшая сеть клинико-диагностических лабораторий Казахстана. Компания предоставляет услуги лабораторной диагностики для пациентов, медицинских центров и корпоративных клиентов по всей стране.',
+      kz: 'Қазақстанның ең ірі клиникалық-диагностикалық зертханалар желісі. Компания пациенттерге, медициналық орталықтарға және корпоративтік клиенттерге еліміз бойынша зертханалық диагностика қызметтерін ұсынады.',
+      en: 'The largest network of clinical diagnostic laboratories in Kazakhstan. The company provides laboratory diagnostic services to patients, medical centers and corporate clients across the country.'
+    },
+    news191_partner_byd: {
+      ru: '— официальный дистрибьютор бренда BYD в Казахстане. Компания занимается поставками, продажей и сервисным обслуживанием электромобилей и гибридных автомобилей BYD.',
+      kz: '— BYD брендіне Қазақстандағы ресми дистрибьютор. Компания BYD электрлік және гибридті автомобильдарын жеткізіп, сатумен және қызмет көрсетуімен айналысады.',
+      en: '— the official distributor of the BYD brand in Kazakhstan. The company handles the supply, sale and service of BYD electric and hybrid vehicles.'
+    },
+    news191_partner_astana_concert: {
+      ru: '— государственная концертная организация акимата города Астаны. Организует городские концерты, фестивали, культурные и массовые мероприятия, а также обеспечивает их техническое и творческое сопровождение.',
+      kz: '— Астана қаласының әкімдігіне қарасты мемлекеттік концерттік ұйым. Қала концерттерін, фестивальдерді, мәдени және көпшілік оқиғаларын ұйымдастырып, олардың техникалық және шығармашылық сүйемелдеуін қамтамасыз етеді.',
+      en: '— the state concert organization of the Astana city akimat. It organizes city concerts, festivals, cultural and mass events, as well as providing their technical and creative support.'
+    },
+    news191_partner_wodfriends: {
+      ru: '— казахстанская компания, специализирующаяся на экипировке, аксессуарах и товарах для функционального фитнеса, кроссфита и силовых видов спорта. Сотрудничает с соревнованиями и спортивными клубами Казахстана.',
+      kz: '— функционалдық фитнес, кроссфит және күш спортына арналған құрал-жабдық, аксессуарлар және тауарлармен айналысатын қазақ компаниясы. Қазақстандағы жарыстар мен спорт клубтарымен ынтымақтасады.',
+      en: '— a Kazakhstani company specializing in equipment, accessories and products for functional fitness, CrossFit and strength sports. It collaborates with competitions and sports clubs in Kazakhstan.'
+    },
+    news191_partner_region715: {
+      ru: '— казахстанский производитель мебели полного цикла. Более 15 лет компания выпускает мебель для школ, спортивных, культурных и административных учреждений, работает по всему Казахстану и имеет собственные производственные мощности. Это не компания спортивного питания.',
+      kz: '— Қазақстандағы толық циклды мебель шығарушы. Компания 15 жылдан астам уақыт бойы мектептерге, спорт, мәдени және әкімшілік орындарға арналған мебелін шығарады, бүкіл Қазақстанда жұмыс істейді және өз өндірістік қуаттары бар. Бұл спорттық тамақ компаниясы емес.',
+      en: '— a Kazakhstani full-cycle furniture manufacturer. For more than 15 years, the company has been producing furniture for schools, sports, cultural and administrative institutions, operates throughout Kazakhstan and has its own production facilities. This is not a sports nutrition company.'
+    },
+    news191_partner_blackberi: {
+      ru: '— республиканская сеть эспрессо-баров с собственной пекарней. Работает с 2016 года, имеет заведения в Петропавловске, Кокшетау, Астане и Караганде, продолжая развивать сеть по Казахстану.',
+      kz: '— өзіндік пештеуі бар республикалық эспрессо-барлар желісі. 2016 жылдан бері жұмыс істейді, Петропавл, Көкшетау, Астана және Қарағанды қалаларында бөлімшелері бар және Қазақстан бойынша желісін дамытады.',
+      en: '— a republican network of espresso bars with its own bakery. Operating since 2016, it has venues in Petropavlovsk, Kokshetau, Astana and Karaganda, continuing to expand its network across Kazakhstan.'
+    },
+    news191_partner_gradus: {
+      ru: '— казахстанская компания, занимающаяся производством и дистрибуцией безалкогольных напитков и питьевой воды.',
+      kz: '— безалкогольді сусындар мен су өндіру және дистрибуциялаумен айналысатын қазақ компаниясы.',
+      en: '— a Kazakhstani company engaged in the production and distribution of soft drinks and drinking water.'
+    },
+    news191_partner_tyr: {
+      ru: '— международный американский бренд, основанный в 1985 году. Производит профессиональную экипировку, одежду и аксессуары для плавания, триатлона, фитнеса и функциональных тренировок, продукция бренда представлена более чем в 50 странах мира.',
+      kz: '— 1985 жылы негізі қаланған халықаралық американдық бренд. Батутқы, триатлон, фитнес және функционалдық жаттығулар үшін кәсіби жабдық, киім және аксессуарлар шығарады; бренд өнімдері 50-ден астам әлем елінде ұсынылған.',
+      en: '— an international American brand founded in 1985. It manufactures professional equipment, clothing and accessories for swimming, triathlon, fitness and functional training, with products represented in more than 50 countries worldwide.'
+    },
+    news191_schedule_heading: {
+      ru: 'Расписание на 14 августа',
+      kz: '14 тамыздағы кесте',
+      en: 'Schedule for August 14'
+    },
+    news191_schedule_text: {
+      ru: 'Первый день Чемпионата Азии включает регистрацию участников сборной Казахстана и официальные мероприятия турнира.',
+      kz: 'Азия чемпионатының бірінші күні Қазақстан құрамасының мүшелерін тіркеу және турнирдің ресми іс-шаралары кіреді.',
+      en: 'The first day of the Asian Championship includes registration of Kazakhstan national team members and official tournament events.'
+    },
+    news191_schedule_1: {
+      ru: 'Регистрация членов сборной Республики Казахстан.',
+      kz: 'Қазақстан Республикасы құрамасының мүшелерін тіркеу.',
+      en: 'Registration of members of the Republic of Kazakhstan national team.'
+    },
+    news191_schedule_label_place: {
+      ru: 'Место проведения:',
+      kz: 'Өтетін орны:',
+      en: 'Venue:'
+    },
+    news191_schedule_place: {
+      ru: 'ЛАСК Qazaqstan, конференц-зал.',
+      kz: 'ЛАСК Qazaqstan, конференц-зал.',
+      en: 'LASK Qazaqstan, conference hall.'
+    },
+    news191_schedule_2: {
+      ru: 'Торжественная церемония открытия Чемпионата Азии.',
+      kz: 'Азия чемпионатының ресми ашылу салтанаты.',
+      en: 'Official opening ceremony of the Asian Championship.'
+    },
+    news191_schedule_3: {
+      ru: 'Брифинг для участников соревнований.',
+      kz: 'Жарысқа қатысушылар үшін брифинг.',
+      en: 'Briefing for participants.'
+    },
+    news191_schedule_footer: {
+      ru: 'Организаторы рекомендуют всем участникам заранее спланировать прибытие и принять участие во всех официальных мероприятиях чемпионата. Поздняя регистрация не предусмотрена.',
+      kz: 'Ұйымдастырушылар барлық қатысушылардан алдын ала келуін жоспарлап, чемпионаттың барлық ресми іс-шараларына қатысуын ұсынымен. Кеш тіркеу көзделмеген.',
+      en: 'Organizers recommend that all participants plan their arrival in advance and take part in all official championship events. Late registration is not provided.'
+    },
+    news191_farewell: {
+      ru: 'Желаем всем спортсменам успешного старта, честной борьбы и ярких побед на Чемпионате Азии по функциональному многоборью 2026!',
+      kz: 'Барлық спортшыларға 2026 жылғы Азия функционалдық көпсайыс чемпионатында сәтті старт, әділ күрес және жарқын жеңістер тілейміз!',
+      en: 'We wish all athletes a successful start, fair competition and brilliant victories at the 2026 Asian Functional Fitness Championship!'
+    },
+
+    // Страница Чемпионат Азии 2026
+    asia2026_title: {
+      ru: 'Чемпионат Азии 2026',
+      kz: '2026 Азия чемпионаты',
+      en: 'Asia Championship 2026'
+    },
+    asia2026_subtitle: {
+      ru: 'Описание индивидуальных и парных испытаний',
+      kz: 'Жеке және жұптық сынақтардың сипаттамасы',
+      en: 'Description of individual and pair tests'
+    },
+    asia2026_intro: {
+      ru: 'Описание индивидуальных испытаний',
+      kz: 'Жеке сынақтардың сипаттамасы',
+      en: 'Description of individual tests'
+    },
+    asia2026_pairs_heading: {
+      ru: 'Чемпионат Азии 2026. Тестовые задания для пар',
+      kz: '2026 Азия чемпионы. Жұптар үшін тест тапсырмалары',
+      en: 'Asia Championship 2026. Team tests for pairs'
+    },
+    asia2026_test1_individual: {
+      ru: '<strong>Индивидуалы и Мастера</strong><br>8 раундов на время:<br>250 м SkiErg<br>200 м бег<br>Лимит времени: 20 минут',
+      kz: '<strong>Жеке спортшылар мен мастерлар</strong><br>Уақыт бойынша 8 раунд:<br>250 м SkiErg<br>200 м жүгіру<br>Уақыт шегі: 20 минут',
+      en: '<strong>Individuals and Masters</strong><br>8 rounds for time:<br>250 m SkiErg<br>200 m run<br>Time cap: 20 minutes'
+    },
+    asia2026_test1_juniors: {
+      ru: '<strong>Юниоры (17–18 лет)</strong><br>8 раундов на время:<br>200 м SkiErg<br>200 м бег<br>Лимит времени: 20 минут',
+      kz: '<strong>Жастар (17–18 жас)</strong><br>Уақыт бойынша 8 раунд:<br>200 м SkiErg<br>200 м жүгіру<br>Уақыт шегі: 20 минут',
+      en: '<strong>Juniors (17–18 years)</strong><br>8 rounds for time:<br>200 m SkiErg<br>200 m run<br>Time cap: 20 minutes'
+    },
+    asia2026_test1_process: {
+      ru: '<strong>Порядок выполнения</strong><br>По стартовому сигналу спортсмен выполняет 250 м на SkiErg (для юниоров — 200 м), затем пробегает 200 м по дорожке. Последовательность повторяется до завершения 8 раундов.<br>Время останавливается после пересечения финишной линии по окончании последнего 200-метрового забега.',
+      kz: '<strong>Орындау тәртібі</strong><br>Старт сигналынан кейін спортшы SkiErg-та 250 м (жастар үшін — 200 м) орындап, содан кейін жолда 200 м жүгіреді. Осы тәртіп 8 раунд аяқталғанша қайталанады.<br>Соңғы 200 метрлік жүгіру аяқталғаннан кейін финиш сызығын кескенде уақыт тоқтайды.',
+      en: '<strong>Execution order</strong><br>At the start signal, the athlete performs 250 m on the SkiErg (200 m for juniors), then runs 200 m on the track. The sequence is repeated until 8 rounds are complete.<br>The clock stops after crossing the finish line at the end of the last 200 m run.'
+    },
+    asia2026_test1_standards: {
+      ru: '<strong>Стандарты движений</strong><br>Полные стандарты выполнения упражнений приведены в документе IFFF Movement Standards:<br>SkiErg ID 9.07<br>Run ID 9.01',
+      kz: '<strong>Қозғалыс стандарттары</strong><br>Жаттығуларды орындаудың толық стандарттары IFFF Movement Standards құжатына енгізілген:<br>SkiErg ID 9.07<br>Run ID 9.01',
+      en: '<strong>Movement standards</strong><br>Full movement standards are listed in the IFFF Movement Standards document:<br>SkiErg ID 9.07<br>Run ID 9.01'
+    },
+    asia2026_test1_rules: {
+      ru: '<strong>Особые правила</strong><br>Спортсмен не имеет права покидать платформу SkiErg, пока не завершит необходимую дистанцию (250 м или 200 м для юниоров) в каждом раунде.',
+      kz: '<strong>Арнайы ережелер</strong><br>Спортшы әр раундта қажетті қашықтықты (250 м немесе жастар үшін 200 м) аяқталғанша SkiErg платформада кетуге құқылы емес.',
+      en: '<strong>Special rules</strong><br>The athlete may not leave the SkiErg platform until the required distance (250 m or 200 m for juniors) is completed in each round.'
+    },
+    asia2026_test2_details: {
+      ru: '<strong>Все категории</strong><br>Лестница взятий на грудь (Clean Ladder)<br>1 взятие на грудь любым способом (Anyhow Clean).<br>30 секунд на выполнение попытки.<br>30 секунд на переход к следующей штанге.<br>Тай-брейк: максимальное количество становых тяг за оставшееся время.',
+      kz: '<strong>Барлық санаттар</strong><br>Кеуде көтеру баспалдағы (Clean Ladder)<br>1 кез келген тәсілмен кеуде көтеру (Anyhow Clean).<br>Әрбір әрекетке 30 секунд.<br>Келесі штангаға өту үшін 30 секунд.<br>Тай-брейк: қалған уақытта жасалған ең көп deadlift.',
+      en: '<strong>All categories</strong><br>Clean ladder<br>1 clean lift by any method (Anyhow Clean).<br>30 seconds per attempt.<br>30 seconds to move to the next bar.<br>Tie-break: maximum number of deadlifts in the remaining time.'
+    },
+    asia2026_test2_weights: {
+      ru: '<strong>Вес штанги (кг)</strong><br>Мужчины (Индивидуалы и Мастера): 90 • 100 • 105 • 110 • 115 • 120 • 125 • 130 • 140 • 150<br>Женщины (Индивидуалы и Мастера): 40 • 50 • 60 • 70 • 75 • 80 • 85 • 90 • 95 • 100<br>Юниоры (мужчины): 60 • 65 • 70 • 75 • 80 • 85 • 90 • 95 • 100 • 105<br>Юниоры (женщины): 30 • 35 • 40 • 50 • 60 • 65 • 70 • 75 • 80 • 85',
+      kz: '<strong>Штанга салмағы (кг)</strong><br>Ерлер (жеке спортшылар мен мастерлар): 90 • 100 • 105 • 110 • 115 • 120 • 125 • 130 • 140 • 150<br>Әйелдер (жеке спортшылар мен мастерлар): 40 • 50 • 60 • 70 • 75 • 80 • 85 • 90 • 95 • 100<br>Жастар (еркектер): 60 • 65 • 70 • 75 • 80 • 85 • 90 • 95 • 100 • 105<br>Жастар (әйелдер): 30 • 35 • 40 • 50 • 60 • 65 • 70 • 75 • 80 • 85',
+      en: '<strong>Barbell weight (kg)</strong><br>Men (Individuals and Masters): 90 • 100 • 105 • 110 • 115 • 120 • 125 • 130 • 140 • 150<br>Women (Individuals and Masters): 40 • 50 • 60 • 70 • 75 • 80 • 85 • 90 • 95 • 100<br>Juniors (men): 60 • 65 • 70 • 75 • 80 • 85 • 90 • 95 • 100 • 105<br>Juniors (women): 30 • 35 • 40 • 50 • 60 • 65 • 70 • 75 • 80 • 85'
+    },
+    asia2026_test2_rules: {
+      ru: '<strong>Порядок выполнения</strong><br>Испытание представляет собой лестницу взятий на грудь. Спортсмены последовательно переходят от одной штанги к другой, увеличивая вес, пока не перестанут справляться с очередным весом.<br>Старт проходит по принципу «водопада»: после перехода первого спортсмена к следующей штанге начинает следующий участник.<br>На каждую штангу даётся: 30 секунд на выполнение успешного подъёма; 30 секунд на переход к следующей.<br>Если спортсмен не смог выполнить взятие на грудь, он может использовать оставшееся время для выполнения становых тяг. Их количество будет использовано как тай-брейк при равенстве результата.<br><strong>Стандарты движений</strong><br>См. Clean, Anyhow ID 3.01 в документе IFFF Movement Standards.<br><strong>Особые правила</strong><br>За 30 секунд разрешено выполнять неограниченное количество попыток.<br>Если штанга упала за спину спортсмена, попытка не засчитывается («No Lift»), даже если подъём был выполнен.<br>Если во время подъёма колено коснулось пола — попытка не засчитывается.<br>Подъём должен быть полностью завершён до истечения 30 секунд.<br>После неудачного взятия спортсмен может выполнять становые тяги до конца своего временного окна. Их количество используется как тай-брейк.',
+      kz: '<strong>Орындау тәртібі</strong><br>Сынақ кеуде көтеру баспалдағы болып табылады. Спортшылар бір штангадан екінші штангаға біртіндеп өтіп, келесі салмақты көтере алмайынша көтереді.<br>Старт «сарқырама» принципімен өтеді: бірінші спортшы келесі штангаға өткен соң келесі қатысушы бастайды.<br>Әр штангаға: 30 секунд табысты көтеруге; 30 секунд келесі штангаға өтуге беріледі.<br>Егер спортшы кеуде көтеруді орындамаған болса, қалған уақытта deadlift орындауға болады. Бұл нәтиже тең болған жағдайда тай-брейк ретінде есептеледі.<br><strong>Қозғалыс стандарттары</strong><br>Clean, Anyhow ID 3.01 IFFF Movement Standards құжатында қараңыз.<br><strong>Арнайы ережелер</strong><br>30 секунд ішінде шектеусіз көп әрекет жасауға рұқсат етіледі.<br>Егер штанга спортшының артқы жағына құлаған болса, әрекет есепке алынбайды («No Lift»), тіпті көтеру дұрыс орындалса да.<br>Көтеру кезінде тізе жерге тиген болса, әрекет есепке алынбайды.<br>Көтеру 30 секунд аяқталғанға дейін толық аяқталуы керек.<br>Сәтсіз көтеруден кейін спортшы өзінің уақыт терезесінің соңына дейін deadlift орындауға болады. Олардың саны тай-брейк ретінде пайдаланылады.',
+      en: '<strong>Execution order</strong><br>The test is a clean ladder. Athletes move from one bar to the next, increasing the weight until they can no longer complete the next lift.<br>The start is a waterfall format: after the first athlete moves to the next bar, the next athlete begins.<br>Each bar has 30 seconds to complete a successful lift and 30 seconds to transition.<br>If the athlete cannot complete a clean lift, they may use the remaining time to perform deadlifts. The number will be used as a tie-break if needed.<br><strong>Movement standards</strong><br>See Clean, Anyhow ID 3.01 in the IFFF Movement Standards document.<br><strong>Special rules</strong><br>An unlimited number of attempts is allowed within 30 seconds.<br>If the bar falls behind the athlete, the attempt is not counted (“No Lift”), even if the lift was completed.<br>If the knee touches the floor during the lift, the attempt is not counted.<br>The lift must be fully completed before 30 seconds expire.<br>After a failed lift, the athlete may perform deadlifts until the end of their time window. The number is used as a tie-break.'
+    },
+    asia2026_test3_details: {
+      ru: '<strong>Все категории</strong><br>Максимальное количество повторений за 15 минут<br>Схема:<br>10–20–30–40–50… — двойные прыжки на скакалке (Double Unders)<br>10–20–30–40–50 м… — выпады в ходьбе (Walking Lunges)<br>3–6–9–12–15… — отжимания в стойке на руках (Handstand Push-ups)<br><strong>Порядок выполнения</strong><br>По стартовому сигналу у спортсменов есть 15 минут, чтобы выполнить как можно больший объём работы.<br>Начало комплекса: 10 двойных прыжков на скакалке; 10 метров выпадов в ходьбе; 3 отжимания в стойке на руках.<br>Затем: 20 двойных прыжков; 20 метров выпадов; 6 отжиманий.<br>Далее каждую новую серию необходимо увеличивать на: +10 двойных прыжков; +10 метров выпадов; +3 отжимания в стойке на руках.<br>Работа продолжается до истечения лимита времени.<br>Результат — общее количество выполненных повторений.<br><strong>Стандарты движений</strong><br>Согласно документу IFFF Movement Standards:<br>Double Under ID 10.07<br>Walking Lunge ID 15.06<br>Handstand Push-up ID 12.01<br><strong>Особые правила</strong><br>Каждые 10 метров выпадов считаются за 1 повторение.<br>Во время двойных прыжков скакалка должна вращаться вперёд.',
+      kz: '<strong>Барлық санаттар</strong><br>15 минут ішінде максимум қайталау саны<br>Схема:<br>10–20–30–40–50… — қосарланған секіріс (Double Unders)<br>10–20–30–40–50 м… — жүріп келетін лунгелер (Walking Lunges)<br>3–6–9–12–15… — қолдау күйіндегі отжимания (Handstand Push-ups)<br><strong>Орындау тәртібі</strong><br>Старт сигналынан кейін спортшылар 15 минут ішінде мүмкіндігінше көп жұмыс жасауы керек.<br>Комплекс басталуы: 10 қосарланған секіріс; 10 м жүріп келетін lunges; 3 қолдау күйіндегі отжимания.<br>Содан кейін: 20 қосарланған секіріс; 20 м lunges; 6 отжимания.<br>Әрі қарай әр жаңа серия +10 қосарланған секіріс; +10 м lunges; +3 қолдау күйіндегі отжимания арқылы өседі.<br>Жұмыс уақыт шегі аяқталғанша жалғасады.<br>Нәтиже — орындалған қайталаулардың жалпы саны.<br><strong>Қозғалыс стандарттары</strong><br>IFFF Movement Standards құжатына сәйкес:<br>Double Under ID 10.07<br>Walking Lunge ID 15.06<br>Handstand Push-up ID 12.01<br><strong>Арнайы ережелер</strong><br>Әр 10 м lunges 1 қайталау ретінде есептеледі.<br>Қосарланған секірісте скакалка алға айналуы керек.',
+      en: '<strong>All categories</strong><br>Maximum number of reps in 15 minutes<br>Sequence:<br>10–20–30–40–50… double unders<br>10–20–30–40–50 m… walking lunges<br>3–6–9–12–15… handstand push-ups<br><strong>Execution order</strong><br>At the start signal, athletes have 15 minutes to complete as much work as possible.<br>The complex begins with 10 double unders, 10 m of walking lunges and 3 handstand push-ups.<br>Then: 20 double unders, 20 m of lunges and 6 push-ups.<br>Each new round increases by +10 double unders, +10 m of lunges and +3 handstand push-ups.<br>The work continues until the time cap expires.<br>Result: total number of completed reps.<br><strong>Movement standards</strong><br>According to the IFFF Movement Standards document:<br>Double Under ID 10.07<br>Walking Lunge ID 15.06<br>Handstand Push-up ID 12.01<br><strong>Special rules</strong><br>Every 10 m of lunges counts as 1 rep.<br>During double unders, the rope must rotate forward.'
+    },
+    asia2026_test4_details: {
+      ru: '<strong>Индивидуалы и Мастера</strong><br>На время:<br>25 приседаний «пистолетиком» (чередуя ноги)<br>25 Toes-to-Bar<br>20 приседаний «пистолетиком»<br>20 подтягиваний грудью к перекладине (Chest-to-Bar)<br>15 приседаний «пистолетиком»<br>15 выходов силой на перекладине (Bar Muscle-Ups)<br>10 приседаний «пистолетиком»<br>10 метров ходьбы на руках<br>Лимит времени: 10 минут<br><strong>Юниоры</strong><br>На время:<br>25 приседаний «пистолетиком»<br>25 Toes-to-Bar<br>20 приседаний «пистолетиком»<br>20 обычных подтягиваний<br>15 приседаний «пистолетиком»<br>15 подтягиваний грудью к перекладине<br>10 приседаний «пистолетиком»<br>10 метров ходьбы на руках<br>Лимит времени: 10 минут<br><strong>Порядок выполнения</strong><br>После стартового сигнала спортсмен выполняет: 25 приседаний «пистолетиком» (поочерёдно меняя ноги); 25 Toes-to-Bar; 20 приседаний «пистолетиком»; 20 подтягиваний (Chest-to-Bar или обычных — в зависимости от категории); 15 приседаний «пистолетиком»; 15 выходов силой на перекладине (или 15 Chest-to-Bar у юниоров); 10 приседаний «пистолетиком»; 10 метров ходьбы на руках.<br>После завершения последнего упражнения спортсмен пересекает финишную линию, где фиксируется его время.<br><strong>Стандарты движений</strong><br>Согласно документу IFFF Movement Standards:<br>Pistol ID 1.06<br>Toes-to-Bar ID 7.01<br>Chest-to-Bar Pull-up ID 7.05<br>Pull-up ID 7.04<br>Bar Muscle-up ID 7.07<br>Handstand Walk ID 12.03<br><strong>Особые правила</strong><br>Если судья не засчитывает повторение в приседании «пистолетиком» (No Rep), спортсмен обязан повторить движение на той же ноге, прежде чем перейти к приседанию на другую ногу.',
+      kz: '<strong>Жеке спортшылар мен мастерлар</strong><br>Уақыт бойынша:<br>25 «пистолет» типті отыру (аяқтарын кезекпен ауыстырып)<br>25 Toes-to-Bar<br>20 «пистолет» типті отыру<br>20 кеуде көтеру арқылы тартып алу (Chest-to-Bar)<br>15 «пистолет» типті отыру<br>15 силмен штангаға шығу (Bar Muscle-Ups)<br>10 «пистолет» типті отыру<br>10 м қолмен жүру<br>Уақыт шегі: 10 минут<br><strong>Жастар</strong><br>Уақыт бойынша:<br>25 «пистолет» типті отыру<br>25 Toes-to-Bar<br>20 «пистолет» типті отыру<br>20 қарапайым тартып алу<br>15 «пистолет» типті отыру<br>15 кеуде көтеру арқылы тартып алу<br>10 «пистолет» типті отыру<br>10 м қолмен жүру<br>Уақыт шегі: 10 минут<br><strong>Орындау тәртібі</strong><br>Старт сигналынан кейін спортшы: 25 «пистолет» типті отыру (аяқтарын кезекпен ауыстырып); 25 Toes-to-Bar; 20 «пистолет» типті отыру; 20 тартып алу (Chest-to-Bar немесе қарапайым — санатқа байланысты); 15 «пистолет» типті отыру; 15 силмен штангаға шығу (немесе жастар үшін 15 Chest-to-Bar); 10 «пистолет» типті отыру; 10 м қолмен жүру.<br>Соңғы жаттығу аяқталғаннан кейін спортшы финиш сызығын кесіп, уақыт тіркеледі.<br><strong>Қозғалыс стандарттары</strong><br>IFFF Movement Standards құжатына сәйкес:<br>Pistol ID 1.06<br>Toes-to-Bar ID 7.01<br>Chest-to-Bar Pull-up ID 7.05<br>Pull-up ID 7.04<br>Bar Muscle-up ID 7.07<br>Handstand Walk ID 12.03<br><strong>Арнайы ережелер</strong><br>Егер төреші «пистолет» отырудағы қайталауды есепке алмаса (No Rep), спортшы басқа аяққа өмі доған бұрын сол аяқпен қайталап орындауы керек.',
+      en: '<strong>Individuals and Masters</strong><br>For time:<br>25 pistol squats (alternating legs)<br>25 toes-to-bar<br>20 pistol squats<br>20 chest-to-bar pull-ups<br>15 pistol squats<br>15 bar muscle-ups<br>10 pistol squats<br>10 m of handstand walking<br>Time cap: 10 minutes<br><strong>Juniors</strong><br>For time:<br>25 pistol squats<br>25 toes-to-bar<br>20 pistol squats<br>20 regular pull-ups<br>15 pistol squats<br>15 chest-to-bar pull-ups<br>10 pistol squats<br>10 m of handstand walking<br>Time cap: 10 minutes<br><strong>Execution order</strong><br>After the start signal, the athlete performs 25 pistol squats (alternating legs), 25 toes-to-bar, 20 pistol squats, 20 pull-ups (chest-to-bar or regular depending on category), 15 pistol squats, 15 bar muscle-ups (or 15 chest-to-bar for juniors), 10 pistol squats and 10 m of handstand walking.<br>After the last exercise, the athlete crosses the finish line and the time is recorded.<br><strong>Movement standards</strong><br>According to the IFFF Movement Standards document:<br>Pistol ID 1.06<br>Toes-to-Bar ID 7.01<br>Chest-to-Bar Pull-up ID 7.05<br>Pull-up ID 7.04<br>Bar Muscle-up ID 7.07<br>Handstand Walk ID 12.03<br><strong>Special rules</strong><br>If a judge does not count a pistol squat repetition (No Rep), the athlete must repeat the movement on the same leg before moving to the other leg.'
+    },
+    asia2026_test5_details: {
+      ru: '<strong>Индивидуалы и Мастера</strong><br>5 раундов на время:<br>15 жимов двух гантелей над головой (Double Dumbbell Shoulder to Overhead) — 22,5 кг / 15 кг (мужчины / женщины)<br>10 перепрыгиваний через тумбу (Box Jump Over) — 60 см / 50 см<br>5 становых тяг — 120 кг / 80 кг<br>Лимит времени: 12 минут<br><strong>Юниоры</strong><br>5 раундов на время:<br>15 жимов двух гантелей над головой — 15 кг / 12,5 кг<br>10 перепрыгиваний через тумбу — 60 см / 50 см<br>5 становых тяг — 110 кг / 70 кг<br>Лимит времени: 12 минут<br><strong>Порядок выполнения</strong><br>По стартовому сигналу спортсмен выполняет: 15 жимов двух гантелей над головой; 10 перепрыгиваний через тумбу; 5 становых тяг. После этого возвращается к гантелям и начинает следующий раунд. Всего необходимо выполнить 5 раундов.<br><strong>Стандарты движений</strong><br>Согласно документу IFFF Movement Standards:<br>Shoulder to Overhead ID 5.05<br>Box Jump Over ID 10.05<br>Deadlift ID 2.01<br><strong>Особые правила</strong><br>При выполнении Box Jump Over разрешается: запрыгнуть на тумбу и спуститься с другой стороны; либо полностью перепрыгнуть через неё без касания.<br>Если спортсмен запрыгивает на тумбу: обе стопы должны одновременно оказаться на её верхней поверхности; спускаться необходимо шагом; отскок (rebound) запрещён.<br>Если спортсмен перепрыгивает тумбу без касания: обе стопы должны пройти выше верхнего края тумбы; нельзя обходить тумбу сбоку или пересекать её ниже уровня верхней поверхности.',
+      kz: '<strong>Жеке спортшылар мен мастерлар</strong><br>Уақыт бойынша 5 раунд:<br>15 екі гантельмен бастан жоғары жейде (Double Dumbbell Shoulder to Overhead) — 22,5 кг / 15 кг (еркектер / әйелдер)<br>10 тақтайдан секіру (Box Jump Over) — 60 см / 50 см<br>5 deadlift — 120 кг / 80 кг<br>Уақыт шегі: 12 минут<br><strong>Жастар</strong><br>Уақыт бойынша 5 раунд:<br>15 екі гантельмен бастан жоғары жейде — 15 кг / 12,5 кг<br>10 тақтайдан секіру — 60 см / 50 см<br>5 deadlift — 110 кг / 70 кг<br>Уақыт шегі: 12 минут<br><strong>Орындау тәртібі</strong><br>Старт сигналынан кейін спортшы: 15 екі гантельмен бастан жоғары жейде; 10 тақтайдан секіру; 5 deadlift. Содан кейін гантельдерге қайта оралып, келесі раундты бастайды. Барлығы 5 раунд орындау қажет.<br><strong>Қозғалыс стандарттары</strong><br>IFFF Movement Standards құжатына сәйкес:<br>Shoulder to Overhead ID 5.05<br>Box Jump Over ID 10.05<br>Deadlift ID 2.01<br><strong>Арнайы ережелер</strong><br>Box Jump Over орындағанда рұқсат етіледі: тақтайға секіріп екінші жағынан түсіп өту; немесе тақтайды тиімей толық аттап өту.<br>Егер спортшы тақтайға секірсе: екі аяғы бір уақытта тақтайдың үстіне түседі; түсу тек қадаммен болуы керек; rebound тыйым.<br>Егер спортшы тақтайды тиімей аттап өтсе: екі аяғы тақтайдың жоғарғы шетінен жоғары өтуі керек; тақтайды бүйірден айналып өтуге немесе оның төмен деңгейінен кесіп өтуге болмайды.',
+      en: '<strong>Individuals and Masters</strong><br>5 rounds for time:<br>15 double dumbbell shoulder-to-overhead presses — 22.5 kg / 15 kg (men / women)<br>10 box jump overs — 60 cm / 50 cm<br>5 deadlifts — 120 kg / 80 kg<br>Time cap: 12 minutes<br><strong>Juniors</strong><br>5 rounds for time:<br>15 double dumbbell shoulder-to-overhead presses — 15 kg / 12.5 kg<br>10 box jump overs — 60 cm / 50 cm<br>5 deadlifts — 110 kg / 70 kg<br>Time cap: 12 minutes<br><strong>Execution order</strong><br>At the start signal, the athlete performs 15 overhead presses, 10 box jump overs and 5 deadlifts. Then they return to the dumbbells and begin the next round. A total of 5 rounds are required.<br><strong>Movement standards</strong><br>According to the IFFF Movement Standards document:<br>Shoulder to Overhead ID 5.05<br>Box Jump Over ID 10.05<br>Deadlift ID 2.01<br><strong>Special rules</strong><br>For Box Jump Over, the athlete may jump onto the box and step down the other side, or jump fully over it without touching it.<br>If jumping onto the box, both feet must land on the top surface simultaneously; stepping down is required; rebound is not allowed.<br>If jumping over the box without touching it, both feet must pass above the top edge; the athlete may not go around the side or cross below the top surface.'
+    },
+    asia2026_test6_details: {
+      ru: '<strong>Все категории</strong><br>На время:<br>20 берпи через штангу (Bar Facing Burpees)<br>20 калорий на Air Bike<br>Лимит времени: 4 минуты<br><strong>Порядок выполнения</strong><br>После стартового сигнала спортсмен выполняет: 20 берпи лицом к штанге с перепрыгиванием через неё. Затем переходит на Air Bike и набирает 20 калорий. После завершения работы на велосипеде пересекает финишную линию — время останавливается.<br><strong>Стандарты движений</strong><br>Согласно документу IFFF Movement Standards:<br>Air Bike ID 9.05<br>Object Facing Burpee Over Object ID 10.02<br><strong>Особые правила</strong><br>Спортсмен не имеет права покидать Air Bike, пока не наберёт все 20 калорий.',
+      kz: '<strong>Барлық санаттар</strong><br>Уақыт бойынша:<br>20 штангадан аттап берпи (Bar Facing Burpees)<br>20 калория Air Bike-та<br>Уақыт шегі: 4 минут<br><strong>Орындау тәртібі</strong><br>Старт сигналынан кейін спортшы: 20 берпи штангаға қарама-қарсы тұрып аттап өтеді. Содан кейін Air Bike-қа өтеді және 20 калория жинайды. Велосипедтегі жұмыс аяқталғаннан кейін спортшы финиш сызығын кесіп, уақыт тоқтайды.<br><strong>Қозғалыс стандарттары</strong><br>IFFF Movement Standards құжатына сәйкес:<br>Air Bike ID 9.05<br>Object Facing Burpee Over Object ID 10.02<br><strong>Арнайы ережелер</strong><br>Спортшы барлық 20 калория жинағанша Air Bike-тан кетуге құқылы емес.',
+      en: '<strong>All categories</strong><br>For time:<br>20 bar-facing burpees<br>20 calories on the Air Bike<br>Time cap: 4 minutes<br><strong>Execution order</strong><br>At the start signal, the athlete performs 20 burpees facing the bar and jumping over it. Then they move to the Air Bike and accumulate 20 calories. After finishing on the bike, they cross the finish line and the clock stops.<br><strong>Movement standards</strong><br>According to the IFFF Movement Standards document:<br>Air Bike ID 9.05<br>Object Facing Burpee Over Object ID 10.02<br><strong>Special rules</strong><br>The athlete may not leave the Air Bike until all 20 calories are completed.'
+    },
+    asia2026_pair1_details: {
+      ru: '<strong>На время:</strong><br>10 раундов (партнёры выполняют раунды по очереди):<br>250 м SkiErg<br>200 м бег<br>Лимит времени: 22 минуты<br><strong>Выполнение</strong><br>По стартовому сигналу спортсмен 1 выполняет 250 м на SkiErg, затем пробегает 200 м по дорожке. После того как спортсмен 1 закончит бег, спортсмен 2 начинает свой раунд: 250 м SkiErg; 200 м бег. Партнёры продолжают чередоваться до выполнения 10 общих раундов.<br>Время останавливается, когда спортсмен 2 пересекает финишную линию после последнего 200-метрового отрезка десятого раунда.<br><strong>Стандарты движений</strong><br>Полные стандарты выполнения упражнений приведены в документе International Functional Fitness Federation Movement Standards:<br>SkiErg ID 9.07<br>Run ID 9.01<br><strong>Особые правила</strong><br>Запрещено сходить с платформы SkiErg до завершения всех 250 метров.<br>Правила передачи эстафеты будут разъяснены на месте проведения.<br>Каждый спортсмен обязан полностью завершить свой раунд перед сменой.<br>Раунды выполняются строго поочерёдно.',
+      kz: '<strong>Уақыт бойынша:</strong><br>10 раунд (партнёралар раундтарды алмасып орындайды):<br>250 м SkiErg<br>200 м жүгіру<br>Уақыт шегі: 22 минут<br><strong>Орындау</strong><br>Старт сигналынан кейін 1-спортшы SkiErg-та 250 м орындап, содан кейін 200 м жолда жүгіріп шығуы керек. 1-спортшы жүгіруді аяқтаған соң 2-спортшы өзінің раундын бастайды: 250 м SkiErg; 200 м жүгіру. Партнёралар 10 жалпы раунд аяқталғанша кезекпен жалғаса береді.<br>10-раундтың соңғы 200 м бөлігін 2-спортшы финиш сызығын кескенде уақыт тоқтайды.<br><strong>Қозғалыс стандарттары</strong><br>Жаттығуларды орындаудың толық стандарттары International Functional Fitness Federation Movement Standards құжатына енгізілген:<br>SkiErg ID 9.07<br>Run ID 9.01<br><strong>Арнайы ережелер</strong><br>Барлық 250 метр аяқталғанша SkiErg платформасынан түсуге тыйым салынады.<br>Эстафетаны беру ережелері орынға келгенде түсіндіріледі.<br>Әрбір спортшы ауыстырғанға дейін өзінің раундын толық аяқтауы керек.<br>Раундар қатаң кезекпен орындалады.',
+      en: '<strong>For time:</strong><br>10 rounds (partners alternate):<br>250 m SkiErg<br>200 m run<br>Time cap: 22 minutes<br><strong>Execution</strong><br>At the start signal, athlete 1 performs 250 m on the SkiErg and then runs 200 m. After athlete 1 finishes the run, athlete 2 starts their round: 250 m SkiErg and 200 m run. The partners continue alternating until 10 rounds are completed.<br>The clock stops when athlete 2 crosses the finish line after the final 200 m segment of the 10th round.<br><strong>Movement standards</strong><br>Full movement standards are listed in the International Functional Fitness Federation Movement Standards document:<br>SkiErg ID 9.07<br>Run ID 9.01<br><strong>Special rules</strong><br>Leaving the SkiErg platform before all 250 m are completed is not allowed.<br>Relay handoff rules will be explained on site.<br>Each athlete must fully complete their round before switching.<br>Rounds are performed strictly in alternation.'
+    },
+    asia2026_pair2_details: {
+      ru: '<strong>На максимальный вес</strong><br>Спортсмен 1: за 5 минут найти максимум в становой тяге — 1 повторение (1RM).<br>Сразу после этого спортсмен 2: за 5 минут найти максимальный вес в комплексе: 1 Clean (любым способом) + 1 Front Squat.<br><strong>Результат</strong><br>Сумма: лучшая успешная становая тяга спортсмена 1; лучший успешный комплекс спортсмена 2.<br><strong>Выполнение</strong><br>После стартового сигнала спортсмен 1 получает 5 минут, чтобы установить максимальный вес в становой тяге на одно повторение. Количество попыток не ограничено. Вес можно как увеличивать, так и уменьшать.<br>По истечении пяти минут спортсмен 2 получает 5 минут на поиск максимального веса в комплексе: 1 взятие на грудь (любым способом); 1 фронтальный присед.<br><strong>Стандарты движений</strong><br>См. документ Movement Standards:<br>Deadlift ID 2.01<br>Clean, Anyhow ID 3.01<br>Front Squat ID 1.03<br><strong>Особые правила</strong><br>В течение своих пяти минут спортсмен может выполнять неограниченное количество попыток.<br>Перед каждой попыткой гриф должен быть зафиксирован замками.<br>Все лишние диски должны быть убраны за пределы помоста.<br>Для становой тяги штанга начинается пустой.<br>Для комплекса штанга может быть заранее загружена.<br>Спортсмены не имеют права помогать друг другу менять вес, кроме одного исключения: если спортсмен 1 закончил становую тягу раньше времени, он может помочь спортсмену 2 подготовить штангу только до первой попытки; после первой попытки помощь запрещена.<br>Если спортсмен бросает штангу за спину, попытка не засчитывается, даже если подъём был выполнен правильно.<br>Если колено касается пола — попытка не засчитывается.<br>Подъём должен быть полностью завершён до окончания пятиминутного лимита.<br>Если фронтальный присед не засчитан, но спортсмен удержал штангу, он может продолжать выполнять фронтальные приседы, пока не выполнит правильное повторение. Тогда весь комплекс будет засчитан.<br>Если спортсмен выполняет Squat Clean, этот присед не считается фронтальным приседом комплекса. После него необходимо выполнить ещё один полноценный Front Squat.<br>В смешанных парах (мужчина/женщина) используются две штанги: мужская — 20 кг; женская — 15 кг. Мужчина обязан использовать 20-килограммовую штангу.',
+      kz: '<strong>Максимумға</strong><br>1-спортшы 5 минут ішінде 1RM deadlift максимумын табуы керек.<br>Содан кейін 2-спортшы 5 минут ішінде комплекс үшін максимумды табуы керек: 1 Clean (кез келген тәсілмен) + 1 Front Squat.<br><strong>Нәтиже</strong><br>Сома: 1-спортшының ең жақсы deadlift нәтижесі; 2-спортшының ең жақсы комплексі.<br><strong>Орындау</strong><br>Старт сигналынан кейін 1-спортшы 5 минут ішінде бір қайталау үшін deadlift максимумын белгілейді. Әрекет саны шектеусіз. Салмақ арттыруға да, азайтуға да болады.<br>5 минут өткен соң 2-спортшы 5 минут ішінде комплекс үшін максимумды іздейді: 1 кеуде көтеру (кез келген тәсілмен); 1 фронталь отыру.<br><strong>Қозғалыс стандарттары</strong><br>Movement Standards құжатына қараңыз:<br>Deadlift ID 2.01<br>Clean, Anyhow ID 3.01<br>Front Squat ID 1.03<br><strong>Арнайы ережелер</strong><br>Оның 5 минутында спортшы шектеусіз әрекет жасай алады.<br>Әр әрекеттен бұрын штанга замоктармен бекітілуі керек.<br>Барлық артық дискілер помосттан тыс болуы керек.<br>Deadlift үшін штанга бастапқыда бос болады.<br>Комплекс үшін штанга алдын ала жүктелуі мүмкін.<br>Спортшылардың бір-біріне салмақтарды ауыстыруға көмектесуіне рұқсат етілмейді, бір ғана ерекшелікпен: егер 1-спортшы deadlift-ті уақытынан бұрын аяқтаса, ол 2-спортшыға тек бірінші әрекетке дейін штанга дайындауға көмектесе алады; бірінші әрекеттен кейін көмектесу тыйым.<br>Егер спортшы штанганы артқа лақтырып тастаса, әрекет есепке алынбайды, тіпті көтеру дұрыс болса да.<br>Егер тізе жерге тиген болса — әрекет есепке алынбайды.<br>Көтеру 5 минуттық уақыт аяқталғанға дейін толық аяқталуы керек.<br>Егер фронталь отыру есепке алынбаса, бірақ спортшы штанганы ұстап тұрса, ол дұрыс қайталауды орындағанша фронталь отыруларды жалғастыра алады. Сонда бүкіл комплекс есепке алынады.<br>Егер спортшы Squat Clean орындаса, бұл отыру комплекстегі фронталь отыру ретінде есептелмейді. Одан кейін тағы бір толық Front Squat жасау қажет.<br>Аралас жұптарда (еркек/әйел) екі штанга қолданылады: еркек — 20 кг; әйел — 15 кг. Еркек 20-килограмдық штанганы пайдалану керек.',
+      en: '<strong>For maximum weight</strong><br>Athlete 1 has 5 minutes to find a 1RM deadlift.<br>Immediately after that, athlete 2 has 5 minutes to find the maximum weight in the complex: 1 clean (any method) + 1 front squat.<br><strong>Result</strong><br>The sum of athlete 1’s best successful deadlift and athlete 2’s best successful complex.<br><strong>Execution</strong><br>After the start signal, athlete 1 has 5 minutes to establish the maximum single-rep deadlift. Attempts are unlimited. Weight may be increased or decreased.<br>After five minutes, athlete 2 has 5 minutes to find the maximum weight in the complex: 1 clean (any method) and 1 front squat.<br><strong>Movement standards</strong><br>See Movement Standards document:<br>Deadlift ID 2.01<br>Clean, Anyhow ID 3.01<br>Front Squat ID 1.03<br><strong>Special rules</strong><br>During their five minutes, athletes may perform unlimited attempts.<br>Before each attempt, the bar must be locked with collars.<br>All extra plates must be removed from the platform.<br>For the deadlift, the bar starts empty.<br>For the complex, the bar may be pre-loaded.<br>Athletes may not help each other change weight, except that if athlete 1 finishes the deadlift early, they may help athlete 2 set up the bar only before the first attempt; after the first attempt, this is prohibited.<br>If the athlete drops the bar behind them, the attempt does not count even if the lift was correct.<br>If the knee touches the floor, the attempt does not count.<br>The lift must be completed before the five-minute limit expires.<br>If the front squat is not counted but the athlete held the bar, they may continue doing front squats until they complete a valid rep. The full complex is then counted.<br>If the athlete performs a squat clean, that squat does not count as the front squat in the complex. They must then perform another full front squat.<br>In mixed pairs (male/female), two bars are used: male bar — 20 kg; female bar — 15 kg. The male athlete must use the 20 kg bar.'
+    },
+    asia2026_pair3_details: {
+      ru: '<strong>Для всех дивизионов</strong><br>AMRAP 15 минут (максимальное количество повторений)<br>Схема повторений:<br>3–6–9–12–15–18–21…<br>Отжимания в стойке на руках (Handstand Push-ups)<br>Подтягивания (Pull-ups)<br>Перепрыгивания через тумбу (Box Jump Overs)<br><strong>Выполнение</strong><br>После стартового сигнала у пары есть 15 минут, чтобы выполнить как можно больше повторений.<br>Одновременно работает только один спортсмен. Партнёры могут меняться в любой момент и распределять работу по своему усмотрению.<br>Последовательность: 3 HSPU → 3 Pull-ups → 3 Box Jump Overs; затем 6–6–6; затем 9–9–9 и так далее, увеличивая каждое упражнение на 3 повторения в каждом раунде.<br>Итоговый результат — общее количество выполненных повторений.<br><strong>Особые правила</strong><br>На Box Jump Over можно: запрыгивать на тумбу и сходить с неё; либо перепрыгивать тумбу полностью.<br>При запрыгивании обе ноги должны коснуться верхней поверхности тумбы.<br>Прыжки с отскоком (rebound) запрещены.<br>При полном перепрыгивании ноги должны проходить выше верхнего края тумбы.<br>Правила передачи эстафеты объяснят на площадке.<br>Одновременно работает только один спортсмен.<br>Нет минимального объёма работы для каждого участника.<br>Не обязательно, чтобы оба спортсмена выполняли все упражнения.',
+      kz: '<strong>Барлық дивизиондар үшін</strong><br>AMRAP 15 минут (максимум қайталау саны)<br>Қайталау схемасы:<br>3–6–9–12–15–18–21…<br>Қолдау күйіндегі отжимания (Handstand Push-ups)<br>Тартып алу (Pull-ups)<br>Тақтайдан секіру (Box Jump Overs)<br><strong>Орындау</strong><br>Старт сигналынан кейін жұп 15 минут ішінде мүмкіндігінше көп қайталау орындауы керек.<br>Бір уақытта тек бір спортшы жұмыс істейді. Партнёралар кез келген уақытта ауысып, жұмысты өздері бөліп алады.<br>Тәртіп: 3 HSPU → 3 Pull-ups → 3 Box Jump Overs; сонан кейін 6–6–6; сосын 9–9–9 және осылай әр раундта әр жаттығуға 3 қайталау қосылып отырады.<br>Қорытынды нәтиже — орындалған қайталаулардың жалпы саны.<br><strong>Арнайы ережелер</strong><br>Box Jump Over орындағанда: тақтайға секіріп екінші жағынан түсіп өтуге; немесе тақтайды толық аттап өтуге болады.<br>Секірген кезде екі аяқ та тақтайдың үстіне тиіп болуы керек.<br>Rebound тыйым.<br>Толық аттап өткенде аяқтар тақтайдың жоғарғы шетінен жоғары өтеді.<br>Эстафетаны беру ережелері алаңда түсіндіріледі.<br>Бір уақытта тек бір спортшы жұмыс істейді.<br>Әр қатысушының minimum жұмысы жоқ.<br>Екі спортшының да барлық жаттығуларды орындауы міндетті емес.',
+      en: '<strong>For all divisions</strong><br>AMRAP 15 minutes (maximum number of reps)<br>Rep scheme:<br>3–6–9–12–15–18–21…<br>Handstand push-ups<br>Pull-ups<br>Box jump overs<br><strong>Execution</strong><br>After the start signal, the pair has 15 minutes to perform as many reps as possible.<br>Only one athlete works at a time. Partners may switch at any time and divide the workload as they wish.<br>Sequence: 3 HSPU → 3 pull-ups → 3 box jump overs; then 6–6–6; then 9–9–9 and so on, increasing each exercise by 3 reps each round.<br>The final result is the total number of reps completed.<br><strong>Special rules</strong><br>For Box Jump Over, the athlete may jump onto the box and step down on the other side, or jump fully over it.<br>When jumping onto the box, both feet must touch the top surface.<br>Rebound jumps are not allowed.<br>When jumping fully over, the feet must pass above the top edge.<br>Handoff rules will be explained on site.<br>Only one athlete works at a time.<br>There is no minimum workload for each athlete.<br>It is not necessary for both athletes to perform all exercises.'
+    },
+    asia2026_pair4_details: {
+      ru: '<strong>На время</strong><br>40–30–20–10<br>Гребля на калории (Row) — работает один спортсмен.<br>Синхронные рывки гантели одной рукой (Single Arm Synchronized Dumbbell Snatch)<br>мужчины — 22,5 кг;<br>женщины — 15 кг.<br>Лимит времени: 15 минут.<br><strong>Выполнение</strong><br>Пара начинает с 40 калорий на гребном тренажёре. Работает только один спортсмен, смены возможны в любой момент. После набора 40 калорий оба спортсмена выполняют 40 синхронных рывков гантели. Далее: 30 калорий + 30 рывков; 20 калорий + 20 рывков; 10 калорий + 10 рывков. После завершения последнего раунда спортсмены пересекают финишную линию.<br><strong>Особые правила</strong><br>Менять руку при рывках необязательно.<br>Партнёры могут использовать разные руки.<br>Не обязательно, чтобы оба спортсмена работали на гребле.<br>Смена на гребле разрешена в любой момент.<br>Требования к синхронности выполняются согласно официальным стандартам движения.',
+      kz: '<strong>Уақыт бойынша</strong><br>40–30–20–10<br>Калория үшін есу (Row) — тек бір спортшы жұмыс істейді.<br>Бір қолмен синхронды гантельді құлау (Single Arm Synchronized Dumbbell Snatch)<br>еркектер — 22,5 кг;<br>әйелдер — 15 кг.<br>Уақыт шегі: 15 минут.<br><strong>Орындау</strong><br>Жұп 40 калориямен гребной тренажерден бастайды. Бір уақытта тек бір спортшы жұмыс істейді, ауысулар кез келген уақытта болуы мүмкін. 40 калория жинағаннан кейін екі спортшы да 40 синхронды гантельді рывк жасайды. Әрі қарай: 30 калория + 30 рывк; 20 калория + 20 рывк; 10 калория + 10 рывк. Соңғы раунд аяқталғаннан кейін спортшылар финиш сызығын кеседі.<br><strong>Арнайы ережелер</strong><br>Рывк кезінде қолды ауыстыру міндетті емес.<br>Партнёралар әртүрлі қолдарды қолдана алады.<br>Екі спортшының да гребле жұмыс істеуі міндетті емес.<br>Гребледе ауысу кез келген уақытта рұқсат етіледі.<br>Синхронды талаптар ресми қозғалыс стандарттарына сәйкес орындалады.',
+      en: '<strong>For time</strong><br>40–30–20–10<br>Calories on the rower — one athlete works at a time.<br>Single-arm synchronized dumbbell snatches<br>men — 22.5 kg;<br>women — 15 kg.<br>Time cap: 15 minutes.<br><strong>Execution</strong><br>The pair starts with 40 calories on the rower. Only one athlete works at a time, with changes allowed at any moment. After reaching 40 calories, both athletes perform 40 synchronized dumbbell snatches. Then: 30 calories + 30 snatches; 20 calories + 20 snatches; 10 calories + 10 snatches. After the last round, the athletes cross the finish line.<br><strong>Special rules</strong><br>Changing hands during snatches is not required.<br>Partners may use different arms.<br>It is not necessary for both athletes to row.<br>Switching on the rower is allowed at any time.<br>Synchronization requirements follow the official movement standards.'
+    },
+    asia2026_pair5_details: {
+      ru: '<strong>100 Wall Balls попеременно между партнёрами</strong><br>мужчины — 9 кг в мишень 3 м;<br>женщины — 6 кг в мишень 2,75 м.<br>Сразу после этого:<br>12–10–8<br>Worm Thruster<br>Синхронные бурпи через Worm<br>После каждого раунда:<br>10 метров выпадов с Worm (Walking Lunges).<br>Лимит времени: 15 минут.<br><strong>Выполнение</strong><br>Пара начинает со 100 Wall Balls, чередуя каждое повторение. После 100-го броска: 12 Worm Thrusters; 12 синхронных бурпи через Worm; 10 метров выпадов с Worm. Затем: 10 + 10; 10 метров выпадов; После этого: 8 + 8; последние 10 метров выпадов; Затем пересекают финишную линию.<br><strong>Особые правила</strong><br>Wall Balls выполняются строго поочерёдно.<br>В смешанной паре мужчина бросает мяч в мишень 3 м, женщина — в мишень 2,75 м.<br>Во время выпадов спортсмены могут держать Worm любым удобным способом.',
+      kz: '<strong>Партнёралар арасында кезекпен 100 Wall Balls</strong><br>еркектер — 3 м мішеньге 9 кг;<br>әйелдер — 2,75 м мішеньге 6 кг.<br>Содан кейін дереу:<br>12–10–8<br>Worm Thruster<br>Worm арқылы синхронды бурпи<br>Әр раундтан кейін:<br>Worm-мен 10 м lunges (Walking Lunges).<br>Уақыт шегі: 15 минут.<br><strong>Орындау</strong><br>Жұп 100 Wall Balls-тан бастайды, әр қайталауды кезекпен орындап. 100-ші лақтырудан кейін: 12 Worm Thrusters; 12 Worm арқылы синхронды бурпи; 10 м Worm-мен lunges. Содан кейін: 10 + 10; 10 м lunges; сосын: 8 + 8; соңғы 10 м lunges; содан кейін финиш сызығын кеседі.<br><strong>Арнайы ережелер</strong><br>Wall Balls қатаң кезекпен орындалады.<br>Аралас жұпта еркек 3 м мішеньге, әйел 2,75 м мішеньге допты лақтыра береді.<br>Лунгелер кезінде спортшылар Worm-ді өздері ыңғайлы түрде ұстай алады.',
+      en: '<strong>100 Wall Balls alternately between partners</strong><br>men — 9 kg to a 3 m target;<br>women — 6 kg to a 2.75 m target.<br>Immediately after that:<br>12–10–8<br>Worm Thrusters<br>Synchronised burpees over the Worm<br>After each round:<br>10 m walking lunges with the Worm.<br>Time cap: 15 minutes.<br><strong>Execution</strong><br>The pair begins with 100 Wall Balls, alternating each rep. After the 100th throw: 12 Worm Thrusters; 12 synchronized burpees over the Worm; 10 m of lunges with the Worm. Then: 10 + 10; 10 m lunges; then: 8 + 8; final 10 m lunges; then they cross the finish line.<br><strong>Special rules</strong><br>Wall Balls are performed strictly alternately.<br>In a mixed pair, the male throws to the 3 m target and the female to the 2.75 m target.<br>During lunges, athletes may hold the Worm however is most convenient.'
+    },
+    asia2026_pair6_details: {
+      ru: '<strong>На максимальное количество повторений</strong><br>По 90 секунд AMRAP:<br>Power Cleans (65/45 кг)<br>Bar Muscle-Ups<br>Toes to Rings<br>Handstand Walk<br>Каждый спортсмен обязан выполнить две станции.<br><strong>Выполнение</strong><br>Тест состоит из четырёх отрезков по 90 секунд. В каждый момент времени работает только один спортсмен, который выполняет всю 90-секундную станцию полностью. Каждый участник обязан выполнить две станции. Их можно выполнять подряд либо с перерывом.<br>Результат команды — сумма всех повторений, выполненных на четырёх станциях.<br><strong>Особые правила</strong><br>Минимальная непрерывная дистанция ходьбы на руках — 2,5 м.<br>Каждый полностью преодолённый метр в Handstand Walk считается за одно повторение.',
+      kz: '<strong>Максимум қайталау санына</strong><br>Әр 90 секунд AMRAP:<br>Power Cleans (65/45 кг)<br>Bar Muscle-Ups<br>Toes to Rings<br>Handstand Walk<br>Әр спортшы екі станцияны орындауы керек.<br><strong>Орындау</strong><br>Тест төрт 90 секундтық бөліктен тұрады. Әр уақытта тек бір спортшы жұмыс істейді және толығымен 90 секундтық станцияны орындайды. Әр қатысушы екі станцияны орындауы керек. Оларды қатар да, үзіліспен де орындауға болады.<br>Команданың нәтижесі — төрт станцияда орындалған барлық қайталаулардың қосындысы.<br><strong>Арнайы ережелер</strong><br>Қолмен жүрудің минималды үздіксіз қашықтығы — 2,5 м.<br>Handstand Walk-та толық өткен әр метр бір қайталау ретінде есептеледі.',
+      en: '<strong>For maximum reps</strong><br>90 seconds AMRAP each:<br>Power Cleans (65/45 kg)<br>Bar Muscle-Ups<br>Toes to Rings<br>Handstand Walk<br>Each athlete must complete two stations.<br><strong>Execution</strong><br>The test consists of four 90-second rounds. Only one athlete works at a time and completes the full 90-second station. Each participant must complete two stations. They can be done back-to-back or with a break.<br>The team result is the sum of all reps completed across the four stations.<br><strong>Special rules</strong><br>The minimum continuous distance for handstand walking is 2.5 m.<br>Each full meter completed in Handstand Walk counts as one rep.'
+    },
+
     // Страница Календарь соревнований
     calendar_title: {
       ru: 'Календарь',
@@ -3648,6 +3946,16 @@
       kz: 'Қазақстан 2026 жылғы Азия чемпионатын өткізу құқығын алды. Ел функционалдық көпсайысының тарихи оқиғасы...',
       en: 'Kazakhstan has been granted the right to host the Asian Championship 2026. A historic event for the country\'s functional fitness...'
     },
+    news191_card_title: {
+      ru: 'Чемпионат Азии по функциональному многоборью 2026: всё, что важно знать!',
+      kz: '2026 жылғы Азия функционалдық көпсайыс чемпионаты: білуге маңызды барлығы!',
+      en: 'Asian Functional Fitness Championship 2026: everything you need to know!'
+    },
+    news191_card_excerpt: {
+      ru: 'На этой странице собрана ключевая информация о Чемпионате Азии по функциональному многоборью 2026...',
+      kz: 'Бұл бетте 2026 жылғы Азия функционалдық көпсайыс чемпионаты туралы негізгі ақпарат жинақталған...',
+      en: 'This page brings together key information about the Asian Functional Fitness Championship 2026...'
+    },
     news17_card_title: {
       ru: 'iF3 получила жалобу от Финской организации функционального фитнеса (Fin2f)!',
       kz: 'iF3 Финляндиялық Functional Fitness ұйымынан шағым алды (Fin2f)!',
@@ -4203,10 +4511,14 @@
 
   // Функция применения переводов
   function applyTranslations(lang) {
-    document.querySelectorAll('[data-translate]').forEach(el => {
-      const key = el.getAttribute('data-translate');
+    document.querySelectorAll('[data-translate], [data-translate-html]').forEach(el => {
+      const key = el.getAttribute('data-translate') || el.getAttribute('data-translate-html');
       if (translations[key] && translations[key][lang]) {
-        el.textContent = translations[key][lang];
+        if (el.hasAttribute('data-translate-html')) {
+          el.innerHTML = translations[key][lang];
+        } else {
+          el.textContent = translations[key][lang];
+        }
       }
     });
     if (document.documentElement) {
