@@ -3966,6 +3966,61 @@
       kz: 'Test 1 (Endurance)...',
       en: 'Test 1 (Endurance)...'
     },
+    news19_kicker: {
+      ru: 'Формат соревнований',
+      kz: 'Жарыс форматы',
+      en: 'Competition Format'
+    },
+    news19_title: {
+      ru: 'ЧЕМПИОНАТ АЗИИ 2026',
+      kz: '2026 ЖЫЛҒЫ АЗИЯ ЧЕМПИОНАТЫ',
+      en: 'CHAMPIONSHIP ASIA 2026'
+    },
+    news19_subtitle: {
+      ru: 'Описание индивидуальных и парных тестов',
+      kz: 'Жеке және жұптық тесттердің сипаттамасы',
+      en: 'Description of individual and paired tests'
+    },
+    news19_individuals: {
+      ru: 'ИНДИВИДУАЛЬНЫЕ',
+      kz: 'ЖЕКЕ',
+      en: 'INDIVIDUALS'
+    },
+    news19_pairs: {
+      ru: 'ПАРЫ',
+      kz: 'ЖҰПТАР',
+      en: 'PAIRS'
+    },
+    news19_test1: {
+      ru: 'Тест 1 (Выносливость)',
+      kz: 'Тест 1 (Төзімділік)',
+      en: 'Test 1 (Endurance)'
+    },
+    news19_test2: {
+      ru: 'Тест 2 (Сила)',
+      kz: 'Тест 2 (Күш)',
+      en: 'Test 2 (Strength)'
+    },
+    news19_test3: {
+      ru: 'Тест 3 (Бодивейт)',
+      kz: 'Тест 3 (Бодивейт)',
+      en: 'Test 3 (Bodyweight)'
+    },
+    news19_test4: {
+      ru: 'Тест 4 (Навык)',
+      kz: 'Тест 4 (Дағды)',
+      en: 'Test 4 (Skill)'
+    },
+    news19_test5: {
+      ru: 'Тест 5 (Смешанный)',
+      kz: 'Тест 5 (Аралас)',
+      en: 'Test 5 (Mixed)'
+    },
+    news19_test6: {
+      ru: 'Тест 6 (Сила / мощность)',
+      kz: 'Тест 6 (Күш / қуат)',
+      en: 'Test 6 (Power)'
+    },
     news17_card_title: {
       ru: 'iF3 получила жалобу от Финской организации функционального фитнеса (Fin2f)!',
       kz: 'iF3 Финляндиялық Functional Fitness ұйымынан шағым алды (Fin2f)!',
