@@ -3956,6 +3956,16 @@
       kz: 'Бұл бетте 2026 жылғы Азия функционалдық көпсайыс чемпионаты туралы негізгі ақпарат жинақталған...',
       en: 'This page brings together key information about the Asian Functional Fitness Championship 2026...'
     },
+    news19_card_title: {
+      ru: 'Официальное объявление тестов для Азиатского чемпионата iF3 2026!',
+      kz: '2026 жылғы iF3 Азия чемпионатына арналған тесттердің ресми жарияланымы!',
+      en: 'Official announcement of the test protocol for the iF3 Asian Championship 2026!'
+    },
+    news19_card_excerpt: {
+      ru: 'Test 1 (Endurance)...',
+      kz: 'Test 1 (Endurance)...',
+      en: 'Test 1 (Endurance)...'
+    },
     news17_card_title: {
       ru: 'iF3 получила жалобу от Финской организации функционального фитнеса (Fin2f)!',
       kz: 'iF3 Финляндиялық Functional Fitness ұйымынан шағым алды (Fin2f)!',
