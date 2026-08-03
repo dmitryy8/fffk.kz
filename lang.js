@@ -67,6 +67,16 @@
       kz: 'Жүктелуде...',
       en: 'Loading...'
     },
+    preloader_text: {
+      ru: 'Загрузка...',
+      kz: 'Жүктелуде...',
+      en: 'Loading...'
+    },
+    footer_dev: {
+      ru: 'Разработка: Дмитрий Глухих',
+      kz: 'Әзірлеген: Дмитрий Глухих',
+      en: 'Developed by: Dmitry Glukhikh'
+    },
     read_more: {
       ru: 'Подробнее',
       kz: 'Толығырақ',
@@ -4020,6 +4030,642 @@
       ru: 'Тест 6 (Сила / мощность)',
       kz: 'Тест 6 (Күш / қуат)',
       en: 'Test 6 (Power)'
+    },
+
+    // --- news19: общие подзаголовки ---
+    news19_div_all: {
+      ru: 'Все дивизионы',
+      kz: 'Барлық дивизиондар',
+      en: 'All divisions'
+    },
+    news19_div_ind_masters: {
+      ru: 'Индивидуальные участники и мастера',
+      kz: 'Жеке қатысушылар және мастерлер',
+      en: 'Individuals and Masters'
+    },
+    news19_div_jr1718: {
+      ru: 'Юниоры 17-18',
+      kz: 'Жасөспірімдер 17-18',
+      en: 'Juniors 17-18'
+    },
+    news19_div_juniors: {
+      ru: 'Юниоры',
+      kz: 'Жасөспірімдер',
+      en: 'Juniors'
+    },
+    news19_flow_t1: {
+      ru: 'Поток Теста 1',
+      kz: '1-тесттің өту реті',
+      en: 'Test 1 Flow'
+    },
+    news19_flow_t2: {
+      ru: 'Поток Теста 2',
+      kz: '2-тесттің өту реті',
+      en: 'Test 2 Flow'
+    },
+    news19_flow_t3: {
+      ru: 'Поток Теста 3',
+      kz: '3-тесттің өту реті',
+      en: 'Test 3 Flow'
+    },
+    news19_flow_t4: {
+      ru: 'Поток Теста 4',
+      kz: '4-тесттің өту реті',
+      en: 'Test 4 Flow'
+    },
+    news19_flow_t5: {
+      ru: 'Поток Теста 5',
+      kz: '5-тесттің өту реті',
+      en: 'Test 5 Flow'
+    },
+    news19_flow_t6: {
+      ru: 'Поток Теста 6',
+      kz: '6-тесттің өту реті',
+      en: 'Test 6 Flow'
+    },
+    news19_std_t1: {
+      ru: 'Стандарты движений Теста 1',
+      kz: '1-тесттің қимыл стандарттары',
+      en: 'Test 1 Movement Standards'
+    },
+    news19_std_t2: {
+      ru: 'Стандарты движений Теста 2',
+      kz: '2-тесттің қимыл стандарттары',
+      en: 'Test 2 Movement Standards'
+    },
+    news19_std_t3: {
+      ru: 'Стандарты движений Теста 3',
+      kz: '3-тесттің қимыл стандарттары',
+      en: 'Test 3 Movement Standards'
+    },
+    news19_std_t4: {
+      ru: 'Стандарты движений Теста 4',
+      kz: '4-тесттің қимыл стандарттары',
+      en: 'Test 4 Movement Standards'
+    },
+    news19_std_t5: {
+      ru: 'Стандарты движений Теста 5',
+      kz: '5-тесттің қимыл стандарттары',
+      en: 'Test 5 Movement Standards'
+    },
+    news19_std_t6: {
+      ru: 'Стандарты движений Теста 6',
+      kz: '6-тесттің қимыл стандарттары',
+      en: 'Test 6 Movement Standards'
+    },
+    news19_rules_t1: {
+      ru: 'Специальные правила Теста 1',
+      kz: '1-тесттің арнайы ережелері',
+      en: 'Test 1 Special Rules'
+    },
+    news19_rules_t2: {
+      ru: 'Специальные правила Теста 2',
+      kz: '2-тесттің арнайы ережелері',
+      en: 'Test 2 Special Rules'
+    },
+    news19_rules_t3: {
+      ru: 'Специальные правила Теста 3',
+      kz: '3-тесттің арнайы ережелері',
+      en: 'Test 3 Special Rules'
+    },
+    news19_rules_t4: {
+      ru: 'Специальные правила Теста 4',
+      kz: '4-тесттің арнайы ережелері',
+      en: 'Test 4 Special Rules'
+    },
+    news19_rules_t5: {
+      ru: 'Специальные правила Теста 5',
+      kz: '5-тесттің арнайы ережелері',
+      en: 'Test 5 Special Rules'
+    },
+    news19_rules_t6: {
+      ru: 'Специальные правила Теста 6',
+      kz: '6-тесттің арнайы ережелері',
+      en: 'Test 6 Special Rules'
+    },
+    news19_t2_group: {
+      ru: 'Поток, стандарты и специальные правила Теста 2',
+      kz: '2-тесттің өту реті, стандарттары және арнайы ережелері',
+      en: 'Test 2 Flow, Standards and Special Rules'
+    },
+
+    // --- news19: индивидуальные, Тест 1 ---
+    news19_i_t1_box_a: {
+      ru: '8 раундов на время:<br>200-метровый забег<br>50 двойных прыжков через скакалку<br>250 метров на ски-эрге<br>Лимит времени: 25 минут',
+      kz: 'Уақытқа 8 раунд:<br>200 метр жүгіру<br>Арқанмен 50 қос секіру<br>Ски-эргте 250 метр<br>Уақыт шектеуі: 25 минут',
+      en: '8 rounds for time:<br>200 m run<br>50 double unders<br>250 m ski erg<br>Time cap: 25 minutes'
+    },
+    news19_i_t1_box_b: {
+      ru: '8 раундов на время:<br>200-метровый забег<br>30 двойных прыжков через скакалку<br>200 метров на ски-эрге<br>Лимит времени: 25 минут',
+      kz: 'Уақытқа 8 раунд:<br>200 метр жүгіру<br>Арқанмен 30 қос секіру<br>Ски-эргте 200 метр<br>Уақыт шектеуі: 25 минут',
+      en: '8 rounds for time:<br>200 m run<br>30 double unders<br>200 m ski erg<br>Time cap: 25 minutes'
+    },
+    news19_i_t1_flow: {
+      ru: 'По сигналу старта спортсмены выполняют 200-метровый забег вокруг трека, затем необходимое количество двойных прыжков через скакалку и после этого 250 метров на ски-эрге (или 200 метров для юниоров). Спортсмены продолжают этот шаблон до завершения 8 раундов. Таймер останавливается, когда спортсмен завершает финальный отрезок на ски-эрге.',
+      kz: 'Старт белгісімен спортшылар трек айналасында 200 метр жүгіреді, содан кейін қажетті мөлшерде арқанмен қос секіру орындайды, одан соң ски-эргте 250 метр (жасөспірімдер үшін 200 метр) өтеді. Спортшылар осы үлгіні 8 раунд аяқталғанша қайталайды. Таймер спортшы соңғы ски-эрг кезеңін аяқтағанда тоқтайды.',
+      en: 'At the start signal athletes complete a 200 m run around the track, then the required number of double unders, followed by 250 m on the ski erg (or 200 m for juniors). Athletes continue this pattern until 8 rounds are completed. The clock stops when the athlete finishes the final ski erg.'
+    },
+    news19_i_t1_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Skierg ID 9.07”, “Double Under ID 10.07” и “Run ID 9.01” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Skierg ID 9.07”, “Double Under ID 10.07” және “Run ID 9.01” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Skierg ID 9.07”, “Double Under ID 10.07” and “Run ID 9.01” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_i_t1_r1: {
+      ru: 'Спортсмен не может покидать платформу ски-эрга до завершения 250 метров (или 200 метров для юниоров) в каждом раунде.',
+      kz: 'Спортшы әр раундта 250 метрді (жасөспірімдер үшін 200 метрді) аяқтамай тұрып ски-эрг алаңын тастап кете алмайды.',
+      en: 'The athlete may not leave the ski erg platform until the 250 m (or 200 m for juniors) is completed in each round.'
+    },
+    news19_i_t1_r2: {
+      ru: 'Если спортсмен не завершает тренировку, он получает зачёт за все пройденные метры на ски-эрге, но для зачёта забега должен быть выполнен весь 200-метровый забег. Частичный зачёт за незавершённый забег не начисляется.',
+      kz: 'Егер спортшы кешенді аяқтамаса, ски-эргте өткен барлық метрлері есептеледі, бірақ жүгіру есепке алыну үшін 200 метр толық жүгірілуі тиіс. Аяқталмаған жүгіру үшін ішінара ұпай берілмейді.',
+      en: 'If an athlete does not finish the workout, they receive credit for every metre completed on the ski erg, but the full 200 m run must be completed for the run to count. No partial credit is given for an unfinished run.'
+    },
+    news19_i_t1_r3: {
+      ru: 'Скакалка должна вращаться вперёд при двойных прыжках.',
+      kz: 'Қос секіру кезінде арқан алға қарай айналуы тиіс.',
+      en: 'The rope must rotate forward during double unders.'
+    },
+
+    // --- news19: индивидуальные, Тест 2 ---
+    news19_i_t2_box: {
+      ru: 'Лестница взятий на грудь:<br>1 взятие штанги на грудь любым способом<br>:30 секунд на подъём, :30 на переход<br>Тай-брейк: максимальное количество становых тяг за оставшиеся 30 секунд<br><br>Вес для мужчин индивидуального зачёта и мастеров в килограммах: 90, 100, 110, 120, 125, 130, 135, 140, 145, 150<br><br>Вес для женщин индивидуального зачёта и мастеров в килограммах: 60, 65, 70, 75, 80, 85, 90, 95, 100, 105<br><br>Вес для юниоров-мужчин в килограммах: 60, 65, 70, 75, 80, 85, 90, 95, 100, 105<br><br>Вес для юниоров-женщин в килограммах: 40, 45, 50, 55, 60, 65, 70, 75, 80, 85',
+      kz: 'Кеудеге көтеру сатысы:<br>1 рет штанганы кез келген тәсілмен кеудеге көтеру<br>:30 секунд көтеруге, :30 секунд ауысуға<br>Тай-брейк: қалған 30 секундта барынша көп өлі тарту<br><br>Жеке зачёт және мастер ер адамдарға арналған салмақ (кг): 90, 100, 110, 120, 125, 130, 135, 140, 145, 150<br><br>Жеке зачёт және мастер әйелдерге арналған салмақ (кг): 60, 65, 70, 75, 80, 85, 90, 95, 100, 105<br><br>Жасөспірім ер балаларға арналған салмақ (кг): 60, 65, 70, 75, 80, 85, 90, 95, 100, 105<br><br>Жасөспірім қыздарға арналған салмақ (кг): 40, 45, 50, 55, 60, 65, 70, 75, 80, 85',
+      en: 'Clean ladder:<br>1 clean, anyhow<br>:30 seconds to lift, :30 to transition<br>Tiebreak: max deadlifts in the remaining 30 seconds<br><br>Weights for individual and masters men in kilograms: 90, 100, 110, 120, 125, 130, 135, 140, 145, 150<br><br>Weights for individual and masters women in kilograms: 60, 65, 70, 75, 80, 85, 90, 95, 100, 105<br><br>Weights for junior men in kilograms: 60, 65, 70, 75, 80, 85, 90, 95, 100, 105<br><br>Weights for junior women in kilograms: 40, 45, 50, 55, 60, 65, 70, 75, 80, 85'
+    },
+    news19_i_t2_flow: {
+      ru: 'Этот тест представляет собой лестницу взятий на грудь, где спортсмены последовательно работают с заранее установленными штангами и выполняют одно взятие на грудь на каждой из них, пока не смогут поднять следующий вес. Спортсмены начинают тест каскадом: один поднимает штангу и переходит к следующей, после чего следующий спортсмен начинает лестницу. У каждого спортсмена есть 30 секунд на успешный подъём и 30 секунд на переход к следующей штанге. Если спортсмен не может выполнить взятие на грудь на определённом весе, он может использовать остаток 30 секунд для выполнения становых тяг на этом весе в качестве тай-брейка.',
+      kz: 'Бұл тест — кеудеге көтеру сатысы, мұнда спортшылар алдын ала дайындалған штангалармен ретімен жұмыс істеп, әрқайсысында бір рет кеудеге көтеру орындайды, келесі салмақты көтере алмағанша жалғастырады. Спортшылар тестті каскадпен бастайды: біреуі штанганы көтеріп келесісіне ауысады, содан кейін келесі спортшы сатыны бастайды. Әр спортшыға сәтті көтеруге 30 секунд, келесі штангаға ауысуға 30 секунд беріледі. Егер спортшы белгілі бір салмақта кеудеге көтеруді орындай алмаса, ол 30 секундтың қалғанын тай-брейк ретінде сол салмақта өлі тарту орындауға пайдалана алады.',
+      en: 'This test is a clean ladder in which athletes work through pre-loaded barbells in sequence, performing one clean on each until they can no longer lift the next weight. Athletes start the test in a cascade: one lifts a barbell and moves to the next, after which the following athlete begins the ladder. Each athlete has 30 seconds to complete a successful lift and 30 seconds to transition to the next barbell. If an athlete cannot complete a clean at a given weight, they may use the remainder of the 30 seconds to perform deadlifts at that weight as a tiebreak.'
+    },
+    news19_i_t2_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделе “Clean, Anyhow 3.01” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Clean, Anyhow 3.01” бөлімінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Clean, Anyhow 3.01” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_i_t2_r1: {
+      ru: 'Спортсмен может пытаться выполнить взятие на грудь столько раз, сколько хочет, в течение 30-секундного окна.',
+      kz: 'Спортшы 30 секундтық уақыт ішінде кеудеге көтеруді қалағанынша рет орындауға тырыса алады.',
+      en: 'The athlete may attempt the clean as many times as they wish within the 30-second window.'
+    },
+    news19_i_t2_r2: {
+      ru: 'Спортсмен получает “no lift”, если роняет штангу за собой, даже если подъём в остальном выполнен успешно.',
+      kz: 'Егер спортшы штанганы артына тастаса, көтеру басқа жағынан сәтті болса да “no lift” алады.',
+      en: 'The athlete receives a “no lift” if they drop the barbell behind them, even if the lift was otherwise successful.'
+    },
+    news19_i_t2_r3: {
+      ru: 'Если колено спортсмена касается пола, это также считается “no lift”.',
+      kz: 'Егер спортшының тізесі еденге тисе, бұл да “no lift” болып саналады.',
+      en: 'If the athlete\'s knee touches the floor, this also counts as a “no lift”.'
+    },
+    news19_i_t2_r4: {
+      ru: 'Подъём засчитывается только если он выполнен до истечения 30 секунд.',
+      kz: 'Көтеру тек 30 секунд аяқталғанға дейін орындалса ғана есептеледі.',
+      en: 'A lift only counts if it is completed before the 30 seconds expire.'
+    },
+    news19_i_t2_r5: {
+      ru: 'Если спортсмен не смог выполнить взятие на грудь на заданном весе, он может использовать остаток 30 секунд для становых тяг на той же штанге. Количество выполненных становых тяг будет использоваться как тай-брейк для спортсменов, закончивших на одном и том же весе.',
+      kz: 'Егер спортшы берілген салмақта кеудеге көтеруді орындай алмаса, ол 30 секундтың қалғанын сол штангада өлі тарту орындауға пайдалана алады. Орындалған өлі тартулар саны бірдей салмақта аяқтаған спортшылар үшін тай-брейк ретінде қолданылады.',
+      en: 'If an athlete fails to complete a clean at a given weight, they may use the remainder of the 30 seconds for deadlifts on the same barbell. The number of deadlifts completed will be used as the tiebreak for athletes who finish at the same weight.'
+    },
+
+    // --- news19: индивидуальные, Тест 3 ---
+    news19_i_t3_box: {
+      ru: 'Максимум повторений за 12 минут<br><br>Прыжки через коробку (60 см/50 см)<br>10-15-20-25-30…<br><br>Подъёмы корпуса на GHD<br>10-15-20-25-30…<br><br>Отжимания в стойке на руках (строгие для мужчин в индивидуальном зачёте; в остальных дивизионах можно с кипом)<br>3-6-9-12-15…',
+      kz: '12 минутта барынша көп қайталау<br><br>Тумбадан асып секіру (60 см/50 см)<br>10-15-20-25-30…<br><br>GHD-де дене көтеру<br>10-15-20-25-30…<br><br>Қолда тұрып итерілу (жеке зачёттегі ер адамдар үшін қатаң; басқа дивизиондарда кип қолдануға болады)<br>3-6-9-12-15…',
+      en: 'Max reps in 12 minutes<br><br>Box jump overs (60 cm/50 cm)<br>10-15-20-25-30…<br><br>GHD sit-ups<br>10-15-20-25-30…<br><br>Handstand push-ups (strict for individual men; other divisions may kip)<br>3-6-9-12-15…'
+    },
+    news19_i_t3_flow: {
+      ru: 'По сигналу старта у спортсменов есть 12 минут, чтобы максимально продвинуться в тесте. Они начинают с 10 прыжков через коробку, затем 10 подъёмов корпуса на GHD и 3 отжиманий в стойке на руках. Затем возвращаются к коробке и выполняют 15 прыжков, 15 подъёмов на GHD и 6 отжиманий в стойке на руках. Так продолжается по схеме, где каждая последующая серия добавляет 5 прыжков, 5 подъёмов на GHD и 3 отжимания в стойке на руках. Итоговый результат — общее количество выполненных повторений.',
+      kz: 'Старт белгісімен спортшыларға тестте барынша алға жылжуға 12 минут беріледі. Олар 10 рет тумбадан асып секіруден бастайды, содан кейін GHD-де 10 дене көтеру және 3 рет қолда тұрып итеріледі. Одан кейін тумбаға оралып 15 секіру, GHD-де 15 көтеру және 6 итерілу орындайды. Осылайша әр келесі серияға 5 секіру, GHD-де 5 көтеру және 3 итерілу қосылып отырады. Қорытынды нәтиже — орындалған қайталаулардың жалпы саны.',
+      en: 'At the start signal athletes have 12 minutes to get as far as possible through the test. They begin with 10 box jump overs, then 10 GHD sit-ups and 3 handstand push-ups. They then return to the box for 15 jumps, 15 GHD sit-ups and 6 handstand push-ups. The pattern continues with each subsequent set adding 5 jumps, 5 GHD sit-ups and 3 handstand push-ups. The final score is the total number of repetitions completed.'
+    },
+    news19_i_t3_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Box Jump Over ID 10.05”, “GHD Sit-up ID 13.02” и “Handstand Push-up ID 12.01” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Box Jump Over ID 10.05”, “GHD Sit-up ID 13.02” және “Handstand Push-up ID 12.01” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Box Jump Over ID 10.05”, “GHD Sit-up ID 13.02” and “Handstand Push-up ID 12.01” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_i_t3_r1: {
+      ru: 'Спортсмены могут либо полностью перепрыгнуть через коробку, либо запрыгнуть на неё и затем спуститься. При полном перепрыгивании ноги должны пройти над верхом коробки, а не обходить её сбоку ниже уровня коробки. Если спортсмен касается верхней части коробки, он должен сделать это двумя ногами и затем сойти с другой стороны. Отталкивание назад и повторный прыжок не допускаются.',
+      kz: 'Спортшылар тумбадан толық асып секіре алады немесе үстіне секіріп шығып, содан кейін түсе алады. Толық асып секіргенде аяқтар тумбаның үстінен өтуі керек, оны бүйірінен, тумба деңгейінен төмен айналып өтуге болмайды. Егер спортшы тумбаның үстіне тисе, оны екі аяқпен жасап, содан кейін екінші жағынан түсуі тиіс. Артқа серпіліп қайта секіруге рұқсат етілмейді.',
+      en: 'Athletes may either jump completely over the box or jump onto it and then step or jump down. When going fully over, the feet must pass over the top of the box and may not travel around the side below box height. If the athlete touches the top of the box, they must do so with both feet and then come down on the other side. Rebounding backwards and jumping again is not permitted.'
+    },
+    news19_i_t3_r2: {
+      ru: 'Мужчины в индивидуальном зачёте обязаны выполнять строгие отжимания в стойке на руках. Остальные дивизионы могут выполнять их с кипом.',
+      kz: 'Жеке зачёттегі ер адамдар қолда тұрып итерілуді қатаң түрде орындауға міндетті. Басқа дивизиондар оны кип арқылы орындай алады.',
+      en: 'Individual men must perform strict handstand push-ups. All other divisions may kip.'
+    },
+
+    // --- news19: индивидуальные, Тест 4 ---
+    news19_i_t4_div_a: {
+      ru: 'Индивидуальный зачёт и мастера 35-39, мужчины-мастера 40-44',
+      kz: 'Жеке зачёт және мастерлер 35-39, ер мастерлер 40-44',
+      en: 'Individuals and Masters 35-39, Masters Men 40-44'
+    },
+    news19_i_t4_div_b: {
+      ru: 'Женщины-мастера 40-44',
+      kz: 'Әйел мастерлер 40-44',
+      en: 'Masters Women 40-44'
+    },
+    news19_i_t4_box_a: {
+      ru: 'На время:<br>25 приседаний-пистолетиков попеременно<br>25 подъёмов носков к перекладине<br>20 приседаний-пистолетиков попеременно<br>20 подтягиваний до касания грудью перекладины<br>15 приседаний-пистолетиков попеременно<br>15 выходов силой на перекладине<br>10 приседаний-пистолетиков попеременно<br>10 метров ходьбы в стойке на руках с полным разворотом каждые 2.5 м (всего 4)<br>5 приседаний-пистолетиков попеременно<br>5 подъёмов переворотом<br>Лимит времени: 10 минут',
+      kz: 'Уақытқа:<br>25 рет кезектесіп бір аяқпен отырып-тұру<br>25 рет аяқ ұшын турникке тигізу<br>20 рет кезектесіп бір аяқпен отырып-тұру<br>20 рет кеудемен турникке тиіп тартылу<br>15 рет кезектесіп бір аяқпен отырып-тұру<br>15 рет турникте күшпен шығу<br>10 рет кезектесіп бір аяқпен отырып-тұру<br>Қолда тұрып 10 метр жүру, әр 2.5 м сайын толық бұрылыспен (барлығы 4)<br>5 рет кезектесіп бір аяқпен отырып-тұру<br>5 рет аунап шығу<br>Уақыт шектеуі: 10 минут',
+      en: 'For time:<br>25 alternating pistols<br>25 toes to bar<br>20 alternating pistols<br>20 chest to bar pull-ups<br>15 alternating pistols<br>15 bar muscle-ups<br>10 alternating pistols<br>10 m handstand walk with a full pirouette every 2.5 m (4 total)<br>5 alternating pistols<br>5 pull-overs<br>Time cap: 10 minutes'
+    },
+    news19_i_t4_box_b: {
+      ru: 'На время:<br>25 приседаний-пистолетиков попеременно<br>25 подъёмов носков к перекладине<br>20 приседаний-пистолетиков попеременно<br>20 подтягиваний<br>15 приседаний-пистолетиков попеременно<br>15 подтягиваний до касания грудью перекладины<br>10 приседаний-пистолетиков попеременно<br>10 метров ходьбы в стойке на руках<br>5 приседаний-пистолетиков попеременно<br>5 подъёмов переворотом<br>Лимит времени: 10 минут',
+      kz: 'Уақытқа:<br>25 рет кезектесіп бір аяқпен отырып-тұру<br>25 рет аяқ ұшын турникке тигізу<br>20 рет кезектесіп бір аяқпен отырып-тұру<br>20 рет тартылу<br>15 рет кезектесіп бір аяқпен отырып-тұру<br>15 рет кеудемен турникке тиіп тартылу<br>10 рет кезектесіп бір аяқпен отырып-тұру<br>Қолда тұрып 10 метр жүру<br>5 рет кезектесіп бір аяқпен отырып-тұру<br>5 рет аунап шығу<br>Уақыт шектеуі: 10 минут',
+      en: 'For time:<br>25 alternating pistols<br>25 toes to bar<br>20 alternating pistols<br>20 pull-ups<br>15 alternating pistols<br>15 chest to bar pull-ups<br>10 alternating pistols<br>10 m handstand walk<br>5 alternating pistols<br>5 pull-overs<br>Time cap: 10 minutes'
+    },
+    news19_i_t4_box_c: {
+      ru: 'На время:<br>25 приседаний-пистолетиков попеременно<br>25 подъёмов носков к перекладине<br>20 приседаний-пистолетиков попеременно<br>20 подтягиваний<br>15 приседаний-пистолетиков попеременно<br>15 подтягиваний до касания грудью перекладины<br>10 приседаний-пистолетиков попеременно<br>10 метров ходьбы в стойке на руках<br>5 приседаний-пистолетиков попеременно<br>5 выходов силой на перекладине<br>Лимит времени: 10 минут',
+      kz: 'Уақытқа:<br>25 рет кезектесіп бір аяқпен отырып-тұру<br>25 рет аяқ ұшын турникке тигізу<br>20 рет кезектесіп бір аяқпен отырып-тұру<br>20 рет тартылу<br>15 рет кезектесіп бір аяқпен отырып-тұру<br>15 рет кеудемен турникке тиіп тартылу<br>10 рет кезектесіп бір аяқпен отырып-тұру<br>Қолда тұрып 10 метр жүру<br>5 рет кезектесіп бір аяқпен отырып-тұру<br>5 рет турникте күшпен шығу<br>Уақыт шектеуі: 10 минут',
+      en: 'For time:<br>25 alternating pistols<br>25 toes to bar<br>20 alternating pistols<br>20 pull-ups<br>15 alternating pistols<br>15 chest to bar pull-ups<br>10 alternating pistols<br>10 m handstand walk<br>5 alternating pistols<br>5 bar muscle-ups<br>Time cap: 10 minutes'
+    },
+    news19_i_t4_flow: {
+      ru: 'По сигналу старта спортсмены начинают с 25 приседаний-пистолетиков попеременно, затем выполняют 25 подъёмов носков к перекладине. Затем они возвращаются к станции приседаний и выполняют 20 приседаний, после чего возвращаются к перекладине и делают 20 подтягиваний до касания грудью. Затем возвращаются на дорожку ещё для 15 приседаний, после чего выполняют 15 выходов силой на перекладине. Далее следуют 10 приседаний, затем 10 метров ходьбы в стойке на руках (с разворотом, если применимо), и завершают финальной серией из 5 приседаний и 5 подъёмов переворотом, прежде чем пересечь линию финиша.',
+      kz: 'Старт белгісімен спортшылар 25 рет кезектесіп бір аяқпен отырып-тұрудан бастайды, содан кейін 25 рет аяқ ұшын турникке тигізеді. Одан кейін отырып-тұру станциясына оралып 20 рет орындайды, содан соң турникке қайтып 20 рет кеудемен тиіп тартылады. Содан кейін тағы 15 отырып-тұру үшін жолаққа оралып, одан кейін 15 рет турникте күшпен шығады. Әрі қарай 10 отырып-тұру, содан кейін қолда тұрып 10 метр жүру (қажет болса бұрылыспен) орындалады, ал соңында 5 отырып-тұру мен 5 аунап шығудан тұратын қорытынды серия орындалып, мәре сызығы кесіп өтіледі.',
+      en: 'At the start signal athletes begin with 25 alternating pistols, then perform 25 toes to bar. They return to the pistol station for 20 reps, then go back to the bar for 20 chest to bar pull-ups. They return to the lane for another 15 pistols, followed by 15 bar muscle-ups. Next come 10 pistols, then a 10 m handstand walk (with pirouettes where applicable), finishing with a final set of 5 pistols and 5 pull-overs before crossing the finish line.'
+    },
+    news19_i_t4_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Pistol ID 1.06”, “Toes to Bar ID 7.01”, “Chest to Bar Pull-up ID 7.05”, “Pull-up ID 7.04”, “Bar Muscle-up ID 7.07”, “Handstand Walk ID 12.03”, “Freestanding Handstand Push-up ID 12.02” и “Pull-over ID 7.06” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Pistol ID 1.06”, “Toes to Bar ID 7.01”, “Chest to Bar Pull-up ID 7.05”, “Pull-up ID 7.04”, “Bar Muscle-up ID 7.07”, “Handstand Walk ID 12.03”, “Freestanding Handstand Push-up ID 12.02” және “Pull-over ID 7.06” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Pistol ID 1.06”, “Toes to Bar ID 7.01”, “Chest to Bar Pull-up ID 7.05”, “Pull-up ID 7.04”, “Bar Muscle-up ID 7.07”, “Handstand Walk ID 12.03”, “Freestanding Handstand Push-up ID 12.02” and “Pull-over ID 7.06” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_i_t4_r1: {
+      ru: 'Если спортсмен получает “no rep” в приседании-пистолетике, он должен повторить движение на той же ноге и получить засчитанный повтор до перехода на другую ногу.',
+      kz: 'Егер спортшы бір аяқпен отырып-тұруда “no rep” алса, ол екінші аяққа ауыспас бұрын сол аяқта қимылды қайталап, есептелген қайталау алуы тиіс.',
+      en: 'If an athlete receives a “no rep” on a pistol, they must repeat the movement on the same leg and complete a good rep before switching legs.'
+    },
+    news19_i_t4_r2: {
+      ru: 'Подбородок спортсмена должен пересечь вертикальную плоскость перекладины перед началом каждого подъёма переворотом.',
+      kz: 'Әр аунап шығуды бастар алдында спортшының иегі турниктің тік жазықтығынан өтуі тиіс.',
+      en: 'The athlete\'s chin must cross the vertical plane of the bar before beginning each pull-over.'
+    },
+    news19_i_t4_r3: {
+      ru: 'У спортсменов, выполняющих полный разворот в ходьбе на руках, разворот должен быть завершён в пределах обозначенной зоны, и спортсмен должен выйти из зоны до опускания на ноги; однако он может опускаться каждые 2.5 метра после успешного завершения разворота и выхода из зоны. Все остальные дивизионы могут прерывать ходьбу в стойке на руках каждые 2.5 метра.',
+      kz: 'Қолда жүру кезінде толық бұрылыс орындайтын спортшылар үшін бұрылыс белгіленген аймақ шегінде аяқталуы тиіс және спортшы аяғына түспес бұрын аймақтан шығуы керек; алайда бұрылысты сәтті аяқтап, аймақтан шыққаннан кейін ол әр 2.5 метр сайын түсе алады. Қалған барлық дивизиондар қолда жүруді әр 2.5 метр сайын үзе алады.',
+      en: 'For athletes performing a full pirouette during the handstand walk, the pirouette must be completed within the marked zone and the athlete must exit the zone before coming down; however they may come down every 2.5 m once the pirouette is successfully completed and they have exited the zone. All other divisions may break the handstand walk every 2.5 m.'
+    },
+
+    // --- news19: индивидуальные, Тест 5 ---
+    news19_i_t5_box: {
+      ru: '5 раундов на время:<br>15 подъёмов двух гантелей от плеч над головой<br>10 метров ходьбы выпадами с гантелями, удерживаемыми любым способом<br>5 становых тяг<br>Лимит времени: 10:00',
+      kz: 'Уақытқа 5 раунд:<br>Екі гантельді иықтан бас үстіне 15 рет көтеру<br>Гантельдерді кез келген тәсілмен ұстап, 10 метр атылып жүру<br>5 өлі тарту<br>Уақыт шектеуі: 10:00',
+      en: '5 rounds for time:<br>15 double dumbbell shoulder to overhead<br>10 m walking lunge holding the dumbbells any way<br>5 deadlifts<br>Time cap: 10:00'
+    },
+    news19_i_t5_weights_head: {
+      ru: 'Вес по дивизионам',
+      kz: 'Дивизиондар бойынша салмақ',
+      en: 'Weights by division'
+    },
+    news19_i_t5_weights: {
+      ru: 'Индивидуальный зачёт: гантели 22.5 кг/15 кг | становая тяга 150 кг/100 кг<br>Мастера 35-39: гантели 22.5 кг/15 кг | становая тяга 140 кг/90 кг<br>Мастера 40-44: гантели 22.5 кг/15 кг | становая тяга 130 кг/80 кг<br>Юниоры: гантели 15 кг/12.5 кг | становая тяга 90 кг/60 кг',
+      kz: 'Жеке зачёт: гантель 22.5 кг/15 кг | өлі тарту 150 кг/100 кг<br>Мастерлер 35-39: гантель 22.5 кг/15 кг | өлі тарту 140 кг/90 кг<br>Мастерлер 40-44: гантель 22.5 кг/15 кг | өлі тарту 130 кг/80 кг<br>Жасөспірімдер: гантель 15 кг/12.5 кг | өлі тарту 90 кг/60 кг',
+      en: 'Individuals: DB 22.5 kg/15 kg | DL 150 kg/100 kg<br>Masters 35-39: DB 22.5 kg/15 kg | DL 140 kg/90 kg<br>Masters 40-44: DB 22.5 kg/15 kg | DL 130 kg/80 kg<br>Juniors: DB 15 kg/12.5 kg | DL 90 kg/60 kg'
+    },
+    news19_i_t5_flow: {
+      ru: 'По сигналу старта спортсмены выполняют 15 подъёмов двух гантелей от плеч над головой. Затем проходят 10 метров ходьбы выпадами, удерживая гантели любым способом, после чего делают 5 становых тяг со штангой. Затем возвращаются к гантелям и начинают следующий раунд. Так продолжается до завершения пяти раундов.',
+      kz: 'Старт белгісімен спортшылар екі гантельді иықтан бас үстіне 15 рет көтереді. Содан кейін гантельдерді кез келген тәсілмен ұстап, 10 метр атылып жүреді, одан соң штангамен 5 өлі тарту орындайды. Содан кейін гантельдерге оралып, келесі раундты бастайды. Осылайша бес раунд аяқталғанша жалғасады.',
+      en: 'At the start signal athletes perform 15 double dumbbell shoulder to overhead. They then cover 10 m of walking lunges holding the dumbbells any way, followed by 5 barbell deadlifts. They then return to the dumbbells and begin the next round. This continues until five rounds are completed.'
+    },
+    news19_i_t5_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Shoulder to Overhead ID 5.05”, “Walking Lunge ID 15.06” и “Deadlift ID 2.01” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Shoulder to Overhead ID 5.05”, “Walking Lunge ID 15.06” және “Deadlift ID 2.01” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Shoulder to Overhead ID 5.05”, “Walking Lunge ID 15.06” and “Deadlift ID 2.01” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_i_t5_r1: {
+      ru: 'Спортсмены могут удерживать гантели любым способом, если те не касаются пола.',
+      kz: 'Гантельдер еденге тимейтін болса, спортшылар оларды кез келген тәсілмен ұстай алады.',
+      en: 'Athletes may hold the dumbbells any way as long as they do not touch the floor.'
+    },
+
+    // --- news19: индивидуальные, Тест 6 ---
+    news19_i_t6_div_a: {
+      ru: 'Индивидуальный зачёт и мастера 35-39',
+      kz: 'Жеке зачёт және мастерлер 35-39',
+      en: 'Individuals and Masters 35-39'
+    },
+    news19_i_t6_div_b: {
+      ru: 'Индивидуальный зачёт и мастера 40-44',
+      kz: 'Жеке зачёт және мастерлер 40-44',
+      en: 'Individuals and Masters 40-44'
+    },
+    news19_i_t6_box_a: {
+      ru: 'На время:<br>20 метров переноски мешка (68 кг/45 кг)<br>10 берпи с мешком<br>20 метров переноски мешка (68 кг/45 кг)<br>10 берпи с мешком<br>30/25 калорий на эйр-байке<br>Лимит времени: 4:00',
+      kz: 'Уақытқа:<br>Қапты 20 метр тасу (68 кг/45 кг)<br>Қаппен 10 берпи<br>Қапты 20 метр тасу (68 кг/45 кг)<br>Қаппен 10 берпи<br>Эйр-байкте 30/25 калория<br>Уақыт шектеуі: 4:00',
+      en: 'For time:<br>20 m sandbag carry (68 kg/45 kg)<br>10 sandbag burpees<br>20 m sandbag carry (68 kg/45 kg)<br>10 sandbag burpees<br>30/25 calories on the air bike<br>Time cap: 4:00'
+    },
+    news19_i_t6_box_b: {
+      ru: 'На время:<br>20 метров переноски мешка (68 кг/45 кг)<br>10 берпи с мешком<br>20 метров переноски мешка (68 кг/45 кг)<br>10 берпи с мешком<br>25/20 калорий на эйр-байке<br>Лимит времени: 4:00',
+      kz: 'Уақытқа:<br>Қапты 20 метр тасу (68 кг/45 кг)<br>Қаппен 10 берпи<br>Қапты 20 метр тасу (68 кг/45 кг)<br>Қаппен 10 берпи<br>Эйр-байкте 25/20 калория<br>Уақыт шектеуі: 4:00',
+      en: 'For time:<br>20 m sandbag carry (68 kg/45 kg)<br>10 sandbag burpees<br>20 m sandbag carry (68 kg/45 kg)<br>10 sandbag burpees<br>25/20 calories on the air bike<br>Time cap: 4:00'
+    },
+    news19_i_t6_box_c: {
+      ru: 'На время:<br>20 берпи лицом к штанге<br>20/15 калорий на эйр-байке<br>Лимит времени: 3:00',
+      kz: 'Уақытқа:<br>Штангаға қарап 20 берпи<br>Эйр-байкте 20/15 калория<br>Уақыт шектеуі: 3:00',
+      en: 'For time:<br>20 bar facing burpees<br>20/15 calories on the air bike<br>Time cap: 3:00'
+    },
+    news19_i_t6_flow1: {
+      ru: 'По сигналу старта спортсмен выполняет 2 раунда по 20 метров переноски мешка и 10 берпи с мешком. Затем он переходит к эйр-байку и выполняет установленное число калорий. После этого спортсмен пересекает линию финиша.',
+      kz: 'Старт белгісімен спортшы қапты 20 метр тасу және қаппен 10 берпиден тұратын 2 раунд орындайды. Содан кейін эйр-байкке ауысып, белгіленген калория санын орындайды. Одан кейін спортшы мәре сызығын кесіп өтеді.',
+      en: 'At the start signal the athlete completes 2 rounds of a 20 m sandbag carry and 10 sandbag burpees. They then move to the air bike and complete the prescribed number of calories. After that the athlete crosses the finish line.'
+    },
+    news19_i_t6_flow2: {
+      ru: 'Юниоры выполняют 20 берпи лицом к штанге, после чего — только калории на эйр-байке. Они не выполняют переноску мешка.',
+      kz: 'Жасөспірімдер штангаға қарап 20 берпи орындайды, одан кейін тек эйр-байкте калория жинайды. Олар қап тасуды орындамайды.',
+      en: 'Juniors perform 20 bar facing burpees followed only by calories on the air bike. They do not perform the sandbag carry.'
+    },
+    news19_i_t6_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Loaded Carry ID 14.07 Variation V.05 Bear Hug”, “Air Bike ID 9.05” и “Object Facing Burpee Over Object ID 10.02” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Loaded Carry ID 14.07 Variation V.05 Bear Hug”, “Air Bike ID 9.05” және “Object Facing Burpee Over Object ID 10.02” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Loaded Carry ID 14.07 Variation V.05 Bear Hug”, “Air Bike ID 9.05” and “Object Facing Burpee Over Object ID 10.02” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_i_t6_r1: {
+      ru: 'Спортсмен не может покидать велотренажёр до завершения всех калорий.',
+      kz: 'Спортшы барлық калорияны жинамай тұрып велотренажёрді тастап кете алмайды.',
+      en: 'The athlete may not leave the bike until all calories are completed.'
+    },
+
+    // --- news19: пары, Тест 1 ---
+    news19_p_t1_head: {
+      ru: 'ТЕСТ 1: ВЫНОСЛИВОСТЬ',
+      kz: 'ТЕСТ 1: ТӨЗІМДІЛІК',
+      en: 'TEST 1: ENDURANCE'
+    },
+    news19_p_t1_box: {
+      ru: '10 раундов на время:<br>(Партнёры чередуют раунды)<br>200-метровый забег<br>30 двойных прыжков через скакалку<br>250 метров на ски-эрге<br>Лимит времени: 25 минут',
+      kz: 'Уақытқа 10 раунд:<br>(Серіктестер раундтарды кезектестіреді)<br>200 метр жүгіру<br>Арқанмен 30 қос секіру<br>Ски-эргте 250 метр<br>Уақыт шектеуі: 25 минут',
+      en: '10 rounds for time:<br>(Partners alternate rounds)<br>200 m run<br>30 double unders<br>250 m ski erg<br>Time cap: 25 minutes'
+    },
+    news19_p_t1_flow: {
+      ru: 'По сигналу старта спортсмен 1 выполняет 200-метровый забег вокруг трека, после чего 30 двойных прыжков через скакалку и 250 метров на ски-эрге. Когда спортсмен 1 завершает работу на ски-эрге, спортсмен 2 может начать свой забег. Спортсмен 2 выполняет 200-метровый забег, 30 двойных прыжков и 250 метров на ски-эрге, после чего спортсмен 1 может начать следующий раунд. Так продолжается до завершения 10 раундов. Таймер останавливается, когда спортсмен 2 пересекает финишную линию после финального отрезка на ски-эрге в 10-м раунде.',
+      kz: 'Старт белгісімен 1-спортшы трек айналасында 200 метр жүгіреді, содан кейін арқанмен 30 қос секіру және ски-эргте 250 метр орындайды. 1-спортшы ски-эргтегі жұмысын аяқтағанда, 2-спортшы өз жүгірісін бастай алады. 2-спортшы 200 метр жүгіреді, 30 қос секіру және ски-эргте 250 метр орындайды, содан кейін 1-спортшы келесі раундты бастай алады. Осылайша 10 раунд аяқталғанша жалғасады. Таймер 2-спортшы 10-раундтағы соңғы ски-эрг кезеңінен кейін мәре сызығын кесіп өткенде тоқтайды.',
+      en: 'At the start signal athlete 1 completes a 200 m run around the track, followed by 30 double unders and 250 m on the ski erg. When athlete 1 finishes the ski erg, athlete 2 may begin their run. Athlete 2 completes a 200 m run, 30 double unders and 250 m on the ski erg, after which athlete 1 may begin the next round. This continues until 10 rounds are completed. The clock stops when athlete 2 crosses the finish line after the final ski erg of round 10.'
+    },
+    news19_p_t1_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Skierg ID 9.07”, “Double Under ID 10.07” и “Run ID 9.01” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Skierg ID 9.07”, “Double Under ID 10.07” және “Run ID 9.01” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Skierg ID 9.07”, “Double Under ID 10.07” and “Run ID 9.01” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_p_t1_r1: {
+      ru: 'Спортсмен не может покидать платформу ски-эрга, пока не завершён 250-метровый отрезок в каждом раунде.',
+      kz: 'Спортшы әр раундтағы 250 метрлік кезең аяқталмайынша ски-эрг алаңын тастап кете алмайды.',
+      en: 'The athlete may not leave the ski erg platform until the 250 m is completed in each round.'
+    },
+    news19_p_t1_r2: {
+      ru: 'Скакалка должна вращаться вперёд при двойных прыжках.',
+      kz: 'Қос секіру кезінде арқан алға қарай айналуы тиіс.',
+      en: 'The rope must rotate forward during double unders.'
+    },
+    news19_p_t1_r3: {
+      ru: 'Любые требования по передаче эстафеты будут уточнены на месте.',
+      kz: 'Кезек ауыстыруға қатысты кез келген талаптар орнында нақтыланады.',
+      en: 'Any handover requirements will be clarified on site.'
+    },
+    news19_p_t1_r4: {
+      ru: 'Работающий спортсмен должен завершить полный раунд перед сменой. Спортсмены обязаны чередовать раунды.',
+      kz: 'Жұмыс істеп жатқан спортшы ауыспас бұрын толық раундты аяқтауы тиіс. Спортшылар раундтарды кезектестіруге міндетті.',
+      en: 'The working athlete must complete a full round before switching. Athletes must alternate rounds.'
+    },
+
+    // --- news19: пары, Тест 2 ---
+    news19_p_t2_head: {
+      ru: 'ТЕСТ 2: СИЛА',
+      kz: 'ТЕСТ 2: КҮШ',
+      en: 'TEST 2: STRENGTH'
+    },
+    news19_p_t2_box: {
+      ru: 'На результат по весу:<br><br>Спортсмен 1:<br>5 минут на поиск максимума в комплексе: 1 взятие на грудь любым способом + 1 фронтальный присед<br><br>сразу после<br><br>Спортсмен 2:<br>5 минут на поиск максимума в становой тяге на 1 повторение<br><br>Результат: самый тяжёлый успешный комплекс спортсмена 1 + самый тяжёлый успешный подъём в становой тяге спортсмена 2',
+      kz: 'Салмақ бойынша нәтижеге:<br><br>1-спортшы:<br>Кешендегі максимумды табуға 5 минут: 1 рет кез келген тәсілмен кеудеге көтеру + 1 алдыңғы отырып-тұру<br><br>бірден кейін<br><br>2-спортшы:<br>1 қайталаудағы өлі тартуда максимумды табуға 5 минут<br><br>Нәтиже: 1-спортшының ең ауыр сәтті кешені + 2-спортшының ең ауыр сәтті өлі тартуы',
+      en: 'For load:<br><br>Athlete 1:<br>5 minutes to find a max complex: 1 clean, anyhow + 1 front squat<br><br>immediately followed by<br><br>Athlete 2:<br>5 minutes to find a 1-rep max deadlift<br><br>Score: athlete 1\'s heaviest successful complex + athlete 2\'s heaviest successful deadlift'
+    },
+    news19_p_t2_flow: {
+      ru: 'По сигналу старта спортсмен 1 в течение 5 минут пытается установить максимальный вес в комплексе «1 взятие на грудь любым способом + 1 фронтальный присед». У него неограниченное количество попыток в течение 5 минут, он может увеличивать или уменьшать вес по своему усмотрению. По истечении 5 минут спортсмен 2 получает 5 минут на поиск максимума в становой тяге на 1 повторение.',
+      kz: 'Старт белгісімен 1-спортшы 5 минут бойы «1 рет кез келген тәсілмен кеудеге көтеру + 1 алдыңғы отырып-тұру» кешенінде ең үлкен салмақты алуға тырысады. Оның 5 минут ішінде талпыныс саны шектелмейді, ол салмақты өз қалауынша арттыра немесе азайта алады. 5 минут өткен соң 2-спортшыға 1 қайталаудағы өлі тартуда максимумды табуға 5 минут беріледі.',
+      en: 'At the start signal athlete 1 has 5 minutes to establish a max load on the complex “1 clean, anyhow + 1 front squat”. They have unlimited attempts within the 5 minutes and may increase or decrease the weight as they wish. After the 5 minutes, athlete 2 gets 5 minutes to find a 1-rep max deadlift.'
+    },
+    news19_p_t2_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Deadlift ID 2.01”, “Clean, Anyhow ID 3.01” и “Front Squat ID 1.03” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Deadlift ID 2.01”, “Clean, Anyhow ID 3.01” және “Front Squat ID 1.03” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Deadlift ID 2.01”, “Clean, Anyhow ID 3.01” and “Front Squat ID 1.03” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_p_t2_r1: {
+      ru: 'Спортсмен может сделать столько попыток, сколько захочет, в течение 5 минут и менять вес по своему усмотрению.',
+      kz: 'Спортшы 5 минут ішінде қалағанынша талпыныс жасай алады және салмақты өз қалауынша өзгерте алады.',
+      en: 'The athlete may make as many attempts as they wish within the 5 minutes and may change the weight as they see fit.'
+    },
+    news19_p_t2_r2: {
+      ru: 'Замки должны быть установлены снаружи всех дисков перед любой попыткой.',
+      kz: 'Кез келген талпыныс алдында бекіткіштер барлық дискілердің сыртына орнатылуы тиіс.',
+      en: 'Collars must be placed outside all plates before any attempt.'
+    },
+    news19_p_t2_r3: {
+      ru: 'Все лишние диски должны находиться вне зоны подъёма перед любой попыткой.',
+      kz: 'Кез келген талпыныс алдында барлық артық дискілер көтеру аймағынан тыс болуы тиіс.',
+      en: 'All spare plates must be outside the lifting zone before any attempt.'
+    },
+    news19_p_t2_r4: {
+      ru: 'Становая тяга начинается с пустого грифа, но взятия на грудь и фронтальные приседы могут начинаться с уже загруженной штанги.',
+      kz: 'Өлі тарту бос гриптен басталады, ал кеудеге көтеру мен алдыңғы отырып-тұруды алдын ала жүктелген штангадан бастауға болады.',
+      en: 'Deadlifts start from an empty barbell, but cleans and front squats may start from an already loaded barbell.'
+    },
+    news19_p_t2_r5: {
+      ru: 'Спортсмены не могут помогать друг другу в смене веса, за исключением случая, описанного ниже.',
+      kz: 'Спортшылар салмақ ауыстыруда бір-біріне көмектесе алмайды, төменде сипатталған жағдайдан басқа.',
+      en: 'Athletes may not help each other change weights, except in the case described below.'
+    },
+    news19_p_t2_r6: {
+      ru: 'Если спортсмен 1 закончил становую тягу раньше, он может помочь спортсмену 2 подготовить штангу для первого взятия на грудь. Но как только спортсмен 2 сделает первую попытку, спортсмен 1 больше не может помогать.',
+      kz: 'Егер 1-спортшы өлі тартуды ерте аяқтаса, ол 2-спортшыға бірінші кеудеге көтеруге арналған штанганы дайындауға көмектесе алады. Бірақ 2-спортшы алғашқы талпынысын жасағаннан кейін 1-спортшы бұдан әрі көмектесе алмайды.',
+      en: 'If athlete 1 finishes the deadlift early, they may help athlete 2 set up the barbell for the first clean. But once athlete 2 makes their first attempt, athlete 1 may no longer assist.'
+    },
+    news19_p_t2_r7: {
+      ru: 'Спортсмен получает “no lift”, если роняет штангу за собой, даже если подъём в остальном выполнен успешно.',
+      kz: 'Егер спортшы штанганы артына тастаса, көтеру басқа жағынан сәтті болса да “no lift” алады.',
+      en: 'The athlete receives a “no lift” if they drop the barbell behind them, even if the lift was otherwise successful.'
+    },
+    news19_p_t2_r8: {
+      ru: 'Если колено спортсмена касается пола, это считается “no lift”.',
+      kz: 'Егер спортшының тізесі еденге тисе, бұл “no lift” болып саналады.',
+      en: 'If the athlete\'s knee touches the floor, this counts as a “no lift”.'
+    },
+    news19_p_t2_r9: {
+      ru: 'Подъём засчитывается только если выполнен в пределах 5 минут.',
+      kz: 'Көтеру тек 5 минут шегінде орындалса ғана есептеледі.',
+      en: 'A lift only counts if it is completed within the 5 minutes.'
+    },
+    news19_p_t2_r10: {
+      ru: 'Если спортсмен получил “no rep” во фронтальном приседе, но не уронил штангу, он может продолжать выполнять фронтальные приседы, пока не выполнит засчитанный повтор, и получит зачёт за весь комплекс.',
+      kz: 'Егер спортшы алдыңғы отырып-тұруда “no rep” алса, бірақ штанганы түсіріп алмаса, ол есептелген қайталауды орындағанша алдыңғы отырып-тұруды жалғастыра алады және бүкіл кешен үшін есеп алады.',
+      en: 'If an athlete receives a “no rep” on the front squat but does not drop the barbell, they may continue performing front squats until they complete a good rep and receive credit for the whole complex.'
+    },
+    news19_p_t2_r11: {
+      ru: 'Если спортсмен выполняет взятие на грудь в сед, после этого он должен выполнить дополнительный фронтальный присед. Сам сед во время взятия не засчитывается как повторение фронтального приседа.',
+      kz: 'Егер спортшы кеудеге көтеруді отырып орындаса, одан кейін қосымша алдыңғы отырып-тұру жасауы тиіс. Көтеру кезіндегі отырудың өзі алдыңғы отырып-тұрудың қайталауы ретінде есептелмейді.',
+      en: 'If an athlete performs a squat clean, they must then perform an additional front squat. The squat clean itself does not count as a front squat rep.'
+    },
+    news19_p_t2_r12: {
+      ru: 'Пары «мужчина-женщина» будут использовать на станции штанги 20 кг и 15 кг. Мужчина должен использовать штангу 20 кг.',
+      kz: '«Ер адам — әйел» жұптары станцияда 20 кг және 15 кг штангаларды пайдаланады. Ер адам 20 кг штанганы қолдануы тиіс.',
+      en: 'Male-female pairs will use a 20 kg and a 15 kg barbell at the station. The man must use the 20 kg barbell.'
+    },
+
+    // --- news19: пары, Тест 3 ---
+    news19_p_t3_box: {
+      ru: 'Максимум повторений за 13 минут<br>3-6-9-12-15-18-21…<br><br>Отжимания в стойке на руках<br>Подтягивания<br>Прыжки через коробку',
+      kz: '13 минутта барынша көп қайталау<br>3-6-9-12-15-18-21…<br><br>Қолда тұрып итерілу<br>Тартылу<br>Тумбадан асып секіру',
+      en: 'Max reps in 13 minutes<br>3-6-9-12-15-18-21…<br><br>Handstand push-ups<br>Pull-ups<br>Box jump overs'
+    },
+    news19_p_t3_flow: {
+      ru: 'По сигналу старта у спортсменов есть 13 минут, чтобы продвинуться в тесте как можно дальше. Работать может только один спортсмен за раз, но они могут меняться в любой момент и делить работу как угодно. Пара начинает с 3 отжиманий в стойке на руках, 3 подтягиваний и 3 прыжков через коробку. Затем возвращается к стене для отжиманий и выполняет 6 отжиманий, 6 подтягиваний и 6 прыжков через коробку. Так продолжается по схеме с добавлением 3 повторений каждого движения в каждом раунде до истечения времени. Результат пары — общее число выполненных повторений.',
+      kz: 'Старт белгісімен спортшыларға тестте барынша алға жылжуға 13 минут беріледі. Бір уақытта тек бір спортшы жұмыс істей алады, бірақ олар кез келген сәтте ауыса алады және жұмысты қалауынша бөле алады. Жұп 3 рет қолда тұрып итерілуден, 3 тартылудан және 3 рет тумбадан асып секіруден бастайды. Содан кейін итерілу қабырғасына оралып, 6 итерілу, 6 тартылу және 6 секіру орындайды. Осылайша уақыт біткенше әр раундта әр қимылға 3 қайталаудан қосылып отырады. Жұптың нәтижесі — орындалған қайталаулардың жалпы саны.',
+      en: 'At the start signal athletes have 13 minutes to get as far as possible through the test. Only one athlete may work at a time, but they may switch at any point and split the work however they like. The pair begins with 3 handstand push-ups, 3 pull-ups and 3 box jump overs. They then return to the wall for 6 handstand push-ups, 6 pull-ups and 6 box jump overs. The pattern continues, adding 3 reps of each movement every round until time expires. The pair\'s score is the total number of repetitions completed.'
+    },
+    news19_p_t3_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Handstand Push-up ID 12.01”, “Pull-up ID 7.04” и “Box Jump Over ID 10.05” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Handstand Push-up ID 12.01”, “Pull-up ID 7.04” және “Box Jump Over ID 10.05” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Handstand Push-up ID 12.01”, “Pull-up ID 7.04” and “Box Jump Over ID 10.05” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_p_t3_r1: {
+      ru: 'Спортсмены могут либо запрыгивать на коробку, либо полностью перепрыгивать через неё. Если выбран первый вариант, обе ноги должны коснуться верхней части коробки на каждом повторении, после чего спортсмен должен сойти с другой стороны. Отталкивание назад не допускается. Если выбран второй вариант, ноги должны пройти над верхом коробки, а не обходить её сбоку ниже уровня коробки.',
+      kz: 'Спортшылар тумбаның үстіне секіре алады немесе одан толық асып секіре алады. Бірінші нұсқа таңдалса, әр қайталауда екі аяқ та тумбаның үстіне тиюі керек, содан кейін спортшы екінші жағынан түсуі тиіс. Артқа серпілуге рұқсат етілмейді. Екінші нұсқа таңдалса, аяқтар тумбаның үстінен өтуі керек, оны бүйірінен, тумба деңгейінен төмен айналып өтуге болмайды.',
+      en: 'Athletes may either jump onto the box or go completely over it. With the first option, both feet must touch the top of the box on every rep, after which the athlete must come down on the other side. Rebounding backwards is not permitted. With the second option, the feet must pass over the top of the box and may not travel around the side below box height.'
+    },
+    news19_p_t3_r2: {
+      ru: 'Любые требования по передаче между спортсменами будут уточнены на месте.',
+      kz: 'Спортшылар арасындағы ауысуға қатысты кез келген талаптар орнында нақтыланады.',
+      en: 'Any requirements for the handover between athletes will be clarified on site.'
+    },
+    news19_p_t3_r3: {
+      ru: 'Одновременно работает только 1 спортсмен.',
+      kz: 'Бір уақытта тек 1 спортшы жұмыс істейді.',
+      en: 'Only 1 athlete works at a time.'
+    },
+    news19_p_t3_r4: {
+      ru: 'Спортсмены могут делить работу как угодно и меняться в любой момент.',
+      kz: 'Спортшылар жұмысты қалауынша бөліп, кез келген сәтте ауыса алады.',
+      en: 'Athletes may split the work however they like and switch at any point.'
+    },
+    news19_p_t3_r5: {
+      ru: 'Нет минимального требования по объёму работы для каждого спортсмена, и не требуется, чтобы каждый спортсмен выполнял каждое движение.',
+      kz: 'Әр спортшы үшін жұмыс көлемінің ең төменгі талабы жоқ және әр спортшының әр қимылды орындауы міндетті емес.',
+      en: 'There is no minimum work requirement for each athlete, and each athlete is not required to perform every movement.'
+    },
+
+    // --- news19: пары, Тест 4 ---
+    news19_p_test4: {
+      ru: 'Тест 4 (Смешанная эстафета 1)',
+      kz: 'Тест 4 (Аралас эстафета 1)',
+      en: 'Test 4 (Mixed Relay 1)'
+    },
+    news19_p_t4_box: {
+      ru: 'На время:<br>40-30-20-10<br><br>Калории на гребном тренажёре (работает один спортсмен за раз)<br>Синхронные рывки одной гантели над головой (22.5 кг/15 кг) (оба спортсмена работают одновременно)<br>Лимит времени: 12 минут',
+      kz: 'Уақытқа:<br>40-30-20-10<br><br>Есу тренажёріндегі калория (бір уақытта бір спортшы жұмыс істейді)<br>Бір гантельді бас үстіне синхронды жұлқып көтеру (22.5 кг/15 кг) (екі спортшы бір уақытта жұмыс істейді)<br>Уақыт шектеуі: 12 минут',
+      en: 'For time:<br>40-30-20-10<br><br>Calories on the rower (one athlete works at a time)<br>Synchronised single dumbbell snatches (22.5 kg/15 kg) (both athletes work at the same time)<br>Time cap: 12 minutes'
+    },
+    news19_p_t4_flow: {
+      ru: 'По сигналу старта пара начинает гребной тренажёр на 40 калорий. Работает только один спортсмен за раз, они могут сменяться в любой момент. После завершения 40 калорий оба спортсмена переходят к гантелям и выполняют 40 синхронных рывков гантели. Затем они возвращаются к гребному тренажёру и как команда набирают 30 калорий, после чего выполняют ещё 30 синхронных рывков. Далее они проходят серии из 20 и 10 повторений, после чего пересекают линию финиша.',
+      kz: 'Старт белгісімен жұп есу тренажёрінде 40 калориядан бастайды. Бір уақытта тек бір спортшы жұмыс істейді, олар кез келген сәтте ауыса алады. 40 калория аяқталған соң екі спортшы да гантельдерге ауысып, 40 синхронды жұлқып көтеру орындайды. Содан кейін олар есу тренажёріне оралып, команда ретінде 30 калория жинайды, одан кейін тағы 30 синхронды көтеру орындайды. Әрі қарай 20 және 10 қайталаудан тұратын серияларды өтіп, мәре сызығын кесіп өтеді.',
+      en: 'At the start signal the pair begins with 40 calories on the rower. Only one athlete works at a time and they may switch at any point. After the 40 calories, both athletes move to the dumbbells and perform 40 synchronised dumbbell snatches. They then return to the rower and accumulate 30 calories as a team, followed by another 30 synchronised snatches. They then work through the sets of 20 and 10 before crossing the finish line.'
+    },
+    news19_p_t4_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Row ID 9.03” и “Snatch, Anyhow ID 4.01” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Row ID 9.03” және “Snatch, Anyhow ID 4.01” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Row ID 9.03” and “Snatch, Anyhow ID 4.01” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_p_t4_r1: {
+      ru: 'Нет требования чередовать руки при рывках гантели, и спортсмены не обязаны использовать ту же руку, что и партнёр.',
+      kz: 'Гантельді жұлқып көтеру кезінде қолды кезектестіру талабы жоқ, сондай-ақ спортшылар серіктесімен бірдей қолды пайдалануға міндетті емес.',
+      en: 'There is no requirement to alternate arms on the dumbbell snatches, and athletes do not have to use the same arm as their partner.'
+    },
+    news19_p_t4_r2: {
+      ru: 'Любые требования к смене на гребном тренажёре будут объяснены на месте.',
+      kz: 'Есу тренажёріндегі ауысуға қатысты кез келген талаптар орнында түсіндіріледі.',
+      en: 'Any requirements for switching on the rower will be explained on site.'
+    },
+    news19_p_t4_r3: {
+      ru: 'Нет требования, чтобы гребли оба спортсмена, но они могут сменяться в любой момент.',
+      kz: 'Екі спортшының да есуі міндетті емес, бірақ олар кез келген сәтте ауыса алады.',
+      en: 'There is no requirement for both athletes to row, but they may switch at any point.'
+    },
+    news19_p_t4_r4: {
+      ru: 'Пожалуйста, внимательно ознакомьтесь с документом по стандартам движений в части синхронности подъёма.',
+      kz: 'Көтерудің синхрондылығына қатысты қимыл стандарттары құжатымен мұқият танысыңыз.',
+      en: 'Please review the movement standards document carefully regarding the synchronisation of the lift.'
+    },
+
+    // --- news19: пары, Тест 5 ---
+    news19_p_test5: {
+      ru: 'Тест 5 (Смешанная эстафета 2)',
+      kz: 'Тест 5 (Аралас эстафета 2)',
+      en: 'Test 5 (Mixed Relay 2)'
+    },
+    news19_p_t5_head: {
+      ru: 'ТЕСТ 5: Смешанная эстафета 2',
+      kz: 'ТЕСТ 5: Аралас эстафета 2',
+      en: 'TEST 5: Mixed Relay 2'
+    },
+    news19_p_t5_box: {
+      ru: '100 бросков мяча в мишень (9 кг/6 кг на 3 м/2.75 м)<br>*Партнёры должны чередоваться каждые 10 повторений<br>сразу после<br>Трастеры с вормом<br>Синхронные берпи через ворм<br>(схема повторений ниже по дивизионам)<br>*10 метров ходьбы выпадами с вормом после каждого раунда<br>Лимит времени: 15 минут<br><br>Пары мужчина-мужчина: 16-14-12<br>Пары мужчина-женщина: 12-10-8<br>Пары женщина-женщина: 8-6-4',
+      kz: 'Нысанаға 100 доп лақтыру (9 кг/6 кг, 3 м/2.75 м биіктікке)<br>*Серіктестер әр 10 қайталау сайын ауысуы тиіс<br>бірден кейін<br>Вормен трастер<br>Вормнан асып синхронды берпи<br>(қайталау схемасы төменде дивизиондар бойынша)<br>*Әр раундтан кейін вормен 10 метр атылып жүру<br>Уақыт шектеуі: 15 минут<br><br>Ер адам — ер адам жұптары: 16-14-12<br>Ер адам — әйел жұптары: 12-10-8<br>Әйел — әйел жұптары: 8-6-4',
+      en: '100 wall balls (9 kg/6 kg to 3 m/2.75 m)<br>*Partners must alternate every 10 reps<br>immediately followed by<br>Worm thrusters<br>Synchronised burpees over the worm<br>(rep scheme by division below)<br>*10 m worm walking lunge after every round<br>Time cap: 15 minutes<br><br>Male-male pairs: 16-14-12<br>Male-female pairs: 12-10-8<br>Female-female pairs: 8-6-4'
+    },
+    news19_p_t5_flow: {
+      ru: 'По сигналу старта спортсмены начинают 100 бросков мяча в мишень. Они используют одну и ту же мишень и мяч (кроме пар мужчина-женщина) и сменяют друг друга каждые 10 повторений. После 100-го броска пара переходит к ворму и начинает первый раунд трастеров с вормом и синхронных берпи через ворм. После последнего берпи они поднимают ворм и проходят 10 метров ходьбы выпадами. Затем начинается следующий раунд трастеров с вормом и синхронных берпи, после чего снова 10 метров выпадами. В конце они выполняют финальный раунд трастеров и берпи, после чего — финальные 10 метров выпадами, и затем пересекают линию финиша.',
+      kz: 'Старт белгісімен спортшылар нысанаға 100 доп лақтыруды бастайды. Олар бір нысана мен бір допты пайдаланады (ер адам — әйел жұптарынан басқа) және әр 10 қайталау сайын ауысады. 100-ші лақтырудан кейін жұп вормға ауысып, вормен трастер мен вормнан асып синхронды берпидің бірінші раундын бастайды. Соңғы берпиден кейін олар вормды көтеріп, 10 метр атылып жүреді. Содан кейін вормен трастер мен синхронды берпидің келесі раунды басталады, одан кейін тағы 10 метр атылып жүру. Соңында олар трастер мен берпидің қорытынды раундын орындайды, одан кейін соңғы 10 метр атылып жүріп, мәре сызығын кесіп өтеді.',
+      en: 'At the start signal athletes begin 100 wall balls. They use the same target and ball (except male-female pairs) and swap every 10 reps. After the 100th wall ball the pair moves to the worm and begins the first round of worm thrusters and synchronised burpees over the worm. After the last burpee they pick up the worm and cover 10 m of walking lunges. The next round of worm thrusters and synchronised burpees then begins, followed by another 10 m lunge. Finally they complete the last round of thrusters and burpees, followed by the final 10 m lunge, and then cross the finish line.'
+    },
+    news19_p_t5_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Wall Ball ID 15.04”, “Worm Thruster ID 16.05”, “Burpee Over Object ID 10.01” и “Walking Lunge ID 15.06” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Wall Ball ID 15.04”, “Worm Thruster ID 16.05”, “Burpee Over Object ID 10.01” және “Walking Lunge ID 15.06” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Wall Ball ID 15.04”, “Worm Thruster ID 16.05”, “Burpee Over Object ID 10.01” and “Walking Lunge ID 15.06” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_p_t5_r1: {
+      ru: 'Спортсмены должны чередоваться каждые 10 повторений в бросках мяча в мишень.',
+      kz: 'Спортшылар нысанаға доп лақтыруда әр 10 қайталау сайын ауысуы тиіс.',
+      en: 'Athletes must alternate every 10 reps on the wall balls.'
+    },
+    news19_p_t5_r2: {
+      ru: 'Мужчины бросают в мишень на высоте 3 метра, а женщины — на 2.75 метра.',
+      kz: 'Ер адамдар 3 метр биіктіктегі нысанаға, ал әйелдер 2.75 метр биіктіктегі нысанаға лақтырады.',
+      en: 'Men throw to a 3 m target and women to a 2.75 m target.'
+    },
+    news19_p_t5_r3: {
+      ru: 'Пара может удерживать ворм любым способом во время ходьбы выпадами с вормом.',
+      kz: 'Жұп вормен атылып жүру кезінде вормды кез келген тәсілмен ұстай алады.',
+      en: 'The pair may hold the worm any way during the worm walking lunge.'
+    },
+
+    // --- news19: пары, Тест 6 ---
+    news19_p_test6: {
+      ru: 'Тест 6 (Командная стратегия)',
+      kz: 'Тест 6 (Командалық стратегия)',
+      en: 'Test 6 (Team Strategy)'
+    },
+    news19_p_t6_box: {
+      ru: 'На максимум повторений:<br>90 секунд AMRAP:<br>Взятия штанги на грудь в стойку (65 кг/45 кг)<br>затем<br>90 секунд AMRAP:<br>Выходы силой на перекладине<br>затем<br>90 секунд AMRAP:<br>Носки к кольцам<br>затем<br>90 секунд AMRAP:<br>Ходьба в стойке на руках<br>*Каждый спортсмен должен отработать 2 станции',
+      kz: 'Барынша көп қайталауға:<br>90 секунд AMRAP:<br>Штанганы тұрып кеудеге көтеру (65 кг/45 кг)<br>содан кейін<br>90 секунд AMRAP:<br>Турникте күшпен шығу<br>содан кейін<br>90 секунд AMRAP:<br>Аяқ ұшын сақиналарға тигізу<br>содан кейін<br>90 секунд AMRAP:<br>Қолда тұрып жүру<br>*Әр спортшы 2 станцияда жұмыс істеуі тиіс',
+      en: 'For max reps:<br>90 second AMRAP:<br>Power cleans (65 kg/45 kg)<br>then<br>90 second AMRAP:<br>Bar muscle-ups<br>then<br>90 second AMRAP:<br>Toes through rings<br>then<br>90 second AMRAP:<br>Handstand walk<br>*Each athlete must work 2 stations'
+    },
+    news19_p_t6_flow: {
+      ru: 'Этот тест состоит из 4 отрезков по 90 секунд. Работать может только 1 спортсмен за раз, и он должен работать все 90 секунд. Каждый спортсмен выполняет 2 AMRAP. Они могут идти подряд, но это не обязательно. Сумма всех повторений по всем AMRAP составляет командный результат.',
+      kz: 'Бұл тест 90 секундтан тұратын 4 кезеңнен құралады. Бір уақытта тек 1 спортшы жұмыс істей алады және ол толық 90 секунд бойы жұмыс істеуі тиіс. Әр спортшы 2 AMRAP орындайды. Олар қатарынан жүруі мүмкін, бірақ бұл міндетті емес. Барлық AMRAP бойынша қайталаулардың қосындысы командалық нәтижені құрайды.',
+      en: 'This test consists of 4 intervals of 90 seconds. Only 1 athlete may work at a time, and they must work for the full 90 seconds. Each athlete completes 2 AMRAPs. These may be back to back, but that is not required. The sum of all reps across all AMRAPs is the team score.'
+    },
+    news19_p_t6_std: {
+      ru: 'Полные стандарты движений находятся в документации Международной федерации функционального фитнеса в разделах “Power Clean ID 3.02”, “Bar Muscle-up ID 7.07”, “Toes Through Rings ID 8.01” и “Handstand Walk ID 12.03” по ссылке <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      kz: 'Қимылдардың толық стандарттары Халықаралық функционалдық фитнес федерациясының құжаттамасында “Power Clean ID 3.02”, “Bar Muscle-up ID 7.07”, “Toes Through Rings ID 8.01” және “Handstand Walk ID 12.03” бөлімдерінде берілген, сілтеме: <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.',
+      en: 'Full movement standards can be found in the International Functional Fitness Federation documentation under “Power Clean ID 3.02”, “Bar Muscle-up ID 7.07”, “Toes Through Rings ID 8.01” and “Handstand Walk ID 12.03” at <a class="movement-link" href="https://functionalfitness.sport/sport/movement-standards/" target="_blank" rel="noopener">[Movement standards]</a>.'
+    },
+    news19_p_t6_r1: {
+      ru: 'Минимальная непрерывная дистанция для ходьбы в стойке на руках — 2.5 метра.',
+      kz: 'Қолда тұрып жүрудің ең аз үзіліссіз қашықтығы — 2.5 метр.',
+      en: 'The minimum unbroken distance for the handstand walk is 2.5 m.'
+    },
+    news19_p_t6_r2: {
+      ru: 'Каждые 2.5 метра, пройденные в ходьбе на руках, засчитываются как 1 повторение.',
+      kz: 'Қолда жүруде өтілген әр 2.5 метр 1 қайталау ретінде есептеледі.',
+      en: 'Every 2.5 m covered in the handstand walk counts as 1 repetition.'
     },
     news17_card_title: {
       ru: 'iF3 получила жалобу от Финской организации функционального фитнеса (Fin2f)!',
