@@ -1450,6 +1450,12 @@
                 <div class="docs-grid" id="docsGrid">
 
 
+                <div class="doc-card fade-in">
+                    <div class="news-date">11.08.2026</div>
+                    <div class="news-title" data-translate="docs9_page_title">Дополнительный регламент</div>
+                    <img id="docsRegCardImage" src="/reg.jpeg" width="1080" height="1350" alt="Дополнительный регламент ASIAN 2026" loading="lazy">
+                    <a href="/docs9" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
+                </div>
 
                     
                 <div class="doc-card fade-in">
@@ -2026,5 +2032,49 @@
     </script>
     
     <script src="/lang.js?v=20260123205220" defer></script>
+    <script>
+    // Обложка карточки «Дополнительный регламент» следует за языком: RU/KZ — reg.jpeg, EN — reg2.jpeg
+    (function () {
+        var COVERS = {
+            ru: { src: '/reg.jpeg',  alt: 'Дополнительный регламент ASIAN 2026' },
+            kz: { src: '/reg.jpeg',  alt: 'ASIAN 2026 қосымша регламенті' },
+            en: { src: '/reg2.jpeg', alt: 'Additional Competition Regulations ASIAN 2026' }
+        };
+
+        function applyCover(lang) {
+            var image = document.getElementById('docsRegCardImage');
+            var cover = COVERS[lang] || COVERS.ru;
+            if (!image) return;
+            if (image.getAttribute('src') !== cover.src) {
+                image.setAttribute('src', cover.src);
+            }
+            image.alt = cover.alt;
+        }
+
+        function savedLang() {
+            try {
+                return localStorage.getItem('site_lang') || 'ru';
+            } catch (e) {
+                return 'ru';
+            }
+        }
+
+        function init() {
+            applyCover(savedLang());
+            document.querySelectorAll('.language-option').forEach(function (option) {
+                option.addEventListener('click', function () {
+                    var lang = option.getAttribute('data-lang');
+                    if (lang) applyCover(lang);
+                });
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+    </script>
 </body>
 </html>

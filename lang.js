@@ -378,6 +378,11 @@
       kz: 'Қазақстандағы IF3 аккредитациясы',
       en: 'IF3 Accreditation in Kazakhstan'
     },
+    doc_gym_map: {
+      ru: 'Карта залов',
+      kz: 'Залдар картасы',
+      en: 'Gym Map'
+    },
     doc_regulations_title: {
       ru: 'Положение Чемпионата РК по функциональному многоборью',
       kz: 'ҚР Функционалдық көпсайыс чемпионатының ережесі',
@@ -387,6 +392,48 @@
       ru: 'Дата публикации:',
       kz: 'Жариялау күні:',
       en: 'Publication Date:'
+    },
+
+    // Страница docs9 — Дополнительный регламент ASIAN 2026
+    docs9_meta_title: {
+      ru: 'Дополнительный регламент ASIAN 2026 — Казахстанская Федерация функционального многоборья',
+      kz: 'ASIAN 2026 қосымша регламенті — Қазақстандық функционалдық көпсайыс федерациясы',
+      en: 'Additional Competition Regulations ASIAN 2026 — Functional Fitness Federation Kazakhstan'
+    },
+    docs9_page_title: {
+      ru: 'Дополнительный регламент',
+      kz: 'Қосымша регламент',
+      en: 'Additional Competition Regulations'
+    },
+    docs9_subtitle: {
+      ru: 'ASIAN 2026 FUNCTIONAL FITNESS CHAMPIONSHIP — категории: индивидуалы, мастера, юниоры, пары',
+      kz: 'ASIAN 2026 FUNCTIONAL FITNESS CHAMPIONSHIP — санаттар: жеке спортшылар, мастерлер, жасөспірімдер, жұптар',
+      en: 'ASIAN 2026 FUNCTIONAL FITNESS CHAMPIONSHIP — all divisions: individuals, masters, juniors, pairs'
+    },
+    docs9_doc_ru_title: {
+      ru: 'Регламент (на русском)',
+      kz: 'Регламент (орыс тілінде)',
+      en: 'Regulations (in Russian)'
+    },
+    docs9_doc_ru_desc: {
+      ru: 'Дополнительный регламент соревнований на русском языке',
+      kz: 'Жарыстардың қосымша регламенті орыс тілінде',
+      en: 'Additional competition regulations in Russian'
+    },
+    docs9_doc_en_title: {
+      ru: 'Регламент (на английском)',
+      kz: 'Регламент (ағылшын тілінде)',
+      en: 'Regulations (in English)'
+    },
+    docs9_doc_en_desc: {
+      ru: 'Дополнительный регламент соревнований на английском языке',
+      kz: 'Жарыстардың қосымша регламенті ағылшын тілінде',
+      en: 'Additional competition regulations in English'
+    },
+    docs9_open_doc: {
+      ru: 'Открыть документ',
+      kz: 'Құжатты ашу',
+      en: 'Open Document'
     },
 
     // Страница Аккредитации
@@ -465,7 +512,7 @@
       en: 'Athletes from eight countries in Asia and Eurasia will take part in the 2026 Asian Functional Fitness Championship:'
     },
     news191_country_kz: { ru: 'Казахстан', kz: 'Қазақстан', en: 'Kazakhstan' },
-    news191_country_nk: { ru: 'Северная Корея', kz: 'Солтүстік Корея', en: 'North Korea' },
+    news191_country_kr: { ru: 'Южная Корея', kz: 'Оңтүстік Корея', en: 'South Korea' },
     news191_country_kg: { ru: 'Кыргызстан', kz: 'Қырғызстан', en: 'Kyrgyzstan' },
     news191_country_uz: { ru: 'Узбекистан', kz: 'Өзбекстан', en: 'Uzbekistan' },
     news191_country_kw: { ru: 'Кувейт', kz: 'Кувейт', en: 'Kuwait' },
