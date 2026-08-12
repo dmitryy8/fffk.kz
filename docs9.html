@@ -336,14 +336,17 @@
         .reg-banner {
             max-width: 520px;
             margin: 0 auto 50px;
+            overflow: hidden;
+            height: 420px;
+            border-radius: 20px;
         }
 
         .reg-banner img {
             display: block;
             width: 100%;
-            height: auto;
-            aspect-ratio: 4 / 5;
+            height: 100%;
             object-fit: cover;
+            object-position: center 40%;
             border-radius: 20px;
             box-shadow: var(--shadow);
             background: #f0f4f8;
