@@ -5264,6 +5264,145 @@
       ru: 'Имена несовершеннолетних участников не будут разглашаться. Личность тренера будет передана соответствующим национальным федерациям в объёме, необходимом для поддержания санкций.',
       kz: 'Кәмелетке толмағандардың жеке мәліметтері жарияланбайды. Бапкердің тұлғасы ұлттық федерацияларға санкцияларды орындауға қажетті дәрежеде беріледі.',
       en: 'Identities of underage participants will not be disclosed. The identity of the coach will be provided to the relevant national federations to the extent necessary to enforce the sanction.'
+    },
+
+    // Карточка news20 на странице новостей
+    news20_card_title: {
+      ru: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — ИТОГИ!',
+      kz: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — ҚОРЫТЫНДЫЛАР!',
+      en: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — RESULTS!'
+    },
+    news20_card_excerpt: {
+      ru: 'Победители и призёры во всех дивизионах...',
+      kz: 'Барлық дивизиондардағы жеңімпаздар мен жүлдегерлер...',
+      en: 'Winners and medalists in every division...'
+    },
+
+    // Страница news20 — итоги ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026
+    news20_meta_title: {
+      ru: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — итоги и победители',
+      kz: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — қорытындылар мен жеңімпаздар',
+      en: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — Results and Winners'
+    },
+    news20_kicker: {
+      ru: 'Итоги чемпионата',
+      kz: 'Чемпионат қорытындысы',
+      en: 'Championship results'
+    },
+    news20_title: {
+      ru: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — ИТОГИ',
+      kz: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — ҚОРЫТЫНДЫЛАР',
+      en: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — RESULTS'
+    },
+    news20_subtitle: {
+      ru: 'Победители и призёры во всех дивизионах',
+      kz: 'Барлық дивизиондардағы жеңімпаздар мен жүлдегерлер',
+      en: 'Winners and medalists in every division'
+    },
+    news20_intro_1: {
+      ru: 'Поздравляем всех атлетов с завершением чемпионата! 🔥',
+      kz: 'Барлық спортшыларды чемпионаттың аяқталуымен құттықтаймыз! 🔥',
+      en: 'Congratulations to all the athletes on the completion of the championship! 🔥'
+    },
+    news20_intro_2: {
+      ru: 'Спасибо за силу, характер и невероятную борьбу до самого конца! 💪',
+      kz: 'Күш-қуатыңыз, мінезіңіз және соңына дейін жалғасқан керемет күресіңіз үшін рахмет! 💪',
+      en: 'Thank you for your strength, determination, and incredible fight until the very end! 💪'
+    },
+    news20_label_results: {
+      ru: 'Результаты',
+      kz: 'Нәтижелер',
+      en: 'Results'
+    },
+    news20_place_1: {
+      ru: '1 место',
+      kz: '1-орын',
+      en: '1st place'
+    },
+    news20_place_2: {
+      ru: '2 место',
+      kz: '2-орын',
+      en: '2nd place'
+    },
+    news20_place_3: {
+      ru: '3 место',
+      kz: '3-орын',
+      en: '3rd place'
+    },
+    news20_outro_1: {
+      ru: '🔥 Поздравляем победителей и призёров!',
+      kz: '🔥 Жеңімпаздар мен жүлдегерлерді құттықтаймыз!',
+      en: '🔥 Congratulations to all the winners and medalists!'
+    },
+    news20_outro_2: {
+      ru: 'Спасибо каждому атлету за эту невероятную борьбу! 🇰🇿🌏',
+      kz: 'Осындай керемет күрес үшін әрбір спортшыға рахмет! 🇰🇿🌏',
+      en: 'Thank you to every athlete for this incredible fight! 🇰🇿🌏'
+    },
+    news20_outro_3: {
+      ru: 'Спасибо каждому, кто стал частью этого спортивного праздника!',
+      kz: 'Осы спорт мерекесінің бір бөлігі болған әрбір адамға рахмет!',
+      en: 'Thank you to everyone who became a part of this celebration of sport!'
+    },
+    news20_outro_4: {
+      ru: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — это было мощно!',
+      kz: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — бұл керемет болды!',
+      en: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — that was powerful!'
+    },
+    news20_label_team: {
+      ru: 'Общекомандный зачёт',
+      kz: 'Жалпыкомандалық есеп',
+      en: 'Overall team standings'
+    },
+    news20_team_heading: {
+      ru: 'Итоги общекомандного зачёта',
+      kz: 'Жалпыкомандалық есеп қорытындысы',
+      en: 'Overall team standings'
+    },
+    news20_team_p1: {
+      ru: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 завершён.',
+      kz: 'ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 аяқталды.',
+      en: 'The ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 has come to a close.'
+    },
+    news20_team_p2: {
+      ru: 'По итогам чемпионата места в общекомандном зачёте распределились следующим образом:',
+      kz: 'Чемпионат қорытындысы бойынша жалпыкомандалық есептегі орындар былайша бөлінді:',
+      en: 'Based on the results of the championship, the overall team standings are as follows:'
+    },
+    news20_team_kz: {
+      ru: 'Казахстан',
+      kz: 'Қазақстан',
+      en: 'Kazakhstan'
+    },
+    news20_team_ir: {
+      ru: 'Иран',
+      kz: 'Иран',
+      en: 'Iran'
+    },
+    news20_team_jo: {
+      ru: 'Иордания',
+      kz: 'Иордания',
+      en: 'Jordan'
+    },
+    news20_team_p3: {
+      ru: 'Для нас, как организаторов чемпионата, особенно приятно, что сборная Казахстана заняла первое место в общекомандном зачёте.',
+      kz: 'Чемпионат ұйымдастырушылары ретінде біз үшін Қазақстан құрамасының жалпыкомандалық есепте бірінші орын алғаны ерекше қуанышты.',
+      en: 'As the organisers of the championship, we are especially proud that the national team of Kazakhstan took first place in the overall team standings.'
+    },
+    news20_team_p4: {
+      ru: 'Благодарим все национальные сборные и каждого атлета за участие, достойную конкуренцию и спортивный дух.',
+      kz: 'Барлық ұлттық құрамаларға және әрбір спортшыға қатысқаны, лайықты бәсекесі мен спорттық рухы үшін алғыс айтамыз.',
+      en: 'We thank all the national teams and every athlete for their participation, worthy competition and sporting spirit.'
+    },
+    news20_team_p5: {
+      ru: 'Отдельная благодарность судьям, волонтёрам и всей команде, которая работала над проведением чемпионата.',
+      kz: 'Төрешілерге, еріктілерге және чемпионатты өткізу үстінде жұмыс істеген бүкіл командаға айрықша алғыс.',
+      en: 'Special thanks to the judges, volunteers and the entire team who worked on running the championship.'
+    },
+    news20_team_p6: {
+      ru: 'И, конечно, спасибо нашим спонсорам и партнёрам за поддержку и доверие. Благодаря совместной работе мы смогли провести этот чемпионат и принять участников из разных стран Азии. 🤝',
+      kz: 'Әрине, демеушілеріміз бен серіктестерімізге қолдау мен сенім үшін рахмет. Бірлескен жұмыстың арқасында біз осы чемпионатты өткізіп, Азияның түрлі елдерінен қатысушыларды қабылдай алдық. 🤝',
+      en: 'And, of course, thank you to our sponsors and partners for their support and trust. Thanks to our joint work we were able to host this championship and welcome participants from across Asia. 🤝'
     }
   };
 
