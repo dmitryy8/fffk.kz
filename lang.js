@@ -2532,6 +2532,16 @@
       kz: 'Жарыстар мен іс-шаралардың суреттері',
       en: 'Photos from competitions and events'
     },
+    media_asia_gallery_title: {
+      ru: 'Фото с Чемпионата Азии',
+      kz: 'Азия чемпионатының фотосуреттері',
+      en: 'Photos from the Asian Championship'
+    },
+    media_more_photos: {
+      ru: 'Больше фотографий тут...',
+      kz: 'Көбірек фотосуреттер мұнда...',
+      en: 'More photos here...'
+    },
     
     // Страница новостей
     news_title: {
