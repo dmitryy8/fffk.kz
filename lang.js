@@ -5309,6 +5309,11 @@
       kz: 'Күш-қуатыңыз, мінезіңіз және соңына дейін жалғасқан керемет күресіңіз үшін рахмет! 💪',
       en: 'Thank you for your strength, determination, and incredible fight until the very end! 💪'
     },
+    news20_label_gallery: {
+      ru: 'Фотоотчёт',
+      kz: 'Фотоесеп',
+      en: 'Photo gallery'
+    },
     news20_label_results: {
       ru: 'Результаты',
       kz: 'Нәтижелер',
