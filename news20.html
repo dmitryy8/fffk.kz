@@ -1140,8 +1140,9 @@
         .category-photo img {
             display: block;
             width: 100%;
-            height: 240px;
-            object-fit: cover;
+            height: auto;
+            max-height: none;
+            object-fit: contain;
             background: #edf4ff;
         }
 
@@ -1227,7 +1228,7 @@
 
         @media (max-width: 600px) {
             .category-photo img {
-                height: 180px;
+                height: auto;
             }
 
             .podium li {
