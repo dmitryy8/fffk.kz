@@ -1097,6 +1097,36 @@
         @keyframes img-spinner {
             to { transform: rotate(360deg); }
         }
+        /* --- Фотоотчёт (news20) --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+        }
+
+        .gallery a {
+            display: block;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(11, 99, 183, 0.12);
+            box-shadow: 0 8px 20px rgba(11, 99, 183, 0.08);
+            background: #f0f4f8;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery a:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(11, 99, 183, 0.18);
+        }
+
+        .gallery img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
         /* --- Пьедесталы и итоги (news20) --- */
         .division {
             margin-bottom: 26px;
@@ -1292,6 +1322,9 @@
                     <span class="section-label" data-translate="news20_label_results">Результаты</span>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8031.JPG.jpeg" loading="lazy" decoding="async" alt="JUNIOR FEMALE / 17–18">
+                        </div>
                         <h2>🏆 JUNIOR FEMALE / 17–18</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1308,6 +1341,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8032.JPG.jpeg" loading="lazy" decoding="async" alt="JUNIOR MALE / 17–18">
+                        </div>
                         <h2>🏆 JUNIOR MALE / 17–18</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1329,6 +1365,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8033.JPG.jpeg" loading="lazy" decoding="async" alt="MASTER FEMALE / 40–44">
+                        </div>
                         <h2>🏆 MASTER FEMALE / 40–44</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1350,6 +1389,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8034.JPG.jpeg" loading="lazy" decoding="async" alt="MASTER MALE / 40–44">
+                        </div>
                         <h2>🏆 MASTER MALE / 40–44</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1371,6 +1413,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8035.JPG.jpeg" loading="lazy" decoding="async" alt="MASTER FEMALE / 35–39">
+                        </div>
                         <h2>🏆 MASTER FEMALE / 35–39</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1392,6 +1437,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8036.JPG.jpeg" loading="lazy" decoding="async" alt="MASTER MALE / 35–39">
+                        </div>
                         <h2>🏆 MASTER MALE / 35–39</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1413,6 +1461,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8037.JPG.jpeg" loading="lazy" decoding="async" alt="TEAM PAIRS F/F">
+                        </div>
                         <h2>🏆 TEAM PAIRS F/F</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1434,6 +1485,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8038.JPG.jpeg" loading="lazy" decoding="async" alt="TEAM PAIRS M/F">
+                        </div>
                         <h2>🏆 TEAM PAIRS M/F</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1455,6 +1509,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8039.JPG.jpeg" loading="lazy" decoding="async" alt="TEAM PAIRS M/M">
+                        </div>
                         <h2>🏆 TEAM PAIRS M/M</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1476,6 +1533,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8040.JPG.jpeg" loading="lazy" decoding="async" alt="INDIVIDUALS WOMEN">
+                        </div>
                         <h2>🏆 INDIVIDUALS WOMEN</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1497,6 +1557,9 @@
                     </div>
 
                     <div class="division">
+                        <div class="category-photo">
+                            <img src="/папка с  азиат сорев/IMG_8044.JPG.jpeg" loading="lazy" decoding="async" alt="INDIVIDUALS MEN">
+                        </div>
                         <h2>🏆 INDIVIDUALS MEN</h2>
                         <ol class="podium">
                             <li class="gold">
@@ -1529,6 +1592,9 @@
                 <!-- Общекомандный зачёт -->
                 <section class="test-card">
                     <span class="section-label" data-translate="news20_label_team">Общекомандный зачёт</span>
+                    <div class="category-photo">
+                        <img src="/папка с  азиат сорев/IMG_8042.JPG.jpeg" loading="lazy" decoding="async" alt="Общекомандный зачёт">
+                    </div>
                     <h2 data-translate="news20_team_heading">Итоги общекомандного зачёта</h2>
 
                     <p data-translate="news20_team_p1">ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 завершён.</p>
