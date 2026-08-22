@@ -5314,6 +5314,16 @@
       kz: 'Фотоесеп',
       en: 'Photo gallery'
     },
+    news20_gallery_heading: {
+      ru: 'Фото с Чемпионата Азии',
+      kz: 'Азия чемпионатының фотосуреттері',
+      en: 'Photos from the Asian Championship'
+    },
+    news20_more_photos: {
+      ru: 'Больше фотографий тут...',
+      kz: 'Көбірек фотосуреттер мұнда...',
+      en: 'More photos here...'
+    },
     news20_label_results: {
       ru: 'Результаты',
       kz: 'Нәтижелер',
