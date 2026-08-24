@@ -970,6 +970,17 @@
             position: relative;
         }
 
+        /* Уменьшаем промежуток вокруг секции "Документы" для уменьшения пустого места */
+        #docs.section {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        /* Компенсируем верхний отступ следующей секции */
+        .champ-section {
+            padding-top: 16px;
+        }
+
         .section-title {
             text-align: center;
             margin-bottom: 60px;
@@ -1810,9 +1821,9 @@
 Развиваем функциональное многоборье в Казахстане, объединяем спортсменов и создаём возможности для профессионального роста и участия в соревнованиях.
             </p>
             <div class="hp-hero-actions">
-                <a href="/competitions" class="btn btn-hero-solid">
-                    <i class="fas fa-trophy" style="margin-right: 8px;"></i>
-                    <span data-translate="nav_competitions">Соревнования</span>
+                <a href="/about" class="btn btn-hero-solid">
+                    <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
+                    <span data-translate="nav_about"> О нас</span>
                 </a>
                 <a href="/news" class="btn btn-hero-ghost">
                     <i class="fas fa-newspaper" style="margin-right: 8px;"></i>
