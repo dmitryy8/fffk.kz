@@ -49,7 +49,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="/mobile.css?v=20260123205533" media="(max-width:768px)">
+    <link rel="stylesheet" href="/mobile.css?v=202608242154" media="(max-width:768px)">
     <link rel="stylesheet" href="/scrollbar.css">
     <style>
         * {
@@ -441,6 +441,28 @@
             font-weight: 800;
             letter-spacing: 0.16em;
             text-transform: uppercase;
+        }
+
+        /* Два логотипа над названием федерации.
+           Плашка нужна, потому что логотип спонсора синий и на фото теряется. */
+        .hp-hero-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+            width: fit-content;
+            margin: 0 auto 22px;
+            padding: 12px 24px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.28);
+        }
+
+        .hp-hero-logos img {
+            display: block;
+            height: 58px;
+            width: auto;
+            object-fit: contain;
         }
 
         .hp-hero-kz,
@@ -1489,10 +1511,22 @@
                 font-size: 2.5em;
             }
             
+            /* Стрелки остаются и на телефоне, но компактнее и внутри ленты */
             .nav-arrow {
-                display: none;
+                width: 38px;
+                height: 38px;
+                font-size: 1.1em;
+                background: rgba(11, 99, 183, 0.92);
             }
-            
+
+            .nav-arrow.left {
+                left: 2px;
+            }
+
+            .nav-arrow.right {
+                right: 2px;
+            }
+
             .map-frame {
                 height: 400px;
                 margin: 0 10px;
@@ -1516,38 +1550,21 @@
                 margin-top: 20px !important;
             }
 
-            /* Документы на мобильных — вертикальным списком */
+            /* Новости и документы листаются пальцем по горизонтали, как на компьютере */
+            .news-grid,
             .docs-grid {
-                flex-direction: column;
-                overflow-x: visible;
-                overflow-y: auto;
-                align-items: center;
-                gap: 20px;
-            }
-
-            .doc-card {
-                width: 90%;
-                max-width: 350px;
-                flex-shrink: 0;
-                touch-action: pan-y;
-                user-select: none;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-            }
-
-            /* Новости листаются пальцем по горизонтали, как на компьютере */
-            .news-grid {
                 flex-direction: row;
                 flex-wrap: nowrap;
                 overflow-x: auto;
                 overflow-y: hidden;
+                align-items: stretch;
                 gap: 14px;
                 scroll-snap-type: x mandatory;
                 -webkit-overflow-scrolling: touch;
             }
 
-            .news-card {
+            .news-card,
+            .doc-card {
                 width: 82vw;
                 max-width: 330px;
                 flex: 0 0 auto;
@@ -1770,12 +1787,18 @@
         <div class="hp-hero-overlay"></div>
 
         <div class="hp-hero-inner">
-            <div class="hp-hero-kicker" data-translate="home_hero_kicker">Функциональное многоборье Казахстана</div>
+
+            <div class="hp-hero-logos">
+                <img src="/images/logos/logo.png" width="640" height="496" loading="eager" decoding="async" alt="КФФМ">
+                <img src="/sponsor.png" width="640" height="453" loading="eager" decoding="async" alt="Генеральный спонсор OLYMP">
+            </div>
+
             <p class="hp-hero-kz" data-translate="federation_name_kz">ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ</p>
             <h1 class="hp-hero-title" data-translate="federation_name_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
             <p class="hp-hero-en" data-translate="federation_name_en">FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</p>
             <p class="hp-hero-lead" data-translate="home_welcome_text">
-                Наша организация объединяет спортсменов со всего Казахстана. Мы развиваем функциональный фитнес и проводим соревнования по функциональному многоборью. Присоединяйтесь к нашему спортивному сообществу!
+                
+Развиваем функциональное многоборье в Казахстане, объединяем спортсменов и создаём возможности для профессионального роста и участия в соревнованиях.
             </p>
             <div class="hp-hero-actions">
                 <a href="/competitions" class="btn btn-hero-solid">
@@ -1790,20 +1813,7 @@
         </div>
     </section>
 
-    <!-- Блок федерации -->
-    <section class="federation-hero" style="margin-top: 0;">
-        <div class="federation-container">
-            <div class="federation-logo left"><img src="/images/logos/logo.png" width="640" height="496" loading="lazy" decoding="async" decoding="async" alt="КФФМ логотип"></div>
-            <div class="federation-text">
-                <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;" data-translate="federation_name_kz">
-                ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
-                </h2>
-                <h1 data-translate="federation_name_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
-                <h2 data-translate="federation_name_en">FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
-            </div>
-            <div class="federation-logo right"><img src="/sponsor.png" width="640" height="453" loading="lazy" decoding="async" decoding="async" alt="Спонсор КФФМ"></div>
-        </div>
-    </section>
+ 
 
     
 
@@ -1832,26 +1842,6 @@
                         </div>
                     </article>
 
-                     <article class="news-card fade-in">
-                        <img src="pairs.jpg" width="1600" height="900" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
-                        <div class="news-content">
-                            <div class="news-date">03.08.2026</div>
-                            <div class="news-title" data-translate="news19_card_title">Официальное объявление тестов для Азиатского чемпионата iF3 2026!</div>
-                            <div class="news-excerpt" data-translate="news19_card_excerpt">Test 1 (Endurance)...</div>
-                            <a href="/news19" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-
-
-                    <article class="news-card fade-in">
-                        <img src="asian5.jpg" width="1600" height="900" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
-                        <div class="news-content">
-                            <div class="news-date">31.07.2026</div>
-                            <div class="news-title" data-translate="news191_card_title">Чемпионат Азии по функциональному многоборью 2026: всё, что важно знать!</div>
-                            <div class="news-excerpt" data-translate="news191_card_excerpt">На этой странице собрана ключевая информация о Чемпионате Азии по функциональному многоборью 2026...</div>
-                            <a href="/news21" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
 
 <article class="news-card fade-in">
                         <img src="/images/news/casia1.webp" width="1600" height="1067" alt="Победители и призеры SmartFit 2026" loading="lazy">
@@ -1875,37 +1865,6 @@
                     </article>
 
 
-                    <article class="news-card fade-in">
-                        <img src="International Functional Fitness Federation Report on Ethics Complaint From Finnish Functional Fitness.jpg" width="1920" height="1080" alt="International Functional Fitness Federation Report on Ethics Complaint From Finnish Functional Fitness" loading="lazy">
-                        <div class="news-content">
-                            <div class="news-date">31.05.2026</div>
-                            <div class="news-title" data-translate="news17_card_title">iF3 получила жалобу от Финской организации функциональной фитнеса (Fin2f)!</div>
-                            <div class="news-excerpt" data-translate="news17_card_excerpt">с обвинениями в нескольких нарушениях Кодекса этики iF3 со стороны тренера юниорской сборной Швеции...</div>
-                            <a href="/news17" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-
-
-
-                    <article class="news-card fade-in">
-                        <img src="/images/news/man2.jpg" width="1024" height="1014" alt="2 новых вице-президента" loading="lazy">
-                        <div class="news-content">
-                            <div class="news-date">02.04.2026</div>
-                            <div class="news-title" data-translate="news16_card_title">iF3 провела выборы на должность вице-президента!</div>
-                            <div class="news-excerpt" data-translate="news16_card_excerpt">После нескольких туров голосования ни один кандидат в вице-президенты не набрал...</div>
-                            <a href="/news16" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-
-                    <article class="news-card fade-in">
-                        <img src="/imageschampionat/champsmaart.png" width="798" height="490" alt="SMART FIT Чемпионат Казахстана 2026" loading="lazy">
-                        <div class="news-content">
-                            <div class="news-date">14.04.2026</div>
-                            <div class="news-title" data-translate="news15_card_title">SMART FIT Чемпионат Казахстана 2026!</div>
-                            <div class="news-excerpt" data-translate="news15_card_excerpt">Отбор, финал и лидерборд — лето в Актобе...</div>
-                            <a href="/news15" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article> 
 
                     
                          <article class="news-card fade-in">
@@ -1918,103 +1877,6 @@
                         </div>
                     </article>
 
-
-                    <article class="news-card fade-in">
-                        <img src="/images/news/moderia.png" width="746" height="428" alt="Панамериканский чемпионат" loading="lazy">
-                        <div class="news-content">
-                            <div class="news-date">24.03.2026</div>
-                            <div class="news-title" data-translate="news13_card_title">Панамериканский чемпионат по функциональному фитнесу IF3!</div>
-                            <div class="news-excerpt" data-translate="news13_card_excerpt">В столице Мичоакана пройдет первый Панамериканский чемпионат по ...</div>
-                            <a href="/news13" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-
-                    
-                    <article class="news-card fade-in">
-                        <img src="/images/news/alash5main.jpeg" width="1600" height="1067" alt="Alash Winter Cup 2026" loading="lazy" decoding="async" fetchpriority="low">
-                        <div class="news-content">
-                            <div class="news-date">1.02.2026</div>
-                            <div class="news-title" data-translate="news12_card_title">Alash Winter Cup 2026: Главное событие зимы в мире функционального многоборья!</div>
-                            <div class="news-excerpt" data-translate="news12_card_excerpt">31 января и 1 февраля 2026 года в Астане в спортивном комплексе Invictus go (Oxy gym) состоялся...</div>
-                            <a href="/news12" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-
-
-                    <article class="news-card fade-in">
-                        <picture>
-                            <source srcset="/images/news/astanaopencupr.jpg" type="image/webp">
-                            <img src="/images/news/astanaopencupr.jpg" width="1600" height="930" alt="ASTANA OPEN CUP 2026" loading="lazy" decoding="async" fetchpriority="low">
-                        </picture>
-                        <div class="news-content">
-                            <div class="news-date">08.01.2026</div>
-                            <div class="news-title" data-translate="news_astana_cup_title">ASTANA OPEN CUP 2026!</div>
-                            <div class="news-excerpt" data-translate="news_astana_cup_excerpt">Соревнования по функциональному многоборью ASTANA OPEN CUP 2026 проводятся...</div>
-                            <a href="/news10" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-
-
-                    <article class="news-card fade-in">
-                        <picture>
-      <source srcset="/images/news/kalen2.webp" type="image/webp">
-      <img src="/images/news/kalen2.webp" width="1920" height="1452" loading="lazy" decoding="async" fetchpriority="low" alt="Календарь соревнований 2026">
-    </picture>
-                        <div class="news-content">
-                            <div class="news-date">01.02.2026</div>
-                            <div class="news-title" data-translate="news_calendar_2026_title">Календарь соревнований 2026</div>
-                            <div class="news-excerpt" data-translate="news_calendar_2026_excerpt">Календарь соревнований на 2026 год включает ключевые национальные и международные старты по функциональному фитнесу...</div>
-                            <a href="/docs5" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-                    <article class="news-card fade-in">
-                        <picture>
-      <source srcset="/images/news/novygod.webp" type="image/webp">
-      <img src="/images/news/novygod.jpg" width="1600" height="1200" loading="lazy" decoding="async" fetchpriority="low" alt="CrossFit Challenge 2025">
-    </picture>
-                        <div class="news-content">
-                            <div class="news-date">19.12.2025</div>
-                            <div class="news-title" data-translate="news_newyear_title">Новогодний командный турнир по функциональному многоборью в Flex.</div>
-                            <div class="news-excerpt" data-translate="news_newyear_excerpt">20 декабря в Кроссфит-зале Flex пройдёт предновогодний командный турнир по функциональному многоборью под эгидой КФФМ...</div>
-                            <a href="/news9" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-                     <article class="news-card fade-in">
-                        <picture>
-      <source srcset="/images/news/litva1.webp" type="image/webp">
-            <img src="/images/news/litva1.webp" width="1600" height="988" loading="lazy" decoding="async" fetchpriority="low" alt="CrossFit Challenge 2025">
-    </picture>
-                        <div class="news-content">
-                            <div class="news-date">05.12.2025</div>
-                            <div class="news-title" data-translate="news_if3_world_title">Чемпионат мира IF3 2025 — Литва, Вильнюс.</div>
-                            <div class="news-excerpt" data-translate="news_if3_world_excerpt">В Вильнюсе, столице Литвы, с 5 по 7 декабря 2025 года состоялся Чемпионат мира IF3 по функциональному фитнесу...</div>
-                            <a href="/news8" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-                    <article class="news-card fade-in">
-                        <picture>
-      <source srcset="/images/news/austr1.webp" type="image/webp">
-      <img src="/images/news/austr1.png" width="1600" height="1008" loading="lazy" decoding="async" fetchpriority="low" alt="CrossFit Challenge 2025">
-    </picture>
-                        <div class="news-content">
-                            <div class="news-date">25.11.2025</div>
-                            <div class="news-title" data-translate="news_masters_title">Итоги IF3 Masters World Championship 2025</div>
-                            <div class="news-excerpt" data-translate="news_masters_excerpt">Сборная Казахстана достойно представила страну на Чемпионате мира IF3 Masters 2025, проходившем в Брисбене (Австралия)...</div>
-                            <a href="/news7" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
-                    <article class="news-card fade-in">
-                        <picture>
-      <source srcset="/images/news/livii.webp" type="image/webp">
-      <img src="/images/news/livii.jpg" width="1080" height="485" loading="lazy" decoding="async" fetchpriority="low" alt="Summer Games 2025">
-    </picture>
-                        <div class="news-content">
-                            <div class="news-date">17.10.2025</div>
-                            <div class="news-title" data-translate="news_libya_title">Ливийская федерация функционального фитнеса получила признание Министерства спорта Ливии!</div>
-                            <div class="news-excerpt" data-translate="news_libya_excerpt">Ливийская федерация функционального фитнеса стала последним членом iF3, получившим официальное признание...</div>
-                            <a href="/news6" class="btn btn-primary" data-translate="read_more">Подробнее</a>
-                        </div>
-                    </article>
 
 
 
@@ -2739,7 +2601,7 @@
     });
     </script>
     
-    <script src="/lang.js?v=20260123205220" defer></script>
+    <script src="/lang.js?v=202608242154" defer></script>
     <script>
     // Обложка карточки «Дополнительный регламент» следует за языком: RU/KZ — reg.jpeg, EN — reg2.jpeg
     (function () {

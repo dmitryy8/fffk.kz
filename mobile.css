@@ -245,12 +245,40 @@
     min-height: auto !important;
   }
   
-  /* УБИРАЕМ стрелки для прокрутки документов на главной */
+  /* DOCS: ГОРИЗОНТАЛЬНАЯ ЛЕНТА со стрелками, как на компьютере */
   #docsLeft,
-  #docsRight {
-    display: none !important;
+  #docsRight,
+  #newsLeft,
+  #newsRight {
+    display: block !important;
   }
-  
+
+  .docs-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 14px !important;
+    padding-bottom: 12px !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .docs-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .doc-card {
+    width: 82vw !important;
+    max-width: 330px !important;
+    flex: 0 0 auto !important;
+    scroll-snap-align: center;
+    touch-action: auto !important;
+  }
+
   /* NEWS: ГОРИЗОНТАЛЬНАЯ ЛЕНТА, как на компьютере — листается пальцем */
   .news-grid {
     display: flex !important;
