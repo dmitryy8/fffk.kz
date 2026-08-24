@@ -2277,6 +2277,37 @@
       kz: 'Бас демеуші',
       en: 'General Sponsor'
     },
+    // Секция видео и трансляций на главной
+    watch_sub: {
+      ru: 'Прямые эфиры, записи соревнований и церемонии награждения',
+      kz: 'Тікелей эфирлер, жарыстардың жазбалары және марапаттау рәсімдері',
+      en: 'Live broadcasts, competition recordings and award ceremonies'
+    },
+    watch_channel: {
+      ru: 'Канал на YouTube',
+      kz: 'YouTube арнасы',
+      en: 'YouTube channel'
+    },
+    watch_tag_opening: {
+      ru: 'Открытие',
+      kz: 'Ашылу',
+      en: 'Opening'
+    },
+    watch_tag_live: {
+      ru: 'Эфир',
+      kz: 'Эфир',
+      en: 'Live'
+    },
+    watch_tag_awards: {
+      ru: 'Награждение',
+      kz: 'Марапаттау',
+      en: 'Awards'
+    },
+    watch_tag_competition: {
+      ru: 'Соревнования',
+      kz: 'Жарыстар',
+      en: 'Competition'
+    },
     champ_btn_results: {
       ru: 'Результаты',
       kz: 'Нәтижелер',

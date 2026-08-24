@@ -251,17 +251,32 @@
     display: none !important;
   }
   
-  /* NEWS: ВЕРТИКАЛЬНЫЙ СПИСОК */
+  /* NEWS: ГОРИЗОНТАЛЬНАЯ ЛЕНТА, как на компьютере — листается пальцем */
   .news-grid {
     display: flex !important;
-    flex-direction: column !important; /* ВЕРТИКАЛЬНО */
-    gap: 16px !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 14px !important;
     padding-bottom: 12px !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
   }
-  
+
+  .news-grid::-webkit-scrollbar {
+    display: none;
+  }
+
   .news-card {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 82vw !important;
+    max-width: 330px !important;
+    flex: 0 0 auto !important;
+    scroll-snap-align: center;
+    /* pan-y здесь запретил бы горизонтальный свайп */
+    touch-action: auto !important;
   }
   
   /* FOOTER: убираем навигацию, оставляем только соц сети и лого */

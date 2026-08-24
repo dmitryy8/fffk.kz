@@ -43,7 +43,9 @@
     
     
     <!-- Первый кадр слайдера — грузим раньше остального, это LCP главной -->
-    <link rel="preload" as="image" href="/images/hero/about1.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/images/hero/about1.webp"
+          imagesrcset="/images/hero/sm/about1.webp 800w, /images/hero/about1.webp 1600w"
+          imagesizes="100vw" fetchpriority="high">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"></noscript>
@@ -505,6 +507,211 @@
 
         .hp-hero-actions .btn-hero-ghost:hover {
             background: rgba(255, 255, 255, 0.22);
+        }
+
+
+        /* --- Видео и трансляции --- */
+        .watch-section {
+            padding: 40px 20px;
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .watch-inner {
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .watch-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .watch-title {
+            color: var(--text-dark);
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            margin: 0 0 2px;
+        }
+
+        .watch-sub {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .watch-channel {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 18px;
+            border-radius: 6px;
+            background: #ff0033;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.25s ease;
+        }
+
+        .watch-channel:hover {
+            background: #d9002b;
+        }
+
+        .watch-stage {
+            max-width: 760px;
+        }
+
+        /* Пока это картинка, YouTube ничего не грузит.
+           Превью 1280x720 — ровно 16:9, поэтому кадрировать нечего. */
+        .watch-player {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 0;
+            border: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000000;
+            cursor: pointer;
+            aspect-ratio: 16 / 9;
+        }
+
+        .watch-player img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .watch-player iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .watch-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.62);
+            transition: background 0.25s ease;
+        }
+
+        .watch-play::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-42%, -50%);
+            border-style: solid;
+            border-width: 9px 0 9px 15px;
+            border-color: transparent transparent transparent #ffffff;
+        }
+
+        .watch-player:hover .watch-play {
+            background: #ff0033;
+        }
+
+        .watch-now {
+            color: var(--text-dark);
+            font-size: 0.93rem;
+            font-weight: 700;
+            margin: 10px 0 0;
+        }
+
+        .watch-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(178px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .watch-card {
+            display: block;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            text-align: left;
+            cursor: pointer;
+            color: inherit;
+            font: inherit;
+        }
+
+        /* Превью 320x180 — тоже ровно 16:9, показываем как есть */
+        .watch-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            background: #000000;
+            transition: opacity 0.25s ease;
+        }
+
+        .watch-card:hover img {
+            opacity: 0.78;
+        }
+
+        .watch-card.is-active img {
+            outline: 2px solid #ff0033;
+            outline-offset: 2px;
+        }
+
+        .watch-card-body {
+            display: block;
+            padding-top: 7px;
+        }
+
+        .watch-card-tag {
+            display: block;
+            color: var(--primary-color);
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 2px;
+        }
+
+        .watch-card-title {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            color: var(--text-dark);
+            font-size: 0.82rem;
+            line-height: 1.35;
+            font-weight: 600;
+        }
+
+        .watch-card-date {
+            display: block;
+            color: var(--text-light);
+            font-size: 0.72rem;
+            margin-top: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .watch-section {
+                padding: 30px 16px;
+            }
+
+            .watch-head {
+                align-items: flex-start;
+            }
+
+            .watch-list {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 10px;
+            }
         }
 
         /* --- Главное событие: Чемпионат Азии 2026 --- */
@@ -1309,8 +1516,7 @@
                 margin-top: 20px !important;
             }
 
-            /* Вертикальное отображение новостей и документов на мобильных */
-            .news-grid,
+            /* Документы на мобильных — вертикальным списком */
             .docs-grid {
                 flex-direction: column;
                 overflow-x: visible;
@@ -1319,17 +1525,35 @@
                 gap: 20px;
             }
 
-            .news-card,
             .doc-card {
                 width: 90%;
                 max-width: 350px;
                 flex-shrink: 0;
-                /* Убираем возможность смещения карточек */
                 touch-action: pan-y;
                 user-select: none;
                 -webkit-user-select: none;
                 -moz-user-select: none;
                 -ms-user-select: none;
+            }
+
+            /* Новости листаются пальцем по горизонтали, как на компьютере */
+            .news-grid {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+                gap: 14px;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .news-card {
+                width: 82vw;
+                max-width: 330px;
+                flex: 0 0 auto;
+                scroll-snap-align: center;
+                user-select: none;
+                -webkit-user-select: none;
             }
         }
 
@@ -1483,7 +1707,7 @@
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-content">
-            <img src="/images/logos/footer-logo.png" alt="КФФМ" class="preloader-logo">
+            <img src="/images/logos/footer-logo.png" width="360" height="345" alt="КФФМ" class="preloader-logo">
             <div class="spinner"></div>
             <div class="preloader-text" data-translate="loading">Загрузка...</div>
         </div>
@@ -1499,7 +1723,7 @@
         <div class="container">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="/images/logos/logoinsite.png" width="1279" height="540" loading="eager" fetchpriority="high" decoding="async" alt="ФФМК" style="height: 40px; width: auto;">
+                    <img src="/images/logos/logoinsite.png" width="420" height="177" loading="lazy" decoding="async" decoding="async" alt="ФФМК" style="height: 40px; width: auto;">
                 </div>
                 <div class="language-switcher">
                     <button class="language-btn" id="languageBtn">
@@ -1534,13 +1758,13 @@
     <!-- Первый экран -->
     <section class="welcome-section hp-hero">
         <!-- Слайды: первый грузим приоритетно, остальные фоном — до их показа минимум 3 секунды -->
-        <img class="hp-hero-slide is-active" src="/images/hero/about1.webp" width="1600" height="1067"
+        <img class="hp-hero-slide is-active" src="/images/hero/about1.webp" srcset="/images/hero/sm/about1.webp 800w, /images/hero/about1.webp 1600w" sizes="100vw" width="1600" height="1067"
              fetchpriority="high" decoding="async" alt="Соревнования по функциональному многоборью в Казахстане">
-        <img class="hp-hero-slide" src="/images/hero/alash3.webp" width="1600" height="1067"
+        <img class="hp-hero-slide" src="/images/hero/alash3.webp" srcset="/images/hero/sm/alash3.webp 800w, /images/hero/alash3.webp 1600w" sizes="100vw" width="1600" height="1067"
              fetchpriority="low" decoding="async" alt="" aria-hidden="true">
-        <img class="hp-hero-slide" src="/images/hero/astana1.webp" width="1600" height="899"
+        <img class="hp-hero-slide" src="/images/hero/astana1.webp" srcset="/images/hero/sm/astana1.webp 800w, /images/hero/astana1.webp 1600w" sizes="100vw" width="1600" height="899"
              fetchpriority="low" decoding="async" alt="" aria-hidden="true">
-        <img class="hp-hero-slide" src="/images/hero/about2.webp" width="1600" height="1067"
+        <img class="hp-hero-slide" src="/images/hero/about2.webp" srcset="/images/hero/sm/about2.webp 800w, /images/hero/about2.webp 1600w" sizes="100vw" width="1600" height="1067"
              fetchpriority="low" decoding="async" alt="" aria-hidden="true">
 
         <div class="hp-hero-overlay"></div>
@@ -1569,7 +1793,7 @@
     <!-- Блок федерации -->
     <section class="federation-hero" style="margin-top: 0;">
         <div class="federation-container">
-            <div class="federation-logo left"><img src="/images/logos/logo.png" width="1015" height="787" loading="eager" fetchpriority="high" decoding="async" alt="КФФМ логотип"></div>
+            <div class="federation-logo left"><img src="/images/logos/logo.png" width="640" height="496" loading="lazy" decoding="async" decoding="async" alt="КФФМ логотип"></div>
             <div class="federation-text">
                 <h2 style="color:#333;font-size:18px;margin:3px 0;font-weight:700;text-transform:uppercase;" data-translate="federation_name_kz">
                 ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ
@@ -1577,7 +1801,7 @@
                 <h1 data-translate="federation_name_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
                 <h2 data-translate="federation_name_en">FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</h2>
             </div>
-            <div class="federation-logo right"><img src="/sponsor.png" width="1386" height="980" loading="eager" fetchpriority="high" decoding="async" alt="Спонсор КФФМ"></div>
+            <div class="federation-logo right"><img src="/sponsor.png" width="640" height="453" loading="lazy" decoding="async" decoding="async" alt="Спонсор КФФМ"></div>
         </div>
     </section>
 
@@ -1599,7 +1823,7 @@
 
 
                     <article class="news-card fade-in">
-                        <img src="папка с  азиат сорев\IMG_8042.JPG.jpeg" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="/images/hero/asian2026.webp" width="900" height="601" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
                         <div class="news-content">
                             <div class="news-date">16.08.2026</div>
                             <div class="news-title" data-translate="news20_card_title">ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026 — ИТОГИ!</div>
@@ -1609,7 +1833,7 @@
                     </article>
 
                      <article class="news-card fade-in">
-                        <img src="pairs.jpg" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="pairs.jpg" width="1600" height="900" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
                         <div class="news-content">
                             <div class="news-date">03.08.2026</div>
                             <div class="news-title" data-translate="news19_card_title">Официальное объявление тестов для Азиатского чемпионата iF3 2026!</div>
@@ -1620,7 +1844,7 @@
 
 
                     <article class="news-card fade-in">
-                        <img src="asian5.jpg" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="asian5.jpg" width="1600" height="900" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
                         <div class="news-content">
                             <div class="news-date">31.07.2026</div>
                             <div class="news-title" data-translate="news191_card_title">Чемпионат Азии по функциональному многоборью 2026: всё, что важно знать!</div>
@@ -1630,7 +1854,7 @@
                     </article>
 
 <article class="news-card fade-in">
-                        <img src="/images/news/casia1.webp" alt="Победители и призеры SmartFit 2026" loading="lazy">
+                        <img src="/images/news/casia1.webp" width="1600" height="1067" alt="Победители и призеры SmartFit 2026" loading="lazy">
                         <div class="news-content">
                             <div class="news-date">30.06.2026</div>
                             <div class="news-title" data-translate="news18_card_title">Победители и призеры Открытого Чемпионата Казахстана SmartFit 2026 🏆</div>
@@ -1641,7 +1865,7 @@
 
                     
                     <article class="news-card fade-in">
-                        <img src="asion3.png" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="asion3.png" width="1600" height="1600" alt="Asian Functional Fitness Championship 2026" loading="lazy" decoding="async" fetchpriority="low">
                         <div class="news-content">
                             <div class="news-date">27.01.2026</div>
                             <div class="news-title" data-translate="news11_card_title">Чемпионат Азии по функциональному многоборью 2026 в Казахстане!</div>
@@ -1652,7 +1876,7 @@
 
 
                     <article class="news-card fade-in">
-                        <img src="International Functional Fitness Federation Report on Ethics Complaint From Finnish Functional Fitness.jpg" alt="International Functional Fitness Federation Report on Ethics Complaint From Finnish Functional Fitness" loading="lazy">
+                        <img src="International Functional Fitness Federation Report on Ethics Complaint From Finnish Functional Fitness.jpg" width="1920" height="1080" alt="International Functional Fitness Federation Report on Ethics Complaint From Finnish Functional Fitness" loading="lazy">
                         <div class="news-content">
                             <div class="news-date">31.05.2026</div>
                             <div class="news-title" data-translate="news17_card_title">iF3 получила жалобу от Финской организации функциональной фитнеса (Fin2f)!</div>
@@ -1664,7 +1888,7 @@
 
 
                     <article class="news-card fade-in">
-                        <img src="images\news\man2.jpg" alt="2 новых вице-президента" loading="lazy">
+                        <img src="/images/news/man2.jpg" width="1024" height="1014" alt="2 новых вице-президента" loading="lazy">
                         <div class="news-content">
                             <div class="news-date">02.04.2026</div>
                             <div class="news-title" data-translate="news16_card_title">iF3 провела выборы на должность вице-президента!</div>
@@ -1674,7 +1898,7 @@
                     </article>
 
                     <article class="news-card fade-in">
-                        <img src="imageschampionat\champsmaart.png" alt="SMART FIT Чемпионат Казахстана 2026" loading="lazy">
+                        <img src="/imageschampionat/champsmaart.png" width="798" height="490" alt="SMART FIT Чемпионат Казахстана 2026" loading="lazy">
                         <div class="news-content">
                             <div class="news-date">14.04.2026</div>
                             <div class="news-title" data-translate="news15_card_title">SMART FIT Чемпионат Казахстана 2026!</div>
@@ -1685,7 +1909,7 @@
 
                     
                          <article class="news-card fade-in">
-                        <img src="images\news\glasgow.png" alt="Чемпионат мира IF3 в Шотландии" loading="lazy">
+                        <img src="/images/news/glasgow.png" width="429" height="262" alt="Чемпионат мира IF3 в Шотландии" loading="lazy">
                         <div class="news-content">
                             <div class="news-date">20.03.2026</div>
                             <div class="news-title" data-translate="news14_card_title">Чемпионат мира IF3 в Шотландии!</div>
@@ -1696,7 +1920,7 @@
 
 
                     <article class="news-card fade-in">
-                        <img src="images\news\moderia.png" alt="Панамериканский чемпионат" loading="lazy">
+                        <img src="/images/news/moderia.png" width="746" height="428" alt="Панамериканский чемпионат" loading="lazy">
                         <div class="news-content">
                             <div class="news-date">24.03.2026</div>
                             <div class="news-title" data-translate="news13_card_title">Панамериканский чемпионат по функциональному фитнесу IF3!</div>
@@ -1707,7 +1931,7 @@
 
                     
                     <article class="news-card fade-in">
-                        <img src="/images/news/alash5main.jpeg" width="6000" height="4000" alt="Alash Winter Cup 2026" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="/images/news/alash5main.jpeg" width="1600" height="1067" alt="Alash Winter Cup 2026" loading="lazy" decoding="async" fetchpriority="low">
                         <div class="news-content">
                             <div class="news-date">1.02.2026</div>
                             <div class="news-title" data-translate="news12_card_title">Alash Winter Cup 2026: Главное событие зимы в мире функционального многоборья!</div>
@@ -1720,7 +1944,7 @@
                     <article class="news-card fade-in">
                         <picture>
                             <source srcset="/images/news/astanaopencupr.jpg" type="image/webp">
-                            <img src="/images/news/astanaopencupr.jpg" alt="ASTANA OPEN CUP 2026" loading="lazy" decoding="async" fetchpriority="low">
+                            <img src="/images/news/astanaopencupr.jpg" width="1600" height="930" alt="ASTANA OPEN CUP 2026" loading="lazy" decoding="async" fetchpriority="low">
                         </picture>
                         <div class="news-content">
                             <div class="news-date">08.01.2026</div>
@@ -1734,7 +1958,7 @@
                     <article class="news-card fade-in">
                         <picture>
       <source srcset="/images/news/kalen2.webp" type="image/webp">
-      <img src="/images/news/kalen2.webp" width="8000" height="5267" loading="lazy" decoding="async" fetchpriority="low" alt="Календарь соревнований 2026">
+      <img src="/images/news/kalen2.webp" width="1920" height="1452" loading="lazy" decoding="async" fetchpriority="low" alt="Календарь соревнований 2026">
     </picture>
                         <div class="news-content">
                             <div class="news-date">01.02.2026</div>
@@ -1746,7 +1970,7 @@
                     <article class="news-card fade-in">
                         <picture>
       <source srcset="/images/news/novygod.webp" type="image/webp">
-      <img src="/images/news/novygod.jpg" width="4500" height="2560" loading="lazy" decoding="async" fetchpriority="low" alt="CrossFit Challenge 2025">
+      <img src="/images/news/novygod.jpg" width="1600" height="1200" loading="lazy" decoding="async" fetchpriority="low" alt="CrossFit Challenge 2025">
     </picture>
                         <div class="news-content">
                             <div class="news-date">19.12.2025</div>
@@ -1758,7 +1982,7 @@
                      <article class="news-card fade-in">
                         <picture>
       <source srcset="/images/news/litva1.webp" type="image/webp">
-            <img src="/images/news/litva1.webp" width="3856" height="2191" loading="lazy" decoding="async" fetchpriority="low" alt="CrossFit Challenge 2025">
+            <img src="/images/news/litva1.webp" width="1600" height="988" loading="lazy" decoding="async" fetchpriority="low" alt="CrossFit Challenge 2025">
     </picture>
                         <div class="news-content">
                             <div class="news-date">05.12.2025</div>
@@ -1770,7 +1994,7 @@
                     <article class="news-card fade-in">
                         <picture>
       <source srcset="/images/news/austr1.webp" type="image/webp">
-      <img src="/images/news/austr1.png" width="2870" height="1637" loading="lazy" decoding="async" fetchpriority="low" alt="CrossFit Challenge 2025">
+      <img src="/images/news/austr1.png" width="1600" height="1008" loading="lazy" decoding="async" fetchpriority="low" alt="CrossFit Challenge 2025">
     </picture>
                         <div class="news-content">
                             <div class="news-date">25.11.2025</div>
@@ -1782,7 +2006,7 @@
                     <article class="news-card fade-in">
                         <picture>
       <source srcset="/images/news/livii.webp" type="image/webp">
-      <img src="/images/news/livii.jpg" width="851" height="485" loading="lazy" decoding="async" fetchpriority="low" alt="Summer Games 2025">
+      <img src="/images/news/livii.jpg" width="1080" height="485" loading="lazy" decoding="async" fetchpriority="low" alt="Summer Games 2025">
     </picture>
                         <div class="news-content">
                             <div class="news-date">17.10.2025</div>
@@ -1825,14 +2049,14 @@
                 <div class="doc-card fade-in">
                     <div class="news-date">01.01.2020</div>
                     <div class="news-title" data-translate="doc_anti_doping">Антидопинговые Правила и Правила проведения антидопинг-контроля на соревнованиях</div>
-                    <img src="imageskz\mezhde.png" alt="Карта залов" loading="lazy">
+                    <img src="/imageskz/mezhde.png" width="868" height="509" alt="Карта залов" loading="lazy">
                     <a href="/docs8" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                 </div>
 
                     <div class="doc-card fade-in">
                         <div class="news-date">8.01.2026</div>
                         <div class="news-title" data-translate="doc_astana_cup_title">Astana Open Cup Regulations</div>
-                        <img src="/images/news/pologenieastana.png" width="8000" height="5267" alt="Положение Astana Open Cup" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="/images/news/pologenieastana.png" width="1080" height="700" alt="Положение Astana Open Cup" loading="lazy" decoding="async" fetchpriority="low">
                         <a href="/docs7" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                     </div>
 
@@ -1841,7 +2065,7 @@
                         <div class="news-title" data-translate="doc_calendar_2026_title">2026 Competition Calendar</div>
                         <picture>
                             <source srcset="/kalendarnew2026.png" type="image/webp">
-                            <img src="/kalendarnew2026.png" width="8000" height="5267" alt="Календарь соревнований 2026" loading="lazy" decoding="async" fetchpriority="low">
+                            <img src="/kalendarnew2026.png" width="1080" height="1440" alt="Календарь соревнований 2026" loading="lazy" decoding="async" fetchpriority="low">
                         </picture>
                         <a href="/docs5" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                     </div>
@@ -1851,7 +2075,7 @@
                         <div class="news-title" data-translate="doc_masters_report_title">Independent Expert Report on iF3 World Championship 2025 - Masters</div>
                         <picture>
                             <source srcset="/images/competitions/masterworld.jpg" type="image/webp">
-                            <img src="/images/competitions/masterworld.jpg" width="8000" height="5267" alt="Отчёт Чемпионата мира iF3 2025 Masters" loading="lazy" decoding="async" fetchpriority="low">
+                            <img src="/images/competitions/masterworld.jpg" width="1600" height="899" alt="Отчёт Чемпионата мира iF3 2025 Masters" loading="lazy" decoding="async" fetchpriority="low">
                         </picture>
                         <a href="/docs6" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                     </div>
@@ -1861,7 +2085,7 @@
                         <div class="news-title" data-translate="doc_kz_champ_title">Kazakhstan Championship Regulations</div>
                         <picture>
       <source srcset="/images/news/pologenie.webp" type="image/webp">
-      <img src="/images/news/pologenie.webp" width="2480" height="2480" alt="Положение чемпионата" loading="lazy" decoding="async" fetchpriority="low">
+      <img src="/images/news/pologenie.webp" width="1600" height="1600" alt="Положение чемпионата" loading="lazy" decoding="async" fetchpriority="low">
     </picture>
                         <a href="/docs1" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                     </div>
@@ -1869,7 +2093,7 @@
                     <div class="doc-card fade-in">
                         <div class="news-date">10.05.2025</div>
                         <div class="news-title" data-translate="doc_gym_map_title">Gym Map</div>
-                        <img src="/images/logos/mapslogo.png" alt="Карта залов" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="/images/logos/mapslogo.png" width="480" height="264" alt="Карта залов" loading="lazy" decoding="async" fetchpriority="low">
                         <a href="/map" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                     </div>
                     
@@ -1878,7 +2102,7 @@
                         <div class="news-title" data-translate="doc_calendar_title">Competition Calendar</div>
                         <picture>
       <source srcset="/images/news/kalen.webp" type="image/webp">
-      <img src="/images/news/kalen.webp" width="8000" height="5267" alt="Календарь" loading="lazy" decoding="async" fetchpriority="low">
+      <img src="/images/news/kalen.webp" width="1920" height="1264" alt="Календарь" loading="lazy" decoding="async" fetchpriority="low">
     </picture>
                         <a href="/docs3" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                     </div>
@@ -1888,7 +2112,7 @@
                         <div class="news-title" data-translate="doc_standards_title">Movement Standards</div>
                         <picture>
       <source srcset="/images/news/ruls.webp" type="image/webp">
-      <img src="/images/news/ruls.jpg" width="2548" height="1713" alt="Стандарты" loading="lazy" decoding="async" fetchpriority="low">
+      <img src="/images/news/ruls.jpg" width="1920" height="1291" alt="Стандарты" loading="lazy" decoding="async" fetchpriority="low">
     </picture>
                         <a href="/docs4" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                     </div>
@@ -1898,7 +2122,7 @@
                         <div class="news-title" data-translate="doc_accreditation_title">IF3 Accreditation in Kazakhstan</div>
                         <picture>
                             <source srcset="/images/competitions/acred.png" type="image/webp">
-                            <img src="/images/competitions/acred.png" alt="Аккредитация" loading="lazy" decoding="async" fetchpriority="low">
+                            <img src="/images/competitions/acred.png" width="433" height="295" alt="Аккредитация" loading="lazy" decoding="async" fetchpriority="low">
                         </picture>
                         <a href="/docs2" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                     </div>
@@ -1939,7 +2163,7 @@
                     </div>
                     <div class="champ-row">
                         <dt data-translate="champ_label_sponsor">Генеральный спонсор</dt>
-                        <dd><img class="champ-sponsor-logo" src="/sponsor2.png" width="1386" height="518" loading="lazy" decoding="async" alt="OLYMP"></dd>
+                        <dd><img class="champ-sponsor-logo" src="/sponsor2.png" width="420" height="153" loading="lazy" decoding="async" alt="OLYMP"></dd>
                     </div>
                 </dl>
 
@@ -1948,6 +2172,113 @@
                     <a href="/media#asian2026" class="btn btn-champ-ghost" data-translate="champ_btn_photo">Фото</a>
                     <a href="/news21" class="btn btn-champ-ghost" data-translate="read_more">Подробнее</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Видео и трансляции -->
+    <section class="watch-section" id="watch">
+        <div class="watch-inner">
+            <div class="watch-head">
+                <div>
+                    <h2 class="watch-title">MEDIA / WATCH</h2>
+                    <p class="watch-sub" data-translate="watch_sub">Прямые эфиры, записи соревнований и церемонии награждения</p>
+                </div>
+                <a class="watch-channel" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube" style="margin-right: 8px;"></i><span data-translate="watch_channel">Канал на YouTube</span>
+                </a>
+            </div>
+
+            <div class="watch-stage">
+                <button class="watch-player" type="button" id="watchPlayer" data-video="Ip9ZGfXh7mE"
+                        aria-label="Церемония открытия «Чемпионата Азии по функциональному многоборью 2026»">
+                    <img id="watchPoster" src="https://i.ytimg.com/vi/Ip9ZGfXh7mE/maxresdefault.jpg"
+                         width="1280" height="720" loading="lazy" decoding="async" alt="">
+                    <span class="watch-play" aria-hidden="true"></span>
+                </button>
+                <p class="watch-now" id="watchNow">Церемония открытия «Чемпионата Азии по функциональному многоборью 2026»</p>
+            </div>
+
+            <div class="watch-list">
+                <button class="watch-card" type="button" data-video="Ip9ZGfXh7mE" data-title="Церемония открытия «Чемпионата Азии по функциональному многоборью 2026»">
+                    <img src="https://i.ytimg.com/vi/Ip9ZGfXh7mE/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_opening">Открытие</span>
+                        <span class="watch-card-title">Церемония открытия «Чемпионата Азии по функциональному многоборью 2026»</span>
+                        <span class="watch-card-date">15.08.2026</span>
+                    </span>
+                </button>
+                <button class="watch-card" type="button" data-video="ACmi3zRyfdM" data-title="Чемпионат Азии по функциональному многоборью 2026 — 1 день">
+                    <img src="https://i.ytimg.com/vi/ACmi3zRyfdM/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_live">Эфир</span>
+                        <span class="watch-card-title">Чемпионат Азии по функциональному многоборью 2026 — 1 день</span>
+                        <span class="watch-card-date">16.08.2026</span>
+                    </span>
+                </button>
+                <button class="watch-card" type="button" data-video="vIulG81YtCA" data-title="Чемпионат Азии по функциональному многоборью 2026">
+                    <img src="https://i.ytimg.com/vi/vIulG81YtCA/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_live">Эфир</span>
+                        <span class="watch-card-title">Чемпионат Азии по функциональному многоборью 2026</span>
+                        <span class="watch-card-date">16.08.2026</span>
+                    </span>
+                </button>
+                <button class="watch-card" type="button" data-video="gtFfMPwhT7s" data-title="Церемония награждения «Asian functional fitness Championship 2026»">
+                    <img src="https://i.ytimg.com/vi/gtFfMPwhT7s/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_awards">Награждение</span>
+                        <span class="watch-card-title">Церемония награждения «Asian functional fitness Championship 2026»</span>
+                        <span class="watch-card-date">16.08.2026</span>
+                    </span>
+                </button>
+                <button class="watch-card" type="button" data-video="qZOF67bJ1po" data-title="Церемония награждения «Asian functional fitness Championship 2026»">
+                    <img src="https://i.ytimg.com/vi/qZOF67bJ1po/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_awards">Награждение</span>
+                        <span class="watch-card-title">Церемония награждения «Asian functional fitness Championship 2026»</span>
+                        <span class="watch-card-date">19.08.2026</span>
+                    </span>
+                </button>
+                <button class="watch-card" type="button" data-video="ycmJ_vbIt1E" data-title="Чемпионат Азии по функциональному многоборью 2026 (WORKOUT 3 STRENGTH)">
+                    <img src="https://i.ytimg.com/vi/ycmJ_vbIt1E/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_competition">Соревнования</span>
+                        <span class="watch-card-title">Чемпионат Азии по функциональному многоборью 2026 (WORKOUT 3 STRENGTH)</span>
+                    </span>
+                </button>
+                <button class="watch-card" type="button" data-video="Be5YUOchCuA" data-title="Smart Fit Kazakhstan Open Championship 2026 — День 2">
+                    <img src="https://i.ytimg.com/vi/Be5YUOchCuA/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_live">Эфир</span>
+                        <span class="watch-card-title">Smart Fit Kazakhstan Open Championship 2026 — День 2</span>
+                        <span class="watch-card-date">14.08.2026</span>
+                    </span>
+                </button>
+                <button class="watch-card" type="button" data-video="pFDJMQLKyNw" data-title="Smart Fit Kazakhstan Open Championship 2026">
+                    <img src="https://i.ytimg.com/vi/pFDJMQLKyNw/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_live">Эфир</span>
+                        <span class="watch-card-title">Smart Fit Kazakhstan Open Championship 2026</span>
+                        <span class="watch-card-date">21.06.2026</span>
+                    </span>
+                </button>
+                <button class="watch-card" type="button" data-video="06Y7kp4AN6I" data-title="Международный турнир «Astana Open Cup 2026»">
+                    <img src="https://i.ytimg.com/vi/06Y7kp4AN6I/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_competition">Соревнования</span>
+                        <span class="watch-card-title">Международный турнир «Astana Open Cup 2026»</span>
+                        <span class="watch-card-date">07.05.2026</span>
+                    </span>
+                </button>
+                <button class="watch-card" type="button" data-video="JNsJ2lF0YKE" data-title="Церемония награждения «Astana Open 2026»">
+                    <img src="https://i.ytimg.com/vi/JNsJ2lF0YKE/mqdefault.jpg" width="320" height="180" loading="lazy" decoding="async" alt="">
+                    <span class="watch-card-body">
+                        <span class="watch-card-tag" data-translate="watch_tag_awards">Награждение</span>
+                        <span class="watch-card-title">Церемония награждения «Astana Open 2026»</span>
+                        <span class="watch-card-date">13.05.2026</span>
+                    </span>
+                </button>
             </div>
         </div>
     </section>
@@ -1985,7 +2316,7 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <img src="/images/logos/logoinsite.png" width="1279" height="540" loading="lazy" decoding="async" fetchpriority="low" alt="Логотип Федерации" class="footer-logo">
+                    <img src="/images/logos/logoinsite.png" width="420" height="177" loading="lazy" decoding="async" fetchpriority="low" alt="Логотип Федерации" class="footer-logo">
                 </div>
                 
                 <nav class="footer-nav">
@@ -1999,19 +2330,19 @@
                 
                 <div class="footer-socials">
                     <a class="social-btn" href="https://instagram.com/fffk.20_23" target="_blank" rel="noopener">
-                        <img src="/images/logos/instagramlogo.png" width="1563" height="1563" alt="Instagram" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="/images/logos/instagramlogo.png" width="96" height="96" alt="Instagram" loading="lazy" decoding="async" fetchpriority="low">
                     </a>
                     <a class="social-btn" href="https://t.me/fffkkz2023" target="_blank" rel="noopener">
-                        <img src="/images/logos/telegramlogo.png" alt="Telegram" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="/images/logos/telegramlogo.png" width="96" height="96" alt="Telegram" loading="lazy" decoding="async" fetchpriority="low">
                     </a>
                     <a class="social-btn" href="https://www.facebook.com/share/1DFY4jSz3e/?mibextid=wwXIfr" target="_blank" rel="noopener">
-                        <img src="/images/logos/facebooklogo.png" width="1563" height="1563" alt="Facebook" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="/images/logos/facebooklogo.png" width="96" height="96" alt="Facebook" loading="lazy" decoding="async" fetchpriority="low">
                     </a>
                     <a class="social-btn" href="https://www.tiktok.com/@fffk_funcsport?_t=ZM-90WDZha6UqB&_r=1" target="_blank" rel="noopener">
-                        <img src="/images/logos/tiktoklogo.png" alt="TikTok" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="/images/logos/tiktoklogo.png" width="96" height="88" alt="TikTok" loading="lazy" decoding="async" fetchpriority="low">
                     </a>
                     <a class="social-btn" href="https://youtube.com/@fffk2023" target="_blank" rel="noopener">
-                        <img src="/images/logos/youtubelogo.png" alt="YouTube" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="/images/logos/youtubelogo.png" width="96" height="84" alt="YouTube" loading="lazy" decoding="async" fetchpriority="low">
                     </a>
                 </div>
             </div>
@@ -2183,40 +2514,9 @@
             }, 2000);
         });
 
-        // Дополнительные touch события для мобильных устройств
-        let startX = 0;
-        let startY = 0;
-
-        document.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-        });
-
-        document.addEventListener('touchend', (e) => {
-            if (!startX || !startY) return;
-            
-            const endX = e.changedTouches[0].clientX;
-            const endY = e.changedTouches[0].clientY;
-            
-            const diffX = startX - endX;
-            const diffY = startY - endY;
-            
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                const target = e.target.closest('.news-grid, .docs-grid');
-                if (target) {
-                    if (diffX > 0) {
-                        // Свайп влево - прокрутка вправо
-                        target.scrollBy({ left: 420, behavior: 'smooth' });
-                    } else {
-                        // Свайп вправо - прокрутка влево
-                        target.scrollBy({ left: -420, behavior: 'smooth' });
-                    }
-                }
-            }
-            
-            startX = 0;
-            startY = 0;
-        });
+        // Свайп по лентам новостей и документов обрабатывает сам браузер:
+        // у них overflow-x: auto и scroll-snap. Своя прокрутка по touchend
+        // складывалась бы с нативной и давала двойной скачок.
     </script>
     <script>
         // Контроль времени загрузки preloader (минимум 300ms, максимум 2000ms)
@@ -2521,6 +2821,44 @@
         });
 
         start();
+    })();
+    </script>
+
+    <script>
+    // Видео грузится только по клику: до этого на странице лежит картинка, а не плеер YouTube
+    (function () {
+        var player = document.getElementById('watchPlayer');
+        var caption = document.getElementById('watchNow');
+        if (!player) return;
+
+        function play(videoId, title) {
+            var frame = document.createElement('iframe');
+            frame.src = 'https://www.youtube-nocookie.com/embed/' + videoId +
+                        '?autoplay=1&rel=0&modestbranding=1';
+            frame.title = title || 'YouTube';
+            frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            frame.allowFullscreen = true;
+            player.innerHTML = '';
+            player.appendChild(frame);
+            player.classList.add('is-playing');
+            if (caption && title) caption.textContent = title;
+        }
+
+        player.addEventListener('click', function () {
+            if (player.classList.contains('is-playing')) return;
+            play(player.getAttribute('data-video'), caption ? caption.textContent : '');
+        });
+
+        document.querySelectorAll('.watch-card').forEach(function (card) {
+            card.addEventListener('click', function () {
+                document.querySelectorAll('.watch-card.is-active').forEach(function (el) {
+                    el.classList.remove('is-active');
+                });
+                card.classList.add('is-active');
+                play(card.getAttribute('data-video'), card.getAttribute('data-title'));
+                player.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
     })();
     </script>
 </body>
