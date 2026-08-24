@@ -389,7 +389,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 90px 20px calc(70px + var(--wave-h));
+            /* Уменьшаем верхний отступ в 3 раза (90px -> 30px) по просьбе */
+            padding: 30px 20px calc(70px + var(--wave-h));
             overflow: hidden;
             background: #0b2340;
         }
@@ -451,11 +452,12 @@
             justify-content: center;
             gap: 22px;
             width: fit-content;
-            margin: 0 auto 22px;
-            padding: 12px 24px;
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.94);
-            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.28);
+            /* уменьшаем отступ снизу, и убираем белую плашку */
+            margin: 0 auto 12px;
+            padding: 4px 8px;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
         }
 
         .hp-hero-logos img {
