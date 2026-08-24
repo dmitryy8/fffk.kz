@@ -2225,7 +2225,69 @@
       kz: 'Біздің ұйым бүкіл Қазақстаннан спортшыларды біріктіреді. Біз функционалдық фитнесті дамытамыз және функционалдық көпсайыс бойынша жарыстар өткіземіз. Біздің спорттық қауымдастыққа қосылыңыз!',
       en: 'Our organization unites athletes from all over Kazakhstan. We develop functional fitness and hold functional fitness competitions. Join our sports community!'
     },
-    
+    home_hero_kicker: {
+      ru: 'Функциональное многоборье Казахстана',
+      kz: 'Қазақстанның функционалдық көпсайысы',
+      en: 'Functional fitness in Kazakhstan'
+    },
+    home_hero_news: {
+      ru: 'Последние новости',
+      kz: 'Соңғы жаңалықтар',
+      en: 'Latest news'
+    },
+
+    // Блок «Главное событие» на главной — Чемпионат Азии 2026
+    champ_overline: {
+      ru: 'Главное событие года',
+      kz: 'Жылдың басты оқиғасы',
+      en: 'Main event of the year'
+    },
+    champ_venue: {
+      ru: 'Астана, ЛАСК Qazaqstan',
+      kz: 'Астана, ЛАСК Qazaqstan',
+      en: 'Astana, LASK Qazaqstan'
+    },
+    champ_date: {
+      ru: '14–16 августа 2026',
+      kz: '2026 жылғы 14–16 тамыз',
+      en: '14–16 August 2026'
+    },
+    champ_label_winners: {
+      ru: 'Общий зачёт',
+      kz: 'Жалпы есеп',
+      en: 'Team standings'
+    },
+    champ_about: {
+      ru: 'Первый официальный Чемпионат Азии, принятый Казахстаном. Спортсмены из восьми стран разыграли награды в индивидуальных, парных, юниорских и мастерских категориях. Призовой фонд — 14 000 000 тенге.',
+      kz: 'Қазақстан қабылдаған алғашқы ресми Азия чемпионаты. Сегіз елден келген спортшылар жеке, жұптық, жасөспірімдер және мастерлер санаттарында жүлделерді сарапқа салды. Сыйлық қоры — 14 000 000 теңге.',
+      en: 'The first official Asian Championship hosted by Kazakhstan. Athletes from eight countries competed for medals in the individual, pairs, junior and masters divisions. Prize fund — 14,000,000 tenge.'
+    },
+    champ_label_partners: {
+      ru: 'Партнёры',
+      kz: 'Серіктестер',
+      en: 'Partners'
+    },
+    champ_partners: {
+      ru: 'BYD, Astana Concert, WOD Friends, Регион 715, Black Бери, Градус, TYR',
+      kz: 'BYD, Astana Concert, WOD Friends, Регион 715, Black Бери, Градус, TYR',
+      en: 'BYD, Astana Concert, WOD Friends, Region 715, Black Beri, Gradus, TYR'
+    },
+    champ_label_sponsor: {
+      ru: 'Генеральный спонсор',
+      kz: 'Бас демеуші',
+      en: 'General Sponsor'
+    },
+    champ_btn_results: {
+      ru: 'Результаты',
+      kz: 'Нәтижелер',
+      en: 'Results'
+    },
+    champ_btn_photo: {
+      ru: 'Фото',
+      kz: 'Фото',
+      en: 'Photos'
+    },
+
     // Блок федерации
     federation_name_kz: {
       ru: 'ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ',

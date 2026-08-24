@@ -42,6 +42,9 @@
     <meta name="apple-mobile-web-app-title" content="КФФМ">
     
     
+    <!-- Первый кадр слайдера — грузим раньше остального, это LCP главной -->
+    <link rel="preload" as="image" href="/images/hero/about1.webp" fetchpriority="high">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="/mobile.css?v=20260123205533" media="(max-width:768px)">
@@ -372,6 +375,330 @@
 
         .btn:hover::after {
             transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Первый экран: фотослайдер под волнистой маской.
+           Маска на секции обрезает и фотографии тоже — волна получается частью снимка. */
+        .hp-hero {
+            position: relative;
+            isolation: isolate;
+            min-height: clamp(460px, 68vh, 680px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 90px 20px calc(70px + var(--wave-h));
+            overflow: hidden;
+            background: #0b2340;
+        }
+
+        .hp-hero-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transform: scale(1.07);
+            transition: opacity 1.2s ease-in-out, transform 5.5s ease-out;
+            will-change: opacity;
+            z-index: -2;
+        }
+
+        .hp-hero-slide.is-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Голубое затемнение поверх фотографии */
+        .hp-hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background:
+                linear-gradient(135deg, rgba(11, 99, 183, 0.88) 0%, rgba(43, 120, 185, 0.7) 42%, rgba(9, 32, 60, 0.82) 100%),
+                radial-gradient(120% 90% at 50% 30%, rgba(0, 0, 0, 0) 40%, rgba(6, 24, 46, 0.55) 100%);
+        }
+
+        .hp-hero-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hp-hero-kicker {
+            display: inline-block;
+            margin-bottom: 22px;
+            padding: 9px 20px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.32);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: #ffffff;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .hp-hero-kz,
+        .hp-hero-en {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+        }
+
+        .hp-hero-title {
+            color: #ffffff;
+            font-size: clamp(1.65rem, 4vw, 3.1rem);
+            font-weight: 900;
+            line-height: 1.15;
+            text-transform: uppercase;
+            margin: 10px 0;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+        }
+
+        .hp-hero-lead {
+            max-width: 760px;
+            margin: 24px auto 0;
+            color: rgba(255, 255, 255, 0.94);
+            font-size: clamp(1rem, 1.5vw, 1.16rem);
+            line-height: 1.75;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+        }
+
+        .hp-hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 36px;
+        }
+
+        .hp-hero-actions .btn {
+            font-size: 15px;
+            padding: 15px 32px;
+        }
+
+        .hp-hero-actions .btn-hero-solid {
+            background: #ffffff;
+            color: var(--primary-color);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+        }
+
+        .hp-hero-actions .btn-hero-solid:hover {
+            background: #ffffff;
+            box-shadow: 0 16px 38px rgba(0, 0, 0, 0.34);
+        }
+
+        .hp-hero-actions .btn-hero-ghost {
+            background: rgba(255, 255, 255, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0.65);
+            color: #ffffff;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+
+        .hp-hero-actions .btn-hero-ghost:hover {
+            background: rgba(255, 255, 255, 0.22);
+        }
+
+        /* --- Главное событие: Чемпионат Азии 2026 --- */
+        .champ-section {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            padding: 52px 20px;
+        }
+
+        .champ-bg {
+            position: absolute;
+            inset: -25px;
+            z-index: -2;
+            background: url('/images/hero/asian2026.webp') center/cover no-repeat;
+            filter: blur(16px);
+        }
+
+        .champ-tint {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(120deg, rgba(9, 62, 120, 0.94) 0%, rgba(11, 99, 183, 0.88) 50%, rgba(7, 28, 54, 0.94) 100%);
+        }
+
+        .champ-grid {
+            max-width: 1060px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+            gap: 30px;
+            align-items: start;
+        }
+
+        .champ-media {
+            display: grid;
+            gap: 10px;
+        }
+
+        /* Без кадрирования: показываем снимки в их исходных пропорциях */
+        .champ-photo {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .champ-overline {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin: 0 0 6px;
+        }
+
+        .champ-title {
+            color: #ffffff;
+            font-size: clamp(1.35rem, 2.4vw, 2rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0 0 10px;
+        }
+
+        .champ-meta {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.95rem;
+            margin: 0 0 16px;
+        }
+
+        .champ-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin: 0 0 18px;
+        }
+
+        .champ-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 14px;
+            padding: 11px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.16);
+            color: #ffffff;
+            font-size: 0.93rem;
+        }
+
+        .champ-row dt {
+            flex: 0 0 128px;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .champ-row dd {
+            flex: 1;
+            min-width: 180px;
+            margin: 0;
+        }
+
+        .champ-row dd b {
+            font-weight: 700;
+        }
+
+        .champ-sponsor-logo {
+            width: 104px;
+            height: auto;
+            vertical-align: middle;
+            background: #ffffff;
+            border-radius: 4px;
+            padding: 4px 7px;
+        }
+
+        .champ-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 22px;
+        }
+
+        .champ-actions .btn {
+            padding: 11px 22px;
+            font-size: 13px;
+            border-radius: 6px;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .champ-actions .btn-champ-solid {
+            background: #ffffff;
+            color: var(--primary-color);
+        }
+
+        .champ-actions .btn-champ-solid:hover {
+            background: #ffffff;
+        }
+
+        .champ-actions .btn-champ-ghost {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            color: #ffffff;
+        }
+
+        .champ-actions .btn-champ-ghost:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        @media (max-width: 860px) {
+            .champ-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .champ-media {
+                max-width: 380px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .champ-section {
+                padding: 38px 16px;
+            }
+
+            .champ-row dt {
+                flex: 0 0 100%;
+            }
+
+            .champ-actions .btn {
+                flex: 1 1 auto;
+                text-align: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hp-hero-slide {
+                transition: opacity 0.01ms;
+                transform: none;
+            }
+
+            .hp-hero-slide.is-active {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hp-hero {
+                min-height: 78vh;
+                padding: 80px 18px calc(52px + var(--wave-h));
+            }
+
+            .hp-hero-actions {
+                gap: 12px;
+            }
+
+            .hp-hero-actions .btn {
+                width: 100%;
+                max-width: 320px;
+            }
         }
 
         /* Приветственный блок */
@@ -801,6 +1128,9 @@
         /* Плавная прокрутка */
         html {
             scroll-behavior: smooth;
+            /* Вместе с overflow-x у body страховка от горизонтальной прокрутки:
+               иначе секции во всю ширину обрываются там, где страница уезжает за экран */
+            overflow-x: hidden;
         }
 
         /* Анимация появления элементов */
@@ -1201,15 +1531,38 @@
         </div>
     </nav>
 
-    <!-- Приветственный блок -->
-    <section class="welcome-section" style="background: linear-gradient(135deg, #0b63b7 0%, #2b78b9 100%); padding: 50px 20px; text-align: center; box-shadow: 0 4px 20px rgba(11, 99, 183, 0.3);">
-        <div class="container" style="max-width: 1000px; margin: 0 auto;">
-            <h2 style="font-size: 32px; color: #ffffff; margin-bottom: 20px; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2);" data-translate="home_welcome_title">
-                Добро пожаловать на наш сайт!
-            </h2>
-            <p style="color: #ffffff; font-size: 19px; line-height: 1.8; margin: 0; font-weight: 400; opacity: 0.95;" data-translate="home_welcome_text">
+    <!-- Первый экран -->
+    <section class="welcome-section hp-hero">
+        <!-- Слайды: первый грузим приоритетно, остальные фоном — до их показа минимум 3 секунды -->
+        <img class="hp-hero-slide is-active" src="/images/hero/about1.webp" width="1600" height="1067"
+             fetchpriority="high" decoding="async" alt="Соревнования по функциональному многоборью в Казахстане">
+        <img class="hp-hero-slide" src="/images/hero/alash3.webp" width="1600" height="1067"
+             fetchpriority="low" decoding="async" alt="" aria-hidden="true">
+        <img class="hp-hero-slide" src="/images/hero/astana1.webp" width="1600" height="899"
+             fetchpriority="low" decoding="async" alt="" aria-hidden="true">
+        <img class="hp-hero-slide" src="/images/hero/about2.webp" width="1600" height="1067"
+             fetchpriority="low" decoding="async" alt="" aria-hidden="true">
+
+        <div class="hp-hero-overlay"></div>
+
+        <div class="hp-hero-inner">
+            <div class="hp-hero-kicker" data-translate="home_hero_kicker">Функциональное многоборье Казахстана</div>
+            <p class="hp-hero-kz" data-translate="federation_name_kz">ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ</p>
+            <h1 class="hp-hero-title" data-translate="federation_name_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
+            <p class="hp-hero-en" data-translate="federation_name_en">FUNCTIONAL FITNESS FEDERATION KAZAKHSTAN</p>
+            <p class="hp-hero-lead" data-translate="home_welcome_text">
                 Наша организация объединяет спортсменов со всего Казахстана. Мы развиваем функциональный фитнес и проводим соревнования по функциональному многоборью. Присоединяйтесь к нашему спортивному сообществу!
             </p>
+            <div class="hp-hero-actions">
+                <a href="/competitions" class="btn btn-hero-solid">
+                    <i class="fas fa-trophy" style="margin-right: 8px;"></i>
+                    <span data-translate="nav_competitions">Соревнования</span>
+                </a>
+                <a href="/news" class="btn btn-hero-ghost">
+                    <i class="fas fa-newspaper" style="margin-right: 8px;"></i>
+                    <span data-translate="home_hero_news">Последние новости</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -1272,7 +1625,7 @@
                             <div class="news-date">31.07.2026</div>
                             <div class="news-title" data-translate="news191_card_title">Чемпионат Азии по функциональному многоборью 2026: всё, что важно знать!</div>
                             <div class="news-excerpt" data-translate="news191_card_excerpt">На этой странице собрана ключевая информация о Чемпионате Азии по функциональному многоборью 2026...</div>
-                            <a href="/news191" class="btn btn-primary" data-translate="read_more">Подробнее</a>
+                            <a href="/news21" class="btn btn-primary" data-translate="read_more">Подробнее</a>
                         </div>
                     </article>
 
@@ -1550,6 +1903,50 @@
                         <a href="/docs2" class="btn btn-primary" style="margin-top: auto;" data-translate="read_more">Подробнее</a>
                     </div>
                         
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Главное событие: Чемпионат Азии 2026 -->
+    <section class="champ-section" id="asian2026">
+        <div class="champ-bg" aria-hidden="true"></div>
+        <div class="champ-tint" aria-hidden="true"></div>
+
+        <div class="champ-grid">
+            <div class="champ-media fade-in">
+                <img class="champ-photo" src="/images/hero/asian2026.webp" width="900" height="601"
+                     loading="lazy" decoding="async" alt="Церемония награждения Чемпионата Азии 2026">
+                <img class="champ-photo" src="/images/hero/asian2026b.webp" width="880" height="880"
+                     loading="lazy" decoding="async" alt="Эмблема Asian Functional Fitness Championship 2026">
+            </div>
+
+            <div class="fade-in">
+                <p class="champ-overline" data-translate="champ_overline">Главное событие года</p>
+                <h2 class="champ-title">ASIAN FUNCTIONAL FITNESS CHAMPIONSHIP 2026</h2>
+                <p class="champ-meta"><span data-translate="champ_venue">Астана, ЛАСК Qazaqstan</span> · <span data-translate="champ_date">14–16 августа 2026</span></p>
+
+                <p class="champ-text" data-translate="champ_about">Первый официальный Чемпионат Азии, принятый Казахстаном. Спортсмены из восьми стран разыграли награды в индивидуальных, парных, юниорских и мастерских категориях. Призовой фонд — 14 000 000 тенге.</p>
+
+                <dl style="margin: 0;">
+                    <div class="champ-row">
+                        <dt data-translate="champ_label_winners">Общий зачёт</dt>
+                        <dd><b>1.</b> <span data-translate="news20_team_kz">Казахстан</span> &nbsp; <b>2.</b> <span data-translate="news20_team_ir">Иран</span> &nbsp; <b>3.</b> <span data-translate="news20_team_jo">Иордания</span></dd>
+                    </div>
+                    <div class="champ-row">
+                        <dt data-translate="champ_label_partners">Партнёры</dt>
+                        <dd data-translate="champ_partners">BYD, Astana Concert, WOD Friends, Регион 715, Black Бери, Градус, TYR</dd>
+                    </div>
+                    <div class="champ-row">
+                        <dt data-translate="champ_label_sponsor">Генеральный спонсор</dt>
+                        <dd><img class="champ-sponsor-logo" src="/sponsor2.png" width="1386" height="518" loading="lazy" decoding="async" alt="OLYMP"></dd>
+                    </div>
+                </dl>
+
+                <div class="champ-actions">
+                    <a href="/news20" class="btn btn-champ-solid" data-translate="champ_btn_results">Результаты</a>
+                    <a href="/media#asian2026" class="btn btn-champ-ghost" data-translate="champ_btn_photo">Фото</a>
+                    <a href="/news21" class="btn btn-champ-ghost" data-translate="read_more">Подробнее</a>
                 </div>
             </div>
         </div>
@@ -2085,6 +2482,45 @@
         } else {
             init();
         }
+    })();
+    </script>
+
+    <script>
+    // Слайдер первого экрана: смена кадра каждые 3 секунды, перекрёстное затухание в CSS
+    (function () {
+        var INTERVAL = 3000;
+        var slides = document.querySelectorAll('.hp-hero-slide');
+        if (slides.length < 2) return;
+
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduceMotion) return;
+
+        var current = 0;
+        var timer = null;
+
+        function showNext() {
+            slides[current].classList.remove('is-active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('is-active');
+        }
+
+        function start() {
+            if (!timer) timer = setInterval(showNext, INTERVAL);
+        }
+
+        function stop() {
+            if (timer) {
+                clearInterval(timer);
+                timer = null;
+            }
+        }
+
+        // Во вкладке в фоне анимация не нужна — не тратим батарею
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) stop(); else start();
+        });
+
+        start();
     })();
     </script>
 </body>
