@@ -467,11 +467,12 @@
             object-fit: contain;
         }
         /* Белый фон для второго логотипа (спонсора) */
+        /* Убираем белую плашку у логотипов в hero (спонсор будет показан отдельно ниже) */
         .hp-hero-logos img:nth-child(2) {
-            background: #ffffff;
-            padding: 6px 8px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(11, 99, 183, 0.08);
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .hp-hero-kz,
@@ -538,6 +539,33 @@
 
         .hp-hero-actions .btn-hero-ghost:hover {
             background: rgba(255, 255, 255, 0.22);
+        }
+
+        /* Блок для отображения генерального спонсора под кнопками */
+        .hp-hero-sponsor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin-top: 18px;
+        }
+
+        .hp-hero-sponsor .sponsor-label {
+            color: rgba(255,255,255,0.95);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-size: 0.85rem;
+        }
+
+        .hp-hero-sponsor .hp-hero-sponsor-logo {
+            height: 58px;
+            width: auto;
+            object-fit: contain;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
         }
 
 
@@ -1813,10 +1841,7 @@
 
         <div class="hp-hero-inner">
 
-            <div class="hp-hero-logos">
-                <img src="/images/logos/logo.png" width="640" height="496" loading="eager" decoding="async" alt="КФФМ">
-                <img src="/sponsor.png" width="640" height="453" loading="eager" decoding="async" alt="Генеральный спонсор OLYMP">
-            </div>
+            <!-- Логотип спонсора перенесён ниже под кнопки -->
 
             <p class="hp-hero-kz" data-translate="federation_name_kz">ҚАЗАҚСТАНДЫҚ ФУНКЦИОНАЛДЫҚ КӨПСАЙЫС ФЕДЕРАЦИЯСЫ</p>
             <h1 class="hp-hero-title" data-translate="federation_name_ru">КАЗАХСТАНСКАЯ ФЕДЕРАЦИЯ ФУНКЦИОНАЛЬНОГО МНОГОБОРЬЯ</h1>
@@ -1834,6 +1859,12 @@
                     <i class="fas fa-newspaper" style="margin-right: 8px;"></i>
                     <span data-translate="home_hero_news">Последние новости</span>
                 </a>
+            </div>
+
+            <!-- Генеральный спонсор: подпись и логотип под кнопками -->
+            <div class="hp-hero-sponsor" aria-label="Генеральный спонсор">
+                <div class="sponsor-label">Генеральный спонсор:</div>
+                <img src="/sponsor.png" class="hp-hero-sponsor-logo" alt="Генеральный спонсор OLYMP" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -2050,7 +2081,7 @@
                     </div>
                     <div class="champ-row">
                         <dt data-translate="champ_label_sponsor">Генеральный спонсор</dt>
-                        <dd><img class="champ-sponsor-logo" src="/sponsor2.png" width="420" height="153" loading="lazy" decoding="async" alt="OLYMP"></dd>
+                        <dd>OLYMP</dd>
                     </div>
                 </dl>
 
