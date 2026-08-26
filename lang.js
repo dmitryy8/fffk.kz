@@ -2221,9 +2221,9 @@
       en: 'Welcome to our website!'
     },
     home_welcome_text: {
-      ru: 'Наша организация объединяет спортсменов со всего Казахстана. Мы развиваем функциональный фитнес и проводим соревнования по функциональному многоборью. Присоединяйтесь к нашему спортивному сообществу!',
-      kz: 'Біздің ұйым бүкіл Қазақстаннан спортшыларды біріктіреді. Біз функционалдық фитнесті дамытамыз және функционалдық көпсайыс бойынша жарыстар өткіземіз. Біздің спорттық қауымдастыққа қосылыңыз!',
-      en: 'Our organization unites athletes from all over Kazakhstan. We develop functional fitness and hold functional fitness competitions. Join our sports community!'
+      ru: 'Развиваем функциональное многоборье в Казахстане, объединяем спортсменов и создаём возможности для профессионального роста, развития и участия в соревнованиях.',
+      kz: 'Біз Қазақстанда функционалдық көпсайысты дамытамыз, спортшыларды біріктіріп, кәсіби өсу, даму және жарыстарға қатысу мүмкіндіктерін жасаймыз.',
+      en: 'We develop functional fitness in Kazakhstan, bring athletes together and create opportunities for professional growth, development and participation in competitions.'
     },
     home_hero_kicker: {
       ru: 'Функциональное многоборье Казахстана',
