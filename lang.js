@@ -5521,6 +5521,93 @@
       ru: 'И, конечно, спасибо нашим спонсорам и партнёрам за поддержку и доверие. Благодаря совместной работе мы смогли провести этот чемпионат и принять участников из разных стран Азии. 🤝',
       kz: 'Әрине, демеушілеріміз бен серіктестерімізге қолдау мен сенім үшін рахмет. Бірлескен жұмыстың арқасында біз осы чемпионатты өткізіп, Азияның түрлі елдерінен қатысушыларды қабылдай алдық. 🤝',
       en: 'And, of course, thank you to our sponsors and partners for their support and trust. Thanks to our joint work we were able to host this championship and welcome participants from across Asia. 🤝'
+    },
+
+    // Страница news22 — международный чемпионат в Астане
+    news22_meta_title: {
+      ru: 'Международный чемпионат в Астане — Казахстанская Федерация функционального многоборья',
+      kz: 'Астанадағы халықаралық чемпионат — Қазақстандық функционалдық көпсайыс федерациясы',
+      en: 'International Championship in Astana — Functional Fitness Federation Kazakhstan'
+    },
+    news22_kicker: {
+      ru: 'Чемпионат Азии 2026',
+      kz: '2026 Азия чемпионаты',
+      en: 'Asian Championship 2026'
+    },
+    news22_title: {
+      ru: 'Международный чемпионат в Астане',
+      kz: 'Астанадағы халықаралық чемпионат',
+      en: 'International Championship in Astana'
+    },
+    news22_lead: {
+      ru: 'Особое значение чемпионату придало участие представителей международного и государственного спортивного сообщества.',
+      kz: 'Чемпионатқа халықаралық және мемлекеттік спорт қауымдастығы өкілдерінің қатысуы ерекше мән берді.',
+      en: 'The championship gained special significance from the participation of representatives of the international and national sporting community.'
+    },
+    news22_photo1: {
+      ru: 'Гретчен Киттельбергер — основательница и президент International Functional Fitness Federation (iF3)',
+      kz: 'Гретчен Киттельбергер — International Functional Fitness Federation (iF3) негізін қалаушы және президенті',
+      en: 'Gretchen Kittelberger — founder and president of the International Functional Fitness Federation (iF3)'
+    },
+    news22_photo2: {
+      ru: 'Серик Жарасбаев — вице-министр туризма и спорта Республики Казахстан',
+      kz: 'Серік Жарасбаев — Қазақстан Республикасының туризм және спорт вице-министрі',
+      en: 'Serik Zharasbayev — Vice Minister of Tourism and Sports of the Republic of Kazakhstan'
+    },
+    news22_p1: {
+      ru: 'В рамках мероприятия Астану посетила <strong>Гретчен Киттельбергер (Gretchen Kittelberger)</strong> — основательница и президент International Functional Fitness Federation (iF3). Её присутствие стало важным событием для развития функционального многоборья в Казахстане и укрепления международных связей федерации.',
+      kz: 'Іс-шара аясында Астанаға <strong>Гретчен Киттельбергер (Gretchen Kittelberger)</strong> — International Functional Fitness Federation (iF3) негізін қалаушы және президенті келді. Оның қатысуы Қазақстанда функционалдық көпсайысты дамыту және федерацияның халықаралық байланыстарын нығайту үшін маңызды оқиға болды.',
+      en: 'As part of the event, Astana was visited by <strong>Gretchen Kittelberger</strong> — founder and president of the International Functional Fitness Federation (iF3). Her presence was an important milestone for the development of functional fitness in Kazakhstan and for strengthening the federation\'s international ties.'
+    },
+    news22_p2: {
+      ru: 'Гретчен Киттельбергер — одна из ключевых фигур в развитии функционального фитнеса как самостоятельного международного вида спорта. В прошлом она была гимнасткой уровня NCAA Division I, четырежды участвовала в CrossFit Games в индивидуальной категории, а в 2014 году стала победительницей Mid-Atlantic CrossFit Games Regional. В 2016 году Гретчен основала iF3 — международную федерацию, занимающуюся развитием функционального многоборья и формированием единых международных стандартов проведения соревнований.',
+      kz: 'Гретчен Киттельбергер — функционалдық фитнесті дербес халықаралық спорт түрі ретінде дамытудағы негізгі тұлғалардың бірі. Бұрын ол NCAA Division I деңгейіндегі гимнастшы болған, CrossFit Games жарысына жеке санатта төрт рет қатысқан, ал 2014 жылы Mid-Atlantic CrossFit Games Regional жеңімпазы атанған. 2016 жылы Гретчен iF3 халықаралық федерациясының негізін қалады — ол функционалдық көпсайысты дамытумен және жарыстар өткізудің бірыңғай халықаралық стандарттарын қалыптастырумен айналысады.',
+      en: 'Gretchen Kittelberger is one of the key figures in establishing functional fitness as an independent international sport. She was previously an NCAA Division I gymnast, competed four times at the CrossFit Games in the individual category, and won the Mid-Atlantic CrossFit Games Regional in 2014. In 2016 she founded iF3 — the international federation dedicated to developing functional fitness and creating unified international competition standards.'
+    },
+    news22_p3: {
+      ru: 'Не менее значимым стало участие <strong>вице-министра туризма и спорта Республики Казахстан Серика Маратовича Жарасбаева</strong>. Его присутствие подчеркнуло внимание со стороны спортивного руководства страны к развитию новых и перспективных спортивных дисциплин. Серик Жарасбаев имеет значительный опыт работы в сфере спорта: ранее он занимал руководящие должности в системе спортивного управления Казахстана, а с 29 ноября 2023 года является заместителем министра туризма и спорта Республики Казахстан.',
+      kz: '<strong>Қазақстан Республикасының туризм және спорт вице-министрі Серік Маратұлы Жарасбаевтың</strong> қатысуы да маңызды болды. Оның қатысуы ел спорт басшылығының жаңа әрі келешегі бар спорт түрлерін дамытуға назар аударатынын көрсетті. Серік Жарасбаевтың спорт саласында елеулі тәжірибесі бар: бұрын ол Қазақстанның спортты басқару жүйесінде басшылық қызметтер атқарған, ал 2023 жылғы 29 қарашадан бастап Қазақстан Республикасының туризм және спорт министрінің орынбасары болып табылады.',
+      en: 'Equally significant was the participation of <strong>Serik Maratovich Zharasbayev, Vice Minister of Tourism and Sports of the Republic of Kazakhstan</strong>. His presence underlined the attention the country\'s sports leadership pays to developing new and promising disciplines. Serik Zharasbayev has extensive experience in sport: he previously held senior positions in Kazakhstan\'s sports administration, and since 29 November 2023 he has served as Deputy Minister of Tourism and Sports of the Republic of Kazakhstan.'
+    },
+    news22_p4: {
+      ru: 'Встреча представителей международной федерации, Министерства туризма и спорта и национальной федерации стала важной площадкой для дальнейшего развития функционального многоборья в Казахстане. Такие события позволяют укреплять международное сотрудничество, повышать уровень проведения соревнований и создавать новые возможности для казахстанских спортсменов.',
+      kz: 'Халықаралық федерация, Туризм және спорт министрлігі мен ұлттық федерация өкілдерінің кездесуі Қазақстанда функционалдық көпсайысты одан әрі дамытудың маңызды алаңына айналды. Мұндай оқиғалар халықаралық ынтымақтастықты нығайтуға, жарыстарды өткізу деңгейін арттыруға және қазақстандық спортшылар үшін жаңа мүмкіндіктер жасауға жол ашады.',
+      en: 'The meeting between representatives of the international federation, the Ministry of Tourism and Sports and the national federation became an important platform for the further development of functional fitness in Kazakhstan. Such events help strengthen international cooperation, raise the standard of competitions and create new opportunities for Kazakhstani athletes.'
+    },
+    news22_h2: {
+      ru: 'Казахстан укрепляет свои позиции',
+      kz: 'Қазақстан өз ұстанымын нығайтуда',
+      en: 'Kazakhstan strengthens its position'
+    },
+    news22_p5: {
+      ru: 'Asian Functional Fitness Championship 2026 объединил спортсменов и представителей национальных федераций стран Азии. Более 120 атлетов из девяти стран соревновались в 11 категориях, включая индивидуальные, командные, юниорские и Masters-дивизионы.',
+      kz: 'Asian Functional Fitness Championship 2026 Азия елдерінің спортшылары мен ұлттық федерация өкілдерін біріктірді. Тоғыз елден келген 120-дан астам спортшы 11 санатта — жеке, командалық, жасөспірімдер және Masters дивизиондарында бақ сынады.',
+      en: 'The Asian Functional Fitness Championship 2026 brought together athletes and representatives of national federations from across Asia. More than 120 athletes from nine countries competed in 11 categories, including the individual, team, junior and Masters divisions.'
+    },
+    news22_p6: {
+      ru: 'Для Казахстана чемпионат стал особенно успешным: национальная команда <strong>второй год подряд заняла первое место в общекомандном зачёте</strong>, опередив сборные Ирана и Иордании.',
+      kz: 'Қазақстан үшін чемпионат ерекше сәтті болды: ұлттық құрама <strong>қатарынан екінші жыл жалпыкомандалық есепте бірінші орын алды</strong>, Иран мен Иордания құрамаларын артта қалдырды.',
+      en: 'For Kazakhstan the championship was particularly successful: the national team <strong>took first place in the overall team standings for the second year running</strong>, finishing ahead of Iran and Jordan.'
+    },
+    news22_p7: {
+      ru: 'Проведение такого масштабного международного турнира в Астане при участии руководства iF3 и представителей Министерства туризма и спорта показывает, что функциональное многоборье в Казахстане продолжает активно развиваться и постепенно занимает всё более заметное место в спортивной системе страны.',
+      kz: 'iF3 басшылығы мен Туризм және спорт министрлігі өкілдерінің қатысуымен Астанада осындай ауқымды халықаралық турнир өткізілуі Қазақстанда функционалдық көпсайыстың белсенді дамып келе жатқанын және ел спорт жүйесінде барған сайын елеулі орын алып жатқанын көрсетеді.',
+      en: 'Hosting such a large-scale international tournament in Astana with the participation of iF3 leadership and representatives of the Ministry of Tourism and Sports shows that functional fitness in Kazakhstan continues to develop actively and is steadily taking a more prominent place in the country\'s sporting system.'
+    },
+    news22_closing: {
+      ru: 'Чемпионат Азии 2026 стал не только соревнованием за медали, но и важной точкой роста для всего функционального многоборья Казахстана — объединяя спортсменов, тренеров, судей, федерации и международных экспертов.',
+      kz: '2026 жылғы Азия чемпионаты медаль үшін жарыс қана емес, Қазақстандағы бүкіл функционалдық көпсайыс үшін маңызды өсу нүктесі болды — ол спортшыларды, бапкерлерді, төрешілерді, федерацияларды және халықаралық сарапшыларды біріктірді.',
+      en: 'The Asian Championship 2026 was not only a competition for medals but also an important point of growth for functional fitness across Kazakhstan — bringing together athletes, coaches, judges, federations and international experts.'
+    },
+    news22_card_title: {
+      ru: 'Важные гости чемпионата Азии!',
+      kz: 'Азия чемпионатының маңызды қонақтары!',
+      en: 'Important guests of the Asian Championship!'
+    },
+    news22_card_excerpt: {
+      ru: 'Особое значение чемпионату придало участие представителей международного и государственного спортивного сообщества...',
+      kz: 'Чемпионатқа халықаралық және мемлекеттік спорт қауымдастығы өкілдерінің қатысуы ерекше мән берді...',
+      en: 'The championship gained special significance from the participation of representatives of the international and national sporting community...'
     }
   };
 
