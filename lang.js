@@ -394,48 +394,6 @@
       en: 'Publication Date:'
     },
 
-    // Страница docs9 — Дополнительный регламент ASIAN 2026
-    docs9_meta_title: {
-      ru: 'Дополнительный регламент ASIAN 2026 — Казахстанская Федерация функционального многоборья',
-      kz: 'ASIAN 2026 қосымша регламенті — Қазақстандық функционалдық көпсайыс федерациясы',
-      en: 'Additional Competition Regulations ASIAN 2026 — Functional Fitness Federation Kazakhstan'
-    },
-    docs9_page_title: {
-      ru: 'Дополнительный регламент',
-      kz: 'Қосымша регламент',
-      en: 'Additional Competition Regulations'
-    },
-    docs9_subtitle: {
-      ru: 'ASIAN 2026 FUNCTIONAL FITNESS CHAMPIONSHIP — категории: индивидуалы, мастера, юниоры, пары',
-      kz: 'ASIAN 2026 FUNCTIONAL FITNESS CHAMPIONSHIP — санаттар: жеке спортшылар, мастерлер, жасөспірімдер, жұптар',
-      en: 'ASIAN 2026 FUNCTIONAL FITNESS CHAMPIONSHIP — all divisions: individuals, masters, juniors, pairs'
-    },
-    docs9_doc_ru_title: {
-      ru: 'Регламент (на русском)',
-      kz: 'Регламент (орыс тілінде)',
-      en: 'Regulations (in Russian)'
-    },
-    docs9_doc_ru_desc: {
-      ru: 'Дополнительный регламент соревнований на русском языке',
-      kz: 'Жарыстардың қосымша регламенті орыс тілінде',
-      en: 'Additional competition regulations in Russian'
-    },
-    docs9_doc_en_title: {
-      ru: 'Регламент (на английском)',
-      kz: 'Регламент (ағылшын тілінде)',
-      en: 'Regulations (in English)'
-    },
-    docs9_doc_en_desc: {
-      ru: 'Дополнительный регламент соревнований на английском языке',
-      kz: 'Жарыстардың қосымша регламенті ағылшын тілінде',
-      en: 'Additional competition regulations in English'
-    },
-    docs9_open_doc: {
-      ru: 'Открыть документ',
-      kz: 'Құжатты ашу',
-      en: 'Open Document'
-    },
-
     // Страница Аккредитации
     accreditation_title: {
       ru: 'Международная аккредитация',
@@ -5411,21 +5369,6 @@
       ru: 'Спасибо за силу, характер и невероятную борьбу до самого конца! 💪',
       kz: 'Күш-қуатыңыз, мінезіңіз және соңына дейін жалғасқан керемет күресіңіз үшін рахмет! 💪',
       en: 'Thank you for your strength, determination, and incredible fight until the very end! 💪'
-    },
-    news20_label_gallery: {
-      ru: 'Фотоотчёт',
-      kz: 'Фотоесеп',
-      en: 'Photo gallery'
-    },
-    news20_gallery_heading: {
-      ru: 'Фото с Чемпионата Азии',
-      kz: 'Азия чемпионатының фотосуреттері',
-      en: 'Photos from the Asian Championship'
-    },
-    news20_more_photos: {
-      ru: 'Больше фотографий тут...',
-      kz: 'Көбірек фотосуреттер мұнда...',
-      en: 'More photos here...'
     },
     news20_label_results: {
       ru: 'Результаты',

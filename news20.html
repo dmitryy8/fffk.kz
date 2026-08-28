@@ -1099,36 +1099,6 @@
         @keyframes img-spinner {
             to { transform: rotate(360deg); }
         }
-        /* --- Фотоотчёт (news20) --- */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 14px;
-        }
-
-        .gallery a {
-            display: block;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(11, 99, 183, 0.12);
-            box-shadow: 0 8px 20px rgba(11, 99, 183, 0.08);
-            background: #f0f4f8;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .gallery a:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 14px 30px rgba(11, 99, 183, 0.18);
-        }
-
-        .gallery img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-        }
-
         .category-photo {
             margin: 0 auto 18px;
             max-width: 860px;
@@ -1375,29 +1345,6 @@
                 <section class="test-card">
                     <p data-translate="news20_intro_1">Поздравляем всех атлетов с завершением чемпионата! 🔥</p>
                     <p data-translate="news20_intro_2">Спасибо за силу, характер и невероятную борьбу до самого конца! 💪</p>
-                </section>
-
-                <!-- Галерея чемпионата -->
-                <section class="test-card">
-                    <span class="section-label" data-translate="news20_label_gallery">Фотоотчёт</span>
-                    <h2 style="margin: 0 0 18px; color: var(--primary-color); font-size: clamp(1.4rem, 2vw, 1.9rem); font-weight: 800;"> <span data-translate="news20_gallery_heading">Фото с Чемпионата Азии</span></h2>
-                    <div class="gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
-                        <a href="/images/asian2026/IMG_8031.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8031.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 1" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8032.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8032.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 2" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8033.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8033.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 3" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8034.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8034.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 4" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8035.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8035.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 5" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8036.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8036.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 6" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8037.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8037.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 7" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8038.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8038.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 8" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8039.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8039.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 9" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8040.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8040.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 10" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8042.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8042.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 11" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                        <a href="/images/asian2026/IMG_8044.webp" target="_blank" rel="noopener"><img src="/images/asian2026/th/IMG_8044.webp" width="480" height="320" loading="lazy" decoding="async" alt="Asian Championship 2026 photo 12" style="display:block; width:100%; height:220px; object-fit:cover; border-radius: 12px; background: #edf4ff;"></a>
-                    </div>
-                    <div style="margin-top: 22px; text-align: center;">
-                        <a href="https://kairzhanpro.wfolio.pro/disk/14-08-2026-asian-2026-functional-fitnes-champiaonship-m1ft8l/day-1" target="_blank" rel="noopener" class="btn btn-primary" data-translate="news20_more_photos">Больше фотографий тут...</a>
-                    </div>
                 </section>
 
                 <!-- Победители и призёры -->
