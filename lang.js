@@ -5542,6 +5542,83 @@
       kz: '2026 жылғы Азия чемпионаты медаль үшін жарыс қана емес, Қазақстандағы бүкіл функционалдық көпсайыс үшін маңызды өсу нүктесі болды — ол спортшыларды, бапкерлерді, төрешілерді, федерацияларды және халықаралық сарапшыларды біріктірді.',
       en: 'The Asian Championship 2026 was not only a competition for medals but also an important point of growth for functional fitness across Kazakhstan — bringing together athletes, coaches, judges, federations and international experts.'
     },
+
+    // Страница news23 — IF3 Masters World Championships 2026, Аруба
+    news23_meta_title: {
+      ru: 'IF3 Masters World Championships 2026, Аруба — Казахстанская Федерация функционального многоборья',
+      kz: 'IF3 Masters World Championships 2026, Аруба — Қазақстандық функционалдық көпсайыс федерациясы',
+      en: 'IF3 Masters World Championships 2026, Aruba — Functional Fitness Federation Kazakhstan'
+    },
+    news23_kicker: {
+      ru: 'Чемпионат мира',
+      kz: 'Әлем чемпионаты',
+      en: 'World championship'
+    },
+    news23_title: {
+      ru: 'IF3 Masters World Championships 2026',
+      kz: 'IF3 Masters World Championships 2026',
+      en: 'IF3 Masters World Championships 2026'
+    },
+    news23_lead: {
+      ru: 'С 23 по 25 октября 2026 года на Арубе пройдёт чемпионат мира по функциональному многоборью среди мастеров — главный старт сезона для атлетов зрелых возрастных категорий.',
+      kz: '2026 жылғы 23–25 қазан аралығында Арубада мастерлер арасындағы функционалдық көпсайыстан әлем чемпионаты өтеді — бұл ересек жас санаттарындағы спортшылар үшін маусымның басты бәсекесі.',
+      en: 'From 23 to 25 October 2026, Aruba will host the functional fitness world championship for masters — the main start of the season for athletes in the senior age divisions.'
+    },
+    news23_label_place: {
+      ru: 'Место',
+      kz: 'Өтетін орны',
+      en: 'Location'
+    },
+    news23_place: {
+      ru: 'Аруба',
+      kz: 'Аруба',
+      en: 'Aruba'
+    },
+    news23_label_date: {
+      ru: 'Даты',
+      kz: 'Күндері',
+      en: 'Dates'
+    },
+    news23_date: {
+      ru: '23–25 октября 2026',
+      kz: '2026 жылғы 23–25 қазан',
+      en: '23–25 October 2026'
+    },
+    news23_label_event: {
+      ru: 'Турнир',
+      kz: 'Турнир',
+      en: 'Event'
+    },
+    news23_p1: {
+      ru: 'Осенью центр мирового функционального многоборья переместится на Арубу — небольшой остров в Карибском море. Именно там Международная федерация функционального фитнеса (iF3) проведёт чемпионат мира среди мастеров: три соревновательных дня, за которые определятся сильнейшие в своих возрастных категориях.',
+      kz: 'Күзде әлемдік функционалдық көпсайыстың орталығы Арубаға — Кариб теңізіндегі шағын аралға ауысады. Дәл сол жерде Халықаралық функционалдық фитнес федерациясы (iF3) мастерлер арасында әлем чемпионатын өткізеді: үш жарыс күні ішінде әр жас санатындағы үздіктер анықталады.',
+      en: 'This autumn the centre of world functional fitness moves to Aruba, a small island in the Caribbean. It is there that the International Functional Fitness Federation (iF3) will hold the masters world championship: three days of competition to decide the strongest in each age division.'
+    },
+    news23_p2: {
+      ru: 'Ожидается, что на старт выйдут <strong>более 300 атлетов из разных стран мира</strong>. Мастерские дивизионы разделены по возрасту, поэтому борьба идёт внутри своей группы — и это делает чемпионат по-настоящему массовым: на одной площадке соревнуются и те, кто пришёл в спорт недавно, и те, кто выступает уже много лет.',
+      kz: 'Стартқа <strong>әлемнің түрлі елдерінен 300-ден астам спортшы</strong> шығады деп күтілуде. Мастерлер дивизиондары жасы бойынша бөлінген, сондықтан күрес өз тобының ішінде жүреді — бұл чемпионатты шынымен де көпшілік ететін жағдай: бір алаңда спортқа жақында келгендер де, көп жылдан бері өнер көрсетіп жүргендер де бақ сынайды.',
+      en: 'More than <strong>300 athletes from countries around the world</strong> are expected on the start list. The masters divisions are split by age, so athletes compete within their own group — which makes the championship genuinely open: newcomers and long-time competitors take to the same floor.'
+    },
+    news23_h2: {
+      ru: 'Почему этот старт особенный',
+      kz: 'Бұл бәсеке несімен ерекше',
+      en: 'What makes this event special'
+    },
+    news23_p3: {
+      ru: 'Мастерские категории — та часть функционального многоборья, где спорт остаётся образом жизни, а не только профессией. Для многих участников подготовка к чемпионату мира совмещается с работой и семьёй, и тем ценнее выход на международный помост. Здесь встречаются люди, для которых возраст давно перестал быть препятствием.',
+      kz: 'Мастерлер санаттары — функционалдық көпсайыстың спорт кәсіп қана емес, өмір салты болып қалатын бөлігі. Көптеген қатысушы үшін әлем чемпионатына дайындық жұмыспен және отбасымен қатар жүреді, сондықтан халықаралық алаңға шығу одан сайын бағалы. Мұнда жас мөлшері әлдеқашан кедергі болудан қалған адамдар бас қосады.',
+      en: 'The masters divisions are the part of functional fitness where sport remains a way of life rather than only a profession. For many competitors, preparing for the world championship runs alongside work and family, which makes stepping onto the international floor all the more valuable. These are people for whom age long ago stopped being an obstacle.'
+    },
+    news23_p4: {
+      ru: 'Формат соревнований традиционный для iF3: спортсменам предстоит пройти серию тестов на выносливость, силу, работу с собственным весом и владение техникой. Задания объявляются организаторами заранее и одинаковы для всех участников дивизиона, а результаты складываются в общий зачёт.',
+      kz: 'Жарыс форматы iF3 үшін дәстүрлі: спортшылар төзімділікке, күшке, өз салмағымен жұмыс істеуге және техниканы меңгеруге арналған бірқатар сынақтан өтеді. Тапсырмаларды ұйымдастырушылар алдын ала жариялайды, олар дивизионның барлық қатысушысы үшін бірдей, ал нәтижелер жалпы есепке жинақталады.',
+      en: 'The competition format is the one traditional for iF3: athletes work through a series of tests of endurance, strength, bodyweight movement and technical skill. The workouts are announced in advance by the organisers and are identical for everyone in a division, with results adding up to an overall score.'
+    },
+    news23_callout: {
+      ru: 'Следите за новостями федерации — мы будем рассказывать о подготовке и выступлении наших спортсменов на Арубе.',
+      kz: 'Федерация жаңалықтарын қадағалаңыз — біз Арубадағы спортшыларымыздың дайындығы мен өнері туралы хабарлап отырамыз.',
+      en: 'Follow the federation news — we will be covering the preparation and performance of our athletes in Aruba.'
+    },
     news22_card_title: {
       ru: 'Важные гости чемпионата Азии!',
       kz: 'Азия чемпионатының маңызды қонақтары!',
@@ -5551,6 +5628,16 @@
       ru: 'Особое значение чемпионату придало участие представителей международного и государственного спортивного сообщества...',
       kz: 'Чемпионатқа халықаралық және мемлекеттік спорт қауымдастығы өкілдерінің қатысуы ерекше мән берді...',
       en: 'The championship gained special significance from the participation of representatives of the international and national sporting community...'
+    },
+    news23_card_title: {
+      ru: 'IF3 Masters World Championships 2026, Аруба',
+      kz: 'IF3 Masters World Championships 2026, Аруба',
+      en: 'IF3 Masters World Championships 2026, Aruba'
+    },
+    news23_card_excerpt: {
+      ru: 'С 23 по 25 октября 2026 года на Арубе пройдёт чемпионат мира по функциональному многоборью среди мастеров...',
+      kz: '2026 жылғы 23–25 қазан аралығында Арубада мастерлер арасындағы функционалдық көпсайыстан әлем чемпионаты өтеді...',
+      en: 'From 23 to 25 October 2026, Aruba will host the masters world championship in functional fitness...'
     }
   };
 
