@@ -1,16 +1,19 @@
 // Service Worker для КФФМ (Казахстанская Федерация функционального многоборья)
 // Версия: 1.0.0
 
-const CACHE_NAME = 'fffk-v1';
+const CACHE_NAME = 'fffk-v2';
+// Добавил версионированные пути, чтобы сбросить кеш у клиентов и явно закешировать новую страницу news23
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
   '/about',
   '/news',
+  '/news23',
+  '/news23.html',
   '/competitions',
   '/images/logos/logo.png',
   '/images/logos/logoinsite.png',
-  '/lang.js',
+  '/lang.js?v=20260917',
   '/mobile.css'
 ];
 
