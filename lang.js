@@ -5614,6 +5614,218 @@
       kz: 'Тіркеу жақында ашылады! Сізге орын sichern және осы әлемдік деңгейдегі жарысқа қатысудың бір бөлігі болуға дайын болыңыз.',
       en: 'Registration will open soon! Get ready to secure your place and become part of this world-class competition.'
     },
+    // Страница news24 — ASTANA HYBRID RACE 2026
+    news24_meta_title: {
+      ru: 'ASTANA HYBRID RACE 2026 — Казахстанская Федерация функционального многоборья',
+      kz: 'ASTANA HYBRID RACE 2026 — Қазақстандық функционалдық көпсайыс федерациясы',
+      en: 'ASTANA HYBRID RACE 2026 — Functional Fitness Federation Kazakhstan'
+    },
+    news24_kicker: {
+      ru: 'Гибридная гонка',
+      kz: 'Гибридті жарыс',
+      en: 'Hybrid race'
+    },
+    news24_lead: {
+      ru: '14 ноября 2026 года в Астане состоится ASTANA HYBRID RACE — соревнование, объединяющее бег и функциональные упражнения в одном испытании.',
+      kz: '2026 жылғы 14 қарашада Астанада ASTANA HYBRID RACE өтеді — жүгіру мен функционалдық жаттығуларды бір сынаққа біріктіретін жарыс.',
+      en: 'On 14 November 2026 Astana hosts ASTANA HYBRID RACE — a competition that combines running and functional work in a single test.'
+    },
+    news24_label_date: {
+      ru: 'Дата',
+      kz: 'Күні',
+      en: 'Date'
+    },
+    news24_date: {
+      ru: '14 ноября 2026',
+      kz: '2026 жылғы 14 қараша',
+      en: '14 November 2026'
+    },
+    news24_label_city: {
+      ru: 'Город',
+      kz: 'Қала',
+      en: 'City'
+    },
+    news24_city: {
+      ru: 'Астана',
+      kz: 'Астана',
+      en: 'Astana'
+    },
+    news24_label_venue: {
+      ru: 'Место',
+      kz: 'Өтетін орны',
+      en: 'Venue'
+    },
+    news24_venue: {
+      ru: 'ЛАСК «Казахстан», пр. Туран, 59',
+      kz: '«Қазақстан» ЛАСК, Тұран даңғылы, 59',
+      en: 'LASK "Kazakhstan", 59 Turan Ave'
+    },
+    news24_label_start: {
+      ru: 'Старт',
+      kz: 'Басталуы',
+      en: 'Start'
+    },
+    news24_intro1: {
+      ru: 'Участникам предстоит проверить выносливость, силу, скорость и способность эффективно работать на протяжении всей дистанции. Бег здесь не отдых между станциями, а полноценная часть гонки: темп приходится держать с первого метра и до финиша.',
+      kz: 'Қатысушылар төзімділігін, күшін, жылдамдығын және бүкіл қашықтық бойы тиімді жұмыс істеу қабілетін сынайды. Мұндағы жүгіру — станциялар арасындағы демалыс емес, жарыстың толыққанды бөлігі: қарқынды алғашқы метрден финишке дейін ұстау керек.',
+      en: 'Competitors will test their endurance, strength, speed and ability to keep working efficiently over the whole distance. Running here is not a rest between stations but a full part of the race: the pace has to hold from the first metre to the finish.'
+    },
+    news24_intro2: {
+      ru: 'На старт выйдут <strong>более 400 участников</strong>.',
+      kz: 'Стартқа <strong>400-ден астам қатысушы</strong> шығады.',
+      en: '<strong>More than 400 competitors</strong> will take the start.'
+    },
+    news24_h_format: {
+      ru: 'Формат соревнований',
+      kz: 'Жарыс форматы',
+      en: 'Race format'
+    },
+    news24_format_p1: {
+      ru: 'Гонка состоит из восьми последовательных раундов. После каждого бегового отрезка спортсмен выполняет одну функциональную станцию:',
+      kz: 'Жарыс сегіз дәйекті раундтан тұрады. Әр жүгіру кесіндісінен кейін спортшы бір функционалдық станцияны орындайды:',
+      en: 'The race consists of eight consecutive rounds. After each running leg the athlete completes one functional station:'
+    },
+    news24_scheme_run: {
+      ru: '800 метров бега',
+      kz: '800 метр жүгіру',
+      en: '800 m run'
+    },
+    news24_scheme_station: {
+      ru: 'станция',
+      kz: 'станция',
+      en: 'station'
+    },
+    news24_scheme_run2: {
+      ru: '800 метров бега',
+      kz: '800 метр жүгіру',
+      en: '800 m run'
+    },
+    news24_scheme_next: {
+      ru: 'следующая станция',
+      kz: 'келесі станция',
+      en: 'next station'
+    },
+    news24_total_run: {
+      ru: 'беговой дистанции',
+      kz: 'жүгіру қашықтығы',
+      en: 'of running'
+    },
+    news24_total_stations: {
+      ru: 'функциональных станций',
+      kz: 'функционалдық станция',
+      en: 'functional stations'
+    },
+    news24_h_stations: {
+      ru: 'Функциональные станции',
+      kz: 'Функционалдық станциялар',
+      en: 'Functional stations'
+    },
+    news24_st1: {
+      ru: '1000 м',
+      kz: '1000 м',
+      en: '1000 m'
+    },
+    news24_st2: {
+      ru: 'толкание саней, 50 м',
+      kz: 'шана итеру, 50 м',
+      en: 'sled push, 50 m'
+    },
+    news24_st3: {
+      ru: 'тяга саней, 50 м',
+      kz: 'шана сүйреу, 50 м',
+      en: 'sled pull, 50 m'
+    },
+    news24_st4: {
+      ru: 'берпи с прыжком вперёд, 80 м',
+      kz: 'алға секіретін берпи, 80 м',
+      en: 'burpees with a forward jump, 80 m'
+    },
+    news24_st5: {
+      ru: 'гребля, 1000 м',
+      kz: 'ескек тарту, 1000 м',
+      en: 'rowing, 1000 m'
+    },
+    news24_st6: {
+      ru: 'фермерская прогулка, 200 м',
+      kz: 'фермер жүрісі, 200 м',
+      en: 'farmers carry, 200 m'
+    },
+    news24_st7: {
+      ru: 'выпады с мешком, 100 м',
+      kz: 'қапшықпен ұмтылыс, 100 м',
+      en: 'sandbag lunges, 100 m'
+    },
+    news24_st8: {
+      ru: 'броски мяча в стену, 100 повторений',
+      kz: 'қабырғаға доп лақтыру, 100 қайталау',
+      en: 'wall balls, 100 reps'
+    },
+    news24_stations_note: {
+      ru: 'Рабочие веса и параметры станций зависят от выбранной категории.',
+      kz: 'Жұмыс салмақтары мен станция параметрлері таңдалған санатқа байланысты.',
+      en: 'Working weights and station parameters depend on the chosen division.'
+    },
+    news24_h_categories: {
+      ru: 'Категории участников',
+      kz: 'Қатысушылар санаттары',
+      en: 'Divisions'
+    },
+    news24_cat1: {
+      ru: 'мужчины',
+      kz: 'ерлер',
+      en: 'men'
+    },
+    news24_cat2: {
+      ru: 'женщины',
+      kz: 'әйелдер',
+      en: 'women'
+    },
+    news24_cat3: {
+      ru: 'мужчина + мужчина',
+      kz: 'ер + ер',
+      en: 'man + man'
+    },
+    news24_cat4: {
+      ru: 'девушка + девушка',
+      kz: 'қыз + қыз',
+      en: 'woman + woman'
+    },
+    news24_cat5: {
+      ru: 'мужчина + девушка',
+      kz: 'ер + қыз',
+      en: 'man + woman'
+    },
+    news24_categories_note: {
+      ru: 'В парных категориях участники проходят беговые отрезки вместе, а работу на функциональных станциях распределяют между партнёрами в соответствии с правилами соревнований.',
+      kz: 'Жұптық санаттарда қатысушылар жүгіру кесінділерін бірге өтеді, ал функционалдық станциядағы жұмысты жарыс ережелеріне сәйкес серіктестер арасында бөледі.',
+      en: 'In the pairs divisions partners run the legs together and split the work on the functional stations between them according to the competition rules.'
+    },
+    news24_h_registration: {
+      ru: 'Регистрация',
+      kz: 'Тіркелу',
+      en: 'Registration'
+    },
+    news24_registration: {
+      ru: 'Регистрация участников завершена. На старт выйдут более 400 спортсменов, готовых пройти все восемь раундов и побороться за лучший результат в своих категориях.',
+      kz: 'Қатысушыларды тіркеу аяқталды. Стартқа сегіз раундтың бәрінен өтіп, өз санаттарында үздік нәтиже үшін күресуге дайын 400-ден астам спортшы шығады.',
+      en: 'Registration is closed. More than 400 athletes will take the start, ready to complete all eight rounds and fight for the best result in their divisions.'
+    },
+    news24_callout: {
+      ru: 'ASTANA HYBRID RACE 2026 — 14 ноября, Астана, ЛАСК «Казахстан». Начало в 08:00.',
+      kz: 'ASTANA HYBRID RACE 2026 — 14 қараша, Астана, «Қазақстан» ЛАСК. Басталуы 08:00.',
+      en: 'ASTANA HYBRID RACE 2026 — 14 November, Astana, LASK "Kazakhstan". Start at 08:00.'
+    },
+    news24_card_title: {
+      ru: 'ASTANA HYBRID RACE 2026',
+      kz: 'ASTANA HYBRID RACE 2026',
+      en: 'ASTANA HYBRID RACE 2026'
+    },
+    news24_card_excerpt: {
+      ru: '14 ноября в Астане: 8 раундов, 6,4 км бега и 8 функциональных станций...',
+      kz: '14 қарашада Астанада: 8 раунд, 6,4 км жүгіру және 8 функционалдық станция...',
+      en: '14 November in Astana: 8 rounds, 6.4 km of running and 8 functional stations...'
+    },
+
     news23_callout: {
       ru: 'Партнёры мероприятия: BF Her.',
       kz: 'Іс-шараның серіктестері: BF Her.',
