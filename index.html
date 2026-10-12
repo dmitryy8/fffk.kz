@@ -569,6 +569,215 @@
         }
 
 
+
+        /* --- Наша сборная --- */
+        .team-section {
+            padding: 56px 20px;
+            background: linear-gradient(180deg, #f6faff 0%, #ffffff 100%);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .team-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .team-head {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .team-head h2 {
+            color: var(--primary-color);
+            font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+            font-weight: 900;
+            margin: 0 0 8px;
+        }
+
+        .team-head p {
+            color: var(--text-gray);
+            font-size: 0.98rem;
+            margin: 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .team-card {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 6px 20px rgba(11, 99, 183, 0.07);
+            text-align: left;
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 36px rgba(11, 99, 183, 0.18);
+        }
+
+        .team-photo {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-photo img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-card:hover .team-photo img {
+            transform: scale(1.04);
+        }
+
+        .team-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 16px 18px 18px;
+        }
+
+        .team-exp {
+            display: inline-block;
+            align-self: flex-start;
+            margin-bottom: 10px;
+            padding: 5px 12px;
+            border-radius: 999px;
+            background: rgba(11, 99, 183, 0.08);
+            color: var(--primary-color);
+            font-size: 0.72rem;
+            font-weight: 800;
+        }
+
+        .team-facts {
+            list-style: none;
+            margin: 0 0 14px;
+            padding: 0;
+            display: grid;
+            gap: 7px;
+        }
+
+        .team-facts li {
+            position: relative;
+            padding-left: 16px;
+            color: var(--text-dark);
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .team-facts li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary-color);
+        }
+
+        .team-more {
+            margin-top: auto;
+            color: var(--primary-color);
+            font-size: 0.82rem;
+            font-weight: 800;
+        }
+
+        .team-more::after {
+            content: ' →';
+        }
+
+        /* Окно с анкетой спортсмена */
+        .team-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 11000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(6, 24, 46, 0.86);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .team-modal.is-open {
+            display: flex;
+        }
+
+        .team-modal img {
+            display: block;
+            max-width: min(760px, 100%);
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .team-modal-close {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.16);
+            color: #ffffff;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.25s ease;
+        }
+
+        .team-modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 980px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-section {
+                padding: 38px 16px;
+            }
+
+            .team-grid {
+                gap: 12px;
+            }
+
+            .team-body {
+                padding: 13px 14px 15px;
+            }
+
+            .team-facts li {
+                font-size: 0.82rem;
+            }
+
+            .team-modal {
+                padding: 14px;
+            }
+        }
+
         /* --- Видео и трансляции --- */
         .watch-section {
             padding: 40px 20px;
@@ -1976,6 +2185,84 @@
     </section>
 
     <!-- Документы -->
+    <!-- Наша сборная -->
+    <section class="team-section" id="team">
+        <div class="team-inner">
+            <div class="team-head fade-in">
+                <h2 data-translate="team_title">Наша сборная</h2>
+                <p data-translate="team_subtitle">Атлеты, которые представят Казахстан на Masters World Championships — Аруба, 23–25 октября 2026</p>
+            </div>
+
+            <div class="team-grid">
+                <button class="team-card" type="button" data-profile="/images/team/d1.webp">
+                    <div class="team-photo">
+                        <img src="/images/team/p1.webp" width="600" height="750" loading="lazy" decoding="async"
+                             alt="Спортсмен сборной Казахстана, участник Masters World Championships 2026">
+                    </div>
+                    <div class="team-body">
+                        <span class="team-exp" data-translate="team1_exp">12 лет в функциональном многоборье</span>
+                        <ul class="team-facts">
+                            <li data-translate="team1_f1">3-кратный чемпион мира среди мастеров</li>
+                            <li data-translate="team1_f2">Финалист CrossFit Games 2025</li>
+                        </ul>
+                        <span class="team-more" data-translate="team_more">Анкета спортсмена</span>
+                    </div>
+                </button>
+
+                <button class="team-card" type="button" data-profile="/images/team/d2.webp">
+                    <div class="team-photo">
+                        <img src="/images/team/p2.webp" width="600" height="750" loading="lazy" decoding="async"
+                             alt="Спортсмен сборной Казахстана, участник Masters World Championships 2026">
+                    </div>
+                    <div class="team-body">
+                        <span class="team-exp" data-translate="team2_exp">9 лет в функциональном многоборье</span>
+                        <ul class="team-facts">
+                            <li data-translate="team2_f1">Мастер спорта по спортивной акробатике</li>
+                            <li data-translate="team2_f2">Чемпион РК, серебро чемпионата Азии</li>
+                        </ul>
+                        <span class="team-more" data-translate="team_more">Анкета спортсмена</span>
+                    </div>
+                </button>
+
+                <button class="team-card" type="button" data-profile="/images/team/d3.webp">
+                    <div class="team-photo">
+                        <img src="/images/team/p3.webp" width="600" height="750" loading="lazy" decoding="async"
+                             alt="Спортсмен сборной Казахстана, участник Masters World Championships 2026">
+                    </div>
+                    <div class="team-body">
+                        <span class="team-exp" data-translate="team3_exp">В спорте с 5 лет, кроссфит с 2014 года</span>
+                        <ul class="team-facts">
+                            <li data-translate="team3_f1">2-кратная чемпионка Азии в мастерах 35+</li>
+                            <li data-translate="team3_f2">3× The Fittest Woman in Kazakhstan</li>
+                        </ul>
+                        <span class="team-more" data-translate="team_more">Анкета спортсмена</span>
+                    </div>
+                </button>
+
+                <button class="team-card" type="button" data-profile="/images/team/d4.webp">
+                    <div class="team-photo">
+                        <img src="/images/team/p4.webp" width="600" height="750" loading="lazy" decoding="async"
+                             alt="Спортсмен сборной Казахстана, участник Masters World Championships 2026">
+                    </div>
+                    <div class="team-body">
+                        <span class="team-exp" data-translate="team4_exp">11 лет в кроссфите и функциональном многоборье</span>
+                        <ul class="team-facts">
+                            <li data-translate="team4_f1">3-кратный участник полуфинала CrossFit Games</li>
+                            <li data-translate="team4_f2">2-кратный бронзовый призёр чемпионата Азии</li>
+                        </ul>
+                        <span class="team-more" data-translate="team_more">Анкета спортсмена</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Анкета спортсмена -->
+    <div class="team-modal" id="teamModal" role="dialog" aria-modal="true" aria-label="Анкета спортсмена">
+        <button class="team-modal-close" type="button" id="teamModalClose" aria-label="Закрыть">&times;</button>
+        <img id="teamModalImage" src="" alt="Анкета спортсмена сборной Казахстана">
+    </div>
+
     <section id="docs" class="section">
         <div class="container">
             <div class="section-title fade-in">
@@ -2762,6 +3049,44 @@
                 play(card.getAttribute('data-video'), card.getAttribute('data-title'));
                 player.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
+        });
+    })();
+    </script>
+
+    <script>
+    // Анкеты спортсменов: тяжёлую картинку подставляем только при открытии
+    (function () {
+        var modal = document.getElementById('teamModal');
+        var image = document.getElementById('teamModalImage');
+        var closeBtn = document.getElementById('teamModalClose');
+        if (!modal || !image) return;
+
+        function open(src) {
+            image.src = src;
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function close() {
+            modal.classList.remove('is-open');
+            document.body.style.overflow = '';
+            image.src = '';
+        }
+
+        document.querySelectorAll('.team-card').forEach(function (card) {
+            card.addEventListener('click', function () {
+                open(card.getAttribute('data-profile'));
+            });
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', close);
+
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) close();
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
         });
     })();
     </script>

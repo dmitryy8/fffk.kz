@@ -5614,6 +5614,83 @@
       kz: 'Тіркеу жақында ашылады! Сізге орын sichern және осы әлемдік деңгейдегі жарысқа қатысудың бір бөлігі болуға дайын болыңыз.',
       en: 'Registration will open soon! Get ready to secure your place and become part of this world-class competition.'
     },
+    // Блок «Наша сборная» на главной
+    team_title: {
+      ru: 'Наша сборная',
+      kz: 'Біздің құрама',
+      en: 'Our national team'
+    },
+    team_subtitle: {
+      ru: 'Атлеты, которые представят Казахстан на Masters World Championships — Аруба, 23–25 октября 2026',
+      kz: 'Masters World Championships-те Қазақстанды таныстыратын спортшылар — Аруба, 2026 жылғы 23–25 қазан',
+      en: 'The athletes representing Kazakhstan at the Masters World Championships — Aruba, 23–25 October 2026'
+    },
+    team_more: {
+      ru: 'Анкета спортсмена',
+      kz: 'Спортшы сауалнамасы',
+      en: 'Athlete profile'
+    },
+    team1_exp: {
+      ru: '12 лет в функциональном многоборье',
+      kz: 'Функционалдық көпсайыста 12 жыл',
+      en: '12 years in functional fitness'
+    },
+    team1_f1: {
+      ru: '3-кратный чемпион мира среди мастеров',
+      kz: 'Мастерлер арасында 3 дүркін әлем чемпионы',
+      en: 'Three-time masters world champion'
+    },
+    team1_f2: {
+      ru: 'Финалист CrossFit Games 2025',
+      kz: 'CrossFit Games 2025 финалисті',
+      en: 'CrossFit Games 2025 finalist'
+    },
+    team2_exp: {
+      ru: '9 лет в функциональном многоборье',
+      kz: 'Функционалдық көпсайыста 9 жыл',
+      en: '9 years in functional fitness'
+    },
+    team2_f1: {
+      ru: 'Мастер спорта по спортивной акробатике',
+      kz: 'Спорттық акробатикадан спорт шебері',
+      en: 'Master of Sport in sports acrobatics'
+    },
+    team2_f2: {
+      ru: 'Чемпион РК, серебро чемпионата Азии',
+      kz: 'ҚР чемпионы, Азия чемпионатының күміс жүлдегері',
+      en: 'National champion, Asian Championship silver'
+    },
+    team3_exp: {
+      ru: 'В спорте с 5 лет, кроссфит с 2014 года',
+      kz: 'Спортта 5 жасынан, кроссфитте 2014 жылдан бері',
+      en: 'In sport since age 5, CrossFit since 2014'
+    },
+    team3_f1: {
+      ru: '2-кратная чемпионка Азии в мастерах 35+',
+      kz: 'Мастерлер 35+ санатында 2 дүркін Азия чемпионы',
+      en: 'Two-time Asian champion in masters 35+'
+    },
+    team3_f2: {
+      ru: '3× The Fittest Woman in Kazakhstan',
+      kz: '3× The Fittest Woman in Kazakhstan',
+      en: '3× The Fittest Woman in Kazakhstan'
+    },
+    team4_exp: {
+      ru: '11 лет в кроссфите и функциональном многоборье',
+      kz: 'Кроссфит пен функционалдық көпсайыста 11 жыл',
+      en: '11 years in CrossFit and functional fitness'
+    },
+    team4_f1: {
+      ru: '3-кратный участник полуфинала CrossFit Games',
+      kz: 'CrossFit Games жартылай финалына 3 рет қатысқан',
+      en: 'Three-time CrossFit Games semifinalist'
+    },
+    team4_f2: {
+      ru: '2-кратный бронзовый призёр чемпионата Азии',
+      kz: 'Азия чемпионатының 2 дүркін қола жүлдегері',
+      en: 'Two-time Asian Championship bronze medallist'
+    },
+
     // Страница news24 — ASTANA HYBRID RACE 2026
     news24_meta_title: {
       ru: 'ASTANA HYBRID RACE 2026 — Казахстанская Федерация функционального многоборья',
