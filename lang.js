@@ -5614,6 +5614,98 @@
       kz: 'Тіркеу жақында ашылады! Сізге орын sichern және осы әлемдік деңгейдегі жарысқа қатысудың бір бөлігі болуға дайын болыңыз.',
       en: 'Registration will open soon! Get ready to secure your place and become part of this world-class competition.'
     },
+    // Страница news25 — Чемпионат мира IF3 2026 в Шотландии
+    news25_meta_title: {
+      ru: 'Чемпионат мира IF3 2026 в Шотландии — Казахстанская Федерация функционального многоборья',
+      kz: 'Шотландиядағы IF3 2026 әлем чемпионаты — Қазақстандық функционалдық көпсайыс федерациясы',
+      en: 'IF3 2026 World Championships in Scotland — Functional Fitness Federation Kazakhstan'
+    },
+    news25_kicker: {
+      ru: 'Чемпионат мира',
+      kz: 'Әлем чемпионаты',
+      en: 'World championships'
+    },
+    news25_title: {
+      ru: 'Чемпионат мира IF3 2026 пройдёт в Шотландии',
+      kz: 'IF3 2026 әлем чемпионаты Шотландияда өтеді',
+      en: 'The IF3 2026 World Championships will be held in Scotland'
+    },
+    news25_when: {
+      ru: '11–13 декабря 2026 года · Глазго, Шотландия',
+      kz: '2026 жылғы 11–13 желтоқсан · Глазго, Шотландия',
+      en: '11–13 December 2026 · Glasgow, Scotland'
+    },
+    news25_p1: {
+      ru: 'С 11 по 13 декабря 2026 года в Глазго состоится Чемпионат мира IF3 по функциональному фитнесу — одно из главных международных соревнований, которое объединит сильнейших атлетов со всего мира.',
+      kz: '2026 жылғы 11-13 желтоқсан аралығында Глазгода функционалдық фитнестен IF3 әлем чемпионаты өтеді — бұл әлемнің үздік спортшыларын біріктіретін басты халықаралық жарыстардың бірі.',
+      en: 'From 11 to 13 December 2026, Glasgow will host the IF3 World Championships in functional fitness — one of the leading international competitions, bringing together the strongest athletes from around the world.'
+    },
+    news25_p2: {
+      ru: 'Местом проведения чемпионата станет <strong>Ravenscraig Regional Sports Facility</strong>. Спортсменам предстоит продемонстрировать высокий уровень физической подготовки, силу, выносливость, скорость и владение различными функциональными дисциплинами.',
+      kz: 'Чемпионаттың өтетін орны — <strong>Ravenscraig Regional Sports Facility</strong>. Спортшылар жоғары деңгейдегі дене дайындығын, күшін, төзімділігін, жылдамдығын және түрлі функционалдық пәндерді меңгеруін көрсетуге тиіс.',
+      en: 'The championships will take place at the <strong>Ravenscraig Regional Sports Facility</strong>. Athletes will need to demonstrate a high level of physical preparation, strength, endurance, speed and command of a range of functional disciplines.'
+    },
+    news25_h_categories: {
+      ru: 'Категории участников',
+      kz: 'Қатысушылар санаттары',
+      en: 'Divisions'
+    },
+    news25_cat1: {
+      ru: 'Юниоры',
+      kz: 'Жасөспірімдер',
+      en: 'Juniors'
+    },
+    news25_cat2: {
+      ru: 'Индивидуальные соревнования — открытая категория',
+      kz: 'Жеке жарыстар — ашық санат',
+      en: 'Individual competition — open division'
+    },
+    news25_cat3: {
+      ru: 'Командные соревнования',
+      kz: 'Командалық жарыстар',
+      en: 'Team competition'
+    },
+    news25_p3: {
+      ru: 'Чемпионат мира IF3 — это возможность для атлетов разных стран встретиться на одной арене, побороться за мировое первенство и продемонстрировать лучшие результаты в функциональном фитнесе.',
+      kz: 'IF3 әлем чемпионаты — түрлі елдің спортшылары үшін бір аренада бас қосып, әлем біріншілігі үшін күресіп, функционалдық фитнестегі үздік нәтижелерін көрсету мүмкіндігі.',
+      en: 'The IF3 World Championships give athletes from different countries the chance to meet on one floor, compete for the world title and show their best results in functional fitness.'
+    },
+    news25_label_date: {
+      ru: 'Дата',
+      kz: 'Күні',
+      en: 'Date'
+    },
+    news25_date: {
+      ru: '11–13 декабря 2026 года',
+      kz: '2026 жылғы 11–13 желтоқсан',
+      en: '11–13 December 2026'
+    },
+    news25_label_venue: {
+      ru: 'Место проведения',
+      kz: 'Өтетін орны',
+      en: 'Venue'
+    },
+    news25_venue: {
+      ru: 'Ravenscraig Regional Sports Facility, Глазго, Шотландия',
+      kz: 'Ravenscraig Regional Sports Facility, Глазго, Шотландия',
+      en: 'Ravenscraig Regional Sports Facility, Glasgow, Scotland'
+    },
+    news25_motto: {
+      ru: 'Разные страны. Единый стандарт мастерства. Борьба за звание чемпионов мира.',
+      kz: 'Түрлі елдер. Шеберліктің бірыңғай стандарты. Әлем чемпионы атағы үшін күрес.',
+      en: 'Different countries. One standard of mastery. A fight for the world title.'
+    },
+    news25_card_title: {
+      ru: 'Чемпионат мира IF3 2026 пройдёт в Шотландии',
+      kz: 'IF3 2026 әлем чемпионаты Шотландияда өтеді',
+      en: 'The IF3 2026 World Championships will be held in Scotland'
+    },
+    news25_card_excerpt: {
+      ru: '11–13 декабря 2026 года в Глазго: юниоры, индивидуальная и командная категории...',
+      kz: '2026 жылғы 11–13 желтоқсанда Глазгода: жасөспірімдер, жеке және командалық санаттар...',
+      en: '11–13 December 2026 in Glasgow: juniors, individual and team divisions...'
+    },
+
     // Блок «Наша сборная» на главной
     team_title: {
       ru: 'Наша сборная',
