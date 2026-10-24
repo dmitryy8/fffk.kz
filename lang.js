@@ -5614,6 +5614,416 @@
       kz: 'Тіркеу жақында ашылады! Сізге орын sichern және осы әлемдік деңгейдегі жарысқа қатысудың бір бөлігі болуға дайын болыңыз.',
       en: 'Registration will open soon! Get ready to secure your place and become part of this world-class competition.'
     },
+
+    // Галерея сборной на Арубе (страница медиа)
+    media_team_aruba_title: {
+      ru: 'Сборная Казахстана на Арубе',
+      kz: 'Арубадағы Қазақстан құрамасы',
+      en: 'Team Kazakhstan in Aruba'
+    },
+    media_team_aruba_note: {
+      ru: 'iF3 Masters World Championships 2026, 23–25 октября',
+      kz: 'iF3 Masters World Championships 2026, 23–25 қазан',
+      en: 'iF3 Masters World Championships 2026, 23–25 October'
+    },
+
+    // Страница news26 — сборная Казахстана на iF3 Masters World Championships 2026
+    news26_meta_title: {
+      ru: 'Сборная Казахстана на iF3 Masters World Championships 2026 — Казахстанская Федерация функционального многоборья',
+      kz: 'iF3 Masters World Championships 2026-да Қазақстан құрамасы — Қазақстандық функционалдық көпсайыс федерациясы',
+      en: 'Team Kazakhstan at the iF3 Masters World Championships 2026 — Functional Fitness Federation Kazakhstan'
+    },
+    news26_kicker: {
+      ru: 'Чемпионат мира среди мастеров',
+      kz: 'Мастерлер арасындағы әлем чемпионаты',
+      en: 'Masters world championships'
+    },
+    news26_title: {
+      ru: 'Сборная Казахстана выступает на iF3 Masters World Championships 2026 на Арубе',
+      kz: 'Қазақстан құрамасы Арубадағы iF3 Masters World Championships 2026 жарысында өнер көрсетуде',
+      en: 'Team Kazakhstan competes at the iF3 Masters World Championships 2026 in Aruba'
+    },
+    news26_when: {
+      ru: '23–25 октября 2026 года · Аруба',
+      kz: '2026 жылғы 23–25 қазан · Аруба',
+      en: '23–25 October 2026 · Aruba'
+    },
+    news26_p1: {
+      ru: 'Сборная Казахстана принимает участие в чемпионате мира по функциональному многоборью среди мастеров — iF3 Masters World Championships 2026, который проходит на острове Аруба с 23 по 25 октября.',
+      kz: 'Қазақстан құрамасы 23–25 қазан аралығында Аруба аралында өтіп жатқан мастерлер арасындағы функционалдық көпсайыстан әлем чемпионатына — iF3 Masters World Championships 2026 жарысына қатысуда.',
+      en: 'Team Kazakhstan is taking part in the masters world championship in functional fitness — the iF3 Masters World Championships 2026, held on the island of Aruba from 23 to 25 October.'
+    },
+    news26_stat_athletes: {
+      ru: 'зарегистрированных спортсменов',
+      kz: 'тіркелген спортшы',
+      en: 'registered athletes'
+    },
+    news26_stat_countries: {
+      ru: 'стран и территорий',
+      kz: 'ел мен аумақ',
+      en: 'countries and territories'
+    },
+    news26_stat_tests: {
+      ru: 'комплексов за три дня',
+      kz: 'кешен үш күнде',
+      en: 'workouts across three days'
+    },
+    news26_p2: {
+      ru: 'По данным организаторов, помимо национальных сборных в чемпионате выступают атлеты под нейтральным флагом (AIN). В числе участников — представители Швеции, США, Бразилии, Норвегии, Канады, Дании, Германии, Великобритании, Арубы, Франции, Мексики, Швейцарии, Испании, Кюрасао, Нидерландов, Казахстана, Венгрии, Финляндии, Италии, Южной Кореи, Джерси, Бельгии, Иордании, Австрии и Словакии.',
+      kz: 'Ұйымдастырушылардың мәліметінше, ұлттық құрамалардан бөлек чемпионатта бейтарап ту астындағы (AIN) спортшылар да өнер көрсетуде. Қатысушылар қатарында Швеция, АҚШ, Бразилия, Норвегия, Канада, Дания, Германия, Ұлыбритания, Аруба, Франция, Мексика, Швейцария, Испания, Кюрасао, Нидерланды, Қазақстан, Венгрия, Финляндия, Италия, Оңтүстік Корея, Джерси, Бельгия, Иордания, Австрия және Словакия өкілдері бар.',
+      en: 'According to the organisers, alongside the national teams the championship features athletes competing under a neutral flag (AIN). Participants come from Sweden, the USA, Brazil, Norway, Canada, Denmark, Germany, the United Kingdom, Aruba, France, Mexico, Switzerland, Spain, Curaçao, the Netherlands, Kazakhstan, Hungary, Finland, Italy, South Korea, Jersey, Belgium, Jordan, Austria and Slovakia.'
+    },
+    news26_doc_title: {
+      ru: 'Пресс-релиз чемпионата',
+      kz: 'Чемпионаттың баспасөз релизі',
+      en: 'Championship press release'
+    },
+    news26_doc_note: {
+      ru: 'Документ Word · 10 КБ',
+      kz: 'Word құжаты · 10 КБ',
+      en: 'Word document · 10 KB'
+    },
+    news26_h_team: {
+      ru: 'Состав сборной Казахстана',
+      kz: 'Қазақстан құрамасының құрамы',
+      en: 'Team Kazakhstan roster'
+    },
+    news26_age1: {
+      ru: '45–49 лет · 24 спортсменки в категории',
+      kz: '45–49 жас · санатта 24 спортшы қыз',
+      en: '45–49 years · 24 athletes in the division'
+    },
+    news26_age2: {
+      ru: '50–54 года · 24 спортсмена в категории',
+      kz: '50–54 жас · санатта 24 спортшы',
+      en: '50–54 years · 24 athletes in the division'
+    },
+    news26_age3: {
+      ru: '40–44 года · 27 спортсменов в категории',
+      kz: '40–44 жас · санатта 27 спортшы',
+      en: '40–44 years · 27 athletes in the division'
+    },
+    news26_age4: {
+      ru: '35–39 лет · 25 спортсменов в категории',
+      kz: '35–39 жас · санатта 25 спортшы',
+      en: '35–39 years · 25 athletes in the division'
+    },
+    news26_age5: {
+      ru: '30–34 года · 14 спортсменов в категории',
+      kz: '30–34 жас · санатта 14 спортшы',
+      en: '30–34 years · 14 athletes in the division'
+    },
+    news26_p3: {
+      ru: 'Спортсменам предстоит продемонстрировать выносливость, силу, скорость, координацию и владение функциональными навыками в шести комплексах, распределённых на три соревновательных дня.',
+      kz: 'Спортшылар төзімділігін, күшін, жылдамдығын, үйлесімділігін және функционалдық дағдыларын үш жарыс күніне бөлінген алты кешенде көрсетуге тиіс.',
+      en: 'The athletes will need to show endurance, strength, speed, coordination and functional skill across six workouts spread over three competition days.'
+    },
+    news26_h_program: {
+      ru: 'Программа чемпионата',
+      kz: 'Чемпионат бағдарламасы',
+      en: 'Competition programme'
+    },
+    news26_d1_date: {
+      ru: '23 октября',
+      kz: '23 қазан',
+      en: '23 October'
+    },
+    news26_d1_note: {
+      ru: 'Первый соревновательный день: выносливость и сила',
+      kz: 'Бірінші жарыс күні: төзімділік және күш',
+      en: 'Day one: endurance and strength'
+    },
+    news26_t1_title: {
+      ru: 'Тест 1. Выносливость (Endurance)',
+      kz: '1-тест. Төзімділік (Endurance)',
+      en: 'Test 1. Endurance'
+    },
+    news26_t1_b1_g: {
+      ru: 'Все возрастные группы',
+      kz: 'Барлық жас топтары',
+      en: 'All age groups'
+    },
+    news26_t1_b1_i1: {
+      ru: 'Бег по пересечённой местности — 2000 м',
+      kz: 'Кедір-бұдыр жермен жүгіру — 2000 м',
+      en: 'Cross-country run — 2000 m'
+    },
+    news26_t1_b1_i2: {
+      ru: 'Переноска отягощений на дистанции 400 м (1,5 пуда / 1 пуд)',
+      kz: '400 м қашықтыққа салмақ тасу (1,5 пұт / 1 пұт)',
+      en: 'Weighted carry over 400 m (1.5 pood / 1 pood)'
+    },
+    news26_t1_b1_i3: {
+      ru: 'Бег по пересечённой местности — 2000 м',
+      kz: 'Кедір-бұдыр жермен жүгіру — 2000 м',
+      en: 'Cross-country run — 2000 m'
+    },
+    news26_t1_cap: {
+      ru: 'Лимит времени отсутствует — необходимо завершить комплекс',
+      kz: 'Уақыт шегі жоқ — кешенді аяқтау қажет',
+      en: 'No time cap — the workout must be completed'
+    },
+    news26_t2_title: {
+      ru: 'Тест 2. Сила (Strength)',
+      kz: '2-тест. Күш (Strength)',
+      en: 'Test 2. Strength'
+    },
+    news26_t2_b1_g: {
+      ru: 'Все возрастные группы',
+      kz: 'Барлық жас топтары',
+      en: 'All age groups'
+    },
+    news26_t2_b1_i1: {
+      ru: 'За 5 минут определить максимальный вес в комплексе',
+      kz: '5 минут ішінде кешендегі ең жоғары салмақты анықтау',
+      en: 'Find the maximum load for the complex within 5 minutes'
+    },
+    news26_t2_b1_i2: {
+      ru: '1 рывок + 1 рывок с виса',
+      kz: '1 ұмтылыс + 1 ілініп тұрып ұмтылыс',
+      en: '1 snatch + 1 hang snatch'
+    },
+    news26_t2_cap: {
+      ru: 'Лимит времени — 5 минут',
+      kz: 'Уақыт шегі — 5 минут',
+      en: 'Time cap — 5 minutes'
+    },
+    news26_d2_date: {
+      ru: '24 октября',
+      kz: '24 қазан',
+      en: '24 October'
+    },
+    news26_d2_note: {
+      ru: 'Второй соревновательный день: работа с собственным весом и навыки',
+      kz: 'Екінші жарыс күні: өз салмағымен жұмыс және дағдылар',
+      en: 'Day two: bodyweight and skill'
+    },
+    news26_t3_title: {
+      ru: 'Тест 3. Работа с собственным весом (Bodyweight)',
+      kz: '3-тест. Өз салмағымен жұмыс (Bodyweight)',
+      en: 'Test 3. Bodyweight'
+    },
+    news26_t3_b1_g: {
+      ru: 'Возрастные группы 30–34 и 45–49 лет',
+      kz: '30–34 және 45–49 жас топтары',
+      en: 'Age groups 30–34 and 45–49'
+    },
+    news26_t3_b1_i1: {
+      ru: 'Интервалы 2–2–2–3 минуты, отдых между интервалами — 1 минута',
+      kz: 'Аралықтар 2–2–2–3 минут, аралықтар арасындағы демалыс — 1 минут',
+      en: 'Intervals of 2–2–2–3 minutes, 1 minute rest between intervals'
+    },
+    news26_t3_b1_i2: {
+      ru: '15/12 калорий на SkiErg',
+      kz: 'SkiErg-те 15/12 калория',
+      en: '15/12 calories on the SkiErg'
+    },
+    news26_t3_b1_i3: {
+      ru: '12 прыжков на тумбу высотой 60/50 см',
+      kz: 'Биіктігі 60/50 см тумбаға 12 секіру',
+      en: '12 box jumps at 60/50 cm'
+    },
+    news26_t3_b1_i4: {
+      ru: 'Максимальное количество пистолетиков за оставшееся время',
+      kz: 'Қалған уақытта барынша көп пистолет отырып-тұру',
+      en: 'Max pistol squats in the remaining time'
+    },
+    news26_t3_b2_g: {
+      ru: 'Возрастные группы 50–54 и 55–59 лет',
+      kz: '50–54 және 55–59 жас топтары',
+      en: 'Age groups 50–54 and 55–59'
+    },
+    news26_t3_b2_i1: {
+      ru: 'Интервалы 2–2–2–3 минуты, отдых между интервалами — 1 минута',
+      kz: 'Аралықтар 2–2–2–3 минут, аралықтар арасындағы демалыс — 1 минут',
+      en: 'Intervals of 2–2–2–3 minutes, 1 minute rest between intervals'
+    },
+    news26_t3_b2_i2: {
+      ru: '15/12 калорий на SkiErg',
+      kz: 'SkiErg-те 15/12 калория',
+      en: '15/12 calories on the SkiErg'
+    },
+    news26_t3_b2_i3: {
+      ru: '12 прыжков на тумбу высотой 60/50 см',
+      kz: 'Биіктігі 60/50 см тумбаға 12 секіру',
+      en: '12 box jumps at 60/50 cm'
+    },
+    news26_t3_b2_i4: {
+      ru: 'Максимальное количество приседаний с собственным весом за оставшееся время',
+      kz: 'Қалған уақытта өз салмағымен барынша көп отырып-тұру',
+      en: 'Max air squats in the remaining time'
+    },
+    news26_t4_title: {
+      ru: 'Тест 4. Навыки (Skill)',
+      kz: '4-тест. Дағдылар (Skill)',
+      en: 'Test 4. Skill'
+    },
+    news26_t4_b1_g: {
+      ru: 'Возрастные группы 30–34 и 35–39 лет',
+      kz: '30–34 және 35–39 жас топтары',
+      en: 'Age groups 30–34 and 35–39'
+    },
+    news26_t4_b1_i1: {
+      ru: 'Подтягивания: 10–8–6–4–2',
+      kz: 'Тартылу: 10–8–6–4–2',
+      en: 'Pull-ups: 10–8–6–4–2'
+    },
+    news26_t4_b1_i2: {
+      ru: 'Ходьба на руках — 10 м',
+      kz: 'Қолмен жүру — 10 м',
+      en: 'Handstand walk — 10 m'
+    },
+    news26_t4_b1_i3: {
+      ru: '5 пуловеров',
+      kz: '5 пуловер',
+      en: '5 pullovers'
+    },
+    news26_t4_b1_i4: {
+      ru: 'Ходьба на руках спиной вперёд — 10 м',
+      kz: 'Қолмен артқа қарай жүру — 10 м',
+      en: 'Reverse handstand walk — 10 m'
+    },
+    news26_t4_b2_g: {
+      ru: 'Возрастные группы 40–44 и 50–54 года',
+      kz: '40–44 және 50–54 жас топтары',
+      en: 'Age groups 40–44 and 50–54'
+    },
+    news26_t4_b2_i1: {
+      ru: 'Подтягивания: 10–8–6–4–2',
+      kz: 'Тартылу: 10–8–6–4–2',
+      en: 'Pull-ups: 10–8–6–4–2'
+    },
+    news26_t4_b2_i2: {
+      ru: 'Ходьба на руках — 10 м',
+      kz: 'Қолмен жүру — 10 м',
+      en: 'Handstand walk — 10 m'
+    },
+    news26_t4_b2_i3: {
+      ru: '15 подъёмов ног к перекладине (toes-to-bar)',
+      kz: '15 рет аяқты аспаға көтеру (toes-to-bar)',
+      en: '15 toes-to-bar'
+    },
+    news26_t4_b2_i4: {
+      ru: 'Ходьба на руках — 10 м',
+      kz: 'Қолмен жүру — 10 м',
+      en: 'Handstand walk — 10 m'
+    },
+    news26_t4_cap: {
+      ru: 'Лимит времени — 12 минут',
+      kz: 'Уақыт шегі — 12 минут',
+      en: 'Time cap — 12 minutes'
+    },
+    news26_d3_date: {
+      ru: '25 октября',
+      kz: '25 қазан',
+      en: '25 October'
+    },
+    news26_d3_note: {
+      ru: 'Третий соревновательный день: смешанный комплекс и мощность',
+      kz: 'Үшінші жарыс күні: аралас кешен және қуат',
+      en: 'Day three: mixed workout and power'
+    },
+    news26_t5_title: {
+      ru: 'Тест 5. Смешанный комплекс (Mixed)',
+      kz: '5-тест. Аралас кешен (Mixed)',
+      en: 'Test 5. Mixed'
+    },
+    news26_t5_b1_g: {
+      ru: 'Возрастные группы 30–34 и 45–49 лет',
+      kz: '30–34 және 45–49 жас топтары',
+      en: 'Age groups 30–34 and 45–49'
+    },
+    news26_t5_b1_i1: {
+      ru: '3 раунда на время',
+      kz: 'Уақытқа 3 раунд',
+      en: '3 rounds for time'
+    },
+    news26_t5_b1_i2: {
+      ru: '60 двойных прыжков через скакалку',
+      kz: '60 қос секіртпе секіру',
+      en: '60 double-unders'
+    },
+    news26_t5_b1_i3: {
+      ru: '16 двигателей — 60/45 кг',
+      kz: '16 трастер — 60/45 кг',
+      en: '16 thrusters — 60/45 kg'
+    },
+    news26_t5_b1_i4: {
+      ru: '16 берпи лицом к штанге',
+      kz: 'Штангаға қарап 16 берпи',
+      en: '16 bar-facing burpees'
+    },
+    news26_t5_b2_g: {
+      ru: 'Возрастные группы 50–54 и 55–59 лет',
+      kz: '50–54 және 55–59 жас топтары',
+      en: 'Age groups 50–54 and 55–59'
+    },
+    news26_t5_b2_i1: {
+      ru: '3 раунда на время',
+      kz: 'Уақытқа 3 раунд',
+      en: '3 rounds for time'
+    },
+    news26_t5_b2_i2: {
+      ru: '40 двойных прыжков через скакалку',
+      kz: '40 қос секіртпе секіру',
+      en: '40 double-unders'
+    },
+    news26_t5_b2_i3: {
+      ru: '16 двигателей — 50/35 кг',
+      kz: '16 трастер — 50/35 кг',
+      en: '16 thrusters — 50/35 kg'
+    },
+    news26_t5_b2_i4: {
+      ru: '16 берпи лицом к штанге',
+      kz: 'Штангаға қарап 16 берпи',
+      en: '16 bar-facing burpees'
+    },
+    news26_t5_cap: {
+      ru: 'Лимит времени — 10 минут',
+      kz: 'Уақыт шегі — 10 минут',
+      en: 'Time cap — 10 minutes'
+    },
+    news26_t6_title: {
+      ru: 'Тест 6. Мощность (Power)',
+      kz: '6-тест. Қуат (Power)',
+      en: 'Test 6. Power'
+    },
+    news26_t6_b1_g: {
+      ru: 'Все категории',
+      kz: 'Барлық санаттар',
+      en: 'All divisions'
+    },
+    news26_t6_b1_i1: {
+      ru: 'Спринт на 100 м по зигзагообразной траектории на время',
+      kz: 'Зигзаг бағытымен уақытқа 100 м спринт',
+      en: '100 m zig-zag sprint for time'
+    },
+    news26_t6_cap: {
+      ru: 'Лимит времени — 1 минута',
+      kz: 'Уақыт шегі — 1 минут',
+      en: 'Time cap — 1 minute'
+    },
+    news26_h_meaning: {
+      ru: 'Значение чемпионата',
+      kz: 'Чемпионаттың маңызы',
+      en: 'Why this championship matters'
+    },
+    news26_meaning: {
+      ru: 'Участие в iF3 Masters World Championships 2026 — возможность для казахстанских спортсменов представить страну на международной арене, проверить свою подготовку в борьбе с сильнейшими атлетами мира и получить ценный соревновательный опыт.',
+      kz: 'iF3 Masters World Championships 2026 жарысына қатысу — қазақстандық спортшылар үшін елін халықаралық аренада таныстыруға, әлемнің мықты спортшыларымен күресте дайындығын сынауға және құнды жарыс тәжірибесін жинауға мүмкіндік.',
+      en: 'Competing at the iF3 Masters World Championships 2026 gives Kazakhstani athletes the chance to represent their country on the international stage, test their preparation against the strongest athletes in the world and gain valuable competitive experience.'
+    },
+    news26_card_title: {
+      ru: 'Сборная Казахстана на чемпионате мира среди мастеров',
+      kz: 'Мастерлер арасындағы әлем чемпионатындағы Қазақстан құрамасы',
+      en: 'Team Kazakhstan at the masters world championship'
+    },
+    news26_card_excerpt: {
+      ru: '23–25 октября на Арубе: состав сборной, программа и пресс-релиз...',
+      kz: '23–25 қазанда Арубада: құрама құрамы, бағдарлама және баспасөз релизі...',
+      en: '23–25 October in Aruba: the roster, programme and press release...'
+    },
+
     // Страница news25 — Чемпионат мира IF3 2026 в Шотландии
     news25_meta_title: {
       ru: 'Чемпионат мира IF3 2026 в Шотландии — Казахстанская Федерация функционального многоборья',
