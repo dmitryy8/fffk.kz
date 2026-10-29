@@ -5627,6 +5627,239 @@
       en: 'iF3 Masters World Championships 2026, 23–25 October'
     },
 
+
+    // Страницы news27 и news28 — итоги чемпионата мира и чемпион Артём Мацак
+    news27_meta_title: {
+      ru: 'Итоги сборной Казахстана на iF3 Masters World Championships 2026 — Казахстанская Федерация функционального многоборья',
+      kz: 'iF3 Masters World Championships 2026-дағы Қазақстан құрамасының қорытындысы — Қазақстандық функционалдық көпсайыс федерациясы',
+      en: 'Team Kazakhstan results at the iF3 Masters World Championships 2026 — Functional Fitness Federation Kazakhstan'
+    },
+    news27_kicker: {
+      ru: 'Итоги чемпионата мира',
+      kz: 'Әлем чемпионатының қорытындысы',
+      en: 'World championship results'
+    },
+    news27_title: {
+      ru: 'Сборная Казахстана выступила на чемпионате мира iF3 Masters World Championships 2026 на Арубе',
+      kz: 'Қазақстан құрамасы Арубадағы iF3 Masters World Championships 2026 әлем чемпионатында өнер көрсетті',
+      en: 'Team Kazakhstan competed at the iF3 Masters World Championships 2026 in Aruba'
+    },
+    news27_p1: {
+      ru: 'С 23 по 25 октября на острове Аруба прошёл чемпионат мира по функциональному многоборью среди мастеров — iF3 Masters World Championships 2026. Сборная Казахстана приняла участие в международных соревнованиях, объединивших атлетов из разных стран мира.',
+      kz: '23–25 қазан аралығында Аруба аралында мастерлер арасындағы функционалдық көпсайыстан әлем чемпионаты — iF3 Masters World Championships 2026 өтті. Қазақстан құрамасы әлемнің түрлі елдерінен спортшыларды біріктірген халықаралық жарысқа қатысты.',
+      en: 'From 23 to 25 October the island of Aruba hosted the masters world championship in functional fitness — the iF3 Masters World Championships 2026. Team Kazakhstan took part in the international competition, which brought together athletes from around the world.'
+    },
+    news27_p_team: {
+      ru: 'Казахстан на мировом первенстве представили пять спортсменов в различных возрастных категориях.',
+      kz: 'Әлем біріншілігінде Қазақстанды түрлі жас санаттарындағы бес спортшы таныстырды.',
+      en: 'Five athletes in different age divisions represented Kazakhstan at the world championship.'
+    },
+    news27_div1: {
+      ru: 'Masters 45–49 · 24 спортсменки в категории',
+      kz: 'Masters 45–49 · санатта 24 спортшы қыз',
+      en: 'Masters 45–49 · 24 athletes in the division'
+    },
+    news27_div2: {
+      ru: 'Masters 50–54 · 24 спортсмена в категории',
+      kz: 'Masters 50–54 · санатта 24 спортшы',
+      en: 'Masters 50–54 · 24 athletes in the division'
+    },
+    news27_div3: {
+      ru: 'Masters 40–44 · 27 спортсменов в категории',
+      kz: 'Masters 40–44 · санатта 27 спортшы',
+      en: 'Masters 40–44 · 27 athletes in the division'
+    },
+    news27_div4: {
+      ru: 'Masters 35–39 · 25 спортсменов в категории',
+      kz: 'Masters 35–39 · санатта 25 спортшы',
+      en: 'Masters 35–39 · 25 athletes in the division'
+    },
+    news27_div5: {
+      ru: 'Masters 30–34 · 14 спортсменов в категории',
+      kz: 'Masters 30–34 · санатта 14 спортшы',
+      en: 'Masters 30–34 · 14 athletes in the division'
+    },
+    news27_h_results: {
+      ru: 'Результаты сборной Казахстана',
+      kz: 'Қазақстан құрамасының нәтижелері',
+      en: 'Team Kazakhstan results'
+    },
+    news27_r1_div: {
+      ru: 'Masters 30–34',
+      kz: 'Masters 30–34',
+      en: 'Masters 30–34'
+    },
+    news27_r2_div: {
+      ru: 'Masters 50–54',
+      kz: 'Masters 50–54',
+      en: 'Masters 50–54'
+    },
+    news27_r3_div: {
+      ru: 'Masters 45–49',
+      kz: 'Masters 45–49',
+      en: 'Masters 45–49'
+    },
+    news27_r4_div: {
+      ru: 'Masters 40–44',
+      kz: 'Masters 40–44',
+      en: 'Masters 40–44'
+    },
+    news27_champion_badge: {
+      ru: 'Чемпион мира',
+      kz: 'Әлем чемпионы',
+      en: 'World champion'
+    },
+    news27_points: {
+      ru: 'очков',
+      kz: 'ұпай',
+      en: 'points'
+    },
+    news27_p_results: {
+      ru: 'Три спортсмена сборной Казахстана вошли в ТОП-10 мирового первенства, а Артём Мацак стал чемпионом мира в своей возрастной категории. Результаты казахстанских атлетов отражают высокий уровень подготовки и способность конкурировать с сильными спортсменами из разных стран мира.',
+      kz: 'Қазақстан құрамасының үш спортшысы әлем біріншілігінің ТОП-10 қатарына енді, ал Артём Мацак өз жас санатында әлем чемпионы атанды. Қазақстандық спортшылардың нәтижелері дайындық деңгейінің жоғары екенін және әлемнің түрлі елдерінен келген мықты спортшылармен бәсекелесе алатынын көрсетеді.',
+      en: 'Three Kazakhstani athletes finished in the world top 10, and Artyom Matsak became world champion in his age division. The results reflect a high level of preparation and the ability to compete with strong athletes from around the world.'
+    },
+    news27_p_program: {
+      ru: 'Соревновательная программа включала шесть тестов, распределённых на три дня. Участникам предстояло продемонстрировать силу, выносливость, скорость, координацию и владение функциональными навыками.',
+      kz: 'Жарыс бағдарламасы үш күнге бөлінген алты тесттен тұрды. Қатысушылар күшін, төзімділігін, жылдамдығын, үйлесімділігін және функционалдық дағдыларын көрсетуге тиіс болды.',
+      en: 'The programme consisted of six tests spread over three days. Competitors had to show strength, endurance, speed, coordination and functional skill.'
+    },
+    news27_p_meaning1: {
+      ru: 'Участие в iF3 Masters World Championships 2026 стало для спортсменов сборной Казахстана возможностью представить страну на международной арене, проверить уровень своей подготовки в борьбе с сильнейшими атлетами мира и получить ценный соревновательный опыт.',
+      kz: 'iF3 Masters World Championships 2026 жарысына қатысу Қазақстан құрамасының спортшылары үшін елін халықаралық аренада таныстыруға, әлемнің мықты спортшыларымен күресте дайындық деңгейін сынауға және құнды жарыс тәжірибесін жинауға мүмкіндік болды.',
+      en: 'Competing at the iF3 Masters World Championships 2026 gave the Kazakhstani athletes a chance to represent their country internationally, test their preparation against the strongest athletes in the world and gain valuable competitive experience.'
+    },
+    news27_p_meaning2: {
+      ru: 'Чемпионат объединил спортсменов разных возрастных категорий, для которых функциональное многоборье требует сочетания силы, выносливости, скорости, координации и технического мастерства.',
+      kz: 'Чемпионат функционалдық көпсайыс күш, төзімділік, жылдамдық, үйлесімділік пен техникалық шеберліктің ұштасуын талап ететін түрлі жас санатындағы спортшыларды біріктірді.',
+      en: 'The championship brought together athletes of different age groups, for whom functional fitness demands a combination of strength, endurance, speed, coordination and technical mastery.'
+    },
+    news27_h_partner: {
+      ru: 'Благодарность партнёру',
+      kz: 'Серіктеске алғыс',
+      en: 'Thanks to our partner'
+    },
+    news27_partner1: {
+      ru: 'Федерация функционального многоборья Казахстана выражает благодарность лаборатории KDL ОЛИМП и лично Сулейменову Ерлану Мельсовичу, который является частью нашей команды и поддерживает развитие функционального многоборья и выступление сборной Казахстана на международной арене.',
+      kz: 'Қазақстан функционалдық көпсайыс федерациясы KDL ОЛИМП зертханасына және біздің команданың бір бөлігі болып табылатын, функционалдық көпсайыстың дамуы мен Қазақстан құрамасының халықаралық аренадағы өнерін қолдайтын Сүлейменов Ерлан Мельсұлына жеке алғыс білдіреді.',
+      en: 'The Functional Fitness Federation of Kazakhstan thanks the KDL OLYMP laboratory and personally Yerlan Melsovich Suleimenov, who is part of our team and supports the development of functional fitness and the performance of Team Kazakhstan on the international stage.'
+    },
+    news27_partner2: {
+      ru: 'Благодарим за поддержку, вовлечённость и вклад в общие достижения команды!',
+      kz: 'Қолдауыңыз, атсалысуыңыз және команданың ортақ жетістіктеріне қосқан үлесіңіз үшін рахмет!',
+      en: 'Thank you for your support, involvement and contribution to the team\'s shared achievements!'
+    },
+    news27_congrats: {
+      ru: 'Поздравляем Артёма Мацака с титулом чемпиона мира, а всех спортсменов сборной Казахстана — с достойным выступлением на международном первенстве. Казахстан — на мировой арене функционального многоборья! 🇰🇿',
+      kz: 'Артём Мацакты әлем чемпионы атағымен, ал Қазақстан құрамасының барлық спортшысын халықаралық біріншіліктегі лайықты өнерімен құттықтаймыз. Қазақстан — функционалдық көпсайыстың әлемдік аренасында! 🇰🇿',
+      en: 'Congratulations to Artyom Matsak on the world title, and to every athlete of Team Kazakhstan on a strong performance at the world championship. Kazakhstan is on the world stage of functional fitness! 🇰🇿'
+    },
+    news27_btn_champion: {
+      ru: 'О чемпионе мира',
+      kz: 'Әлем чемпионы туралы',
+      en: 'About the world champion'
+    },
+    news27_card_title: {
+      ru: 'Итоги сборной Казахстана на чемпионате мира',
+      kz: 'Әлем чемпионатындағы Қазақстан құрамасының қорытындысы',
+      en: 'Team Kazakhstan results at the world championship'
+    },
+    news27_card_excerpt: {
+      ru: 'Артём Мацак — чемпион мира, три спортсмена сборной в ТОП-10...',
+      kz: 'Артём Мацак — әлем чемпионы, құраманың үш спортшысы ТОП-10-да...',
+      en: 'Artyom Matsak is world champion, three team athletes in the top 10...'
+    },
+    news28_meta_title: {
+      ru: 'Артём Мацак — чемпион мира iF3 Masters 2026 — Казахстанская Федерация функционального многоборья',
+      kz: 'Артём Мацак — iF3 Masters 2026 әлем чемпионы — Қазақстандық функционалдық көпсайыс федерациясы',
+      en: 'Artyom Matsak — iF3 Masters 2026 world champion — Functional Fitness Federation Kazakhstan'
+    },
+    news28_kicker: {
+      ru: 'Чемпион мира',
+      kz: 'Әлем чемпионы',
+      en: 'World champion'
+    },
+    news28_title: {
+      ru: 'Артём Мацак — чемпион мира по функциональному многоборью в категории Masters 30–34',
+      kz: 'Артём Мацак — Masters 30–34 санатындағы функционалдық көпсайыстан әлем чемпионы',
+      en: 'Artyom Matsak — functional fitness world champion in the Masters 30–34 division'
+    },
+    news28_photo_caption: {
+      ru: 'Пьедестал категории Masters 30–34: Артём Мацак — первое место',
+      kz: 'Masters 30–34 санатының тұғыры: Артём Мацак — бірінші орын',
+      en: 'The Masters 30–34 podium: Artyom Matsak in first place'
+    },
+    news28_medal_place: {
+      ru: 'место в категории',
+      kz: 'санаттағы орын',
+      en: 'place in the division'
+    },
+    news28_medal_rivals: {
+      ru: 'соперников в категории',
+      kz: 'санаттағы қарсылас',
+      en: 'athletes in the division'
+    },
+    news28_p1: {
+      ru: '🇰🇿 Представитель сборной Казахстана <strong>Артём Мацак</strong> завоевал золотую медаль и стал чемпионом мира на соревнованиях iF3 Masters World Championships 2026, прошедших на острове Аруба.',
+      kz: '🇰🇿 Қазақстан құрамасының өкілі <strong>Артём Мацак</strong> Аруба аралында өткен iF3 Masters World Championships 2026 жарысында алтын медаль жеңіп алып, әлем чемпионы атанды.',
+      en: '🇰🇿 Team Kazakhstan athlete <strong>Artyom Matsak</strong> took gold and became world champion at the iF3 Masters World Championships 2026, held on the island of Aruba.'
+    },
+    news28_p2: {
+      ru: 'На протяжении трёх соревновательных дней участники проходили шесть испытаний, проверявших различные качества, необходимые для функционального многоборья: выносливость, силу, скорость, координацию, техническое мастерство и способность работать с собственным весом.',
+      kz: 'Үш жарыс күні бойы қатысушылар функционалдық көпсайысқа қажетті түрлі қасиеттерді — төзімділікті, күшті, жылдамдықты, үйлесімділікті, техникалық шеберлікті және өз салмағымен жұмыс істеу қабілетін сынайтын алты сынақтан өтті.',
+      en: 'Over three days of competition the athletes went through six tests of the qualities functional fitness demands: endurance, strength, speed, coordination, technical skill and bodyweight control.'
+    },
+    news28_p3: {
+      ru: 'Программа чемпионата включала бег и переноску отягощений, силовой комплекс с рывками, упражнения на SkiErg, прыжки на тумбу, гимнастические элементы, смешанный комплекс со штангой и берпи, а также спринт на 100 метров по зигзагообразной траектории.',
+      kz: 'Чемпионат бағдарламасына жүгіру мен салмақ тасу, ұмтылыспен орындалатын күш кешені, SkiErg жаттығулары, тумбаға секіру, гимнастикалық элементтер, штанга мен берпиден тұратын аралас кешен, сондай-ақ зигзаг бағытымен 100 метрге спринт кірді.',
+      en: 'The programme included running and weighted carries, a strength complex of snatches, SkiErg work, box jumps, gymnastics elements, a mixed barbell-and-burpee workout and a 100 m zig-zag sprint.'
+    },
+    news28_h_video: {
+      ru: 'Видео с чемпионата',
+      kz: 'Чемпионаттан видео',
+      en: 'Video from the championship'
+    },
+    news28_video_caption: {
+      ru: 'Выступление Артёма Мацака на iF3 Masters World Championships 2026',
+      kz: 'Артём Мацактың iF3 Masters World Championships 2026 жарысындағы өнері',
+      en: 'Artyom Matsak at the iF3 Masters World Championships 2026'
+    },
+    news28_h_meaning: {
+      ru: 'Значение победы',
+      kz: 'Жеңістің маңызы',
+      en: 'What this win means'
+    },
+    news28_p4: {
+      ru: 'Победа Артёма — значимое достижение для казахстанского функционального многоборья и повод для гордости всей сборной. Чемпионский титул подтверждает высокий уровень подготовки спортсмена и его способность успешно выступать на международной арене.',
+      kz: 'Артёмның жеңісі — қазақстандық функционалдық көпсайыс үшін елеулі жетістік әрі бүкіл құраманың мақтанышы. Чемпиондық атақ спортшының дайындық деңгейінің жоғары екенін және халықаралық аренада табысты өнер көрсете алатынын растайды.',
+      en: 'Artyom\'s victory is a significant achievement for Kazakhstani functional fitness and a source of pride for the whole team. The title confirms the athlete\'s level of preparation and his ability to succeed internationally.'
+    },
+    news28_congrats1: {
+      ru: '🏆 Артём Мацак — чемпион мира iF3 Masters World Championships 2026 в категории Masters 30–34!',
+      kz: '🏆 Артём Мацак — Masters 30–34 санатындағы iF3 Masters World Championships 2026 әлем чемпионы!',
+      en: '🏆 Artyom Matsak — iF3 Masters World Championships 2026 champion in the Masters 30–34 division!'
+    },
+    news28_congrats2: {
+      ru: 'Поздравляем Артёма с выдающимся результатом! Желаем новых побед, спортивных достижений и дальнейших успехов под флагом Казахстана. Гордимся нашей сборной! Гордимся Казахстаном! 🇰🇿',
+      kz: 'Артёмды тамаша нәтижесімен құттықтаймыз! Қазақстан туы астында жаңа жеңістер, спорттық жетістіктер мен табыс тілейміз. Құрамамызбен мақтанамыз! Қазақстанмен мақтанамыз! 🇰🇿',
+      en: 'Congratulations to Artyom on an outstanding result! We wish him new victories and further success under the flag of Kazakhstan. Proud of our team! Proud of Kazakhstan! 🇰🇿'
+    },
+    news28_btn_results: {
+      ru: 'Итоги чемпионата',
+      kz: 'Чемпионат қорытындысы',
+      en: 'Championship results'
+    },
+    news28_card_title: {
+      ru: 'Артём Мацак — чемпион мира!',
+      kz: 'Артём Мацак — әлем чемпионы!',
+      en: 'Artyom Matsak is world champion!'
+    },
+    news28_card_excerpt: {
+      ru: 'Золото iF3 Masters World Championships 2026 в категории Masters 30–34...',
+      kz: 'Masters 30–34 санатындағы iF3 Masters World Championships 2026 алтыны...',
+      en: 'Gold at the iF3 Masters World Championships 2026 in the Masters 30–34 division...'
+    },
+
     // Страница news26 — сборная Казахстана на iF3 Masters World Championships 2026
     news26_meta_title: {
       ru: 'Сборная Казахстана на iF3 Masters World Championships 2026 — Казахстанская Федерация функционального многоборья',
